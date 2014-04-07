@@ -1,0 +1,17 @@
+{
+  "name": "mice",
+  "version": "0.0.0",
+  "homepage": "https://github.com/miclle/mice",
+  "authors": [
+    "miclle <miclle.zheng@gmail.com>"
+  ],
+  "description": "Front-end framework",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
