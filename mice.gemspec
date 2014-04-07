@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Mice::VERSION
   spec.authors       = ["miclle"]
   spec.email         = ["miclle.zheng@gmail.com"]
-  spec.summary       = %q{Front-end framework.}
-  spec.description   = %q{Front-end framework.}
-  spec.homepage      = ""
+  spec.summary       = "Front-end framework."
+  spec.description   = "Mice is semantic front-end framework."
+  spec.homepage      = "http://miclle.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  # spec.add_development_dependency "rake"
 end
