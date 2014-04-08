@@ -47,19 +47,13 @@
 #   end
 # end
 
-ready do
-  sprockets.append_path '../../vendor/assets/stylesheets'
-  sprockets.append_path '../vendor/assets/stylesheets/'
-  sprockets.append_path '/vendor/assets/stylesheets/'
-end
-
-# set :source, 'vendor'
-
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+# set :source, 'vendor'
 
 set :build_dir, "docs"
 
@@ -80,3 +74,15 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+after_configuration do
+  # @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  # @bower_assets_path = File.join "#{root}", @bower_config["directory"]
+  # sprockets.append_path @bower_assets_path
+  sprockets.append_path 'vendor/assets/stylesheets'
+  sprockets.append_path 'vendor/assets/javascripts'
+  sprockets.append_path 'vendor/assets/images'
+end
+
+
+
