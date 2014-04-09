@@ -30,3 +30,9 @@ pre.highlight{
   border-left: 1px solid #DDD;
   border-radius: 3px;
 }
+
+.column{
+  padding: 10px;
+  background-color: #EEE;
+  border: 1px solid #DDD;
+}

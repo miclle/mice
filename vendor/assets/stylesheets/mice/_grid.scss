@@ -1,0 +1,114 @@
+//
+// Grid system
+// --------------------------------------------------
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  // padding-left:  ($grid-gutter-width / 2);
+  // padding-right: ($grid-gutter-width / 2);
+  @include clearfix();
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+//  GRID COLUMN SETUP
+// -------------------------
+
+.grid{
+  @include clearfix();
+
+  .column {
+    display: block;
+    float:   left;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+@mixin column-child($value) {
+  > .column {
+    width: $value;
+  }
+}
+
+@mixin column-self($value) {
+  &.column {
+    width: $value;
+  }
+}
+
+
+.grid.two{
+  @include column-child(50%);
+}
+
+.grid.three{
+  @include column-child(33.3333333%);
+}
+
+.grid.four{
+  @include column-child(25%);
+}
+
+.grid.five{
+  @include column-child(20%);
+}
+
+.grid.six{
+  @include column-child(16.6666667%);
+}
+
+.grid.seven{
+  @include column-child(14.2857143%);
+}
+
+.grid.eight{
+  @include column-child(12.5%);
+}
+
+.grid.nine{
+  @include column-child(11.1111111%);
+}
+
+.grid.ten{
+  @include column-child(10%);
+}
+
+.grid.eleven{
+  @include column-child(9.09090909%);
+}
+
+.grid.twelve{
+  @include column-child(8.33333333%);
+  .four{
+    @include column-self(33.3333333%);
+  }
+  .eight{
+    @include column-self(66.6666667%);
+  }
+}
+
+
+// Go full width at less than 480px
+@media only screen and (max-width: 480px) {
+  .grid{
+    &.two, &.three, &.four, &.five, &.six, &.seven, &.eight, &.nine, &.ten, &.eleven, &.twelve{
+      @include column-child(100%);
+    }
+  }
+}
+
+
+
