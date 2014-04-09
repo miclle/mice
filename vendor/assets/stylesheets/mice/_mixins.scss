@@ -9,7 +9,6 @@
 //    `:before` to contain the top-margins of child elements.
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
-
 @mixin clearfix() {
   &:before,
   &:after {
@@ -19,4 +18,11 @@
   &:after {
     clear: both;
   }
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
 }
