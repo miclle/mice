@@ -16,9 +16,16 @@ Or install it yourself as:
 
     $ gem install mice
 
+
 ## Usage
 
 TODO: Write usage instructions here
+
+
+## HTML/CSS Style Guide
+
+http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+
 
 ## Contributing
 
