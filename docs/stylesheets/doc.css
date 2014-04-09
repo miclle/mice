@@ -393,6 +393,129 @@ table {
 td,
 th {
   padding: 0; }
+
+/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: white; }
+
+/* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+header {
+  height: 45px; }
+
+/* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+/* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+a {
+  color: #428bca;
+  text-decoration: none; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+  a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline; }
+
+/* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+img {
+  vertical-align: middle; }
+
+/* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1; }
+
+/* line 26, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h1 small, h2 small, h3 small {
+  font-size: 65%; }
+
+/* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h4 small, h5 small, h6 small {
+  font-size: 75%; }
+
+/* line 36, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h1 {
+  font-size: 36px; }
+
+/* line 37, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h2 {
+  font-size: 31px; }
+
+/* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h3 {
+  font-size: 24px; }
+
+/* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h4 {
+  font-size: 18px; }
+
+/* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h5 {
+  font-size: 14px; }
+
+/* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+h6 {
+  font-size: 12px; }
+
+/* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+p {
+  margin: 0 0 10px; }
+
+/* line 49, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+small {
+  font-size: 85%; }
+
+/* line 51, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+mark {
+  padding: .2em; }
+
+/* line 57, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.text.left {
+  text-align: left; }
+
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.text.right {
+  text-align: right; }
+
+/* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.text.center {
+  text-align: center; }
+
+/* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.text.justify {
+  text-align: justify; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -410,56 +533,19 @@ th {
 
 
 
-body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
+pre.highlight{
+  padding: 15px;
+  margin-top: 15px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: #777;
+  word-wrap: normal;
+  white-space: pre;
+  background-color: #FAFAFA;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-radius: 3px;
 }
