@@ -32,6 +32,8 @@
 # Helpers
 ###
 
+activate :syntax
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -57,8 +59,13 @@ set :images_dir, 'images'
 
 set :build_dir, "docs"
 
+configure :development do
+  set :debug_assets, true
+end
+
 # Build-specific configuration
 configure :build do
+  set :debug_assets, false
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
@@ -75,14 +82,10 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-after_configuration do
-  # @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  # @bower_assets_path = File.join "#{root}", @bower_config["directory"]
-  # sprockets.append_path @bower_assets_path
-  sprockets.append_path 'vendor/assets/stylesheets'
-  sprockets.append_path 'vendor/assets/javascripts'
-  sprockets.append_path 'vendor/assets/images'
-end
-
+# after_configuration do
+#   sprockets.append_path 'vendor/assets/stylesheets'
+#   sprockets.append_path 'vendor/assets/javascripts'
+#   sprockets.append_path 'vendor/assets/images'
+# end
 
 
