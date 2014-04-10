@@ -25,90 +25,66 @@
 
 .grid{
   @include clearfix();
-
-  .column {
+  > .column {
     display: block;
     float:   left;
 
     &:first-child {
       margin-left: 0;
     }
+
+    &.right{
+      float: right;
+    }
+
+    &.center{
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 
-@mixin column-child($value) {
+@mixin column-child($columns) {
   > .column {
-    width: $value;
+    width: percentage(1 / $columns);
   }
 }
 
-@mixin column-self($value) {
+@mixin column-self($columns, $value) {
   &.column {
-    width: $value;
+    width: percentage(1 / $columns * $value);
   }
 }
 
 
-.grid.two{
-  @include column-child(50%);
-}
+$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
 
-.grid.three{
-  @include column-child(33.3333333%);
-}
-
-.grid.four{
-  @include column-child(25%);
-}
-
-.grid.five{
-  @include column-child(20%);
-}
-
-.grid.six{
-  @include column-child(16.6666667%);
-}
-
-.grid.seven{
-  @include column-child(14.2857143%);
-}
-
-.grid.eight{
-  @include column-child(12.5%);
-}
-
-.grid.nine{
-  @include column-child(11.1111111%);
-}
-
-.grid.ten{
-  @include column-child(10%);
-}
-
-.grid.eleven{
-  @include column-child(9.09090909%);
-}
-
-.grid.twelve{
-  @include column-child(8.33333333%);
-  .four{
-    @include column-self(33.3333333%);
-  }
-  .eight{
-    @include column-self(66.6666667%);
+@for $i from 1 through length($columns) {
+  .grid.#{nth($columns, $i)} {
+    @include column-child($i + 1);
+    @for $j from 1 through $i {
+      > .#{nth($columns, $j)}{
+        @include column-self($i + 1, $j + 1);
+      }
+    }
   }
 }
 
 
 // Go full width at less than 480px
 @media only screen and (max-width: 480px) {
-  .grid{
-    &.two, &.three, &.four, &.five, &.six, &.seven, &.eight, &.nine, &.ten, &.eleven, &.twelve{
-      @include column-child(100%);
+  @for $i from 1 through length($columns) {
+    .grid.#{nth($columns, $i)} {
+      @include column-child(1);
+      @for $j from 1 through $i {
+        > .#{nth($columns, $j)}{
+          @include column-self($i + 1, $i + 1);
+        }
+      }
     }
   }
 }
-
 
 
