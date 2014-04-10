@@ -64,7 +64,7 @@ $columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
 @for $i from 1 through length($columns) {
   .grid.#{nth($columns, $i)} {
     @include column-child($i + 1);
-    @for $j from 1 through $i {
+    @for $j from 1 through $i - 1 {
       > .#{nth($columns, $j)}{
         @include column-self($i + 1, $j + 1);
       }
