@@ -1,0 +1,26 @@
+@import "mice";
+
+@charset "utf-8";
+
+pre.highlight{
+  padding: 15px;
+  margin-top: 15px;
+  overflow-x: auto;
+  font-size: 13px;
+  color: #777;
+  word-wrap: normal;
+  white-space: pre;
+  background-color: #FAFAFA;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+  border-radius: 3px;
+}
+
+.column{
+  padding: 10px;
+  background-color: #EEE;
+  border: 1px solid #DDD;
+}

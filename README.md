@@ -1,25 +1,46 @@
 # Mice
 
-TODO: Write a gem description
+Mice is semantic front-end framework.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'mice'
+```ruby
+gem 'mice'
+```
+or
+    
+```ruby
+gem 'mice', :git => 'git@github.com:miclle/mice.git'
+```
 
 And then execute:
 
-    $ bundle
+`bundle install`
 
 Or install it yourself as:
 
-    $ gem install mice
+`$ gem install mice`
 
 
-## Usage
+# mice with Rails
 
-TODO: Write usage instructions here
+## CSS
+
+Import Mice in an SCSS file (for example, `application.css.scss`) to get all of Mice's styles
+
+```css
+@import "mice";
+```
+
+or
+
+```css
+/*
+ *= require mice
+ */
+```
 
 
 ## HTML/CSS Style Guide
