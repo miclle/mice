@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["miclle.zheng@gmail.com"]
   spec.summary       = "Front-end framework."
   spec.description   = "Mice is semantic front-end framework."
-  spec.homepage      = "http://miclle.com"
+  spec.homepage      = "https://github.com/miclle/mice"
   spec.license       = "MIT"
 
   spec.files         = FileList['lib/**/*.rb', '[A-Z]*', 'vendor/**/*'].to_a
