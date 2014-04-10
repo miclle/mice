@@ -9,7 +9,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Mice" %></title>
 
-    <%= stylesheet_link_tag "doc", "syntax" %>
+    <%= stylesheet_link_tag "doc" %>
 
     <%= javascript_include_tag  "doc" %>
   </head>
@@ -34,7 +34,14 @@
     <%= yield %>
 
     <footer>
-
+      <div class="container">
+        <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank">@miclle</a></p>
+        <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
+        <ul>
+          <li>Currently v0.0.3</li>
+          <li><a href="https://github.com/miclle/mice">Mice</a></li>
+        </ul>
+      </div>
     </footer>
 
   </body>
