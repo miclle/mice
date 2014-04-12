@@ -25,14 +25,15 @@ body {
   line-height:      $line-height-base;
   color:            $text-color;
   background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
 }
 
 header{
-  height: 45px;
+  min-height: 45px;
 }
 
 footer{
-
+  margin-top: 50px;
 }
 
 // Reset fonts for relevant elements

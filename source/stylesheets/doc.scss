@@ -21,12 +21,43 @@ pre.highlight{
   border-radius: 3px;
 }
 
-.column{
+.doc .column{
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD;
 }
 
-.a{
-  width: percentage(1.0 / 12.0);
+.icon-example .column {
+  height: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 25px 0;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+
+  .icon{
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    // -webkit-transition: all 0.2s ease-out;
+    //    -moz-transition: all 0.2s ease-out;
+    //      -o-transition: all 0.2s ease-out;
+    //     -ms-transition: all 0.2s ease-out;
+    //         transition: all 0.2s ease-out;
+    -webkit-backface-visibility: hidden;
+  }
+
+  &:hover{
+    background: #009FDA;
+    color: #FFF;
+    .icon {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  }
 }

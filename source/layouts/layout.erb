@@ -16,20 +16,23 @@
 
   <body class="<%= "#{page_classes}-page" -%>">
 
-    <header>
+    <nav class="navbar">
       <div class="container">
         <div class="logo">
           <a href="/" class="brand">Mice</a>
         </div>
 
-        <nav role="navigation">
-          <ul>
-            <li><a href="/mobile.html">Mobile</a></li>
-            <li><a href="/grid.html">Grid</a></li>
-          </ul>
-        </nav>
+        <ul class="menu">
+          <li class="<%= "active" if page_classes == "mobile" -%>"><a href="/mobile.html">Mobile</a></li>
+          <li class="<%= "active" if page_classes == "grid" -%>"><a href="/grid.html">Grid</a></li>
+          <li class="<%= "active" if page_classes == "icons" -%>"><a href="/icons.html">Icons</a></li>
+        </ul>
+
+        <ul class="menu right">
+          <li><a href="https://github.com/miclle/mice">Gighub</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <%= yield %>
 
@@ -38,7 +41,7 @@
         <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank">@miclle</a></p>
         <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
         <ul>
-          <li>Currently v0.0.3</li>
+          <li>Currently v0.0.4</li>
           <li><a href="https://github.com/miclle/mice">Mice</a></li>
         </ul>
       </div>
