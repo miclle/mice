@@ -1,0 +1,68 @@
+//
+// Sidebar
+// --------------------------------------------------
+
+.sidebar{
+  background-color: #FAFAFA;
+
+  .menu{
+    list-style: none;
+    margin:     0;
+    padding:    15px 0;
+    position:   relative;
+
+    > li{
+      line-height:      30px;
+      padding:          0 15px;
+      position:         relative;
+
+      &:hover:not(.heading){
+        background: rgba(0, 64, 84, 0.03);
+      }
+
+      &.heading{
+        text-transform: uppercase;
+        padding-top: 30px;
+
+        &:before{
+          margin:         15px;
+          content:        '';
+          position:       absolute;
+          top:            0;
+          right:          0;
+          left:           0;
+          border-bottom:  solid 1px #FFF;
+        }
+      }
+
+      &.heading:first-of-type{
+        padding-top: 0;
+        &:before{
+          display: none;
+        }
+      }
+
+      > a{
+        display:          block;
+        position:         relative;
+        text-decoration:  none;
+
+      }
+
+      &.active{
+        background: rgba(0, 64, 84, 0.05);
+        a{
+
+          &:before, &:after {
+            border: none;
+          }
+        }
+        & + li a:before {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}

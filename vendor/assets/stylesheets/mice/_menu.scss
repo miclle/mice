@@ -1,0 +1,83 @@
+//
+// Menu
+// --------------------------------------------------
+
+.navbar{
+  min-height: 45px;
+  background: #333;
+
+  .logo{
+    float: left;
+    .brand{
+      display: block;
+      padding: 15px 0;
+      color:   #FFF;
+    }
+  }
+
+  .menu{
+    float:      left;
+    list-style: none;
+    margin:     0 15px;
+    padding:    0;
+    position:   relative;
+
+    &.right{
+      float: right;
+    }
+
+    > li{
+      float:    left;
+
+      > a{
+        display:          block;
+        padding:          15px 20px;
+        position:         relative;
+        text-decoration:  none;
+        color:            #EEE;
+
+        &:before {
+          content:      '';
+          position:     absolute;
+          top:          0;
+          left:         0;
+          height:       100%;
+          border-right: solid 1px #4E4E4E;
+        }
+
+        &:hover{
+          background: #272727;
+        }
+      }
+
+      &:last-child a:after {
+        content:      '';
+        position:     absolute;
+        top:          0;
+        right:        0;
+        height:       100%;
+        border-right: solid 1px #4E4E4E;
+      }
+
+      &.active{
+        a{
+          background: #008CBA;
+          color: #FFF;
+
+          &:hover{
+            background: #007BA0;
+          }
+
+          &:before, &:after {
+            border: none;
+          }
+        }
+        & + li a:before {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}
