@@ -63,9 +63,9 @@
     line-height: (3em / 4);
     vertical-align: -15%;
   }
-  &.great {   font-size: 2em; }
-  &.big {     font-size: 3em; }
-  &.huge {    font-size: 4em; }
+  &.great   { font-size: 2em; }
+  &.big     { font-size: 3em; }
+  &.huge    { font-size: 4em; }
   &.massive { font-size: 5em; }
 }
 
@@ -138,7 +138,6 @@
 .icon.stack-2x { font-size: 2em; }
 
 .icon.inverse { color: #FFF; }
-
 
 .icon{
   &.glass                  { &:before { content: "\f000"; } }
