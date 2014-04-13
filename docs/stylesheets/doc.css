@@ -1,4 +1,4 @@
-@charset "utf-8";/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -418,13 +418,18 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: white; }
+  background-color: white;
+  -webkit-font-smoothing: antialiased; }
 
-/* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+/* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
 header {
-  height: 45px; }
+  min-height: 45px; }
 
-/* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+/* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+footer {
+  margin-top: 50px; }
+
+/* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
 input,
 button,
 select,
@@ -433,16 +438,16 @@ textarea {
   font-size: inherit;
   line-height: inherit; }
 
-/* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+/* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
 a {
   color: #428bca;
   text-decoration: none; }
-  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+  /* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
   a:hover, a:focus {
     color: #2a6496;
     text-decoration: underline; }
 
-/* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+/* line 72, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
 img {
   vertical-align: middle; }
 
@@ -516,24 +521,2175 @@ mark {
 /* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 .text.justify {
   text-align: justify; }
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
 
+/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+    .container {
+      width: 1170px; } }
 
+/* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.grid:before, .grid:after {
+  content: " ";
+  display: table; }
+/* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.grid:after {
+  clear: both; }
+/* line 28, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid > .column {
+  display: block;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px; }
+  /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid > .column:first-child {
+    margin-left: 0; }
+  /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid > .column.right {
+    float: right; }
+  /* line 42, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid > .column.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.two > .column {
+  width: 50%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.three > .column {
+  width: 33.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.three > .two.column {
+  width: 66.66667%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.four > .column {
+  width: 25%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.four > .two.column {
+  width: 50%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.four > .three.column {
+  width: 75%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.five > .column {
+  width: 20%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.five > .two.column {
+  width: 40%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.five > .three.column {
+  width: 60.0%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.five > .four.column {
+  width: 80%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.six > .column {
+  width: 16.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.six > .two.column {
+  width: 33.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.six > .three.column {
+  width: 50%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.six > .four.column {
+  width: 66.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.six > .five.column {
+  width: 83.33333%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .column {
+  width: 14.28571%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .two.column {
+  width: 28.57143%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .three.column {
+  width: 42.85714%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .four.column {
+  width: 57.14286%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .five.column {
+  width: 71.42857%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.seven > .six.column {
+  width: 85.71429%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .column {
+  width: 12.5%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .two.column {
+  width: 25%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .three.column {
+  width: 37.5%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .four.column {
+  width: 50%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .five.column {
+  width: 62.5%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .six.column {
+  width: 75%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eight > .seven.column {
+  width: 87.5%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .column {
+  width: 11.11111%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .two.column {
+  width: 22.22222%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .three.column {
+  width: 33.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .four.column {
+  width: 44.44444%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .five.column {
+  width: 55.55556%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .six.column {
+  width: 66.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .seven.column {
+  width: 77.77778%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.nine > .eight.column {
+  width: 88.88889%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .column {
+  width: 10%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .two.column {
+  width: 20%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .three.column {
+  width: 30.0%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .four.column {
+  width: 40%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .five.column {
+  width: 50%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .six.column {
+  width: 60.0%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .seven.column {
+  width: 70%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .eight.column {
+  width: 80%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.ten > .nine.column {
+  width: 90%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .column {
+  width: 9.09091%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .two.column {
+  width: 18.18182%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .three.column {
+  width: 27.27273%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .four.column {
+  width: 36.36364%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .five.column {
+  width: 45.45455%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .six.column {
+  width: 54.54545%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .seven.column {
+  width: 63.63636%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .eight.column {
+  width: 72.72727%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .nine.column {
+  width: 81.81818%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.eleven > .ten.column {
+  width: 90.90909%; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .column {
+  width: 8.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .two.column {
+  width: 16.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .three.column {
+  width: 25%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .four.column {
+  width: 33.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .five.column {
+  width: 41.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .six.column {
+  width: 50%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .seven.column {
+  width: 58.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .eight.column {
+  width: 66.66667%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .nine.column {
+  width: 75%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .ten.column {
+  width: 83.33333%; }
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+.grid.twelve > .eleven.column {
+  width: 91.66667%; }
+
+@media only screen and (max-width: 480px) {
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.two > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.two > .two.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.three > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.three > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.three > .three.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.four > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.four > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.four > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.four > .four.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.five > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.five > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.five > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.five > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.five > .five.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.six > .six.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.seven > .seven.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .seven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eight > .eight.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .seven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .eight.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.nine > .nine.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .seven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .eight.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .nine.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.ten > .ten.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .seven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .eight.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .nine.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .ten.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.eleven > .eleven.column {
+    width: 100%; }
+
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .two.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .three.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .four.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .five.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .six.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .seven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .eight.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .nine.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .ten.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .eleven.column {
+    width: 100%; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
+  .grid.twelve > .twelve.column {
+    width: 100%; } }
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fontawesome-webfont.eot?v=4.0.3");
+  src: url("fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("fontawesome-webfont.woff?v=4.0.3") format("woff"), url("fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
+/* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
+/* makes the font 33% larger relative to the icon container */
+/* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.large {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+/* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.great {
+  font-size: 2em; }
+/* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.big {
+  font-size: 3em; }
+/* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.huge {
+  font-size: 4em; }
+/* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.massive {
+  font-size: 5em; }
 
+/* line 76, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
 
-pre.highlight{
+@-moz-keyframes spin {
+  /* line 84, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  /* line 85, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  100% {
+    -moz-transform: rotate(359deg); } }
+
+@-webkit-keyframes spin {
+  /* line 88, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spin {
+  /* line 92, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  0% {
+    -o-transform: rotate(0deg); }
+
+  /* line 93, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  100% {
+    -o-transform: rotate(359deg); } }
+
+@-ms-keyframes spin {
+  /* line 96, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  0% {
+    -ms-transform: rotate(0deg); }
+
+  /* line 97, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  100% {
+    -ms-transform: rotate(359deg); } }
+
+@keyframes spin {
+  /* line 100, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  0% {
+    transform: rotate(0deg); }
+
+  /* line 101, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+  100% {
+    transform: rotate(359deg); } }
+
+/* line 109, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon .rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+/* line 110, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon .rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+/* line 111, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon .rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg); }
+/* line 113, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon .flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+/* line 114, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon .flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+/* line 120, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+/* line 129, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack-1x, .icon.stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+/* line 136, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack-1x {
+  line-height: inherit; }
+
+/* line 138, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack-2x {
+  font-size: 2em; }
+
+/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.inverse {
+  color: #FFF; }
+
+/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.glass:before {
+  content: "\f000"; }
+/* line 144, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.music:before {
+  content: "\f001"; }
+/* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.search:before {
+  content: "\f002"; }
+/* line 146, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.envelope-o:before {
+  content: "\f003"; }
+/* line 147, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.heart:before {
+  content: "\f004"; }
+/* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.star:before {
+  content: "\f005"; }
+/* line 149, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.star-o:before {
+  content: "\f006"; }
+/* line 150, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.user:before {
+  content: "\f007"; }
+/* line 151, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.film:before {
+  content: "\f008"; }
+/* line 152, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.th-large:before {
+  content: "\f009"; }
+/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.th:before {
+  content: "\f00a"; }
+/* line 154, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.th-list:before {
+  content: "\f00b"; }
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.check:before {
+  content: "\f00c"; }
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.times:before {
+  content: "\f00d"; }
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.search-plus:before {
+  content: "\f00e"; }
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.search-minus:before {
+  content: "\f010"; }
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.power-off:before {
+  content: "\f011"; }
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.signal:before {
+  content: "\f012"; }
+/* line 163, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cog:before, .icon.gear:before {
+  content: "\f013"; }
+/* line 165, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.trash-o:before {
+  content: "\f014"; }
+/* line 166, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.home:before {
+  content: "\f015"; }
+/* line 167, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.file-o:before {
+  content: "\f016"; }
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.clock-o:before {
+  content: "\f017"; }
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.road:before {
+  content: "\f018"; }
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.download:before {
+  content: "\f019"; }
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-o-down:before {
+  content: "\f01a"; }
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-o-up:before {
+  content: "\f01b"; }
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.inbox:before {
+  content: "\f01c"; }
+/* line 174, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.play-circle-o:before {
+  content: "\f01d"; }
+/* line 175, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.repeat:before, .icon.rotate-right:before {
+  content: "\f01e"; }
+/* line 176, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.refresh:before {
+  content: "\f021"; }
+/* line 177, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.list-alt:before {
+  content: "\f022"; }
+/* line 178, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.lock:before {
+  content: "\f023"; }
+/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.flag:before {
+  content: "\f024"; }
+/* line 180, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.headphones:before {
+  content: "\f025"; }
+/* line 181, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.volume-off:before {
+  content: "\f026"; }
+/* line 182, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.volume-down:before {
+  content: "\f027"; }
+/* line 183, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.volume-up:before {
+  content: "\f028"; }
+/* line 184, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.qrcode:before {
+  content: "\f029"; }
+/* line 185, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.barcode:before {
+  content: "\f02a"; }
+/* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tag:before {
+  content: "\f02b"; }
+/* line 187, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tags:before {
+  content: "\f02c"; }
+/* line 188, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.book:before {
+  content: "\f02d"; }
+/* line 189, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bookmark:before {
+  content: "\f02e"; }
+/* line 190, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.print:before {
+  content: "\f02f"; }
+/* line 191, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.camera:before {
+  content: "\f030"; }
+/* line 192, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.font:before {
+  content: "\f031"; }
+/* line 193, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bold:before {
+  content: "\f032"; }
+/* line 194, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.italic:before {
+  content: "\f033"; }
+/* line 195, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.text-height:before {
+  content: "\f034"; }
+/* line 196, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.text-width:before {
+  content: "\f035"; }
+/* line 197, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.align-left:before {
+  content: "\f036"; }
+/* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.align-center:before {
+  content: "\f037"; }
+/* line 199, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.align-right:before {
+  content: "\f038"; }
+/* line 200, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.align-justify:before {
+  content: "\f039"; }
+/* line 201, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.list:before {
+  content: "\f03a"; }
+/* line 202, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.outdent:before, .icon.dedent:before {
+  content: "\f03b"; }
+/* line 203, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.indent:before {
+  content: "\f03c"; }
+/* line 204, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.video-camera:before {
+  content: "\f03d"; }
+/* line 205, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.picture-o:before {
+  content: "\f03e"; }
+/* line 206, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pencil:before {
+  content: "\f040"; }
+/* line 207, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.map-marker:before {
+  content: "\f041"; }
+/* line 208, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.adjust:before {
+  content: "\f042"; }
+/* line 209, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tint:before {
+  content: "\f043"; }
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pencil-square-o:before, .icon.edit:before {
+  content: "\f044"; }
+/* line 214, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.share-square-o:before {
+  content: "\f045"; }
+/* line 215, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.check-square-o:before {
+  content: "\f046"; }
+/* line 216, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrows:before {
+  content: "\f047"; }
+/* line 217, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.step-backward:before {
+  content: "\f048"; }
+/* line 218, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.fast-backward:before {
+  content: "\f049"; }
+/* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.backward:before {
+  content: "\f04a"; }
+/* line 220, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.play:before {
+  content: "\f04b"; }
+/* line 221, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pause:before {
+  content: "\f04c"; }
+/* line 222, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stop:before {
+  content: "\f04d"; }
+/* line 223, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.forward:before {
+  content: "\f04e"; }
+/* line 224, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.fast-forward:before {
+  content: "\f050"; }
+/* line 225, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.step-forward:before {
+  content: "\f051"; }
+/* line 226, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.eject:before {
+  content: "\f052"; }
+/* line 227, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-left:before {
+  content: "\f053"; }
+/* line 228, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-right:before {
+  content: "\f054"; }
+/* line 229, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.plus-circle:before {
+  content: "\f055"; }
+/* line 230, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.minus-circle:before {
+  content: "\f056"; }
+/* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.times-circle:before {
+  content: "\f057"; }
+/* line 232, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.check-circle:before {
+  content: "\f058"; }
+/* line 233, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.question-circle:before {
+  content: "\f059"; }
+/* line 234, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.info-circle:before {
+  content: "\f05a"; }
+/* line 235, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.crosshairs:before {
+  content: "\f05b"; }
+/* line 236, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.times-circle-o:before {
+  content: "\f05c"; }
+/* line 237, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.check-circle-o:before {
+  content: "\f05d"; }
+/* line 238, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.ban:before {
+  content: "\f05e"; }
+/* line 239, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-left:before {
+  content: "\f060"; }
+/* line 240, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-right:before {
+  content: "\f061"; }
+/* line 241, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-up:before {
+  content: "\f062"; }
+/* line 242, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-down:before {
+  content: "\f063"; }
+/* line 245, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.share:before, .icon.mail-forward:before {
+  content: "\f064"; }
+/* line 247, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.expand:before {
+  content: "\f065"; }
+/* line 248, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.compress:before {
+  content: "\f066"; }
+/* line 249, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.plus:before {
+  content: "\f067"; }
+/* line 250, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.minus:before {
+  content: "\f068"; }
+/* line 251, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.asterisk:before {
+  content: "\f069"; }
+/* line 252, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.exclamation-circle:before {
+  content: "\f06a"; }
+/* line 253, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.gift:before {
+  content: "\f06b"; }
+/* line 254, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.leaf:before {
+  content: "\f06c"; }
+/* line 255, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.fire:before {
+  content: "\f06d"; }
+/* line 256, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.eye:before {
+  content: "\f06e"; }
+/* line 257, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.eye-slash:before {
+  content: "\f070"; }
+/* line 260, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.exclamation-triangle:before, .icon.warning:before {
+  content: "\f071"; }
+/* line 262, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.plane:before {
+  content: "\f072"; }
+/* line 263, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.calendar:before {
+  content: "\f073"; }
+/* line 264, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.random:before {
+  content: "\f074"; }
+/* line 265, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.comment:before {
+  content: "\f075"; }
+/* line 266, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.magnet:before {
+  content: "\f076"; }
+/* line 267, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-up:before {
+  content: "\f077"; }
+/* line 268, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-down:before {
+  content: "\f078"; }
+/* line 269, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.retweet:before {
+  content: "\f079"; }
+/* line 270, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.shopping-cart:before {
+  content: "\f07a"; }
+/* line 271, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.folder:before {
+  content: "\f07b"; }
+/* line 272, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.folder-open:before {
+  content: "\f07c"; }
+/* line 273, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrows-v:before {
+  content: "\f07d"; }
+/* line 274, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrows-h:before {
+  content: "\f07e"; }
+/* line 275, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bar-chart-o:before {
+  content: "\f080"; }
+/* line 276, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.twitter-square:before {
+  content: "\f081"; }
+/* line 277, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.facebook-square:before {
+  content: "\f082"; }
+/* line 278, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.camera-retro:before {
+  content: "\f083"; }
+/* line 279, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.key:before {
+  content: "\f084"; }
+/* line 282, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cogs:before, .icon.gears:before {
+  content: "\f085"; }
+/* line 284, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.comments:before {
+  content: "\f086"; }
+/* line 285, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.thumbs-o-up:before {
+  content: "\f087"; }
+/* line 286, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.thumbs-o-down:before {
+  content: "\f088"; }
+/* line 287, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.star-half:before {
+  content: "\f089"; }
+/* line 288, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.heart-o:before {
+  content: "\f08a"; }
+/* line 289, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sign-out:before {
+  content: "\f08b"; }
+/* line 290, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.linkedin-square:before {
+  content: "\f08c"; }
+/* line 291, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.thumb-tack:before {
+  content: "\f08d"; }
+/* line 292, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.external-link:before {
+  content: "\f08e"; }
+/* line 293, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sign-in:before {
+  content: "\f090"; }
+/* line 294, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.trophy:before {
+  content: "\f091"; }
+/* line 295, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.github-square:before {
+  content: "\f092"; }
+/* line 296, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.upload:before {
+  content: "\f093"; }
+/* line 297, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.lemon-o:before {
+  content: "\f094"; }
+/* line 298, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.phone:before {
+  content: "\f095"; }
+/* line 299, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.square-o:before {
+  content: "\f096"; }
+/* line 300, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bookmark-o:before {
+  content: "\f097"; }
+/* line 301, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.phone-square:before {
+  content: "\f098"; }
+/* line 302, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.twitter:before {
+  content: "\f099"; }
+/* line 303, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.facebook:before {
+  content: "\f09a"; }
+/* line 304, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.github:before {
+  content: "\f09b"; }
+/* line 305, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.unlock:before {
+  content: "\f09c"; }
+/* line 306, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.credit-card:before {
+  content: "\f09d"; }
+/* line 307, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.rss:before {
+  content: "\f09e"; }
+/* line 308, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hdd-o:before {
+  content: "\f0a0"; }
+/* line 309, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bullhorn:before {
+  content: "\f0a1"; }
+/* line 310, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bell:before {
+  content: "\f0f3"; }
+/* line 311, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.certificate:before {
+  content: "\f0a3"; }
+/* line 312, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hand-o-right:before {
+  content: "\f0a4"; }
+/* line 313, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hand-o-left:before {
+  content: "\f0a5"; }
+/* line 314, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hand-o-up:before {
+  content: "\f0a6"; }
+/* line 315, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hand-o-down:before {
+  content: "\f0a7"; }
+/* line 316, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-left:before {
+  content: "\f0a8"; }
+/* line 317, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-right:before {
+  content: "\f0a9"; }
+/* line 318, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-up:before {
+  content: "\f0aa"; }
+/* line 319, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-down:before {
+  content: "\f0ab"; }
+/* line 320, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.globe:before {
+  content: "\f0ac"; }
+/* line 321, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.wrench:before {
+  content: "\f0ad"; }
+/* line 322, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tasks:before {
+  content: "\f0ae"; }
+/* line 323, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.filter:before {
+  content: "\f0b0"; }
+/* line 324, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.briefcase:before {
+  content: "\f0b1"; }
+/* line 325, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrows-alt:before {
+  content: "\f0b2"; }
+/* line 328, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.users:before, .icon.group:before {
+  content: "\f0c0"; }
+/* line 330, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.link:before, .icon.chain:before {
+  content: "\f0c1"; }
+/* line 331, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cloud:before {
+  content: "\f0c2"; }
+/* line 332, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.flask:before {
+  content: "\f0c3"; }
+/* line 333, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.scissors:before, .icon.cut:before {
+  content: "\f0c4"; }
+/* line 334, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.files-o:before, .icon.copy:before {
+  content: "\f0c5"; }
+/* line 335, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.paperclip:before {
+  content: "\f0c6"; }
+/* line 336, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.floppy-o:before, .icon.save:before {
+  content: "\f0c7"; }
+/* line 337, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.square:before {
+  content: "\f0c8"; }
+/* line 338, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bars:before {
+  content: "\f0c9"; }
+/* line 339, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.list-ul:before {
+  content: "\f0ca"; }
+/* line 340, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.list-ol:before {
+  content: "\f0cb"; }
+/* line 341, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.strikethrough:before {
+  content: "\f0cc"; }
+/* line 342, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.underline:before {
+  content: "\f0cd"; }
+/* line 343, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.table:before {
+  content: "\f0ce"; }
+/* line 344, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.magic:before {
+  content: "\f0d0"; }
+/* line 345, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.truck:before {
+  content: "\f0d1"; }
+/* line 346, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pinterest:before {
+  content: "\f0d2"; }
+/* line 347, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pinterest-square:before {
+  content: "\f0d3"; }
+/* line 348, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.google-plus-square:before {
+  content: "\f0d4"; }
+/* line 349, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.google-plus:before {
+  content: "\f0d5"; }
+/* line 350, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.money:before {
+  content: "\f0d6"; }
+/* line 351, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-down:before {
+  content: "\f0d7"; }
+/* line 352, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-up:before {
+  content: "\f0d8"; }
+/* line 353, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-left:before {
+  content: "\f0d9"; }
+/* line 354, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-right:before {
+  content: "\f0da"; }
+/* line 355, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.columns:before {
+  content: "\f0db"; }
+/* line 358, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort:before, .icon.unsorted:before {
+  content: "\f0dc"; }
+/* line 361, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-asc:before, .icon.sort-down:before {
+  content: "\f0dd"; }
+/* line 364, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-desc:before, .icon.sort-up:before {
+  content: "\f0de"; }
+/* line 366, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.envelope:before {
+  content: "\f0e0"; }
+/* line 367, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.linkedin:before {
+  content: "\f0e1"; }
+/* line 368, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.undo:before, .icon.rotate-left:before {
+  content: "\f0e2"; }
+/* line 370, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.gavel:before, .icon.legal:before {
+  content: "\f0e3"; }
+/* line 373, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tachometer:before, .icon.dashboard:before {
+  content: "\f0e4"; }
+/* line 375, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.comment-o:before {
+  content: "\f0e5"; }
+/* line 376, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.comments-o:before {
+  content: "\f0e6"; }
+/* line 378, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bolt:before, .icon.flash:before {
+  content: "\f0e7"; }
+/* line 380, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sitemap:before {
+  content: "\f0e8"; }
+/* line 381, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.umbrella:before {
+  content: "\f0e9"; }
+/* line 382, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.clipboard:before, .icon.paste:before {
+  content: "\f0ea"; }
+/* line 383, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.lightbulb-o:before {
+  content: "\f0eb"; }
+/* line 384, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.exchange:before {
+  content: "\f0ec"; }
+/* line 385, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cloud-download:before {
+  content: "\f0ed"; }
+/* line 386, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cloud-upload:before {
+  content: "\f0ee"; }
+/* line 387, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.user-md:before {
+  content: "\f0f0"; }
+/* line 388, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stethoscope:before {
+  content: "\f0f1"; }
+/* line 389, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.suitcase:before {
+  content: "\f0f2"; }
+/* line 390, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bell-o:before {
+  content: "\f0a2"; }
+/* line 391, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.coffee:before {
+  content: "\f0f4"; }
+/* line 392, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.cutlery:before {
+  content: "\f0f5"; }
+/* line 393, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.file-text-o:before {
+  content: "\f0f6"; }
+/* line 394, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.building-o:before {
+  content: "\f0f7"; }
+/* line 395, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.hospital-o:before {
+  content: "\f0f8"; }
+/* line 396, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.ambulance:before {
+  content: "\f0f9"; }
+/* line 397, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.medkit:before {
+  content: "\f0fa"; }
+/* line 398, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.fighter-jet:before {
+  content: "\f0fb"; }
+/* line 399, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.beer:before {
+  content: "\f0fc"; }
+/* line 400, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.h-square:before {
+  content: "\f0fd"; }
+/* line 401, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.plus-square:before {
+  content: "\f0fe"; }
+/* line 402, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-double-left:before {
+  content: "\f100"; }
+/* line 403, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-double-right:before {
+  content: "\f101"; }
+/* line 404, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-double-up:before {
+  content: "\f102"; }
+/* line 405, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-double-down:before {
+  content: "\f103"; }
+/* line 406, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-left:before {
+  content: "\f104"; }
+/* line 407, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-right:before {
+  content: "\f105"; }
+/* line 408, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-up:before {
+  content: "\f106"; }
+/* line 409, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.angle-down:before {
+  content: "\f107"; }
+/* line 410, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.desktop:before {
+  content: "\f108"; }
+/* line 411, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.laptop:before {
+  content: "\f109"; }
+/* line 412, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tablet:before {
+  content: "\f10a"; }
+/* line 415, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.mobile:before, .icon.mobile-phone:before {
+  content: "\f10b"; }
+/* line 417, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.circle-o:before {
+  content: "\f10c"; }
+/* line 418, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.quote-left:before {
+  content: "\f10d"; }
+/* line 419, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.quote-right:before {
+  content: "\f10e"; }
+/* line 420, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.spinner:before {
+  content: "\f110"; }
+/* line 421, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.circle:before {
+  content: "\f111"; }
+/* line 424, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.reply:before, .icon.mail-reply:before {
+  content: "\f112"; }
+/* line 426, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.github-alt:before {
+  content: "\f113"; }
+/* line 427, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.folder-o:before {
+  content: "\f114"; }
+/* line 428, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.folder-open-o:before {
+  content: "\f115"; }
+/* line 429, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.smile-o:before {
+  content: "\f118"; }
+/* line 430, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.frown-o:before {
+  content: "\f119"; }
+/* line 431, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.meh-o:before {
+  content: "\f11a"; }
+/* line 432, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.gamepad:before {
+  content: "\f11b"; }
+/* line 433, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.keyboard-o:before {
+  content: "\f11c"; }
+/* line 434, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.flag-o:before {
+  content: "\f11d"; }
+/* line 435, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.flag-checkered:before {
+  content: "\f11e"; }
+/* line 436, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.terminal:before {
+  content: "\f120"; }
+/* line 437, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.code:before {
+  content: "\f121"; }
+/* line 438, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.reply-all:before {
+  content: "\f122"; }
+/* line 439, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.mail-reply-all:before {
+  content: "\f122"; }
+/* line 443, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.star-half-o:before, .icon.star-half-empty:before, .icon.star-half-full:before {
+  content: "\f123"; }
+/* line 445, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.location-arrow:before {
+  content: "\f124"; }
+/* line 446, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.crop:before {
+  content: "\f125"; }
+/* line 447, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.code-fork:before {
+  content: "\f126"; }
+/* line 448, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chain-broken:before, .icon.unlink:before {
+  content: "\f127"; }
+/* line 449, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.question:before {
+  content: "\f128"; }
+/* line 450, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.info:before {
+  content: "\f129"; }
+/* line 451, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.exclamation:before {
+  content: "\f12a"; }
+/* line 452, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.superscript:before {
+  content: "\f12b"; }
+/* line 453, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.subscript:before {
+  content: "\f12c"; }
+/* line 454, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.eraser:before {
+  content: "\f12d"; }
+/* line 455, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.puzzle-piece:before {
+  content: "\f12e"; }
+/* line 456, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.microphone:before {
+  content: "\f130"; }
+/* line 457, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.microphone-slash:before {
+  content: "\f131"; }
+/* line 458, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.shield:before {
+  content: "\f132"; }
+/* line 459, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.calendar-o:before {
+  content: "\f133"; }
+/* line 460, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.fire-extinguisher:before {
+  content: "\f134"; }
+/* line 461, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.rocket:before {
+  content: "\f135"; }
+/* line 462, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.maxcdn:before {
+  content: "\f136"; }
+/* line 463, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-circle-left:before {
+  content: "\f137"; }
+/* line 464, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-circle-right:before {
+  content: "\f138"; }
+/* line 465, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-circle-up:before {
+  content: "\f139"; }
+/* line 466, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.chevron-circle-down:before {
+  content: "\f13a"; }
+/* line 467, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.html5:before {
+  content: "\f13b"; }
+/* line 468, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.css3:before {
+  content: "\f13c"; }
+/* line 469, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.anchor:before {
+  content: "\f13d"; }
+/* line 470, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.unlock-alt:before {
+  content: "\f13e"; }
+/* line 471, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bullseye:before {
+  content: "\f140"; }
+/* line 472, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.ellipsis-h:before {
+  content: "\f141"; }
+/* line 473, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.ellipsis-v:before {
+  content: "\f142"; }
+/* line 474, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.rss-square:before {
+  content: "\f143"; }
+/* line 475, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.play-circle:before {
+  content: "\f144"; }
+/* line 476, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.ticket:before {
+  content: "\f145"; }
+/* line 477, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.minus-square:before {
+  content: "\f146"; }
+/* line 478, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.minus-square-o:before {
+  content: "\f147"; }
+/* line 479, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.level-up:before {
+  content: "\f148"; }
+/* line 480, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.level-down:before {
+  content: "\f149"; }
+/* line 481, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.check-square:before {
+  content: "\f14a"; }
+/* line 482, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pencil-square:before {
+  content: "\f14b"; }
+/* line 483, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.external-link-square:before {
+  content: "\f14c"; }
+/* line 484, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.share-square:before {
+  content: "\f14d"; }
+/* line 485, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.compass:before {
+  content: "\f14e"; }
+/* line 488, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-square-o-down:before, .icon.toggle-down:before {
+  content: "\f150"; }
+/* line 491, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-square-o-up:before, .icon.toggle-up:before {
+  content: "\f151"; }
+/* line 494, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-square-o-right:before, .icon.toggle-right:before {
+  content: "\f152"; }
+/* line 496, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.eur:before, .icon.euro:before {
+  content: "\f153"; }
+/* line 498, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.gbp:before {
+  content: "\f154"; }
+/* line 500, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.usd:before, .icon.dollar:before {
+  content: "\f155"; }
+/* line 502, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.inr:before, .icon.rupee:before {
+  content: "\f156"; }
+/* line 504, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.jpy:before, .icon.rmb:before, .icon.yen:before, .icon.cny:before {
+  content: "\f157"; }
+/* line 506, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.rub:before, .icon.rouble:before, .icon.ruble:before {
+  content: "\f158"; }
+/* line 507, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.krw:before, .icon.won:before {
+  content: "\f159"; }
+/* line 509, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.btc:before, .icon.bitcoin:before {
+  content: "\f15a"; }
+/* line 511, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.file:before {
+  content: "\f15b"; }
+/* line 512, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.file-text:before {
+  content: "\f15c"; }
+/* line 513, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-alpha-asc:before {
+  content: "\f15d"; }
+/* line 514, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-alpha-desc:before {
+  content: "\f15e"; }
+/* line 515, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-amount-asc:before {
+  content: "\f160"; }
+/* line 516, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-amount-desc:before {
+  content: "\f161"; }
+/* line 517, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-numeric-asc:before {
+  content: "\f162"; }
+/* line 518, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sort-numeric-desc:before {
+  content: "\f163"; }
+/* line 519, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.thumbs-up:before {
+  content: "\f164"; }
+/* line 520, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.thumbs-down:before {
+  content: "\f165"; }
+/* line 521, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.youtube-square:before {
+  content: "\f166"; }
+/* line 522, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.youtube:before {
+  content: "\f167"; }
+/* line 523, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.xing:before {
+  content: "\f168"; }
+/* line 524, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.xing-square:before {
+  content: "\f169"; }
+/* line 525, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.youtube-play:before {
+  content: "\f16a"; }
+/* line 526, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.dropbox:before {
+  content: "\f16b"; }
+/* line 527, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack-overflow:before {
+  content: "\f16c"; }
+/* line 528, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.instagram:before {
+  content: "\f16d"; }
+/* line 529, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.flickr:before {
+  content: "\f16e"; }
+/* line 530, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.adn:before {
+  content: "\f170"; }
+/* line 531, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bitbucket:before {
+  content: "\f171"; }
+/* line 532, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bitbucket-square:before {
+  content: "\f172"; }
+/* line 533, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tumblr:before {
+  content: "\f173"; }
+/* line 534, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.tumblr-square:before {
+  content: "\f174"; }
+/* line 535, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.long-arrow-down:before {
+  content: "\f175"; }
+/* line 536, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.long-arrow-up:before {
+  content: "\f176"; }
+/* line 537, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.long-arrow-left:before {
+  content: "\f177"; }
+/* line 538, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.long-arrow-right:before {
+  content: "\f178"; }
+/* line 539, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.apple:before {
+  content: "\f179"; }
+/* line 540, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.windows:before {
+  content: "\f17a"; }
+/* line 541, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.android:before {
+  content: "\f17b"; }
+/* line 542, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.linux:before {
+  content: "\f17c"; }
+/* line 543, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.dribbble:before {
+  content: "\f17d"; }
+/* line 544, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.skype:before {
+  content: "\f17e"; }
+/* line 545, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.foursquare:before {
+  content: "\f180"; }
+/* line 546, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.trello:before {
+  content: "\f181"; }
+/* line 547, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.female:before {
+  content: "\f182"; }
+/* line 548, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.male:before {
+  content: "\f183"; }
+/* line 549, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.gittip:before {
+  content: "\f184"; }
+/* line 550, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.sun-o:before {
+  content: "\f185"; }
+/* line 551, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.moon-o:before {
+  content: "\f186"; }
+/* line 552, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.archive:before {
+  content: "\f187"; }
+/* line 553, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.bug:before {
+  content: "\f188"; }
+/* line 554, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.vk:before {
+  content: "\f189"; }
+/* line 555, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.weibo:before {
+  content: "\f18a"; }
+/* line 556, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.renren:before {
+  content: "\f18b"; }
+/* line 557, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.pagelines:before {
+  content: "\f18c"; }
+/* line 558, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.stack-exchange:before {
+  content: "\f18d"; }
+/* line 559, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-o-right:before {
+  content: "\f18e"; }
+/* line 560, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.arrow-circle-o-left:before {
+  content: "\f190"; }
+/* line 563, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.caret-square-o-left:before, .icon.toggle-left:before {
+  content: "\f191"; }
+/* line 565, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.dot-circle-o:before {
+  content: "\f192"; }
+/* line 566, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.wheelchair:before {
+  content: "\f193"; }
+/* line 567, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.vimeo-square:before {
+  content: "\f194"; }
+/* line 569, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.try:before, .icon.turkish-lira:before {
+  content: "\f195"; }
+/* line 571, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_icons.scss */
+.icon.plus-square-o:before {
+  content: "\f196"; }
+
+/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+.navbar {
+  min-height: 45px;
+  background: #333; }
+  /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+  .navbar .logo {
+    float: left; }
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+    .navbar .logo .brand {
+      display: block;
+      padding: 15px 0;
+      color: #FFF; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+  .navbar .menu {
+    float: left;
+    list-style: none;
+    margin: 0 15px;
+    padding: 0;
+    position: relative; }
+    /* line 25, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+    .navbar .menu.right {
+      float: right; }
+    /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+    .navbar .menu > li {
+      float: left; }
+      /* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+      .navbar .menu > li > a {
+        display: block;
+        padding: 15px 20px;
+        position: relative;
+        text-decoration: none;
+        color: #EEE; }
+        /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+        .navbar .menu > li > a:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-right: solid 1px #4E4E4E; }
+        /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+        .navbar .menu > li > a:hover {
+          background: #272727; }
+      /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+      .navbar .menu > li:last-child a:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border-right: solid 1px #4E4E4E; }
+      /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+      .navbar .menu > li.active a {
+        background: #008CBA;
+        color: #FFF; }
+        /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+        .navbar .menu > li.active a:hover {
+          background: #007BA0; }
+        /* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+        .navbar .menu > li.active a:before, .navbar .menu > li.active a:after {
+          border: none; }
+      /* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+      .navbar .menu > li.active + li a:before {
+        display: none; }
+
+/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+.sidebar {
+  background-color: #FAFAFA; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+  .sidebar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    position: relative; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+    .sidebar .menu > li {
+      line-height: 30px;
+      padding: 0 15px;
+      position: relative; }
+      /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      .sidebar .menu > li:hover:not(.heading) {
+        background: rgba(0, 64, 84, 0.03); }
+      /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      .sidebar .menu > li.heading {
+        text-transform: uppercase;
+        padding-top: 30px; }
+        /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+        .sidebar .menu > li.heading:before {
+          margin: 15px;
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          border-bottom: solid 1px #FFF; }
+      /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      .sidebar .menu > li.heading:first-of-type {
+        padding-top: 0; }
+        /* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+        .sidebar .menu > li.heading:first-of-type:before {
+          display: none; }
+      /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      .sidebar .menu > li > a {
+        display: block;
+        position: relative;
+        text-decoration: none; }
+      /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      .sidebar .menu > li.active {
+        background: rgba(0, 64, 84, 0.05); }
+        /* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+        .sidebar .menu > li.active a:before, .sidebar .menu > li.active a:after {
+          border: none; }
+        /* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+        .sidebar .menu > li.active + li a:before {
+          display: none; }
+
+/*
+ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base16::Monokai, and Monokai
+*/
+/* line 5, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight table td {
+  padding: 5px; }
+
+/* line 6, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight table pre {
+  margin: 0; }
+
+/* line 7, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .cm {
+  color: #999988;
+  font-style: italic; }
+
+/* line 11, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold; }
+
+/* line 15, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* line 19, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* line 24, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .c, .highlight .cd {
+  color: #999988;
+  font-style: italic; }
+
+/* line 28, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* line 32, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* line 36, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .ge {
+  color: #000000;
+  font-style: italic; }
+
+/* line 40, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gr {
+  color: #aa0000; }
+
+/* line 43, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gh {
+  color: #999999; }
+
+/* line 46, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd; }
+
+/* line 50, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .go {
+  color: #888888; }
+
+/* line 53, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gp {
+  color: #555555; }
+
+/* line 56, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gs {
+  font-weight: bold; }
+
+/* line 59, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* line 62, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .gt {
+  color: #aa0000; }
+
+/* line 65, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kc {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 69, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kd {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 73, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kn {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 77, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kp {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 81, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kr {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 85, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 89, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 93, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .mf {
+  color: #009999; }
+
+/* line 96, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .mh {
+  color: #009999; }
+
+/* line 99, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .il {
+  color: #009999; }
+
+/* line 102, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .mi {
+  color: #009999; }
+
+/* line 105, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .mo {
+  color: #009999; }
+
+/* line 108, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999; }
+
+/* line 111, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sb {
+  color: #d14; }
+
+/* line 114, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sc {
+  color: #d14; }
+
+/* line 117, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sd {
+  color: #d14; }
+
+/* line 120, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .s2 {
+  color: #d14; }
+
+/* line 123, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .se {
+  color: #d14; }
+
+/* line 126, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sh {
+  color: #d14; }
+
+/* line 129, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .si {
+  color: #d14; }
+
+/* line 132, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sx {
+  color: #d14; }
+
+/* line 135, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .sr {
+  color: #009926; }
+
+/* line 138, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .s1 {
+  color: #d14; }
+
+/* line 141, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .ss {
+  color: #990073; }
+
+/* line 144, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .s {
+  color: #d14; }
+
+/* line 147, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .na {
+  color: #008080; }
+
+/* line 150, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .bp {
+  color: #999999; }
+
+/* line 153, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nb {
+  color: #0086B3; }
+
+/* line 156, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 160, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .no {
+  color: #008080; }
+
+/* line 163, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold; }
+
+/* line 167, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .ni {
+  color: #800080; }
+
+/* line 170, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 174, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 178, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nl {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 182, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nn {
+  color: #555555; }
+
+/* line 185, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nt {
+  color: #000080; }
+
+/* line 188, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .vc {
+  color: #008080; }
+
+/* line 191, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .vg {
+  color: #008080; }
+
+/* line 194, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .vi {
+  color: #008080; }
+
+/* line 197, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .nv {
+  color: #008080; }
+
+/* line 200, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .ow {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 204, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .o {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 208, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight .w {
+  color: #bbbbbb; }
+
+/* line 211, /Users/miclle/project/mice/source/stylesheets/syntax.css.erb */
+.highlight {
+  background-color: #f8f8f8; }
+
+/* line 7, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+pre.highlight {
   padding: 15px;
   margin-top: 15px;
   overflow-x: auto;
@@ -544,8 +2700,40 @@ pre.highlight{
   background-color: #FAFAFA;
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
-
   border-right: 1px solid #DDD;
   border-left: 1px solid #DDD;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
+
+/* line 24, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+.doc .column {
+  padding: 10px;
+  background-color: #EEE;
+  border: 1px solid #DDD; }
+
+/* line 30, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+.icon-example .column {
+  height: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 25px 0;
+  text-align: center;
+  color: #333;
+  cursor: pointer; }
+  /* line 40, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  .icon-example .column .icon {
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    -webkit-backface-visibility: hidden; }
+  /* line 52, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  .icon-example .column:hover {
+    background: #009FDA;
+    color: #FFF; }
+    /* line 55, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    .icon-example .column:hover .icon {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5); }

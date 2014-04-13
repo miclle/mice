@@ -9,38 +9,44 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Mobile</title>
 
-    <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/syntax.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" />
 
     <script src="/javascripts/doc.js" type="text/javascript"></script>
   </head>
 
-  <body class="mobile">
+  <body class="mobile-page">
 
-    <header>
+    <nav class="navbar">
       <div class="container">
         <div class="logo">
           <a href="/" class="brand">Mice</a>
         </div>
 
-        <nav role="navigation">
-          <ul>
-            <li><a href="/mobile.html">Mobile</a></li>
-          </ul>
-        </nav>
+        <ul class="menu">
+          <li class="active"><a href="/mobile.html">Mobile</a></li>
+          <li class=""><a href="/grid.html">Grid</a></li>
+          <li class=""><a href="/icons.html">Icons</a></li>
+        </ul>
+
+        <ul class="menu right">
+          <li><a href="https://github.com/miclle/mice">Gighub</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
-    <h2 class="title">Typography</h2>
+    <div class="container">
 
-<div>
-  <h1>h1. Heading</h1>
-  <h2>h2. Heading</h2>
-  <h3>h3. Heading</h3>
-  <h4>h4. Heading</h4>
-  <h5>h5. Heading</h5>
-  <h6>h6. Heading</h6>
-  <p>This is some text in a paragraph. The &lt;p&gt; tag is supported in all major browsers.</p>
-</div>
+  <h2 class="title">Typography</h2>
+
+  <div>
+    <h1>h1. Heading</h1>
+    <h2>h2. Heading</h2>
+    <h3>h3. Heading</h3>
+    <h4>h4. Heading</h4>
+    <h5>h5. Heading</h5>
+    <h6>h6. Heading</h6>
+    <p>This is some text in a paragraph. The &lt;p&gt; tag is supported in all major browsers.</p>
+  </div>
 
 <pre class="highlight html"><span class="nt">&lt;h1&gt;</span>h1. Heading<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;h2&gt;</span>h2. Heading<span class="nt">&lt;/h2&gt;</span>
@@ -51,9 +57,17 @@
 <span class="nt">&lt;p&gt;</span>This is some text in a paragraph. The <span class="nt">&lt;p&gt;</span> tag is supported in all major browsers.<span class="nt">&lt;/p&gt;</span>
 </pre>
 
+</div>
 
     <footer>
-
+      <div class="container">
+        <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank">@miclle</a></p>
+        <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
+        <ul>
+          <li>Currently v0.0.4</li>
+          <li><a href="https://github.com/miclle/mice">Mice</a></li>
+        </ul>
+      </div>
     </footer>
 
   </body>

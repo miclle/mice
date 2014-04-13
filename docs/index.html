@@ -9,33 +9,44 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Welcome to Mice</title>
 
-    <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/syntax.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" />
 
     <script src="/javascripts/doc.js" type="text/javascript"></script>
   </head>
 
-  <body class="index">
+  <body class="index-page">
 
-    <header>
+    <nav class="navbar">
       <div class="container">
         <div class="logo">
           <a href="/" class="brand">Mice</a>
         </div>
 
-        <nav role="navigation">
-          <ul>
-            <li><a href="/mobile.html">Mobile</a></li>
-          </ul>
-        </nav>
+        <ul class="menu">
+          <li class=""><a href="/mobile.html">Mobile</a></li>
+          <li class=""><a href="/grid.html">Grid</a></li>
+          <li class=""><a href="/icons.html">Icons</a></li>
+        </ul>
+
+        <ul class="menu right">
+          <li><a href="https://github.com/miclle/mice">Gighub</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <div class="text center">
   <h1>Mice is semantic front-end framework.</h1>
 </div>
 
     <footer>
-
+      <div class="container">
+        <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank">@miclle</a></p>
+        <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
+        <ul>
+          <li>Currently v0.0.4</li>
+          <li><a href="https://github.com/miclle/mice">Mice</a></li>
+        </ul>
+      </div>
     </footer>
 
   </body>
