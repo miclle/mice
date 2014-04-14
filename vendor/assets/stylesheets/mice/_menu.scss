@@ -61,11 +61,15 @@
 
       &.active{
         a{
-          background: #008CBA;
+          background: #288EDF;
           color: #FFF;
 
           &:hover{
-            background: #007BA0;
+            background: #2F9CF3;
+          }
+
+          &:active{
+            background: #0380E8
           }
 
           &:before, &:after {
