@@ -45,9 +45,8 @@
           border-right: solid 1px #4E4E4E;
         }
 
-        &:hover{
-          background: #272727;
-        }
+        &:hover { background: #272727; }
+        &:active{ background: #000; }
       }
 
       &:last-child a:after {
@@ -64,17 +63,11 @@
           background: #288EDF;
           color: #FFF;
 
-          &:hover{
-            background: #2F9CF3;
-          }
-
-          &:active{
-            background: #0380E8
-          }
-
           &:before, &:after {
             border: none;
           }
+          &:hover { background: #2F9CF3; }
+          &:active{ background: #0380E8; }
         }
         & + li a:before {
           display: none;
