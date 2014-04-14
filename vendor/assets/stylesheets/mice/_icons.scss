@@ -3,6 +3,13 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
+
+// Variables
+// --------------------------------------------------
+
+$fa-font-path: "" !default;
+
+
 // Mixins
 // --------------------------
 
@@ -24,16 +31,17 @@
           transform: scale($horiz, $vert);
 }
 
+
 /* FONT PATH
  * -------------------------- */
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fontawesome-webfont.eot?v=4.0.3');
-  src: url('fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
-       url('fontawesome-webfont.woff?v=4.0.3') format('woff'),
-       url('fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
-       url('fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('#{$fa-font-path}fontawesome-webfont.eot?v=4.0.3');
+  src: url('#{$fa-font-path}fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
+       url('#{$fa-font-path}fontawesome-webfont.woff?v=4.0.3') format('woff'),
+       url('#{$fa-font-path}fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
+       url('#{$fa-font-path}fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   // src: url('FontAwesome.otf') format('opentype'); // used when developing fonts
   font-weight: normal;
   font-style: normal;
@@ -50,6 +58,8 @@
   line-height: 1;
    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.inverse { color: #FFF; }
 }
 
 
@@ -59,8 +69,8 @@
 /* makes the font 33% larger relative to the icon container */
 .icon{
   &.large {
-    font-size: (4em / 3);
-    line-height: (3em / 4);
+    font-size:      (4em / 3);
+    line-height:    (3em / 4);
     vertical-align: -15%;
   }
   &.great   { font-size: 2em; }
@@ -106,38 +116,18 @@
 // -------------------------
 
 .icon{
-  .rotate-90  { @include icon-rotate(90deg, 1);  }
-  .rotate-180 { @include icon-rotate(180deg, 2); }
-  .rotate-270 { @include icon-rotate(270deg, 3); }
+  &.rotate-90  { @include icon-rotate(90deg, 1);  }
+  &.rotate-180 { @include icon-rotate(180deg, 2); }
+  &.rotate-270 { @include icon-rotate(270deg, 3); }
 
-  .flip-horizontal { @include icon-flip(-1, 1, 0); }
-  .flip-vertical   { @include icon-flip(1, -1, 2); }
+  &.flip-horizontal { @include icon-flip(-1, 1, 0); }
+  &.flip-vertical   { @include icon-flip(1, -1, 2); }
 }
 
-// Stacked Icons
+
+// Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+// readers do not read off random characters that represent icons
 // -------------------------
-
-.icon.stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-
-.icon.stack-1x, .icon.stack-2x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.icon.stack-1x { line-height: inherit; }
-
-.icon.stack-2x { font-size: 2em; }
-
-.icon.inverse { color: #FFF; }
 
 .icon{
   &.glass                  { &:before { content: "\f000"; } }
@@ -570,3 +560,5 @@
 
   &.plus-square-o          { &:before { content: "\f196"; } }
 }
+
+
