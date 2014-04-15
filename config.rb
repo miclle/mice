@@ -89,3 +89,19 @@ end
 # end
 
 
+# # https://github.com/middleman/middleman/issues/55#issuecomment-28456419
+# # Find all the files in `./source/` that compile into static HTML
+# pages = Dir.glob("./source/*.html*")
+
+# pages.each do |page_path|
+
+#   # Get each page's filename (not including the extensions)
+#   page = page_path.match(/.\/source\/([^\.]*)\..*/).captures[0]
+
+#   # Set the layout for your pages
+#   page  "/#{page}/*"#, :layout => :page
+
+#   # Make requests to / load the content at /page.html.any.extension
+#   proxy "/#{page}/index.html", "/#{page}.html", :ignore => true
+
+# end
