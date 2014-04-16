@@ -4,14 +4,18 @@
 
 .navbar{
   min-height: 45px;
-  background: #333;
+  background: #FFF;
+  border-bottom: 1px solid #E8E8E8;
 
   .logo{
     float: left;
     .brand{
       display: block;
-      padding: 15px 0;
-      color:   #FFF;
+      line-height: 45px;
+      padding: 0;
+      color: #666;
+      text-decoration: none;
+      font-weight: 700;
     }
   }
 
@@ -31,46 +35,52 @@
 
       > a{
         display:          block;
-        padding:          15px 20px;
+        line-height:      45px;
+        padding:          0 20px;
         position:         relative;
         text-decoration:  none;
-        color:            #EEE;
+        color:            #666;
+        position: relative;
+        text-align: center;
 
-        &:before {
-          content:      '';
-          position:     absolute;
-          top:          0;
-          left:         0;
-          height:       100%;
-          border-right: solid 1px #4E4E4E;
+        -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+        transition:         padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+
+        &:after{
+          display: block;
+          margin: 0 auto;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          height: 0;
+          width: 100%;
+
+          -webkit-transition: height 0.15s ease;
+          transition:         height 0.15s ease;
         }
 
-        &:hover { background: #272727; }
-        &:active{ background: #000; }
-      }
-
-      &:last-child a:after {
-        content:      '';
-        position:     absolute;
-        top:          0;
-        right:        0;
-        height:       100%;
-        border-right: solid 1px #4E4E4E;
+        &:hover {
+          color: #428BCA;
+          background: #F5F5F5;
+          &:after{
+            height: 3px;
+            background-color: #428BCA;
+          }
+        }
+        &:active{ background: #F0F0F0; }
       }
 
       &.active{
         a{
-          background: #288EDF;
-          color: #FFF;
+          color: #428BCA;
+          background: #F5F5F5;
+          font-weight: 700;
 
-          &:before, &:after {
-            border: none;
+          &:after{
+            height: 3px;
+            background-color: #428BCA;
           }
-          &:hover { background: #2F9CF3; }
-          &:active{ background: #0380E8; }
-        }
-        & + li a:before {
-          display: none;
         }
       }
     }
