@@ -62,9 +62,14 @@ button, .button{
   text-align:       center;
   vertical-align:   middle;
   cursor:           pointer;
+  color:            #666;
+  background-color: #FFF;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border:           none;
   white-space:      nowrap;
+
+  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
   // @include user-select(none);
 
@@ -104,7 +109,6 @@ button, .button{
 // -------------------------
 
 button, .button{
-  &.default{ @include button-variant($button-default-color, $button-default-background, $button-default-border); }
   &.primary{ @include button-variant($button-primary-color, $button-primary-background, $button-primary-border); }
   &.success{ @include button-variant($button-success-color, $button-success-background, $button-success-border); }
   &.info   { @include button-variant($button-info-color,    $button-info-background,    $button-info-border);    }
