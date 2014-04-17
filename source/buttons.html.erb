@@ -17,9 +17,14 @@ title: Buttons
       <!-- Button -->
       <section>
         <h2 class="title">Button</h2>
+
+<% code "html" do %>
+<button>default</button>
+<a class="button">default</a>
+<% end -%>
+
         <p>
           <button>default</button>
-          <button class="primary">primary</button>
           <button class="success">success</button>
           <button class="info">info</button>
           <button class="warning">warning</button>
@@ -27,17 +32,43 @@ title: Buttons
         </p>
         <p>
           <a class="button">default</a>
-          <a class="button primary">primary</a>
           <a class="button success">success</a>
           <a class="button info">info</a>
           <a class="button warning">warning</a>
           <a class="button danger">danger</a>
         </p>
+
+        <h3>Disabled Button</h3>
+<% code "html" do %>
+<button disabled="disabled">default</button>
+<a class="button disabled">default</a>
+<% end -%>
+        <p>
+          <button disabled="disabled">default</button>
+          <button disabled="disabled" class="success">success</button>
+          <button disabled="disabled" class="info">info</button>
+          <button disabled="disabled" class="warning">warning</button>
+          <button disabled="disabled" class="danger">danger</button>
+        </p>
+        <p>
+          <a class="button disabled">default</a>
+          <a class="button disabled success">success</a>
+          <a class="button disabled info">info</a>
+          <a class="button disabled warning">warning</a>
+          <a class="button disabled danger">danger</a>
+        </p>
       </section>
 
       <!-- Group Buttons -->
       <section>
-        <h2 class="title">Group Buttons</h2>
+        <h3 class="title">Group Buttons</h3>
+<% code "html" do %>
+<div class="buttons">
+  <button>Left</button>
+  <button>Middle</button>
+  <button>Right</button>
+</div>
+<% end -%>
         <div class="buttons">
           <button>Left</button>
           <button>Middle</button>
@@ -53,7 +84,7 @@ title: Buttons
 
       <!-- Vertical Buttons -->
       <section>
-        <h2 class="title">Vertically Buttons</h2>
+        <h3 class="title">Vertically Buttons</h3>
         <div class="buttons vertical">
           <button>Top</button>
           <button>Middle</button>
@@ -68,7 +99,7 @@ title: Buttons
 
       <!-- Size -->
       <section>
-        <h2 class="title">Size</h2>
+        <h3 class="title">Size</h3>
         <div>
           <button class="mini">Mini button</button>
           <a class="button mini">Mini button</a>

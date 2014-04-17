@@ -7,47 +7,39 @@
 // and disabled options for all buttons
 
 @mixin button-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
+               color: $color;
+    background-color: $background;
+        border-color: $border;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color;
+  &:hover{
+               color: $color;
     background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+        border-color: darken($border, 10%);
   }
+
   &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-image: none;
+  &.active{
+               color: $color;
+    background-color: darken($background, 20%);
+        border-color: darken($border, 20%);
   }
+
   &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
+  &[disabled] {
     &,
     &:hover,
-    &:focus,
     &:active,
     &.active {
       background-color: $background;
           border-color: $border;
     }
   }
-
-  .badge {
-    color: $background;
-    background-color: $color;
-  }
 }
 
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
+  padding:     $padding-vertical $padding-horizontal;
+  font-size:   $font-size;
   line-height: $line-height;
 }
 
@@ -57,29 +49,20 @@
 
 button, .button{
   display:          inline-block;
-  margin-bottom:    0; // For input.btn
+  margin-bottom:    0;
   font-weight:      $button-font-weight;
   text-align:       center;
   vertical-align:   middle;
   cursor:           pointer;
-  color:            #666;
-  background-color: #FFF;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+  background-image: none;
   border:           none;
   white-space:      nowrap;
-
-  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+  outline:          none;
+  @include box-shadow(0 -2px 0 rgba(0, 0, 0, 0.15) inset);
 
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
-  // @include user-select(none);
-
-  &,
-  &:active,
-  &.active {
-    &:focus {
-      // @include tab-focus();
-    }
-  }
+  @include user-select(none);
 
   &:hover,
   &:focus {
@@ -89,18 +72,14 @@ button, .button{
 
   &:active,
   &.active {
-    outline: 0;
-    background-image: none;
-    // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
   }
 
   &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
+  &[disabled] {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-    // @include opacity(.65);
-    // @include box-shadow(none);
+    @include opacity(.65);
   }
 }
 
@@ -109,7 +88,7 @@ button, .button{
 // -------------------------
 
 button, .button{
-  &.primary{ @include button-variant($button-primary-color, $button-primary-background, $button-primary-border); }
+  @include button-variant($button-default-color, $button-default-background, $button-default-border);
   &.success{ @include button-variant($button-success-color, $button-success-background, $button-success-border); }
   &.info   { @include button-variant($button-info-color,    $button-info-background,    $button-info-border);    }
   &.warning{ @include button-variant($button-warning-color, $button-warning-background, $button-warning-border); }
@@ -145,5 +124,6 @@ button, .button{
   button, .button{
     display: block;
     float: none;
+    width: 100%;
   }
 }

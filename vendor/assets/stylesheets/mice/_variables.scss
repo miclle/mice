@@ -99,13 +99,9 @@ $heading-color:           inherit !default;
 
 $button-font-weight:                normal !default;
 
-$button-default-color:              #333 !default;
-$button-default-background:         #fff !default;
-$button-default-border:             #ccc !default;
-
-$button-primary-color:              #fff !default;
-$button-primary-background:         $brand-primary !default;
-$button-primary-border:             darken($button-primary-background, 5%) !default;
+$button-default-color:              #fff !default;
+$button-default-background:         $brand-primary !default;
+$button-default-border:             darken($button-default-background, 5%) !default;
 
 $button-success-color:              #fff !default;
 $button-success-background:         $brand-success !default;
