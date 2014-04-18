@@ -20,8 +20,8 @@
   &:active,
   &.active{
                color: $color;
-    background-color: darken($background, 20%);
-        border-color: darken($border, 20%);
+    background-color: darken($background, 15%);
+        border-color: darken($border, 15%);
   }
 
   &.disabled,
