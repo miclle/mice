@@ -25,6 +25,7 @@ title: Buttons
 
         <p>
           <button>default</button>
+          <button class="primary">primary</button>
           <button class="success">success</button>
           <button class="info">info</button>
           <button class="warning">warning</button>
@@ -32,6 +33,7 @@ title: Buttons
         </p>
         <p>
           <a class="button">default</a>
+          <a class="button primary">primary</a>
           <a class="button success">success</a>
           <a class="button info">info</a>
           <a class="button warning">warning</a>
@@ -45,6 +47,7 @@ title: Buttons
 <% end -%>
         <p>
           <button disabled="disabled">default</button>
+          <button disabled="disabled" class="primary">primary</button>
           <button disabled="disabled" class="success">success</button>
           <button disabled="disabled" class="info">info</button>
           <button disabled="disabled" class="warning">warning</button>
@@ -52,6 +55,7 @@ title: Buttons
         </p>
         <p>
           <a class="button disabled">default</a>
+          <a class="button disabled primary">primary</a>
           <a class="button disabled success">success</a>
           <a class="button disabled info">info</a>
           <a class="button disabled warning">warning</a>
@@ -76,48 +80,117 @@ title: Buttons
         </div>
 
         <div class="buttons">
-          <a class="button">Left</a>
-          <a class="button">Middle</a>
-          <a class="button">Right</a>
+          <a class="button primary">Left</a>
+          <a class="button primary">Middle</a>
+          <a class="button primary">Right</a>
         </div>
       </section>
 
       <!-- Vertical Buttons -->
       <section>
         <h3 class="title">Vertically Buttons</h3>
+<% code "html" do %>
+<div class="buttons vertical">
+  <button>Left</button>
+  <button>Middle</button>
+  <button>Right</button>
+</div>
+<% end -%>
         <div class="buttons vertical">
           <button>Top</button>
           <button>Middle</button>
           <button>Bottom</button>
         </div>
         <div class="buttons vertical">
-          <a class="button">Top</a>
-          <a class="button">Middle</a>
-          <a class="button">Bottom</a>
+          <a class="button primary">Top</a>
+          <a class="button primary">Middle</a>
+          <a class="button primary">Bottom</a>
         </div>
       </section>
 
-      <!-- Size -->
+      <!-- Sizing -->
       <section>
-        <h3 class="title">Size</h3>
-        <div>
+        <h3 class="title">Sizing</h3>
+<% code "html" do %>
+<button class="mini">Mini button</button>
+<a class="button primary mini">Mini button</a>
+<% end -%>
+        <p>
           <button class="mini">Mini button</button>
-          <a class="button mini">Mini button</a>
-        </div>
+          <a class="button primary mini">Mini button</a>
+        </p>
 
-        <div>
+        <p>
           <button class="small">Small button</button>
-          <a class="button small">Mini button</a>
-        </div>
+          <a class="button primary small">Small button</a>
+        </p>
 
-        <div>
+        <p>
           <button>Default button</button>
-          <a class="button">Mini button</a>
-        </div>
+          <a class="button primary">Default button</a>
+        </p>
 
-        <div>
+        <p>
           <button class="large">Large button</button>
-          <a class="button large">Mini button</a>
+          <a class="button primary large">Large button</a>
+        </p>
+      </section>
+
+      <!-- Block -->
+      <section>
+        <h3 class="title">Block</h3>
+<% code "html" do %>
+<button class="block large">Block level button</button>
+<a class="button primary block large">Block level button</a>
+<% end -%>
+        <p>
+          <button class="block large">Block level button</button>
+        </p>
+        <p>
+          <a class="button primary block large">Block level button</a>
+        </p>
+      </section>
+
+      <!-- Justified -->
+      <section>
+        <h3 class="title">Justified</h3>
+<% code "html" do %>
+<div class="buttons justified">
+  <a class="button primary">Top</a>
+  <a class="button primary">Middle</a>
+  <a class="button primary">Bottom</a>
+</div>
+<% end -%>
+        <div class="buttons justified">
+          <a class="button primary">Top</a>
+          <a class="button primary">Middle</a>
+          <a class="button primary">Bottom</a>
+        </div>
+        <br>
+<h4>With <code>&lt;button&gt;</code> elements</h4>
+<% code "html" do %>
+<div class="buttons justified">
+  <div class="buttons">
+    <button>Top</button>
+  </div>
+  <div class="buttons">
+    <button>Middle</button>
+  </div>
+  <div class="buttons">
+    <button>Bottom</button>
+  </div>
+</div>
+<% end -%>
+        <div class="buttons justified">
+          <div class="buttons">
+            <button>Top</button>
+          </div>
+          <div class="buttons">
+            <button>Middle</button>
+          </div>
+          <div class="buttons">
+            <button>Bottom</button>
+          </div>
         </div>
       </section>
 

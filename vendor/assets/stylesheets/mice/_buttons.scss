@@ -59,6 +59,9 @@ button, .button{
   border:           none;
   white-space:      nowrap;
   outline:          none;
+
+  position:         relative;
+
   @include box-shadow(0 -2px 0 rgba(0, 0, 0, 0.15) inset);
 
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
@@ -88,7 +91,8 @@ button, .button{
 // -------------------------
 
 button, .button{
-  @include button-variant($button-default-color, $button-default-background, $button-default-border);
+             @include button-variant($button-default-color, $button-default-background, $button-default-border);
+  &.primary{ @include button-variant($button-primary-color, $button-primary-background, $button-primary-border); }
   &.success{ @include button-variant($button-success-color, $button-success-background, $button-success-border); }
   &.info   { @include button-variant($button-info-color,    $button-info-background,    $button-info-border);    }
   &.warning{ @include button-variant($button-warning-color, $button-warning-background, $button-warning-border); }
@@ -96,14 +100,27 @@ button, .button{
 }
 
 
-// Buttons Sizes
+// Button Sizing
 // -------------------------
 
 button, .button{
-  &.mini  {}
-  &.small {}
-  &.large {}
+  &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini);}
+  &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small);}
+  &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large);}
 }
+
+// Block Button
+// -------------------------
+
+button, .button{
+  &.block{
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 // Group Buttons
 // --------------------------------------------------
@@ -111,12 +128,31 @@ button, .button{
 .buttons{
   @include clearfix();
   display: inline-block;
+  vertical-align: middle;
 
   button, .button{
     float: left;
+
+    &:after{
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: -0.5px;
+      width: 1px;
+      height: 100%;
+      z-index: 1;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    &:last-child{
+      &:after{ display: none; }
+    }
   }
 }
 
+// Vertical Group Buttons
+// ------------------------
 .buttons.vertical{
   @include clearfix();
   display: inline-block;
@@ -125,5 +161,36 @@ button, .button{
     display: block;
     float: none;
     width: 100%;
+
+    @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
+
+    &:after{ display: none; }
   }
+}
+
+// Justified Group Buttons
+// ------------------------
+.buttons.justified{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  position: relative;
+
+  &:before, &:after{ display: none; }
+
+  > .buttons, .button{
+    float: none;
+    display: table-cell;
+    width: 1%;
+    position: relative;
+  }
+  > .buttons button{
+    width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  > .buttons:last-child button{
+    border-right: none;
+  }
+
 }
