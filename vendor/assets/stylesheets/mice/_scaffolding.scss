@@ -72,3 +72,24 @@ a {
 img {
   vertical-align: middle;
 }
+
+.shake {
+  -webkit-transform-origin: center center 0 50%;
+     -moz-transform-origin: center center 0 50%;
+      -ms-transform-origin: center center 0 50%;
+       -o-transform-origin: center center 0 50%;
+          transform-origin: center center 0 50%;
+
+  &:hover {
+               -webkit-animation-name: shake;
+                       animation-name: shake;
+           -webkit-animation-duration: 100ms;
+                   animation-duration: 100ms;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+              -webkit-animation-delay: 0s;
+                      animation-delay: 0s;
+  }
+}
