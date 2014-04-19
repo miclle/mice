@@ -1,0 +1,76 @@
+//
+// Components
+// --------------------------------------------------
+
+.timeline{
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  &:before{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 30px;
+    background-color: #EBEBEB;
+  }
+
+  > ul, > ol{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 0;
+
+    &:after{
+      display: inline-block;
+      content: '';
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    > li{
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 11;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #FFF;
+      box-shadow: 0 0 0 2px #F8862C inset;
+      -webkit-transition: all 0.25s ease;
+              transition: all 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 30px #F8862C inset;
+        color: #FFF;
+      }
+
+      &.active {
+        box-shadow: none;
+        background-color: #F8862C;
+        color: #FFF;
+      }
+
+      > .title{
+        display: block;
+        width: 100%;
+        height: 20px;
+        font-size: 14px;
+        line-height: 60px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
