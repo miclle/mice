@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6{
     line-height: 1;
     // color: $heading-small-color;
   }
+
+  &.title{
+    padding: 10px 0;
+    border-bottom: 1px solid #EEE;
+  }
 }
 
 h1, h2, h3 {
