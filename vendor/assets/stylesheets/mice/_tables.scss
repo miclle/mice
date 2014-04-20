@@ -11,27 +11,30 @@ table{
   background-color: $table-background;
 }
 
-table > thead > tr,
-table > tbody > tr,
-table > tfoot > tr{
-  &.active  > th, th.active , &.active  > td, td.active  { background-color: $table-background-active; }
-  &.primary > th, th.primary, &.primary > td, td.primary { background-color: lighten($brand-primary, 32%) }
-  &.success > th, th.success, &.success > td, td.success { background-color: lighten($brand-success, 32%) }
-  &.info    > th, th.info   , &.info    > td, td.info    { background-color: lighten($brand-info,    32%) }
-  &.warning > th, th.warning, &.warning > td, td.warning { background-color: lighten($brand-warning, 32%) }
-  &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: lighten($brand-danger,  32%) }
+table > thead,
+table > tbody,
+table > tfoot{
+  > tr {
+    &.active  > th, th.active , &.active  > td, td.active  { background-color: $table-background-active; }
+    &.primary > th, th.primary, &.primary > td, td.primary { background-color: lighten($brand-primary, 32%) }
+    &.success > th, th.success, &.success > td, td.success { background-color: lighten($brand-success, 32%) }
+    &.info    > th, th.info   , &.info    > td, td.info    { background-color: lighten($brand-info,    32%) }
+    &.warning > th, th.warning, &.warning > td, td.warning { background-color: lighten($brand-warning, 32%) }
+    &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: lighten($brand-danger,  32%) }
+  }
 }
 
-table > thead > tr > td,
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > td,
-table > tfoot > tr > th{
-  border-collapse: collapse;
-  padding: $table-cell-padding;
-  border: none;
-  border-bottom: 1px solid $table-border-color;
+table > thead,
+table > tbody,
+table > tfoot{
+  > tr{
+    > th, > td{
+      border-collapse: collapse;
+      padding: $table-cell-padding;
+      border: none;
+      border-bottom: 1px solid $table-border-color;
+    }
+  }
 }
 
 table > thead > tr > td,
@@ -44,6 +47,20 @@ table > tfoot > tr > th{
 }
 
 table{
+
+  // Condensed table
+  // -------------------------
+  &.condensed{
+    > thead,
+    > tbody,
+    > tfoot{
+      > tr{
+        > th, > td{
+          padding: $table-condensed-cell-padding;
+        }
+      }
+    }
+  }
 
   // Bordered
   // -------------------------
@@ -75,8 +92,9 @@ table{
 
 }
 
+
 // Responsive Table
-// -------------------------
+// --------------------------------------------------
 .table.responsive{
   width: 100%;
   overflow-y: hidden;
@@ -95,43 +113,32 @@ table{
       > tbody,
       > tfoot {
         > tr {
-          > th:first-child,
-          > td:first-child {
-            border-left: 0;
-          }
-          > th:last-child,
-          > td:last-child {
-            border-right: 0;
-          }
+          > th:first-child, > td:first-child { border-left:  0; }
+          > th:last-child,  > td:last-child  { border-right: 0; }
         }
       }
 
       > thead,
       > tbody {
         > tr:first-child {
-          > th,
-          > td {
-            border-top: 0;
-          }
+          > th, > td { border-top: 0; }
         }
       }
-
     }
 
     > thead,
     > tbody,
     > tfoot {
       > tr {
-        > th,
-        > td {
-          white-space: nowrap;
-        }
+        > th, > td { white-space: nowrap; }
       }
     }
 
-    > *:last-child tr:last-child th,
-    > *:last-child tr:last-child td{
-      border-bottom: none;
+    > *:last-child {
+      > tr:last-child {
+        > th, > td{ border-bottom: none; }
+      }
     }
+
   }
 }
