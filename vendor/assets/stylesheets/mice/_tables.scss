@@ -2,27 +2,36 @@
 // --------------------------------------------------
 
 table{
+  display: table;
   width:  100%;
   max-width:  100%;
   margin-bottom: 15px;
   border-collapse: collapse;
-  position: relative
+  border-spacing: 0;
+  background-color: $table-background;
 }
 
 table > thead > tr,
 table > tbody > tr,
 table > tfoot > tr{
-  position: relative
+  &.active  > th, th.active , &.active  > td, td.active  { background-color: $table-background-active; }
+  &.primary > th, th.primary, &.primary > td, td.primary { background-color: lighten($brand-primary, 32%) }
+  &.success > th, th.success, &.success > td, td.success { background-color: lighten($brand-success, 32%) }
+  &.info    > th, th.info   , &.info    > td, td.info    { background-color: lighten($brand-info,    32%) }
+  &.warning > th, th.warning, &.warning > td, td.warning { background-color: lighten($brand-warning, 32%) }
+  &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: lighten($brand-danger,  32%) }
 }
+
 table > thead > tr > td,
 table > thead > tr > th,
 table > tbody > tr > th,
 table > tbody > tr > td,
 table > tfoot > tr > td,
 table > tfoot > tr > th{
-  padding: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  position: relative
+  border-collapse: collapse;
+  padding: $table-cell-padding;
+  border: none;
+  border-bottom: 1px solid $table-border-color;
 }
 
 table > thead > tr > td,
@@ -32,4 +41,97 @@ table > tfoot > tr > td,
 table > tfoot > tr > th{
   font-weight: bold;
   text-align: left
+}
+
+table{
+
+  // Bordered
+  // -------------------------
+  &.bordered {
+    &, > thead, > tbody, > tfoot {
+      tr{
+        > th, > td{
+          border: 1px solid $table-border-color;
+        }
+      }
+    }
+  }
+
+  // Striped
+  // -------------------------
+  &.striped > tbody > tr:nth-child(odd) {
+    > th, > td {
+      background-color: $table-background-accent;
+    }
+  }
+
+  // Hover
+  // -------------------------
+  &.hover > tbody > tr:hover {
+    > th, > td {
+      background-color: $table-background-hover;
+    }
+  }
+
+}
+
+// Responsive Table
+// -------------------------
+.table.responsive{
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid $table-border-color;
+
+  > table{
+    margin-bottom: 0;
+
+    &.bordered{
+      border: none;
+
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      > thead,
+      > tbody {
+        > tr:first-child {
+          > th,
+          > td {
+            border-top: 0;
+          }
+        }
+      }
+
+    }
+
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    > *:last-child tr:last-child th,
+    > *:last-child tr:last-child td{
+      border-bottom: none;
+    }
+  }
 }
