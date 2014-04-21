@@ -3185,7 +3185,7 @@ pre.highlight {
   border-radius: 3px; }
 
 /* line 24, /Users/miclle/project/mice/source/stylesheets/doc.scss */
-.doc > .column {
+.grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
