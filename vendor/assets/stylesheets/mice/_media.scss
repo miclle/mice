@@ -1,0 +1,38 @@
+// Media objects
+// Source: http://stubbornella.org/content/?p=497
+// --------------------------------------------------
+
+
+// Common styles
+// -------------------------
+.media{
+  margin-top: 15px;
+
+  @include clearfix();
+
+  &:first-child{
+    margin-top: 0;
+  }
+
+  > .cover {
+    display: block;
+    float: left;
+    margin-right: 10px;
+
+    &.ext {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+
+  .desc {
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  .heading {
+    margin: 0 0 5px;
+  }
+
+}
