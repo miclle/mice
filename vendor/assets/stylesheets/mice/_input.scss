@@ -18,8 +18,8 @@ input{
 
   border-bottom: 1px solid #CCC;
 
-  background: url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) left  28px no-repeat,
-              url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) right 28px no-repeat;
+  background: url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) left  22px no-repeat,
+              url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) right 22px no-repeat;
 
   background-color: transparent;
 
@@ -31,7 +31,9 @@ input{
 
   // @include box-shadow(0 -2px 0 rgba(0, 0, 0, 0.15) inset);
 
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
+  padding:     3px 6px;
+  font-size:   14px;
+  line-height: $line-height-base;
 
   &:hover,
   &:focus {
