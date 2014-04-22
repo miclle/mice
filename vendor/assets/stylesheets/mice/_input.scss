@@ -4,7 +4,7 @@
 // Base styles
 // -------------------------
 
-input{
+input[type="text"]{
   display:          inline-block;
   margin-bottom:    0;
   font-weight:      $button-font-weight;
@@ -79,3 +79,21 @@ input{
 
 // ::-ms-reveal { display: block; }
 
+
+textarea{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 6px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+  outline: none;
+}
