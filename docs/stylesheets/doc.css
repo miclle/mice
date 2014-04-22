@@ -1291,6 +1291,34 @@ button.block, .button.block {
   .buttons.justified > .buttons:last-child button {
     border-right: none; }
 
+/* line 7, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
+input {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  outline: none;
+  border-bottom: 1px solid #CCC;
+  background: url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) left 22px no-repeat, url(data:image/gif;base64,R0lGODlhAQAyAIAAAMzMzP///yH5BAAHAP8ALAAAAAABADIAAAIGhI+py50FADs=) right 22px no-repeat;
+  background-color: transparent;
+  padding: 3px 6px;
+  font-size: 14px;
+  line-height: 1.42857; }
+  /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
+  input:hover, input:focus {
+    color: #666666;
+    text-decoration: none; }
+  /* line 50, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
+  input.disabled, input[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65); }
+
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
