@@ -100,11 +100,12 @@ $heading-color:           inherit !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
+$border-radius:                     2px !default;
 $button-font-weight:                normal !default;
 
 $button-default-color:              #666 !default;
-$button-default-background:         #EBEBEB !default;
-$button-default-border:             darken($button-default-background, 5%) !default;
+$button-default-background:         #FFF !default;
+$button-default-border:             #D9D9D9 !default; //darken($button-default-background, 5%)
 
 $button-primary-color:              #fff !default;
 $button-primary-background:         $brand-primary !default;

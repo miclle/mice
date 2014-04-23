@@ -37,10 +37,31 @@
 }
 
 // Button sizes
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+// -------------------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
   padding:     $padding-vertical $padding-horizontal;
   font-size:   $font-size;
   line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+// Single side border-radius
+// -------------------------
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
 }
 
 
@@ -62,15 +83,16 @@ button, .button{
 
   position:         relative;
 
-  @include box-shadow(0 -2px 0 rgba(0, 0, 0, 0.15) inset);
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
 
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius);
   @include user-select(none);
 
   &:hover,
   &:focus {
     color: $button-default-color;
     text-decoration: none;
+    // @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.1));
   }
 
   // &:active,
@@ -84,13 +106,9 @@ button, .button{
     pointer-events: none; // Future-proof disabling of clicks
     @include opacity(.65);
   }
-}
 
-
-// Button Styles
-// -------------------------
-
-button, .button{
+  border-width: 1px;
+  border-style: solid;
              @include button-variant($button-default-color, $button-default-background, $button-default-border);
   &.primary{ @include button-variant($button-primary-color, $button-primary-background, $button-primary-border); }
   &.success{ @include button-variant($button-success-color, $button-success-background, $button-success-border); }
@@ -104,9 +122,9 @@ button, .button{
 // -------------------------
 
 button, .button{
-  &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini);}
-  &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small);}
-  &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large);}
+  &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini,  $border-radius);}
+  &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius);}
+  &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius);}
 }
 
 // Block Button
@@ -145,8 +163,20 @@ button, .button{
       border-right: 1px solid rgba(0, 0, 0, 0.15);
     }
 
+    &:first-child{
+      &:not(:last-child) {
+        @include border-right-radius(0);
+      }
+    }
+
     &:last-child{
+      &:not(:first-child) {
+        @include border-left-radius(0);
+      }
       &:after{ display: none; }
+    }
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: 0;
     }
   }
 }
@@ -165,6 +195,22 @@ button, .button{
     @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
 
     &:after{ display: none; }
+
+    &:first-child{
+      &:not(:last-child) {
+        @include border-top-radius($border-radius);
+        @include border-bottom-radius(0);
+      }
+    }
+
+    &:last-child{
+      &:not(:first-child) {
+        @include border-top-radius(0);
+        @include border-bottom-radius($border-radius);
+      }
+      &:after{ display: none; }
+    }
+
   }
 }
 
@@ -188,6 +234,18 @@ button, .button{
   > .buttons button{
     width: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  > .buttons {
+    &:not(:last-child){
+      > button{
+        @include border-right-radius(0);
+      }
+    }
+    &:not(:first-child){
+      > button{
+        @include border-left-radius(0);
+      }
+    }
   }
   > .buttons:last-child button{
     border-right: none;
