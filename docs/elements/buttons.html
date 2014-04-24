@@ -93,45 +93,34 @@
         <h2 class="title">Button</h2>
 
 <pre class="highlight html"><span class="nt">&lt;button&gt;</span>default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>primary<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"warning"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"warning"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"danger"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"danger"</span> <span class="nt">/&gt;</span>
 </pre>
 
         <p>
           <button>default</button>
           <button class="primary">primary</button>
-          <button class="success">success</button>
-          <button class="info">info</button>
-          <button class="warning">warning</button>
-          <button class="danger">danger</button>
-        </p>
-        <p>
-          <a class="button">default</a>
-          <a class="button primary">primary</a>
           <a class="button success">success</a>
           <a class="button info">info</a>
-          <a class="button warning">warning</a>
-          <a class="button danger">danger</a>
+          <input class="warning" type="button" value="warning" />
+          <input class="danger" type="submit" value="danger" />
         </p>
 
         <h3>Disabled Button</h3>
 <pre class="highlight html"><span class="nt">&lt;button</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button disabled"</span><span class="nt">&gt;</span>default<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">class=</span><span class="s">"warning"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"warning"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">class=</span><span class="s">"danger"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"danger"</span> <span class="nt">/&gt;</span>
 </pre>
         <p>
           <button disabled="disabled">default</button>
           <button disabled="disabled" class="primary">primary</button>
-          <button disabled="disabled" class="success">success</button>
-          <button disabled="disabled" class="info">info</button>
-          <button disabled="disabled" class="warning">warning</button>
-          <button disabled="disabled" class="danger">danger</button>
-        </p>
-        <p>
-          <a class="button disabled">default</a>
-          <a class="button disabled primary">primary</a>
           <a class="button disabled success">success</a>
           <a class="button disabled info">info</a>
-          <a class="button disabled warning">warning</a>
-          <a class="button disabled danger">danger</a>
+          <input disabled="disabled" class="warning" type="button" value="warning" />
+          <input disabled="disabled" class="danger" type="submit" value="danger" />
         </p>
       </section>
 
@@ -223,39 +212,58 @@
       <section>
         <h3 class="title">Justified</h3>
 <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons justified"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button primary"</span><span class="nt">&gt;</span>Top<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button primary"</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button primary"</span><span class="nt">&gt;</span>Bottom<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre>
         <div class="buttons justified">
-          <a class="button primary">Top</a>
-          <a class="button primary">Middle</a>
-          <a class="button primary">Bottom</a>
+          <a class="button">Left</a>
+          <a class="button">Middle</a>
+          <a class="button">Right</a>
         </div>
         <br>
+        <div class="buttons justified">
+          <a class="button primary">Left</a>
+          <a class="button primary">Middle</a>
+          <a class="button primary">Right</a>
+        </div>
+        <br>
+
 <h4>With <code>&lt;button&gt;</code> elements</h4>
 <pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons justified"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button&gt;</span>Top<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button&gt;</span>Bottom<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre>
         <div class="buttons justified">
           <div class="buttons">
-            <button>Top</button>
+            <button>Left</button>
           </div>
           <div class="buttons">
             <button>Middle</button>
           </div>
           <div class="buttons">
-            <button>Bottom</button>
+            <button>Right</button>
+          </div>
+        </div>
+        <br>
+        <div class="buttons justified">
+          <div class="buttons">
+            <button class="primary">Left</button>
+          </div>
+          <div class="buttons">
+            <button class="primary">Middle</button>
+          </div>
+          <div class="buttons">
+            <button class="primary">Right</button>
           </div>
         </div>
       </section>

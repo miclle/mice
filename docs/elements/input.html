@@ -92,9 +92,35 @@
 
       <section>
 
-        <input type="text" placeholder="Search...">
+        <form>
+          <div class="field" id="name_row">
+            <label for="name">Your name *</label>
+            <input type="text" name="name" id="name">
+            <div class="state"></div>
+          </div>
 
-        <input type="password">
+          <div class="field" id="email_row">
+            <label for="email">Your email *</label>
+            <input type="email" name="email" id="email">
+            <div class="state"></div>
+          </div>
+
+          <div class="field" id="phone_row">
+            <label for="phone">Your phone *</label>
+            <input type="text" name="phone" id="phone">
+            <div class="state"></div>
+          </div>
+
+          <div class="field" id="message_row">
+            <label for="message">Your message *</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="state"></div>
+          </div>
+
+          <div class="field">
+              <button type="submit">Send Message</button>
+          </div>
+        </form>
 
       </section>
 
