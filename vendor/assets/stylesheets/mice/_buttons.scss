@@ -68,7 +68,10 @@
 // Base styles
 // -------------------------
 
-button, .button{
+input[type="button"],
+input[type="submit"],
+button,
+.button{
   display:          inline-block;
   margin-bottom:    0;
   font-weight:      $button-font-weight;
@@ -120,8 +123,10 @@ button, .button{
 
 // Button Sizing
 // -------------------------
-
-button, .button{
+input[type="button"],
+input[type="submit"],
+button,
+.button{
   &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini,  $border-radius);}
   &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius);}
   &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius);}
@@ -129,8 +134,10 @@ button, .button{
 
 // Block Button
 // -------------------------
-
-button, .button{
+input[type="button"],
+input[type="submit"],
+button,
+.button{
   &.block{
     display: block;
     width: 100%;
@@ -147,21 +154,13 @@ button, .button{
   @include clearfix();
   display: inline-block;
   vertical-align: middle;
+  position: relative;
 
-  button, .button{
+  input[type="button"],
+  input[type="submit"],
+  button,
+  .button{
     float: left;
-
-    &:after{
-      display: block;
-      content: " ";
-      position: absolute;
-      top: 0;
-      right: -0.5px;
-      width: 1px;
-      height: 100%;
-      z-index: 1;
-      border-right: 1px solid rgba(0, 0, 0, 0.15);
-    }
 
     &:first-child{
       &:not(:last-child) {
@@ -171,13 +170,20 @@ button, .button{
 
     &:last-child{
       &:not(:first-child) {
+        margin-left: -1px;
         @include border-left-radius(0);
       }
-      &:after{ display: none; }
     }
-    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+
+    &:not(:first-child):not(:last-child) {
+      margin-left: -1px;
       border-radius: 0;
     }
+
+    &:hover{
+      z-index: 2;
+    }
+
   }
 }
 
@@ -187,14 +193,14 @@ button, .button{
   @include clearfix();
   display: inline-block;
 
-  button, .button{
+  input[type="button"],
+  input[type="submit"],
+  button,
+  .button{
     display: block;
     float: none;
     width: 100%;
 
-    @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
-
-    &:after{ display: none; }
 
     &:first-child{
       &:not(:last-child) {
@@ -207,8 +213,15 @@ button, .button{
       &:not(:first-child) {
         @include border-top-radius(0);
         @include border-bottom-radius($border-radius);
+        @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
+        margin-left: 0;
+        margin-top: -1px;
       }
-      &:after{ display: none; }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      margin-left: 0;
+      margin-top: -1px;
     }
 
   }
@@ -225,30 +238,143 @@ button, .button{
 
   &:before, &:after{ display: none; }
 
-  > .buttons, .button{
+  > .buttons,
+  .button{
     float: none;
     display: table-cell;
     width: 1%;
     position: relative;
   }
-  > .buttons button{
-    width: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
-  }
-  > .buttons {
-    &:not(:last-child){
-      > button{
-        @include border-right-radius(0);
+
+  .button:first-child{
+    &:not(:last-child) {
+      border-right-width: 0;
+      &:after{
+        display: block;
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: -1px;
+        width: 1px;
+        height: 100%;
+        z-index: 1;
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+      }
+      &:hover{
+        border-right-width: 1px;
+        &:after{ display: none;}
       }
     }
-    &:not(:first-child){
+  }
+
+  .button:not(:first-child):not(:last-child) {
+    border-left-width: 0;
+    border-right-width: 0;
+    &:after{
+      display: block;
+      content: ' ';
+      position: absolute;
+      top: 0;
+      right: -1px;
+      width: 1px;
+      height: 100%;
+      z-index: 1;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    &:hover{
+      border-left-width: 1px;
+      border-right-width: 1px;
+      &:after{ display: none;}
+    }
+  }
+
+  .button:last-child{
+    &:not(:first-child) {
+      border-left-width: 0;
+      &:hover{
+        border-left-width: 1px;
+      }
+    }
+  }
+
+
+  > .buttons {
+    input[type="button"],
+    input[type="submit"],
+    button{
+      width: 100%;
+      // border-right: 1px solid rgba(0, 0, 0, 0.15);
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+    &:first-child:not(:last-child){
+      input[type="button"],
+      input[type="submit"],
+      button{
+        @include border-right-radius(0);
+        border-left-width: 1px;
+
+        &:after{
+          display: block;
+          content: ' ';
+          position: absolute;
+          top: 0;
+          right: -1px;
+          width: 1px;
+          height: 100%;
+          z-index: 1;
+          border-right: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        &:hover{
+          border-right-width: 1px;
+          &:after{ display: none;}
+        }
+
+      }
+    }
+
+    &:not(:first-child):not(:last-child){
+      > input[type="button"],
+      > input[type="submit"],
       > button{
         @include border-left-radius(0);
+        @include border-right-radius(0);
+
+        &:after{
+          display: block;
+          content: ' ';
+          position: absolute;
+          top: 0;
+          right: -1px;
+          width: 1px;
+          height: 100%;
+          z-index: 1;
+          border-right: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        &:hover{
+          border-left-width: 1px;
+          border-right-width: 1px;
+          &:after{ display: none;}
+        }
+
       }
     }
-  }
-  > .buttons:last-child button{
-    border-right: none;
+
+    &:last-child:not(:first-child){
+      input[type="button"],
+      input[type="submit"],
+      button{
+        @include border-left-radius(0);
+        border-right-width: 1px;
+
+        &:hover{
+          border-left-width: 1px;
+        }
+      }
+    }
   }
 
 }
