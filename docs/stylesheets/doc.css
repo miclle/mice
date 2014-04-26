@@ -1054,7 +1054,7 @@ mark {
   /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
   .grid.twelve > .twelve.column {
     width: 100%; } }
-/* line 74, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 102, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"],
 input[type="submit"],
 button,
@@ -1085,7 +1085,7 @@ button,
   color: #666666;
   background-color: white;
   border-color: #d9d9d9; }
-  /* line 95, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 123, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"]:hover, input[type="button"]:focus,
   input[type="submit"]:hover,
   input[type="submit"]:focus,
@@ -1095,7 +1095,7 @@ button,
   .button:focus {
     color: #666666;
     text-decoration: none; }
-  /* line 107, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 135, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].disabled, input[type="button"][disabled],
   input[type="submit"].disabled,
   input[type="submit"][disabled],
@@ -1154,7 +1154,7 @@ button,
   .button[disabled].active {
     background-color: white;
     border-color: #d9d9d9; }
-  /* line 116, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 144, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].primary,
   input[type="submit"].primary,
   button.primary,
@@ -1209,7 +1209,7 @@ button,
     .button.primary[disabled].active {
       background-color: #428bca;
       border-color: #357ebd; }
-  /* line 117, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].success,
   input[type="submit"].success,
   button.success,
@@ -1264,7 +1264,7 @@ button,
     .button.success[disabled].active {
       background-color: #81c735;
       border-color: #74b330; }
-  /* line 118, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 146, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].info,
   input[type="submit"].info,
   button.info,
@@ -1319,7 +1319,7 @@ button,
     .button.info[disabled].active {
       background-color: #5bc0de;
       border-color: #46b8da; }
-  /* line 119, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 147, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].warning,
   input[type="submit"].warning,
   button.warning,
@@ -1374,7 +1374,7 @@ button,
     .button.warning[disabled].active {
       background-color: #f0ad4e;
       border-color: #eea236; }
-  /* line 120, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   input[type="button"].danger,
   input[type="submit"].danger,
   button.danger,
@@ -1430,7 +1430,7 @@ button,
       background-color: #d9534f;
       border-color: #d43f3a; }
 
-/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"].mini,
 input[type="submit"].mini,
 button.mini,
@@ -1439,7 +1439,7 @@ button.mini,
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px; }
-/* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"].small,
 input[type="submit"].small,
 button.small,
@@ -1448,7 +1448,7 @@ button.small,
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px; }
-/* line 132, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"].large,
 input[type="submit"].large,
 button.large,
@@ -1458,7 +1458,7 @@ button.large,
   line-height: 1.33;
   border-radius: 2px; }
 
-/* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"].block,
 input[type="submit"].block,
 button.block,
@@ -1468,7 +1468,7 @@ button.block,
   padding-left: 0;
   padding-right: 0; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 181, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 .buttons {
   display: inline-block;
   vertical-align: middle;
@@ -1480,20 +1480,20 @@ button.block,
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   .buttons:after {
     clear: both; }
-  /* line 162, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 190, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons input[type="button"],
   .buttons input[type="submit"],
   .buttons button,
   .buttons .button {
     float: left; }
-    /* line 166, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 194, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons input[type="button"]:first-child:not(:last-child),
     .buttons input[type="submit"]:first-child:not(:last-child),
     .buttons button:first-child:not(:last-child),
     .buttons .button:first-child:not(:last-child) {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0; }
-    /* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 200, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons input[type="button"]:last-child:not(:first-child),
     .buttons input[type="submit"]:last-child:not(:first-child),
     .buttons button:last-child:not(:first-child),
@@ -1501,21 +1501,21 @@ button.block,
       margin-left: -1px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0; }
-    /* line 178, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 206, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons input[type="button"]:not(:first-child):not(:last-child),
     .buttons input[type="submit"]:not(:first-child):not(:last-child),
     .buttons button:not(:first-child):not(:last-child),
     .buttons .button:not(:first-child):not(:last-child) {
       margin-left: -1px;
       border-radius: 0; }
-    /* line 183, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 211, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons input[type="button"]:hover,
     .buttons input[type="submit"]:hover,
     .buttons button:hover,
     .buttons .button:hover {
       z-index: 2; }
 
-/* line 192, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 220, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 .buttons.vertical {
   display: inline-block; }
   /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
@@ -1525,7 +1525,7 @@ button.block,
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   .buttons.vertical:after {
     clear: both; }
-  /* line 199, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 227, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.vertical input[type="button"],
   .buttons.vertical input[type="submit"],
   .buttons.vertical button,
@@ -1533,7 +1533,7 @@ button.block,
     display: block;
     float: none;
     width: 100%; }
-    /* line 206, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 234, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.vertical input[type="button"]:first-child:not(:last-child),
     .buttons.vertical input[type="submit"]:first-child:not(:last-child),
     .buttons.vertical button:first-child:not(:last-child),
@@ -1542,7 +1542,7 @@ button.block,
       border-top-left-radius: 2px;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0; }
-    /* line 213, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 241, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.vertical input[type="button"]:last-child:not(:first-child),
     .buttons.vertical input[type="submit"]:last-child:not(:first-child),
     .buttons.vertical button:last-child:not(:first-child),
@@ -1555,7 +1555,7 @@ button.block,
       box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
       margin-left: 0;
       margin-top: -1px; }
-    /* line 222, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 250, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.vertical input[type="button"]:not(:first-child):not(:last-child),
     .buttons.vertical input[type="submit"]:not(:first-child):not(:last-child),
     .buttons.vertical button:not(:first-child):not(:last-child),
@@ -1563,27 +1563,27 @@ button.block,
       margin-left: 0;
       margin-top: -1px; }
 
-/* line 232, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+/* line 260, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 .buttons.justified {
   display: table;
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
   position: relative; }
-  /* line 239, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 267, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified:before, .buttons.justified:after {
     display: none; }
-  /* line 242, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 270, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified > .buttons,
   .buttons.justified .button {
     float: none;
     display: table-cell;
     width: 1%;
     position: relative; }
-  /* line 250, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 278, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified .button:first-child:not(:last-child) {
     border-right-width: 0; }
-    /* line 252, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 280, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified .button:first-child:not(:last-child):after {
       display: block;
       content: ' ';
@@ -1594,17 +1594,17 @@ button.block,
       height: 100%;
       z-index: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.15); }
-    /* line 263, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 291, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified .button:first-child:not(:last-child):hover {
       border-right-width: 1px; }
-      /* line 265, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+      /* line 293, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
       .buttons.justified .button:first-child:not(:last-child):hover:after {
         display: none; }
-  /* line 270, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 298, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified .button:not(:first-child):not(:last-child) {
     border-left-width: 0;
     border-right-width: 0; }
-    /* line 273, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 301, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified .button:not(:first-child):not(:last-child):after {
       display: block;
       content: ' ';
@@ -1615,34 +1615,34 @@ button.block,
       height: 100%;
       z-index: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.15); }
-    /* line 284, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 312, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified .button:not(:first-child):not(:last-child):hover {
       border-left-width: 1px;
       border-right-width: 1px; }
-      /* line 287, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+      /* line 315, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
       .buttons.justified .button:not(:first-child):not(:last-child):hover:after {
         display: none; }
-  /* line 292, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 320, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified .button:last-child:not(:first-child) {
     border-left-width: 0; }
-    /* line 294, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 322, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified .button:last-child:not(:first-child):hover {
       border-left-width: 1px; }
-  /* line 304, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 332, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified > .buttons input[type="button"],
   .buttons.justified > .buttons input[type="submit"],
   .buttons.justified > .buttons button {
     width: 100%;
     border-left-width: 0;
     border-right-width: 0; }
-  /* line 314, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 342, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified > .buttons:first-child:not(:last-child) input[type="button"],
   .buttons.justified > .buttons:first-child:not(:last-child) input[type="submit"],
   .buttons.justified > .buttons:first-child:not(:last-child) button {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-left-width: 1px; }
-    /* line 318, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 346, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified > .buttons:first-child:not(:last-child) input[type="button"]:after,
     .buttons.justified > .buttons:first-child:not(:last-child) input[type="submit"]:after,
     .buttons.justified > .buttons:first-child:not(:last-child) button:after {
@@ -1655,17 +1655,17 @@ button.block,
       height: 100%;
       z-index: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.15); }
-    /* line 330, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 358, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified > .buttons:first-child:not(:last-child) input[type="button"]:hover,
     .buttons.justified > .buttons:first-child:not(:last-child) input[type="submit"]:hover,
     .buttons.justified > .buttons:first-child:not(:last-child) button:hover {
       border-right-width: 1px; }
-      /* line 332, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+      /* line 360, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
       .buttons.justified > .buttons:first-child:not(:last-child) input[type="button"]:hover:after,
       .buttons.justified > .buttons:first-child:not(:last-child) input[type="submit"]:hover:after,
       .buttons.justified > .buttons:first-child:not(:last-child) button:hover:after {
         display: none; }
-  /* line 341, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 369, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="button"],
   .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="submit"],
   .buttons.justified > .buttons:not(:first-child):not(:last-child) > button {
@@ -1673,7 +1673,7 @@ button.block,
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
-    /* line 345, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 373, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="button"]:after,
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="submit"]:after,
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > button:after {
@@ -1686,122 +1686,29 @@ button.block,
       height: 100%;
       z-index: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.15); }
-    /* line 357, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 385, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="button"]:hover,
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="submit"]:hover,
     .buttons.justified > .buttons:not(:first-child):not(:last-child) > button:hover {
       border-left-width: 1px;
       border-right-width: 1px; }
-      /* line 360, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+      /* line 388, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
       .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="button"]:hover:after,
       .buttons.justified > .buttons:not(:first-child):not(:last-child) > input[type="submit"]:hover:after,
       .buttons.justified > .buttons:not(:first-child):not(:last-child) > button:hover:after {
         display: none; }
-  /* line 369, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+  /* line 397, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
   .buttons.justified > .buttons:last-child:not(:first-child) input[type="button"],
   .buttons.justified > .buttons:last-child:not(:first-child) input[type="submit"],
   .buttons.justified > .buttons:last-child:not(:first-child) button {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border-right-width: 1px; }
-    /* line 373, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
+    /* line 401, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
     .buttons.justified > .buttons:last-child:not(:first-child) input[type="button"]:hover,
     .buttons.justified > .buttons:last-child:not(:first-child) input[type="submit"]:hover,
     .buttons.justified > .buttons:last-child:not(:first-child) button:hover {
       border-left-width: 1px; }
-
-/* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-  padding: 5px;
-  width: 100%;
-  position: relative;
-  box-shadow: inset 0 1px #F5F5F5; }
-
-/* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select {
-  height: 30px;
-  vertical-align: top; }
-
-/* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-textarea {
-  line-height: 20px;
-  height: 120px;
-  resize: vertical; }
-
-/* line 36, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: left;
-  vertical-align: middle;
-  background-image: none;
-  border: 1px solid #CCC;
-  border-radius: 2px;
-  white-space: nowrap;
-  outline: none;
-  background-color: transparent;
-  padding: 6px;
-  font-size: 14px;
-  line-height: 1.42857; }
-  /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-  input[type="text"]:hover, input[type="text"]:focus,
-  input[type="password"]:hover,
-  input[type="password"]:focus,
-  input[type="email"]:hover,
-  input[type="email"]:focus,
-  textarea:hover,
-  textarea:focus {
-    color: #666666;
-    text-decoration: none;
-    border-color: #AAA; }
-  /* line 79, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-  input[type="text"].disabled, input[type="text"][disabled],
-  input[type="password"].disabled,
-  input[type="password"][disabled],
-  input[type="email"].disabled,
-  input[type="email"][disabled],
-  textarea.disabled,
-  textarea[disabled] {
-    cursor: not-allowed;
-    pointer-events: none;
-    opacity: 0.65;
-    filter: alpha(opacity=65); }
-
-/* line 109, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-textarea {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  padding: 6px 6px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #FFF;
-  background-image: none;
-  border: 1px solid #CCC;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  outline: none; }
-
-/* line 127, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-label {
-  display: inline-block;
-  margin-bottom: 2px; }
-
-/* line 132, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_input.scss */
-.field {
-  margin-bottom: 10px; }
 
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3431,6 +3338,379 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
   .media .heading {
     margin: 0 0 5px; }
+
+/* line 37, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  padding: 5px;
+  position: relative;
+  box-shadow: inset 0 1px #F5F5F5; }
+
+/* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  display: inline-block;
+  height: 30px;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: left;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  white-space: nowrap;
+  outline: none;
+  background-color: transparent;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.42857; }
+  /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].disabled, input[type="text"][disabled],
+  input[type="password"].disabled,
+  input[type="password"][disabled],
+  input[type="email"].disabled,
+  input[type="email"][disabled],
+  textarea.disabled,
+  textarea[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65); }
+
+/* line 81, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  color: #666666;
+  background-color: white;
+  border-color: #cccccc; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"]:hover,
+  input[type="password"]:hover,
+  input[type="email"]:hover,
+  textarea:hover {
+    border-color: #b3b3b3; }
+  /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"]:active, input[type="text"].active,
+  input[type="password"]:active,
+  input[type="password"].active,
+  input[type="email"]:active,
+  input[type="email"].active,
+  textarea:active,
+  textarea.active {
+    border-color: #a6a6a6; }
+  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].disabled, input[type="text"].disabled:hover, input[type="text"].disabled:active, input[type="text"].disabled.active, input[type="text"][disabled], input[type="text"][disabled]:hover, input[type="text"][disabled]:active, input[type="text"][disabled].active,
+  input[type="password"].disabled,
+  input[type="password"].disabled:hover,
+  input[type="password"].disabled:active,
+  input[type="password"].disabled.active,
+  input[type="password"][disabled],
+  input[type="password"][disabled]:hover,
+  input[type="password"][disabled]:active,
+  input[type="password"][disabled].active,
+  input[type="email"].disabled,
+  input[type="email"].disabled:hover,
+  input[type="email"].disabled:active,
+  input[type="email"].disabled.active,
+  input[type="email"][disabled],
+  input[type="email"][disabled]:hover,
+  input[type="email"][disabled]:active,
+  input[type="email"][disabled].active,
+  textarea.disabled,
+  textarea.disabled:hover,
+  textarea.disabled:active,
+  textarea.disabled.active,
+  textarea[disabled],
+  textarea[disabled]:hover,
+  textarea[disabled]:active,
+  textarea[disabled].active {
+    border-color: #cccccc; }
+  /* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].primary,
+  input[type="password"].primary,
+  input[type="email"].primary,
+  textarea.primary {
+    color: #666666;
+    background-color: white;
+    border-color: #428bca; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].primary:hover,
+    input[type="password"].primary:hover,
+    input[type="email"].primary:hover,
+    textarea.primary:hover {
+      border-color: #3071a9; }
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].primary:active, input[type="text"].primary.active,
+    input[type="password"].primary:active,
+    input[type="password"].primary.active,
+    input[type="email"].primary:active,
+    input[type="email"].primary.active,
+    textarea.primary:active,
+    textarea.primary.active {
+      border-color: #2a6496; }
+    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].primary.disabled, input[type="text"].primary.disabled:hover, input[type="text"].primary.disabled:active, input[type="text"].primary.disabled.active, input[type="text"].primary[disabled], input[type="text"].primary[disabled]:hover, input[type="text"].primary[disabled]:active, input[type="text"].primary[disabled].active,
+    input[type="password"].primary.disabled,
+    input[type="password"].primary.disabled:hover,
+    input[type="password"].primary.disabled:active,
+    input[type="password"].primary.disabled.active,
+    input[type="password"].primary[disabled],
+    input[type="password"].primary[disabled]:hover,
+    input[type="password"].primary[disabled]:active,
+    input[type="password"].primary[disabled].active,
+    input[type="email"].primary.disabled,
+    input[type="email"].primary.disabled:hover,
+    input[type="email"].primary.disabled:active,
+    input[type="email"].primary.disabled.active,
+    input[type="email"].primary[disabled],
+    input[type="email"].primary[disabled]:hover,
+    input[type="email"].primary[disabled]:active,
+    input[type="email"].primary[disabled].active,
+    textarea.primary.disabled,
+    textarea.primary.disabled:hover,
+    textarea.primary.disabled:active,
+    textarea.primary.disabled.active,
+    textarea.primary[disabled],
+    textarea.primary[disabled]:hover,
+    textarea.primary[disabled]:active,
+    textarea.primary[disabled].active {
+      border-color: #428bca; }
+  /* line 84, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].success,
+  input[type="password"].success,
+  input[type="email"].success,
+  textarea.success {
+    color: #666666;
+    background-color: white;
+    border-color: #81c735; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].success:hover,
+    input[type="password"].success:hover,
+    input[type="email"].success:hover,
+    textarea.success:hover {
+      border-color: #679f2a; }
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].success:active, input[type="text"].success.active,
+    input[type="password"].success:active,
+    input[type="password"].success.active,
+    input[type="email"].success:active,
+    input[type="email"].success.active,
+    textarea.success:active,
+    textarea.success.active {
+      border-color: #5a8b25; }
+    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].success.disabled, input[type="text"].success.disabled:hover, input[type="text"].success.disabled:active, input[type="text"].success.disabled.active, input[type="text"].success[disabled], input[type="text"].success[disabled]:hover, input[type="text"].success[disabled]:active, input[type="text"].success[disabled].active,
+    input[type="password"].success.disabled,
+    input[type="password"].success.disabled:hover,
+    input[type="password"].success.disabled:active,
+    input[type="password"].success.disabled.active,
+    input[type="password"].success[disabled],
+    input[type="password"].success[disabled]:hover,
+    input[type="password"].success[disabled]:active,
+    input[type="password"].success[disabled].active,
+    input[type="email"].success.disabled,
+    input[type="email"].success.disabled:hover,
+    input[type="email"].success.disabled:active,
+    input[type="email"].success.disabled.active,
+    input[type="email"].success[disabled],
+    input[type="email"].success[disabled]:hover,
+    input[type="email"].success[disabled]:active,
+    input[type="email"].success[disabled].active,
+    textarea.success.disabled,
+    textarea.success.disabled:hover,
+    textarea.success.disabled:active,
+    textarea.success.disabled.active,
+    textarea.success[disabled],
+    textarea.success[disabled]:hover,
+    textarea.success[disabled]:active,
+    textarea.success[disabled].active {
+      border-color: #81c735; }
+  /* line 85, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].info,
+  input[type="password"].info,
+  input[type="email"].info,
+  textarea.info {
+    color: #666666;
+    background-color: white;
+    border-color: #5bc0de; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].info:hover,
+    input[type="password"].info:hover,
+    input[type="email"].info:hover,
+    textarea.info:hover {
+      border-color: #31b0d5; }
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].info:active, input[type="text"].info.active,
+    input[type="password"].info:active,
+    input[type="password"].info.active,
+    input[type="email"].info:active,
+    input[type="email"].info.active,
+    textarea.info:active,
+    textarea.info.active {
+      border-color: #28a1c5; }
+    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].info.disabled, input[type="text"].info.disabled:hover, input[type="text"].info.disabled:active, input[type="text"].info.disabled.active, input[type="text"].info[disabled], input[type="text"].info[disabled]:hover, input[type="text"].info[disabled]:active, input[type="text"].info[disabled].active,
+    input[type="password"].info.disabled,
+    input[type="password"].info.disabled:hover,
+    input[type="password"].info.disabled:active,
+    input[type="password"].info.disabled.active,
+    input[type="password"].info[disabled],
+    input[type="password"].info[disabled]:hover,
+    input[type="password"].info[disabled]:active,
+    input[type="password"].info[disabled].active,
+    input[type="email"].info.disabled,
+    input[type="email"].info.disabled:hover,
+    input[type="email"].info.disabled:active,
+    input[type="email"].info.disabled.active,
+    input[type="email"].info[disabled],
+    input[type="email"].info[disabled]:hover,
+    input[type="email"].info[disabled]:active,
+    input[type="email"].info[disabled].active,
+    textarea.info.disabled,
+    textarea.info.disabled:hover,
+    textarea.info.disabled:active,
+    textarea.info.disabled.active,
+    textarea.info[disabled],
+    textarea.info[disabled]:hover,
+    textarea.info[disabled]:active,
+    textarea.info[disabled].active {
+      border-color: #5bc0de; }
+  /* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].warning,
+  input[type="password"].warning,
+  input[type="email"].warning,
+  textarea.warning {
+    color: #666666;
+    background-color: white;
+    border-color: #f0ad4e; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].warning:hover,
+    input[type="password"].warning:hover,
+    input[type="email"].warning:hover,
+    textarea.warning:hover {
+      border-color: #ec971f; }
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].warning:active, input[type="text"].warning.active,
+    input[type="password"].warning:active,
+    input[type="password"].warning.active,
+    input[type="email"].warning:active,
+    input[type="email"].warning.active,
+    textarea.warning:active,
+    textarea.warning.active {
+      border-color: #df8a13; }
+    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].warning.disabled, input[type="text"].warning.disabled:hover, input[type="text"].warning.disabled:active, input[type="text"].warning.disabled.active, input[type="text"].warning[disabled], input[type="text"].warning[disabled]:hover, input[type="text"].warning[disabled]:active, input[type="text"].warning[disabled].active,
+    input[type="password"].warning.disabled,
+    input[type="password"].warning.disabled:hover,
+    input[type="password"].warning.disabled:active,
+    input[type="password"].warning.disabled.active,
+    input[type="password"].warning[disabled],
+    input[type="password"].warning[disabled]:hover,
+    input[type="password"].warning[disabled]:active,
+    input[type="password"].warning[disabled].active,
+    input[type="email"].warning.disabled,
+    input[type="email"].warning.disabled:hover,
+    input[type="email"].warning.disabled:active,
+    input[type="email"].warning.disabled.active,
+    input[type="email"].warning[disabled],
+    input[type="email"].warning[disabled]:hover,
+    input[type="email"].warning[disabled]:active,
+    input[type="email"].warning[disabled].active,
+    textarea.warning.disabled,
+    textarea.warning.disabled:hover,
+    textarea.warning.disabled:active,
+    textarea.warning.disabled.active,
+    textarea.warning[disabled],
+    textarea.warning[disabled]:hover,
+    textarea.warning[disabled]:active,
+    textarea.warning[disabled].active {
+      border-color: #f0ad4e; }
+  /* line 87, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].danger,
+  input[type="password"].danger,
+  input[type="email"].danger,
+  textarea.danger {
+    color: #666666;
+    background-color: white;
+    border-color: #d9534f; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].danger:hover,
+    input[type="password"].danger:hover,
+    input[type="email"].danger:hover,
+    textarea.danger:hover {
+      border-color: #c9302c; }
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].danger:active, input[type="text"].danger.active,
+    input[type="password"].danger:active,
+    input[type="password"].danger.active,
+    input[type="email"].danger:active,
+    input[type="email"].danger.active,
+    textarea.danger:active,
+    textarea.danger.active {
+      border-color: #b52b27; }
+    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    input[type="text"].danger.disabled, input[type="text"].danger.disabled:hover, input[type="text"].danger.disabled:active, input[type="text"].danger.disabled.active, input[type="text"].danger[disabled], input[type="text"].danger[disabled]:hover, input[type="text"].danger[disabled]:active, input[type="text"].danger[disabled].active,
+    input[type="password"].danger.disabled,
+    input[type="password"].danger.disabled:hover,
+    input[type="password"].danger.disabled:active,
+    input[type="password"].danger.disabled.active,
+    input[type="password"].danger[disabled],
+    input[type="password"].danger[disabled]:hover,
+    input[type="password"].danger[disabled]:active,
+    input[type="password"].danger[disabled].active,
+    input[type="email"].danger.disabled,
+    input[type="email"].danger.disabled:hover,
+    input[type="email"].danger.disabled:active,
+    input[type="email"].danger.disabled.active,
+    input[type="email"].danger[disabled],
+    input[type="email"].danger[disabled]:hover,
+    input[type="email"].danger[disabled]:active,
+    input[type="email"].danger[disabled].active,
+    textarea.danger.disabled,
+    textarea.danger.disabled:hover,
+    textarea.danger.disabled:active,
+    textarea.danger.disabled.active,
+    textarea.danger[disabled],
+    textarea.danger[disabled]:hover,
+    textarea.danger[disabled]:active,
+    textarea.danger[disabled].active {
+      border-color: #d9534f; }
+
+/* line 101, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+textarea {
+  line-height: 20px;
+  height: 120px;
+  resize: vertical;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 6px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  outline: none; }
+
+/* line 123, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+label {
+  display: inline-block;
+  margin-bottom: 2px; }
+
+/* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+.field {
+  margin-bottom: 10px; }
+  /* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .field label {
+    display: block; }
 
 /*
 ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base16::Monokai, and Monokai
