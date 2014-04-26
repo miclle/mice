@@ -1,8 +1,124 @@
 // Forms
 // --------------------------------------------------
 
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin input-variant($color, $background, $border) {
+               color: $color;
+    background-color: $background;
+        border-color: $border;
+
+  &:hover{ border-color: darken($border, 10%); }
+
+  &:active,
+  &.active{ border-color: darken($border, 15%); }
+
+  &.disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:active,
+    &.active {
+      border-color: $border;
+    }
+  }
+}
+
 // Base styles
 // -------------------------
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select{
+  padding: 5px;
+  position: relative;
+  box-shadow: inset 0 1px #F5F5F5;
+
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{
+  display:          inline-block;
+  height: 30px;
+  margin-bottom:    0;
+  font-weight:      $button-font-weight;
+  text-align:       left;
+
+  border:           1px solid #CCC;
+  border-radius:    $border-radius;
+  white-space:      nowrap;
+  outline:          none;
+
+  background-color: transparent;
+
+  padding:     6px;
+  font-size:   14px;
+  line-height: $line-height-base;
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    @include opacity(.65);
+  }
+}
+
+
+// Input Styles
+// -------------------------
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{
+            @include input-variant($input-default-color, $input-default-background, $input-default-border);
+  &.primary{@include input-variant($input-primary-color, $input-primary-background, $input-primary-border);}
+  &.success{@include input-variant($input-success-color, $input-success-background, $input-success-border);}
+  &.info   {@include input-variant($input-info-color,    $input-info-background,    $input-info-border   );}
+  &.warning{@include input-variant($input-warning-color, $input-warning-background, $input-warning-border);}
+  &.danger {@include input-variant($input-danger-color,  $input-danger-background,  $input-danger-border );}
+}
+
+
+// Input Sizing
+// -------------------------
+
+input{
+  &.mini  {}
+  &.small {}
+  &.large {}
+}
+
+
+textarea{
+  line-height: 20px;
+  height: 120px;
+  resize: vertical;
+
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 6px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+  outline: none;
+}
 
 label{
   display: inline-block;
@@ -11,4 +127,7 @@ label{
 
 .field{
   margin-bottom: 10px;
+  label{
+    display: block;
+  }
 }

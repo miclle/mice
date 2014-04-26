@@ -25,16 +25,14 @@ $link-color:              $brand-primary !default;
 
 $link-hover-color:        darken($link-color, 15%) !default;
 
+$border-radius:           2px !default;
 
 // Font family, size
 // -------------------------
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
@@ -87,6 +85,16 @@ $caret-width-base:          4px !default;
 $caret-width-large:         5px !default;
 
 
+// Border color
+// -------------------------
+
+$border-default-border-color: #CCC !default;
+$border-primary-border-color: $brand-primary !default;
+$border-success-border-color: $brand-success !default;
+$border-info-border-color:    $brand-info    !default;
+$border-warning-border-color: $brand-warning !default;
+$border-danger-border-color:  $brand-danger  !default;
+
 // Heading
 // -------------------------
 
@@ -95,12 +103,13 @@ $heading-font-weight:     500 !default;
 $heading-line-height:     1.1 !default;
 $heading-color:           inherit !default;
 
+//== Forms
+// -------------------------
+
 
 //== Buttons
-//
-//## For each of Bootstrap's buttons, define text, background and border color.
+// -------------------------
 
-$border-radius:                     2px !default;
 $button-font-weight:                normal !default;
 
 $button-default-color:              #666 !default;
@@ -127,6 +136,32 @@ $button-danger-color:               #fff !default;
 $button-danger-background:          $brand-danger !default;
 $button-danger-border:              darken($button-danger-background, 5%) !default;
 
+
+//== Input
+// -------------------------
+$input-default-color:               $gray !default;
+$input-default-background:          #FFF !default;
+$input-default-border:              $border-default-border-color !default;
+
+$input-primary-color:               $input-default-color !default;
+$input-primary-background:          $input-default-background !default;
+$input-primary-border:              $border-primary-border-color !default;
+
+$input-success-color:               $input-default-color !default;
+$input-success-background:          $input-default-background !default;
+$input-success-border:              $border-success-border-color !default;
+
+$input-info-color:                  $input-default-color !default;
+$input-info-background:             $input-default-background !default;
+$input-info-border:                 $border-info-border-color !default;
+
+$input-warning-color:               $input-default-color !default;
+$input-warning-background:          $input-default-background !default;
+$input-warning-border:              $border-warning-border-color !default;
+
+$input-danger-color:                $input-default-color !default;
+$input-danger-background:           $input-default-background !default;
+$input-danger-border:               $border-danger-border-color !default;
 
 //== Tables
 //
