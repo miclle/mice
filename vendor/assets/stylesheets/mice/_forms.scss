@@ -2,10 +2,7 @@
 // --------------------------------------------------
 
 // Button variants
-//
-// Easily pump out default styles, as well as :hover, :focus, :active,
-// and disabled options for all buttons
-
+// -------------------------
 @mixin input-variant($color, $background, $border) {
                color: $color;
     background-color: $background;
@@ -27,6 +24,7 @@
   }
 }
 
+
 // Base styles
 // -------------------------
 
@@ -39,13 +37,6 @@ select{
   position: relative;
   box-shadow: inset 0 1px #F5F5F5;
 
-
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea{
   display:          inline-block;
   height: 30px;
   margin-bottom:    0;
@@ -128,6 +119,9 @@ label{
 .field{
   margin-bottom: 10px;
   label{
-    display: block;
+    display: inline-block;
+  }
+  input{
+    width: 100%;
   }
 }
