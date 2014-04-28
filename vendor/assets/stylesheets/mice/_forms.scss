@@ -20,8 +20,21 @@
     &:active,
     &.active {
       border-color: $border;
+      cursor: not-allowed;
+      @include opacity(.55);
     }
   }
+}
+
+
+// Input sizing
+// -------------------------
+@mixin input-size($input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  height: $input-height;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
 }
 
 
@@ -59,6 +72,7 @@ select{
     cursor: not-allowed;
     pointer-events: none;
     @include opacity(.65);
+    @include user-select(none);
   }
 }
 
@@ -76,6 +90,10 @@ textarea{
   &.info   {@include input-variant($input-info-color,    $input-info-background,    $input-info-border   );}
   &.warning{@include input-variant($input-warning-color, $input-warning-background, $input-warning-border);}
   &.danger {@include input-variant($input-danger-color,  $input-danger-background,  $input-danger-border );}
+
+  &.fluid{
+    width: 100%;
+  }
 }
 
 
@@ -83,9 +101,8 @@ textarea{
 // -------------------------
 
 input{
-  &.mini  {}
-  &.small {}
-  &.large {}
+  &.small {@include input-size($input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);}
+  &.large {@include input-size($input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);}
 }
 
 
@@ -95,7 +112,6 @@ textarea{
   resize: vertical;
 
   display: block;
-  width: 100%;
   height: auto;
   margin-bottom: 10px;
   padding: 6px 6px;

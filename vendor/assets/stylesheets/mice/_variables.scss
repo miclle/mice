@@ -26,6 +26,8 @@ $link-color:              $brand-primary !default;
 $link-hover-color:        darken($link-color, 15%) !default;
 
 $border-radius:           2px !default;
+$border-radius-small:     $border-radius !default;
+$border-radius-large:     $border-radius !default;
 
 // Font family, size
 // -------------------------
@@ -60,15 +62,15 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $padding-base-vertical:     6px !default;
 $padding-base-horizontal:   12px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
-
 $padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
-$padding-mini-horizontal:   $padding-small-horizontal;
+$padding-small-horizontal:  5px !default;
+
+$padding-large-vertical:    8px !default;
+$padding-large-horizontal:  8px !default;
 
 $padding-mini-vertical:     1px !default;
 $padding-mini-horizontal:   5px !default;
+// $padding-mini-horizontal:   $padding-small-horizontal;
 
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
@@ -83,7 +85,6 @@ $component-active-bg:       $brand-primary !default;
 $caret-width-base:          4px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
-
 
 // Border color
 // -------------------------
@@ -162,6 +163,13 @@ $input-warning-border:              $border-warning-border-color !default;
 $input-danger-color:                $input-default-color !default;
 $input-danger-background:           $input-default-background !default;
 $input-danger-border:               $border-danger-border-color !default;
+
+$input-height-base:                ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-small:               (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-large:               (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+
+$line-height-small:                 1.33 !default;
+$line-height-large:                 1.5 !default;
 
 //== Tables
 //
