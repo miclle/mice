@@ -99,8 +99,9 @@ textarea{
 
 // Input Sizing
 // -------------------------
-
-input{
+input[type="text"],
+input[type="password"],
+input[type="email"]{
   &.small {@include input-size($input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);}
   &.large {@include input-size($input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);}
 }
