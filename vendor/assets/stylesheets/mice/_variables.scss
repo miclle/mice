@@ -89,20 +89,33 @@ $caret-width-large:         5px !default;
 // Border color
 // -------------------------
 
-$border-default-border-color: #CCC !default;
-$border-primary-border-color: $brand-primary !default;
-$border-success-border-color: $brand-success !default;
-$border-info-border-color:    $brand-info    !default;
-$border-warning-border-color: $brand-warning !default;
-$border-danger-border-color:  $brand-danger  !default;
+$border-default-border-color:       #CCC !default;
+$border-primary-border-color:       $brand-primary !default;
+$border-success-border-color:       $brand-success !default;
+$border-info-border-color:          $brand-info    !default;
+$border-warning-border-color:       $brand-warning !default;
+$border-danger-border-color:        $brand-danger  !default;
 
 // Heading
 // -------------------------
 
-$heading-font-family:     inherit !default;
-$heading-font-weight:     500 !default;
-$heading-line-height:     1.1 !default;
-$heading-color:           inherit !default;
+$heading-font-family:               inherit !default;
+$heading-font-weight:               500 !default;
+$heading-line-height:               1.1 !default;
+$heading-color:                     inherit !default;
+
+
+//== Type
+// -------------------------
+$text-muted:                        $gray-light !default;
+$abbr-border-color:                 $gray-light !default;
+$heading-small-color:               $gray-light !default;
+$blockquote-small-color:            $gray-light !default;
+$blockquote-font-size:              ($font-size-base * 1.25) !default;
+$blockquote-border-color:           $gray-lighter !default;
+$page-header-border-color:          $gray-lighter !default;
+
+
 
 //== Forms
 // -------------------------

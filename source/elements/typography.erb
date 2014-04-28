@@ -1,0 +1,50 @@
+---
+title: Typography
+---
+
+<div class="container">
+
+  <div class="grid twelve">
+
+    <div class="column three">
+
+      <%= partial "shared/sidebar" %>
+
+    </div>
+
+    <div class="column nine doc">
+
+      <h1 class="title">Typography</h1>
+
+      <h2>Headings</h2>
+      <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</p>
+      <section class="example">
+        <table>
+          <tbody>
+            <% [*1..6].each do |i| %>
+            <tr>
+              <td>
+                <%= content_tag "h#{i}", "h#{i}. Heading <small>Secondary text</small>" %>
+              </td>
+            </tr>
+            <% end -%>
+          </tbody>
+        </table>
+
+<% code "html" do %>
+<h1>h1. Heading</h1>
+<h2>h2. Heading</h2>
+<h3>h3. Heading</h3>
+<h4>h4. Heading</h4>
+<h5>h5. Heading</h5>
+<h6>h6. Heading</h6>
+<% end -%>
+      </section>
+
+      <p>This is some text in a paragraph. The <code>&lt;p&gt;</code> tag is supported in all major browsers.</p>
+
+    </div>
+
+  </div>
+
+</div>

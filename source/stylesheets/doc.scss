@@ -4,6 +4,28 @@
 
 @import "syntax";
 
+section.example{
+  margin-bottom: 15px;
+  padding: 20px 10px 10px 10px;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 4px 4px 0 0;
+  box-shadow: none;
+  position: relative;
+
+  &:after {
+    content: "Example";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #BBB;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
 pre.highlight{
   padding: 15px;
   margin-top: 15px;
