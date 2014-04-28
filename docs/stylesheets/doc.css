@@ -1435,7 +1435,7 @@ input[type="button"].mini,
 input[type="submit"].mini,
 button.mini,
 .button.mini {
-  padding: 1px 10px;
+  padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px; }
@@ -1444,7 +1444,7 @@ input[type="button"].small,
 input[type="submit"].small,
 button.small,
 .button.small {
-  padding: 5px 10px;
+  padding: 5px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px; }
@@ -1453,7 +1453,7 @@ input[type="button"].large,
 input[type="submit"].large,
 button.large,
 .button.large {
-  padding: 10px 16px;
+  padding: 8px 8px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 2px; }
@@ -3339,7 +3339,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .media .heading {
     margin: 0 0 5px; }
 
-/* line 37, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -3347,13 +3347,7 @@ textarea,
 select {
   padding: 5px;
   position: relative;
-  box-shadow: inset 0 1px #F5F5F5; }
-
-/* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea {
+  box-shadow: inset 0 1px #F5F5F5;
   display: inline-block;
   height: 30px;
   margin-bottom: 0;
@@ -3367,20 +3361,26 @@ textarea {
   padding: 6px;
   font-size: 14px;
   line-height: 1.42857; }
-  /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].disabled, input[type="text"][disabled],
   input[type="password"].disabled,
   input[type="password"][disabled],
   input[type="email"].disabled,
   input[type="email"][disabled],
   textarea.disabled,
-  textarea[disabled] {
+  textarea[disabled],
+  select.disabled,
+  select[disabled] {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.65;
-    filter: alpha(opacity=65); }
+    filter: alpha(opacity=65);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
 
-/* line 81, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -3388,13 +3388,13 @@ textarea {
   color: #666666;
   background-color: white;
   border-color: #cccccc; }
-  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"]:hover,
   input[type="password"]:hover,
   input[type="email"]:hover,
   textarea:hover {
     border-color: #b3b3b3; }
-  /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"]:active, input[type="text"].active,
   input[type="password"]:active,
   input[type="password"].active,
@@ -3403,7 +3403,7 @@ textarea {
   textarea:active,
   textarea.active {
     border-color: #a6a6a6; }
-  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].disabled, input[type="text"].disabled:hover, input[type="text"].disabled:active, input[type="text"].disabled.active, input[type="text"][disabled], input[type="text"][disabled]:hover, input[type="text"][disabled]:active, input[type="text"][disabled].active,
   input[type="password"].disabled,
   input[type="password"].disabled:hover,
@@ -3429,8 +3429,11 @@ textarea {
   textarea[disabled]:hover,
   textarea[disabled]:active,
   textarea[disabled].active {
-    border-color: #cccccc; }
-  /* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    border-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.55;
+    filter: alpha(opacity=55.0); }
+  /* line 88, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].primary,
   input[type="password"].primary,
   input[type="email"].primary,
@@ -3438,13 +3441,13 @@ textarea {
     color: #666666;
     background-color: white;
     border-color: #428bca; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].primary:hover,
     input[type="password"].primary:hover,
     input[type="email"].primary:hover,
     textarea.primary:hover {
       border-color: #3071a9; }
-    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].primary:active, input[type="text"].primary.active,
     input[type="password"].primary:active,
     input[type="password"].primary.active,
@@ -3453,7 +3456,7 @@ textarea {
     textarea.primary:active,
     textarea.primary.active {
       border-color: #2a6496; }
-    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].primary.disabled, input[type="text"].primary.disabled:hover, input[type="text"].primary.disabled:active, input[type="text"].primary.disabled.active, input[type="text"].primary[disabled], input[type="text"].primary[disabled]:hover, input[type="text"].primary[disabled]:active, input[type="text"].primary[disabled].active,
     input[type="password"].primary.disabled,
     input[type="password"].primary.disabled:hover,
@@ -3479,8 +3482,11 @@ textarea {
     textarea.primary[disabled]:hover,
     textarea.primary[disabled]:active,
     textarea.primary[disabled].active {
-      border-color: #428bca; }
-  /* line 84, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+      border-color: #428bca;
+      cursor: not-allowed;
+      opacity: 0.55;
+      filter: alpha(opacity=55.0); }
+  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].success,
   input[type="password"].success,
   input[type="email"].success,
@@ -3488,13 +3494,13 @@ textarea {
     color: #666666;
     background-color: white;
     border-color: #81c735; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].success:hover,
     input[type="password"].success:hover,
     input[type="email"].success:hover,
     textarea.success:hover {
       border-color: #679f2a; }
-    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].success:active, input[type="text"].success.active,
     input[type="password"].success:active,
     input[type="password"].success.active,
@@ -3503,7 +3509,7 @@ textarea {
     textarea.success:active,
     textarea.success.active {
       border-color: #5a8b25; }
-    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].success.disabled, input[type="text"].success.disabled:hover, input[type="text"].success.disabled:active, input[type="text"].success.disabled.active, input[type="text"].success[disabled], input[type="text"].success[disabled]:hover, input[type="text"].success[disabled]:active, input[type="text"].success[disabled].active,
     input[type="password"].success.disabled,
     input[type="password"].success.disabled:hover,
@@ -3529,8 +3535,11 @@ textarea {
     textarea.success[disabled]:hover,
     textarea.success[disabled]:active,
     textarea.success[disabled].active {
-      border-color: #81c735; }
-  /* line 85, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+      border-color: #81c735;
+      cursor: not-allowed;
+      opacity: 0.55;
+      filter: alpha(opacity=55.0); }
+  /* line 90, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].info,
   input[type="password"].info,
   input[type="email"].info,
@@ -3538,13 +3547,13 @@ textarea {
     color: #666666;
     background-color: white;
     border-color: #5bc0de; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].info:hover,
     input[type="password"].info:hover,
     input[type="email"].info:hover,
     textarea.info:hover {
       border-color: #31b0d5; }
-    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].info:active, input[type="text"].info.active,
     input[type="password"].info:active,
     input[type="password"].info.active,
@@ -3553,7 +3562,7 @@ textarea {
     textarea.info:active,
     textarea.info.active {
       border-color: #28a1c5; }
-    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].info.disabled, input[type="text"].info.disabled:hover, input[type="text"].info.disabled:active, input[type="text"].info.disabled.active, input[type="text"].info[disabled], input[type="text"].info[disabled]:hover, input[type="text"].info[disabled]:active, input[type="text"].info[disabled].active,
     input[type="password"].info.disabled,
     input[type="password"].info.disabled:hover,
@@ -3579,8 +3588,11 @@ textarea {
     textarea.info[disabled]:hover,
     textarea.info[disabled]:active,
     textarea.info[disabled].active {
-      border-color: #5bc0de; }
-  /* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+      border-color: #5bc0de;
+      cursor: not-allowed;
+      opacity: 0.55;
+      filter: alpha(opacity=55.0); }
+  /* line 91, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].warning,
   input[type="password"].warning,
   input[type="email"].warning,
@@ -3588,13 +3600,13 @@ textarea {
     color: #666666;
     background-color: white;
     border-color: #f0ad4e; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].warning:hover,
     input[type="password"].warning:hover,
     input[type="email"].warning:hover,
     textarea.warning:hover {
       border-color: #ec971f; }
-    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].warning:active, input[type="text"].warning.active,
     input[type="password"].warning:active,
     input[type="password"].warning.active,
@@ -3603,7 +3615,7 @@ textarea {
     textarea.warning:active,
     textarea.warning.active {
       border-color: #df8a13; }
-    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].warning.disabled, input[type="text"].warning.disabled:hover, input[type="text"].warning.disabled:active, input[type="text"].warning.disabled.active, input[type="text"].warning[disabled], input[type="text"].warning[disabled]:hover, input[type="text"].warning[disabled]:active, input[type="text"].warning[disabled].active,
     input[type="password"].warning.disabled,
     input[type="password"].warning.disabled:hover,
@@ -3629,8 +3641,11 @@ textarea {
     textarea.warning[disabled]:hover,
     textarea.warning[disabled]:active,
     textarea.warning[disabled].active {
-      border-color: #f0ad4e; }
-  /* line 87, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+      border-color: #f0ad4e;
+      cursor: not-allowed;
+      opacity: 0.55;
+      filter: alpha(opacity=55.0); }
+  /* line 92, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].danger,
   input[type="password"].danger,
   input[type="email"].danger,
@@ -3638,13 +3653,13 @@ textarea {
     color: #666666;
     background-color: white;
     border-color: #d9534f; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].danger:hover,
     input[type="password"].danger:hover,
     input[type="email"].danger:hover,
     textarea.danger:hover {
       border-color: #c9302c; }
-    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].danger:active, input[type="text"].danger.active,
     input[type="password"].danger:active,
     input[type="password"].danger.active,
@@ -3653,7 +3668,7 @@ textarea {
     textarea.danger:active,
     textarea.danger.active {
       border-color: #b52b27; }
-    /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].danger.disabled, input[type="text"].danger.disabled:hover, input[type="text"].danger.disabled:active, input[type="text"].danger.disabled.active, input[type="text"].danger[disabled], input[type="text"].danger[disabled]:hover, input[type="text"].danger[disabled]:active, input[type="text"].danger[disabled].active,
     input[type="password"].danger.disabled,
     input[type="password"].danger.disabled:hover,
@@ -3679,15 +3694,38 @@ textarea {
     textarea.danger[disabled]:hover,
     textarea.danger[disabled]:active,
     textarea.danger[disabled].active {
-      border-color: #d9534f; }
+      border-color: #d9534f;
+      cursor: not-allowed;
+      opacity: 0.55;
+      filter: alpha(opacity=55.0); }
+  /* line 94, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  input[type="text"].fluid,
+  input[type="password"].fluid,
+  input[type="email"].fluid,
+  textarea.fluid {
+    width: 100%; }
 
-/* line 101, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 104, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+input.small {
+  height: 30px;
+  padding: 5px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px; }
+/* line 105, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+input.large {
+  height: 42px;
+  padding: 8px 8px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 2px; }
+
+/* line 109, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 textarea {
   line-height: 20px;
   height: 120px;
   resize: vertical;
   display: block;
-  width: 100%;
   height: auto;
   margin-bottom: 10px;
   padding: 6px 6px;
@@ -3700,17 +3738,20 @@ textarea {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   outline: none; }
 
-/* line 123, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 label {
   display: inline-block;
   margin-bottom: 2px; }
 
-/* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 135, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 .field {
   margin-bottom: 10px; }
-  /* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 137, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   .field label {
-    display: block; }
+    display: inline-block; }
+  /* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .field input {
+    width: 100%; }
 
 /*
 ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base16::Monokai, and Monokai

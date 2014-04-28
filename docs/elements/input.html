@@ -91,16 +91,29 @@
 
       <h1 class="title">Input</h1>
 
+
       <section>
-        <input type="text">
-        <input type="text" class="primary">
-        <input type="text" class="success">
+        <h2>Base</h2>
+        <p><input type="text" placeholder="input here..." /></p>
+        <p><textarea cols="120" rows="5" placeholder="input here..."></textarea></p>
       </section>
 
-      <br>
+      <section>
+        <h2>Fluid</h2>
+        <p><input type="text" class="fluid" placeholder="input here..." /></p>
+        <p><textarea cols="120" rows="5" class="fluid" placeholder="input here..."></textarea></p>
+      </section>
 
       <section>
-        <textarea>textarea</textarea>
+        <h2>Disabled state</h2>
+        <input type="text" placeholder="Disabled input here..." disabled="disabled" />
+      </section>
+
+      <section>
+        <h2>sizing</h2>
+        <p><input type="text" class="small" placeholder=".small input" /></p>
+        <p><input type="text" placeholder="default input" /></p>
+        <p><input type="text" class="large" placeholder=".large input" /></p>
       </section>
 
     </div>
