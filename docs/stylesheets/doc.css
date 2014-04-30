@@ -3729,11 +3729,10 @@ input[type="email"].large {
 
 /* line 110, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 textarea {
+  display: block;
   line-height: 20px;
   height: 120px;
   resize: vertical;
-  display: block;
-  height: auto;
   margin-bottom: 10px;
   padding: 6px 6px;
   font-size: 14px;
@@ -3745,19 +3744,29 @@ textarea {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   outline: none; }
 
-/* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 label {
   display: inline-block;
   margin-bottom: 2px; }
 
-/* line 136, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 135, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+.hint {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373; }
+
+/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 .field {
-  margin-bottom: 10px; }
-  /* line 138, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  margin-bottom: 15px; }
+  /* line 146, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   .field label {
     display: inline-block; }
-  /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
-  .field input {
+  /* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .field input[type="text"],
+  .field input[type="password"],
+  .field input[type="email"],
+  .field textarea {
     width: 100%; }
 
 /*
@@ -4041,48 +4050,51 @@ ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base
 
 /* line 7, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 section.example {
-  margin-bottom: 15px;
-  padding: 20px 10px 10px 10px;
+  padding: 35px 10px 10px 10px;
   background-color: #FFF;
   border: 1px solid #DDD;
   border-radius: 4px 4px 0 0;
   box-shadow: none;
   position: relative; }
-  /* line 16, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 15, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example:after {
     content: "Example";
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 10px;
+    left: 10px;
     font-size: 12px;
     font-weight: 700;
     color: #BBB;
     text-transform: uppercase;
     letter-spacing: 1px; }
+  /* line 27, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example table {
+    margin-bottom: 0; }
+    /* line 29, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    section.example table tr:last-child td {
+      border-bottom: none; }
 
-/* line 29, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 33, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
-  margin-top: 15px;
+  margin-top: -1px;
   overflow-x: auto;
   font-size: 13px;
   color: #777;
   word-wrap: normal;
   white-space: pre;
   background-color: #FAFAFA;
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  border-left: 1px solid #DDD;
-  border-radius: 3px; }
+  border: 1px solid #DDD;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
 
-/* line 46, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 47, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 52, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 53, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -4092,17 +4104,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 62, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 63, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 74, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 75, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 77, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 78, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
