@@ -108,12 +108,11 @@ input[type="email"]{
 
 
 textarea{
+  display: block;
   line-height: 20px;
   height: 120px;
   resize: vertical;
 
-  display: block;
-  height: auto;
   margin-bottom: 10px;
   padding: 6px 6px;
   font-size: 14px;
@@ -133,12 +132,26 @@ label{
   margin-bottom: 2px;
 }
 
-.field{
+.hint {
+  display: block;
+  margin-top: 5px;
   margin-bottom: 10px;
+  color: lighten($text-color, 25%);
+}
+
+
+.field{
+  margin-bottom: 15px;
+
   label{
     display: inline-block;
   }
-  input{
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  textarea{
     width: 100%;
   }
+
 }
