@@ -108,7 +108,7 @@ button,
   cursor:           pointer;
 
   background-image: none;
-  border:           none;
+  border:           1px solid transparent;
   white-space:      nowrap;
   outline:          none;
 
@@ -138,8 +138,6 @@ button,
     @include opacity(.65);
   }
 
-  border-width: 1px;
-  border-style: solid;
              @include button-variant($button-default-color, $button-default-background, $button-default-border);
   &.primary{ @include button-variant($button-primary-color, $button-primary-background, $button-primary-border); }
   &.success{ @include button-variant($button-success-color, $button-success-background, $button-success-border); }
