@@ -153,5 +153,16 @@ label{
   textarea{
     width: 100%;
   }
+}
+
+form.inline{
+
+  .field{
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+
+    label{ display: none;}
+  }
 
 }
