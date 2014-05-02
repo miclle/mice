@@ -178,8 +178,9 @@ form.horizontal{
       label{
         display: inline-block;
         float: left;
+        text-align: right;
+        padding-right: 10px;
       }
     }
-
   }
 }
