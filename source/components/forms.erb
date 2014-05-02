@@ -42,7 +42,7 @@ title: Forms
             <p class="hint">This is hint text here.</p>
           </div>
 
-          <div class="field">
+          <div class="field checkbox">
             <label>
               <input type="checkbox"> Check me out
             </label>
@@ -81,7 +81,7 @@ title: Forms
     <input type="file" id="file">
     <p class="hint">This is hint text here.</p>
   </div>
-  <div class="field">
+  <div class="field checkbox">
     <label>
       <input type="checkbox"> Check me out
     </label>
@@ -109,7 +109,7 @@ title: Forms
             <input type="password" id="password" placeholder="Password" />
           </div>
 
-          <div class="field">
+          <div class="field checkbox">
             <label>
               <input type="checkbox"> Remember me
             </label>
@@ -120,7 +120,77 @@ title: Forms
           </div>
         </form>
       </section>
+<% code "html" do %>
+<form class="inline">
+  <div class="field">
+    <label for="email">Your email</label>
+    <input type="email" name="email" id="email" placeholder="Email" />
+  </div>
 
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" />
+  </div>
+
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+<% end %>
+
+      <h2>Horizontal form</h2>
+      <section class="example">
+        <form class="horizontal">
+          <div class="field">
+            <label class="two" for="email">Your email</label>
+            <input class="nine" type="email" name="email" id="email" placeholder="Email" />
+          </div>
+
+          <div class="field">
+            <label class="two" for="password">Password</label>
+            <input class="nine" type="password" id="password" placeholder="Password" />
+          </div>
+
+          <div class="field checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+
+          <div class="field">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+<% code "html" do %>
+<form class="horizontal">
+  <div class="field">
+    <label for="email">Your email</label>
+    <input type="email" name="email" id="email" placeholder="Email" />
+  </div>
+
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" />
+  </div>
+
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+<% end %>
     </div>
 
   </div>

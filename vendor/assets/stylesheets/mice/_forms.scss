@@ -65,6 +65,8 @@ select{
   font-size:   14px;
   line-height: $line-height-base;
 
+  transition: border-color ease-in-out .1s,box-shadow ease-in-out .1s;
+
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
@@ -112,17 +114,9 @@ textarea{
   resize: vertical;
 
   margin-bottom: 10px;
-  padding: 6px 6px;
-  font-size: 14px;
-  line-height: 1.42857143;
   color: #555;
   background-color: #FFF;
   background-image: none;
-  border: 1px solid #CCC;
-
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-
-  outline: none;
 }
 
 label{
@@ -154,13 +148,38 @@ label{
 }
 
 form.inline{
-
   .field{
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
 
-    label{ display: none;}
+    &:not(.checkbox),
+    &:not(.radio){
+      label{ display: none;}
+    }
   }
+}
 
+form.horizontal{
+  .field{
+    vertical-align: middle;
+    @include clearfix();
+
+    $columns: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
+
+    @for $i from 1 through length($columns) {
+      > .#{nth($columns, $i)}{
+        width: percentage(1 / 12 * $i);
+      }
+    }
+
+    &:not(.checkbox),
+    &:not(.radio){
+      label{
+        display: inline-block;
+        float: left;
+      }
+    }
+
+  }
 }
