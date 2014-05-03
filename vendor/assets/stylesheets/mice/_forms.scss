@@ -8,10 +8,11 @@
     background-color: $background;
         border-color: $border;
 
-  &:hover{ border-color: darken($border, 10%); }
+  &:hover{ border-color: darken($border, 15%); }
 
+  &:focus,
   &:active,
-  &.active{ border-color: darken($border, 15%); }
+  &.active{ border-color: darken($border, 30%); }
 
   &.disabled,
   &[disabled] {
@@ -77,6 +78,23 @@ select{
 }
 
 
+textarea{
+  display: block;
+  line-height: 20px;
+  height: 120px;
+  resize: vertical;
+
+  margin-bottom: 10px;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+}
+
+label{
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
 // Input Styles
 // -------------------------
 
@@ -107,23 +125,6 @@ input[type="email"]{
 }
 
 
-textarea{
-  display: block;
-  line-height: 20px;
-  height: 120px;
-  resize: vertical;
-
-  margin-bottom: 10px;
-  color: #555;
-  background-color: #FFF;
-  background-image: none;
-}
-
-label{
-  display: inline-block;
-  margin-bottom: 2px;
-}
-
 .hint {
   display: block;
   margin-top: 5px;
@@ -153,14 +154,14 @@ form.inline{
     margin-bottom: 0;
     vertical-align: middle;
 
-    &:not(.checkbox),
-    &:not(.radio){
+    &:not(.checkbox){
       label{ display: none;}
     }
   }
 }
 
 form.horizontal{
+
   .field{
     vertical-align: middle;
     @include clearfix();
@@ -170,17 +171,33 @@ form.horizontal{
     @for $i from 1 through length($columns) {
       > .#{nth($columns, $i)}{
         width: percentage(1 / 12 * $i);
+
+        &.right{
+          float: right;
+        }
+      }
+
+      &.actions{
+        &.#{nth($columns, $i)}{
+          padding-left: percentage(1 / 12 * $i);
+        }
       }
     }
 
-    &:not(.checkbox),
-    &:not(.radio){
+    &:not(.checkbox){
       label{
-        display: inline-block;
         float: left;
-        text-align: right;
+        height: 34px;
+        margin-bottom: 0;
         padding-right: 10px;
+        padding-top: 6px;
+        text-align: right;
       }
     }
+
   }
 }
+
+
+
+
