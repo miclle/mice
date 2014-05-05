@@ -15,181 +15,27 @@ title: Forms
 
       <h2>Basic example</h2>
       <section class="example">
-        <form>
-          <div class="field">
-            <label for="name">Your name *</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
-          </div>
-
-          <div class="field">
-            <label for="email">Your email *</label>
-            <input type="email" name="email" id="email" placeholder="Email" />
-          </div>
-
-          <div class="field">
-            <label for="phone">Your phone *</label>
-            <input type="text" name="phone" id="phone" placeholder="Phone" />
-          </div>
-
-          <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password">
-          </div>
-
-          <div class="field">
-            <label for="file">File input</label>
-            <input type="file" id="file">
-            <p class="hint">This is hint text here.</p>
-          </div>
-
-          <div class="field checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-
-          <div class="field">
-            <label for="message">Your message *</label>
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message..." /></textarea>
-          </div>
-
-          <div class="field">
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
+        <%= partial "shared/form", :locals => { :type => nil } %>
       </section>
+
 <% code "html" do %>
-<form>
-  <div class="field">
-    <label for="name">Your name *</label>
-    <input type="text" name="name" id="name">
-  </div>
-  <div class="field">
-    <label for="email">Your email *</label>
-    <input type="email" name="email" id="email">
-  </div>
-  <div class="field">
-    <label for="phone">Your phone *</label>
-    <input type="text" name="phone" id="phone">
-  </div>
-  <div class="field">
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password">
-  </div>
-  <div class="field">
-    <label for="file">File input</label>
-    <input type="file" id="file">
-    <p class="hint">This is hint text here.</p>
-  </div>
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <div class="field">
-    <label for="message">Your message *</label>
-    <textarea name="message" id="message" cols="30" rows="5"></textarea>
-  </div>
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
+<%= partial "shared/form", :locals => { :type => nil } %>
 <% end -%>
 
       <h2>Inline form</h2>
       <section class="example">
-        <form class="inline">
-          <div class="field">
-            <label for="email">Your email</label>
-            <input type="email" name="email" id="email" placeholder="Email" />
-          </div>
-
-          <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" />
-          </div>
-
-          <div class="field checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
-
-          <div class="field">
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
+        <%= partial "shared/form_inline" %>
       </section>
 <% code "html" do %>
-<form class="inline">
-  <div class="field">
-    <label for="email">Your email</label>
-    <input type="email" name="email" id="email" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
+<%= partial "shared/form_inline" %>
 <% end %>
 
       <h2>Horizontal form</h2>
       <section class="example">
-        <form class="horizontal">
-          <div class="field">
-            <label class="two" for="email3">Your email</label>
-            <input class="ten" type="email" id="email3" placeholder="Email" />
-          </div>
-
-          <div class="field">
-            <label class="two" for="password3">Password</label>
-            <input class="ten" type="password" id="password3" placeholder="Password" />
-          </div>
-
-          <div class="field checkbox">
-            <label class="ten right">
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
-
-          <div class="field actions two">
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
+        <%= partial "shared/form", :locals => { :type => "horizontal offset two" } %>
       </section>
 <% code "html" do %>
-<form class="horizontal">
-  <div class="field">
-    <label for="email">Your email</label>
-    <input type="email" name="email" id="email" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
+<%= partial "shared/form", :locals => { :type => "horizontal offset two" } %>
 <% end %>
     </div>
 

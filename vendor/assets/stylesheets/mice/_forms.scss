@@ -143,6 +143,7 @@ input[type="email"]{
   input[type="text"],
   input[type="password"],
   input[type="email"],
+  select,
   textarea{
     width: 100%;
   }
@@ -162,41 +163,36 @@ form.inline{
 
 form.horizontal{
 
-  .field{
-    vertical-align: middle;
-    @include clearfix();
+  $offsets: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
 
-    $columns: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
+  @for $i from 1 through length($offsets){
+    &.offset.#{nth($offsets, $i)}{
+      .field{
+        position: relative;
+        vertical-align: middle;
+        @include clearfix();
+        padding-left: percentage(1 / 12 * $i);
 
-    @for $i from 1 through length($columns) {
-      > .#{nth($columns, $i)}{
-        width: percentage(1 / 12 * $i);
-
-        &.right{
-          float: right;
+        &:not(.checkbox){
+          label{
+            float: left;
+            width: percentage(1 / 12 * $i);
+            height: 34px;
+            margin-left: (0 - percentage(1 / 12 * $i));
+            margin-bottom: 0;
+            padding-right: 15px;
+            padding-top: 6px;
+            text-align: right;
+          }
         }
-      }
 
-      &.actions{
-        &.#{nth($columns, $i)}{
-          padding-left: percentage(1 / 12 * $i);
-        }
       }
     }
-
-    &:not(.checkbox){
-      label{
-        float: left;
-        height: 34px;
-        margin-bottom: 0;
-        padding-right: 10px;
-        padding-top: 6px;
-        text-align: right;
-      }
-    }
-
   }
+
 }
+
+
 
 
 
