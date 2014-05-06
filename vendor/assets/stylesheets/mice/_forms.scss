@@ -8,11 +8,16 @@
     background-color: $background;
         border-color: $border;
 
-  &:hover{ border-color: darken($border, 15%); }
+  &:hover{
+    border-color: darken($border, 15%);
+  }
 
   &:focus,
   &:active,
-  &.active{ border-color: darken($border, 30%); }
+  &.active{
+    border-color: darken($border, 30%);
+    border-width: 2px;
+  }
 
   &.disabled,
   &[disabled] {
