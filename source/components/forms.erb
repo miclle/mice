@@ -37,6 +37,35 @@ title: Forms
 <% code "html" do %>
 <%= partial "shared/form", :locals => { :type => "horizontal offset two" } %>
 <% end %>
+
+      <h2>Static text</h2>
+      <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.static</code> class on a <code>&lt;p&gt;</code>.</p>
+      <section class="example">
+        <form class="horizontal offset two">
+          <div class="field">
+            <label for="email">Your email *</label>
+            <p class="static">email@example.com</p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+          </div>
+        </form>
+      </section>
+<% code "html" do %>
+<form class="horizontal offset two">
+  <div class="field">
+    <label for="email">Your email *</label>
+    <p class="static">email@example.com</p>
+  </div>
+
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password">
+  </div>
+</form>
+<% end -%>
     </div>
 
   </div>

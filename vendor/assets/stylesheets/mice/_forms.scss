@@ -47,6 +47,7 @@
   &.active{
     padding: ($padding-vertical - 1) ($padding-horizontal - 1);
     // box-shadow: 0 0 0 1px #9BA5A8;
+    box-shadow: inset 0 1px #F5F5F5;
   }
 }
 
@@ -192,6 +193,11 @@ form.horizontal{
             padding-top: 6px;
             text-align: right;
           }
+        }
+
+        .static{
+          padding-top: 6px;
+          margin-bottom: 0;
         }
 
       }
