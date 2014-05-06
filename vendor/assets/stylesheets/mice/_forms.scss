@@ -149,6 +149,12 @@ input[type="email"]{
     display: inline-block;
   }
 
+  &:not(.checkbox){
+    label{
+      font-weight: 500;
+    }
+  }
+
   input[type="text"],
   input[type="password"],
   input[type="email"],
