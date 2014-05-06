@@ -92,29 +92,60 @@
       <h1 class="title">Input</h1>
 
 
-      <section>
+      <section class="example">
         <h2>Base</h2>
         <p><input type="text" placeholder="input here..." /></p>
         <p><textarea cols="120" rows="5" placeholder="input here..."></textarea></p>
       </section>
+<pre class="highlight html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"input here..."</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">cols=</span><span class="s">"120"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">placeholder=</span><span class="s">"input here..."</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</pre>
 
-      <section>
+      <section class="example">
         <h2>Fluid</h2>
         <p><input type="text" class="fluid" placeholder="input here..." /></p>
         <p><textarea cols="120" rows="5" class="fluid" placeholder="input here..."></textarea></p>
       </section>
+<pre class="highlight html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid"</span> <span class="na">placeholder=</span><span class="s">"input here..."</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">cols=</span><span class="s">"120"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"fluid"</span> <span class="na">placeholder=</span><span class="s">"input here..."</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</pre>
 
-      <section>
+      <section class="example">
         <h2>Disabled state</h2>
-        <input type="text" placeholder="Disabled input here..." disabled="disabled" />
+        <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid" /></p>
+        <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid primary" /></p>
       </section>
+<pre class="highlight html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled input here..."</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled input here..."</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">class=</span><span class="s">"primary"</span> <span class="nt">/&gt;</span>
+</pre>
 
-      <section>
+      <section class="example">
         <h2>sizing</h2>
         <p><input type="text" class="small" placeholder=".small input" /></p>
         <p><input type="text" placeholder="default input" /></p>
         <p><input type="text" class="large" placeholder=".large input" /></p>
       </section>
+<pre class="highlight html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"small"</span> <span class="na">placeholder=</span><span class="s">".small input"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"default input"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"large"</span> <span class="na">placeholder=</span><span class="s">".large input"</span> <span class="nt">/&gt;</span>
+</pre>
+
+      <section class="example">
+        <h2>Color</h2>
+        <p><input type="text" class="fluid primary" placeholder=".primary" /></p>
+        <p><input type="text" class="fluid success" placeholder=".success" /></p>
+        <p><input type="text" class="fluid info"    placeholder=".info" /></p>
+        <p><input type="text" class="fluid warning" placeholder=".warning" /></p>
+        <p><input type="text" class="fluid danger"  placeholder=".danger" /></p>
+        <p><textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"></textarea></p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid primary"</span> <span class="na">placeholder=</span><span class="s">".primary"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid success"</span> <span class="na">placeholder=</span><span class="s">".success"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid info"</span>    <span class="na">placeholder=</span><span class="s">".info"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid warning"</span> <span class="na">placeholder=</span><span class="s">".warning"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"fluid danger"</span>  <span class="na">placeholder=</span><span class="s">".danger"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">cols=</span><span class="s">"120"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"fluid primary"</span> <span class="na">placeholder=</span><span class="s">".primary"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</pre>
 
     </div>
 
