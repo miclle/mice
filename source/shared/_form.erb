@@ -1,6 +1,6 @@
 <% suffix = (type || "basic").split().join("-") %>
 
-<form <%= "class=\"#{type}\"" unless type.blank?  -%>>
+<form<%= " class=\"#{type}\"" unless type.blank?  -%>>
   <div class="field">
     <label for="name-<%= suffix -%>">Your name *</label>
     <input type="text" name="name" id="name-<%= suffix -%>" placeholder="Name" />
