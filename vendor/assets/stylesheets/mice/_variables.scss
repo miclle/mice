@@ -49,8 +49,12 @@ $font-size-h4:            ceil(($font-size-base * 1.28)) !default;  // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default;  // ~12px
 
+// Line Height
+// -------------------------
 
 $line-height-base:        1.42858 !default; // 20/14
+$line-height-small:       1.33 !default;
+$line-height-large:       1.5 !default;
 
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
@@ -176,12 +180,19 @@ $input-danger-color:                $input-default-color !default;
 $input-danger-background:           $input-default-background !default;
 $input-danger-border:               $border-danger-border-color !default;
 
-$input-height-base:                ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$input-height-small:               (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
-$input-height-large:               (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-default:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-small:                (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-large:                (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 
-$line-height-small:                 1.33 !default;
-$line-height-large:                 1.5 !default;
+// Sizing
+$input-padding-default-vertical:    $padding-base-vertical !default;
+$input-padding-default-horizontal:  $padding-base-vertical !default;
+
+$input-padding-small-vertical:      $padding-small-vertical !default;
+$input-padding-small-horizontal:    $padding-small-vertical !default;
+
+$input-padding-large-vertical:      $padding-large-vertical !default;
+$input-padding-large-horizontal:    $padding-large-vertical !default;
 
 //== Tables
 //
