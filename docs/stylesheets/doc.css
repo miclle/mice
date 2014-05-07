@@ -3340,7 +3340,41 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .media .heading {
     margin: 0 0 5px; }
 
-/* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0; }
+  /* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  fieldset[disabled] input[type="text"], fieldset[disabled] input[type="text"]:hover, fieldset[disabled] input[type="text"]:active, fieldset[disabled] input[type="text"].active,
+  fieldset[disabled] input[type="password"],
+  fieldset[disabled] input[type="password"]:hover,
+  fieldset[disabled] input[type="password"]:active,
+  fieldset[disabled] input[type="password"].active,
+  fieldset[disabled] input[type="email"],
+  fieldset[disabled] input[type="email"]:hover,
+  fieldset[disabled] input[type="email"]:active,
+  fieldset[disabled] input[type="email"].active,
+  fieldset[disabled] textarea,
+  fieldset[disabled] textarea:hover,
+  fieldset[disabled] textarea:active,
+  fieldset[disabled] textarea.active,
+  fieldset[disabled] select,
+  fieldset[disabled] select:hover,
+  fieldset[disabled] select:active,
+  fieldset[disabled] select.active,
+  fieldset[disabled] button,
+  fieldset[disabled] button:hover,
+  fieldset[disabled] button:active,
+  fieldset[disabled] button.active {
+    cursor: not-allowed;
+    background-color: #eee;
+    border-width: 1px;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+
+/* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -3358,7 +3392,7 @@ select {
   box-shadow: inset 0 1px #F5F5F5;
   background-color: transparent;
   transition: border-color ease-in-out .1s,box-shadow ease-in-out .1s; }
-  /* line 80, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 107, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].disabled, input[type="text"][disabled],
   input[type="password"].disabled,
   input[type="password"][disabled],
@@ -3377,7 +3411,7 @@ select {
     -ms-user-select: none;
     user-select: none; }
 
-/* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 116, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 textarea {
   display: block;
   line-height: 20px;
@@ -3388,12 +3422,12 @@ textarea {
   background-color: #FFF;
   background-image: none; }
 
-/* line 101, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 label {
   display: inline-block;
   margin-bottom: 2px; }
 
-/* line 112, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 139, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -3448,9 +3482,10 @@ textarea {
   textarea[disabled].active {
     border-color: #cccccc;
     cursor: not-allowed;
+    background-color: #eee;
     opacity: 0.55;
     filter: alpha(opacity=55.0); }
-  /* line 114, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].primary,
   input[type="password"].primary,
   input[type="email"].primary,
@@ -3505,9 +3540,10 @@ textarea {
     textarea.primary[disabled].active {
       border-color: #428bca;
       cursor: not-allowed;
+      background-color: #eee;
       opacity: 0.55;
       filter: alpha(opacity=55.0); }
-  /* line 115, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 142, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].success,
   input[type="password"].success,
   input[type="email"].success,
@@ -3562,9 +3598,10 @@ textarea {
     textarea.success[disabled].active {
       border-color: #81c735;
       cursor: not-allowed;
+      background-color: #eee;
       opacity: 0.55;
       filter: alpha(opacity=55.0); }
-  /* line 116, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].info,
   input[type="password"].info,
   input[type="email"].info,
@@ -3619,9 +3656,10 @@ textarea {
     textarea.info[disabled].active {
       border-color: #5bc0de;
       cursor: not-allowed;
+      background-color: #eee;
       opacity: 0.55;
       filter: alpha(opacity=55.0); }
-  /* line 117, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 144, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].warning,
   input[type="password"].warning,
   input[type="email"].warning,
@@ -3676,9 +3714,10 @@ textarea {
     textarea.warning[disabled].active {
       border-color: #f0ad4e;
       cursor: not-allowed;
+      background-color: #eee;
       opacity: 0.55;
       filter: alpha(opacity=55.0); }
-  /* line 118, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].danger,
   input[type="password"].danger,
   input[type="email"].danger,
@@ -3733,16 +3772,17 @@ textarea {
     textarea.danger[disabled].active {
       border-color: #d9534f;
       cursor: not-allowed;
+      background-color: #eee;
       opacity: 0.55;
       filter: alpha(opacity=55.0); }
-  /* line 120, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 147, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].fluid,
   input[type="password"].fluid,
   input[type="email"].fluid,
   textarea.fluid {
     width: 100%; }
 
-/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"] {
@@ -3751,7 +3791,7 @@ input[type="email"] {
   font-size: 14px;
   line-height: 1.42858;
   border-radius: 2px; }
-  /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"]:focus, input[type="text"]:active, input[type="text"].active,
   input[type="password"]:focus,
   input[type="password"]:active,
@@ -3761,7 +3801,7 @@ input[type="email"] {
   input[type="email"].active {
     padding: 5px 5px;
     box-shadow: inset 0 1px #F5F5F5; }
-  /* line 132, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].small,
   input[type="password"].small,
   input[type="email"].small {
@@ -3770,7 +3810,7 @@ input[type="email"] {
     font-size: 12px;
     line-height: 1.33;
     border-radius: 2px; }
-    /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].small:focus, input[type="text"].small:active, input[type="text"].small.active,
     input[type="password"].small:focus,
     input[type="password"].small:active,
@@ -3780,7 +3820,7 @@ input[type="email"] {
     input[type="email"].small.active {
       padding: 4px 4px;
       box-shadow: inset 0 1px #F5F5F5; }
-  /* line 133, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input[type="text"].large,
   input[type="password"].large,
   input[type="email"].large {
@@ -3789,7 +3829,7 @@ input[type="email"] {
     font-size: 18px;
     line-height: 1.5;
     border-radius: 2px; }
-    /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
     input[type="text"].large:focus, input[type="text"].large:active, input[type="text"].large.active,
     input[type="password"].large:focus,
     input[type="password"].large:active,
@@ -3800,20 +3840,23 @@ input[type="email"] {
       padding: 7px 7px;
       box-shadow: inset 0 1px #F5F5F5; }
 
-/* line 137, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 164, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 .hint {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
   color: #737373; }
 
-/* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 .field {
   margin-bottom: 15px; }
-  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 175, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   .field label {
     display: inline-block; }
-  /* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 180, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .field:not(.checkbox) label {
+    font-weight: 700; }
+  /* line 189, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   .field input[type="text"],
   .field input[type="password"],
   .field input[type="email"],
@@ -3821,16 +3864,16 @@ input[type="email"] {
   .field textarea {
     width: 100%; }
 
-/* line 162, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 195, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.inline .field {
   display: inline-block;
   margin-bottom: 0;
   vertical-align: middle; }
-  /* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 201, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.inline .field:not(.checkbox) label {
     display: none; }
 
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.one .field {
   position: relative;
   vertical-align: middle;
@@ -3842,7 +3885,7 @@ form.horizontal.offset.one .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.one .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.one .field:not(.checkbox) label {
     float: left;
     width: 8.33333%;
@@ -3852,11 +3895,11 @@ form.horizontal.offset.one .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.one .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.two .field {
   position: relative;
   vertical-align: middle;
@@ -3868,7 +3911,7 @@ form.horizontal.offset.two .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.two .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.two .field:not(.checkbox) label {
     float: left;
     width: 16.66667%;
@@ -3878,11 +3921,11 @@ form.horizontal.offset.two .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.two .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.three .field {
   position: relative;
   vertical-align: middle;
@@ -3894,7 +3937,7 @@ form.horizontal.offset.three .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.three .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.three .field:not(.checkbox) label {
     float: left;
     width: 25%;
@@ -3904,11 +3947,11 @@ form.horizontal.offset.three .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.three .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.four .field {
   position: relative;
   vertical-align: middle;
@@ -3920,7 +3963,7 @@ form.horizontal.offset.four .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.four .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.four .field:not(.checkbox) label {
     float: left;
     width: 33.33333%;
@@ -3930,11 +3973,11 @@ form.horizontal.offset.four .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.four .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.five .field {
   position: relative;
   vertical-align: middle;
@@ -3946,7 +3989,7 @@ form.horizontal.offset.five .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.five .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.five .field:not(.checkbox) label {
     float: left;
     width: 41.66667%;
@@ -3956,11 +3999,11 @@ form.horizontal.offset.five .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.five .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.six .field {
   position: relative;
   vertical-align: middle;
@@ -3972,7 +4015,7 @@ form.horizontal.offset.six .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.six .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.six .field:not(.checkbox) label {
     float: left;
     width: 50%;
@@ -3982,11 +4025,11 @@ form.horizontal.offset.six .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.six .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.seven .field {
   position: relative;
   vertical-align: middle;
@@ -3998,7 +4041,7 @@ form.horizontal.offset.seven .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.seven .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.seven .field:not(.checkbox) label {
     float: left;
     width: 58.33333%;
@@ -4008,11 +4051,11 @@ form.horizontal.offset.seven .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.seven .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.eight .field {
   position: relative;
   vertical-align: middle;
@@ -4024,7 +4067,7 @@ form.horizontal.offset.eight .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.eight .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.eight .field:not(.checkbox) label {
     float: left;
     width: 66.66667%;
@@ -4034,11 +4077,11 @@ form.horizontal.offset.eight .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.eight .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.nine .field {
   position: relative;
   vertical-align: middle;
@@ -4050,7 +4093,7 @@ form.horizontal.offset.nine .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.nine .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.nine .field:not(.checkbox) label {
     float: left;
     width: 75%;
@@ -4060,11 +4103,11 @@ form.horizontal.offset.nine .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.nine .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.ten .field {
   position: relative;
   vertical-align: middle;
@@ -4076,7 +4119,7 @@ form.horizontal.offset.ten .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.ten .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.ten .field:not(.checkbox) label {
     float: left;
     width: 83.33333%;
@@ -4086,11 +4129,11 @@ form.horizontal.offset.ten .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.ten .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
-/* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+/* line 212, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 form.horizontal.offset.eleven .field {
   position: relative;
   vertical-align: middle;
@@ -4102,7 +4145,7 @@ form.horizontal.offset.eleven .field {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   form.horizontal.offset.eleven .field:after {
     clear: both; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.eleven .field:not(.checkbox) label {
     float: left;
     width: 91.66667%;
@@ -4112,7 +4155,7 @@ form.horizontal.offset.eleven .field {
     padding-right: 15px;
     padding-top: 6px;
     text-align: right; }
-  /* line 198, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  /* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   form.horizontal.offset.eleven .field .static {
     padding-top: 6px;
     margin-bottom: 0; }
