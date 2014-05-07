@@ -87,6 +87,26 @@ title: Forms
           </fieldset>
         </form>
       </section>
+<% code "html" do %>
+<form class="horizontal offset two">
+  <fieldset disabled>
+    <div class="field">
+      <label for="email-disabled-fieldsets">Email</label>
+      <input type="email" name="email" id="email-disabled-fieldsets" placeholder="Email" />
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <div class="field">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </fieldset>
+</form>
+<% end -%>
+
     </div>
 
   </div>
