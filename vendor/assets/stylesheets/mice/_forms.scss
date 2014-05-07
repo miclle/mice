@@ -27,6 +27,7 @@
     &.active {
       border-color: $border;
       cursor: not-allowed;
+      background-color: #eee;
       @include opacity(.55);
     }
   }
@@ -54,6 +55,32 @@
 
 // Base styles
 // -------------------------
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+
+  &[disabled]{
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select,
+    button{
+      &,
+      &:hover,
+      &:active,
+      &.active {
+        cursor: not-allowed;
+        background-color: #eee;
+        border-width: 1px;
+        @include opacity(1);
+      }
+    }
+  }
+}
 
 input[type="text"],
 input[type="password"],
