@@ -3,20 +3,20 @@
 
 // Button variants
 // -------------------------
-@mixin input-variant($color, $background, $border) {
+@mixin input-variant($color, $background-color, $border-color) {
                color: $color;
-    background-color: $background;
-        border-color: $border;
+    background-color: $background-color;
+        border-color: $border-color;
 
   &:hover{
-    border-color: darken($border, 15%);
+    border-color: darken($border-color, 15%);
   }
 
   &:focus,
   &:active,
   &.active{
-    border-width: 2px;
-    border-color: darken($border, 20%);
+    border-color: darken($border-color, 20%);
+    box-shadow: 0 0 0 1px darken($border-color, 15%), inset 0 1px #F5F5F5;
   }
 
   &.disabled,
@@ -25,7 +25,7 @@
     &:hover,
     &:active,
     &.active {
-      border-color: $border;
+      border-color: $input-default-border;
       cursor: not-allowed;
       background-color: #eee;
       @include opacity(.55);
@@ -42,14 +42,6 @@
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
-
-  &:focus,
-  &:active,
-  &.active{
-    padding: ($padding-vertical - 1) ($padding-horizontal - 1);
-    // box-shadow: 0 0 0 1px #9BA5A8;
-    box-shadow: inset 0 1px #F5F5F5;
-  }
 }
 
 
@@ -116,10 +108,10 @@ select{
 textarea{
   display: block;
   line-height: 20px;
-  height: 120px;
-  resize: vertical;
-
+  min-height: 120px;
   margin-bottom: 10px;
+  white-space: normal;
+  resize: vertical;
   color: #555;
   background-color: #FFF;
   background-image: none;
@@ -154,7 +146,8 @@ textarea{
 // -------------------------
 input[type="text"],
 input[type="password"],
-input[type="email"]{
+input[type="email"],
+textarea{
            @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base,  $border-radius);
   &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small, $border-radius-small);}
   &.large {@include input-size($input-height-large,   $input-padding-large-vertical,   $input-padding-large-horizontal,   $font-size-large, $line-height-large, $border-radius-large);}
