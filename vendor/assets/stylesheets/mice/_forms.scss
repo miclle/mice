@@ -1,7 +1,7 @@
 // Forms
 // --------------------------------------------------
 
-// Button variants
+// Input variants
 // -------------------------
 @mixin input-variant($color, $background-color, $border-color) {
                color: $color;
@@ -30,6 +30,20 @@
       background-color: #eee;
       @include opacity(.55);
     }
+  }
+}
+
+// Field variants
+// -------------------------
+@mixin field-variant($color, $border-color){
+  color: $border-color;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  textarea,
+  select{
+    @include input-variant($input-default-color, $input-default-background, $border-color);
   }
 }
 
@@ -182,6 +196,10 @@ textarea{
   textarea{
     width: 100%;
   }
+
+  &.success {@include field-variant($input-success-color, $input-success-border);}
+  &.warning {@include field-variant($input-warning-color, $input-warning-border);}
+  &.error   {@include field-variant($input-danger-color,  $input-danger-border );}
 }
 
 form.inline{
