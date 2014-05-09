@@ -92,13 +92,12 @@ $caret-width-large:         5px !default;
 
 // Border color
 // -------------------------
-$border-default-border-color:       #CCC !default;
-$border-primary-border-color:       $brand-primary !default;
-$border-success-border-color:       $brand-success !default;
-$border-info-border-color:          $brand-info    !default;
-$border-warning-border-color:       $brand-warning !default;
-$border-danger-border-color:        $brand-danger  !default;
-
+$border-color-default:      #CCC !default;
+$border-color-primary:      $brand-primary !default;
+$border-color-success:      $brand-success !default;
+$border-color-info:         $brand-info    !default;
+$border-color-warning:      $brand-warning !default;
+$border-color-danger:       $brand-danger  !default;
 
 // Heading
 // -------------------------
@@ -156,30 +155,6 @@ $button-danger-border:              darken($button-danger-background, 5%) !defau
 
 //== Input
 // -------------------------
-$input-default-color:               $gray !default;
-$input-default-background:          #FFF !default;
-$input-default-border:              $border-default-border-color !default;
-
-$input-primary-color:               $input-default-color !default;
-$input-primary-background:          $input-default-background !default;
-$input-primary-border:              $border-primary-border-color !default;
-
-$input-success-color:               $input-default-color !default;
-$input-success-background:          $input-default-background !default;
-$input-success-border:              $border-success-border-color !default;
-
-$input-info-color:                  $input-default-color !default;
-$input-info-background:             $input-default-background !default;
-$input-info-border:                 $border-info-border-color !default;
-
-$input-warning-color:               $input-default-color !default;
-$input-warning-background:          $input-default-background !default;
-$input-warning-border:              $border-warning-border-color !default;
-
-$input-danger-color:                $input-default-color !default;
-$input-danger-background:           $input-default-background !default;
-$input-danger-border:               $border-danger-border-color !default;
-
 $input-height-default:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 $input-height-small:                (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 $input-height-large:                (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;

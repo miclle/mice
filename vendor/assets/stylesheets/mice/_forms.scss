@@ -3,9 +3,9 @@
 
 // Input variants
 // -------------------------
-@mixin input-variant($color, $background-color, $border-color) {
-               color: $color;
-    background-color: $background-color;
+@mixin input-variant($border-color) {
+               color: $gray;
+    background-color: #FFF;
         border-color: $border-color;
 
   &:hover{
@@ -25,7 +25,7 @@
     &:hover,
     &:active,
     &.active {
-      border-color: $input-default-border;
+      border-color: $border-color-default;
       cursor: not-allowed;
       background-color: #eee;
       @include opacity(.55);
@@ -35,7 +35,7 @@
 
 // Field variants
 // -------------------------
-@mixin field-variant($color, $border-color){
+@mixin field-variant($border-color){
   color: $border-color;
 
   input[type="text"],
@@ -43,7 +43,7 @@
   input[type="email"],
   textarea,
   select{
-    @include input-variant($input-default-color, $input-default-background, $border-color);
+    @include input-variant($border-color);
   }
 }
 
@@ -143,16 +143,14 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea{
-            @include input-variant($input-default-color, $input-default-background, $input-default-border);
-  &.primary{@include input-variant($input-primary-color, $input-primary-background, $input-primary-border);}
-  &.success{@include input-variant($input-success-color, $input-success-background, $input-success-border);}
-  &.info   {@include input-variant($input-info-color,    $input-info-background,    $input-info-border   );}
-  &.warning{@include input-variant($input-warning-color, $input-warning-background, $input-warning-border);}
-  &.danger {@include input-variant($input-danger-color,  $input-danger-background,  $input-danger-border );}
+            @include input-variant($border-color-default);
+  &.primary{@include input-variant($border-color-primary);}
+  &.success{@include input-variant($border-color-success);}
+  &.info   {@include input-variant($border-color-info   );}
+  &.warning{@include input-variant($border-color-warning);}
+  &.danger {@include input-variant($border-color-danger );}
 
-  &.fluid{
-    width: 100%;
-  }
+  &.fluid{ width: 100%; }
 }
 
 
@@ -197,9 +195,9 @@ textarea{
     width: 100%;
   }
 
-  &.success {@include field-variant($input-success-color, $input-success-border);}
-  &.warning {@include field-variant($input-warning-color, $input-warning-border);}
-  &.error   {@include field-variant($input-danger-color,  $input-danger-border );}
+  &.success {@include field-variant($border-color-success);}
+  &.warning {@include field-variant($border-color-warning);}
+  &.error   {@include field-variant($border-color-danger );}
 }
 
 form.inline{
