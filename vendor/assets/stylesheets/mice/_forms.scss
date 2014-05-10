@@ -1,7 +1,7 @@
 // Forms
 // --------------------------------------------------
 
-$types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
+// $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
 
 // Input variants
 // -------------------------
@@ -223,18 +223,30 @@ textarea{
   }
 }
 
+// Inline form
+// -------------------------
 form.inline{
   .field{
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
 
-    &:not(.checkbox){
+    input[type="text"],
+    input[type="password"],
+    input[type="email"]{
+      width: auto;
+    }
+  }
+
+  &.unlabel{
+    .field:not(.checkbox){
       label{ display: none;}
     }
   }
 }
 
+// Horizontal Form
+// -------------------------
 form.horizontal{
 
   $offsets: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
@@ -271,6 +283,9 @@ form.horizontal{
 
 }
 
+
+// With optional icons
+// -------------------------
 form.inline,
 form.horizontal{
 .field.feedback{

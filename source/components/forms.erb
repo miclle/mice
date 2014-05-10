@@ -24,11 +24,26 @@ title: Forms
 
       <h2>Inline form</h2>
       <section class="example">
-        <%= partial "shared/form_inline" %>
+        <%= partial "shared/form_inline", :locals => { :type => nil } %>
       </section>
 <% code "html" do %>
-<%= partial "shared/form_inline" %>
+<%= partial "shared/form_inline", :locals => { :type => nil } %>
 <% end %>
+
+      <section class="example">
+        <%= partial "shared/form_inline", :locals => { :type => "unlabel" } %>
+      </section>
+<% code "html" do %>
+<%= partial "shared/form_inline", :locals => { :type => "unlabel" } %>
+<% end %>
+
+      <section class="example">
+        <%= partial "shared/form_inline_simple" %>
+      </section>
+<% code "html" do %>
+<%= partial "shared/form_inline_simple" %>
+<% end -%>
+
 
       <h2>Horizontal form</h2>
       <section class="example">
@@ -231,8 +246,8 @@ title: Forms
 
     <section class="example">
       <form class="inline">
-        <label for="text-success">Input with success</label>
         <div class="field success feedback">
+          <label for="text-success">Input with success</label>
           <input type="text" name="success" id="text-success" />
           <i class="icon lightbulb-o"></i>
         </div>
