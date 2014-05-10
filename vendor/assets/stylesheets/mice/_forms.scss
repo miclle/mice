@@ -269,12 +269,14 @@ form.horizontal{
     }
   }
 
-  .field.feedback{
-    .icon{ top: 0 }
-  }
-
 }
 
+form.inline,
+form.horizontal{
+.field.feedback{
+    .icon{ top: 0 }
+  }
+}
 
 
 
