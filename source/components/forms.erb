@@ -243,6 +243,27 @@ title: Forms
         </div>
       </form>
     </section>
+<% code "html" do %>
+<form class="horizontal offset three">
+  <div class="field success feedback">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+    <i class="icon lightbulb-o"></i>
+  </div>
+
+  <div class="field warning feedback">
+    <label for="text-warning">Input with warning</label>
+    <input type="text" name="warning" id="text-warning" />
+    <i class="icon warning"></i>
+  </div>
+
+  <div class="field error feedback">
+    <label for="text-error">Input with error</label>
+    <input type="text" name="error" id="text-error" />
+    <i class="icon times"></i>
+  </div>
+</form>
+<% end -%>
 
     <section class="example">
       <form class="inline">
@@ -253,6 +274,15 @@ title: Forms
         </div>
       </form>
     </section>
+<% code "html" do %>
+<form class="inline">
+  <div class="field success feedback">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+    <i class="icon lightbulb-o"></i>
+  </div>
+</form>
+<% end -%>
 
     </div>
 
