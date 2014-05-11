@@ -553,6 +553,56 @@ mark {
 .text.justify {
   text-align: justify; }
 
+/* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+/* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 2px; }
+
+/* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: white;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+/* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42858;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 2px; }
+  /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0; }
+  /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
+  pre.scrollable {
+    max-height: 340px;
+    overflow-y: scroll; }
+
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
 .container {
   margin-right: auto;
@@ -1712,14 +1762,15 @@ img {
   vertical-align: middle; }
   /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.responsive {
-    max-width: 100%; }
-  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+    max-width: 100%;
+    height: auto; }
+  /* line 13, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.rounded {
     border-radius: 4px; }
-  /* line 13, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.circle {
     border-radius: 50%; }
-  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.thumbnail {
     padding: 4px;
     line-height: 1.42857143;
@@ -1731,13 +1782,14 @@ img {
     display: inline-block;
     max-width: 100%;
     height: auto; }
-  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  /* line 28, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.disabled {
     cursor: default;
     opacity: 0.3;
     filter: alpha(opacity=30); }
-  /* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  /* line 33, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
   img.fluid {
+    display: block;
     width: 100%; }
 
 /*!
