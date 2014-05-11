@@ -118,6 +118,21 @@ $blockquote-border-color:           $gray-lighter !default;
 $page-header-border-color:          $gray-lighter !default;
 
 
+//== Code
+//
+//##
+
+$code-color:                        #c7254e !default;
+$code-background:                   #f9f2f4 !default;
+
+$kbd-color:                         #fff !default;
+$kbd-background:                    #333 !default;
+
+$pre-background:                    #f5f5f5 !default;
+$pre-color:                         $gray-dark !default;
+$pre-border-color:                  #ccc !default;
+$pre-scrollable-max-height:         340px !default;
+
 
 //== Forms
 // -------------------------
