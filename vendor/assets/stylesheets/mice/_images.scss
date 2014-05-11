@@ -1,0 +1,35 @@
+//
+// Images
+// --------------------------------------------------
+
+img {
+  vertical-align: middle;
+
+  &.responsive{
+    max-width: 100%;
+  }
+
+  &.rounded   { border-radius: $border-radius-large; }
+  &.circle    { border-radius: 50%; }
+  &.thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    border-radius: $border-radius;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.disabled{
+    cursor: default;
+    @include opacity(.3);
+  }
+
+  &.fluid{
+    width: 100%;
+  }
+}

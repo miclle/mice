@@ -67,28 +67,6 @@ a {
 }
 
 
-// Images
-// -------------------------
-img {
-  vertical-align: middle;
-
-  &.rounded   { border-radius: 6px; }
-  &.circle    { border-radius: 50%; }
-  &.thumbnail {
-    padding: 4px;
-    line-height: 1.42857143;
-    background-color: #FFF;
-    border: 1px solid #DDD;
-    border-radius: 4px;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-
 .shake {
   -webkit-transform-origin: center center 0 50%;
      -moz-transform-origin: center center 0 50%;

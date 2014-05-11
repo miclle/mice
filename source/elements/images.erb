@@ -16,22 +16,59 @@ title: Images
 
       <h1 class="title">Images</h1>
 
-
+      <h2>Responsive images</h2>
       <section class="example">
-        <h2>Image shapes</h2>
-
-        <img data-src="holder.js/140x140" class="rounded" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
-
-        <img data-src="holder.js/140x140" class="circle" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
-
-        <img data-src="holder.js/140x140" class="thumbnail" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+        <%= image_tag "defoliation.jpeg", :class => "responsive" %>
+        <div>
+          Photographer: <%= link_to "<small>@chummy</small>", "http://miclle.com/photo/41", :target => "_blank" %>
+        </div>
       </section>
 <% code "html" do %>
-<img src="..." alt="..." class="rounded">
-<img src="..." alt="..." class="circle">
-<img src="..." alt="..." class="thumbnail">
+<%= image_tag "defoliation.jpeg", :class => "responsive", :alt => "Defoliation" %>
 <% end -%>
 
+
+      <h2>Image shapes</h2>
+      <section class="example">
+        <%= image_tag "b2df5944204470358e5e8ea086a16a2b8e1c.jpeg", :class => "rounded", :alt => "Rounded" %>
+        <%= image_tag "f78d490e23e56501adda00c7876037aef422.jpeg", :class => "circle", :alt => "Circle" %>
+        <%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg", :class => "thumbnail", :alt => "Thumbnail" %>
+        <div>
+          Photographer:
+          <%= link_to "<small>@lxneng</small>", "http://miclle.com/photo/34", :target => "_blank" %>
+          <%= link_to "<small>@kaka</small>", "http://miclle.com/photo/28", :target => "_blank" %>
+          <%= link_to "<small>@miclle</small>", "http://miclle.com/photo/1", :target => "_blank" %>
+        </div>
+      </section>
+<% code "html" do %>
+<%= image_tag "b2df5944204470358e5e8ea086a16a2b8e1c.jpeg", :class => "rounded", :alt => "Rounded" %>
+<%= image_tag "f78d490e23e56501adda00c7876037aef422.jpeg", :class => "circle", :alt => "Circle" %>
+<%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg", :class => "thumbnail", :alt => "Thumbnail" %>
+<% end -%>
+
+
+      <h2>Fluid images</h2>
+      <section class="example">
+        <%= image_tag "b62a0a54fbed94d91e3d66328b783a811b47.jpeg", :class => "fluid" %>
+        <div>
+          Photographer: <%= link_to "<small>@chummy</small>", "http://miclle.com/photo/41", :target => "_blank" %>
+        </div>
+      </section>
+<% code "html" do %>
+<%= image_tag "b62a0a54fbed94d91e3d66328b783a811b47.jpeg", :class => "fluid", :alt => "Defoliation" %>
+<% end -%>
+
+
+      <h2>Responsive images</h2>
+      <section class="example">
+        <%= image_tag "b62a0a54fbed94d91e3d66328b783a811b47.jpeg", :class => "disabled" %>
+        <div>
+          Photographer: <%= link_to "<small>@chummy</small>", "http://miclle.com/photo/41", :target => "_blank" %>
+        </div>
+      </section>
+<% code "html" do %>
+<%= image_tag "b62a0a54fbed94d91e3d66328b783a811b47.jpeg", :class => "disabled", :alt => "Defoliation" %>
+<% end -%>
 
     </div>
 

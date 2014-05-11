@@ -26,8 +26,8 @@ $link-color:              $brand-primary !default;
 $link-hover-color:        darken($link-color, 15%) !default;
 
 $border-radius:           2px !default;
-$border-radius-small:     $border-radius !default;
-$border-radius-large:     $border-radius !default;
+$border-radius-small:     $border-radius * 1.5 !default;
+$border-radius-large:     $border-radius * 2   !default;
 
 // Font family, size
 // -------------------------
