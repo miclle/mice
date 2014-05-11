@@ -7,6 +7,7 @@ img {
 
   &.responsive{
     max-width: 100%;
+    height: auto;
   }
 
   &.rounded   { border-radius: $border-radius-large; }
@@ -30,6 +31,7 @@ img {
   }
 
   &.fluid{
+    display: block;
     width: 100%;
   }
 }
