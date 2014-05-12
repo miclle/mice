@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 gem 'mice'
 ```
 or
-    
+
 ```ruby
 gem 'mice', :git => 'git@github.com:miclle/mice.git'
 ```
@@ -41,11 +41,6 @@ or
  *= require mice
  */
 ```
-
-
-## HTML/CSS Style Guide
-
-http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
 
 
 ## Contributing
