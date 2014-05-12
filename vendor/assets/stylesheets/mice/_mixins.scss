@@ -146,3 +146,29 @@
   }
   background-repeat: no-repeat;
 }
+
+
+// Typography
+// --------------------------------------------------
+// [converter] $parent hack
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover {
+    color: darken($color, 10%);
+  }
+}
+
+
+// Contextual backgrounds
+// --------------------------------------------------
+// [converter] $parent hack
+@mixin background-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color;
+  }
+  a#{$parent}:hover {
+    background-color: darken($color, 10%);
+  }
+}

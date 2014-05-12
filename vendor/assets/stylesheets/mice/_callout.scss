@@ -1,0 +1,67 @@
+//
+// Blockquote & Callout
+// --------------------------------------------------
+
+blockquote, .callout {
+  padding: ($line-height-computed / 2) $line-height-computed;
+  margin: 0 0 $line-height-computed;
+  font-size: $blockquote-font-size;
+  border-left: 5px solid $blockquote-border-color;
+
+  p, ul, ol {
+    &:last-child { margin-bottom: 0; }
+  }
+
+  footer, small, .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: $line-height-base;
+    color: $blockquote-small-color;
+
+    &:before { content: '\2014 \00A0';} // em dash, nbsp
+  }
+
+  footer{ margin-top: 0;}
+}
+
+// Opposite alignment
+blockquote, .callout{
+  &.reverse,
+  &.righted {
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid $blockquote-border-color;
+    border-left: 0;
+    text-align: right;
+
+    // Account for citation
+    footer, small, .small {
+      &:before { content: ''; }
+      &:after { content: '\00A0 \2014'; } // nbsp, em dash
+    }
+  }
+}
+
+// Quotes
+blockquote:before, .callout:before,
+blockquote:after, .callout:after {
+  content: "";
+}
+
+blockquote, .callout{
+  &.primary { border-color: $border-color-primary; background-color: $state-primary-background; }
+  &.success { border-color: $border-color-success; background-color: $state-success-background; }
+  &.info    { border-color: $border-color-info;    background-color: $state-info-background;    }
+  &.warning { border-color: $border-color-warning; background-color: $state-warning-background; }
+  &.danger  { border-color: $border-color-danger;  background-color: $state-danger-background;  }
+}
+
+.callout{
+  border-width: 3px;
+
+  &.primary { h1, h2, h3, h4, h5, h6{color: $border-color-primary; }}
+  &.success { h1, h2, h3, h4, h5, h6{color: $border-color-success; }}
+  &.info    { h1, h2, h3, h4, h5, h6{color: $border-color-info;    }}
+  &.warning { h1, h2, h3, h4, h5, h6{color: $border-color-warning; }}
+  &.danger  { h1, h2, h3, h4, h5, h6{color: $border-color-danger;  }}
+}
