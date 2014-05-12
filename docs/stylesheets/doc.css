@@ -475,7 +475,7 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
-/* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: 500;
@@ -483,75 +483,195 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   margin-top: 10px;
   margin-bottom: 10px; }
-  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+  /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-weight: normal;
     line-height: 1;
     color: #999999; }
-  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+  /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
   h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
-    padding: 10px 0;
-    border-bottom: 1px solid #EEE; }
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+    margin: 40px 0 20px; }
 
-/* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h1 small, h2 small, h3 small {
   font-size: 65%; }
 
-/* line 36, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h4 small, h5 small, h6 small {
   font-size: 75%; }
 
-/* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 33, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h1 {
   font-size: 36px; }
 
-/* line 42, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h2 {
   font-size: 31px; }
 
-/* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h3 {
   font-size: 24px; }
 
-/* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 36, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h4 {
   font-size: 18px; }
 
-/* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 37, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h5 {
   font-size: 14px; }
 
-/* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h6 {
   font-size: 12px; }
 
-/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 p {
   margin: 0 0 10px; }
 
-/* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
-small {
+/* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4; }
+
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+small,
+.small {
   font-size: 85%; }
 
-/* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
-mark {
+/* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+cite {
+  font-style: normal; }
+
+/* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+mark,
+.mark {
+  background-color: #fcf8e3;
   padding: .2em; }
 
-/* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 70, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 .text.left {
   text-align: left; }
 
-/* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 .text.right {
   text-align: right; }
 
-/* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 72, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 .text.center {
   text-align: center; }
 
-/* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+/* line 73, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 .text.justify {
   text-align: justify; }
+
+/* line 77, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.text-muted {
+  color: #999999; }
+
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.text-primary {
+  color: #428bca; }
+
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.text-primary:hover {
+  color: #3071a9; }
+
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.text-success {
+  color: #3c763d; }
+
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.text-success:hover {
+  color: #2b542c; }
+
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.text-info {
+  color: #31708f; }
+
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.text-info:hover {
+  color: #245269; }
+
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.text-warning {
+  color: #8a6d3b; }
+
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.text-warning:hover {
+  color: #66512c; }
+
+/* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.text-danger {
+  color: #a94442; }
+
+/* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.text-danger:hover {
+  color: #843534; }
+
+/* line 85, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.bg-primary {
+  color: #fff; }
+
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.bg-primary {
+  background-color: #c1d9ee; }
+
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.bg-primary:hover {
+  background-color: #9ac1e3; }
+
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.bg-success {
+  background-color: #dff0d8; }
+
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.bg-success:hover {
+  background-color: #c1e2b3; }
+
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.bg-info {
+  background-color: #d9edf7; }
+
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.bg-info:hover {
+  background-color: #afd9ee; }
+
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.bg-warning {
+  background-color: #fcf8e3; }
+
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.bg-warning:hover {
+  background-color: #f7ecb5; }
+
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.bg-danger {
+  background-color: #f2dede; }
+
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+a.bg-danger:hover {
+  background-color: #e4b9b9; }
+
+/* line 98, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999; }
+
+/* line 103, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+/* line 109, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.42858; }
 
 /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
 code,
@@ -1103,6 +1223,87 @@ pre {
   /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_grid.scss */
   .grid.twelve > .twelve.column {
     width: 100%; } }
+/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote, .callout {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eeeeee; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child, .callout p:last-child, .callout ul:last-child, .callout ol:last-child {
+    margin-bottom: 0; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  blockquote footer, blockquote small, blockquote .small, .callout footer, .callout small, .callout .small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42858;
+    color: #999999; }
+    /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+    blockquote footer:before, blockquote small:before, blockquote .small:before, .callout footer:before, .callout small:before, .callout .small:before {
+      content: '\2014 \00A0'; }
+  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  blockquote footer, .callout footer {
+    margin-top: 0; }
+
+/* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.reverse, blockquote.righted, .callout.reverse, .callout.righted {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+  text-align: right; }
+  /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  blockquote.reverse footer:before, blockquote.reverse small:before, blockquote.reverse .small:before, blockquote.righted footer:before, blockquote.righted small:before, blockquote.righted .small:before, .callout.reverse footer:before, .callout.reverse small:before, .callout.reverse .small:before, .callout.righted footer:before, .callout.righted small:before, .callout.righted .small:before {
+    content: ''; }
+  /* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  blockquote.reverse footer:after, blockquote.reverse small:after, blockquote.reverse .small:after, blockquote.righted footer:after, blockquote.righted small:after, blockquote.righted .small:after, .callout.reverse footer:after, .callout.reverse small:after, .callout.reverse .small:after, .callout.righted footer:after, .callout.righted small:after, .callout.righted .small:after {
+    content: '\00A0 \2014'; }
+
+/* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote:before, .callout:before,
+blockquote:after, .callout:after {
+  content: ""; }
+
+/* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.primary, .callout.primary {
+  border-color: #428bca;
+  background-color: #c1d9ee; }
+/* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.success, .callout.success {
+  border-color: #81c735;
+  background-color: #dff0d8; }
+/* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.info, .callout.info {
+  border-color: #5bc0de;
+  background-color: #d9edf7; }
+/* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.warning, .callout.warning {
+  border-color: #f0ad4e;
+  background-color: #fcf8e3; }
+/* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+blockquote.danger, .callout.danger {
+  border-color: #d9534f;
+  background-color: #f2dede; }
+
+/* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+.callout {
+  border-width: 3px; }
+  /* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout.primary h1, .callout.primary h2, .callout.primary h3, .callout.primary h4, .callout.primary h5, .callout.primary h6 {
+    color: #428bca; }
+  /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout.success h1, .callout.success h2, .callout.success h3, .callout.success h4, .callout.success h5, .callout.success h6 {
+    color: #81c735; }
+  /* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout.info h1, .callout.info h2, .callout.info h3, .callout.info h4, .callout.info h5, .callout.info h6 {
+    color: #5bc0de; }
+  /* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout.warning h1, .callout.warning h2, .callout.warning h3, .callout.warning h4, .callout.warning h5, .callout.warning h6 {
+    color: #f0ad4e; }
+  /* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout.danger h1, .callout.danger h2, .callout.danger h3, .callout.danger h4, .callout.danger h5, .callout.danger h6 {
+    color: #d9534f; }
+
 /* line 102, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_buttons.scss */
 input[type="button"],
 input[type="submit"],
@@ -3166,6 +3367,70 @@ img {
         .sidebar .menu > li.active + li a:before {
           display: none; }
 
+/* line 7, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+/* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+.unstyled, .inline {
+  padding-left: 0;
+  list-style: none; }
+
+/* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+.inline {
+  margin-left: -5px; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+  .inline > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+/* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+dl {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+/* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+dt,
+dd {
+  line-height: 1.42858; }
+
+/* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+dt {
+  font-weight: bold; }
+
+/* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+dd {
+  margin-left: 0; }
+
+/* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+.horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+/* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
+.horizontal dd {
+  margin-left: 180px; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .horizontal dd:before, .horizontal dd:after {
+    content: " ";
+    display: table; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .horizontal dd:after {
+    clear: both; }
+
 /* line 4, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tables.scss */
 table {
   display: table;
@@ -4466,6 +4731,50 @@ form.horizontal.offset.eleven .field {
 form.inline .field.feedback .icon,
 form.horizontal .field.feedback .icon {
   top: 0; }
+
+/* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+/* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.lefted {
+  float: left !important; }
+
+/* line 20, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.righted {
+  float: right !important; }
+
+/* line 26, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.hide {
+  display: none !important; }
+
+/* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.show {
+  display: block !important; }
+
+/* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.invisible {
+  visibility: hidden; }
+
+/* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_utilities.scss */
+.affix {
+  position: fixed; }
 
 /*
 ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base16::Monokai, and Monokai

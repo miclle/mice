@@ -56,7 +56,11 @@
     <li><a href="/elements/images.html">Images</a></li>
     <li><a href="/elements/icons.html">Icons</a></li>
 
+    <li class="heading"><a href="/helper">Helper classes</a></li>
+
     <li class="heading"><a href="/components">Components</a></li>
+    <li><a href="/components/callouts.html">Callouts</a></li>
+    <li><a href="/components/lists.html">Lists</a></li>
     <li><a href="/components/tables.html">Tables</a></li>
     <li><a href="/components/forms.html">Forms</a></li>
 
@@ -131,15 +135,218 @@
           </tbody>
         </table>
       </section>
-<pre class="highlight html"><span class="nt">&lt;h1&gt;</span>h1. Heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. Heading<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. Heading<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. Heading<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. Heading<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. Heading<span class="nt">&lt;/h6&gt;</span>
+<pre class="highlight html"><span class="nt">&lt;h1&gt;</span>h1. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h6&gt;</span>
 </pre>
 
-      <p>This is some text in a paragraph. The <code>&lt;p&gt;</code> tag is supported in all major browsers.</p>
+
+      <h2>Body copy</h2>
+      <section class="example">
+        <p>This is some text in a paragraph. The <code>&lt;p&gt;</code> tag is supported in all major browsers.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;p&gt;</span>This is some text in a paragraph. The <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> tag is supported in all major browsers.<span class="nt">&lt;/p&gt;</span>
+</pre>
+
+      <h3>Lead body copy</h3>
+      <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+      <section class="example">
+        <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        <p class="lead">"If you please-- draw me a sheep!"<br>"What!"<br>"Draw me a sheep!"</p>
+        <p>I jumped to my feet, completely thunderstruck. I blinked my eyes hard. I looked carefully all around me. And I saw a most extraordinary small person, who stood there examining me with great seriousness. Here you may see the best potrait that, later, I was able to make of him. But my drawing is certainly very much less charming than its model.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</pre>
+
+
+      <h2 id="type-emphasis">Emphasis</h2>
+      <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+      <h3>Small text</h3>
+      <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 85% the size of the parent. Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p>
+      <p>You may alternatively use an inline element with <code>.small</code> in place of any <code>&lt;small&gt;</code>.</p>
+      <section class="example">
+        <small>This line of text is meant to be treated as fine print.</small>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span>
+</pre>
+
+      <h3>Bold</h3>
+      <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+      <section class="example">
+        <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+        <p>The following snippet of text is <b>rendered as bold text</b>.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;strong&gt;</span>rendered as bold text<span class="nt">&lt;/strong&gt;</span>
+<span class="nt">&lt;b&gt;</span>rendered as bold text<span class="nt">&lt;/b&gt;</span>
+</pre>
+
+      <h3>Italics</h3>
+      <p>For emphasizing a snippet of text with italics.</p>
+      <section class="example">
+        <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+        <p>The following snippet of text is <i>rendered as italicized text</i>.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;em&gt;</span>rendered as italicized text<span class="nt">&lt;/em&gt;</span>
+<span class="nt">&lt;i&gt;</span>rendered as italicized text<span class="nt">&lt;/i&gt;</span>
+</pre>
+
+      <h3>Alignment classes</h3>
+      <p>Easily realign text to components with text alignment classes.</p>
+      <section class="example">
+        <p class="text left">Left aligned text.</p>
+        <p class="text center">Center aligned text.</p>
+        <p class="text right">Right aligned text.</p>
+        <p class="text justify">Justified text.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text justify"</span><span class="nt">&gt;</span>Justified text.<span class="nt">&lt;/p&gt;</span>
+</pre>
+
+      <h2 id="type-abbreviations">Abbreviations</h2>
+      <p>Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+      <h3>Basic abbreviation</h3>
+      <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute with the <code>&lt;abbr&gt;</code> element.</p>
+      <section class="example">
+        <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;</span>
+</pre>
+
+      <h3>Initialism</h3>
+      <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+      <section class="example">
+        <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;</span>
+</pre>
+
+
+      <h2 id="type-addresses">Addresses</h2>
+      <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+      <section class="example">
+        <address>
+          <strong>Twitter, Inc.</strong><br>
+          795 Folsom Ave, Suite 600<br>
+          San Francisco, CA 94107<br>
+          <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+        <address>
+          <strong>Full Name</strong><br>
+          <a href="mailto:#">first.last@example.com</a>
+        </address>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Twitter, Inc.<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  795 Folsom Ave, Suite 600<span class="nt">&lt;br&gt;</span>
+  San Francisco, CA 94107<span class="nt">&lt;br&gt;</span>
+  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>P:<span class="nt">&lt;/abbr&gt;</span> (123) 456-7890
+<span class="nt">&lt;/address&gt;</span>
+<span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Full Name<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:#"</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/address&gt;</span>
+</pre>
+
+
+      <h2 id="type-blockquotes">Blockquotes</h2>
+      <p>For quoting blocks of content from another source within your document.</p>
+      <h3>Default blockquote</h3>
+      <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+      <section class="example">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre>
+
+      <h3>Blockquote options</h3>
+      <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
+      <h4>Naming a source</h4>
+      <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+      <section class="example">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre>
+
+      <h4>Alternate displays</h4>
+      <p>Add <code>.reverse</code> for a blockquote with right-aligned content.</p>
+      <section class="example">
+        <blockquote class="reverse">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"reverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre>
+
+
+      <h3>Blockquote styles</h3>
+      <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+      <section class="example">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+
+        <blockquote class="primary">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+        <blockquote class="success">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+        <blockquote class="info">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+        <blockquote class="warning">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+        <blockquote class="danger">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre>
+
 
     </div>
 
@@ -152,7 +359,7 @@
         <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank"><i class="icon twitter"></i> @miclle</a></p>
         <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
         <ul>
-          <li>Currently v0.0.12</li>
+          <li>Currently v0.1</li>
           <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Mice</a></li>
         </ul>
       </div>
