@@ -29,6 +29,14 @@ section.example{
     margin-bottom: 0;
     tr:last-child td{ border-bottom: none; }
   }
+
+  .bg-primary,
+  .bg-success,
+  .bg-info,
+  .bg-warning,
+  .bg-danger{
+    padding: 10px;
+  }
 }
 
 pre.highlight{

@@ -5081,8 +5081,15 @@ section.example {
     /* line 30, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     section.example table tr:last-child td {
       border-bottom: none; }
+  /* line 37, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example .bg-primary,
+  section.example .bg-success,
+  section.example .bg-info,
+  section.example .bg-warning,
+  section.example .bg-danger {
+    padding: 10px; }
 
-/* line 34, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 42, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -5096,13 +5103,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 48, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 56, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 54, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 62, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -5112,17 +5119,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 64, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 72, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 76, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 84, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 79, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 87, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
