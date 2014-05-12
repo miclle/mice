@@ -101,6 +101,28 @@ title: Helper classes
 <% end -%>
 
 
+      <h2 id="helper-classes-show-hide">Showing and hiding content</h2>
+<% code "html" do %>
+<div class="show">...</div>
+<div class="hidden">...</div>
+<% end -%>
+<% code "scss" do %>
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+<% end -%>
+
+
     </div>
 
   </div>
