@@ -7,36 +7,31 @@
 // -------------------------
 
 // Floated
-.clearfix     { @include clearfix(); }
-// .center-block { @include center-block(); }
+.clearfix { @include clearfix(); }
 
-.lefted   { float: left !important; }
-.centered { float: none !important; margin-left: auto !important; margin-right: auto !important;}
-.righted  { float: right !important; }
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
+.lefted  { float: left !important; }
+.righted { float: right !important; }
 
 
 // Toggling content
 // -------------------------
 
-// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
 .hide { display: none !important; }
 .show { display: block !important; }
 .invisible { visibility: hidden; }
-.text-hide {
-  // @include text-hide();
-}
-
-
-// Hide from screenreaders and browsers
-//
-// Credit: HTML5 Boilerplate
-
 .hidden {
   display: none !important;
   visibility: hidden !important;
 }
+
+.text-hide {}
 
 
 // For Affix plugin
