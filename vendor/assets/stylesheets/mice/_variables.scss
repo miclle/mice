@@ -120,7 +120,7 @@ $page-header-border-color:          $gray-lighter !default;
 $blockquote-border-color:           $gray-lighter !default;
 
 $state-primary-text:                $brand-primary !default;
-$state-primary-background:          lighten($brand-primary, 32%) !default;
+$state-primary-background:          $brand-primary !default;
 $state-primary-border:              darken(adjust-hue($state-primary-background, -10), 5%) !default;
 
 $state-success-text:                #3c763d !default;
