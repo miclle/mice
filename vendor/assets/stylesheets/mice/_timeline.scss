@@ -1,0 +1,157 @@
+//
+// Timeline
+// --------------------------------------------------
+
+@mixin timeline-variant($parent, $color){
+  .timeline#{$parent} {
+    > ul, > ol{
+      > li{
+        box-shadow: 0 0 0 2px $color inset;
+
+        &:hover {
+          box-shadow: 0 0 0 30px $color inset;
+        }
+
+        &.active {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
+
+@mixin timeline-size($parent, $size, $font-size, $border){
+
+  .timeline#{$parent}{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    &:before{
+      height: $border;
+      left: 0;
+      z-index: 10;
+      top: $size / 2;
+    }
+
+    > ul, > ol{
+      > li{
+        z-index: 11;
+        height: $size;
+        width: $size;
+        border-radius: 50%;
+        box-shadow: 0 0 0 $border $timeline-background-default inset;
+
+        &:hover {
+          box-shadow: 0 0 0 $size / 2 $timeline-background-default inset;
+        }
+
+        > .title{
+          line-height: $size;
+          font-size: $font-size;
+        }
+      }
+    }
+  }
+
+}
+
+.timeline{
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  &:before{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 30px;
+    background-color: #EBEBEB;
+  }
+
+  > ul, > ol{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 0;
+
+    &:after{
+      display: inline-block;
+      content: '';
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    > li{
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      z-index: 11;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #FFF;
+      box-shadow: 0 0 0 2px $timeline-background-default inset;
+      -webkit-transition: all 0.25s ease;
+              transition: all 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 30px $timeline-background-default inset;
+        color: #FFF;
+      }
+
+      &.active {
+        box-shadow: none;
+        background-color: $timeline-background-default;
+        color: #FFF;
+      }
+
+      &:hover,
+      &.active {
+        > .title{
+          color: #FFF;
+        }
+      }
+
+      > .title{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        line-height: 60px;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-decoration: none;
+        color: #333;
+        -webkit-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+      }
+    }
+  }
+}
+
+
+// Colors
+
+@include timeline-variant(".primary", $timeline-background-primary);
+@include timeline-variant(".success", $timeline-background-success);
+@include timeline-variant(".info",    $timeline-background-info);
+@include timeline-variant(".warning", $timeline-background-warning);
+@include timeline-variant(".danger",  $timeline-background-danger);
+
+
+// Sizing
+@include timeline-size(".small", $timeline-small-size, $timeline-small-font-size, $timeline-small-border);
+// @include timeline-size(".default", $timeline-default-size, $timeline-default-font-size, $timeline-default-border);
+@include timeline-size(".large", $timeline-large-size, $timeline-large-font-size, $timeline-large-border);
+

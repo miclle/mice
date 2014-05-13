@@ -25,6 +25,9 @@ $link-color:              $brand-primary !default;
 
 $link-hover-color:        darken($link-color, 15%) !default;
 
+// Radius
+// -------------------------
+
 $border-radius:           2px !default;
 $border-radius-small:     $border-radius * 1.5 !default;
 $border-radius-large:     $border-radius * 2   !default;
@@ -59,7 +62,7 @@ $line-height-large:       1.5 !default;
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 
-//== Components
+// Components
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
@@ -107,7 +110,7 @@ $heading-line-height:               1.1 !default;
 $heading-color:                     inherit !default;
 
 
-//== Type
+// Type
 // -------------------------
 $text-muted:                        $gray-light !default;
 $abbr-border-color:                 $gray-light !default;
@@ -141,7 +144,7 @@ $state-danger-border:               darken(adjust-hue($state-danger-background, 
 
 
 
-//== Code
+// Code
 //
 //##
 
@@ -157,11 +160,11 @@ $pre-border-color:                  #ccc !default;
 $pre-scrollable-max-height:         340px !default;
 
 
-//== Forms
+// Forms
 // -------------------------
 
 
-//== Buttons
+// Buttons
 // -------------------------
 
 $button-font-weight:                normal !default;
@@ -191,7 +194,7 @@ $button-danger-background:          $brand-danger !default;
 $button-danger-border:              darken($button-danger-background, 5%) !default;
 
 
-//== Input
+// Input
 // -------------------------
 $input-height-default:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 $input-height-small:                (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
@@ -207,7 +210,7 @@ $input-padding-small-horizontal:    $padding-small-vertical !default;
 $input-padding-large-vertical:      $padding-large-vertical !default;
 $input-padding-large-horizontal:    $padding-large-vertical !default;
 
-//== Tables
+// Tables
 //
 //## Customizes the `table` component with basic values, each used across all table variations.
 
@@ -228,7 +231,7 @@ $table-background-active:           $table-background-hover !default;
 $table-border-color:                #ddd !default;
 
 
-//== Labels
+// Labels
 // --------------------------------------------------
 $label-background-default:          $gray-light !default;
 $label-background-primary:          $brand-primary !default;
@@ -239,6 +242,31 @@ $label-background-danger:           $brand-danger !default;
 
 $label-color:                       #fff !default;
 $label-link-hover-color:            #fff !default;
+
+
+
+// Timeline
+$timeline-color-default:            $gray-dark !default;
+
+$timeline-background-default:       $gray-light !default;
+$timeline-background-primary:       $brand-primary !default;
+$timeline-background-success:       $brand-success !default;
+$timeline-background-info:          $brand-info !default;
+$timeline-background-warning:       $brand-warning !default;
+$timeline-background-danger:        $brand-danger !default;
+
+$timeline-small-size:               30px !default;
+$timeline-small-font-size:          12px !default;
+$timeline-small-border:             1px !default;
+
+$timeline-default-size:             60px !default;
+$timeline-default-font-size:        14px !default;
+$timeline-default-border:           2px !default;
+
+$timeline-large-size:               120px !default;
+$timeline-large-font-size:          24px !default;
+$timeline-large-border:             4px !default;
+
 
 
 

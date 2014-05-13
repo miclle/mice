@@ -1,0 +1,159 @@
+---
+title: Components
+---
+
+<div class="container">
+
+  <div class="grid twelve">
+
+    <div class="column three">
+
+      <%= partial "shared/sidebar" %>
+
+    </div>
+
+    <div class="column nine doc">
+
+      <h1 class="title">Timeline</h1>
+
+      <h2>Default</h2>
+      <section class="example">
+        <div class="timeline">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="timeline">
+  <ul>
+    <li><span class="title">2008</span></li>
+    <li><span class="title">2009</span></li>
+    <li><span class="title">2010</span></li>
+    <li><span class="title">2011</span></li>
+    <li><span class="title">2012</span></li>
+    <li><span class="title">2013</span></li>
+    <li class="active"><span class="title">2014</span></li>
+  </ul>
+</div>
+<% end -%>
+
+
+      <h2>Colors</h2>
+      <p>Add <code>.primary</code>, <code>.success</code>, <code>.info</code>, <code>.warning</code>, <code>.danger</code> classes</p>
+      <section class="example">
+        <% ["primary", "success", "info", "warning", "danger"].each do |color| %>
+        <div class="timeline <%= color -%>">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+        <% end -%>
+      </section>
+<% code "html" do %>
+<% ["primary", "success", "info", "warning", "danger"].each do |color| %>
+<div class="timeline <%= color -%>">
+  ...
+</div>
+<% end -%>
+<% end -%>
+
+
+      <h2>Has link</h2>
+      <section class="example">
+        <div class="timeline">
+          <ul>
+            <li><a href="#2008" class="title">2008</a></li>
+            <li><a href="#2009" class="title">2009</a></li>
+            <li><a href="#2010" class="title">2010</a></li>
+            <li><a href="#2011" class="title">2011</a></li>
+            <li><a href="#2012" class="title">2012</a></li>
+            <li><a href="#2013" class="title">2013</a></li>
+            <li class="active"><a href="#2014" class="title">2014</a></li>
+          </ul>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="timeline">
+  <ul>
+    <li><a href="#2008" class="title">2008</a></li>
+    <li><a href="#2009" class="title">2009</a></li>
+    <li><a href="#2010" class="title">2010</a></li>
+    <li><a href="#2011" class="title">2011</a></li>
+    <li><a href="#2012" class="title">2012</a></li>
+    <li><a href="#2013" class="title">2013</a></li>
+    <li class="active"><a href="#2014" class="title">2014</a></li>
+  </ul>
+</div>
+<% end -%>
+
+
+      <h2>Sizing</h2>
+      <section class="example">
+        <div class="timeline small">
+          <ul>
+            <li><span class="title">1</span></li>
+            <li><span class="title">2</span></li>
+            <li><span class="title">3</span></li>
+            <li><span class="title">4</span></li>
+            <li><span class="title">5</span></li>
+            <li><span class="title">6</span></li>
+            <li class="active"><span class="title">7</span></li>
+            <li><span class="title">8</span></li>
+          </ul>
+        </div>
+
+        <div class="timeline">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+
+        <div class="timeline large">
+          <ul>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="timeline small">
+  ...
+</div>
+
+<div class="timeline">
+  ...
+</div>
+
+<div class="timeline large">
+  ...
+</div>
+<% end -%>
+
+
+    </div>
+
+  </div>
+
+</div>
