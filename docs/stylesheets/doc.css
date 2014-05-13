@@ -618,11 +618,11 @@ a.text-danger:hover {
 
 /* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-primary {
-  background-color: #c1d9ee; }
+  background-color: #428bca; }
 
 /* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-primary:hover {
-  background-color: #9ac1e3; }
+  background-color: #3071a9; }
 
 /* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-success {
@@ -1267,7 +1267,7 @@ blockquote:after, .callout:after {
 /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
 blockquote.primary, .callout.primary {
   border-color: #428bca;
-  background-color: #c1d9ee; }
+  background-color: #428bca; }
 /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
 blockquote.success, .callout.success {
   border-color: #81c735;
