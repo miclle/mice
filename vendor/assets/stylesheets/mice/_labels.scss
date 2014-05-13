@@ -14,15 +14,6 @@
 }
 
 
-// Lable sizes
-// -------------------------
-@mixin label-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding:     $padding-vertical $padding-horizontal;
-  font-size:   $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
-}
-
 .label {
   display: inline;
   padding: .2em .6em .3em;
@@ -75,6 +66,17 @@ a.label {
     border-radius: $border-radius;
   }
 }
+
+// $colors: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow;
+
+// @for $i from 1 through length($colors) {
+//   .label.#{nth($colors, $i)}{
+//     @include label-variant(#{nth($colors, $i)});
+//   }
+// }
+
+
+
 
 
 
