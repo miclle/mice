@@ -3589,72 +3589,6 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     .table.responsive > table > *:last-child > tr:last-child > th, .table.responsive > table > *:last-child > tr:last-child > td {
       border-bottom: none; }
 
-/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-.timeline {
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 10px; }
-  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-  .timeline:before {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-    top: 30px;
-    background-color: #EBEBEB; }
-  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-  .timeline > ul, .timeline > ol {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    text-align: justify;
-    line-height: 0; }
-    /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-    .timeline > ul:after, .timeline > ol:after {
-      display: inline-block;
-      content: '';
-      height: 0;
-      width: 100%;
-      overflow: hidden;
-      visibility: hidden; }
-    /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-    .timeline > ul > li, .timeline > ol > li {
-      display: inline-block;
-      text-align: center;
-      cursor: pointer;
-      position: relative;
-      z-index: 11;
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      background-color: #FFF;
-      box-shadow: 0 0 0 2px #F8862C inset;
-      -webkit-transition: all 0.25s ease;
-      transition: all 0.25s ease; }
-      /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-      .timeline > ul > li:hover, .timeline > ol > li:hover {
-        box-shadow: 0 0 0 30px #F8862C inset;
-        color: #FFF; }
-      /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-      .timeline > ul > li.active, .timeline > ol > li.active {
-        box-shadow: none;
-        background-color: #F8862C;
-        color: #FFF; }
-      /* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_components.scss */
-      .timeline > ul > li > .title, .timeline > ol > li > .title {
-        display: block;
-        width: 100%;
-        height: 20px;
-        font-size: 14px;
-        line-height: 60px;
-        position: absolute;
-        left: 0;
-        top: 0; }
-
 /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
 .media {
   margin-top: 15px; }
@@ -3686,7 +3620,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .media .heading {
     margin: 0 0 5px; }
 
-/* line 26, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label {
   display: inline;
   padding: .2em .6em .3em;
@@ -3698,67 +3632,242 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 2px; }
-  /* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+  /* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label:empty {
     display: none; }
-  /* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+  /* line 37, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .button .label {
     position: relative;
     top: -1px; }
 
-/* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 a.label:hover, a.label:focus {
   color: white;
   text-decoration: none;
   cursor: pointer; }
 
-/* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label {
   background-color: #999999; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label[href]:hover, .label[href]:focus {
     background-color: gray; }
 
-/* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.primary {
   background-color: #428bca; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label.primary[href]:hover, .label.primary[href]:focus {
     background-color: #3071a9; }
 
-/* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 57, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.success {
   background-color: #81c735; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label.success[href]:hover, .label.success[href]:focus {
     background-color: #679f2a; }
 
-/* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.info {
   background-color: #5bc0de; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label.info[href]:hover, .label.info[href]:focus {
     background-color: #31b0d5; }
 
-/* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.warning {
   background-color: #f0ad4e; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label.warning[href]:hover, .label.warning[href]:focus {
     background-color: #ec971f; }
 
-/* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.danger {
   background-color: #d9534f; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
   .label.danger[href]:hover, .label.danger[href]:focus {
     background-color: #c9302c; }
 
-/* line 72, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
+/* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label.large {
   padding: .4em .8em .5em;
   font-size: 120%;
   border-radius: 2px; }
+
+/* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  /* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 30px;
+    background-color: #EBEBEB; }
+  /* line 76, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline > ul, .timeline > ol {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 0; }
+    /* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline > ul:after, .timeline > ol:after {
+      display: inline-block;
+      content: '';
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      visibility: hidden; }
+    /* line 92, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline > ul > li, .timeline > ol > li {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      z-index: 11;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #FFF;
+      box-shadow: 0 0 0 2px #999999 inset;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease; }
+      /* line 106, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+      .timeline > ul > li:hover, .timeline > ol > li:hover {
+        box-shadow: 0 0 0 30px #999999 inset;
+        color: #FFF; }
+      /* line 111, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+      .timeline > ul > li.active, .timeline > ol > li.active {
+        box-shadow: none;
+        background-color: #999999;
+        color: #FFF; }
+      /* line 119, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+      .timeline > ul > li:hover > .title, .timeline > ul > li.active > .title, .timeline > ol > li:hover > .title, .timeline > ol > li.active > .title {
+        color: #FFF; }
+      /* line 124, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+      .timeline > ul > li > .title, .timeline > ol > li > .title {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        line-height: 60px;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-decoration: none;
+        color: #333;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.primary > ul > li, .timeline.primary > ol > li {
+  box-shadow: 0 0 0 2px #428bca inset; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.primary > ul > li:hover, .timeline.primary > ol > li:hover {
+    box-shadow: 0 0 0 30px #428bca inset; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.primary > ul > li.active, .timeline.primary > ol > li.active {
+    background-color: #428bca; }
+
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.success > ul > li, .timeline.success > ol > li {
+  box-shadow: 0 0 0 2px #81c735 inset; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.success > ul > li:hover, .timeline.success > ol > li:hover {
+    box-shadow: 0 0 0 30px #81c735 inset; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.success > ul > li.active, .timeline.success > ol > li.active {
+    background-color: #81c735; }
+
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.info > ul > li, .timeline.info > ol > li {
+  box-shadow: 0 0 0 2px #5bc0de inset; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.info > ul > li:hover, .timeline.info > ol > li:hover {
+    box-shadow: 0 0 0 30px #5bc0de inset; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.info > ul > li.active, .timeline.info > ol > li.active {
+    background-color: #5bc0de; }
+
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.warning > ul > li, .timeline.warning > ol > li {
+  box-shadow: 0 0 0 2px #f0ad4e inset; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.warning > ul > li:hover, .timeline.warning > ol > li:hover {
+    box-shadow: 0 0 0 30px #f0ad4e inset; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.warning > ul > li.active, .timeline.warning > ol > li.active {
+    background-color: #f0ad4e; }
+
+/* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.danger > ul > li, .timeline.danger > ol > li {
+  box-shadow: 0 0 0 2px #d9534f inset; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.danger > ul > li:hover, .timeline.danger > ol > li:hover {
+    box-shadow: 0 0 0 30px #d9534f inset; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.danger > ul > li.active, .timeline.danger > ol > li.active {
+    background-color: #d9534f; }
+
+/* line 25, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.small {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.small:before {
+    height: 1px;
+    left: 0;
+    z-index: 10;
+    top: 15px; }
+  /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.small > ul > li, .timeline.small > ol > li {
+    z-index: 11;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #999999 inset; }
+    /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline.small > ul > li:hover, .timeline.small > ol > li:hover {
+      box-shadow: 0 0 0 15px #999999 inset; }
+    /* line 49, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline.small > ul > li > .title, .timeline.small > ol > li > .title {
+      line-height: 30px;
+      font-size: 12px; }
+
+/* line 25, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+.timeline.large {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.large:before {
+    height: 4px;
+    left: 0;
+    z-index: 10;
+    top: 60px; }
+  /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+  .timeline.large > ul > li, .timeline.large > ol > li {
+    z-index: 11;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #999999 inset; }
+    /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline.large > ul > li:hover, .timeline.large > ol > li:hover {
+      box-shadow: 0 0 0 60px #999999 inset; }
+    /* line 49, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_timeline.scss */
+    .timeline.large > ul > li > .title, .timeline.large > ol > li > .title {
+      line-height: 120px;
+      font-size: 24px; }
 
 /* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
@@ -5130,6 +5239,10 @@ ThankfulEyes, Colorful, Github, Base16, Base16::Solarized (like Octopress), Base
   background-color: #f8f8f8; }
 
 /* line 7, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+h2 {
+  margin-top: 20px; }
+
+/* line 11, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 section.example {
   margin-top: 15px;
   padding: 35px 10px 10px 10px;
@@ -5138,7 +5251,7 @@ section.example {
   border-radius: 4px 4px 0 0;
   box-shadow: none;
   position: relative; }
-  /* line 16, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 20, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example:after {
     content: "Example";
     position: absolute;
@@ -5149,13 +5262,13 @@ section.example {
     color: #BBB;
     text-transform: uppercase;
     letter-spacing: 1px; }
-  /* line 28, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 32, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example table {
     margin-bottom: 0; }
-    /* line 30, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 34, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     section.example table tr:last-child td {
       border-bottom: none; }
-  /* line 37, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 41, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example .bg-primary,
   section.example .bg-success,
   section.example .bg-info,
@@ -5163,7 +5276,7 @@ section.example {
   section.example .bg-danger {
     padding: 10px; }
 
-/* line 42, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 46, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -5177,13 +5290,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 56, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 60, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 62, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 66, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -5193,17 +5306,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 72, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 76, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 84, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 88, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 87, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 91, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
