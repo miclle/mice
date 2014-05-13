@@ -212,18 +212,33 @@ $input-padding-large-horizontal:    $padding-large-vertical !default;
 //## Customizes the `table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            8px !default;
+$table-cell-padding:                8px !default;
 //** Padding for cells in `.table-condensed`.
-$table-condensed-cell-padding:  5px !default;
+$table-condensed-cell-padding:      5px !default;
 
 //** Default background color used for all tables.
-$table-background:              transparent !default;
+$table-background:                  transparent !default;
 //** Background color used for `.table-striped`.
-$table-background-accent:       #f9f9f9 !default;
+$table-background-accent:           #f9f9f9 !default;
 //** Background color used for `.table-hover`.
-$table-background-hover:        #f5f5f5 !default;
-$table-background-active:       $table-background-hover !default;
+$table-background-hover:            #f5f5f5 !default;
+$table-background-active:           $table-background-hover !default;
 
 //** Border color for table and cell borders.
-$table-border-color:            #ddd !default;
+$table-border-color:                #ddd !default;
+
+
+//== Labels
+// --------------------------------------------------
+$label-background-default:          $gray-light !default;
+$label-background-primary:          $brand-primary !default;
+$label-background-success:          $brand-success !default;
+$label-background-info:             $brand-info !default;
+$label-background-warning:          $brand-warning !default;
+$label-background-danger:           $brand-danger !default;
+
+$label-color:                       #fff !default;
+$label-link-hover-color:            #fff !default;
+
+
 

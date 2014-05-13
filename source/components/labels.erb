@@ -1,0 +1,80 @@
+---
+title: Labels
+---
+
+<div class="container">
+  <div class="grid twelve">
+
+    <div class="column three">
+      <%= partial "shared/sidebar" %>
+    </div>
+
+    <div class="column nine doc">
+
+      <h1 class="title">Labels</h1>
+
+      <h2>Default</h2>
+      <section class="example">
+        <span class="label">Default</span>
+        <span class="label primary">Primary</span>
+        <span class="label success">Success</span>
+        <span class="label info">Info</span>
+        <span class="label warning">Warning</span>
+        <span class="label danger">Danger</span>
+      </section>
+<% code "html" do %>
+<span class="label">Default</span>
+<span class="label primary">Primary</span>
+<span class="label success">Success</span>
+<span class="label info">Info</span>
+<span class="label warning">Warning</span>
+<span class="label danger">Danger</span>
+<% end -%>
+
+
+      <h2>Heading label</h2>
+      <section class="example">
+        <table>
+          <tbody>
+            <% [*1..6].each do |i| %>
+            <tr>
+              <td>
+                <%= content_tag "h#{i}", "h#{i}. Heading <span class=\"label\">New</span>" %>
+              </td>
+            </tr>
+            <% end -%>
+          </tbody>
+        </table>
+      </section>
+<% code "html" do %>
+<%= [*1..6].map { |i| content_tag "h#{i}", "h#{i}. Heading <span class=\"label\">New</span>" }.join("\n") %>
+<% end -%>
+
+
+      <h2>Sizing</h2>
+      <section class="example">
+        <span class="label">label</span>
+        <span class="label large">label</span>
+      </section>
+<% code "html" do %>
+<span class="label">label</span>
+<span class="label large">label</span>
+<% end -%>
+
+
+      <h2>Other</h2>
+      <section class="example">
+        <a href="#" class="label">label</a>
+        <div class="button"><span class="label">label</span></div>
+        <button><span class="label">label</span></button>
+      </section>
+<% code "html" do %>
+<a href="#" class="label">label</a>
+<div class="button"><span class="label">label</span></div>
+<button><span class="label">label</span></button>
+<% end -%>
+
+    </div>
+
+  </div>
+</div>
