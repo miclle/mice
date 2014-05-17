@@ -243,6 +243,10 @@ form.inline{
       label{ display: none;}
     }
   }
+
+  > button{
+    margin-top: -3px;
+  }
 }
 
 // Horizontal Form
