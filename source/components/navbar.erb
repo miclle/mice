@@ -1,0 +1,57 @@
+---
+title: Grid
+---
+
+<div class="container">
+
+  <div class="grid twelve">
+
+    <div class="column three">
+
+      <%= partial "shared/sidebar" %>
+
+    </div>
+
+    <div class="column nine grid-doc">
+
+      <h1 class="title">Responsive Grid System</h1>
+
+      <h2 id="two-columns">Two Columns</h2>
+
+      <section class="example">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/" class="brand">Mice</a>
+          </div>
+
+          <ul class="menu">
+            <li><a href="/elements">Elements</a></li>
+            <li><a href="/components/grid.html">Grid</a></li>
+          </ul>
+
+          <ul class="menu right">
+            <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Gighub</a></li>
+          </ul>
+        </nav>
+      </section>
+<% code "html" do -%>
+<nav class="navbar">
+  <div class="logo">
+    <a href="/" class="brand">Mice</a>
+  </div>
+
+  <ul class="menu">
+    <li><a href="/elements">Elements</a></li>
+    <li><a href="/components/grid.html">Grid</a></li>
+  </ul>
+
+  <ul class="menu right">
+    <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Gighub</a></li>
+  </ul>
+</nav>
+<% end -%>
+
+    </div>
+
+  </div>
+</div>
