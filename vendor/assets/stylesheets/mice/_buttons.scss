@@ -11,7 +11,8 @@
     background-color: $background;
         border-color: $border;
 
-  &:hover{
+  &:hover,
+  &:focus{
                color: $color;
     background-color: darken($background, 10%);
         border-color: darken($border, 10%);
