@@ -31,10 +31,25 @@
         <ul class="menu">
           <li class="<%= "active" if page_classes == "elements" -%>"><a href="/elements">Elements</a></li>
           <li class="<%= "active" if page_classes == "components" -%>"><a href="/components">Components</a></li>
-          <li class="<%= "active" if page_classes == "grid" -%>"><a href="/components/grid.html">Grid</a></li>
+          <li class="dropdown <%= "active" if page_classes == "grid" -%>">
+            <a href="/components/grid.html">Grid</a>
+            <ul class="menu">
+              <li><a href="/components/grid.html#two-columns">Two columns</a></li>
+              <li><a href="/components/grid.html#three-columns">Three columns</a></li>
+              <li><a href="/components/grid.html#four-columns">Four columns</a></li>
+              <li><a href="/components/grid.html#five-columns">Five columns</a></li>
+              <li><a href="/components/grid.html#six-columns">Six columns</a></li>
+              <li><a href="/components/grid.html#seven-columns">Seven columns</a></li>
+              <li><a href="/components/grid.html#eight-columns">Eight columns</a></li>
+              <li><a href="/components/grid.html#nine-columns">Nine columns</a></li>
+              <li><a href="/components/grid.html#ten-columns">Ten columns</a></li>
+              <li><a href="/components/grid.html#eleven-columns">Eleven columns</a></li>
+              <li><a href="/components/grid.html#twelve-columns">Twelve columns</a></li>
+            </ul>
+          </li>
         </ul>
 
-        <ul class="menu right">
+        <ul class="menu righted">
           <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Gighub</a></li>
         </ul>
       </div>
