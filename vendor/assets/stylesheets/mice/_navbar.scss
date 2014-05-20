@@ -1,0 +1,43 @@
+//
+// Navbar
+// --------------------------------------------------
+
+.navbar{
+  min-height: 45px;
+  background: #FFF;
+  border-bottom: 1px solid #E8E8E8;
+
+  .logo{
+    float: left;
+    .brand{
+      display: block;
+      line-height: 45px;
+      padding: 0;
+      color: #666;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+
+  .menu{
+    float:      left;
+    list-style: none;
+    margin:     0 15px;
+    padding:    0;
+    position:   relative;
+
+    .menu{
+      display: none;
+    }
+
+    > li{
+      float:    left;
+    }
+  }
+
+  form{
+    float: left;
+    padding-top: 5px;
+  }
+
+}
