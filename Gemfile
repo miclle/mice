@@ -6,7 +6,7 @@ gemspec
 gem "middleman", "~>3.3.2", :require => false
 
 # Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0", :require => false
+gem "middleman-livereload", "~> 3.3.3", :require => false
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw], :require => false
