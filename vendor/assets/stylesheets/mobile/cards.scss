@@ -1,0 +1,29 @@
+//
+// Cards
+// --------------------------------------------------
+
+.card {
+
+}
+
+
+.card{
+  p{
+    margin: 5px;
+  }
+
+  ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul:not(:first-child){
+    border-top: 1px solid #EBEBEB;
+  }
+}
+
+// Card Media
+.card .media{
+  margin: 5px;
+}
