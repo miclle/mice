@@ -1,25 +1,53 @@
+<% sidebar_page_class = page_classes.split.last %>
+
 <nav class="sidebar">
   <ul class="menu">
 
     <li class="heading"><a href="/elements">Elements</a></li>
-    <li><a href="/elements/typography.html">Typography</a></li>
-    <li><a href="/elements/code.html">Code</a></li>
-    <li><a href="/elements/buttons.html">Buttons</a></li>
-    <li><a href="/elements/input.html">Input</a></li>
-    <li><a href="/elements/images.html">Images</a></li>
-    <li><a href="/elements/icons.html">Icons</a></li>
+    <li class="<%= "active" if sidebar_page_class == "elements_typography" -%>">
+        <a href="/elements/typography.html">Typography</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "elements_code" -%>">
+        <a href="/elements/code.html">Code</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "elements_buttons" -%>">
+        <a href="/elements/buttons.html">Buttons</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "elements_input" -%>">
+        <a href="/elements/input.html">Input</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "elements_images" -%>">
+        <a href="/elements/images.html">Images</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "elements_icons" -%>">
+        <a href="/elements/icons.html">Icons</a>
+    </li>
 
     <li class="heading"><a href="/helper">Helper classes</a></li>
 
     <li class="heading"><a href="/components">Components</a></li>
-    <li><a href="/components/callouts.html">Callouts</a></li>
-    <li><a href="/components/labels.html">Labels</a></li>
-    <li><a href="/components/lists.html">Lists</a></li>
-    <li><a href="/components/tables.html">Tables</a></li>
-    <li><a href="/components/forms.html">Forms</a></li>
-    <li><a href="/components/timeline.html">Timeline</a></li>
+    <li class="<%= "active" if sidebar_page_class == "components_callouts" -%>">
+        <a href="/components/callouts.html">Callouts</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "components_labels" -%>">
+        <a href="/components/labels.html">Labels</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "components_lists" -%>">
+        <a href="/components/lists.html">Lists</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "components_tables" -%>">
+        <a href="/components/tables.html">Tables</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "components_forms" -%>">
+        <a href="/components/forms.html">Forms</a>
+    </li>
+    <li class="<%= "active" if sidebar_page_class == "components_timeline" -%>">
+        <a href="/components/timeline.html">Timeline</a>
+    </li>
 
-    <li><a href="/components/navbar.html">Navbar</a></li>
+    <li class="<%= "active" if sidebar_page_class == "components_navbar" -%>">
+        <a href="/components/navbar.html">Navbar</a>
+    </li>
 
     <li class="heading"><a href="/components/grid.html">Grid</a></li>
 
