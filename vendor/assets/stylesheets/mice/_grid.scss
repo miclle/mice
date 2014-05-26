@@ -27,6 +27,7 @@
   @include clearfix();
   > .column {
     display: block;
+    min-height: 1px;
     float:   left;
     padding-left: 5px;
     padding-right: 5px;
