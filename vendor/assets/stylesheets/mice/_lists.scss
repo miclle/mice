@@ -64,3 +64,111 @@ dd {
     margin-left: 180px;
   }
 }
+
+
+//
+// List groups
+// --------------------------------------------------
+
+
+// Base class
+//
+// Easily usable on <ul> or <ol>.
+ul, ol, div, section{
+  .group {
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    > li,
+    > a,
+    .item {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      margin-bottom: -1px;
+      background-color: $list-group-background;
+      border: 1px solid $list-group-border-color;
+
+      &:first-child { @include border-top-radius($list-group-border-radius); }
+      &:last-child  { @include border-bottom-radius($list-group-border-radius); margin-bottom: 0; }
+
+      > .label { float: right; }
+    }
+
+    > a {
+      color: $list-group-link-color;
+
+      .item-heading { color: $list-group-link-heading-color; }
+
+      // Hover state
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $list-group-link-hover-color;
+        background-color: $list-group-hover-background;
+      }
+    }
+
+    .item {
+      // Disabled state
+      &.disabled,
+      &.disabled:hover,
+      &.disabled:focus {
+        // background-color: $list-group-disabled-bg;
+        // color: $list-group-disabled-color;
+
+        // Force color to inherit for custom content
+        .item-heading {
+          color: inherit;
+        }
+        .item-text {
+          // color: $list-group-disabled-text-color;
+        }
+      }
+
+      // Active class on item itself, not parent
+      &.active,
+      &.active:hover,
+      &.active:focus {
+        z-index: 2; // Place active items above their siblings for proper border styling
+        // color: $list-group-active-color;
+        // background-color: $list-group-active-bg;
+        // border-color: $list-group-active-border;
+
+        // Force color to inherit for custom content
+        .list-group-item-heading {
+          color: inherit;
+        }
+        .list-group-item-text {
+          // color: $list-group-active-text-color;
+        }
+      }
+    }
+
+
+    // Contextual variants
+    //
+    // Add modifier classes to change text and background color on individual items.
+    // Organizationally, this must come after the `:hover` states.
+
+    // @include list-group-item-variant(success, $state-success-bg, $state-success-text);
+    // @include list-group-item-variant(info, $state-info-bg, $state-info-text);
+    // @include list-group-item-variant(warning, $state-warning-bg, $state-warning-text);
+    // @include list-group-item-variant(danger, $state-danger-bg, $state-danger-text);
+
+
+    // Custom content options
+    //
+    // Extra classes for creating well-formatted content within `.list-group-item`s.
+
+    .list-group-item-heading {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .list-group-item-text {
+      margin-bottom: 0;
+      line-height: 1.3;
+    }
+
+  }
+}
