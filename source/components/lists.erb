@@ -155,7 +155,7 @@ title: Lists
         <ul class="group">
           <li>Cras justo odio</li>
           <li>Dapibus ac facilisis in</li>
-          <li>Morbi leo risus</li>
+          <li class="disabled">Morbi leo risus</li>
           <li>Porta ac consectetur ac</li>
           <li>Vestibulum at eros</li>
         </ul>
@@ -164,7 +164,7 @@ title: Lists
 <ul class="group">
   <li>Cras justo odio</li>
   <li>Dapibus ac facilisis in</li>
-  <li>Morbi leo risus</li>
+  <li class="disabled">Morbi leo risus</li>
   <li>Porta ac consectetur ac</li>
   <li>Vestibulum at eros</li>
 </ul>
@@ -175,7 +175,7 @@ title: Lists
         <div class="group">
           <a href="#" class="active">Cras justo odio</a>
           <a href="#">Dapibus ac faciasis in</a>
-          <a href="#">Morbi leo risus</a>
+          <a href="#" class="disabled">Morbi leo risus</a>
           <a href="#">Porta ac consectetur ac</a>
           <a href="#">Vestibulum at eros</a>
         </div>
@@ -184,7 +184,7 @@ title: Lists
 <div class="group">
   <a href="#" class="active">Cras justo odio</a>
   <a href="#">Dapibus ac faciasis in</a>
-  <a href="#">Morbi leo risus</a>
+  <a href="#" class="disabled">Morbi leo risus</a>
   <a href="#">Porta ac consectetur ac</a>
   <a href="#">Vestibulum at eros</a>
 </div>
@@ -205,6 +205,71 @@ title: Lists
   <li><span class="label">1</span> Morbi leo risus</li>
 </ul>
 <% end -%>
+
+      <h3>Contextual classes</h3>
+      <p>Use contextual classes to style list items, default or linked. Also includes <code>.active</code> state.</p>
+      <section class="example">
+        <div class="grid two">
+          <div class="column">
+            <ul class="group">
+              <li class="success">Dapibus ac facilisis in</li>
+              <li class="info">Cras sit amet nibh libero</li>
+              <li class="warning">Porta ac consectetur ac</li>
+              <li class="danger">Vestibulum at eros</li>
+            </ul>
+          </div>
+          <div class="column">
+            <div class="group">
+              <a href="#" class="success">Cras justo odio</a>
+              <a href="#" class="info">Dapibus ac faciasis in</a>
+              <a href="#" class="warning">Morbi leo risus</a>
+              <a href="#" class="danger">Porta ac consectetur ac</a>
+            </div>
+          </div>
+        </div>
+      </section>
+<% code "html" do %>
+<ul class="group">
+  <li class="success">Dapibus ac facilisis in</li>
+  <li class="info">Cras sit amet nibh libero</li>
+  <li class="warning">Porta ac consectetur ac</li>
+  <li class="danger">Vestibulum at eros</li>
+</ul>
+<div class="group">
+  <a href="#" class="success">Cras justo odio</a>
+  <a href="#" class="info">Dapibus ac faciasis in</a>
+  <a href="#" class="warning">Morbi leo risus</a>
+  <a href="#" class="danger">Porta ac consectetur ac</a>
+</div>
+<% end %>
+
+      <h3>Custom content</h3>
+      <p>Add nearly any HTML within, even for linked list groups like the one below.</p>
+      <section class="example">
+        <div class="group">
+          <a href="#" class="active">
+            <h4 class="heading">List group item heading</h4>
+            <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+          <a href="#" class="disabled">
+            <h4 class="heading">List group item heading</h4>
+            <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+          <a href="#">
+            <h4 class="heading">List group item heading</h4>
+            <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+          </a>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="group">
+  <a href="#" class="active">
+    <h4 class="heading">List group item heading</h4>
+    <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+  </a>
+</div>
+<% end -%>
+
     </div>
 
   </div>

@@ -2,6 +2,34 @@
 // Lists
 // --------------------------------------------------
 
+// List group variants
+@mixin list-group-item-variant($state, $background, $color) {
+  > li.#{$state},
+  .item.#{$state},
+  > a.#{$state} {
+    color: $color;
+    background-color: $background;
+  }
+
+  > a.#{$state} {
+    .heading { color: inherit; }
+
+    &:hover,
+    &:focus {
+      color: $color;
+      background-color: darken($background, 5%);
+    }
+    &.active,
+    &.active:hover,
+    &.active:focus {
+      color: #fff;
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+}
+
+
 // Unordered and Ordered lists
 ul,
 ol {
@@ -70,10 +98,8 @@ dd {
 // List groups
 // --------------------------------------------------
 
-
 // Base class
-//
-// Easily usable on <ul> or <ol>.
+// Easily usable on <ul>, <ol>, <div> or <section>.
 ul, ol, div, section{
   .group {
     margin-bottom: 20px;
@@ -92,14 +118,11 @@ ul, ol, div, section{
       &:first-child { @include border-top-radius($list-group-border-radius); }
       &:last-child  { @include border-bottom-radius($list-group-border-radius); margin-bottom: 0; }
 
-      > .label { float: right; }
+      > .label { float: right;}
     }
 
     > a {
       color: $list-group-link-color;
-
-      .item-heading { color: $list-group-link-heading-color; }
-
       // Hover state
       &:hover,
       &:focus {
@@ -116,58 +139,43 @@ ul, ol, div, section{
       &.disabled,
       &.disabled:hover,
       &.disabled:focus {
-        // background-color: $list-group-disabled-bg;
-        // color: $list-group-disabled-color;
+        background-color: $list-group-disabled-background;
+        color: $list-group-disabled-color;
 
-        // Force color to inherit for custom content
-        .item-heading {
-          color: inherit;
-        }
-        .item-text {
-          // color: $list-group-disabled-text-color;
-        }
+        .heading { color: inherit; }
+        .text { color: $list-group-disabled-text-color; }
       }
 
       // Active class on item itself, not parent
       &.active,
       &.active:hover,
       &.active:focus {
-        z-index: 2; // Place active items above their siblings for proper border styling
+        z-index: 2;
         color: $list-group-active-color;
-        background-color: $list-group-active-bg;
+        background-color: $list-group-active-background;
         border-color: $list-group-active-border;
 
-        // Force color to inherit for custom content
-        .list-group-item-heading {
-          color: inherit;
-        }
-        .list-group-item-text {
-          color: $list-group-active-text-color;
-        }
+        .heading { color: inherit; }
+        .text { color: $list-group-active-text-color; }
       }
     }
 
 
     // Contextual variants
-    //
     // Add modifier classes to change text and background color on individual items.
     // Organizationally, this must come after the `:hover` states.
-
-    // @include list-group-item-variant(success, $state-success-bg, $state-success-text);
-    // @include list-group-item-variant(info, $state-info-bg, $state-info-text);
-    // @include list-group-item-variant(warning, $state-warning-bg, $state-warning-text);
-    // @include list-group-item-variant(danger, $state-danger-bg, $state-danger-text);
+    @include list-group-item-variant(success, $state-success-background, $state-success-text);
+    @include list-group-item-variant(info, $state-info-background, $state-info-text);
+    @include list-group-item-variant(warning, $state-warning-background, $state-warning-text);
+    @include list-group-item-variant(danger, $state-danger-background, $state-danger-text);
 
 
     // Custom content options
-    //
-    // Extra classes for creating well-formatted content within `.list-group-item`s.
-
-    .list-group-item-heading {
+    .heading {
       margin-top: 0;
       margin-bottom: 5px;
     }
-    .list-group-item-text {
+    .text {
       margin-bottom: 0;
       line-height: 1.3;
     }
