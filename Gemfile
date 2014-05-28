@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in mice.gemspec
 gemspec
 
-gem "middleman", "~>3.3.2", :require => false
+gem "middleman", "~>3.3.3", :require => false
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.3.3", :require => false
