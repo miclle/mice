@@ -101,7 +101,7 @@ dd {
 // Base class
 // Easily usable on <ul>, <ol>, <div> or <section>.
 ul, ol, div, section{
-  .group {
+  &.group {
     margin-bottom: 20px;
     padding-left: 0;
 
