@@ -2,10 +2,7 @@
 @import "mice/variables";
 @import "mice/mixins";
 
-// Reset and dependencies
 @import "mice/normalize";
-
-// Base CSS
 @import "mice/typography";
 @import "mice/buttons";
 @import "mice/icons";
@@ -13,8 +10,11 @@
 // Components
 @import "mice/lists";
 @import "mice/media";
+@import "mice/panels";
 
-// Variables
+// Base CSS
 @import "mobile/variables";
-
+@import "mobile/base";
 @import "mobile/bars";
+
+@import "mice/forms";
