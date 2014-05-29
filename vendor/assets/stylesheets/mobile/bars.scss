@@ -2,12 +2,62 @@
 // Bars
 // --------------------------------------------------
 
-.bar {
+nav{
   position: fixed;
   right: 0;
   left: 0;
+  z-index: 10;
+  height: $bar-base-height;
+  padding-right: $bar-side-spacing;
+  padding-left: $bar-side-spacing;
+  background-color: $background;
+  border-bottom: $border-default;
+  -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
+          backface-visibility: hidden;
 }
 
 // Nav bar
 // --------------------------------------------------
-// TODO
+nav.tab {
+  display: table;
+  bottom: 0;
+  width: 100%;
+  height: $bar-tab-height;
+  padding: 0;
+  table-layout: fixed;
+  border-top: $border-default;
+  border-bottom: 0;
+
+  > a{
+    display: table-cell;
+    width: 1%;
+    height: $bar-tab-height;
+    color: #929292;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+
+    // Active states for the tab bar
+    &.active,
+    &:active {
+      color: $primary-color;
+    }
+
+    // Tab icon
+    .icon {
+      top: 3px;
+      width: 24px;
+      height: 24px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      // Make the text smaller if it's used with an icon
+      ~ .label {
+        display: block;
+        font-size: 11px;
+      }
+    }
+
+  }
+
+}
