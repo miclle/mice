@@ -32,6 +32,9 @@
   > .body {
     padding: $panel-body-padding;
     @include clearfix();
+    *:last-child{
+      margin-bottom: 0;
+    }
   }
 
   // Optional heading
