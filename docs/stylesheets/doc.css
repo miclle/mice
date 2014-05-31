@@ -3469,19 +3469,19 @@ dd {
     clear: both; }
 
 /* line 104, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-ul .group, ol .group, div .group, section .group {
+ul.group, ol.group, div.group, section.group {
   margin-bottom: 20px;
   padding-left: 0; }
   /* line 110, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li,
-  ul .group > a,
-  ul .group .item, ol .group > li,
-  ol .group > a,
-  ol .group .item, div .group > li,
-  div .group > a,
-  div .group .item, section .group > li,
-  section .group > a,
-  section .group .item {
+  ul.group > li,
+  ul.group > a,
+  ul.group .item, ol.group > li,
+  ol.group > a,
+  ol.group .item, div.group > li,
+  div.group > a,
+  div.group .item, section.group > li,
+  section.group > a,
+  section.group .item {
     position: relative;
     display: block;
     padding: 10px 15px;
@@ -3489,317 +3489,317 @@ ul .group, ol .group, div .group, section .group {
     background-color: white;
     border: 1px solid #dddddd; }
     /* line 118, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li:first-child,
-    ul .group > a:first-child,
-    ul .group .item:first-child, ol .group > li:first-child,
-    ol .group > a:first-child,
-    ol .group .item:first-child, div .group > li:first-child,
-    div .group > a:first-child,
-    div .group .item:first-child, section .group > li:first-child,
-    section .group > a:first-child,
-    section .group .item:first-child {
+    ul.group > li:first-child,
+    ul.group > a:first-child,
+    ul.group .item:first-child, ol.group > li:first-child,
+    ol.group > a:first-child,
+    ol.group .item:first-child, div.group > li:first-child,
+    div.group > a:first-child,
+    div.group .item:first-child, section.group > li:first-child,
+    section.group > a:first-child,
+    section.group .item:first-child {
       border-top-right-radius: 2px;
       border-top-left-radius: 2px; }
     /* line 119, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li:last-child,
-    ul .group > a:last-child,
-    ul .group .item:last-child, ol .group > li:last-child,
-    ol .group > a:last-child,
-    ol .group .item:last-child, div .group > li:last-child,
-    div .group > a:last-child,
-    div .group .item:last-child, section .group > li:last-child,
-    section .group > a:last-child,
-    section .group .item:last-child {
+    ul.group > li:last-child,
+    ul.group > a:last-child,
+    ul.group .item:last-child, ol.group > li:last-child,
+    ol.group > a:last-child,
+    ol.group .item:last-child, div.group > li:last-child,
+    div.group > a:last-child,
+    div.group .item:last-child, section.group > li:last-child,
+    section.group > a:last-child,
+    section.group .item:last-child {
       border-bottom-right-radius: 2px;
       border-bottom-left-radius: 2px;
       margin-bottom: 0; }
     /* line 121, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li > .label,
-    ul .group > a > .label,
-    ul .group .item > .label, ol .group > li > .label,
-    ol .group > a > .label,
-    ol .group .item > .label, div .group > li > .label,
-    div .group > a > .label,
-    div .group .item > .label, section .group > li > .label,
-    section .group > a > .label,
-    section .group .item > .label {
+    ul.group > li > .label,
+    ul.group > a > .label,
+    ul.group .item > .label, ol.group > li > .label,
+    ol.group > a > .label,
+    ol.group .item > .label, div.group > li > .label,
+    div.group > a > .label,
+    div.group .item > .label, section.group > li > .label,
+    section.group > a > .label,
+    section.group .item > .label {
       float: right; }
   /* line 124, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a, ol .group > a, div .group > a, section .group > a {
+  ul.group > a, ol.group > a, div.group > a, section.group > a {
     color: #555555; }
     /* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > a:hover, ul .group > a:focus, ol .group > a:hover, ol .group > a:focus, div .group > a:hover, div .group > a:focus, section .group > a:hover, section .group > a:focus {
+    ul.group > a:hover, ul.group > a:focus, ol.group > a:hover, ol.group > a:focus, div.group > a:hover, div.group > a:focus, section.group > a:hover, section.group > a:focus {
       text-decoration: none;
       color: #555555;
       background-color: whitesmoke; }
   /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.disabled, ul .group > li.disabled:hover, ul .group > li.disabled:focus,
-  ul .group > a.disabled,
-  ul .group > a.disabled:hover,
-  ul .group > a.disabled:focus,
-  ul .group .item.disabled,
-  ul .group .item.disabled:hover,
-  ul .group .item.disabled:focus, ol .group > li.disabled, ol .group > li.disabled:hover, ol .group > li.disabled:focus,
-  ol .group > a.disabled,
-  ol .group > a.disabled:hover,
-  ol .group > a.disabled:focus,
-  ol .group .item.disabled,
-  ol .group .item.disabled:hover,
-  ol .group .item.disabled:focus, div .group > li.disabled, div .group > li.disabled:hover, div .group > li.disabled:focus,
-  div .group > a.disabled,
-  div .group > a.disabled:hover,
-  div .group > a.disabled:focus,
-  div .group .item.disabled,
-  div .group .item.disabled:hover,
-  div .group .item.disabled:focus, section .group > li.disabled, section .group > li.disabled:hover, section .group > li.disabled:focus,
-  section .group > a.disabled,
-  section .group > a.disabled:hover,
-  section .group > a.disabled:focus,
-  section .group .item.disabled,
-  section .group .item.disabled:hover,
-  section .group .item.disabled:focus {
+  ul.group > li.disabled, ul.group > li.disabled:hover, ul.group > li.disabled:focus,
+  ul.group > a.disabled,
+  ul.group > a.disabled:hover,
+  ul.group > a.disabled:focus,
+  ul.group .item.disabled,
+  ul.group .item.disabled:hover,
+  ul.group .item.disabled:focus, ol.group > li.disabled, ol.group > li.disabled:hover, ol.group > li.disabled:focus,
+  ol.group > a.disabled,
+  ol.group > a.disabled:hover,
+  ol.group > a.disabled:focus,
+  ol.group .item.disabled,
+  ol.group .item.disabled:hover,
+  ol.group .item.disabled:focus, div.group > li.disabled, div.group > li.disabled:hover, div.group > li.disabled:focus,
+  div.group > a.disabled,
+  div.group > a.disabled:hover,
+  div.group > a.disabled:focus,
+  div.group .item.disabled,
+  div.group .item.disabled:hover,
+  div.group .item.disabled:focus, section.group > li.disabled, section.group > li.disabled:hover, section.group > li.disabled:focus,
+  section.group > a.disabled,
+  section.group > a.disabled:hover,
+  section.group > a.disabled:focus,
+  section.group .item.disabled,
+  section.group .item.disabled:hover,
+  section.group .item.disabled:focus {
     background-color: #eeeeee;
     color: #999999; }
     /* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li.disabled .heading, ul .group > li.disabled:hover .heading, ul .group > li.disabled:focus .heading,
-    ul .group > a.disabled .heading,
-    ul .group > a.disabled:hover .heading,
-    ul .group > a.disabled:focus .heading,
-    ul .group .item.disabled .heading,
-    ul .group .item.disabled:hover .heading,
-    ul .group .item.disabled:focus .heading, ol .group > li.disabled .heading, ol .group > li.disabled:hover .heading, ol .group > li.disabled:focus .heading,
-    ol .group > a.disabled .heading,
-    ol .group > a.disabled:hover .heading,
-    ol .group > a.disabled:focus .heading,
-    ol .group .item.disabled .heading,
-    ol .group .item.disabled:hover .heading,
-    ol .group .item.disabled:focus .heading, div .group > li.disabled .heading, div .group > li.disabled:hover .heading, div .group > li.disabled:focus .heading,
-    div .group > a.disabled .heading,
-    div .group > a.disabled:hover .heading,
-    div .group > a.disabled:focus .heading,
-    div .group .item.disabled .heading,
-    div .group .item.disabled:hover .heading,
-    div .group .item.disabled:focus .heading, section .group > li.disabled .heading, section .group > li.disabled:hover .heading, section .group > li.disabled:focus .heading,
-    section .group > a.disabled .heading,
-    section .group > a.disabled:hover .heading,
-    section .group > a.disabled:focus .heading,
-    section .group .item.disabled .heading,
-    section .group .item.disabled:hover .heading,
-    section .group .item.disabled:focus .heading {
+    ul.group > li.disabled .heading, ul.group > li.disabled:hover .heading, ul.group > li.disabled:focus .heading,
+    ul.group > a.disabled .heading,
+    ul.group > a.disabled:hover .heading,
+    ul.group > a.disabled:focus .heading,
+    ul.group .item.disabled .heading,
+    ul.group .item.disabled:hover .heading,
+    ul.group .item.disabled:focus .heading, ol.group > li.disabled .heading, ol.group > li.disabled:hover .heading, ol.group > li.disabled:focus .heading,
+    ol.group > a.disabled .heading,
+    ol.group > a.disabled:hover .heading,
+    ol.group > a.disabled:focus .heading,
+    ol.group .item.disabled .heading,
+    ol.group .item.disabled:hover .heading,
+    ol.group .item.disabled:focus .heading, div.group > li.disabled .heading, div.group > li.disabled:hover .heading, div.group > li.disabled:focus .heading,
+    div.group > a.disabled .heading,
+    div.group > a.disabled:hover .heading,
+    div.group > a.disabled:focus .heading,
+    div.group .item.disabled .heading,
+    div.group .item.disabled:hover .heading,
+    div.group .item.disabled:focus .heading, section.group > li.disabled .heading, section.group > li.disabled:hover .heading, section.group > li.disabled:focus .heading,
+    section.group > a.disabled .heading,
+    section.group > a.disabled:hover .heading,
+    section.group > a.disabled:focus .heading,
+    section.group .item.disabled .heading,
+    section.group .item.disabled:hover .heading,
+    section.group .item.disabled:focus .heading {
       color: inherit; }
     /* line 146, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li.disabled .text, ul .group > li.disabled:hover .text, ul .group > li.disabled:focus .text,
-    ul .group > a.disabled .text,
-    ul .group > a.disabled:hover .text,
-    ul .group > a.disabled:focus .text,
-    ul .group .item.disabled .text,
-    ul .group .item.disabled:hover .text,
-    ul .group .item.disabled:focus .text, ol .group > li.disabled .text, ol .group > li.disabled:hover .text, ol .group > li.disabled:focus .text,
-    ol .group > a.disabled .text,
-    ol .group > a.disabled:hover .text,
-    ol .group > a.disabled:focus .text,
-    ol .group .item.disabled .text,
-    ol .group .item.disabled:hover .text,
-    ol .group .item.disabled:focus .text, div .group > li.disabled .text, div .group > li.disabled:hover .text, div .group > li.disabled:focus .text,
-    div .group > a.disabled .text,
-    div .group > a.disabled:hover .text,
-    div .group > a.disabled:focus .text,
-    div .group .item.disabled .text,
-    div .group .item.disabled:hover .text,
-    div .group .item.disabled:focus .text, section .group > li.disabled .text, section .group > li.disabled:hover .text, section .group > li.disabled:focus .text,
-    section .group > a.disabled .text,
-    section .group > a.disabled:hover .text,
-    section .group > a.disabled:focus .text,
-    section .group .item.disabled .text,
-    section .group .item.disabled:hover .text,
-    section .group .item.disabled:focus .text {
+    ul.group > li.disabled .text, ul.group > li.disabled:hover .text, ul.group > li.disabled:focus .text,
+    ul.group > a.disabled .text,
+    ul.group > a.disabled:hover .text,
+    ul.group > a.disabled:focus .text,
+    ul.group .item.disabled .text,
+    ul.group .item.disabled:hover .text,
+    ul.group .item.disabled:focus .text, ol.group > li.disabled .text, ol.group > li.disabled:hover .text, ol.group > li.disabled:focus .text,
+    ol.group > a.disabled .text,
+    ol.group > a.disabled:hover .text,
+    ol.group > a.disabled:focus .text,
+    ol.group .item.disabled .text,
+    ol.group .item.disabled:hover .text,
+    ol.group .item.disabled:focus .text, div.group > li.disabled .text, div.group > li.disabled:hover .text, div.group > li.disabled:focus .text,
+    div.group > a.disabled .text,
+    div.group > a.disabled:hover .text,
+    div.group > a.disabled:focus .text,
+    div.group .item.disabled .text,
+    div.group .item.disabled:hover .text,
+    div.group .item.disabled:focus .text, section.group > li.disabled .text, section.group > li.disabled:hover .text, section.group > li.disabled:focus .text,
+    section.group > a.disabled .text,
+    section.group > a.disabled:hover .text,
+    section.group > a.disabled:focus .text,
+    section.group .item.disabled .text,
+    section.group .item.disabled:hover .text,
+    section.group .item.disabled:focus .text {
       color: #999999; }
   /* line 152, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.active, ul .group > li.active:hover, ul .group > li.active:focus,
-  ul .group > a.active,
-  ul .group > a.active:hover,
-  ul .group > a.active:focus,
-  ul .group .item.active,
-  ul .group .item.active:hover,
-  ul .group .item.active:focus, ol .group > li.active, ol .group > li.active:hover, ol .group > li.active:focus,
-  ol .group > a.active,
-  ol .group > a.active:hover,
-  ol .group > a.active:focus,
-  ol .group .item.active,
-  ol .group .item.active:hover,
-  ol .group .item.active:focus, div .group > li.active, div .group > li.active:hover, div .group > li.active:focus,
-  div .group > a.active,
-  div .group > a.active:hover,
-  div .group > a.active:focus,
-  div .group .item.active,
-  div .group .item.active:hover,
-  div .group .item.active:focus, section .group > li.active, section .group > li.active:hover, section .group > li.active:focus,
-  section .group > a.active,
-  section .group > a.active:hover,
-  section .group > a.active:focus,
-  section .group .item.active,
-  section .group .item.active:hover,
-  section .group .item.active:focus {
+  ul.group > li.active, ul.group > li.active:hover, ul.group > li.active:focus,
+  ul.group > a.active,
+  ul.group > a.active:hover,
+  ul.group > a.active:focus,
+  ul.group .item.active,
+  ul.group .item.active:hover,
+  ul.group .item.active:focus, ol.group > li.active, ol.group > li.active:hover, ol.group > li.active:focus,
+  ol.group > a.active,
+  ol.group > a.active:hover,
+  ol.group > a.active:focus,
+  ol.group .item.active,
+  ol.group .item.active:hover,
+  ol.group .item.active:focus, div.group > li.active, div.group > li.active:hover, div.group > li.active:focus,
+  div.group > a.active,
+  div.group > a.active:hover,
+  div.group > a.active:focus,
+  div.group .item.active,
+  div.group .item.active:hover,
+  div.group .item.active:focus, section.group > li.active, section.group > li.active:hover, section.group > li.active:focus,
+  section.group > a.active,
+  section.group > a.active:hover,
+  section.group > a.active:focus,
+  section.group .item.active,
+  section.group .item.active:hover,
+  section.group .item.active:focus {
     z-index: 2;
     color: white;
     background-color: #428bca;
     border-color: #428bca; }
     /* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li.active .heading, ul .group > li.active:hover .heading, ul .group > li.active:focus .heading,
-    ul .group > a.active .heading,
-    ul .group > a.active:hover .heading,
-    ul .group > a.active:focus .heading,
-    ul .group .item.active .heading,
-    ul .group .item.active:hover .heading,
-    ul .group .item.active:focus .heading, ol .group > li.active .heading, ol .group > li.active:hover .heading, ol .group > li.active:focus .heading,
-    ol .group > a.active .heading,
-    ol .group > a.active:hover .heading,
-    ol .group > a.active:focus .heading,
-    ol .group .item.active .heading,
-    ol .group .item.active:hover .heading,
-    ol .group .item.active:focus .heading, div .group > li.active .heading, div .group > li.active:hover .heading, div .group > li.active:focus .heading,
-    div .group > a.active .heading,
-    div .group > a.active:hover .heading,
-    div .group > a.active:focus .heading,
-    div .group .item.active .heading,
-    div .group .item.active:hover .heading,
-    div .group .item.active:focus .heading, section .group > li.active .heading, section .group > li.active:hover .heading, section .group > li.active:focus .heading,
-    section .group > a.active .heading,
-    section .group > a.active:hover .heading,
-    section .group > a.active:focus .heading,
-    section .group .item.active .heading,
-    section .group .item.active:hover .heading,
-    section .group .item.active:focus .heading {
+    ul.group > li.active .heading, ul.group > li.active:hover .heading, ul.group > li.active:focus .heading,
+    ul.group > a.active .heading,
+    ul.group > a.active:hover .heading,
+    ul.group > a.active:focus .heading,
+    ul.group .item.active .heading,
+    ul.group .item.active:hover .heading,
+    ul.group .item.active:focus .heading, ol.group > li.active .heading, ol.group > li.active:hover .heading, ol.group > li.active:focus .heading,
+    ol.group > a.active .heading,
+    ol.group > a.active:hover .heading,
+    ol.group > a.active:focus .heading,
+    ol.group .item.active .heading,
+    ol.group .item.active:hover .heading,
+    ol.group .item.active:focus .heading, div.group > li.active .heading, div.group > li.active:hover .heading, div.group > li.active:focus .heading,
+    div.group > a.active .heading,
+    div.group > a.active:hover .heading,
+    div.group > a.active:focus .heading,
+    div.group .item.active .heading,
+    div.group .item.active:hover .heading,
+    div.group .item.active:focus .heading, section.group > li.active .heading, section.group > li.active:hover .heading, section.group > li.active:focus .heading,
+    section.group > a.active .heading,
+    section.group > a.active:hover .heading,
+    section.group > a.active:focus .heading,
+    section.group .item.active .heading,
+    section.group .item.active:hover .heading,
+    section.group .item.active:focus .heading {
       color: inherit; }
     /* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-    ul .group > li.active .text, ul .group > li.active:hover .text, ul .group > li.active:focus .text,
-    ul .group > a.active .text,
-    ul .group > a.active:hover .text,
-    ul .group > a.active:focus .text,
-    ul .group .item.active .text,
-    ul .group .item.active:hover .text,
-    ul .group .item.active:focus .text, ol .group > li.active .text, ol .group > li.active:hover .text, ol .group > li.active:focus .text,
-    ol .group > a.active .text,
-    ol .group > a.active:hover .text,
-    ol .group > a.active:focus .text,
-    ol .group .item.active .text,
-    ol .group .item.active:hover .text,
-    ol .group .item.active:focus .text, div .group > li.active .text, div .group > li.active:hover .text, div .group > li.active:focus .text,
-    div .group > a.active .text,
-    div .group > a.active:hover .text,
-    div .group > a.active:focus .text,
-    div .group .item.active .text,
-    div .group .item.active:hover .text,
-    div .group .item.active:focus .text, section .group > li.active .text, section .group > li.active:hover .text, section .group > li.active:focus .text,
-    section .group > a.active .text,
-    section .group > a.active:hover .text,
-    section .group > a.active:focus .text,
-    section .group .item.active .text,
-    section .group .item.active:hover .text,
-    section .group .item.active:focus .text {
+    ul.group > li.active .text, ul.group > li.active:hover .text, ul.group > li.active:focus .text,
+    ul.group > a.active .text,
+    ul.group > a.active:hover .text,
+    ul.group > a.active:focus .text,
+    ul.group .item.active .text,
+    ul.group .item.active:hover .text,
+    ul.group .item.active:focus .text, ol.group > li.active .text, ol.group > li.active:hover .text, ol.group > li.active:focus .text,
+    ol.group > a.active .text,
+    ol.group > a.active:hover .text,
+    ol.group > a.active:focus .text,
+    ol.group .item.active .text,
+    ol.group .item.active:hover .text,
+    ol.group .item.active:focus .text, div.group > li.active .text, div.group > li.active:hover .text, div.group > li.active:focus .text,
+    div.group > a.active .text,
+    div.group > a.active:hover .text,
+    div.group > a.active:focus .text,
+    div.group .item.active .text,
+    div.group .item.active:hover .text,
+    div.group .item.active:focus .text, section.group > li.active .text, section.group > li.active:hover .text, section.group > li.active:focus .text,
+    section.group > a.active .text,
+    section.group > a.active:hover .text,
+    section.group > a.active:focus .text,
+    section.group .item.active .text,
+    section.group .item.active:hover .text,
+    section.group .item.active:focus .text {
       color: #e1edf7; }
   /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.success,
-  ul .group .item.success,
-  ul .group > a.success, ol .group > li.success,
-  ol .group .item.success,
-  ol .group > a.success, div .group > li.success,
-  div .group .item.success,
-  div .group > a.success, section .group > li.success,
-  section .group .item.success,
-  section .group > a.success {
+  ul.group > li.success,
+  ul.group .item.success,
+  ul.group > a.success, ol.group > li.success,
+  ol.group .item.success,
+  ol.group > a.success, div.group > li.success,
+  div.group .item.success,
+  div.group > a.success, section.group > li.success,
+  section.group .item.success,
+  section.group > a.success {
     color: #3c763d;
     background-color: #dff0d8; }
   /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.success .heading, ol .group > a.success .heading, div .group > a.success .heading, section .group > a.success .heading {
+  ul.group > a.success .heading, ol.group > a.success .heading, div.group > a.success .heading, section.group > a.success .heading {
     color: inherit; }
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.success:hover, ul .group > a.success:focus, ol .group > a.success:hover, ol .group > a.success:focus, div .group > a.success:hover, div .group > a.success:focus, section .group > a.success:hover, section .group > a.success:focus {
+  ul.group > a.success:hover, ul.group > a.success:focus, ol.group > a.success:hover, ol.group > a.success:focus, div.group > a.success:hover, div.group > a.success:focus, section.group > a.success:hover, section.group > a.success:focus {
     color: #3c763d;
     background-color: #d0e9c6; }
   /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.success.active, ul .group > a.success.active:hover, ul .group > a.success.active:focus, ol .group > a.success.active, ol .group > a.success.active:hover, ol .group > a.success.active:focus, div .group > a.success.active, div .group > a.success.active:hover, div .group > a.success.active:focus, section .group > a.success.active, section .group > a.success.active:hover, section .group > a.success.active:focus {
+  ul.group > a.success.active, ul.group > a.success.active:hover, ul.group > a.success.active:focus, ol.group > a.success.active, ol.group > a.success.active:hover, ol.group > a.success.active:focus, div.group > a.success.active, div.group > a.success.active:hover, div.group > a.success.active:focus, section.group > a.success.active, section.group > a.success.active:hover, section.group > a.success.active:focus {
     color: #fff;
     background-color: #3c763d;
     border-color: #3c763d; }
   /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.info,
-  ul .group .item.info,
-  ul .group > a.info, ol .group > li.info,
-  ol .group .item.info,
-  ol .group > a.info, div .group > li.info,
-  div .group .item.info,
-  div .group > a.info, section .group > li.info,
-  section .group .item.info,
-  section .group > a.info {
+  ul.group > li.info,
+  ul.group .item.info,
+  ul.group > a.info, ol.group > li.info,
+  ol.group .item.info,
+  ol.group > a.info, div.group > li.info,
+  div.group .item.info,
+  div.group > a.info, section.group > li.info,
+  section.group .item.info,
+  section.group > a.info {
     color: #31708f;
     background-color: #d9edf7; }
   /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.info .heading, ol .group > a.info .heading, div .group > a.info .heading, section .group > a.info .heading {
+  ul.group > a.info .heading, ol.group > a.info .heading, div.group > a.info .heading, section.group > a.info .heading {
     color: inherit; }
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.info:hover, ul .group > a.info:focus, ol .group > a.info:hover, ol .group > a.info:focus, div .group > a.info:hover, div .group > a.info:focus, section .group > a.info:hover, section .group > a.info:focus {
+  ul.group > a.info:hover, ul.group > a.info:focus, ol.group > a.info:hover, ol.group > a.info:focus, div.group > a.info:hover, div.group > a.info:focus, section.group > a.info:hover, section.group > a.info:focus {
     color: #31708f;
     background-color: #c4e3f3; }
   /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.info.active, ul .group > a.info.active:hover, ul .group > a.info.active:focus, ol .group > a.info.active, ol .group > a.info.active:hover, ol .group > a.info.active:focus, div .group > a.info.active, div .group > a.info.active:hover, div .group > a.info.active:focus, section .group > a.info.active, section .group > a.info.active:hover, section .group > a.info.active:focus {
+  ul.group > a.info.active, ul.group > a.info.active:hover, ul.group > a.info.active:focus, ol.group > a.info.active, ol.group > a.info.active:hover, ol.group > a.info.active:focus, div.group > a.info.active, div.group > a.info.active:hover, div.group > a.info.active:focus, section.group > a.info.active, section.group > a.info.active:hover, section.group > a.info.active:focus {
     color: #fff;
     background-color: #31708f;
     border-color: #31708f; }
   /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.warning,
-  ul .group .item.warning,
-  ul .group > a.warning, ol .group > li.warning,
-  ol .group .item.warning,
-  ol .group > a.warning, div .group > li.warning,
-  div .group .item.warning,
-  div .group > a.warning, section .group > li.warning,
-  section .group .item.warning,
-  section .group > a.warning {
+  ul.group > li.warning,
+  ul.group .item.warning,
+  ul.group > a.warning, ol.group > li.warning,
+  ol.group .item.warning,
+  ol.group > a.warning, div.group > li.warning,
+  div.group .item.warning,
+  div.group > a.warning, section.group > li.warning,
+  section.group .item.warning,
+  section.group > a.warning {
     color: #8a6d3b;
     background-color: #fcf8e3; }
   /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.warning .heading, ol .group > a.warning .heading, div .group > a.warning .heading, section .group > a.warning .heading {
+  ul.group > a.warning .heading, ol.group > a.warning .heading, div.group > a.warning .heading, section.group > a.warning .heading {
     color: inherit; }
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.warning:hover, ul .group > a.warning:focus, ol .group > a.warning:hover, ol .group > a.warning:focus, div .group > a.warning:hover, div .group > a.warning:focus, section .group > a.warning:hover, section .group > a.warning:focus {
+  ul.group > a.warning:hover, ul.group > a.warning:focus, ol.group > a.warning:hover, ol.group > a.warning:focus, div.group > a.warning:hover, div.group > a.warning:focus, section.group > a.warning:hover, section.group > a.warning:focus {
     color: #8a6d3b;
     background-color: #faf2cc; }
   /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.warning.active, ul .group > a.warning.active:hover, ul .group > a.warning.active:focus, ol .group > a.warning.active, ol .group > a.warning.active:hover, ol .group > a.warning.active:focus, div .group > a.warning.active, div .group > a.warning.active:hover, div .group > a.warning.active:focus, section .group > a.warning.active, section .group > a.warning.active:hover, section .group > a.warning.active:focus {
+  ul.group > a.warning.active, ul.group > a.warning.active:hover, ul.group > a.warning.active:focus, ol.group > a.warning.active, ol.group > a.warning.active:hover, ol.group > a.warning.active:focus, div.group > a.warning.active, div.group > a.warning.active:hover, div.group > a.warning.active:focus, section.group > a.warning.active, section.group > a.warning.active:hover, section.group > a.warning.active:focus {
     color: #fff;
     background-color: #8a6d3b;
     border-color: #8a6d3b; }
   /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > li.danger,
-  ul .group .item.danger,
-  ul .group > a.danger, ol .group > li.danger,
-  ol .group .item.danger,
-  ol .group > a.danger, div .group > li.danger,
-  div .group .item.danger,
-  div .group > a.danger, section .group > li.danger,
-  section .group .item.danger,
-  section .group > a.danger {
+  ul.group > li.danger,
+  ul.group .item.danger,
+  ul.group > a.danger, ol.group > li.danger,
+  ol.group .item.danger,
+  ol.group > a.danger, div.group > li.danger,
+  div.group .item.danger,
+  div.group > a.danger, section.group > li.danger,
+  section.group .item.danger,
+  section.group > a.danger {
     color: #a94442;
     background-color: #f2dede; }
   /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.danger .heading, ol .group > a.danger .heading, div .group > a.danger .heading, section .group > a.danger .heading {
+  ul.group > a.danger .heading, ol.group > a.danger .heading, div.group > a.danger .heading, section.group > a.danger .heading {
     color: inherit; }
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.danger:hover, ul .group > a.danger:focus, ol .group > a.danger:hover, ol .group > a.danger:focus, div .group > a.danger:hover, div .group > a.danger:focus, section .group > a.danger:hover, section .group > a.danger:focus {
+  ul.group > a.danger:hover, ul.group > a.danger:focus, ol.group > a.danger:hover, ol.group > a.danger:focus, div.group > a.danger:hover, div.group > a.danger:focus, section.group > a.danger:hover, section.group > a.danger:focus {
     color: #a94442;
     background-color: #ebcccc; }
   /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group > a.danger.active, ul .group > a.danger.active:hover, ul .group > a.danger.active:focus, ol .group > a.danger.active, ol .group > a.danger.active:hover, ol .group > a.danger.active:focus, div .group > a.danger.active, div .group > a.danger.active:hover, div .group > a.danger.active:focus, section .group > a.danger.active, section .group > a.danger.active:hover, section .group > a.danger.active:focus {
+  ul.group > a.danger.active, ul.group > a.danger.active:hover, ul.group > a.danger.active:focus, ol.group > a.danger.active, ol.group > a.danger.active:hover, ol.group > a.danger.active:focus, div.group > a.danger.active, div.group > a.danger.active:hover, div.group > a.danger.active:focus, section.group > a.danger.active, section.group > a.danger.active:hover, section.group > a.danger.active:focus {
     color: #fff;
     background-color: #a94442;
     border-color: #a94442; }
   /* line 174, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group .heading, ol .group .heading, div .group .heading, section .group .heading {
+  ul.group .heading, ol.group .heading, div.group .heading, section.group .heading {
     margin-top: 0;
     margin-bottom: 5px; }
   /* line 178, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
-  ul .group .text, ol .group .text, div .group .text, section .group .text {
+  ul.group .text, ol.group .text, div.group .text, section.group .text {
     margin-bottom: 0;
     line-height: 1.3; }
 
@@ -3960,6 +3960,271 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     /* line 139, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tables.scss */
     .table.responsive > table > *:last-child > tr:last-child > th, .table.responsive > table > *:last-child > tr:last-child > td {
       border-bottom: none; }
+
+/* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel {
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+  /* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .body {
+    padding: 15px; }
+    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+    .panel > .body:before, .panel > .body:after {
+      content: " ";
+      display: table; }
+    /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+    .panel > .body:after {
+      clear: both; }
+    /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+    .panel > .body *:last-child {
+      margin-bottom: 0; }
+  /* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px; }
+  /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit; }
+    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+    .panel > .title > a {
+      color: inherit; }
+  /* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .footer {
+    padding: 10px 15px;
+    background-color: whitesmoke;
+    border-top: 1px solid #dddddd;
+    border-bottom-right-radius: 1px;
+    border-bottom-left-radius: 1px; }
+
+/* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > .group {
+  margin-bottom: 0; }
+  /* line 80, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .group > li,
+  .panel > .group > a,
+  .panel > .group .item {
+    border-width: 1px 0;
+    border-radius: 0; }
+  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .group:first-child > li:first-child,
+  .panel > .group:first-child > a:first-child,
+  .panel > .group:first-child .item:first-child {
+    border-top: 0;
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px; }
+  /* line 98, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .group:last-child > li:last-child,
+  .panel > .group:last-child > a:last-child,
+  .panel > .group:last-child .item:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: 1px;
+    border-bottom-left-radius: 1px; }
+
+/* line 111, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel .heading + .list-group > li:first-child,
+.panel .heading + .list-group > a:first-child,
+.panel .heading + .list-group .item:first-child {
+  border-top-width: 0; }
+
+/* line 125, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table,
+.panel > table.responsive > table {
+  margin-bottom: 0; }
+/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table:first-child,
+.panel > table.responsive:first-child > table:first-child {
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px; }
+  /* line 137, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table:first-child > thead:first-child > tr:first-child td:first-child,
+  .panel > table:first-child > thead:first-child > tr:first-child th:first-child,
+  .panel > table:first-child > tbody:first-child > tr:first-child td:first-child,
+  .panel > table:first-child > tbody:first-child > tr:first-child th:first-child,
+  .panel > table.responsive:first-child > table:first-child > thead:first-child > tr:first-child td:first-child,
+  .panel > table.responsive:first-child > table:first-child > thead:first-child > tr:first-child th:first-child,
+  .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:first-child,
+  .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:first-child {
+    border-top-left-radius: 1px; }
+  /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table:first-child > thead:first-child > tr:first-child td:last-child,
+  .panel > table:first-child > thead:first-child > tr:first-child th:last-child,
+  .panel > table:first-child > tbody:first-child > tr:first-child td:last-child,
+  .panel > table:first-child > tbody:first-child > tr:first-child th:last-child,
+  .panel > table.responsive:first-child > table:first-child > thead:first-child > tr:first-child td:last-child,
+  .panel > table.responsive:first-child > table:first-child > thead:first-child > tr:first-child th:last-child,
+  .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:last-child,
+  .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:last-child {
+    border-top-right-radius: 1px; }
+/* line 149, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table:last-child,
+.panel > table.responsive:last-child > table:last-child {
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px; }
+  /* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table:last-child > tbody:last-child > tr:last-child td:first-child,
+  .panel > table:last-child > tbody:last-child > tr:last-child th:first-child,
+  .panel > table:last-child > tfoot:last-child > tr:last-child td:first-child,
+  .panel > table:last-child > tfoot:last-child > tr:last-child th:first-child,
+  .panel > table.responsive:last-child > table:last-child > tbody:last-child > tr:last-child td:first-child,
+  .panel > table.responsive:last-child > table:last-child > tbody:last-child > tr:last-child th:first-child,
+  .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:first-child,
+  .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:first-child {
+    border-bottom-left-radius: 1px; }
+  /* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table:last-child > tbody:last-child > tr:last-child td:last-child,
+  .panel > table:last-child > tbody:last-child > tr:last-child th:last-child,
+  .panel > table:last-child > tfoot:last-child > tr:last-child td:last-child,
+  .panel > table:last-child > tfoot:last-child > tr:last-child th:last-child,
+  .panel > table.responsive:last-child > table:last-child > tbody:last-child > tr:last-child td:last-child,
+  .panel > table.responsive:last-child > table:last-child > tbody:last-child > tr:last-child th:last-child,
+  .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:last-child,
+  .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:last-child {
+    border-bottom-right-radius: 1px; }
+/* line 167, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > .body + table,
+.panel > .body + table.responsive {
+  border-top: 1px solid #dddddd; }
+/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table > tbody:first-child > tr:first-child th,
+.panel > table > tbody:first-child > tr:first-child td {
+  border-top: 0; }
+/* line 175, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table-bordered,
+.panel > table.responsive > table-bordered {
+  border: 0; }
+  /* line 182, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table-bordered > thead > tr > th:first-child,
+  .panel > table-bordered > thead > tr > td:first-child,
+  .panel > table-bordered > tbody > tr > th:first-child,
+  .panel > table-bordered > tbody > tr > td:first-child,
+  .panel > table-bordered > tfoot > tr > th:first-child,
+  .panel > table-bordered > tfoot > tr > td:first-child,
+  .panel > table.responsive > table-bordered > thead > tr > th:first-child,
+  .panel > table.responsive > table-bordered > thead > tr > td:first-child,
+  .panel > table.responsive > table-bordered > tbody > tr > th:first-child,
+  .panel > table.responsive > table-bordered > tbody > tr > td:first-child,
+  .panel > table.responsive > table-bordered > tfoot > tr > th:first-child,
+  .panel > table.responsive > table-bordered > tfoot > tr > td:first-child {
+    border-left: 0; }
+  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table-bordered > thead > tr > th:last-child,
+  .panel > table-bordered > thead > tr > td:last-child,
+  .panel > table-bordered > tbody > tr > th:last-child,
+  .panel > table-bordered > tbody > tr > td:last-child,
+  .panel > table-bordered > tfoot > tr > th:last-child,
+  .panel > table-bordered > tfoot > tr > td:last-child,
+  .panel > table.responsive > table-bordered > thead > tr > th:last-child,
+  .panel > table.responsive > table-bordered > thead > tr > td:last-child,
+  .panel > table.responsive > table-bordered > tbody > tr > th:last-child,
+  .panel > table.responsive > table-bordered > tbody > tr > td:last-child,
+  .panel > table.responsive > table-bordered > tfoot > tr > th:last-child,
+  .panel > table.responsive > table-bordered > tfoot > tr > td:last-child {
+    border-right: 0; }
+  /* line 195, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table-bordered > thead > tr:first-child > td,
+  .panel > table-bordered > thead > tr:first-child > th,
+  .panel > table-bordered > tbody > tr:first-child > td,
+  .panel > table-bordered > tbody > tr:first-child > th,
+  .panel > table.responsive > table-bordered > thead > tr:first-child > td,
+  .panel > table.responsive > table-bordered > thead > tr:first-child > th,
+  .panel > table.responsive > table-bordered > tbody > tr:first-child > td,
+  .panel > table.responsive > table-bordered > tbody > tr:first-child > th {
+    border-bottom: 0; }
+  /* line 204, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > table-bordered > tbody > tr:last-child > td,
+  .panel > table-bordered > tbody > tr:last-child > th,
+  .panel > table-bordered > tfoot > tr:last-child > td,
+  .panel > table-bordered > tfoot > tr:last-child > th,
+  .panel > table.responsive > table-bordered > tbody > tr:last-child > td,
+  .panel > table.responsive > table-bordered > tbody > tr:last-child > th,
+  .panel > table.responsive > table-bordered > tfoot > tr:last-child > td,
+  .panel > table.responsive > table-bordered > tfoot > tr:last-child > th {
+    border-bottom: 0; }
+/* line 210, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel > table.responsive {
+  border: 0;
+  margin-bottom: 0; }
+
+/* line 218, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel {
+  border-color: #dddddd; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .heading {
+    color: #333333;
+    background-color: whitesmoke;
+    border-color: #dddddd; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel > .footer + .collapse > .body {
+    border-bottom-color: #dddddd; }
+
+/* line 221, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel.primary {
+  border-color: #428bca; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.primary > .heading {
+    color: white;
+    background-color: #428bca;
+    border-color: #428bca; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.primary > .footer + .collapse > .body {
+    border-bottom-color: #428bca; }
+
+/* line 224, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel.success {
+  border-color: #d6e9c6; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.success > .heading {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.success > .footer + .collapse > .body {
+    border-bottom-color: #d6e9c6; }
+
+/* line 227, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel.info {
+  border-color: #bce8f1; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.info > .heading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.info > .footer + .collapse > .body {
+    border-bottom-color: #bce8f1; }
+
+/* line 230, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel.warning {
+  border-color: #faebcc; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.warning > .heading {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.warning > .footer + .collapse > .body {
+    border-bottom-color: #faebcc; }
+
+/* line 233, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+.panel.danger {
+  border-color: #ebccd1; }
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.danger > .heading {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1; }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  .panel.danger > .footer + .collapse > .body {
+    border-bottom-color: #ebccd1; }
 
 /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
 .media {
