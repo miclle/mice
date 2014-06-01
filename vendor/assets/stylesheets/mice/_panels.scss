@@ -42,17 +42,19 @@
     padding: $panel-heading-padding;
     border-bottom: 1px solid transparent;
     @include border-top-radius(($panel-border-radius - 1));
-  }
 
-  // Within heading, strip any `h*` tag of its default margins for spacing.
-  > .title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: ceil(($font-size-base * 1.125));
-    color: inherit;
-
-    > a {
+    // Within heading, strip any `h*` tag of its default margins for spacing.
+    h1,h2,h3,h4,h5,h6,
+    > .title {
+      margin: 0;
+      padding: 0;
+      font-size: ceil(($font-size-base * 1.125));
       color: inherit;
+      border-bottom: none;
+
+      > a {
+        color: inherit;
+      }
     }
   }
 
