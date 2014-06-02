@@ -44,8 +44,7 @@
     @include border-top-radius(($panel-border-radius - 1));
 
     // Within heading, strip any `h*` tag of its default margins for spacing.
-    h1,h2,h3,h4,h5,h6,
-    > .title {
+    h1,h2,h3,h4,h5,h6
       margin: 0;
       padding: 0;
       font-size: ceil(($font-size-base * 1.125));
