@@ -474,6 +474,15 @@ hr {
   border-top: 1px solid #EEE;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
+  /* line 98, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+  hr.dotted {
+    border-top: 1px dotted #EEE; }
+  /* line 99, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+  hr.dashed {
+    border-top: 1px dashed #EEE; }
+  /* line 100, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_scaffolding.scss */
+  hr.double {
+    border-top: 1px double #EEE; }
 
 /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
@@ -3988,16 +3997,17 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     border-bottom: 1px solid transparent;
     border-top-right-radius: 1px;
     border-top-left-radius: 1px; }
-  /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
-  .panel > .title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    color: inherit; }
-    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
-    .panel > .title > a {
-      color: inherit; }
-  /* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+    /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+    .panel > .heading h1, .panel > .heading h2, .panel > .heading h3, .panel > .heading h4, .panel > .heading h5, .panel > .heading h6 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      color: inherit;
+      border-bottom: none; }
+      /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+      .panel > .heading h1 > a, .panel > .heading h2 > a, .panel > .heading h3 > a, .panel > .heading h4 > a, .panel > .heading h5 > a, .panel > .heading h6 > a {
+        color: inherit; }
+  /* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > .footer {
     padding: 10px 15px;
     background-color: whitesmoke;
@@ -4005,23 +4015,23 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     border-bottom-right-radius: 1px;
     border-bottom-left-radius: 1px; }
 
-/* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 76, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > .group {
   margin-bottom: 0; }
-  /* line 80, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 81, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > .group > li,
   .panel > .group > a,
   .panel > .group .item {
     border-width: 1px 0;
     border-radius: 0; }
-  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 90, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > .group:first-child > li:first-child,
   .panel > .group:first-child > a:first-child,
   .panel > .group:first-child .item:first-child {
     border-top: 0;
     border-top-right-radius: 1px;
     border-top-left-radius: 1px; }
-  /* line 98, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 99, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > .group:last-child > li:last-child,
   .panel > .group:last-child > a:last-child,
   .panel > .group:last-child .item:last-child {
@@ -4029,22 +4039,22 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     border-bottom-right-radius: 1px;
     border-bottom-left-radius: 1px; }
 
-/* line 111, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 112, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel .heading + .list-group > li:first-child,
 .panel .heading + .list-group > a:first-child,
 .panel .heading + .list-group .item:first-child {
   border-top-width: 0; }
 
-/* line 125, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 126, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table,
 .panel > table.responsive > table {
   margin-bottom: 0; }
-/* line 130, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table:first-child,
 .panel > table.responsive:first-child > table:first-child {
   border-top-right-radius: 1px;
   border-top-left-radius: 1px; }
-  /* line 137, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 138, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table:first-child > thead:first-child > tr:first-child td:first-child,
   .panel > table:first-child > thead:first-child > tr:first-child th:first-child,
   .panel > table:first-child > tbody:first-child > tr:first-child td:first-child,
@@ -4054,7 +4064,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:first-child,
   .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:first-child {
     border-top-left-radius: 1px; }
-  /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 142, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table:first-child > thead:first-child > tr:first-child td:last-child,
   .panel > table:first-child > thead:first-child > tr:first-child th:last-child,
   .panel > table:first-child > tbody:first-child > tr:first-child td:last-child,
@@ -4064,12 +4074,12 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:last-child,
   .panel > table.responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:last-child {
     border-top-right-radius: 1px; }
-/* line 149, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 150, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table:last-child,
 .panel > table.responsive:last-child > table:last-child {
   border-bottom-right-radius: 1px;
   border-bottom-left-radius: 1px; }
-  /* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table:last-child > tbody:last-child > tr:last-child td:first-child,
   .panel > table:last-child > tbody:last-child > tr:last-child th:first-child,
   .panel > table:last-child > tfoot:last-child > tr:last-child td:first-child,
@@ -4079,7 +4089,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:first-child,
   .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:first-child {
     border-bottom-left-radius: 1px; }
-  /* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 161, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table:last-child > tbody:last-child > tr:last-child td:last-child,
   .panel > table:last-child > tbody:last-child > tr:last-child th:last-child,
   .panel > table:last-child > tfoot:last-child > tr:last-child td:last-child,
@@ -4089,19 +4099,19 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:last-child,
   .panel > table.responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:last-child {
     border-bottom-right-radius: 1px; }
-/* line 167, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 168, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > .body + table,
 .panel > .body + table.responsive {
   border-top: 1px solid #dddddd; }
-/* line 171, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table > tbody:first-child > tr:first-child th,
 .panel > table > tbody:first-child > tr:first-child td {
   border-top: 0; }
-/* line 175, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 176, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table-bordered,
 .panel > table.responsive > table-bordered {
   border: 0; }
-  /* line 182, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 183, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table-bordered > thead > tr > th:first-child,
   .panel > table-bordered > thead > tr > td:first-child,
   .panel > table-bordered > tbody > tr > th:first-child,
@@ -4115,7 +4125,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive > table-bordered > tfoot > tr > th:first-child,
   .panel > table.responsive > table-bordered > tfoot > tr > td:first-child {
     border-left: 0; }
-  /* line 186, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 187, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table-bordered > thead > tr > th:last-child,
   .panel > table-bordered > thead > tr > td:last-child,
   .panel > table-bordered > tbody > tr > th:last-child,
@@ -4129,7 +4139,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive > table-bordered > tfoot > tr > th:last-child,
   .panel > table.responsive > table-bordered > tfoot > tr > td:last-child {
     border-right: 0; }
-  /* line 195, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 196, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table-bordered > thead > tr:first-child > td,
   .panel > table-bordered > thead > tr:first-child > th,
   .panel > table-bordered > tbody > tr:first-child > td,
@@ -4139,7 +4149,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive > table-bordered > tbody > tr:first-child > td,
   .panel > table.responsive > table-bordered > tbody > tr:first-child > th {
     border-bottom: 0; }
-  /* line 204, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+  /* line 205, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
   .panel > table-bordered > tbody > tr:last-child > td,
   .panel > table-bordered > tbody > tr:last-child > th,
   .panel > table-bordered > tfoot > tr:last-child > td,
@@ -4149,12 +4159,12 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > table.responsive > table-bordered > tfoot > tr:last-child > td,
   .panel > table.responsive > table-bordered > tfoot > tr:last-child > th {
     border-bottom: 0; }
-/* line 210, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 211, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel > table.responsive {
   border: 0;
   margin-bottom: 0; }
 
-/* line 218, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 219, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel {
   border-color: #dddddd; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
@@ -4166,7 +4176,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel > .footer + .collapse > .body {
     border-bottom-color: #dddddd; }
 
-/* line 221, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 222, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel.primary {
   border-color: #428bca; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
@@ -4178,7 +4188,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel.primary > .footer + .collapse > .body {
     border-bottom-color: #428bca; }
 
-/* line 224, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 225, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel.success {
   border-color: #d6e9c6; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
@@ -4190,7 +4200,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel.success > .footer + .collapse > .body {
     border-bottom-color: #d6e9c6; }
 
-/* line 227, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 228, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel.info {
   border-color: #bce8f1; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
@@ -4202,7 +4212,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel.info > .footer + .collapse > .body {
     border-bottom-color: #bce8f1; }
 
-/* line 230, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 231, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel.warning {
   border-color: #faebcc; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
@@ -4214,7 +4224,7 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
   .panel.warning > .footer + .collapse > .body {
     border-bottom-color: #faebcc; }
 
-/* line 233, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
+/* line 234, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel.danger {
   border-color: #ebccd1; }
   /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
