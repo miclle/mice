@@ -94,4 +94,8 @@ hr {
   border-top: 1px solid #EEE;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+
+  &.dotted{ border-top: 1px dotted #EEE;}
+  &.dashed{ border-top: 1px dashed #EEE;}
+  &.double{ border-top: 1px double #EEE;}
 }
