@@ -45,6 +45,29 @@ title: Forms
 <% end -%>
 
 
+      <h3>Justified inline</h3>
+      <section class="example">
+        <div class="justified">
+          <div class="field"><input type="text"></div>
+          <div class="field"><input type="text"></div>
+          <div class="field"><input type="text"></div>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="justified">
+  <div class="field">
+    <input type="text">
+  </div>
+  <div class="field">
+    <input type="text">
+  </div>
+  <div class="field">
+    <input type="text">
+  </div>
+</div>
+<% end -%>
+
+
       <h2>Horizontal form</h2>
       <section class="example">
         <%= partial "shared/form", :locals => { :type => "horizontal offset two" } %>
