@@ -38,9 +38,7 @@
 @mixin field-variant($border-color){
   color: $border-color;
 
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
+  input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
   textarea,
   select{
     @include input-variant($border-color);
@@ -69,9 +67,7 @@ fieldset {
   min-width: 0;
 
   &[disabled]{
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
+    input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
     textarea,
     select,
     button{
@@ -88,9 +84,7 @@ fieldset {
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
 textarea,
 select{
   display:          inline-block;
@@ -118,7 +112,6 @@ select{
   }
 }
 
-
 textarea{
   display: block;
   line-height: 20px;
@@ -136,12 +129,11 @@ label{
   margin-bottom: 2px;
 }
 
+
 // Input Styles
 // -------------------------
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
 textarea{
             @include input-variant($border-color-default);
   &.primary{@include input-variant($border-color-primary);}
@@ -156,9 +148,7 @@ textarea{
 
 // Input Sizing
 // -------------------------
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
 textarea{
            @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base,  $border-radius);
   &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small, $border-radius-small);}
@@ -187,9 +177,7 @@ textarea{
     }
   }
 
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
+  input:not([type~=checkbox]):not([type~=radio]):not([type~=button]),
   select,
   textarea{
     width: 100%;
@@ -202,9 +190,7 @@ textarea{
   &.feedback{
     position: relative;
 
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
+    input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
     select,
     textarea{
       padding-right: 50px;
@@ -223,6 +209,7 @@ textarea{
   }
 }
 
+
 // Inline form
 // -------------------------
 .navbar form,
@@ -232,8 +219,7 @@ form.inline{
     margin-bottom: 0;
     vertical-align: middle;
 
-    input[type="text"],
-    input[type="password"],
+    input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
     input[type="email"]{
       width: auto;
     }
@@ -249,6 +235,14 @@ form.inline{
     margin-top: -3px;
   }
 }
+
+.inline{
+  input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]),
+  input[type="email"]{
+    width: auto;
+  }
+}
+
 
 // Horizontal Form
 // -------------------------
