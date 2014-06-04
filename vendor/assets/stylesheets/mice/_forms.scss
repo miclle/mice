@@ -293,6 +293,21 @@ form.horizontal{
 }
 
 
+// Input justified
+.justified{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+
+  &:before, &:after{ display: none; }
+
+  input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]){
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+}
 
 
 
