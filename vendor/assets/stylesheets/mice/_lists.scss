@@ -42,13 +42,13 @@ ol {
 }
 
 // List options
-.unstyled {
+ul.unstyled {
   padding-left: 0;
   list-style: none;
 }
 
 // Inline
-.inline {
+ul.inline {
   @extend .unstyled;
   margin-left: -5px;
 
@@ -63,21 +63,14 @@ ol {
 dl {
   margin-top: 0;
   margin-bottom: $line-height-computed;
-}
-dt,
-dd {
-  line-height: $line-height-base;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 0;
+  dt,
+  dd { line-height: $line-height-base; }
+  dt { font-weight: bold; }
+  dd { margin-left: 0; }
 }
 
 // Horizontal description lists
-
-.horizontal {
+dl.horizontal {
   dt{
     float: left;
     width: 160px;
