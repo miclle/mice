@@ -340,9 +340,15 @@ form.horizontal{
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
     }
+
+    // Nuke default margins from checkboxes and radios to vertically center within.
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-top: 0;
+    }
   }
 
-  input{
+  > input{
     display: table-cell !important;
     width: 100%;
     &:focus{
@@ -350,7 +356,7 @@ form.horizontal{
     }
   }
 
-  input, .addon{
+  > input, .addon{
     &:first-child {
       @include border-right-radius(0);
       border-bottom-right-radius: 0 !important;
