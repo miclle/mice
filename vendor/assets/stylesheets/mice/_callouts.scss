@@ -49,7 +49,7 @@ blockquote:after, .callout:after {
 }
 
 blockquote, .callout{
-  &.primary { border-color: $border-color-primary; background-color: $state-primary-background; }
+  &.primary { border-color: $border-color-primary; background-color: $state-primary-background; color: #FFF; }
   &.success { border-color: $border-color-success; background-color: $state-success-background; }
   &.info    { border-color: $border-color-info;    background-color: $state-info-background;    }
   &.warning { border-color: $border-color-warning; background-color: $state-warning-background; }
