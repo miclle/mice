@@ -316,4 +316,54 @@ form.horizontal{
 }
 
 
+.inputs{
+  position: relative; // For dropdowns
+  display: table;
+  border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+
+  .addon{
+    display: table-cell;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    font-weight: normal;
+    line-height: 1;
+    // color: $input-color;
+    text-align: center;
+    background-color: $input-group-addon-background;
+    border: 1px solid $input-group-addon-border-color;
+    border-radius: $border-radius;
+
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+
+  input{
+    display: table-cell !important;
+    width: 100%;
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+
+  input, .addon{
+    &:first-child {
+      @include border-right-radius(0);
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-right: 0;
+    }
+    &:last-child {
+      @include border-left-radius(0);
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-left: 0;
+    }
+  }
+}
+
 

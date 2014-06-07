@@ -210,6 +210,12 @@ $input-padding-small-horizontal:    $padding-small-vertical !default;
 $input-padding-large-vertical:      $padding-large-vertical !default;
 $input-padding-large-horizontal:    $padding-large-vertical !default;
 
+//** Background color for textual input addons
+$input-group-addon-background:              $gray-lighter !default;
+//** Border color for textual input addons
+$input-group-addon-border-color:    $border-color-default !default;
+
+
 
 // Tables
 //
