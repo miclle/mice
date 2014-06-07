@@ -356,7 +356,34 @@ form.horizontal{
     }
   }
 
-  > input, .addon{
+  > .buttons{
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; // Match the inputs
+
+    &:first-child{
+      button:first-child,
+      .button:first-child{
+        @include border-right-radius(0);
+        border-right: 0;
+      }
+    }
+
+    &:last-child{
+      button:first-child,
+      .button:first-child{
+        @include border-left-radius(0);
+        border-left: 0;
+      }
+    }
+
+    button, .button{
+      box-shadow: none;
+    }
+  }
+
+  > input, .addon, .buttons{
     &:first-child {
       @include border-right-radius(0);
       border-bottom-right-radius: 0 !important;
