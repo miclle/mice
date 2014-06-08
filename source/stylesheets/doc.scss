@@ -97,3 +97,26 @@ pre.highlight{
     }
   }
 }
+
+body.mobile{
+  .navbar{
+    position: relative;
+    z-index: 99;
+  }
+
+  .device{
+    position: fixed;
+    top: -45px;
+    z-index: 9;
+    width: 395px;
+    height: 815px;
+    background-image: url(/images/iphone.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    -webkit-transition: background-image .1s linear;
+    -moz-transition: background-image .1s linear;
+    transition: background-image .1s linear;
+  }
+
+}
