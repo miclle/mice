@@ -29,12 +29,39 @@ title: Mobile
 </html>
 <% end -%>
 
-    </div>
 
+    <h2 id="tab-bar">Tab bar</h2>
+    <p>Use Ratchicons in the <code>nav.tab</code> to represent different sections of your app.</p>
+<% code 'html' do %>
+  <nav class="tab">
+    <a class="active" href="#">
+      <i class="icon home"></i>
+      <span class="label">Home</span>
+    </a>
+    <a href="#">
+      <i class="icon user"></i>
+      <span class="label">Profile</span>
+    </a>
+    <a href="#">
+      <i class="icon star"></i>
+      <span class="label">Favorites</span>
+    </a>
+    <a href="#">
+      <i class="icon search"></i>
+      <span class="label">Search</span>
+    </a>
+    <a href="#">
+      <i class="icon gear"></i>
+      <span class="label">Settings</span>
+    </a>
+  </nav>
+<% end %>
+
+    </div>
 
     <div class="column five">
       <div class="device">
-
+        <iframe id="window" src="mobile/device.html"></iframe>
       </div>
     </div>
 

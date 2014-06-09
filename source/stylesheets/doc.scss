@@ -119,4 +119,15 @@ body.mobile{
     transition: background-image .1s linear;
   }
 
+  #window{
+    position: absolute;
+    top: 119px;
+    left: 36px;
+    width: 325px;
+    height: 575px;
+    overflow: hidden;
+    background-color: #fff;
+    border: none;
+  }
+
 }
