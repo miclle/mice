@@ -196,8 +196,112 @@
 <span class="nt">&lt;textarea</span> <span class="na">cols=</span><span class="s">"120"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"fluid primary"</span> <span class="na">placeholder=</span><span class="s">".primary"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
 </pre>
 
-    </div>
 
+      <h2>Input groups</h2>
+      <section class="example">
+        <div class="inputs">
+          <span class="addon">@</span>
+          <input type="text" placeholder="Username" />
+        </div>
+        <br />
+        <div class="inputs">
+          <input type="text" />
+          <span class="addon">.00</span>
+        </div>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inputs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"addon"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+      <h3>Checkboxes and radio addons</h3>
+      <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
+      <section class="example">
+        <div class="grid two">
+          <div class="column">
+            <div class="inputs">
+              <span class="addon">
+                <input type="checkbox">
+              </span>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="inputs">
+              <span class="addon">
+                <input type="radio">
+              </span>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid two"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inputs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"addon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inputs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"addon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+      <h3>Button addons</h3>
+      <section class="example">
+        <div class="grid two">
+          <div class="column">
+            <div class="inputs">
+              <span class="buttons">
+                <button class="button" type="button">Go!</button>
+              </span>
+              <input type="text">
+            </div>
+          </div>
+          <div class="column">
+            <div class="inputs">
+              <input type="text">
+              <span class="buttons">
+                <button class="button" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid two"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inputs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inputs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
+    </div>
   </div>
 </div>
 

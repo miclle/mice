@@ -1277,7 +1277,8 @@ blockquote:after, .callout:after {
 /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
 blockquote.primary, .callout.primary {
   border-color: #428bca;
-  background-color: #428bca; }
+  background-color: #428bca;
+  color: #FFF; }
 /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
 blockquote.success, .callout.success {
   border-color: #81c735;
@@ -5336,6 +5337,75 @@ form.horizontal .field.feedback .icon {
     .justified .field input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]) {
       width: 100%; }
 
+/* line 319, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+.inputs {
+  position: relative;
+  display: table;
+  border-collapse: separate; }
+  /* line 324, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .inputs .addon {
+    display: table-cell;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; }
+    /* line 340, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs .addon:not(:first-child):not(:last-child) {
+      border-radius: 0; }
+    /* line 346, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs .addon input[type="radio"],
+    .inputs .addon input[type="checkbox"] {
+      margin-top: 0; }
+  /* line 351, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .inputs > input {
+    display: table-cell !important;
+    width: 100%; }
+    /* line 354, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs > input:focus {
+      box-shadow: none !important; }
+  /* line 359, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .inputs > .buttons {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; }
+    /* line 367, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs > .buttons:first-child button:first-child,
+    .inputs > .buttons:first-child .button:first-child {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-right: 0; }
+    /* line 375, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs > .buttons:last-child button:first-child,
+    .inputs > .buttons:last-child .button:first-child {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-left: 0; }
+    /* line 381, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+    .inputs > .buttons button, .inputs > .buttons .button {
+      box-shadow: none; }
+  /* line 387, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .inputs > input:first-child, .inputs .addon:first-child, .inputs .buttons:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-right: 0; }
+  /* line 393, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
+  .inputs > input:last-child, .inputs .addon:last-child, .inputs .buttons:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-left: 0; }
+
 /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -5744,3 +5814,22 @@ pre.highlight {
       -o-transform: scale(1.5);
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
+
+/* line 102, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+body.mobile .navbar {
+  position: relative;
+  z-index: 99; }
+/* line 107, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+body.mobile .device {
+  position: fixed;
+  top: -45px;
+  z-index: 9;
+  width: 395px;
+  height: 815px;
+  background-image: url(/images/iphone.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  -webkit-transition: background-image .1s linear;
+  -moz-transition: background-image .1s linear;
+  transition: background-image .1s linear; }
