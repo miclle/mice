@@ -5833,3 +5833,13 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
+/* line 122, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+body.mobile #window {
+  position: absolute;
+  top: 119px;
+  left: 36px;
+  width: 325px;
+  height: 575px;
+  overflow: hidden;
+  background-color: #fff;
+  border: none; }
