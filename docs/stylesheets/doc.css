@@ -5820,6 +5820,15 @@ body.mobile .navbar {
   position: relative;
   z-index: 99; }
 /* line 107, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+body.mobile article.component {
+  opacity: .3;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out; }
+  /* line 113, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  body.mobile article.component.active {
+    opacity: 1; }
+/* line 118, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -5833,7 +5842,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 122, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 133, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
