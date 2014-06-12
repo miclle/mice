@@ -52,7 +52,7 @@ Ratchet's documentation is built with [Middleman](http://middlemanapp.com/) and 
 
 ### Running documentation locally
 
-1. If necessary, `$ gem install bundler`.
+1. If necessary, `gem install bundler`.
 2. From the root `/mice` directory, run `bundle install`
 3. Run `middleman server` in the command line.
 3. Open <http://localhost:4567> in your browser, and boom!
