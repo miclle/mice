@@ -24,9 +24,9 @@ Or install it yourself as:
 `$ gem install mice`
 
 
-# mice with Rails
+## mice with Rails
 
-## CSS
+### CSS
 
 Import Mice in an SCSS file (for example, `application.css.scss`) to get all of Mice's styles
 
@@ -44,6 +44,22 @@ or
 
 For mobile
 @import "mice-mobile"
+
+
+## Documentation
+
+Ratchet's documentation is built with [Middleman](http://middlemanapp.com/) and publicly hosted on GitHub Pages at <http://mice.miclle.com/>. The docs may also be run locally.
+
+### Running documentation locally
+
+1. If necessary, `$ gem install bundler`.
+2. From the root `/mice` directory, run `bundle install`
+3. Run `middleman server` in the command line.
+3. Open <http://localhost:4567> in your browser, and boom!
+
+Learn more about using Middleman by reading its [documentation](http://middlemanapp.com/basics/getting-started/).
+
+
 
 ## Contributing
 
