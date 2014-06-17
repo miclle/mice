@@ -1,0 +1,64 @@
+---
+title: Pagination
+---
+
+<div class="container">
+  <div class="grid twelve">
+
+    <div class="column three">
+      <%= partial "shared/sidebar" %>
+    </div>
+
+    <div class="column nine doc">
+
+      <h1 class="title">Pagination</h1>
+      <p>Provide pagination links for your site or app with the multi-page pagination component, or the simpler pager alternative.</p>
+
+      <h2>Default pagination</h2>
+      <p>Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
+      <section class="example">
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </section>
+<% code "html" do %>
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+<% end -%>
+
+
+      <h1 class="title">Pager</h1>
+      <p>Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines.</p>
+
+      <h2>Default example</h2>
+      <p>By default, the pager centers links.</p>
+      <section class="example">
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </section>
+<% code "html" do %>
+<ul class="pager">
+  <li><a href="#">Previous</a></li>
+  <li><a href="#">Next</a></li>
+</ul>
+<% end -%>
+
+    </div>
+
+  </div>
+</div>
