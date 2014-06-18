@@ -3969,6 +3969,145 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     .table.responsive > table > *:last-child > tr:last-child > th, .table.responsive > table > *:last-child > tr:last-child > td {
       border-bottom: none; }
 
+/* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 2px; }
+  /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pagination > li {
+    display: inline; }
+    /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+    .pagination > li > a,
+    .pagination > li > span {
+      position: relative;
+      float: left;
+      padding: 6px 12px;
+      line-height: 1.42858;
+      text-decoration: none;
+      color: #428bca;
+      background-color: white;
+      border: 1px solid #dddddd;
+      margin-left: -1px; }
+    /* line 51, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+    .pagination > li:first-child > a,
+    .pagination > li:first-child > span {
+      margin-left: 0;
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px; }
+    /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+    .pagination > li:last-child > a,
+    .pagination > li:last-child > span {
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px; }
+  /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pagination > li > a:hover, .pagination > li > a:focus,
+  .pagination > li > span:hover,
+  .pagination > li > span:focus {
+    color: #2a6496;
+    background-color: #eeeeee;
+    border-color: #dddddd; }
+  /* line 78, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+  .pagination > .active > span,
+  .pagination > .active > span:hover,
+  .pagination > .active > span:focus {
+    z-index: 2;
+    color: white;
+    background-color: #428bca;
+    border-color: #428bca;
+    cursor: default; }
+  /* line 93, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pagination > .disabled > span,
+  .pagination > .disabled > span:hover,
+  .pagination > .disabled > span:focus,
+  .pagination > .disabled > a,
+  .pagination > .disabled > a:hover,
+  .pagination > .disabled > a:focus {
+    color: #999999;
+    background-color: white;
+    border-color: #dddddd;
+    cursor: not-allowed; }
+
+/* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 8px 15px;
+  font-size: 18px; }
+/* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px; }
+/* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px; }
+
+/* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px; }
+/* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px; }
+/* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
+
+/* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  list-style: none;
+  text-align: center; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .pager:before, .pager:after {
+    content: " ";
+    display: table; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .pager:after {
+    clear: both; }
+  /* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pager li {
+    display: inline; }
+    /* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+    .pager li > a,
+    .pager li > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: white;
+      border: 1px solid #dddddd;
+      border-radius: 15px; }
+    /* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+    .pager li > a:hover,
+    .pager li > a:focus {
+      text-decoration: none;
+      background-color: #eeeeee; }
+  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pager .next > a,
+  .pager .next > span {
+    float: right; }
+  /* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pager .previous > a,
+  .pager .previous > span {
+    float: left; }
+  /* line 164, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
+  .pager .disabled > a,
+  .pager .disabled > a:hover,
+  .pager .disabled > a:focus,
+  .pager .disabled > span {
+    color: #999999;
+    background-color: white;
+    cursor: not-allowed; }
+
 /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_panels.scss */
 .panel {
   margin-bottom: 20px;
