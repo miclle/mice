@@ -703,7 +703,7 @@ kbd {
   font-size: 90%;
   color: white;
   background-color: #333333;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
 
 /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_code.scss */
@@ -4031,36 +4031,36 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     cursor: not-allowed; }
 
 /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-lg > li > a,
-.pagination-lg > li > span {
+.pagination.large > li > a,
+.pagination.large > li > span {
   padding: 8px 15px;
   font-size: 18px; }
 /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-lg > li:first-child > a,
-.pagination-lg > li:first-child > span {
+.pagination.large > li:first-child > a,
+.pagination.large > li:first-child > span {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px; }
 /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-lg > li:last-child > a,
-.pagination-lg > li:last-child > span {
+.pagination.large > li:last-child > a,
+.pagination.large > li:last-child > span {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px; }
 
 /* line 9, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-sm > li > a,
-.pagination-sm > li > span {
+.pagination.small > li > a,
+.pagination.small > li > span {
   padding: 5px 10px;
   font-size: 12px; }
 /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-sm > li:first-child > a,
-.pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px; }
+.pagination.small > li:first-child > a,
+.pagination.small > li:first-child > span {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px; }
 /* line 21, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
-.pagination-sm > li:last-child > a,
-.pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px; }
+.pagination.small > li:last-child > a,
+.pagination.small > li:last-child > span {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px; }
 
 /* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
 .pager {
@@ -4940,7 +4940,7 @@ textarea {
     padding: 5px 5px;
     font-size: 12px;
     line-height: 1.33;
-    border-radius: 3px; }
+    border-radius: 2px; }
   /* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]):not([type~=submit]).large,
   textarea.large {

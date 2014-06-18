@@ -3726,7 +3726,7 @@ textarea {
     padding: 5px 5px;
     font-size: 12px;
     line-height: 1.33;
-    border-radius: 3px; }
+    border-radius: 2px; }
   /* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
   input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]):not([type~=submit]).large,
   textarea.large {
