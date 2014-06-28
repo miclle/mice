@@ -14,6 +14,56 @@ title: Progress
       <h1 class="title">Progress bars</h1>
       <p>Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.</p>
 
+      <h2>Default progress bar.</h2>
+      <section class="example">
+        <div class="progress">
+          <div class="bar" style="width: 45%;"></div>
+        </div>
+        <div class="progress">
+          <div class="bar" style="width: 60%;">60%</div>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="progress">
+  <div class="bar" style="width: 45%;"></div>
+</div>
+
+<div class="progress">
+  <div class="bar" style="width: 60%;">60%</div>
+</div>
+<% end -%>
+
+      <h2>Contextual alternatives</h2>
+      <p>Progress bars use some of the same button and alert classes for consistent styles.</p>
+      <section class="example">
+        <div class="progress success">
+          <div class="bar" style="width: 40%;"></div>
+        </div>
+        <div class="progress info">
+          <div class="bar" style="width: 20%;"></div>
+        </div>
+        <div class="progress warning">
+          <div class="bar" style="width: 60%;"></div>
+        </div>
+        <div class="progress danger">
+          <div class="bar" style="width: 80%;"></div>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="progress success">
+  <div class="bar" style="width: 40%;"></div>
+</div>
+<div class="progress info">
+  <div class="bar" style="width: 20%;"></div>
+</div>
+<div class="progress warning">
+  <div class="bar" style="width: 60%;"></div>
+</div>
+<div class="progress danger">
+  <div class="bar" style="width: 80%;"></div>
+</div>
+<% end -%>
+
     </div>
 
   </div>
