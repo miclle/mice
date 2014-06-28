@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 @mixin progress-bar-variant($color) {
-  .bar{ background-color: $color; }
+  background-color: $color;
 }
 
 
@@ -34,8 +34,9 @@
 
 // Variations
 // -------------------------
-.progress.success { @include progress-bar-variant($progress-bar-success-background);}
-.progress.info    { @include progress-bar-variant($progress-bar-info-background);   }
-.progress.warning { @include progress-bar-variant($progress-bar-warning-background);}
-.progress.danger  { @include progress-bar-variant($progress-bar-danger-background); }
-
+.progress .bar{
+  &.success { @include progress-bar-variant($progress-bar-success-background);}
+  &.info    { @include progress-bar-variant($progress-bar-info-background);   }
+  &.warning { @include progress-bar-variant($progress-bar-warning-background);}
+  &.danger  { @include progress-bar-variant($progress-bar-danger-background); }
+}

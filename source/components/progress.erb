@@ -36,31 +36,48 @@ title: Progress
       <h2>Contextual alternatives</h2>
       <p>Progress bars use some of the same button and alert classes for consistent styles.</p>
       <section class="example">
-        <div class="progress success">
-          <div class="bar" style="width: 40%;"></div>
+        <div class="progress">
+          <div class="bar success" style="width: 40%;"></div>
         </div>
-        <div class="progress info">
-          <div class="bar" style="width: 20%;"></div>
+        <div class="progress">
+          <div class="bar info" style="width: 20%;"></div>
         </div>
-        <div class="progress warning">
-          <div class="bar" style="width: 60%;"></div>
+        <div class="progress">
+          <div class="bar warning" style="width: 60%;"></div>
         </div>
-        <div class="progress danger">
-          <div class="bar" style="width: 80%;"></div>
+        <div class="progress">
+          <div class="bar danger" style="width: 80%;"></div>
         </div>
       </section>
 <% code "html" do %>
-<div class="progress success">
-  <div class="bar" style="width: 40%;"></div>
+<div class="progress">
+  <div class="bar success" style="width: 40%;"></div>
 </div>
-<div class="progress info">
-  <div class="bar" style="width: 20%;"></div>
+<div class="progress">
+  <div class="bar info" style="width: 20%;"></div>
 </div>
-<div class="progress warning">
-  <div class="bar" style="width: 60%;"></div>
+<div class="progress">
+  <div class="bar warning" style="width: 60%;"></div>
 </div>
-<div class="progress danger">
-  <div class="bar" style="width: 80%;"></div>
+<div class="progress">
+  <div class="bar danger" style="width: 80%;"></div>
+</div>
+<% end -%>
+
+      <h2>Stacked</h2>
+      <p>Place multiple bars into the same <code>.progress</code> to stack them.</p>
+      <section class="example">
+        <div class="progress">
+          <div class="bar success" style="width: 35%"></div>
+          <div class="bar warning" style="width: 20%"></div>
+          <div class="bar danger" style="width: 10%"></div>
+        </div>
+      </section>
+<% code "html" do %>
+<div class="progress">
+  <div class="bar success" style="width: 35%"></div>
+  <div class="bar warning" style="width: 20%"></div>
+  <div class="bar danger" style="width: 10%"></div>
 </div>
 <% end -%>
 
