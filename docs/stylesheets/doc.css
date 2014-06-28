@@ -4679,20 +4679,17 @@ a.label:hover, a.label:focus {
     -moz-transition: width 0.6s ease;
     transition: width 0.6s ease; }
 
-/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
-.progress.success .bar {
+/* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
+.progress .bar.success {
   background-color: #81c735; }
-
-/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
-.progress.info .bar {
+/* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
+.progress .bar.info {
   background-color: #5bc0de; }
-
-/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
-.progress.warning .bar {
+/* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
+.progress .bar.warning {
   background-color: #f0ad4e; }
-
-/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
-.progress.danger .bar {
+/* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_progress.scss */
+.progress .bar.danger {
   background-color: #d9534f; }
 
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
