@@ -3,30 +3,29 @@
 // --------------------------------------------------
 
 @mixin progress-bar-variant($color) {
-  .bar{
-    background-color: $color;
-  }
+  .bar{ background-color: $color; }
 }
 
 
 // Progress outer container
 .progress {
-  overflow: hidden;
-  height: $line-height-computed;
-  margin-bottom: $line-height-computed;
+  overflow:         hidden;
+  height:           $progress-height;
+  margin-bottom:    $progress-height;
   background-color: $progress-background;
-  border-radius: $border-radius;
-  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  border-radius:    $border-radius;
+
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.1));
 
   // Bar of progress
   .bar {
-    float: left;
-    width: 0%;
-    height: 100%;
-    font-size: $font-size-small;
-    line-height: $line-height-computed;
-    color: $progress-bar-color;
-    text-align: center;
+    float:            left;
+    width:            0%;
+    height:           100%;
+    font-size:        $font-size-small;
+    line-height:      $progress-height;
+    color:            $progress-bar-color;
+    text-align:       center;
     background-color: $progress-bar-background;
     @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
     @include transition(width .6s ease);
@@ -35,8 +34,8 @@
 
 // Variations
 // -------------------------
-.progress.success { @include progress-bar-variant($progress-bar-success-background); }
-.progress.info    { @include progress-bar-variant($progress-bar-info-background); }
-.progress.warning { @include progress-bar-variant($progress-bar-warning-background); }
+.progress.success { @include progress-bar-variant($progress-bar-success-background);}
+.progress.info    { @include progress-bar-variant($progress-bar-info-background);   }
+.progress.warning { @include progress-bar-variant($progress-bar-warning-background);}
 .progress.danger  { @include progress-bar-variant($progress-bar-danger-background); }
 
