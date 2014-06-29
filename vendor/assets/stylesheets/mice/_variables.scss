@@ -378,3 +378,26 @@ $progress-bar-danger-background:  $brand-danger !default;
 //** Info progress bar color
 $progress-bar-info-background:    $brand-info !default;
 
+
+//== Alerts
+// --------------------------------------------------
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius !default;
+$alert-link-font-weight:      bold !default;
+
+$alert-success-background:    $state-success-background !default;
+$alert-success-text:          $state-success-text !default;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-background:       $state-info-background !default;
+$alert-info-text:             $state-info-text !default;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-background:    $state-warning-background !default;
+$alert-warning-text:          $state-warning-text !default;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-background:     $state-danger-background !default;
+$alert-danger-text:           $state-danger-text !default;
+$alert-danger-border:         $state-danger-border !default;
+
