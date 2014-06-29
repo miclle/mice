@@ -32,6 +32,15 @@
   }
 }
 
+
+// Striped bars
+.progress .bar.striped,
+.progress.striped .bar {
+  @include gradient-striped();
+  background-size: 40px 40px;
+}
+
+
 // Variations
 // -------------------------
 .progress .bar{
