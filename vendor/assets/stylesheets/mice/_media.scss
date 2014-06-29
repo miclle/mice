@@ -7,6 +7,7 @@
 // -------------------------
 .media{
   margin-top: 15px;
+  list-style: none;
 
   @include clearfix();
 
@@ -35,4 +36,18 @@
     margin: 0 0 5px;
   }
 
+  &.invert{
+    text-align: right;
+
+    > .cover{
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+.mediae{
+  padding-left: 0;
+  list-style: none;
 }
