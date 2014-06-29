@@ -2909,7 +2909,8 @@ ul.group, ol.group, div.group, section.group {
 
 /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
 .media {
-  margin-top: 15px; }
+  margin-top: 15px;
+  list-style: none; }
   /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   .media:before, .media:after {
     content: " ";
@@ -2917,26 +2918,39 @@ ul.group, ol.group, div.group, section.group {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   .media:after {
     clear: both; }
-  /* line 13, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
   .media:first-child {
     margin-top: 0; }
-  /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
   .media > .cover {
     display: block;
     float: left;
     margin-right: 10px; }
-    /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+    /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
     .media > .cover.ext {
       float: right;
       margin-left: 10px;
       margin-right: 0; }
-  /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+  /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
   .media .desc {
     overflow: hidden;
     zoom: 1; }
-  /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+  /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
   .media .heading {
     margin: 0 0 5px; }
+  /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+  .media.invert {
+    text-align: right; }
+    /* line 42, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+    .media.invert > .cover {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0; }
+
+/* line 50, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_media.scss */
+.mediae {
+  padding-left: 0;
+  list-style: none; }
 
 /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_labels.scss */
 .label {
