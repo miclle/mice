@@ -2,10 +2,20 @@
 // Progress bars
 // --------------------------------------------------
 
+// Mixin
 @mixin progress-bar-variant($color) {
   background-color: $color;
 }
 
+// Bar animations
+@-webkit-keyframes progress-bar-stripes {
+  to  { background-position: 32px 0; }
+  from{ background-position: 0 0; }
+}
+@keyframes progress-bar-stripes {
+  to  { background-position: 32px 0; }
+  from{ background-position: 0 0; }
+}
 
 // Progress outer container
 .progress {
@@ -32,17 +42,21 @@
   }
 }
 
-
 // Striped bars
 .progress .bar.striped,
 .progress.striped .bar {
   @include gradient-striped();
-  background-size: 40px 40px;
+  background-size: 32px 32px;
 }
 
+// Call animation for the active one
+.progress.active .bar,
+.progress .bar.active {
+  -webkit-animation: progress-bar-stripes 1.5s linear infinite;
+          animation: progress-bar-stripes 1.5s linear infinite;
+}
 
 // Variations
-// -------------------------
 .progress .bar{
   &.success { @include progress-bar-variant($progress-bar-success-background);}
   &.info    { @include progress-bar-variant($progress-bar-info-background);   }
