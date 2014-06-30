@@ -29,8 +29,12 @@ section.example{
     letter-spacing: 1px;
   }
 
-  table {
+  table,
+  .alert:last-child{
     margin-bottom: 0;
+  }
+
+  table {
     tr:last-child td{ border-bottom: none; }
   }
 
