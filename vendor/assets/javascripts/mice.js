@@ -1,1 +1,1 @@
-//= require mice/ZeroClipboard
+//= require mice/alert

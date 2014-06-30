@@ -3,4 +3,5 @@
 //= require_tree .
 
 // ZeroClipboard
-ZeroClipboard.config( { moviePath: '/images/ZeroClipboard.swf' } );
+// ZeroClipboard.config( { moviePath: '/images/ZeroClipboard.swf' } );
+

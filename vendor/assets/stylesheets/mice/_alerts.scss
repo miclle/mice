@@ -13,7 +13,6 @@
 }
 
 
-
 // Base styles
 // -------------------------
 
@@ -65,7 +64,7 @@
 
 .alert{
   &.success {@include alert-variant($alert-success-background, $alert-success-border, $alert-success-text); }
-  &.info    {@include alert-variant($alert-info-background,    $alert-info-border,    $alert-info-text); }
+  &.info    {@include alert-variant($alert-info-background,    $alert-info-border,    $alert-info-text);    }
   &.warning {@include alert-variant($alert-warning-background, $alert-warning-border, $alert-warning-text); }
-  &.danger  {@include alert-variant($alert-danger-background,  $alert-danger-border,  $alert-danger-text); }
+  &.danger  {@include alert-variant($alert-danger-background,  $alert-danger-border,  $alert-danger-text);  }
 }
