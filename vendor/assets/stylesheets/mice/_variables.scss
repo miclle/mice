@@ -240,6 +240,19 @@ $table-background-active:           $table-background-hover !default;
 $table-border-color:                #ddd !default;
 
 
+// Tabs
+// --------------------------------------------------
+$tabs-border-color:                       #ddd !default;
+$tabs-link-hover-border-color:            $gray-lighter !default;
+
+$tabs-active-link-hover-background:       $background-color !default;
+$tabs-active-link-hover-color:            $gray !default;
+$tabs-active-link-hover-border-color:     #ddd !default;
+
+$tabs-justified-link-border-color:        #ddd !default;
+$tabs-justified-active-link-border-color: $background-color !default;
+
+
 // Pagination
 // --------------------------------------------------
 $pagination-color:                  $link-color !default;

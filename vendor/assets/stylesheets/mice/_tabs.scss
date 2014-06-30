@@ -1,0 +1,37 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.tabs{
+
+  border-bottom: 1px solid $tabs-border-color;
+  > li {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      margin-right: 2px;
+      line-height: $line-height-base;
+      border: 1px solid transparent;
+      border-radius: $border-radius $border-radius 0 0;
+      &:hover {
+        border-color: $tabs-link-hover-border-color $tabs-link-hover-border-color $tabs-border-color;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $tabs-active-link-hover-color;
+        background-color: $tabs-active-link-hover-background;
+        border: 1px solid $tabs-active-link-hover-border-color;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+}
