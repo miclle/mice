@@ -1298,20 +1298,22 @@ blockquote.danger, .callout.danger {
 
 /* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
 .callout {
-  border-width: 3px; }
-  /* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
-  .callout.primary h1, .callout.primary h2, .callout.primary h3, .callout.primary h4, .callout.primary h5, .callout.primary h6 {
-    color: #428bca; }
-  /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  border-width: 3px;
+  padding: 10px 10px;
+  font-size: 14px; }
+  /* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  .callout h1:first-child, .callout h2:first-child, .callout h3:first-child, .callout h4:first-child, .callout h5:first-child, .callout h6:first-child {
+    margin-top: 0; }
+  /* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
   .callout.success h1, .callout.success h2, .callout.success h3, .callout.success h4, .callout.success h5, .callout.success h6 {
     color: #81c735; }
-  /* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
   .callout.info h1, .callout.info h2, .callout.info h3, .callout.info h4, .callout.info h5, .callout.info h6 {
     color: #5bc0de; }
-  /* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  /* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
   .callout.warning h1, .callout.warning h2, .callout.warning h3, .callout.warning h4, .callout.warning h5, .callout.warning h6 {
     color: #f0ad4e; }
-  /* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
+  /* line 70, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_callouts.scss */
   .callout.danger h1, .callout.danger h2, .callout.danger h3, .callout.danger h4, .callout.danger h5, .callout.danger h6 {
     color: #d9534f; }
 
@@ -4738,6 +4740,108 @@ a.label:hover, a.label:focus {
 .progress .bar.danger {
   background-color: #d9534f; }
 
+/* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 2px; }
+  /* line 26, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert h4 {
+    margin-top: 0;
+    color: inherit; }
+  /* line 32, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert a {
+    font-weight: bold; }
+  /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert > p,
+  .alert > ul {
+    margin-bottom: 0; }
+  /* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert > p + p {
+    margin-top: 5px; }
+
+/* line 49, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert.dismissible {
+  padding-right: 35px; }
+  /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit; }
+
+/* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert.success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.success hr {
+    border-top-color: #c9e2b3; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.success a {
+    color: #2b542c; }
+/* line 67, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert.info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.info hr {
+    border-top-color: #a6e1ec; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.info a {
+    color: #245269; }
+/* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert.warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.warning hr {
+    border-top-color: #f7e1b5; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.warning a {
+    color: #66512c; }
+/* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+.alert.danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.danger hr {
+    border-top-color: #e4b9c0; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_alerts.scss */
+  .alert.danger a {
+    color: #843534; }
+
+/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_close.scss */
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: black;
+  text-shadow: 0 1px 0 white;
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+  /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_close.scss */
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+/* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_close.scss */
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
   padding: 0;
@@ -5977,13 +6081,14 @@ section.example {
     color: #BBB;
     text-transform: uppercase;
     letter-spacing: 1px; }
-  /* line 32, /Users/miclle/project/mice/source/stylesheets/doc.scss */
-  section.example table {
+  /* line 33, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example table,
+  section.example .alert:last-child {
     margin-bottom: 0; }
-    /* line 34, /Users/miclle/project/mice/source/stylesheets/doc.scss */
-    section.example table tr:last-child td {
-      border-bottom: none; }
-  /* line 41, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 38, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example table tr:last-child td {
+    border-bottom: none; }
+  /* line 45, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example .bg-primary,
   section.example .bg-success,
   section.example .bg-info,
@@ -5991,7 +6096,7 @@ section.example {
   section.example .bg-danger {
     padding: 10px; }
 
-/* line 46, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 50, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -6005,13 +6110,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 60, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 64, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 66, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 70, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -6021,17 +6126,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 76, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 80, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 88, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 92, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 91, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 95, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
@@ -6039,20 +6144,20 @@ pre.highlight {
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
 
-/* line 102, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 106, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .navbar {
   position: relative;
   z-index: 99; }
-/* line 107, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 111, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile article.component {
   opacity: .3;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out; }
-  /* line 113, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 117, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   body.mobile article.component.active {
     opacity: 1; }
-/* line 118, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 122, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -6066,7 +6171,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 133, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 137, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
