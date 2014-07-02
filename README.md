@@ -42,9 +42,6 @@ or
  */
 ```
 
-For mobile
-@import "mice-mobile"
-
 
 ## Documentation
 
