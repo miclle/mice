@@ -36,23 +36,21 @@
           <li class="<%= "active" if nav_page_classes == "elements" -%>">
             <a href="/elements">Elements</a>
           </li>
-          <li class="<%= "active" if nav_page_classes == "components" -%>">
-            <a href="/components">Components</a>
-          </li>
-          <li class="dropdown <%= "active" if nav_page_classes == "components components_grid" -%>">
-            <a href="/components/grid.html">Grid</a>
+
+          <li class="dropdown <%= "active" if nav_page_classes == "grids" -%>">
+            <a href="/grids">Grid</a>
             <ul class="menu">
-              <li><a href="/components/grid.html#two-columns">Two columns</a></li>
-              <li><a href="/components/grid.html#three-columns">Three columns</a></li>
-              <li><a href="/components/grid.html#four-columns">Four columns</a></li>
-              <li><a href="/components/grid.html#five-columns">Five columns</a></li>
-              <li><a href="/components/grid.html#six-columns">Six columns</a></li>
-              <li><a href="/components/grid.html#seven-columns">Seven columns</a></li>
-              <li><a href="/components/grid.html#eight-columns">Eight columns</a></li>
-              <li><a href="/components/grid.html#nine-columns">Nine columns</a></li>
-              <li><a href="/components/grid.html#ten-columns">Ten columns</a></li>
-              <li><a href="/components/grid.html#eleven-columns">Eleven columns</a></li>
-              <li><a href="/components/grid.html#twelve-columns">Twelve columns</a></li>
+              <li><a href="/grids#two-columns">Two columns</a></li>
+              <li><a href="/grids#three-columns">Three columns</a></li>
+              <li><a href="/grids#four-columns">Four columns</a></li>
+              <li><a href="/grids#five-columns">Five columns</a></li>
+              <li><a href="/grids#six-columns">Six columns</a></li>
+              <li><a href="/grids#seven-columns">Seven columns</a></li>
+              <li><a href="/grids#eight-columns">Eight columns</a></li>
+              <li><a href="/grids#nine-columns">Nine columns</a></li>
+              <li><a href="/grids#ten-columns">Ten columns</a></li>
+              <li><a href="/grids#eleven-columns">Eleven columns</a></li>
+              <li><a href="/grids#twelve-columns">Twelve columns</a></li>
             </ul>
           </li>
 
@@ -60,9 +58,15 @@
             <a href="/icons">Icons</a>
           </li>
 
+          <li class="<%= "active" if nav_page_classes == "components" -%>">
+            <a href="/components">Components</a>
+          </li>
+
+          <!--
           <li class="<%= "active" if nav_page_classes == "mobile" -%>">
             <a href="/mobile">Mobile</a>
           </li>
+          -->
         </ul>
 
         <ul class="menu righted">
