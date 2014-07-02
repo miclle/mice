@@ -30,14 +30,16 @@
           <a href="/" class="brand">Mice</a>
         </div>
 
+        <% nav_page_classes = page_classes.split.first %>
+
         <ul class="menu">
-          <li class="<%= "active" if page_classes == "elements elements_index" -%>">
+          <li class="<%= "active" if nav_page_classes == "elements" -%>">
             <a href="/elements">Elements</a>
           </li>
-          <li class="<%= "active" if page_classes == "components components_index" -%>">
+          <li class="<%= "active" if nav_page_classes == "components" -%>">
             <a href="/components">Components</a>
           </li>
-          <li class="dropdown <%= "active" if page_classes == "components components_grid" -%>">
+          <li class="dropdown <%= "active" if nav_page_classes == "components components_grid" -%>">
             <a href="/components/grid.html">Grid</a>
             <ul class="menu">
               <li><a href="/components/grid.html#two-columns">Two columns</a></li>
@@ -53,7 +55,12 @@
               <li><a href="/components/grid.html#twelve-columns">Twelve columns</a></li>
             </ul>
           </li>
-          <li class="<%= "active" if page_classes == "mobile mobile_index" -%>">
+
+          <li class="<%= "active" if nav_page_classes == "icons" -%>">
+            <a href="/icons">Icons</a>
+          </li>
+
+          <li class="<%= "active" if nav_page_classes == "mobile" -%>">
             <a href="/mobile">Mobile</a>
           </li>
         </ul>
