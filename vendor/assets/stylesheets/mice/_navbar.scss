@@ -7,6 +7,22 @@
   background: #FFF;
   border-bottom: 1px solid #E8E8E8;
 
+  &.top,
+  &.bottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: $zindex-navbar-fixed;
+  }
+  &.top{
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  &.bottom{
+    bottom: 0;
+    border-width: 1px 0 0;
+  }
+
   .logo{
     float: left;
     .brand{

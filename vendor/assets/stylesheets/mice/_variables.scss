@@ -118,7 +118,7 @@ $heading-small-color:               $gray-light !default;
 $blockquote-small-color:            $gray-light !default;
 $blockquote-font-size:              ($font-size-base * 1.25) !default;
 
-$callout-font-size:              $font-size-base !default;
+$callout-font-size:                 $font-size-base !default;
 
 $page-header-border-color:          $gray-lighter !default;
 
@@ -147,8 +147,7 @@ $state-danger-border:               darken(adjust-hue($state-danger-background, 
 
 
 // Code
-//
-//##
+// --------------------------------------------------
 
 $code-color:                        #c7254e !default;
 $code-background:                   #f9f2f4 !default;
@@ -163,7 +162,7 @@ $pre-scrollable-max-height:         340px !default;
 
 
 // Forms
-// -------------------------
+// --------------------------------------------------
 
 
 // Buttons
@@ -220,7 +219,7 @@ $input-group-addon-border-color:    $border-color-default !default;
 
 
 // Tables
-//
+// --------------------------------------------------
 //## Customizes the `table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
@@ -394,7 +393,7 @@ $progress-bar-danger-background:  $brand-danger !default;
 $progress-bar-info-background:    $brand-info !default;
 
 
-//== Alerts
+// Alerts
 // --------------------------------------------------
 $alert-padding:               15px !default;
 $alert-border-radius:         $border-radius !default;
@@ -417,10 +416,13 @@ $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
 
 
-//== Close
+// Close
 // --------------------------------------------------
 $close-font-weight:           bold !default;
 $close-color:                 #000 !default;
 $close-text-shadow:           0 1px 0 #fff !default;
 
 
+// Z-index master list
+// --------------------------------------------------
+$zindex-navbar-fixed:         1030 !default;
