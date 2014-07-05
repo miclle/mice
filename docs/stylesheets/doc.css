@@ -3273,7 +3273,7 @@ img {
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
 .menu {
   list-style: none;
-  margin: 0 15px;
+  margin: 0;
   padding: 0;
   position: relative; }
   /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
@@ -3326,39 +3326,55 @@ img {
 .navbar {
   min-height: 45px;
   background: #FFF;
-  border-bottom: 1px solid #E8E8E8; }
-  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  border-color: #E8E8E8;
+  border-style: solid;
+  border-width: 0;
+  border-width: 0 0 1px; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  .navbar.top, .navbar.bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1030; }
+  /* line 20, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  .navbar.top {
+    top: 0;
+    border-width: 0 0 1px; }
+  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  .navbar.bottom {
+    bottom: 0;
+    border-width: 1px 0 0; }
+  /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
   .navbar .logo {
     float: left; }
-    /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+    /* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
     .navbar .logo .brand {
       display: block;
       line-height: 45px;
-      padding: 0;
+      padding: 0 20px;
       color: #666;
       text-decoration: none;
       font-weight: 700; }
-  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  /* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
   .navbar .menu {
     float: left;
     list-style: none;
-    margin: 0 15px;
     padding: 0;
     position: relative; }
-    /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+    /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
     .navbar .menu .menu {
       display: none; }
-    /* line 33, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+    /* line 51, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
     .navbar .menu > li {
       float: left; }
-      /* line 36, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+      /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
       .navbar .menu > li > a {
         text-align: center;
         padding: 0 20px;
         line-height: 45px;
         -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
         transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; }
-        /* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:after {
           display: block;
           margin: 0 auto;
@@ -3370,18 +3386,18 @@ img {
           width: 100%;
           -webkit-transition: height 0.15s ease;
           transition: height 0.15s ease; }
-        /* line 57, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:hover {
           color: #428BCA;
           background: #F5F5F5; }
-          /* line 60, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+          /* line 78, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
           .navbar .menu > li > a:hover:after {
             height: 3px;
             background-color: #428BCA; }
-        /* line 65, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:active {
           background: #F0F0F0; }
-  /* line 70, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  /* line 88, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
   .navbar form {
     float: left;
     padding-top: 5px; }
