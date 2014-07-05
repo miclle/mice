@@ -3300,27 +3300,63 @@ img {
 
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
 .tabs {
-  border-bottom: 1px solid #dddddd; }
-  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+  list-style: none;
+  border-bottom: 1px solid #dddddd;
+  padding: 0; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .tabs:before, .tabs:after {
+    content: " ";
+    display: table; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .tabs:after {
+    clear: both; }
+  /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
   .tabs > li {
+    display: block;
+    position: relative;
     float: left;
     margin-bottom: -1px; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs > li > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
       margin-right: 2px;
       line-height: 1.42858;
       border: 1px solid transparent;
-      border-radius: 2px 2px 0 0; }
-      /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+      border-radius: 2px 2px 0 0;
+      text-decoration: none; }
+      /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
       .tabs > li > a:hover {
-        border-color: #eeeeee #eeeeee #dddddd; }
-    /* line 28, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+        border-color: #eeeeee #eeeeee #dddddd;
+        background-color: #eeeeee; }
+    /* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs > li.active > a, .tabs > li.active > a:hover, .tabs > li.active > a:focus {
       color: #666666;
       background-color: white;
       border: 1px solid #dddddd;
       border-bottom-color: transparent;
       cursor: default; }
+  /* line 50, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+  .tabs.justified {
+    width: 100%;
+    border-bottom: 0; }
+    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    .tabs.justified > li {
+      display: table-cell;
+      width: 1%;
+      float: none; }
+      /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+      .tabs.justified > li > a {
+        text-align: center;
+        margin-right: 0;
+        border-bottom: 1px solid #dddddd;
+        border-radius: 2px 2px 0 0; }
+    /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    .tabs.justified > .active > a,
+    .tabs.justified > .active > a:hover,
+    .tabs.justified > .active > a:focus {
+      border-bottom-color: white; }
 
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
 .navbar {
