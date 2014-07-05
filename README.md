@@ -2,6 +2,9 @@
 
 Mice is semantic front-end framework.
 
+## Update your browser
+[http://browsehappy.com/](http://browsehappy.com/)
+
 ## Installation
 
 Add this line to your application's Gemfile:
