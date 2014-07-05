@@ -12,18 +12,17 @@
     float: right;
   }
 
-  .menu{
-    display: none;
-  }
+  .menu{ display: none; }
 
   > li{
-    // float:    left;
+    position: relative;
 
     > a{
-      display:          block;
-      position:         relative;
-      text-decoration:  none;
-      color:            #666;
+      display: block;
+      padding: 0 15px;
+      position: relative;
+      text-decoration: none;
+      color: #666;
       position: relative;
     }
 

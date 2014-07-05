@@ -39,17 +39,10 @@
   }
 
   .menu{
-    float:      left;
-    list-style: none;
-    padding:    0;
-    position:   relative;
-
-    .menu{
-      display: none;
-    }
+    float: left;
 
     > li{
-      float:    left;
+      float: left;
 
       > a{
         text-align: center;
