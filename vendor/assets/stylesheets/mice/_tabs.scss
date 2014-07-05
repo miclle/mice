@@ -46,4 +46,27 @@
       }
     }
   }
+
+  &.justified{
+    width: 100%;
+    border-bottom: 0;
+
+    > li {
+      display: table-cell;
+      width: 1%;
+      float: none;
+      > a {
+        text-align: center;
+        margin-right: 0;
+        border-bottom: 1px solid $tabs-justified-link-border-color;
+        border-radius: $border-radius $border-radius 0 0;
+      }
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+      border-bottom-color: $tabs-justified-active-link-border-color;
+    }
+  }
 }
