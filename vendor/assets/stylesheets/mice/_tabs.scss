@@ -3,21 +3,33 @@
 // --------------------------------------------------
 
 .tabs{
-
+  list-style: none;
   border-bottom: 1px solid $tabs-border-color;
+  padding: 0;
+  @include clearfix();
+
   > li {
+    display: block;
+    position: relative;
     float: left;
     // Make the list-items overlay the bottom border
     margin-bottom: -1px;
 
     // Actual tabs (as links)
     > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+
       margin-right: 2px;
       line-height: $line-height-base;
       border: 1px solid transparent;
       border-radius: $border-radius $border-radius 0 0;
+      text-decoration: none;
+
       &:hover {
         border-color: $tabs-link-hover-border-color $tabs-link-hover-border-color $tabs-border-color;
+        background-color:  $tabs-link-hover-background-color;
       }
     }
 

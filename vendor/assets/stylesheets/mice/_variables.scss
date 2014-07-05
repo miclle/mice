@@ -243,6 +243,7 @@ $table-border-color:                #ddd !default;
 // --------------------------------------------------
 $tabs-border-color:                       #ddd !default;
 $tabs-link-hover-border-color:            $gray-lighter !default;
+$tabs-link-hover-background-color:        $tabs-link-hover-border-color !default;
 
 $tabs-active-link-hover-background:       $background-color !default;
 $tabs-active-link-hover-color:            $gray !default;
