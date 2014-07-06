@@ -45,6 +45,10 @@ section.example{
   .bg-danger{
     padding: 10px;
   }
+
+  .breadcrumb:last-child{
+    margin-bottom: 5px;
+  }
 }
 
 pre.highlight{

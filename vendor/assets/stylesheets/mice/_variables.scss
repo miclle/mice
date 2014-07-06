@@ -253,6 +253,21 @@ $tabs-justified-link-border-color:        #ddd !default;
 $tabs-justified-active-link-border-color: $background-color !default;
 
 
+// Breadcrumbs
+// --------------------------------------------------
+$breadcrumb-padding-vertical:       8px !default;
+$breadcrumb-padding-horizontal:     15px !default;
+//** Breadcrumb background color
+$breadcrumb-background:             #f5f5f5 !default;
+//** Breadcrumb text color
+$breadcrumb-color:                  #ccc !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:           $gray-light !default;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:              "/" !default;
+
+
+
 // Pagination
 // --------------------------------------------------
 $pagination-color:                  $link-color !default;
