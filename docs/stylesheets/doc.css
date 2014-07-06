@@ -3282,21 +3282,25 @@ img {
   /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
   .menu .menu {
     display: none; }
-  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
-  .menu > li > a {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    color: #666;
+  /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+  .menu > li {
     position: relative; }
-  /* line 31, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
-  .menu > li.active a {
-    color: #428BCA;
-    background: #F5F5F5; }
-    /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
-    .menu > li.active a:after {
-      height: 3px;
-      background-color: #428BCA; }
+    /* line 20, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+    .menu > li > a {
+      display: block;
+      padding: 0 15px;
+      position: relative;
+      text-decoration: none;
+      color: #666;
+      position: relative; }
+    /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+    .menu > li.active a {
+      color: #428BCA;
+      background: #F5F5F5; }
+      /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
+      .menu > li.active a:after {
+        height: 3px;
+        background-color: #428BCA; }
 
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
 .tabs {
@@ -3316,7 +3320,7 @@ img {
     position: relative;
     float: left;
     margin-bottom: -1px; }
-    /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    /* line 17, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs > li > a {
       position: relative;
       display: block;
@@ -3326,33 +3330,33 @@ img {
       border: 1px solid transparent;
       border-radius: 2px 2px 0 0;
       text-decoration: none; }
-      /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+      /* line 28, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
       .tabs > li > a:hover {
         border-color: #eeeeee #eeeeee #dddddd;
         background-color: #eeeeee; }
-    /* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    /* line 38, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs > li.active > a, .tabs > li.active > a:hover, .tabs > li.active > a:focus {
       color: #666666;
       background-color: white;
       border: 1px solid #dddddd;
       border-bottom-color: transparent;
       cursor: default; }
-  /* line 50, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+  /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
   .tabs.justified {
     width: 100%;
     border-bottom: 0; }
-    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs.justified > li {
       display: table-cell;
       width: 1%;
       float: none; }
-      /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+      /* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
       .tabs.justified > li > a {
         text-align: center;
         margin-right: 0;
         border-bottom: 1px solid #dddddd;
         border-radius: 2px 2px 0 0; }
-    /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
+    /* line 66, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tabs.scss */
     .tabs.justified > .active > a,
     .tabs.justified > .active > a:hover,
     .tabs.justified > .active > a:focus {
@@ -3393,24 +3397,18 @@ img {
       font-weight: 700; }
   /* line 41, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
   .navbar .menu {
-    float: left;
-    list-style: none;
-    padding: 0;
-    position: relative; }
-    /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
-    .navbar .menu .menu {
-      display: none; }
-    /* line 51, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+    float: left; }
+    /* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
     .navbar .menu > li {
       float: left; }
-      /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+      /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
       .navbar .menu > li > a {
         text-align: center;
         padding: 0 20px;
         line-height: 45px;
         -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
         transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; }
-        /* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:after {
           display: block;
           margin: 0 auto;
@@ -3422,18 +3420,18 @@ img {
           width: 100%;
           -webkit-transition: height 0.15s ease;
           transition: height 0.15s ease; }
-        /* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:hover {
           color: #428BCA;
           background: #F5F5F5; }
-          /* line 78, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+          /* line 71, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
           .navbar .menu > li > a:hover:after {
             height: 3px;
             background-color: #428BCA; }
-        /* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+        /* line 76, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
         .navbar .menu > li > a:active {
           background: #F0F0F0; }
-  /* line 88, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
+  /* line 81, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_navbar.scss */
   .navbar form {
     float: left;
     padding-top: 5px; }
@@ -3443,54 +3441,27 @@ img {
   background-color: #FAFAFA; }
   /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
   .sidebar .menu {
-    list-style: none;
-    margin: 0;
-    padding: 15px 0;
-    position: relative; }
-    /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+    padding: 15px 0; }
+    /* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
     .sidebar .menu > li {
-      line-height: 30px;
-      padding: 0 15px;
-      position: relative; }
-      /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      line-height: 30px; }
+      /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
       .sidebar .menu > li:hover:not(.heading) {
         background: rgba(0, 64, 84, 0.03); }
-      /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
       .sidebar .menu > li.heading {
         text-transform: uppercase;
-        padding-top: 30px; }
-        /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+        padding-top: 30px;
+        border-bottom: 1px solid #CCC; }
+        /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
         .sidebar .menu > li.heading a {
           color: #333; }
-        /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
-        .sidebar .menu > li.heading:before {
-          margin: 15px;
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0;
-          border-bottom: solid 1px #FFF; }
-      /* line 40, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      /* line 26, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
       .sidebar .menu > li.heading:first-of-type {
         padding-top: 0; }
-        /* line 42, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
-        .sidebar .menu > li.heading:first-of-type:before {
-          display: none; }
-      /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
-      .sidebar .menu > li > a {
-        display: block;
-        position: relative;
-        text-decoration: none; }
-      /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
+      /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
       .sidebar .menu > li.active {
         background: rgba(0, 64, 84, 0.05); }
-        /* line 58, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
-        .sidebar .menu > li.active a:before, .sidebar .menu > li.active a:after {
-          border: none; }
-        /* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_sidebar.scss */
-        .sidebar .menu > li.active + li a:before {
-          display: none; }
 
 /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_lists.scss */
 ul,
@@ -4046,6 +4017,25 @@ table.hover > tbody > tr:hover > th, table.hover > tbody > tr:hover > td {
     /* line 139, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tables.scss */
     .table.responsive > table > *:last-child > tr:last-child > th, .table.responsive > table > *:last-child > tr:last-child > td {
       border-bottom: none; }
+
+/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_breadcrumbs.scss */
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: whitesmoke;
+  border-radius: 2px; }
+  /* line 13, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_breadcrumbs.scss */
+  .breadcrumb > li {
+    display: inline-block; }
+    /* line 16, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_breadcrumbs.scss */
+    .breadcrumb > li + li:before {
+      content: "/\00a0";
+      padding: 0 5px;
+      color: #cccccc; }
+  /* line 23, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_breadcrumbs.scss */
+  .breadcrumb > .active {
+    color: #999999; }
 
 /* line 29, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_pagination.scss */
 .pagination {
@@ -6171,8 +6161,11 @@ section.example {
   section.example .bg-warning,
   section.example .bg-danger {
     padding: 10px; }
+  /* line 49, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example .breadcrumb:last-child {
+    margin-bottom: 5px; }
 
-/* line 50, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 54, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -6186,13 +6179,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 64, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 68, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 70, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 74, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -6202,17 +6195,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 80, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 84, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 92, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 96, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 95, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 99, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
@@ -6220,20 +6213,20 @@ pre.highlight {
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
 
-/* line 106, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 110, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .navbar {
   position: relative;
   z-index: 99; }
-/* line 111, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 115, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile article.component {
   opacity: .3;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out; }
-  /* line 117, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 121, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   body.mobile article.component.active {
     opacity: 1; }
-/* line 122, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 126, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -6247,7 +6240,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 137, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 141, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
