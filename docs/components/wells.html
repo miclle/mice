@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Code</title>
+    <title>Wells</title>
 
     <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" />
 
@@ -16,7 +16,7 @@
     
   </head>
 
-  <body class="elements elements_code-page">
+  <body class="components components_wells-page">
 
     <nav class="topbar">
       <!-- <ul class="menu"> -->
@@ -32,7 +32,7 @@
 
 
         <ul class="menu">
-          <li class="active">
+          <li class="">
             <a href="/elements">Elements</a>
           </li>
 
@@ -57,7 +57,7 @@
             <a href="/icons">Icons</a>
           </li>
 
-          <li class="">
+          <li class="active">
             <a href="/components">Components</a>
           </li>
 
@@ -75,11 +75,9 @@
     </nav>
 
     <div class="container">
-
   <div class="grid twelve">
 
     <div class="column three">
-
       
 <nav class="sidebar">
   <ul class="menu">
@@ -90,7 +88,7 @@
       <a href="/elements/typography.html">Typography</a>
     </li>
 
-    <li class="active">
+    <li class="">
       <a href="/elements/code.html">Code</a>
     </li>
 
@@ -160,7 +158,7 @@
       <a href="/components/alerts.html">Alerts</a>
     </li>
 
-    <li class="">
+    <li class="active">
       <a href="/components/wells.html">Wells</a>
     </li>
 
@@ -175,72 +173,29 @@
     <li class="heading"><a href="/grids">Grid</a></li>
   </ul>
 </nav>
-
     </div>
 
     <div class="column nine doc">
 
-      <h1 class="title">Code</h1>
+      <h1 class="title">Wells</h1>
 
-      <h2>Inline</h2>
-      <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
-
+      <h2>Default well</h2>
+      <p>Use the well as a simple effect on an element to give it an inset effect.</p>
       <section class="example">
-        For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+        <div class="well">Look, I'm in a well!</div>
       </section>
-<pre class="highlight html">For example, <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> should be wrapped as inline.
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span><span class="nt">&gt;</span>Look, I'm in a well!<span class="nt">&lt;/div&gt;</span>
 </pre>
 
-      <h2>User input</h2>
-      <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+
+      <h2>Optional classes</h2>
+      <p>Control padding and rounded corners with two optional modifier classes.</p>
       <section class="example">
-        To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+        <div class="well large">Look, I'm in a large well!</div>
+        <div class="well small">Look, I'm in a small well!</div>
       </section>
-<pre class="highlight html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.
-</pre>
-
-      <h2 id="code-block">Basic block</h2>
-      <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
-      <section class="example">
-        <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-      </section>
-<pre class="highlight html"><span class="nt">&lt;pre&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/pre&gt;</span>
-</pre>
-
-      <h3>Scrollable</h3>
-      <p>You may optionally add the <code>.scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
-      <section class="example">
-<pre class="scrollable">
-@mixin column-child($columns) {
-  > .column {
-    width: percentage(1 / $columns);
-  }
-}
-
-@mixin column-self($columns, $value) {
-  &.column {
-    width: percentage(1 / $columns * $value);
-  }
-}
-
-
-$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
-
-@for $i from 1 through length($columns) {
-  .grid.#{nth($columns, $i)} {
-    @include column-child($i + 1);
-    @for $j from 1 through $i - 1 {
-      > .#{nth($columns, $j)}{
-        @include column-self($i + 1, $j + 1);
-      }
-    }
-  }
-}
-</pre>
-    </section>
-<pre class="highlight html"><span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">"scrollable"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/pre&gt;</span>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well large"</span><span class="nt">&gt;</span>Look, I'm in a large well!<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well small"</span><span class="nt">&gt;</span>Look, I'm in a small well!<span class="nt">&lt;/div&gt;</span>
 </pre>
 
     </div>

@@ -4908,6 +4908,29 @@ button.close {
   border: 0;
   -webkit-appearance: none; }
 
+/* line 6, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_wells.scss */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  border: 1px solid #e3e3e3;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_wells.scss */
+  .well blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
+  /* line 20, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_wells.scss */
+  .well.large {
+    padding: 24px;
+    border-radius: 4px; }
+  /* line 24, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_wells.scss */
+  .well.small {
+    padding: 9px;
+    border-radius: 2px; }
+
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
   padding: 0;
@@ -6164,8 +6187,11 @@ section.example {
   /* line 49, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example .breadcrumb:last-child {
     margin-bottom: 5px; }
+  /* line 50, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example .well:last-child {
+    margin-bottom: 10px; }
 
-/* line 54, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 53, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -6179,13 +6205,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 68, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 67, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 74, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 73, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -6195,17 +6221,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 84, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 83, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 96, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 95, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 99, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 98, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
@@ -6213,20 +6239,20 @@ pre.highlight {
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
 
-/* line 110, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 109, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .navbar {
   position: relative;
   z-index: 99; }
-/* line 115, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 114, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile article.component {
   opacity: .3;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out; }
-  /* line 121, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 120, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   body.mobile article.component.active {
     opacity: 1; }
-/* line 126, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 125, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -6240,7 +6266,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 141, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 140, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
