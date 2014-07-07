@@ -267,6 +267,11 @@ $breadcrumb-active-color:           $gray-light !default;
 $breadcrumb-separator:              "/" !default;
 
 
+// Wells
+// --------------------------------------------------
+$well-background:                   #f5f5f5 !default;
+$well-border:                       darken($well-background, 7%) !default;
+
 
 // Pagination
 // --------------------------------------------------

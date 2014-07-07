@@ -46,9 +46,8 @@ section.example{
     padding: 10px;
   }
 
-  .breadcrumb:last-child{
-    margin-bottom: 5px;
-  }
+  .breadcrumb:last-child{ margin-bottom: 5px; }
+  .well:last-child{ margin-bottom: 10px; }
 }
 
 pre.highlight{
