@@ -13,7 +13,47 @@ title: Modals
 
       <h1 class="title">Modals</h1>
 
-      <h2>TODO</h2>
+      <h2>Static example</h2>
+      <p>A rendered modal with header, body, and set of actions in the footer.</p>
+      <section class="example has-modal">
+        <div class="modal">
+          <div class="dialog">
+            <div class="content">
+              <div class="header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4>Modal title</h4>
+              </div>
+              <div class="body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="footer">
+                <button type="button" class="default" data-dismiss="modal">Close</button>
+                <button type="button" class="primary">Save changes</button>
+              </div>
+            </div><!-- /.content -->
+          </div><!-- /.dialog -->
+        </div><!-- /.modal -->
+      </section>
+<% code "html" do %>
+<div class="modal">
+  <div class="dialog">
+    <div class="content">
+      <div class="header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4>Modal title</h4>
+      </div>
+      <div class="body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="footer">
+        <button type="button" class="default" data-dismiss="modal">Close</button>
+        <button type="button" class="primary">Save changes</button>
+      </div>
+    </div><!-- /.content -->
+  </div><!-- /.dialog -->
+</div><!-- /.modal -->
+<% end -%>
+
 
     </div>
 

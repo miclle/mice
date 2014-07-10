@@ -48,6 +48,25 @@ section.example{
 
   .breadcrumb:last-child{ margin-bottom: 5px; }
   .well:last-child{ margin-bottom: 10px; }
+
+  &.has-modal{
+    background-color: #F5F5F5;
+  }
+
+  .modal{
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    .dialog{
+      left: auto;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 }
 
 pre.highlight{
