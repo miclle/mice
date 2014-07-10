@@ -491,43 +491,43 @@ mark,
 .text.muted {
   color: #999999; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.primary {
   color: #428bca; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.primary:hover {
   color: #3071a9; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.success {
   color: #3c763d; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.success:hover {
   color: #2b542c; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.info {
   color: #31708f; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.info:hover {
   color: #245269; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.warning {
   color: #8a6d3b; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.warning:hover {
   color: #66512c; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.danger {
   color: #a94442; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.danger:hover {
   color: #843534; }
 
@@ -535,43 +535,43 @@ a.text.danger:hover {
 .bg-primary {
   color: #fff; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-primary {
   background-color: #428bca; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-primary:hover {
   background-color: #3071a9; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-success {
   background-color: #dff0d8; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-success:hover {
   background-color: #c1e2b3; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-info {
   background-color: #d9edf7; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-info:hover {
   background-color: #afd9ee; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-warning {
   background-color: #fcf8e3; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-warning:hover {
   background-color: #f7ecb5; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-danger {
   background-color: #f2dede; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-danger:hover {
   background-color: #e4b9b9; }
 

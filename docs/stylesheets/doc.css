@@ -581,43 +581,43 @@ mark,
 .text.muted {
   color: #999999; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.primary {
   color: #428bca; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.primary:hover {
   color: #3071a9; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.success {
   color: #3c763d; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.success:hover {
   color: #2b542c; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.info {
   color: #31708f; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.info:hover {
   color: #245269; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.warning {
   color: #8a6d3b; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.warning:hover {
   color: #66512c; }
 
-/* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.danger {
   color: #a94442; }
 
-/* line 143, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.danger:hover {
   color: #843534; }
 
@@ -625,43 +625,43 @@ a.text.danger:hover {
 .bg-primary {
   color: #fff; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-primary {
   background-color: #428bca; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-primary:hover {
   background-color: #3071a9; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-success {
   background-color: #dff0d8; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-success:hover {
   background-color: #c1e2b3; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-info {
   background-color: #d9edf7; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-info:hover {
   background-color: #afd9ee; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-warning {
   background-color: #fcf8e3; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-warning:hover {
   background-color: #f7ecb5; }
 
-/* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-danger {
   background-color: #f2dede; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-danger:hover {
   background-color: #e4b9b9; }
 
@@ -4931,6 +4931,136 @@ button.close {
     padding: 9px;
     border-radius: 2px; }
 
+/* line 11, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal-open {
+  overflow: hidden; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal-open.modal {
+    overflow-x: hidden;
+    overflow-y: auto; }
+
+/* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  /* line 35, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal.fade .dialog {
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out; }
+  /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal.in .dialog {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  /* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: black; }
+    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+    .modal.backdrop.fade {
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    /* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+    .modal.backdrop.in {
+      opacity: 0.5;
+      filter: alpha(opacity=50); }
+
+/* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal .dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+/* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal .content {
+  position: relative;
+  background-color: white;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0; }
+/* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal .header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42858px; }
+  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .header .close {
+    margin-top: -2px; }
+  /* line 92, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .header h1, .modal .header h2, .modal .header h3, .modal .header h4, .modal .header h5, .modal .header h6 {
+    margin: 0;
+    line-height: 1.42858; }
+/* line 100, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal .body {
+  position: relative;
+  padding: 15px; }
+/* line 106, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal .footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5; }
+  /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .modal .footer:before, .modal .footer:after {
+    content: " ";
+    display: table; }
+  /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+  .modal .footer:after {
+    clear: both; }
+  /* line 113, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .footer .button + .button {
+    margin-left: 5px;
+    margin-bottom: 0; }
+  /* line 118, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .footer .buttons .button + .button {
+    margin-left: -1px; }
+  /* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .footer .button.block + .button.block {
+    margin-left: 0; }
+
+/* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@media (min-width: 768px) {
+  /* line 144, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .dialog {
+    width: 600px;
+    margin: 30px auto; }
+  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+
+  /* line 154, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal.small {
+    width: 300px; } }
+@media (min-width: 992px) {
+  /* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal.large {
+    width: 900px; } }
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
   padding: 0;
@@ -6190,8 +6320,24 @@ section.example {
   /* line 50, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   section.example .well:last-child {
     margin-bottom: 10px; }
+  /* line 52, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example.has-modal {
+    background-color: #F5F5F5; }
+  /* line 56, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  section.example .modal {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto; }
+    /* line 64, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    section.example .modal .dialog {
+      left: auto;
+      margin-right: auto;
+      margin-left: auto; }
 
-/* line 53, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 72, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -6205,13 +6351,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 67, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 86, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 73, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 92, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -6221,17 +6367,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 83, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 102, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 95, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 114, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 98, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 117, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
@@ -6239,20 +6385,20 @@ pre.highlight {
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
 
-/* line 109, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 128, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .navbar {
   position: relative;
   z-index: 99; }
-/* line 114, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 133, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile article.component {
   opacity: .3;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out; }
-  /* line 120, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 139, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   body.mobile article.component.active {
     opacity: 1; }
-/* line 125, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 144, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -6266,7 +6412,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 140, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 159, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
