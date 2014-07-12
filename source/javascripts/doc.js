@@ -5,3 +5,8 @@
 // ZeroClipboard
 // ZeroClipboard.config( { moviePath: '/images/ZeroClipboard.swf' } );
 
+$(function(){
+
+  $("[data-toggle=tooltip]").tipsy();
+
+});
