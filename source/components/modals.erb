@@ -58,18 +58,18 @@ title: Modals
       <h2>Live demo</h2>
       <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
       <section class="example">
-        <button class="btn primary" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+        <button class="btn primary" data-toggle="modal" data-target="#live-modal">Launch demo modal</button>
       </section>
 <% code "html" do %>
 <!-- Button trigger modal -->
-<button class="btn primary large" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+<button class="btn primary large" data-toggle="modal" data-target="#live-modal">Launch demo modal</button>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="live-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="dialog">
     <div class="content">
       <div class="header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
         <h4 id="myModalLabel">Modal title</h4>
       </div>
       <div class="body">
@@ -84,7 +84,7 @@ title: Modals
 </div>
 <% end -%>
 
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="live-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="dialog">
           <div class="content">
             <div class="header">
@@ -93,28 +93,75 @@ title: Modals
             </div>
             <div class="body">
               <h4>Overflowing text to show scroll behavior</h4>
-
               <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
               <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
               <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
               <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
               <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
               <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
               <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
             <div class="footer">
               <button type="button" data-dismiss="modal">Close</button>
               <button type="button" class="primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <h2>Optional sizes</h2>
+      <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.dialog</code>.</p>
+      <section class="example">
+        <button class="btn primary" data-toggle="modal" data-target="#small-live-modal">Small modal</button>
+        <button class="btn primary" data-toggle="modal" data-target="#large-live-modal">Large modal</button>
+      </section>
+<% code "html" do %>
+<button class="btn primary" data-toggle="modal" data-target="#small-live-modal">Small modal</button>
+
+<div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="dialog small">
+    <div class="content">
+      ...
+    </div>
+  </div>
+</div>
+
+<button class="btn primary" data-toggle="modal" data-target="#large-live-modal">Large modal</button>
+
+<div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="dialog larger">
+    <div class="content">
+      ...
+    </div>
+  </div>
+</div>
+<% end -%>
+      <div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="dialog small">
+          <div class="content">
+            <div class="header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+              <h4 id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="body">
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="large-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="dialog large">
+          <div class="content">
+            <div class="header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+              <h4 id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="body">
+              ...
             </div>
           </div>
         </div>

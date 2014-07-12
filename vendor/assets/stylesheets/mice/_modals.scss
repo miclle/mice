@@ -11,7 +11,7 @@
 .modal-open {
   overflow: hidden;
 
-  &.modal {
+  .modal {
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -150,9 +150,9 @@
   }
 
   // Modal sizes
-  .modal.small { width: $modal-small; }
+  .modal .small { width: $modal-small; }
 }
 
 @media (min-width: $screen-md-min) {
-  .modal.large { width: $modal-large; }
+  .modal .large { width: $modal-large; }
 }
