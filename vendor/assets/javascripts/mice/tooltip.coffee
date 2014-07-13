@@ -43,7 +43,7 @@
         actualHeight = $tip[0].offsetHeight
         gravity = maybeCall @.options.gravity, @.$element[0]
 
-        switch gravity.chartAt(0)
+        switch gravity.charAt(0)
           when 'n'
             tp = {top: pos.top + pos.height + @.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
           when 's'
@@ -54,10 +54,13 @@
             tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width + @.options.offset};
 
         if gravity.length == 2
-          if gravity.chartAt(1) == 'w' then (tp.left = pos.left + pos.width / 2 - 15) else (tp.left = pos.left + pos.width / 2 - actualWidth + 15)
+          if gravity.charAt(1) == 'w'
+            tp.left = pos.left + pos.width / 2 - 15
+          else
+            tp.left = pos.left + pos.width / 2 - actualWidth + 15
 
         $tip.css(tp).addClass('tipsy-' + gravity)
-        $tip.find('.tipsy-arrow')[0].className = 'tipsy-arrow tipsy-arrow-' + gravity.chartAt(0)
+        $tip.find('.tipsy-arrow')[0].className = 'tipsy-arrow tipsy-arrow-' + gravity.charAt(0)
         if @.options.className then $tip.addClass(maybeCall @.options.className, @.$element[0])
 
         if @.options.fade
@@ -113,13 +116,13 @@
       if tipsy then tipsy[options]()
       return @
 
-    options = $.extend({}, $.fn.tipsy.default, options)
+    options = $.extend({}, $.fn.tipsy.defaults, options)
 
     get = (element) ->
       tipsy = $.data(element, 'tipsy')
       if !tipsy
         tipsy = new Tipsy(element, $.fn.tipsy.elementOptions(element, options))
-        $.data(element, tipsy, tipsy)
+        $.data(element, 'tipsy', tipsy)
       return tipsy
 
     enter = ->
@@ -139,7 +142,11 @@
       else
         setTimeout((-> tipsy.hide() if tipsy.hoverState == 'out' ), options.delayOut)
 
-    @.each( -> get @ ) if !options.live
+    if !options.live
+      @.each( ->
+        get(@)
+        return
+      )
 
     if options.trigger != 'manual'
       binder  = if options.live then 'live' else 'bind'
