@@ -1,8 +1,10 @@
-# tipsy, facebook style tooltips for jquery
-# version 1.0.0a
-# (c) 2008-2010 jason frame [jason@onehackoranother.com]
-# released under the MIT license
+# Mice: tooltip
+
+# Inspired by the original jQuery.tipsy by Jason Frame
 # https://github.com/jaz303/tipsy
+
+# Copyright (c) 2014 Miclle
+# Licensed under MIT (https://github.com/miclle/mice/blob/master/LICENSE)
 
 'use strict';
 
@@ -18,7 +20,7 @@
     false
 
 
-  class Tipsy
+  class Tooltip
     constructor: (@element, @options) ->
       @.$element = $(@element)
       @.options = @options
@@ -30,8 +32,8 @@
       if title and @.enabled
         $tip = @.tip()
 
-        $tip.find('.tipsy-inner')[if @options.html then 'html' else 'text'](title)
-        $tip[0].className = 'tipsy'
+        $tip.find('.tooltip-inner')[if @options.html then 'html' else 'text'](title)
+        $tip[0].className = 'tooltip'
         $tip.remove().css({ top: 0, left:0, visibility: 'hidden', display: 'block'}).prependTo(document.body)
 
         pos = $.extend({}, @.$element.offset(), {
@@ -41,9 +43,9 @@
 
         actualWidth = $tip[0].offsetWidth
         actualHeight = $tip[0].offsetHeight
-        gravity = maybeCall @.options.gravity, @.$element[0]
+        placement = maybeCall @.options.placement, @.$element[0]
 
-        switch gravity.charAt(0)
+        switch placement.charAt(0)
           when 'n'
             tp = {top: pos.top + pos.height + @.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
           when 's'
@@ -53,14 +55,14 @@
           when 'w'
             tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width + @.options.offset};
 
-        if gravity.length == 2
-          if gravity.charAt(1) == 'w'
+        if placement.length == 2
+          if placement.charAt(1) == 'w'
             tp.left = pos.left + pos.width / 2 - 15
           else
             tp.left = pos.left + pos.width / 2 - actualWidth + 15
 
-        $tip.css(tp).addClass('tipsy-' + gravity)
-        $tip.find('.tipsy-arrow')[0].className = 'tipsy-arrow tipsy-arrow-' + gravity.charAt(0)
+        $tip.css(tp).addClass('tooltip-' + placement)
+        $tip.find('.tooltip-arrow')[0].className = 'tooltip-arrow tooltip-arrow-' + placement.charAt(0)
         if @.options.className then $tip.addClass(maybeCall @.options.className, @.$element[0])
 
         if @.options.fade
@@ -74,13 +76,13 @@
       if @.options.fade then @.tip().stop().fadeOut(-> $(@).remove()) else @.tip().remove()
 
     fixTitle: ->
-      if @.$element.attr('title') or typeof(@.$element.attr('original-title')) != 'string'
-        @.$element.attr('original-title', @.$element.attr('title') || '').removeAttr('title')
+      if @.$element.attr('title') or typeof(@.$element.attr('data-original-title')) != 'string'
+        @.$element.attr('data-original-title', @.$element.attr('title') || '').removeAttr('title')
 
     getTitle: ->
       @.fixTitle()
       if typeof @.options.title == 'string'
-        title = @.$element.attr( if @.options.title == 'title' then 'original-title' else @.options.title)
+        title = @.$element.attr( if @.options.title == 'title' then 'data-original-title' else @.options.title)
       else if typeof @.options.title == 'function'
         title = @.options.title.call(@.$element[0])
 
@@ -89,8 +91,8 @@
 
     tip: ->
       if !@.$tip
-        @.$tip = $('<div class="tipsy"></div>').html('<div class="tipsy-arrow"></div><div class="tipsy-inner"></div>');
-        @.$tip.data('tipsy-pointee', @.$element[0]);
+        @.$tip = $('<div class="tooltip"></div>').html('<div class="tooltip-arrow"></div><div class="tooltip-inner"></div>');
+        @.$tip.data('tooltip-pointee', @.$element[0]);
       @.$tip;
 
     validate: ->
@@ -108,39 +110,40 @@
     toggleEnabled: ->
       @.enabled = !@.enabled
 
-  $.fn.tipsy = (options) ->
+
+  $.fn.tooltip = (options) ->
     if options == true
-      return @.data('tipsy')
+      return @.data('tooltip')
     else if typeof options == 'string'
-      tipsy = @.data('tipsy')
-      if tipsy then tipsy[options]()
+      tooltip = @.data('tooltip')
+      if tooltip then tooltip[options]()
       return @
 
-    options = $.extend({}, $.fn.tipsy.defaults, options)
+    options = $.extend({}, $.fn.tooltip.defaults, options)
 
     get = (element) ->
-      tipsy = $.data(element, 'tipsy')
-      if !tipsy
-        tipsy = new Tipsy(element, $.fn.tipsy.elementOptions(element, options))
-        $.data(element, 'tipsy', tipsy)
-      return tipsy
+      tooltip = $.data(element, 'tooltip')
+      if !tooltip
+        tooltip = new Tooltip(element, $.fn.tooltip.elementOptions(element, options))
+        $.data(element, 'tooltip', tooltip)
+      return tooltip
 
     enter = ->
-      tipsy = get @
-      tipsy.hoverState = 'in'
+      tooltip = get @
+      tooltip.hoverState = 'in'
       if options.delayIn == 0
-        tipsy.show()
+        tooltip.show()
       else
-        tipsy.fixTitle()
-        setTimeout((-> tipsy.show() if tipsy.hoverState == 'in' ), options.delayIn)
+        tooltip.fixTitle()
+        setTimeout((-> tooltip.show() if tooltip.hoverState == 'in' ), options.delayIn)
 
     leave = ->
-      tipsy = get @
-      tipsy.hoverState = 'out'
+      tooltip = get @
+      tooltip.hoverState = 'out'
       if options.delayOut == 0
-        tipsy.hide()
+        tooltip.hide()
       else
-        setTimeout((-> tipsy.hide() if tipsy.hoverState == 'out' ), options.delayOut)
+        setTimeout((-> tooltip.hide() if tooltip.hoverState == 'out' ), options.delayOut)
 
     if !options.live
       @.each( ->
@@ -157,13 +160,13 @@
     @
 
 
-  $.fn.tipsy.defaults = {
+  $.fn.tooltip.defaults = {
     className: null
     delayIn: 0
     delayOut: 0
     fade: false
     fallback: ''
-    gravity: 's'
+    placement: 's'
     html: false
     live: false
     offset: 0
@@ -173,25 +176,25 @@
   };
 
 
-  $.fn.tipsy.revalidate = ->
-    $('.tipsy').each ->
-      pointee = $.data(@, 'tipsy-pointee')
+  $.fn.tooltip.revalidate = ->
+    $('.tooltip').each ->
+      pointee = $.data(@, 'tooltip-pointee')
       $(@).remove() if (!pointee || !isElementInDOM(pointee))
 
 
-  $.fn.tipsy.elementOptions = (ele, options) ->
+  $.fn.tooltip.elementOptions = (ele, options) ->
     if $.metadata then $.extend({}, options, $(ele).metadata()) else options
 
 
-  $.fn.tipsy.autoNS = ->
+  $.fn.tooltip.autoNS = ->
     if $(@).offset().top > ($(document).scrollTop() + $(window).height() / 2) then 's' else 'n'
 
 
-  $.fn.tipsy.autoWE = ->
+  $.fn.tooltip.autoWE = ->
     if $(@).offset().left > ($(document).scrollLeft() + $(window).width() / 2) then 'e' else 'w'
 
 
-  $.fn.tipsy.autoBounds = (margin, prefer) ->
+  $.fn.tooltip.autoBounds = (margin, prefer) ->
     ->
       dir = { ns: prefer[0], ew:(if prefer.length > 1 then prefer[1] else false)}
       boundTop = $(document).scrollTop + margin

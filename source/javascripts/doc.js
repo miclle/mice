@@ -7,6 +7,6 @@
 
 $(function(){
 
-  $("[data-toggle=tooltip]").tipsy();
+  $("[data-toggle=tooltip]").tooltip();
 
 });
