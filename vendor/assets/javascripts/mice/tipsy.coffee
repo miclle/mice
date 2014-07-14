@@ -27,6 +27,13 @@
       @.enabled = true
       @.fixTitle()
 
+    getOptions: (options) ->
+      options = $.extend({}, this.getDefaults(), @.$element.data(), options)
+
+      options.delay = { show: options.delay, hide: options.delay } if options.delay and typeof options.delay == 'number'
+
+      options
+
     show: ->
       title = @.getTitle()
       if title and @.enabled
@@ -45,21 +52,23 @@
         actualHeight = $tip[0].offsetHeight
         placement = maybeCall @.options.placement, @.$element[0]
 
-        switch placement.charAt(0)
-          when 'n'
+        console.log placement
+
+        switch placement
+          when 'bottom'
             tp = {top: pos.top + pos.height + @.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
-          when 's'
+          when 'top'
             tp = {top: pos.top - actualHeight - @.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
-          when 'e'
+          when 'left'
             tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth - @.options.offset};
-          when 'w'
+          when 'right'
             tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width + @.options.offset};
 
-        if placement.length == 2
-          if placement.charAt(1) == 'w'
-            tp.left = pos.left + pos.width / 2 - 15
-          else
-            tp.left = pos.left + pos.width / 2 - actualWidth + 15
+        # if placement.length == 2
+        #   if placement.charAt(1) == 'w'
+        #     tp.left = pos.left + pos.width / 2 - 15
+        #   else
+        #     tp.left = pos.left + pos.width / 2 - actualWidth + 15
 
         $tip.css(tp).addClass('tooltip-' + placement)
         $tip.find('.tooltip-arrow')[0].className = 'tooltip-arrow tooltip-arrow-' + placement.charAt(0)
@@ -119,7 +128,9 @@
       if tooltip then tooltip[options]()
       return @
 
-    options = $.extend({}, $.fn.tooltip.defaults, options)
+    # options = $.extend({}, $.fn.tooltip.defaults, options)
+
+    options = $.extend({}, $.fn.tooltip.defaults, @.data(), options)
 
     get = (element) ->
       tooltip = $.data(element, 'tooltip')
@@ -159,6 +170,10 @@
 
     @
 
+  # placement:
+  #   northwest north northeast
+  #   west            east
+  #   southwest south southeast
 
   $.fn.tooltip.defaults = {
     className: null
