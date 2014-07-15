@@ -515,3 +515,23 @@ $tooltip-opacity:             .9 !default;
 $tooltip-arrow-width:         5px !default;
 $tooltip-arrow-color:         $tooltip-background !default;
 
+$tooltip-primary-color:         #fff !default;
+$tooltip-primary-background:    $brand-primary !default;
+$tooltip-primary-arrow-color:   $tooltip-primary-background !default;
+
+$tooltip-success-color:         #fff !default;
+$tooltip-success-background:    $brand-success !default;
+$tooltip-success-arrow-color:   $tooltip-success-background !default;
+
+$tooltip-info-color:            #fff !default;
+$tooltip-info-background:       $brand-info !default;
+$tooltip-info-arrow-color:      $tooltip-info-background !default;
+
+$tooltip-warning-color:         #fff !default;
+$tooltip-warning-background:    $brand-warning !default;
+$tooltip-warning-arrow-color:   $tooltip-warning-background !default;
+
+$tooltip-danger-color:          #fff !default;
+$tooltip-danger-background:     $brand-danger !default;
+$tooltip-danger-arrow-color:    $tooltip-danger-background !default;
+
