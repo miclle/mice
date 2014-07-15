@@ -224,9 +224,11 @@
       }, if isBody then { top: 0, left: 0 } else $element.offset())
 
     getCalculatedOffset: (placement, pos, actualWidth, actualHeight) ->
-      return if placement == 'bottom' then { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  } else
-             if placement == 'top'    then { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } else
-             if placement == 'left'   then { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } else { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width }
+      switch placement
+        when 'bottom' then { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  }
+        when 'top'    then { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  }
+        when 'left'   then { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth }
+        when 'right'  then { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
 
     getViewportAdjustedDelta: (placement, pos, actualWidth, actualHeight) ->
       delta = { top: 0, left: 0 }
