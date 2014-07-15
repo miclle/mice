@@ -6,6 +6,13 @@
 # Copyright (c) 2014 Miclle
 # Licensed under MIT (https://github.com/miclle/mice/blob/master/LICENSE)
 
+
+# Generated markup by the plugin
+# <div class="tooltip top" role="tooltip">
+#   <div class="arrow"></div>
+#   <div class="inner">Some tooltip text!</div>
+# </div>
+
 'use strict';
 
 (($) ->
