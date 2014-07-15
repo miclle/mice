@@ -97,7 +97,7 @@
 
     show: ->
       e = $.Event('show.bs.'+@type)
-      if @hasContent() and @enabled
+      if @getTitle() and @enabled
         @$element.trigger e
 
         inDom =  $.contains(document.documentElement, @$element[0])
@@ -156,11 +156,8 @@
       marginLeft = parseInt($tip.css('margin-left'), 10)
 
       # we must check for NaN for ie 8/9
-      marginTop  = 0 if isNaN(marginTop)
-      marginLeft = 0 if isNaN(marginLeft)
-
-      offset.top  = offset.top  + marginTop
-      offset.left = offset.left + marginLeft
+      offset.top  = offset.top  + if isNaN(marginTop)  then 0 else marginTop
+      offset.left = offset.left + if isNaN(marginLeft) then 0 else marginLeft
 
       # $.fn.offset doesn't round pixel values
       # so we use setOffset directly with our own function B-0
@@ -189,11 +186,7 @@
       @arrow().css(position, if delta then (50 * (1 - delta / dimension) + '%') else '')
 
     setContent: ->
-      $tip  = @tip()
-      title = @getTitle()
-
-      $tip.find('.tooltip-inner')[if @options.html then 'html' else 'text'](title)
-      $tip.removeClass('fade in top bottom left right')
+      @tip().find('.inner')[if @options.html then 'html' else 'text'](@getTitle()).removeClass('fade in top bottom left right')
 
     hide: ->
       that = @
@@ -217,11 +210,7 @@
       @
 
     fixTitle: ->
-      $e = @$element
-      $e.attr('data-original-title', $e.attr('title') || '').attr('title', '') if $e.attr('title') or typeof ($e.attr('data-original-title')) != 'string'
-
-    hasContent: ->
-      @getTitle()
+      @$element.attr('data-original-title', @$element.attr('title') or '').removeAttr('title') if @$element.attr('title') or typeof (@$element.attr('data-original-title')) != 'string'
 
     getPosition: ($element) ->
       $element  = $element or @$element
@@ -237,7 +226,7 @@
     getCalculatedOffset: (placement, pos, actualWidth, actualHeight) ->
       return if placement == 'bottom' then { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  } else
              if placement == 'top'    then { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } else
-             if placement == 'left'   then { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } else { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
+             if placement == 'left'   then { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } else { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width }
 
     getViewportAdjustedDelta: (placement, pos, actualWidth, actualHeight) ->
       delta = { top: 0, left: 0 }
@@ -249,31 +238,28 @@
       if /right|left/.test placement
         topEdgeOffset    = pos.top - viewportPadding - viewportDimensions.scroll
         bottomEdgeOffset = pos.top + viewportPadding - viewportDimensions.scroll + actualHeight
-        if topEdgeOffset < viewportDimensions.top
+        if topEdgeOffset < viewportDimensions.top #top overflow
           delta.top = viewportDimensions.top - topEdgeOffset
-        else if bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height
+        else if bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height #bottom overflow
           delta.top = viewportDimensions.top + viewportDimensions.height - bottomEdgeOffset
       else
         leftEdgeOffset  = pos.left - viewportPadding
         rightEdgeOffset = pos.left + viewportPadding + actualWidth
-        if leftEdgeOffset < viewportDimensions.left
+        if leftEdgeOffset < viewportDimensions.left #left overflow
           delta.left = viewportDimensions.left - leftEdgeOffset
-        else if rightEdgeOffset > viewportDimensions.width
+        else if rightEdgeOffset > viewportDimensions.width #right overflow
           delta.left = viewportDimensions.left + viewportDimensions.width - rightEdgeOffset
 
       delta
 
     getTitle: ->
-      $e = @$element
-      o  = @options
-      title = $e.attr('data-original-title') or (if typeof o.title == 'function' then o.title.call($e[0]) else  o.title)
-      title
+      @$element.attr('data-original-title') or (if typeof @options.title == 'function' then @options.title.call(@$element[0]) else  @options.title)
 
     tip: ->
       @$tip = @$tip or $(@options.template)
 
     arrow: ->
-      @$arrow = @$arrow or @tip().find('.tooltip-arrow')
+      @$arrow = @$arrow or @tip().find('.arrow')
 
     validate: ->
       if !@$element[0].parentNode
@@ -291,7 +277,7 @@
       @enabled = !@enabled
 
     toggle: (e) ->
-      self = this
+      self = @
       if e
         self = $(e.currentTarget).data('bs.' + @type)
         if !self
@@ -307,27 +293,25 @@
 
   $.fn.tooltip = (option) ->
     @each ->
-      $this   = $(@)
-      data    = $this.data('bs.tooltip')
-      options = typeof option == 'object' and option
+      $element = $(@)
+      data     = $element.data('bs.tooltip')
+      options  = typeof option == 'object' and option
 
       return if !data and option == 'destroy'
-      $this.data('bs.tooltip', (data = new Tooltip(@, options))) if !data
+
+      $element.data('bs.tooltip', (data = new Tooltip(@, options))) if !data
+
       data[option]() if typeof option == 'string'
 
-  old = $.fn.tooltip
 
   $.fn.tooltip.Constructor = Tooltip
 
-  $.fn.tooltip.noConflict = ->
-    $.fn.tooltip = old
-    @
 
   $.fn.tooltip.defaults =
     animation: true
     placement: 'top'
     selector: false
-    template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+    template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="inner"></div></div>'
     trigger: 'hover focus'
     title: ''
     delay: 0
