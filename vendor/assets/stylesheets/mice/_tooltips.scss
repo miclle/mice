@@ -10,31 +10,23 @@
     background-color: $tooltip-background;
   }
 
-  &.top .arrow {
-    border-top-color: $tooltip-arrow-color;
-  }
-  &.top-left .arrow {
-    border-top-color: $tooltip-arrow-color;
-  }
+  &.top .arrow,
+  &.top-left .arrow,
   &.top-right .arrow {
     border-top-color: $tooltip-arrow-color;
   }
+
   &.right .arrow {
     border-right-color: $tooltip-arrow-color;
   }
   &.left .arrow {
     border-left-color: $tooltip-arrow-color;
   }
-  &.bottom .arrow {
-    border-bottom-color: $tooltip-arrow-color;
-  }
-  &.bottom-left .arrow {
-    border-bottom-color: $tooltip-arrow-color;
-  }
+  &.bottom .arrow,
+  &.bottom-left .arrow,
   &.bottom-right .arrow {
     border-bottom-color: $tooltip-arrow-color;
   }
-
 }
 
 
@@ -79,57 +71,50 @@
     left: 50%;
     margin-left: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
-    border-top-color: $tooltip-arrow-color;
   }
   &.top-left .arrow {
     bottom: 0;
     left: $tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
-    border-top-color: $tooltip-arrow-color;
   }
   &.top-right .arrow {
     bottom: 0;
     right: $tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
-    border-top-color: $tooltip-arrow-color;
   }
   &.right .arrow {
     top: 50%;
     left: 0;
     margin-top: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
-    border-right-color: $tooltip-arrow-color;
   }
   &.left .arrow {
     top: 50%;
     right: 0;
     margin-top: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
-    border-left-color: $tooltip-arrow-color;
   }
   &.bottom .arrow {
     top: 0;
     left: 50%;
     margin-left: -$tooltip-arrow-width;
     border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
-    border-bottom-color: $tooltip-arrow-color;
   }
   &.bottom-left .arrow {
     top: 0;
     left: $tooltip-arrow-width;
     border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
-    border-bottom-color: $tooltip-arrow-color;
   }
   &.bottom-right .arrow {
     top: 0;
     right: $tooltip-arrow-width;
     border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
-    border-bottom-color: $tooltip-arrow-color;
   }
 
 
   // Colors
-  // Contextual variations (linked labels get darker on :hover)
+  // Contextual variations
+  &         { @include tooltip-variant($tooltip-color,          $tooltip-background,          $tooltip-arrow-color);         }
   &.primary { @include tooltip-variant($tooltip-primary-color,  $tooltip-primary-background,  $tooltip-primary-arrow-color); }
   &.success { @include tooltip-variant($tooltip-success-color,  $tooltip-success-background,  $tooltip-success-arrow-color); }
   &.info    { @include tooltip-variant($tooltip-info-color,     $tooltip-info-background,     $tooltip-info-arrow-color);    }

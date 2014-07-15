@@ -11,7 +11,7 @@
 (($) ->
 
   # TOOLTIP PUBLIC CLASS DEFINITION
-
+  # ===============================
   class Tooltip
     constructor: (element, options) ->
       @type
@@ -293,6 +293,8 @@
       @hide().$element.off('.' + @type).removeData('bs.' + @type)
 
 
+  # TOOLTIP PLUGIN DEFINITION
+  # =========================
   $.fn.tooltip = (option) ->
     @each ->
       $element = $(@)
@@ -308,7 +310,8 @@
 
   $.fn.tooltip.Constructor = Tooltip
 
-
+  # TOOLTIP PLUGIN DEFAULT OPTIONS
+  # =========================
   $.fn.tooltip.defaults =
     animation: true
     placement: 'top'
