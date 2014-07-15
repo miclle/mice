@@ -258,7 +258,7 @@
       @$element.attr('data-original-title') or (if typeof @options.title == 'function' then @options.title.call(@$element[0]) else  @options.title)
 
     tip: ->
-      @$tip = @$tip or $(@options.template)
+      @$tip = @$tip or $(@options.template).addClass @options.contextual
 
     arrow: ->
       @$arrow = @$arrow or @tip().find('.arrow')
@@ -312,6 +312,7 @@
   $.fn.tooltip.defaults =
     animation: true
     placement: 'top'
+    contextual: ''
     selector: false
     template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="inner"></div></div>'
     trigger: 'hover focus'
