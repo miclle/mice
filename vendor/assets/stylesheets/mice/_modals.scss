@@ -51,8 +51,10 @@
   background-color: $modal-backdrop-background;
 
   // Fade for backdrop
-  &.fade { @include opacity(0); }
-  &.in   { @include opacity($modal-backdrop-opacity); }
+  &.fade {
+    @include opacity(0);
+    &.in   { @include opacity($modal-backdrop-opacity); }
+  }
 }
 
 
