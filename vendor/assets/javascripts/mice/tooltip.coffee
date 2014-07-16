@@ -73,11 +73,11 @@
       options
 
     enter: (obj) ->
-      self = if obj instanceof @constructor then obj else $(obj.currentTarget).data('bs.' + @type)
+      self = if obj instanceof @constructor then obj else $(obj.currentTarget).data('mice.' + @type)
 
       if !self
         self = new @constructor(obj.currentTarget, @getDelegateOptions())
-        $(obj.currentTarget).data('bs.' + @type, self)
+        $(obj.currentTarget).data('mice.' + @type, self)
 
       clearTimeout(@timeout)
 
@@ -88,11 +88,11 @@
       self.timeout = setTimeout (-> self.show() if self.hoverState == 'in') , self.options.delay.show
 
     leave: (obj) ->
-      self = if obj instanceof @constructor then obj else $(obj.currentTarget).data('bs.' + @type)
+      self = if obj instanceof @constructor then obj else $(obj.currentTarget).data('mice.' + @type)
 
       if !self
         self = new @constructor(obj.currentTarget, @getDelegateOptions())
-        $(obj.currentTarget).data('bs.' + @type, self)
+        $(obj.currentTarget).data('mice.' + @type, self)
 
       clearTimeout(self.timeout)
 
@@ -103,7 +103,7 @@
       self.timeout = setTimeout (-> self.hide() if self.hoverState == 'out') , self.options.delay.hide
 
     show: ->
-      e = $.Event('show.bs.'+@type)
+      e = $.Event('show.mice.'+@type)
       if @getTitle() and @enabled
         @$element.trigger e
 
@@ -123,7 +123,7 @@
         autoPlace = autoToken.test(placement)
         placement = placement.replace(autoToken, '') or 'top' if autoPlace
 
-        $tip.detach().css({ top: 0, left: 0, display: 'block' }).addClass(placement).data('bs.' + @type, @)
+        $tip.detach().css({ top: 0, left: 0, display: 'block' }).addClass(placement).data('mice.' + @type, @)
 
         if @options.container then $tip.appendTo(@options.container) else $tip.insertAfter(@$element)
 
@@ -148,10 +148,10 @@
         @applyPlacement calculatedOffset, placement
 
         complete = ->
-          that.$element.trigger('shown.bs.' + that.type)
+          that.$element.trigger('shown.mice.' + that.type)
           that.hoverState = null
 
-        if $.support.transition and @$tip.hasClass('fade') then $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(150) else complete()
+        if $.support.transition and @$tip.hasClass('fade') then $tip.one('miceTransitionEnd', complete).emulateTransitionEnd(150) else complete()
 
     applyPlacement: (offset, placement) ->
       $tip   = @tip()
@@ -198,11 +198,11 @@
     hide: ->
       that = @
       $tip = @tip()
-      e    = $.Event('hide.bs.' + @type)
+      e    = $.Event('hide.mice.' + @type)
 
       complete = ->
         $tip.detach() if that.hoverState != 'in'
-        that.$element.trigger('hidden.bs.' + that.type)
+        that.$element.trigger('hidden.mice.' + that.type)
 
       @$element.trigger(e)
 
@@ -210,7 +210,7 @@
 
       $tip.removeClass('in')
 
-      if $.support.transition and @$tip.hasClass('fade') then $tip.one('bsTransitionEnd', complete).emulateTransitionEnd(150) else complete()
+      if $.support.transition and @$tip.hasClass('fade') then $tip.one('miceTransitionEnd', complete).emulateTransitionEnd(150) else complete()
 
       @hoverState = null
 
@@ -288,16 +288,16 @@
     toggle: (e) ->
       self = @
       if e
-        self = $(e.currentTarget).data('bs.' + @type)
+        self = $(e.currentTarget).data('mice.' + @type)
         if !self
           self = new @constructor(e.currentTarget, @getDelegateOptions())
-          $(e.currentTarget).data('bs.' + @type, self)
+          $(e.currentTarget).data('mice.' + @type, self)
 
       if self.tip().hasClass('in') then self.leave(self) else self.enter(self)
 
     destroy: ->
       clearTimeout(@timeout)
-      @hide().$element.off('.' + @type).removeData('bs.' + @type)
+      @hide().$element.off('.' + @type).removeData('mice.' + @type)
 
 
   # TOOLTIP PLUGIN DEFINITION
@@ -305,12 +305,12 @@
   $.fn.tooltip = (option) ->
     @each ->
       $element = $(@)
-      data     = $element.data('bs.tooltip')
+      data     = $element.data('mice.tooltip')
       options  = typeof option == 'object' and option
 
       return if !data and option == 'destroy'
 
-      $element.data('bs.tooltip', (data = new Tooltip(@, options))) if !data
+      $element.data('mice.tooltip', (data = new Tooltip(@, options))) if !data
 
       data[option]() if typeof option == 'string'
 
