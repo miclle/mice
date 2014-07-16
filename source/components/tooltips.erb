@@ -160,6 +160,42 @@ $('#example').tooltip(options)
       </table>
 
 
+      <h2>Events</h2>
+      <div class="table responsive">
+        <table class="bordered striped">
+          <thead>
+           <tr>
+             <th>Event Type</th>
+             <th>Description</th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <td>show.mice.tooltip</td>
+             <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+           </tr>
+           <tr>
+             <td>shown.mice.tooltip</td>
+             <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
+           </tr>
+           <tr>
+             <td>hide.mice.tooltip</td>
+             <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+           </tr>
+           <tr>
+             <td>hidden.mice.tooltip</td>
+             <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+<% code "javascript" do %>
+$('#myTooltip').on('hidden.mice.tooltip', function () {
+  // do something…
+})
+<% end -%>
+
+
     </div>
 
   </div>
