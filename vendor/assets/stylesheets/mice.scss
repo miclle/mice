@@ -16,14 +16,15 @@
 @import "mice/images";
 @import "mice/icons";
 
+// Components
+@import "mice/component-animations";
+
 @import "mice/menu";
 @import "mice/tabs";
 @import "mice/navbar";
 @import "mice/sidebar";
 @import "mice/lists";
 @import "mice/tables";
-
-// Components
 @import "mice/breadcrumbs";
 @import "mice/pagination";
 @import "mice/panels";
@@ -34,7 +35,6 @@
 @import "mice/alerts";
 @import "mice/close";
 @import "mice/wells";
-
 @import "mice/modals";
 @import "mice/tooltips";
 
