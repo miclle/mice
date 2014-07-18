@@ -2,3 +2,4 @@
 //= require mice/alert
 //= require mice/modal
 //= require mice/tooltip
+//= require mice/carousel
