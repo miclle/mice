@@ -581,43 +581,43 @@ mark,
 .text.muted {
   color: #999999; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.primary {
   color: #428bca; }
 
-/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.primary:hover {
   color: #3071a9; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.success {
   color: #3c763d; }
 
-/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.success:hover {
   color: #2b542c; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.info {
   color: #31708f; }
 
-/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.info:hover {
   color: #245269; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.warning {
   color: #8a6d3b; }
 
-/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.warning:hover {
   color: #66512c; }
 
-/* line 156, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 157, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .text.danger {
   color: #a94442; }
 
-/* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.text.danger:hover {
   color: #843534; }
 
@@ -625,43 +625,43 @@ a.text.danger:hover {
 .bg-primary {
   color: #fff; }
 
-/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-primary {
   background-color: #428bca; }
 
-/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-primary:hover {
   background-color: #3071a9; }
 
-/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-success {
   background-color: #dff0d8; }
 
-/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-success:hover {
   background-color: #c1e2b3; }
 
-/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-info {
   background-color: #d9edf7; }
 
-/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-info:hover {
   background-color: #afd9ee; }
 
-/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-warning {
   background-color: #fcf8e3; }
 
-/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-warning:hover {
   background-color: #f7ecb5; }
 
-/* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 170, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 .bg-danger {
   background-color: #f2dede; }
 
-/* line 172, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
+/* line 173, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
 a.bg-danger:hover {
   background-color: #e4b9b9; }
 
@@ -3270,6 +3270,16 @@ img {
 .icon.plus-square-o:before {
   content: "\f196"; }
 
+/* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_component-animations.scss */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_component-animations.scss */
+  .fade.in {
+    opacity: 1; }
+
 /* line 5, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_menu.scss */
 .menu {
   list-style: none;
@@ -4935,7 +4945,7 @@ button.close {
 .modal-open {
   overflow: hidden; }
   /* line 14, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-  .modal-open.modal {
+  .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto; }
 
@@ -4963,30 +4973,31 @@ button.close {
   .modal.in .dialog {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-  /* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-  .modal.backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    background-color: black; }
-    /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-    .modal.backdrop.fade {
-      opacity: 0;
-      filter: alpha(opacity=0); }
-    /* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-    .modal.backdrop.in {
+
+/* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: black; }
+  /* line 54, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+    /* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+    .modal-backdrop.fade.in {
       opacity: 0.5;
       filter: alpha(opacity=50); }
 
-/* line 62, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal .dialog {
   position: relative;
   width: auto;
   margin: 10px; }
-/* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 70, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal .content {
   position: relative;
   background-color: white;
@@ -4997,23 +5008,23 @@ button.close {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0; }
-/* line 83, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 84, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal .header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
   min-height: 16.42858px; }
-  /* line 89, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 90, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .header .close {
     margin-top: -2px; }
-  /* line 92, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 93, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .header h1, .modal .header h2, .modal .header h3, .modal .header h4, .modal .header h5, .modal .header h6 {
     margin: 0;
     line-height: 1.42858; }
-/* line 100, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 101, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal .body {
   position: relative;
   padding: 15px; }
-/* line 106, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 107, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal .footer {
   padding: 15px;
   text-align: right;
@@ -5025,18 +5036,18 @@ button.close {
   /* line 18, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_mixins.scss */
   .modal .footer:after {
     clear: both; }
-  /* line 113, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 114, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .footer .button + .button {
     margin-left: 5px;
     margin-bottom: 0; }
-  /* line 118, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 119, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .footer .buttons .button + .button {
     margin-left: -1px; }
-  /* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 123, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .footer .button.block + .button.block {
     margin-left: 0; }
 
-/* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+/* line 132, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
 .modal-scrollbar-measure {
   position: absolute;
   top: -9999px;
@@ -5045,22 +5056,209 @@ button.close {
   overflow: scroll; }
 
 @media (min-width: 768px) {
-  /* line 144, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 145, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .dialog {
     width: 600px;
     margin: 30px auto; }
-  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  /* line 149, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
 
-  /* line 154, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-  .modal.small {
+  /* line 155, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .small {
     width: 300px; } }
 @media (min-width: 992px) {
-  /* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
-  .modal.large {
+  /* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
+  .modal .large {
     width: 900px; } }
+/* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+  /* line 43, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.in {
+    opacity: 0.9;
+    filter: alpha(opacity=90); }
+  /* line 44, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.top {
+    margin-top: -3px;
+    padding: 5px 0; }
+  /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.right {
+    margin-left: 3px;
+    padding: 0 5px; }
+  /* line 46, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.bottom {
+    margin-top: 3px;
+    padding: 5px 0; }
+  /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.left {
+    margin-left: -3px;
+    padding: 0 5px; }
+  /* line 50, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip .inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 2px; }
+  /* line 61, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+  /* line 69, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.top .arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0; }
+  /* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.top-left .arrow {
+    bottom: 0;
+    left: 5px;
+    border-width: 5px 5px 0; }
+  /* line 80, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.top-right .arrow {
+    bottom: 0;
+    right: 5px;
+    border-width: 5px 5px 0; }
+  /* line 85, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.right .arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0; }
+  /* line 91, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.left .arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-width: 5px 0 5px 5px; }
+  /* line 97, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.bottom .arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px; }
+  /* line 103, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.bottom-left .arrow {
+    top: 0;
+    left: 5px;
+    border-width: 0 5px 5px; }
+  /* line 108, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.bottom-right .arrow {
+    top: 0;
+    right: 5px;
+    border-width: 0 5px 5px; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip .inner {
+    color: white;
+    background-color: black; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.top .arrow, .tooltip.top-left .arrow, .tooltip.top-right .arrow {
+    border-top-color: black; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.right .arrow {
+    border-right-color: black; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.left .arrow {
+    border-left-color: black; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.bottom .arrow, .tooltip.bottom-left .arrow, .tooltip.bottom-right .arrow {
+    border-bottom-color: black; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.primary .inner {
+    color: white;
+    background-color: #428bca; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.primary.top .arrow, .tooltip.primary.top-left .arrow, .tooltip.primary.top-right .arrow {
+    border-top-color: #428bca; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.primary.right .arrow {
+    border-right-color: #428bca; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.primary.left .arrow {
+    border-left-color: #428bca; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.primary.bottom .arrow, .tooltip.primary.bottom-left .arrow, .tooltip.primary.bottom-right .arrow {
+    border-bottom-color: #428bca; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.success .inner {
+    color: white;
+    background-color: #81c735; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.success.top .arrow, .tooltip.success.top-left .arrow, .tooltip.success.top-right .arrow {
+    border-top-color: #81c735; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.success.right .arrow {
+    border-right-color: #81c735; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.success.left .arrow {
+    border-left-color: #81c735; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.success.bottom .arrow, .tooltip.success.bottom-left .arrow, .tooltip.success.bottom-right .arrow {
+    border-bottom-color: #81c735; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.info .inner {
+    color: white;
+    background-color: #5bc0de; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.info.top .arrow, .tooltip.info.top-left .arrow, .tooltip.info.top-right .arrow {
+    border-top-color: #5bc0de; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.info.right .arrow {
+    border-right-color: #5bc0de; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.info.left .arrow {
+    border-left-color: #5bc0de; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.info.bottom .arrow, .tooltip.info.bottom-left .arrow, .tooltip.info.bottom-right .arrow {
+    border-bottom-color: #5bc0de; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.warning .inner {
+    color: white;
+    background-color: #f0ad4e; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.warning.top .arrow, .tooltip.warning.top-left .arrow, .tooltip.warning.top-right .arrow {
+    border-top-color: #f0ad4e; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.warning.right .arrow {
+    border-right-color: #f0ad4e; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.warning.left .arrow {
+    border-left-color: #f0ad4e; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.warning.bottom .arrow, .tooltip.warning.bottom-left .arrow, .tooltip.warning.bottom-right .arrow {
+    border-bottom-color: #f0ad4e; }
+  /* line 8, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.danger .inner {
+    color: white;
+    background-color: #d9534f; }
+  /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.danger.top .arrow, .tooltip.danger.top-left .arrow, .tooltip.danger.top-right .arrow {
+    border-top-color: #d9534f; }
+  /* line 19, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.danger.right .arrow {
+    border-right-color: #d9534f; }
+  /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.danger.left .arrow {
+    border-left-color: #d9534f; }
+  /* line 27, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
+  .tooltip.danger.bottom .arrow, .tooltip.danger.bottom-left .arrow, .tooltip.danger.bottom-right .arrow {
+    border-bottom-color: #d9534f; }
+
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
   padding: 0;
@@ -6330,14 +6528,15 @@ section.example {
     top: auto;
     right: auto;
     bottom: auto;
-    left: auto; }
-    /* line 64, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    left: auto;
+    z-index: 1; }
+    /* line 65, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     section.example .modal .dialog {
       left: auto;
       margin-right: auto;
       margin-left: auto; }
 
-/* line 72, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 73, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 pre.highlight {
   padding: 15px;
   margin-top: -1px;
@@ -6351,13 +6550,13 @@ pre.highlight {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px; }
 
-/* line 86, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 87, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .grid-doc .column {
   padding: 10px;
   background-color: #EEE;
   border: 1px solid #DDD; }
 
-/* line 92, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 93, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 .icon-example .column {
   height: 100px;
   overflow: hidden;
@@ -6367,17 +6566,17 @@ pre.highlight {
   text-align: center;
   color: #333;
   cursor: pointer; }
-  /* line 102, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 103, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column .icon {
     display: block;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     -webkit-backface-visibility: hidden; }
-  /* line 114, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 115, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   .icon-example .column:hover {
     background: #009FDA;
     color: #FFF; }
-    /* line 117, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+    /* line 118, /Users/miclle/project/mice/source/stylesheets/doc.scss */
     .icon-example .column:hover .icon {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
@@ -6385,20 +6584,20 @@ pre.highlight {
       -ms-transform: scale(1.5);
       transform: scale(1.5); }
 
-/* line 128, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 129, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .navbar {
   position: relative;
   z-index: 99; }
-/* line 133, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 134, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile article.component {
   opacity: .3;
   -webkit-transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out; }
-  /* line 139, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+  /* line 140, /Users/miclle/project/mice/source/stylesheets/doc.scss */
   body.mobile article.component.active {
     opacity: 1; }
-/* line 144, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 145, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile .device {
   position: fixed;
   top: -45px;
@@ -6412,7 +6611,7 @@ body.mobile .device {
   -webkit-transition: background-image .1s linear;
   -moz-transition: background-image .1s linear;
   transition: background-image .1s linear; }
-/* line 159, /Users/miclle/project/mice/source/stylesheets/doc.scss */
+/* line 160, /Users/miclle/project/mice/source/stylesheets/doc.scss */
 body.mobile #window {
   position: absolute;
   top: 119px;
