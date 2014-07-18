@@ -334,6 +334,8 @@
       selector: 'body'
       padding: 0
 
+  $ -> $("[data-toggle=tooltip]").tooltip();
+
   return
 
 ) jQuery
