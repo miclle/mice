@@ -8,12 +8,27 @@
 $(function(){
 
   $(window).load(function(){
-    $('.flexslider').flexslider({
+    $('#basic-slider').flexslider({
       animation: "slide",
       start: function(slider){
         $('body').removeClass('loading');
       }
     });
+
+
+    $('#thumbnail-control-slider').flexslider({
+      animation: "slide",
+      controlNav: "thumbnails"
+    });
+
+
+    $('#basic-carousel').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 140,
+      itemMargin: 5
+    });
+
   });
 
 });
