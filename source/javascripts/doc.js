@@ -9,10 +9,7 @@ $(function(){
 
   $(window).load(function(){
     $('#basic-slider').flexslider({
-      animation: "slide",
-      start: function(slider){
-        $('body').removeClass('loading');
-      }
+      animation: "slide"
     });
 
 
