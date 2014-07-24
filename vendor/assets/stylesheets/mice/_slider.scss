@@ -243,63 +243,66 @@
 }
 
 
-.thumb-carousel {
-  height: 54px;
+.thumb-carousel{
   overflow:hidden;
-}
-.thumb-carousel .viewport {
-  float: left;
-  width: 378px;
-  height: 54px;
-  overflow: hidden;
   position: relative;
-}
-.thumb-carousel .control {
-  display: block;
-  float: left;
-  width: 20px;
-  height: 50px;
-  margin: 2px 3px 0 0;
-  line-height: 50px;
-  background-color: #B9C1C7;
-  color: #FFF;
-  text-align: center;
-  text-decoration: none;
-}
-.thumb-carousel .control.next { margin: 2px 0 0 3px; }
-.thumb-carousel .control i.icon{ margin: 0;}
-.thumb-carousel .control.disable {
-  cursor: not-allowed;
-  /*cursor: no-drop;*/
-}
-.thumb-carousel .overview {
-  height: 54px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: absolute;
-  top: 0;
-  z-index: 9;
-}
-.thumb-carousel .overview li{
-  float: left;
-  padding: 1px;
-  border: 1px solid #FFF;
-}
-.thumb-carousel .overview li.active{
-  border-color: #666;
-  z-index: 99;
-}
-.thumb-carousel .overview li img{
-  width: 50px;
-  opacity: 0.7;
-  -webkit-transition: all 0.15s ease-out;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.15s ease-out 0s;
-  -o-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
-}
-.thumb-carousel .overview li.active img,
-.thumb-carousel .overview li img:hover{
-  opacity: 1;
+
+  .viewport {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    z-index: 98;
+  }
+
+  .control {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    z-index: 99;
+
+    &.left { left: 0; }
+    &.right { right: 0; }
+  }
+
+  .control i.icon{ margin: 0;}
+  .control.disable {
+    cursor: not-allowed;
+    /*cursor: no-drop;*/
+  }
+  .overview {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+
+    li{
+      float: left;
+      padding: 1px;
+      border: 1px solid #FFF;
+
+      &.active{
+        border-color: #666;
+        z-index: 99;
+      }
+      & img{
+        opacity: 0.7;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        -o-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s;
+      }
+      &.active img,
+      & img:hover{
+        opacity: 1;
+      }
+    }
+  }
+
 }
