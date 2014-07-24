@@ -7,25 +7,4 @@
 
 $(function(){
 
-  $(window).load(function(){
-    $('#basic-slider').flexslider({
-      animation: "slide"
-    });
-
-
-    $('#thumbnail-control-slider').flexslider({
-      animation: "slide",
-      controlNav: "thumbnails"
-    });
-
-
-    $('#basic-carousel').flexslider({
-      animation: "slide",
-      animationLoop: false,
-      itemWidth: 140,
-      itemMargin: 5
-    });
-
-  });
-
 });

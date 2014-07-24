@@ -13,64 +13,34 @@ title: Slider
 
       <h1 class="title">Slider</h1>
 
-      <h2>Basic Slider</h2>
+      <h2>Examples</h2>
       <section class="example">
-        <div class="flexslider" id="basic-slider">
-          <ul class="slides">
-            <li><%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc-xlarge.jpeg" %></li>
-            <li><%= image_tag "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt-xlarge.jpeg" %></li>
-            <li><%= image_tag "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t-xlarge.jpeg" %></li>
-            <li><%= image_tag "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8-xlarge.jpeg" %></li>
-            <li><%= image_tag "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw-xlarge.jpeg" %></li>
-          </ul>
-        </div>
-      </section>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
+          <ol class="indicators">
+            <li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
 
-      <h2>Thumbnail ControlNav Pattern</h2>
-      <section class="example">
-        <div class="flexslider" id="thumbnail-control-slider">
-          <ul class="slides">
-            <li data-thumb="<%= image_path "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" -%>">
-              <%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc-xlarge.jpeg" %>
-            </li>
-            <li data-thumb="<%= image_path "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt.jpeg" -%>">
-              <%= image_tag "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt-xlarge.jpeg" %>
-            </li>
-            <li data-thumb="<%= image_path "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t.jpeg" -%>">
-              <%= image_tag "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t-xlarge.jpeg" %>
-            </li>
-            <li data-thumb="<%= image_path "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8.jpeg" -%>">
-              <%= image_tag "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8-xlarge.jpeg" %>
-            </li>
-            <li data-thumb="<%= image_path "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw.jpeg" -%>">
-              <%= image_tag "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw-xlarge.jpeg" %>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div class="inner">
+            <div class="item active">
+              <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNTU1O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
+            </div>
+            <div class="item">
+              <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
+            </div>
+            <div class="item">
+              <img data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojMzMzO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+">
+            </div>
+          </div>
 
-
-      <h2>Basic Carousel</h2>
-      <section class="example">
-        <div class="flexslider" id="basic-carousel">
-          <ul class="slides">
-            <li><%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" %></li>
-            <li><%= image_tag "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt.jpeg" %></li>
-            <li><%= image_tag "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t.jpeg" %></li>
-            <li><%= image_tag "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8.jpeg" %></li>
-            <li><%= image_tag "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw.jpeg" %></li>
-            <li><%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" %></li>
-            <li><%= image_tag "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt.jpeg" %></li>
-            <li><%= image_tag "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t.jpeg" %></li>
-            <li><%= image_tag "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8.jpeg" %></li>
-            <li><%= image_tag "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw.jpeg" %></li>
-            <li><%= image_tag "3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" %></li>
-            <li><%= image_tag "2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt.jpeg" %></li>
-            <li><%= image_tag "57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t.jpeg" %></li>
-            <li><%= image_tag "sev4g2sz71w53z3mxbq239i5dxh5wlisz3c8.jpeg" %></li>
-            <li><%= image_tag "uain347k1jpuhc83m3u3qz3eqjrb1v6bk4xw.jpeg" %></li>
-          </ul>
+          <a class="left control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="icon chevron-left"></span>
+          </a>
+          <a class="right control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="icon chevron-right"></span>
+          </a>
         </div>
       </section>
 
