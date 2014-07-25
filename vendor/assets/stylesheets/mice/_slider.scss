@@ -208,37 +208,39 @@
 // Scale up controls for tablets and up
 @media screen and (min-width: $screen-sm-min) {
 
-  // Scale up the controls a smidge
-  .control {
-    .chevron-left,
-    .chevron-right,
-    .icon-prev,
-    .icon-next {
-      width: 30px;
-      height: 30px;
-      margin-top: -15px;
-      font-size: 30px;
+  .carousel{
+    // Scale up the controls a smidge
+    .control {
+      .chevron-left,
+      .chevron-right,
+      .icon-prev,
+      .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        font-size: 30px;
+      }
+      .chevron-left,
+      .icon-prev {
+        margin-left: -15px;
+      }
+      .chevron-right,
+      .icon-next {
+        margin-right: -15px;
+      }
     }
-    .chevron-left,
-    .icon-prev {
-      margin-left: -15px;
-    }
-    .chevron-right,
-    .icon-next {
-      margin-right: -15px;
-    }
-  }
 
-  // Show and left align the captions
-  .caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
+    // Show and left align the captions
+    .caption {
+      left: 20%;
+      right: 20%;
+      padding-bottom: 30px;
+    }
 
-  // Move up the indicators
-  .indicators {
-    bottom: 20px;
+    // Move up the indicators
+    .indicators {
+      bottom: 20px;
+    }
   }
 }
 
