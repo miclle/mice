@@ -482,6 +482,7 @@ $zindex-navbar-fixed:         1030 !default;
 $zindex-modal-background:     1040 !default;
 $zindex-modal:                1050 !default;
 $zindex-tooltip:              1070 !default;
+$zindex-message:              1090 !default;
 
 
 // Media queries breakpoints
@@ -534,6 +535,28 @@ $tooltip-warning-arrow-color:   $tooltip-warning-background !default;
 $tooltip-danger-color:          #fff !default;
 $tooltip-danger-background:     $brand-danger !default;
 $tooltip-danger-arrow-color:    $tooltip-danger-background !default;
+
+
+// Message
+// --------------------------------------------------
+$message-padding:               10px 20px !default;
+$message-link-font-weight:      bold !default;
+
+$message-success-background:    $state-success-background !default;
+$message-success-text:          $state-success-text !default;
+$message-success-border:        $state-success-border !default;
+
+$message-info-background:       $state-info-background !default;
+$message-info-text:             $state-info-text !default;
+$message-info-border:           $state-info-border !default;
+
+$message-warning-background:    $state-warning-background !default;
+$message-warning-text:          $state-warning-text !default;
+$message-warning-border:        $state-warning-border !default;
+
+$message-danger-background:     $state-danger-background !default;
+$message-danger-text:           $state-danger-text !default;
+$message-danger-border:         $state-danger-border !default;
 
 
 // Carousel

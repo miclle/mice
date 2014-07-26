@@ -1,9 +1,72 @@
-/* Essage - a more elegant way to show message
- * https://github.com/sofish/Essage
- */
-.essage{font-size:16px;position:fixed;_position:absolute;z-index:10010;background:#fff;background:rgba(255,255,255,0.9);color:#666;text-align:center;line-height:1.8;padding:10px 20px;*padding:10px 0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;top:9999em;left:0;width:100%;border-bottom:1px solid #ddd;border-top:1px solid #ddd;}
-.essage-success{background:#eafbe3;background:rgba(221, 242, 210, 0.9);border-bottom-color:#bfd5a9;border-top-color:#bfd5a9;color:#3fb16f;}
-.essage-error{background:#f2e1e4;background:rgba(242, 225, 228, 0.9);border-bottom-color:#e0cdcd;border-top-color:#e0cdcd;color:#dc584b;}
-.essage-warning{background:#fcf8e3;background:rgba(252, 248, 227, 0.9);border-bottom-color:#fbeed5;border-top-color:#fbeed5;color:#c09853;}
-.essage .close{font:400 normal 22px/1.3 arial, sans-serif;float:right;*margin-right:15px;display:inline;color:#e74c3c;opacity:0.6;cursor:pointer;}
-.essage .close:hover{opacity:1;}
+//
+// Message
+// --------------------------------------------------
+
+
+// Mixin
+@mixin message-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  a {
+    color: darken($text-color, 10%);
+  }
+}
+
+
+
+// Base styles
+// -------------------------
+.message {
+  width: 100%;
+  padding: 10px 20px;
+  padding: $message-padding;
+
+  line-height: 1.8;
+  font-size: 16px;
+  background: #FFF;
+  background: rgba(255,255,255,0.9);
+
+  color: #666;
+  text-align: center;
+
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-message;
+
+  &.bottom{
+    top: auto;
+    bottom: 0;
+  }
+
+  h4{ margin: 0; color: inherit; }
+  a { font-weight: $message-link-font-weight; }
+
+  .close{
+    display: inline;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    right: -15px;
+    opacity: 0.6;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+
+// Alternate styles
+// Generate contextual modifier classes for colorizing the message.
+.message{
+  &.success {@include message-variant($message-success-background, $message-success-border, $message-success-text); }
+  &.info    {@include message-variant($message-info-background,    $message-info-border,    $message-info-text);    }
+  &.warning {@include message-variant($message-warning-background, $message-warning-border, $message-warning-text); }
+  &.danger  {@include message-variant($message-danger-background,  $message-danger-border,  $message-danger-text);  }
+}
