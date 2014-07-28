@@ -39,7 +39,7 @@
         $('body').append(@$element).data('miclle-message-global', @$element)
         @init()
 
-      @$element.children('.inner').text(message) if message
+      @$element.children('.inner').html(message) if message
 
       if @$element.hasClass 'botton'
         @$element.slideUp => duration and setTimeout (=> @.hide()), duration
