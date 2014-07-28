@@ -14,18 +14,47 @@ title: Message
       <h1 class="title">Message</h1>
 
       <h2>Elegant way to display tips/message</h2>
+      <div class="message success" data-ride="message" data-duration="2000">
+        <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
+        <span class="close">&times;</span>
+      </div>
+
+      <div class="message bottom warning" data-ride="message">
+        <div class="inner">hello, im a message.</div>
+        <span class="close">&times;</span>
+      </div>
+
+<% code "html" do %>
+<div class="message success" data-ride="message" data-duration="2000">
+  <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
+  <span class="close">&times;</span>
+</div>
+
+<div class="message bottom warning" data-ride="message">
+  <div class="inner">hello, im a message.</div>
+  <span class="close">&times;</span>
+</div>
+<% end -%>
+
+
+      <h2>API</h2>
+      <p>Message plugin already export to window object.</p>
       <section class="example">
-
-        <div class="message success" data-ride="message" data-duration="2000"><div class="inner">hello, im a message <a href="#" title="">link here</a>.</div> <span class="close">&times;</span></div>
-
-        <div class="message bottom warning" data-ride="message"><div class="inner">hello, im a message.</div> <span class="close">&times;</span></div>
-
-        <button id="show">show</button>
-        <button id="auto">show &amp; hide automaticlly</button>
-        <button id="bottom">show at bottom</button>
-        <button id="status">show with status</button>
-        <button id="hide">hide</button>
+        <p>Click these buttons run the javascript code.</p>
+        <button class="info" id="message-show">show</button>
+        <button class="info" id="message-auto-hide">show &amp; hide automaticlly</button>
+        <button class="info" id="message-hide">hide</button>
       </section>
+<% code "javascript" do %>
+// show message
+Message.show('This is message!');
+
+// hide automaticlly after 2000
+Message.show('This is message!', 2000);
+
+// hide message
+Message.hide();
+<% end -%>
 
     </div>
 
