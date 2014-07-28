@@ -39,6 +39,11 @@
   left: 0;
   z-index: $zindex-message;
 
+  &.top {
+    top: 0;
+    bottom: auto;
+  }
+
   &.bottom{
     top: auto;
     bottom: 0;

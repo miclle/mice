@@ -37,21 +37,25 @@
       if @$element == `undefined`
         @$element = $ $.fn.message.defaults.template
         $('body').append(@$element).data('miclle-message-global', @$element)
-        @init()
+        if typeof message == 'string'
+          @init( message: message )
+        else
+          @init(message)
+
+        @$element.removeClass('top').removeClass('bottom').addClass(@options.placement)
+
+      message = @options.message
 
       @$element.children('.inner').html(message) if message
 
-      if @$element.hasClass 'botton'
-        @$element.slideUp => duration and setTimeout (=> @.hide()), duration
-      else
-        @$element.slideDown => duration and setTimeout (=> @.hide()), duration
+      @$element.slideDown => duration and setTimeout (=> @.hide()), duration
       @
 
     hold: ->
-      if @$element.hasClass 'botton' then @$element.slideUp() else @$element.slideDown()
+      @$element.slideDown()
 
     hide: ->
-      if @$element.hasClass 'botton' then @$element.slideDown() else @$element.slideUp()
+      @$element.slideUp()
 
     toggle: ->
       if @$element.is ':hidden' then @show() else @hide()
@@ -79,6 +83,8 @@
 
   $.fn.message.defaults =
     template: "<div class=\"message\"><div class=\"inner\"></div><span class=\"close\">&times;</span></div>"
+    message: null
+    placement: 'top'
     status: ''
     duration: null
 

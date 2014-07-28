@@ -19,4 +19,14 @@ $(function(){
     Message.hide();
   });
 
+  $('body').on('click', '#message-at-button', function(){
+    // `message` can be an object (config)
+    Message.show({
+      message: 'message body show at button',
+      // the placement can be `top` or `bottom`, by default is `top`
+      placement: 'bottom'
+    });
+  });
+
+
 });
