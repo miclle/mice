@@ -76,6 +76,60 @@ Message.show({
 });
 <% end -%>
 
+
+      <h2>Options</h2>
+      <table class="bordered striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 100px;">Type</th>
+           <th style="width: 50px;">Default</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>template</td>
+           <td>string</td>
+           <td><code>'&lt;div class="message"&gt;&lt;div class="inner"&gt;&lt;/div&gt;&lt;span class="close"&gt;&times;'&lt;/span&gt;&lt;/div&gt;'</code></td>
+           <td>
+            Base HTML to use when creating the message.
+            The message's content will be injected into the <code>.inner</code>.
+            <code>.close</code> will become the message's close. The outermost wrapper element should have the <code>.message</code> class.
+           </td>
+         </tr>
+         <tr>
+           <td>message</td>
+           <td>string|object</td>
+           <td>null</td>
+           <td>
+            'message content text/html' <br />
+            <code>{message: 'text/thml', placement: 'bottom', status: 'danger'}</code>
+           </td>
+         </tr>
+         <tr>
+           <td>placement</td>
+           <td>string</td>
+           <td>top</td>
+           <td>The placement can be `top` or `bottom`, by default is `top`</td>
+         </tr>
+         <tr>
+           <td>status</td>
+           <td>string</td>
+           <td>''</td>
+           <td>
+            Show with status, add class `[default]| success| info| warning| danger` to the container.
+           </td>
+         </tr>
+         <tr>
+           <td>duration</td>
+           <td>number</td>
+           <td>null</td>
+           <td>Message hide automaticlly after a number</td>
+         </tr>
+        </tbody>
+      </table>
+
     </div>
 
   </div>

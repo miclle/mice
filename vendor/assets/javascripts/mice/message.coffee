@@ -29,7 +29,6 @@
       if @$element then $.extend({}, $.fn.message.defaults, @$element.data(), options) else $.extend({}, $.fn.message.defaults, options)
 
     show: (message, duration) ->
-
       if message
         @$element = @$element || $('body').data('miclle-message-global')
 
@@ -37,10 +36,7 @@
           @$element = $ $.fn.message.defaults.template
           $('body').append(@$element).data('miclle-message-global', @$element)
 
-        if typeof message == 'string'
-          @init( message: message )
-        else
-          @init(message)
+        if (typeof message == 'string') then @init( message: message ) else @init(message)
 
         @$element.slideUp =>
           @$element.removeClass('top bottom').addClass(@options.placement)
