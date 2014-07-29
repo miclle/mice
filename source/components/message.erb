@@ -49,11 +49,11 @@ title: Message
 
         <button class="info" id="message-with-status">show with status</button>
       </section>
-<% code "javascript" do %>
+<% code "js" do %>
 // show message
 Message.show('This is message!');
 
-// hide automaticlly after 2000
+// hide automaticlly after 2000 milliseconds
 Message.show('This is message!', 2000);
 
 // hide message
@@ -129,6 +129,27 @@ Message.show({
          </tr>
         </tbody>
       </table>
+
+
+      <h2>Methods</h2>
+      <h4>$().message(options)</h4>
+      <p>Attaches a message handler to an element collection.</p>
+
+      <h4>.message('show')</h4>
+      <p>Show the message.</p>
+      <% code "js" do -%>$('#element').message('show')<% end -%>
+
+      <h4>.message('hide')</h4>
+      <p>Hide the message.</p>
+      <% code "js" do -%>$('#element').message('hide')<% end -%>
+
+      <h4>.message('toggle')</h4>
+      <p>Toggles the message.</p>
+      <% code "js" do -%>$('#element').message('toggle')<% end -%>
+
+      <h4>.message('destroy')</h4>
+      <p>Hide and destroys the message.</p>
+      <% code "js" do -%>$('#element').message('destroy')<% end -%>
 
     </div>
 
