@@ -45,7 +45,9 @@ title: Message
         <button class="info" id="message-auto-hide">show &amp; hide automaticlly</button>
         <button class="info" id="message-hide">hide</button>
 
-        <button class="info" id="message-at-button">show at button</button>
+        <button class="info" id="message-at-bottom">show at bottom</button>
+
+        <button class="info" id="message-with-status">show with status</button>
       </section>
 <% code "javascript" do %>
 // show message
@@ -56,6 +58,20 @@ Message.show('This is message!', 2000);
 
 // hide message
 Message.hide();
+
+// show at bottom
+Message.show({
+  message: 'message body show at bottom',
+  // the placement can be `top` or `bottom`, by default is `top`
+  placement: 'bottom'
+});
+
+// show with status
+Message.show({
+  message: 'message body show with danger status',
+  // the placement can be `top` or `bottom`, by default is `top`
+  status: 'danger'
+});
 <% end -%>
 
     </div>

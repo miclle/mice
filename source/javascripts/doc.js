@@ -19,12 +19,21 @@ $(function(){
     Message.hide();
   });
 
-  $('body').on('click', '#message-at-button', function(){
+  $('body').on('click', '#message-at-bottom', function(){
     // `message` can be an object (config)
     Message.show({
-      message: 'message body show at button',
+      message: 'message body show at bottom',
       // the placement can be `top` or `bottom`, by default is `top`
       placement: 'bottom'
+    });
+  });
+
+  $('body').on('click', '#message-with-status', function(){
+    // `message` can be an object (config)
+    Message.show({
+      message: 'message body show with danger status',
+      // the placement can be `top` or `bottom`, by default is `top`
+      status: 'danger'
     });
   });
 

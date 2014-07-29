@@ -43,7 +43,9 @@
           @init(message)
 
         @$element.slideUp =>
-          @$element.removeClass('top').removeClass('bottom').addClass(@options.placement)
+          @$element.removeClass('top bottom').addClass(@options.placement)
+
+          @$element.removeClass('success info warning danger').addClass(@options.status)
 
           message  = @options.message
           duration = duration || @options.duration
