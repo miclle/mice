@@ -30,25 +30,33 @@
 
     show: (message, duration) ->
 
-      duration = duration || @options.duration
+      if message
+        @$element = @$element || $('body').data('miclle-message-global')
 
-      @$element = @$element || $('body').data('miclle-message-global')
+        if @$element == `undefined`
+          @$element = $ $.fn.message.defaults.template
+          $('body').append(@$element).data('miclle-message-global', @$element)
 
-      if @$element == `undefined`
-        @$element = $ $.fn.message.defaults.template
-        $('body').append(@$element).data('miclle-message-global', @$element)
         if typeof message == 'string'
           @init( message: message )
         else
           @init(message)
 
-        @$element.removeClass('top').removeClass('bottom').addClass(@options.placement)
+        @$element.slideUp =>
+          @$element.removeClass('top').removeClass('bottom').addClass(@options.placement)
 
-      message = @options.message
+          message  = @options.message
+          duration = duration || @options.duration
 
-      @$element.children('.inner').html(message) if message
+          @$element.children('.inner').html(message) if message
+          @$element.slideDown => duration and setTimeout (=> @.hide()), duration
 
-      @$element.slideDown => duration and setTimeout (=> @.hide()), duration
+      else
+        message  = @options.message
+        duration = duration || @options.duration
+
+        @$element.children('.inner').html(message) if message
+        @$element.slideDown => duration and setTimeout (=> @.hide()), duration
       @
 
     hold: ->
