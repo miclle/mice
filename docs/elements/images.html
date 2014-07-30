@@ -175,6 +175,14 @@
     </li>
 
     <li class="">
+      <a href="/components/message.html">Message</a>
+    </li>
+
+    <li class="">
+      <a href="/components/slider.html">Slider</a>
+    </li>
+
+    <li class="">
       <a href="/components/carousel.html">Carousel</a>
     </li>
 
@@ -237,6 +245,100 @@
 <pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"disabled responsive"</span> <span class="na">alt=</span><span class="s">"Defoliation"</span> <span class="na">src=</span><span class="s">"/images/b62a0a54fbed94d91e3d66328b783a811b47.jpeg"</span> <span class="nt">/&gt;</span>
 </pre>
 
+
+      <h2>Thumbnail Captions</h2>
+      <section class="example">
+        <div class="thumbnail">
+          <img src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" />
+          <div class="caption">Simple Caption</div>
+        </div>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Simple Caption<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+      <h3>Animation effect</h3>
+      <p>Say good bye to jQuery plugins. Today, we can create similar image caption effect only with CSS3. This demo shows how this effects runs.</p>
+      <section class="example">
+        <div class="thumbnail simple">
+          <img src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" />
+          <div class="caption">Simple Caption</div>
+        </div>
+
+        <div class="thumbnail full">
+          <img src="/images/f78d490e23e56501adda00c7876037aef422.jpeg" />
+          <div class="caption">
+            <h3>Full Caption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+
+        <div class="thumbnail fade">
+          <img src="/images/3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" />
+          <div class="caption">
+            <h3>Fade Caption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+
+        <div class="thumbnail slide">
+          <img src="/images/2gyvxv7un50t1ugzlekekp7femlfyjw9jsyt.jpeg" />
+          <div class="caption">
+            <h3>Slide Caption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+
+        <div class="thumbnail rotate">
+          <img src="/images/57vtufdyzphay5b72oqkx1v1jaf9c0ij3m5t.jpeg" />
+          <div class="caption">
+            <h3>This is rotate caption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+
+        <div class="thumbnail scale">
+          <img src="/images/e3d0b7199492261ba8991f3d9cd7b30f5f3c.jpeg" />
+          <div class="caption">
+            <h3>Scale Caption</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+      </section>
+<pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail simple"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Simple Caption<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail full"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail fade"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail slide"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail rotate"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"thumbnail scale"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"xxx.jpg"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
     </div>
 
   </div>
@@ -248,7 +350,7 @@
         <p>Mice was lovingly crafted by  <a href="http://twitter.com/miclle" target="_blank"><i class="icon twitter"></i> @miclle</a></p>
         <p>Code licensed under <a href="https://github.com/miclle/mice/blob/master/LICENSE" target="_blank">MIT</a>.</p>
         <ul>
-          <li>Currently v0.2.8</li>
+          <li>Currently v0.2.9</li>
           <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Mice</a></li>
         </ul>
       </div>

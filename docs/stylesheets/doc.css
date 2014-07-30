@@ -2024,6 +2024,164 @@ img {
     display: block;
     width: 100%; }
 
+/* line 79, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+.thumbnail {
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  overflow: hidden; }
+  /* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail img {
+    position: relative;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+  /* line 95, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail .caption {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out; }
+  /* line 115, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.simple .caption {
+    height: 30px;
+    bottom: -30px;
+    text-align: center; }
+  /* line 120, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.simple:hover .caption {
+    opacity: 1;
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  /* line 128, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.full .caption {
+    height: 100%;
+    top: -100%;
+    overflow: hidden; }
+  /* line 133, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.full:hover .caption {
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  /* line 140, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.fade {
+    opacity: 1; }
+  /* line 141, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.fade .caption {
+    opacity: 0;
+    top: 0;
+    bottom: 0; }
+  /* line 146, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.fade:hover .caption {
+    opacity: 1; }
+  /* line 148, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.slide .caption {
+    top: 0;
+    left: 100%;
+    bottom: 0; }
+  /* line 153, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.slide:hover img {
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 1; }
+  /* line 160, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.slide:hover .caption {
+    background-color: black !important;
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 1; }
+  /* line 169, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.rotate img {
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    opacity: 1; }
+  /* line 175, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.rotate:hover img {
+    -webkit-transform: rotate3d(0, 0, 1, -180deg);
+    -webkit-transform: rotate3d(0, 0, 1, -180deg);
+    -ms-transform: rotate3d(0, 0, 1, -180deg);
+    transform: rotate3d(0, 0, 1, -180deg); }
+  /* line 181, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.rotate .caption {
+    top: 0;
+    height: 100%;
+    background-color: black !important;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    -ms-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg); }
+  /* line 194, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.rotate:hover .caption {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; }
+  /* line 200, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.scale .caption {
+    overflow: hidden;
+    opacity: 0;
+    top: 0;
+    bottom: 0; }
+    /* line 206, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+    .thumbnail.scale .caption h3, .thumbnail.scale .caption p {
+      position: relative;
+      left: -100%;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      -ms-transition: all 300ms ease-out;
+      transition: all 300ms ease-out; }
+    /* line 216, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+    .thumbnail.scale .caption h3 {
+      -webkit-transition-delay: 300ms;
+      -moz-transition-delay: 300ms;
+      -o-transition-delay: 300ms;
+      -ms-transition-delay: 300ms;
+      transition-delay: 300ms; }
+    /* line 224, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+    .thumbnail.scale .caption p {
+      -webkit-transition-delay: 500ms;
+      -moz-transition-delay: 500ms;
+      -o-transition-delay: 500ms;
+      -ms-transition-delay: 500ms;
+      transition-delay: 500ms; }
+  /* line 233, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.scale:hover img {
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
+  /* line 239, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+  .thumbnail.scale:hover .caption {
+    opacity: 1; }
+    /* line 241, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_images.scss */
+    .thumbnail.scale:hover .caption h3, .thumbnail.scale:hover .caption p {
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%); }
+
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -5049,6 +5207,85 @@ button.close {
   /* line 159, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_modals.scss */
   .modal .large {
     width: 900px; } }
+/* line 20, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+.message {
+  display: none;
+  width: 100%;
+  padding: 10px 20px;
+  padding: 10px 20px;
+  line-height: 1.8;
+  font-size: 16px;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.9);
+  color: #666;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1090; }
+  /* line 42, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.top {
+    top: 0;
+    bottom: auto; }
+  /* line 47, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.bottom {
+    top: auto;
+    bottom: 0; }
+  /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message h4 {
+    margin: 0;
+    color: inherit; }
+  /* line 53, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message a {
+    font-weight: bold; }
+  /* line 55, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message .close {
+    display: inline;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.6; }
+    /* line 64, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+    .message .close:hover {
+      opacity: 1; }
+
+/* line 74, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+.message.success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.success a {
+    color: #2b542c; }
+/* line 75, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+.message.info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.info a {
+    color: #245269; }
+/* line 76, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+.message.warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.warning a {
+    color: #66512c; }
+/* line 77, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+.message.danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  /* line 12, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_message.scss */
+  .message.danger a {
+    color: #843534; }
+
 /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_tooltips.scss */
 .tooltip {
   position: absolute;
@@ -5236,22 +5473,22 @@ button.close {
   .tooltip.danger.bottom .arrow, .tooltip.danger.bottom-left .arrow, .tooltip.danger.bottom-right .arrow {
     border-bottom-color: #d9534f; }
 
-/* line 7, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+/* line 7, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
 .carousel {
   position: relative; }
-  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+  /* line 10, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
   .carousel .inner {
     position: relative;
     overflow: hidden;
     width: 100%; }
-    /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 15, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .item {
       display: none;
       position: relative;
       -webkit-transition: 0.6s ease-in-out left;
       -moz-transition: 0.6s ease-in-out left;
       transition: 0.6s ease-in-out left; }
-      /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+      /* line 22, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
       .carousel .inner > .item > img,
       .carousel .inner > .item > a > img {
         display: block;
@@ -5259,37 +5496,37 @@ button.close {
         max-width: 100%;
         height: auto;
         line-height: 1; }
-    /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 30, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .active,
     .carousel .inner > .next,
     .carousel .inner > .prev {
       display: block; }
-    /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 34, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .active {
       left: 0; }
-    /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 39, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .next,
     .carousel .inner > .prev {
       position: absolute;
       top: 0;
       width: 100%; }
-    /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 45, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .next {
       left: 100%; }
-    /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 48, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .prev {
       left: -100%; }
-    /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 52, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .next.left,
     .carousel .inner > .prev.right {
       left: 0; }
-    /* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 56, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .active.left {
       left: -100%; }
-    /* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 59, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .inner > .active.right {
       left: 100%; }
-  /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+  /* line 68, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
   .carousel .control {
     position: absolute;
     top: 0;
@@ -5302,18 +5539,18 @@ button.close {
     color: white;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-    /* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 86, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control.right {
       left: auto;
       right: 0; }
-    /* line 94, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 94, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control:hover, .carousel .control:focus {
       outline: 0;
       color: white;
       text-decoration: none;
       opacity: 0.9;
       filter: alpha(opacity=90); }
-    /* line 105, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 105, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-prev,
     .carousel .control .icon-next,
     .carousel .control .chevron-left,
@@ -5322,30 +5559,30 @@ button.close {
       top: 50%;
       z-index: 5;
       display: inline-block; }
-    /* line 112, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 112, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-prev,
     .carousel .control .chevron-left {
       left: 50%;
       margin-left: -10px; }
-    /* line 117, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 117, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-next,
     .carousel .control .chevron-right {
       right: 50%;
       margin-right: -10px; }
-    /* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 122, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-prev,
     .carousel .control .icon-next {
       width: 20px;
       height: 20px;
       margin-top: -10px;
       font-family: serif; }
-    /* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 131, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-prev:before {
       content: '\2039'; }
-    /* line 136, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 136, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .control .icon-next:before {
       content: '\203a'; }
-  /* line 147, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+  /* line 147, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
   .carousel .indicators {
     position: absolute;
     bottom: 10px;
@@ -5356,7 +5593,7 @@ button.close {
     padding-left: 0;
     list-style: none;
     text-align: center; }
-    /* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 158, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .indicators li {
       display: inline-block;
       width: 10px;
@@ -5368,13 +5605,13 @@ button.close {
       cursor: pointer;
       background-color: #000 \9;
       background-color: rgba(0, 0, 0, 0); }
-    /* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 179, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .indicators .active {
       margin: 0;
       width: 12px;
       height: 12px;
       background-color: white; }
-  /* line 190, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+  /* line 190, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
   .carousel .caption {
     position: absolute;
     left: 15%;
@@ -5386,38 +5623,98 @@ button.close {
     color: white;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-    /* line 201, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
+    /* line 201, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
     .carousel .caption .btn {
       text-shadow: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 216, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
-  .control .chevron-left,
-  .control .chevron-right,
-  .control .icon-prev,
-  .control .icon-next {
+  /* line 217, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .carousel .control .chevron-left,
+  .carousel .control .chevron-right,
+  .carousel .control .icon-prev,
+  .carousel .control .icon-next {
     width: 30px;
     height: 30px;
     margin-top: -15px;
     font-size: 30px; }
-  /* line 223, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
-  .control .chevron-left,
-  .control .icon-prev {
+  /* line 224, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .carousel .control .chevron-left,
+  .carousel .control .icon-prev {
     margin-left: -15px; }
-  /* line 227, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
-  .control .chevron-right,
-  .control .icon-next {
+  /* line 228, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .carousel .control .chevron-right,
+  .carousel .control .icon-next {
     margin-right: -15px; }
-
-  /* line 233, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
-  .caption {
+  /* line 234, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .carousel .caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px; }
-
-  /* line 240, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_carousel.scss */
-  .indicators {
+  /* line 241, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .carousel .indicators {
     bottom: 20px; } }
+/* line 248, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+.thumb-carousel {
+  overflow: hidden;
+  position: relative; }
+  /* line 252, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .thumb-carousel .viewport {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    z-index: 98; }
+  /* line 259, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .thumb-carousel .control {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    z-index: 99; }
+    /* line 269, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+    .thumb-carousel .control.left {
+      left: 0; }
+    /* line 270, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+    .thumb-carousel .control.right {
+      right: 0; }
+  /* line 273, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .thumb-carousel .control i.icon {
+    margin: 0; }
+  /* line 274, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .thumb-carousel .control.disable {
+    cursor: not-allowed;
+    /*cursor: no-drop;*/ }
+  /* line 278, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+  .thumb-carousel .overview {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    z-index: 9; }
+    /* line 286, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+    .thumb-carousel .overview li {
+      float: left;
+      padding: 1px;
+      border: 1px solid #FFF; }
+      /* line 291, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+      .thumb-carousel .overview li.active {
+        border-color: #666;
+        z-index: 99; }
+      /* line 295, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+      .thumb-carousel .overview li img {
+        opacity: 0.7;
+        -webkit-transition: all 0.15s ease-out;
+        -webkit-transition-delay: 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        -o-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s; }
+      /* line 304, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_slider.scss */
+      .thumb-carousel .overview li.active img, .thumb-carousel .overview li img:hover {
+        opacity: 1; }
+
 /* line 63, /Users/miclle/project/mice/vendor/assets/stylesheets/mice/_forms.scss */
 fieldset {
   padding: 0;

@@ -10027,6 +10027,147 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }(jQuery);
 (function() {
   'use strict';
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  (function($) {
+    var Message;
+    Message = (function() {
+      function Message(element, options) {
+        this.init = __bind(this.init, this);
+        this.element = element;
+        this.$element;
+        this.options;
+        this.init(options);
+      }
+
+      Message.prototype.init = function(options) {
+        if (this.element) {
+          this.$element = $(this.element);
+        }
+        if (this.$element) {
+          this.$element.on('click', '.close', (function(_this) {
+            return function() {
+              return _this.hide();
+            };
+          })(this));
+        }
+        return this.options = this.getOptions(options);
+      };
+
+      Message.prototype.getOptions = function(options) {
+        if (this.$element) {
+          return $.extend({}, $.fn.message.defaults, this.$element.data(), options);
+        } else {
+          return $.extend({}, $.fn.message.defaults, options);
+        }
+      };
+
+      Message.prototype.show = function(message, duration) {
+        if (message) {
+          this.$element = this.$element || $('body').data('miclle-message-global');
+          if (this.$element === undefined) {
+            this.$element = $($.fn.message.defaults.template);
+            $('body').append(this.$element).data('miclle-message-global', this.$element);
+          }
+          if (typeof message === 'string') {
+            this.init({
+              message: message
+            });
+          } else {
+            this.init(message);
+          }
+          this.$element.slideUp((function(_this) {
+            return function() {
+              _this.$element.removeClass('top bottom').addClass(_this.options.placement);
+              _this.$element.removeClass('success info warning danger').addClass(_this.options.status);
+              message = _this.options.message;
+              duration = duration || _this.options.duration;
+              if (message) {
+                _this.$element.children('.inner').html(message);
+              }
+              return _this.$element.slideDown(function() {
+                return duration && setTimeout((function() {
+                  return _this.hide();
+                }), duration);
+              });
+            };
+          })(this));
+        } else {
+          message = this.options.message;
+          duration = duration || this.options.duration;
+          if (message) {
+            this.$element.children('.inner').html(message);
+          }
+          this.$element.slideDown((function(_this) {
+            return function() {
+              return duration && setTimeout((function() {
+                return _this.hide();
+              }), duration);
+            };
+          })(this));
+        }
+        return this;
+      };
+
+      Message.prototype.hold = function() {
+        return this.$element.slideDown();
+      };
+
+      Message.prototype.hide = function() {
+        return this.$element.slideUp();
+      };
+
+      Message.prototype.toggle = function() {
+        if (this.$element.is(':hidden')) {
+          return this.show();
+        } else {
+          return this.hide();
+        }
+      };
+
+      Message.prototype.destroy = function() {
+        return this.hide().$element.remove();
+      };
+
+      return Message;
+
+    })();
+    $.fn.message = function(option) {
+      return this.each(function() {
+        var $element, data, options;
+        $element = $(this);
+        data = $element.data('mice.message');
+        options = typeof option === 'object' && option;
+        if (!data && option === 'destroy') {
+          return;
+        }
+        if (!data) {
+          data = new Message(this, options);
+          data.show();
+          $element.data('mice.message', data);
+        }
+        if (typeof option === 'string') {
+          return data[option]();
+        }
+      });
+    };
+    $.fn.message.Constructor = Message;
+    $.fn.message.defaults = {
+      template: "<div class=\"message\"><div class=\"inner\"></div><span class=\"close\">&times;</span></div>",
+      message: null,
+      placement: 'top',
+      status: '',
+      duration: null
+    };
+    window.Message = new Message();
+    $(function() {
+      return $('[data-ride="message"]').message();
+    });
+  })(jQuery);
+
+}).call(this);
+(function() {
+  'use strict';
   (function($) {
     var Tooltip;
     Tooltip = (function() {
@@ -10432,230 +10573,26 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   })(jQuery);
 
 }).call(this);
-/* ========================================================================
- * Bootstrap: carousel.js v3.2.0
- * http://getbootstrap.com/javascript/#carousel
- * ========================================================================
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
-
-+function ($) {
+(function() {
   'use strict';
+  (function($) {
+    var Slider;
+    Slider = (function() {
+      function Slider(element, options) {
+        this.slider;
+        this.options;
+        this.init();
+      }
 
-  // CAROUSEL CLASS DEFINITION
-  // =========================
+      Slider.prototype.init = function() {};
 
-  var Carousel = function (element, options) {
-    this.$element    = $(element).on('keydown.bs.carousel', $.proxy(this.keydown, this))
-    this.$indicators = this.$element.find('.indicators')
-    this.options     = options
-    this.paused      =
-    this.sliding     =
-    this.interval    =
-    this.$active     =
-    this.$items      = null
+      return Slider;
 
-    this.options.pause == 'hover' && this.$element
-      .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
-      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
-  }
+    })();
+  })(jQuery);
 
-  Carousel.VERSION  = '3.2.0'
+}).call(this);
 
-  Carousel.DEFAULTS = {
-    interval: 5000,
-    pause: 'hover',
-    wrap: true
-  }
-
-  Carousel.prototype.keydown = function (e) {
-    switch (e.which) {
-      case 37: this.prev(); break
-      case 39: this.next(); break
-      default: return
-    }
-
-    e.preventDefault()
-  }
-
-  Carousel.prototype.cycle = function (e) {
-    e || (this.paused = false)
-
-    this.interval && clearInterval(this.interval)
-
-    this.options.interval
-      && !this.paused
-      && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
-
-    return this
-  }
-
-  Carousel.prototype.getItemIndex = function (item) {
-    this.$items = item.parent().children('.item')
-    return this.$items.index(item || this.$active)
-  }
-
-  Carousel.prototype.to = function (pos) {
-    var that        = this
-    var activeIndex = this.getItemIndex(this.$active = this.$element.find('.item.active'))
-
-    if (pos > (this.$items.length - 1) || pos < 0) return
-
-    if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) }) // yes, "slid"
-    if (activeIndex == pos) return this.pause().cycle()
-
-    return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
-  }
-
-  Carousel.prototype.pause = function (e) {
-    e || (this.paused = true)
-
-    if (this.$element.find('.next, .prev').length && $.support.transition) {
-      this.$element.trigger($.support.transition.end)
-      this.cycle(true)
-    }
-
-    this.interval = clearInterval(this.interval)
-
-    return this
-  }
-
-  Carousel.prototype.next = function () {
-    if (this.sliding) return
-    return this.slide('next')
-  }
-
-  Carousel.prototype.prev = function () {
-    if (this.sliding) return
-    return this.slide('prev')
-  }
-
-  Carousel.prototype.slide = function (type, next) {
-    var $active   = this.$element.find('.item.active')
-    var $next     = next || $active[type]()
-    var isCycling = this.interval
-    var direction = type == 'next' ? 'left' : 'right'
-    var fallback  = type == 'next' ? 'first' : 'last'
-    var that      = this
-
-    if (!$next.length) {
-      if (!this.options.wrap) return
-      $next = this.$element.find('.item')[fallback]()
-    }
-
-    if ($next.hasClass('active')) return (this.sliding = false)
-
-    var relatedTarget = $next[0]
-    var slideEvent = $.Event('slide.bs.carousel', {
-      relatedTarget: relatedTarget,
-      direction: direction
-    })
-    this.$element.trigger(slideEvent)
-    if (slideEvent.isDefaultPrevented()) return
-
-    this.sliding = true
-
-    isCycling && this.pause()
-
-    if (this.$indicators.length) {
-      this.$indicators.find('.active').removeClass('active')
-      var $nextIndicator = $(this.$indicators.children()[this.getItemIndex($next)])
-      $nextIndicator && $nextIndicator.addClass('active')
-    }
-
-    var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
-    if ($.support.transition && this.$element.hasClass('slide')) {
-      $next.addClass(type)
-      $next[0].offsetWidth // force reflow
-      $active.addClass(direction)
-      $next.addClass(direction)
-      $active
-        .one('miceTransitionEnd', function () {
-          $next.removeClass([type, direction].join(' ')).addClass('active')
-          $active.removeClass(['active', direction].join(' '))
-          that.sliding = false
-          setTimeout(function () {
-            that.$element.trigger(slidEvent)
-          }, 0)
-        })
-        .emulateTransitionEnd($active.css('transition-duration').slice(0, -1) * 1000)
-    } else {
-      $active.removeClass('active')
-      $next.addClass('active')
-      this.sliding = false
-      this.$element.trigger(slidEvent)
-    }
-
-    isCycling && this.cycle()
-
-    return this
-  }
-
-
-  // CAROUSEL PLUGIN DEFINITION
-  // ==========================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.carousel')
-      var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
-      var action  = typeof option == 'string' ? option : options.slide
-
-      if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
-      if (typeof option == 'number') data.to(option)
-      else if (action) data[action]()
-      else if (options.interval) data.pause().cycle()
-    })
-  }
-
-  var old = $.fn.carousel
-
-  $.fn.carousel             = Plugin
-  $.fn.carousel.Constructor = Carousel
-
-
-  // CAROUSEL NO CONFLICT
-  // ====================
-
-  $.fn.carousel.noConflict = function () {
-    $.fn.carousel = old
-    return this
-  }
-
-
-  // CAROUSEL DATA-API
-  // =================
-
-  $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
-    var href
-    var $this   = $(this)
-    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
-    if (!$target.hasClass('carousel')) return
-    var options = $.extend({}, $target.data(), $this.data())
-    var slideIndex = $this.attr('data-slide-to')
-    if (slideIndex) options.interval = false
-
-    Plugin.call($target, options)
-
-    if (slideIndex) {
-      $target.data('bs.carousel').to(slideIndex)
-    }
-
-    e.preventDefault()
-  })
-
-  $(window).on('load', function () {
-    $('[data-ride="carousel"]').each(function () {
-      var $carousel = $(this)
-      Plugin.call($carousel, $carousel.data())
-    })
-  })
-
-}(jQuery);
 
 
 
@@ -10669,5 +10606,36 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 // ZeroClipboard.config( { moviePath: '/images/ZeroClipboard.swf' } );
 
 $(function(){
+
+  $('body').on('click', '#message-show', function(){
+    Message.show('This is message!');
+  });
+
+  $('body').on('click', '#message-auto-hide', function(){
+    Message.show('This is message!', 2000);
+  });
+
+  $('body').on('click', '#message-hide', function(){
+    Message.hide();
+  });
+
+  $('body').on('click', '#message-at-bottom', function(){
+    // `message` can be an object (config)
+    Message.show({
+      message: 'message body show at bottom',
+      // the placement can be `top` or `bottom`, by default is `top`
+      placement: 'bottom'
+    });
+  });
+
+  $('body').on('click', '#message-with-status', function(){
+    // `message` can be an object (config)
+    Message.show({
+      message: 'message body show with danger status',
+      // the placement can be `top` or `bottom`, by default is `top`
+      status: 'danger'
+    });
+  });
+
 
 });
