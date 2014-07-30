@@ -110,8 +110,6 @@
         inDom =  $.contains(document.documentElement, @$element[0])
         return if e.isDefaultPrevented() or !inDom
 
-        that = @
-
         $tip = @tip()
         @setContent()
 
@@ -147,9 +145,9 @@
 
         @applyPlacement calculatedOffset, placement
 
-        complete = ->
-          that.$element.trigger('shown.mice.' + that.type)
-          that.hoverState = null
+        complete = =>
+          @$element.trigger('shown.mice.' + @type)
+          @hoverState = null
 
         if $.support.transition and @$tip.hasClass('fade') then $tip.one('miceTransitionEnd', complete).emulateTransitionEnd(150) else complete()
 
@@ -196,13 +194,12 @@
       @tip().find('.inner')[if @options.html then 'html' else 'text'](@getTitle()).removeClass('fade in top bottom left right')
 
     hide: ->
-      that = @
       $tip = @tip()
       e    = $.Event('hide.mice.' + @type)
 
-      complete = ->
-        $tip.detach() if that.hoverState != 'in'
-        that.$element.trigger('hidden.mice.' + that.type)
+      complete = =>
+        $tip.detach() if @hoverState != 'in'
+        @$element.trigger('hidden.mice.' + @type)
 
       @$element.trigger(e)
 
