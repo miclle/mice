@@ -109,7 +109,11 @@
 
         @$backdrop = $('<div class="modal-backdrop ' + animate + '" />').appendTo(@$body)
 
-        @$element.on 'click.dismiss.bs.modal', $.proxy( ((e) -> return if e.target !== e.currentTarget; if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(@)), @)
+        proxy = (e) ->
+          return if e.target != e.currentTarget
+          if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(@)
+
+        @$element.on 'click.dismiss.bs.modal', $.proxy(proxy, @)
 
         if doAnimate then @$backdrop[0].offsetWidth # force reflow
 
@@ -155,11 +159,11 @@
   # MODAL PLUGIN DEFINITION
   # =======================
 
-  Plugin (option, _relatedTarget) ->
-    return @.each ->
+  $.fn.modal = (option, _relatedTarget) ->
+    @.each ->
       $this   = $(@)
       data    = $this.data('bs.modal')
-      options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' and option)
+      options = $.extend({}, $.fn.modal.defaults, $this.data(), typeof option == 'object' and option)
 
       if !data
         $this.data('bs.modal', (data = new Modal(@, options)))
@@ -170,20 +174,12 @@
       else if options.show
         data.show(_relatedTarget)
 
-  old = $.fn.modal
 
-  $.fn.modal             = Plugin
   $.fn.modal.Constructor = Modal
 
-
-  # MODAL NO CONFLICT
-  # =================
-
-  $.fn.modal.noConflict = ->
-    $.fn.modal = old
-    @
-
-  Modal.DEFAULTS =
+  # TOOLTIP PLUGIN DEFAULT OPTIONS
+  # =========================
+  $.fn.modal.defaults =
     backdrop: true
     keyboard: true
     show: true
@@ -192,21 +188,21 @@
   # MODAL DATA-API
   # ==============
 
-  # $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', (e) ->
-  #   $this   = $(@)
-  #   href    = $this.attr('href')
-  #   $target = $($this.attr('data-target') or (href and href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
-  #   option  = if $target.data('bs.modal') then 'toggle' else $.extend({ remote: !/#/.test(href) and href }, $target.data(), $this.data())
+  $(document).on 'click.bs.modal.data-api', '[data-toggle="modal"]', (e) ->
+    $this   = $(@)
+    href    = $this.attr('href')
+    $target = $($this.attr('data-target') or (href and href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
+    option  = if $target.data('bs.modal') then 'toggle' else $.extend({ remote: !/#/.test(href) and href }, $target.data(), $this.data())
 
-  #   if $this.is('a') then e.preventDefault()
+    if $this.is('a') then e.preventDefault()
 
-  #   $target.one
-  #     'show.bs.modal'
-  #     (showEvent) ->
-  #       return if showEvent.isDefaultPrevented() # only register focus restorer if modal will actually get shown
-  #       $target.one 'hidden.bs.modal', -> $this.is(':visible') and $this.trigger('focus')
+    $target.one 'show.bs.modal', (showEvent) ->
+        return if showEvent.isDefaultPrevented() # only register focus restorer if modal will actually get shown
+        $target.one 'hidden.bs.modal', -> $this.is(':visible') and $this.trigger('focus')
 
-  #   Plugin.call($target, option, @)
+    # Plugin.call($target, option, @)
+
+    $target.modal option, @
 
   return
 
