@@ -228,7 +228,7 @@
 
   $.fn.modal.noConflict = ->
     $.fn.modal = old
-    this
+    @
 
 
   # MODAL DATA-API
@@ -237,17 +237,16 @@
   $(document).on 'click.bs.modal.data-api',
     '[data-toggle="modal"]',
     (e) ->
-      $this   = $(@)
-      href    = $this.attr('href')
-      $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
-      option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+      $element  = $(@)
+      href      = $element.attr('href')
+      $target   = $($element.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
+      option    = if $target.data('bs.modal') then 'toggle' else $.extend({ remote: !/#/.test(href) && href }, $target.data(), $element.data())
 
-      e.preventDefault() if $this.is('a')
+      e.preventDefault() if $element.is('a')
 
       $target.one 'show.bs.modal', (showEvent) ->
         return if (showEvent.isDefaultPrevented()) # only register focus restorer if modal will actually get shown
-        $target.one 'hidden.bs.modal', ->
-          $this.is(':visible') && $this.trigger('focus')
+        $target.one 'hidden.bs.modal', -> $element.is(':visible') && $element.trigger('focus')
 
       Plugin.call($target, option, @)
 
