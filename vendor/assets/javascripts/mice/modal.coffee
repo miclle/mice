@@ -14,159 +14,202 @@
       @isShown        = null
       @scrollbarWidth = 0
 
-      if @options.remote then @$element.find('.modal-content').load(@options.remote, $.proxy( (-> @$element.trigger('loaded.bs.modal')), @))
+      if @options.remote
+        @$element.find('.modal-content').load(@options.remote, $.proxy( (-> @$element.trigger('loaded.bs.modal')) , @))
 
-    toggle: (_relatedTarget) ->
-      if @isShown then @hide() else @show(_relatedTarget)
+  Modal.VERSION  = '3.2.0'
 
-    show: (_relatedTarget) ->
-      e = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
+  Modal.DEFAULTS =
+    backdrop: true
+    keyboard: true
+    show: true
 
-      @$element.trigger(e)
 
-      return if @isShown or e.isDefaultPrevented()
+  Modal::toggle = (_relatedTarget) ->
+    if @isShown then @hide() else @show(_relatedTarget)
 
-      @isShown = true
 
-      @checkScrollbar()
-      @$body.addClass('modal-open')
+  Modal::show = (_relatedTarget) ->
+    that = @
+    e    = $.Event('show.bs.modal', relatedTarget: _relatedTarget)
 
-      @setScrollbar()
-      @escape()
+    @$element.trigger(e)
 
-      @$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(@hide, @))
+    return if (@isShown || e.isDefaultPrevented())
 
-      @backdrop =>
-        transition = $.support.transition and @$element.hasClass('fade')
+    @isShown = true
 
-        if !@$element.parent().length then @$element.appendTo(@$body) # don't move modals dom position
+    @checkScrollbar()
+    @$body.addClass('modal-open')
 
-        @$element.show().scrollTop(0)
+    @setScrollbar()
+    @escape()
 
-        if transition then @$element[0].offsetWidth # force reflow
+    @$element.on 'click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(@hide, @)
 
-        @$element.addClass('in').attr('aria-hidden', false)
+    @backdrop =>
+      transition = $.support.transition && that.$element.hasClass('fade')
 
-        @enforceFocus()
+      @$element.appendTo(@$body) unless @$element.parent().length # don't move modals dom position
 
-        e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
+      @$element.show().scrollTop(0)
 
-        if transition
-          @$element.find('.modal-dialog') # wait for modal to slide in
-            .one('bsTransitionEnd', -> @$element.trigger('focus').trigger(e))
-            .emulateTransitionEnd(300)
-        else
-          @$element.trigger('focus').trigger(e)
+      @$element[0].offsetWidth if transition # force reflow
 
-    hide: (e) ->
-      e.preventDefault() if e
+      @$element.addClass('in').attr('aria-hidden', false)
 
-      e = $.Event('hide.bs.modal')
+      @enforceFocus()
 
-      @$element.trigger(e)
+      e = $.Event('shown.bs.modal', relatedTarget: _relatedTarget)
 
-      return if !@isShown or e.isDefaultPrevented()
-
-      @isShown = false
-
-      @$body.removeClass('modal-open')
-
-      @resetScrollbar()
-      @escape()
-
-      $(document).off('focusin.bs.modal')
-
-      @$element.removeClass('in').attr('aria-hidden', true).off('click.dismiss.bs.modal')
-
-      if $.support.transition and @$element.hasClass('fade')
-        @$element.one('bsTransitionEnd', $.proxy(@hideModal, @)).emulateTransitionEnd(300)
+      if transition
+        @$element.find('.modal-dialog') # wait for modal to slide in
+          .one 'bsTransitionEnd', -> @$element.trigger('focus').trigger(e)
+          .emulateTransitionEnd(300)
       else
-        @hideModal()
+        @$element.trigger('focus').trigger(e)
 
-    enforceFocus: ->
-      $(document).off('focusin.bs.modal').on('focusin.bs.modal', $.proxy( ((e) -> @$element.trigger('focus') if @$element[0] != e.target and !@$element.has(e.target).length), @))
 
-    escape: ->
-      if @isShown and @options.keyboard
-        @$element.on('keyup.dismiss.bs.modal', $.proxy( ((e) -> e.which == 27 and @hide()), @))
-      else if !@isShown
-        @$element.off('keyup.dismiss.bs.modal')
+  Modal::hide = (e) ->
+    if (e) then e.preventDefault()
 
-    hideModal: ->
-      @$element.hide()
-      @backdrop => @$element.trigger('hidden.bs.modal')
+    e = $.Event('hide.bs.modal')
 
-    removeBackdrop: ->
-      @$backdrop and @$backdrop.remove()
-      @$backdrop = null
+    @$element.trigger(e)
 
-    backdrop: (callback) ->
-      that = this
-      animate = if @$element.hasClass('fade') then 'fade' else ''
+    return if (!@isShown || e.isDefaultPrevented())
 
-      if @isShown and @options.backdrop
-        doAnimate = $.support.transition and animate
+    @isShown = false
 
-        @$backdrop = $('<div class="modal-backdrop ' + animate + '" />').appendTo(@$body)
+    @$body.removeClass('modal-open')
 
-        proxy = (e) ->
+    @resetScrollbar()
+    @escape()
+
+    $(document).off('focusin.bs.modal')
+
+    @$element
+      .removeClass('in')
+      .attr('aria-hidden', true)
+      .off('click.dismiss.bs.modal')
+
+    if $.support.transition && @$element.hasClass('fade')
+      @$element
+        .one('bsTransitionEnd', $.proxy(@hideModal, @))
+        .emulateTransitionEnd(300)
+    else
+      @hideModal()
+
+
+  Modal::enforceFocus = ->
+    $(document)
+      .off 'focusin.bs.modal' # guard against infinite focus loop
+      .on 'focusin.bs.modal',
+        $.proxy (e) ->
+          if @$element[0] != e.target && !@$element.has(e.target).length
+            @$element.trigger('focus')
+        , @
+
+
+  Modal::escape = ->
+    if @isShown && @options.keyboard
+      @$element.on 'keyup.dismiss.bs.modal',
+        $.proxy (e) ->
+          e.which == 27 && @hide()
+        , @
+    else if !@isShown
+      @$element.off('keyup.dismiss.bs.modal')
+
+
+  Modal::hideModal = ->
+    that = @
+    @$element.hide()
+    @backdrop -> that.$element.trigger('hidden.bs.modal')
+
+
+  Modal::removeBackdrop = ->
+    @$backdrop && @$backdrop.remove()
+    @$backdrop = null
+
+
+  Modal::backdrop = (callback) ->
+    that = this
+    animate = if @$element.hasClass('fade') then 'fade' else ''
+
+    if @isShown && @options.backdrop
+      doAnimate = $.support.transition && animate
+
+      @$backdrop = $('<div class="modal-backdrop ' + animate + '" />').appendTo(@$body)
+
+      @$element.on 'click.dismiss.bs.modal',
+        $.proxy (e) ->
           return if e.target != e.currentTarget
-          if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(@)
+          if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(this)
+        , this
 
-        @$element.on 'click.dismiss.bs.modal', $.proxy(proxy, @)
+      @$backdrop[0].offsetWidth if doAnimate # force reflow
 
-        if doAnimate then @$backdrop[0].offsetWidth # force reflow
+      @$backdrop.addClass('in')
 
-        @$backdrop.addClass('in')
+      return if !callback
 
-        return unless callback
-
-        if doAnimate then @$backdrop.one('bsTransitionEnd', callback).emulateTransitionEnd(150) else callback()
-
-      else if !@isShown and @$backdrop
-        @$backdrop.removeClass('in')
-
-        callbackRemove = =>
-          @removeBackdrop()
-          callback and callback()
-
-        if $.support.transition and @$element.hasClass('fade') then @$backdrop.one('bsTransitionEnd', callbackRemove).emulateTransitionEnd(150) else callbackRemove()
-
-      else if callback
+      if doAnimate
+        @$backdrop.one('bsTransitionEnd', callback).emulateTransitionEnd(150)
+      else
         callback()
 
+    else if !@isShown && @$backdrop
+      @$backdrop.removeClass('in')
 
-    checkScrollbar: ->
-      return if document.body.clientWidth >= window.innerWidth
-      @scrollbarWidth = @scrollbarWidth or @measureScrollbar()
+      callbackRemove = ->
+        that.removeBackdrop()
+        callback && callback()
 
-    setScrollbar: ->
-      bodyPad = parseInt((@$body.css('padding-right') or 0), 10)
-      if @scrollbarWidth then @$body.css('padding-right', bodyPad + @scrollbarWidth)
+      if $.support.transition && @$element.hasClass('fade')
+        @$backdrop
+          .one('bsTransitionEnd', callbackRemove)
+          .emulateTransitionEnd(150)
+      else
+        callbackRemove()
 
-    resetScrollbar: ->
-      @$body.css('padding-right', '')
+    else if callback
+      callback()
 
-    measureScrollbar: -> # thx walsh
-      scrollDiv = document.createElement('div')
-      scrollDiv.className = 'modal-scrollbar-measure'
-      @$body.append(scrollDiv)
-      scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
-      @$body[0].removeChild(scrollDiv)
-      return scrollbarWidth
+
+  Modal::checkScrollbar = ->
+    return if document.body.clientWidth >= window.innerWidth
+    @scrollbarWidth = @scrollbarWidth || @measureScrollbar()
+
+
+  Modal::setScrollbar = ->
+    bodyPad = parseInt @$body.css('padding-right') || 0, 10
+    @$body.css('padding-right', bodyPad + @scrollbarWidth) if @scrollbarWidth
+
+
+  Modal::resetScrollbar = ->
+    @$body.css 'padding-right', ''
+
+
+  Modal::measureScrollbar = -> # thx walsh
+    scrollDiv = document.createElement('div')
+    scrollDiv.className = 'modal-scrollbar-measure'
+    @$body.append(scrollDiv)
+    scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
+    @$body[0].removeChild(scrollDiv)
+    scrollbarWidth
 
 
   # MODAL PLUGIN DEFINITION
   # =======================
 
-  $.fn.modal = (option, _relatedTarget) ->
-    @.each ->
-      $this   = $(@)
-      data    = $this.data('bs.modal')
-      options = $.extend({}, $.fn.modal.defaults, $this.data(), typeof option == 'object' and option)
+  Plugin = (option, _relatedTarget) ->
+    @each ->
+      $element   = $(@)
+      data    = $element.data('bs.modal')
+      options = $.extend({}, Modal.DEFAULTS, $element.data(), typeof option == 'object' && option)
 
-      if !data
-        $this.data('bs.modal', (data = new Modal(@, options)))
+      if (!data)
+        $element.data 'bs.modal', (data = new Modal(@, options))
 
       if typeof option == 'string'
         data[option](_relatedTarget)
@@ -174,35 +217,39 @@
       else if options.show
         data.show(_relatedTarget)
 
+  old = $.fn.modal
 
+  $.fn.modal             = Plugin
   $.fn.modal.Constructor = Modal
 
-  # TOOLTIP PLUGIN DEFAULT OPTIONS
-  # =========================
-  $.fn.modal.defaults =
-    backdrop: true
-    keyboard: true
-    show: true
+
+  # MODAL NO CONFLICT
+  # =================
+
+  $.fn.modal.noConflict = ->
+    $.fn.modal = old
+    this
 
 
   # MODAL DATA-API
   # ==============
 
-  $(document).on 'click.bs.modal.data-api', '[data-toggle="modal"]', (e) ->
-    $this   = $(@)
-    href    = $this.attr('href')
-    $target = $($this.attr('data-target') or (href and href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
-    option  = if $target.data('bs.modal') then 'toggle' else $.extend({ remote: !/#/.test(href) and href }, $target.data(), $this.data())
+  $(document).on 'click.bs.modal.data-api',
+    '[data-toggle="modal"]',
+    (e) ->
+      $this   = $(@)
+      href    = $this.attr('href')
+      $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
+      option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
-    if $this.is('a') then e.preventDefault()
+      e.preventDefault() if $this.is('a')
 
-    $target.one 'show.bs.modal', (showEvent) ->
-        return if showEvent.isDefaultPrevented() # only register focus restorer if modal will actually get shown
-        $target.one 'hidden.bs.modal', -> $this.is(':visible') and $this.trigger('focus')
+      $target.one 'show.bs.modal', (showEvent) ->
+        return if (showEvent.isDefaultPrevented()) # only register focus restorer if modal will actually get shown
+        $target.one 'hidden.bs.modal', ->
+          $this.is(':visible') && $this.trigger('focus')
 
-    # Plugin.call($target, option, @)
-
-    $target.modal option, @
+      Plugin.call($target, option, @)
 
   return
 
