@@ -57,6 +57,14 @@ ul.inline {
     padding-left: 5px;
     padding-right: 5px;
   }
+
+  &.justified{
+    > li{
+      float: none;
+      display: table-cell;
+      width: 1%;
+    }
+  }
 }
 
 // Description Lists
