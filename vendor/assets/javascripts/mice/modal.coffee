@@ -151,7 +151,7 @@
 
       @$backdrop.addClass('in')
 
-      return if !callback
+      return unless callback
 
       if doAnimate
         @$backdrop.one('bsTransitionEnd', callback).emulateTransitionEnd(150)
