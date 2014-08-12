@@ -64,7 +64,7 @@
 
       if transition
         @$element.find('.modal-dialog') # wait for modal to slide in
-          .one 'bsTransitionEnd', -> @$element.trigger('focus').trigger(e)
+          .one 'miceTransitionEnd', -> @$element.trigger('focus').trigger(e)
           .emulateTransitionEnd(300)
       else
         @$element.trigger('focus').trigger(e)
@@ -95,7 +95,7 @@
 
     if $.support.transition && @$element.hasClass('fade')
       @$element
-        .one('bsTransitionEnd', $.proxy(@hideModal, @))
+        .one('miceTransitionEnd', $.proxy(@hideModal, @))
         .emulateTransitionEnd(300)
     else
       @hideModal()
@@ -154,7 +154,7 @@
       return unless callback
 
       if doAnimate
-        @$backdrop.one('bsTransitionEnd', callback).emulateTransitionEnd(150)
+        @$backdrop.one('miceTransitionEnd', callback).emulateTransitionEnd(150)
       else
         callback()
 
@@ -167,7 +167,7 @@
 
       if $.support.transition && @$element.hasClass('fade')
         @$backdrop
-          .one('bsTransitionEnd', callbackRemove)
+          .one('miceTransitionEnd', callbackRemove)
           .emulateTransitionEnd(150)
       else
         callbackRemove()
