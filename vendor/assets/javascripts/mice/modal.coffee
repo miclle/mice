@@ -15,7 +15,7 @@
       @scrollbarWidth = 0
 
       if @options.remote
-        @$element.find('.modal-content').load(@options.remote, $.proxy( (-> @$element.trigger('loaded.bs.modal')) , @))
+        @$element.find('.modal-content').load(@options.remote, $.proxy( (-> @$element.trigger('loaded.modal')) , @))
 
   Modal.VERSION  = '3.2.0'
 
@@ -30,8 +30,7 @@
 
 
   Modal::show = (_relatedTarget) ->
-    that = @
-    e    = $.Event('show.bs.modal', relatedTarget: _relatedTarget)
+    e = $.Event('show.modal', relatedTarget: _relatedTarget)
 
     @$element.trigger(e)
 
@@ -45,10 +44,10 @@
     @setScrollbar()
     @escape()
 
-    @$element.on 'click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(@hide, @)
+    @$element.on 'click.dismiss.modal', '[data-dismiss="modal"]', $.proxy(@hide, @)
 
     @backdrop =>
-      transition = $.support.transition && that.$element.hasClass('fade')
+      transition = $.support.transition && @$element.hasClass('fade')
 
       @$element.appendTo(@$body) unless @$element.parent().length # don't move modals dom position
 
@@ -60,7 +59,7 @@
 
       @enforceFocus()
 
-      e = $.Event('shown.bs.modal', relatedTarget: _relatedTarget)
+      e = $.Event('shown.modal', relatedTarget: _relatedTarget)
 
       if transition
         @$element.find('.modal-dialog') # wait for modal to slide in
@@ -73,7 +72,7 @@
   Modal::hide = (e) ->
     if (e) then e.preventDefault()
 
-    e = $.Event('hide.bs.modal')
+    e = $.Event('hide.modal')
 
     @$element.trigger(e)
 
@@ -86,46 +85,35 @@
     @resetScrollbar()
     @escape()
 
-    $(document).off('focusin.bs.modal')
+    $(document).off('focusin.modal')
 
-    @$element
-      .removeClass('in')
-      .attr('aria-hidden', true)
-      .off('click.dismiss.bs.modal')
+    @$element.removeClass('in').attr('aria-hidden', true).off('click.dismiss.modal')
 
     if $.support.transition && @$element.hasClass('fade')
-      @$element
-        .one('miceTransitionEnd', $.proxy(@hideModal, @))
-        .emulateTransitionEnd(300)
+      @$element.one('miceTransitionEnd', $.proxy(@hideModal, @)).emulateTransitionEnd(300)
     else
       @hideModal()
 
 
   Modal::enforceFocus = ->
     $(document)
-      .off 'focusin.bs.modal' # guard against infinite focus loop
-      .on 'focusin.bs.modal',
+      .off 'focusin.modal' # guard against infinite focus loop
+      .on 'focusin.modal',
         $.proxy (e) ->
-          if @$element[0] != e.target && !@$element.has(e.target).length
-            @$element.trigger('focus')
+            @$element.trigger('focus') if @$element[0] != e.target && !@$element.has(e.target).length
         , @
 
 
   Modal::escape = ->
     if @isShown && @options.keyboard
-      @$element.on 'keyup.dismiss.bs.modal',
-        $.proxy (e) ->
-          e.which == 27 && @hide()
-        , @
+      @$element.on 'keyup.dismiss.modal', ($.proxy (e) -> e.which == 27 && @hide()), @
     else if !@isShown
-      @$element.off('keyup.dismiss.bs.modal')
+      @$element.off('keyup.dismiss.modal')
 
 
   Modal::hideModal = ->
-    that = @
     @$element.hide()
-    @backdrop -> that.$element.trigger('hidden.bs.modal')
-
+    @backdrop => @$element.trigger('hidden.modal')
 
   Modal::removeBackdrop = ->
     @$backdrop && @$backdrop.remove()
@@ -133,7 +121,6 @@
 
 
   Modal::backdrop = (callback) ->
-    that = this
     animate = if @$element.hasClass('fade') then 'fade' else ''
 
     if @isShown && @options.backdrop
@@ -141,11 +128,11 @@
 
       @$backdrop = $('<div class="modal-backdrop ' + animate + '" />').appendTo(@$body)
 
-      @$element.on 'click.dismiss.bs.modal',
+      @$element.on 'click.dismiss.modal',
         $.proxy (e) ->
           return if e.target != e.currentTarget
-          if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(this)
-        , this
+          if @options.backdrop == 'static' then @$element[0].focus.call(@$element[0]) else @hide.call(@)
+        , @
 
       @$backdrop[0].offsetWidth if doAnimate # force reflow
 
@@ -153,22 +140,17 @@
 
       return unless callback
 
-      if doAnimate
-        @$backdrop.one('miceTransitionEnd', callback).emulateTransitionEnd(150)
-      else
-        callback()
+      if doAnimate then @$backdrop.one('miceTransitionEnd', callback).emulateTransitionEnd(150) else callback()
 
     else if !@isShown && @$backdrop
       @$backdrop.removeClass('in')
 
-      callbackRemove = ->
-        that.removeBackdrop()
+      callbackRemove = =>
+        @removeBackdrop()
         callback && callback()
 
       if $.support.transition && @$element.hasClass('fade')
-        @$backdrop
-          .one('miceTransitionEnd', callbackRemove)
-          .emulateTransitionEnd(150)
+        @$backdrop.one('miceTransitionEnd', callbackRemove).emulateTransitionEnd(150)
       else
         callbackRemove()
 
@@ -234,7 +216,7 @@
   # MODAL DATA-API
   # ==============
 
-  $(document).on 'click.bs.modal.data-api',
+  $(document).on 'click.modal.data-api',
     '[data-toggle="modal"]',
     (e) ->
       $element  = $(@)
@@ -244,9 +226,9 @@
 
       e.preventDefault() if $element.is('a')
 
-      $target.one 'show.bs.modal', (showEvent) ->
+      $target.one 'show.modal', (showEvent) ->
         return if (showEvent.isDefaultPrevented()) # only register focus restorer if modal will actually get shown
-        $target.one 'hidden.bs.modal', -> $element.is(':visible') && $element.trigger('focus')
+        $target.one 'hidden.modal', -> $element.is(':visible') && $element.trigger('focus')
 
       Plugin.call($target, option, @)
 
