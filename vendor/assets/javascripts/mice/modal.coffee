@@ -187,11 +187,11 @@
   Plugin = (option, _relatedTarget) ->
     @each ->
       $element   = $(@)
-      data    = $element.data('bs.modal')
+      data    = $element.data('modal')
       options = $.extend({}, Modal.DEFAULTS, $element.data(), typeof option == 'object' && option)
 
       if (!data)
-        $element.data 'bs.modal', (data = new Modal(@, options))
+        $element.data 'modal', (data = new Modal(@, options))
 
       if typeof option == 'string'
         data[option](_relatedTarget)
@@ -222,7 +222,7 @@
       $element  = $(@)
       href      = $element.attr('href')
       $target   = $($element.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) # strip for ie7
-      option    = if $target.data('bs.modal') then 'toggle' else $.extend({ remote: !/#/.test(href) && href }, $target.data(), $element.data())
+      option    = if $target.data('modal') then 'toggle' else $.extend({ remote: !/#/.test(href) && href }, $target.data(), $element.data())
 
       e.preventDefault() if $element.is('a')
 
