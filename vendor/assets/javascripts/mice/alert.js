@@ -14,6 +14,7 @@
   // ======================
 
   var dismiss = '[data-dismiss="alert"]'
+
   var Alert   = function (el) {
     $(el).on('click', dismiss, this.close)
   }
@@ -37,7 +38,7 @@
       $parent = $this.hasClass('alert') ? $this : $this.parent()
     }
 
-    $parent.trigger(e = $.Event('close.bs.alert'))
+    $parent.trigger(e = $.Event('close.alert'))
 
     if (e.isDefaultPrevented()) return
 
@@ -45,14 +46,12 @@
 
     function removeElement() {
       // detach from parent, fire event then clean up data
-      $parent.detach().trigger('closed.bs.alert').remove()
+      $parent.detach().trigger('closed.alert').remove()
     }
 
-    $.support.transition && $parent.hasClass('fade') ?
-      $parent
-        .one('bsTransitionEnd', removeElement)
-        .emulateTransitionEnd(150) :
-      removeElement()
+    console.log('close');
+
+    $.support.transition && $parent.hasClass('fade') ? $parent.one('miceTransitionEnd', removeElement).emulateTransitionEnd(150) : removeElement()
   }
 
 
@@ -62,9 +61,9 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.alert')
+      var data  = $this.data('alert')
 
-      if (!data) $this.data('bs.alert', (data = new Alert(this)))
+      if (!data) $this.data('alert', (data = new Alert(this)))
       if (typeof option == 'string') data[option].call($this)
     })
   }
@@ -87,6 +86,6 @@
   // ALERT DATA-API
   // ==============
 
-  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+  $(document).on('click.alert.data-api', dismiss, Alert.prototype.close)
 
 }(jQuery);
