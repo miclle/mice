@@ -13,7 +13,7 @@
 #   <div class="inner">Some tooltip text!</div>
 # </div>
 
-'use strict';
+'use strict'
 
 (($) ->
 
@@ -331,7 +331,7 @@
       selector: 'body'
       padding: 0
 
-  $ -> $("[data-toggle=tooltip]").tooltip();
+  $ -> $("[data-toggle=tooltip]").tooltip()
 
   return
 
