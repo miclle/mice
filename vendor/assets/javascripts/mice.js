@@ -4,3 +4,5 @@
 //= require mice/message
 //= require mice/tooltip
 //= require mice/slider
+
+//= require mice/jquery.email-autocomplete

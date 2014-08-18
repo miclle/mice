@@ -38,4 +38,7 @@ $(function(){
   });
 
 
+  // {domains: ["example.com", "gmail.com"] //add your own domains}
+  $("[type=email]").emailautocomplete();
+
 });
