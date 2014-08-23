@@ -75,6 +75,15 @@
         }
         &:active{ background: #F0F0F0; }
       }
+
+      &.active{
+        > a{
+          &:after{
+            height: 3px;
+            background-color: #428BCA;
+          }
+        }
+      }
     }
   }
 
