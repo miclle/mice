@@ -47,7 +47,17 @@
   }
 }
 
+.media.card{
+  > .cover{ float: none;}
+}
+
 .mediae{
   padding-left: 0;
   list-style: none;
+}
+
+.mediae.grid{
+  .media.card{
+    margin-top: 0;
+  }
 }
