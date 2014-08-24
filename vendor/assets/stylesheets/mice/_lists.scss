@@ -67,6 +67,22 @@ ul.inline {
   }
 }
 
+// Grids
+ul.grid, ol.grid{
+  > li{ float: left;}
+}
+
+$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
+
+@for $i from 1 through length($columns) {
+  ul.grid, ol.grid{
+    &.#{nth($columns, $i)} {
+      > li { width: percentage(1 / ($i + 1)) }
+    }
+  }
+}
+
+
 // Description Lists
 dl {
   margin-top: 0;
