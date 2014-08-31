@@ -41,7 +41,6 @@
   > .heading {
     padding: $panel-heading-padding;
     border-bottom: 1px solid transparent;
-    @include border-top-radius(($panel-border-radius - 1));
 
     // Within heading, strip any `h*` tag of its default margins for spacing.
     h1,h2,h3,h4,h5,h6{
@@ -62,7 +61,6 @@
     padding: $panel-footer-padding;
     background-color: $panel-footer-bg;
     border-top: 1px solid $panel-inner-border;
-    @include border-bottom-radius(($panel-border-radius - 1));
   }
 }
 
@@ -89,7 +87,6 @@
       > a:first-child,
       .item:first-child {
         border-top: 0;
-        @include border-top-radius(($panel-border-radius - 1));
       }
     }
     // Add border bottom radius for last one
@@ -98,7 +95,6 @@
       > a:last-child,
       .item:last-child {
         border-bottom: 0;
-        @include border-bottom-radius(($panel-border-radius - 1));
       }
     }
   }
@@ -129,7 +125,6 @@
   // Add border top radius for first one
   > table:first-child,
   > table.responsive:first-child > table:first-child {
-    @include border-top-radius(($panel-border-radius - 1));
 
     > thead:first-child,
     > tbody:first-child {
@@ -148,7 +143,6 @@
   // Add border bottom radius for last one
   > table:last-child,
   > table.responsive:last-child > table:last-child {
-    @include border-bottom-radius(($panel-border-radius - 1));
 
     > tbody:last-child,
     > tfoot:last-child {

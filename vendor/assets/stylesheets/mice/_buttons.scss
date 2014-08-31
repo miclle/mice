@@ -67,30 +67,10 @@
 
 // Button sizes
 // -------------------------
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
   padding:     $padding-vertical $padding-horizontal;
   font-size:   $font-size;
   line-height: $line-height;
-  border-radius: $border-radius;
-}
-
-// Single side border-radius
-// -------------------------
-@mixin border-top-radius($radius) {
-  border-top-right-radius: $radius;
-   border-top-left-radius: $radius;
-}
-@mixin border-right-radius($radius) {
-  border-bottom-right-radius: $radius;
-     border-top-right-radius: $radius;
-}
-@mixin border-bottom-radius($radius) {
-  border-bottom-right-radius: $radius;
-   border-bottom-left-radius: $radius;
-}
-@mixin border-left-radius($radius) {
-  border-bottom-left-radius: $radius;
-     border-top-left-radius: $radius;
 }
 
 
@@ -117,7 +97,7 @@ button,
 
   @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
 
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base);
   @include user-select(none);
 
   &:hover,
@@ -154,9 +134,9 @@ input[type="button"],
 input[type="submit"],
 button,
 .button{
-  &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini,  $border-radius);}
-  &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius);}
-  &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius);}
+  &.mini  {@include button-size($padding-mini-vertical,  $padding-mini-horizontal,  $font-size-mini,  $line-height-mini);}
+  &.small {@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small);}
+  &.large {@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large);}
 }
 
 // Block Button
@@ -189,22 +169,14 @@ button,
   .button{
     float: left;
 
-    &:first-child{
-      &:not(:last-child) {
-        @include border-right-radius(0);
-      }
-    }
-
     &:last-child{
       &:not(:first-child) {
         margin-left: -1px;
-        @include border-left-radius(0);
       }
     }
 
     &:not(:first-child):not(:last-child) {
       margin-left: -1px;
-      border-radius: 0;
     }
 
     &:hover{
@@ -228,18 +200,8 @@ button,
     float: none;
     width: 100%;
 
-
-    &:first-child{
-      &:not(:last-child) {
-        @include border-top-radius($border-radius);
-        @include border-bottom-radius(0);
-      }
-    }
-
     &:last-child{
       &:not(:first-child) {
-        @include border-top-radius(0);
-        @include border-bottom-radius($border-radius);
         @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
         margin-left: 0;
         margin-top: -1px;
@@ -339,7 +301,6 @@ button,
       input[type="button"],
       input[type="submit"],
       button{
-        @include border-right-radius(0);
         border-left-width: 1px;
 
         &:after{
@@ -366,8 +327,6 @@ button,
       > input[type="button"],
       > input[type="submit"],
       > button{
-        @include border-left-radius(0);
-        @include border-right-radius(0);
 
         &:after{
           display: block;
@@ -394,7 +353,6 @@ button,
       input[type="button"],
       input[type="submit"],
       button{
-        @include border-left-radius(0);
         border-right-width: 1px;
 
         &:hover{

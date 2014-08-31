@@ -48,12 +48,11 @@
 
 // Input sizing
 // -------------------------
-@mixin input-size($input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+@mixin input-size($input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height) {
   height: $input-height;
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
-  border-radius: $border-radius;
 }
 
 
@@ -150,9 +149,9 @@ textarea{
 // -------------------------
 input:not([type~=checkbox]):not([type~=radio]):not([type~=file]):not([type~=button]):not([type~=submit]),
 textarea{
-           @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base,  $border-radius);
-  &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small, $border-radius-small);}
-  &.large {@include input-size($input-height-large,   $input-padding-large-vertical,   $input-padding-large-horizontal,   $font-size-large, $line-height-large, $border-radius-large);}
+           @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base);
+  &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small);}
+  &.large {@include input-size($input-height-large,   $input-padding-large-vertical,   $input-padding-large-horizontal,   $font-size-large, $line-height-large);}
 }
 
 
@@ -331,15 +330,10 @@ form.horizontal{
     text-align: center;
     background-color: $input-group-addon-background;
     border: 1px solid $input-group-addon-border-color;
-    border-radius: $border-radius;
 
     width: 1%;
     white-space: nowrap;
     vertical-align: middle;
-
-    &:not(:first-child):not(:last-child) {
-      border-radius: 0;
-    }
 
     // Nuke default margins from checkboxes and radios to vertically center within.
     input[type="radio"],
@@ -365,7 +359,6 @@ form.horizontal{
     &:first-child{
       button:first-child,
       .button:first-child{
-        @include border-right-radius(0);
         border-right: 0;
       }
     }
@@ -373,7 +366,6 @@ form.horizontal{
     &:last-child{
       button:first-child,
       .button:first-child{
-        @include border-left-radius(0);
         border-left: 0;
       }
     }
@@ -385,15 +377,9 @@ form.horizontal{
 
   > input, .addon, .buttons{
     &:first-child {
-      @include border-right-radius(0);
-      border-bottom-right-radius: 0 !important;
-      border-top-right-radius: 0 !important;
       border-right: 0;
     }
     &:last-child {
-      @include border-left-radius(0);
-      border-bottom-left-radius: 0 !important;
-      border-top-left-radius: 0 !important;
       border-left: 0;
     }
   }

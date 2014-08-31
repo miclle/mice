@@ -133,8 +133,7 @@ ul, ol, div, section{
       background-color: $list-group-background;
       border: 1px solid $list-group-border-color;
 
-      &:first-child { @include border-top-radius($list-group-border-radius); }
-      &:last-child  { @include border-bottom-radius($list-group-border-radius); margin-bottom: 0; }
+      &:last-child  { margin-bottom: 0; }
 
       > .label { float: right;}
     }
