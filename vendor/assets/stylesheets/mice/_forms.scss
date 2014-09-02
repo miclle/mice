@@ -181,7 +181,8 @@ textarea{
     }
   }
 
-  input:not([type~=checkbox]):not([type~=radio]):not([type~=button]),
+  .text,
+  input[type=text], input[type=password], input[type=email], input[type=number],
   select,
   textarea{
     width: 100%;
