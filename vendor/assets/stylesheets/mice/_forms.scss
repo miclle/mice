@@ -38,7 +38,7 @@
 @mixin field-variant($border-color){
   color: $border-color;
 
-  .text,
+  input.text,
   input[type=text], input[type=password], input[type=email], input[type=number],
   textarea,
   select{
@@ -67,7 +67,7 @@ fieldset {
   min-width: 0;
 
   &[disabled]{
-    .text,
+    input.text,
     input[type=text], input[type=password], input[type=email], input[type=number],
     textarea,
     select,
@@ -85,7 +85,7 @@ fieldset {
   }
 }
 
-.text,
+input.text,
 input[type=text], input[type=password], input[type=email], input[type=number],
 textarea,
 select{
@@ -135,7 +135,7 @@ label{
 // Input Styles
 // -------------------------
 
-.text,
+input.text,
 input[type=text], input[type=password], input[type=email], input[type=number],
 textarea{
             @include input-variant($border-color-default);
@@ -151,7 +151,7 @@ textarea{
 
 // Input Sizing
 // -------------------------
-.text,
+input.text,
 input[type=text], input[type=password], input[type=email], input[type=number],
 textarea{
            @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base);
@@ -181,7 +181,7 @@ textarea{
     }
   }
 
-  .text,
+  input.text,
   input[type=text], input[type=password], input[type=email], input[type=number],
   select,
   textarea{
@@ -195,7 +195,7 @@ textarea{
   &.feedback{
     position: relative;
 
-    .text,
+    input.text,
     input[type=text], input[type=password], input[type=email], input[type=number],
     select,
     textarea{
@@ -225,7 +225,7 @@ form.inline{
     margin-bottom: 0;
     vertical-align: middle;
 
-    .text,
+    input.text,
     input[type=text], input[type=password], input[type=email], input[type=number],
     input[type="email"]{
       width: auto;
@@ -244,7 +244,7 @@ form.inline{
 }
 
 .inline{
-  .text,
+  input.text,
   input[type=text], input[type=password], input[type=email], input[type=number]{
     width: auto;
   }
@@ -316,7 +316,7 @@ form.horizontal{
     padding: 0 5px;
     &:first-child{ padding-left: 0; }
     &:last-child{ padding-right: 0; }
-    .text,
+    input.text,
     input[type=text], input[type=password], input[type=email], input[type=number],{
       width: 100%;
     }
