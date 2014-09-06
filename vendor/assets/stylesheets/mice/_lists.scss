@@ -133,6 +133,8 @@ ul, ol, div, section{
       background-color: $list-group-background;
       border: 1px solid $list-group-border-color;
 
+      @include clearfix();
+
       &:last-child  { margin-bottom: 0; }
 
       > .label { float: right;}
