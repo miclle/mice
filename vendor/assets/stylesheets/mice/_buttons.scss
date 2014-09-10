@@ -136,7 +136,7 @@ button,
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-    @include opacity(.65);
+    @include opacity(.5);
   }
 
              @include button-variant($button-default-color, $button-default-background, $button-default-border);
