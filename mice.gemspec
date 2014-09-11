@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/miclle/mice"
   spec.license       = "MIT"
 
-  spec.files         = FileList['lib/**/*.rb', '[A-Z]*', 'vendor/**/*'].to_a
+  spec.files         = FileList['lib/**/*.rb', '[A-Z]*', 'assets/*'].to_a
 
   # spec.files         = `git ls-files -z`.split("\x0")
   # spec.files.reject! { |fn| fn.include? "docs" }
@@ -26,5 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'sass', '~> 3.2'
 
   spec.add_development_dependency "bundler", "~> 1.5"
+  spec.add_development_dependency 'jquery-rails', '>= 3.1.0'
   # spec.add_development_dependency "rake"
 end
