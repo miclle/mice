@@ -1,5 +1,7 @@
 {
   "name": "mice",
   "description": "Mice is semantic front-end framework.",
-  "tags": ["mice", "grid", "typography", "buttons", "ui", "responsive-web-design"]
+  "tags": ["mice", "grid", "typography", "buttons", "ui", "responsive-web-design"],
+  "website": "https://github.com/miclle/mice",
+  "docs": "http://mice.miclle.com/"
 }
