@@ -1,6 +1,6 @@
 {
   "name": "mice",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "homepage": "https://github.com/miclle/mice",
   "authors": [
     "Miclle Zheng"
@@ -33,7 +33,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "*.gem"
   ],
   "dependencies": {
     "jquery": ">= 1.9.0"
