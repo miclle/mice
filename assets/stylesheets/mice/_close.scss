@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-.close {
+.close:not(.icon) {
   float: right;
   font-size: ($font-size-base * 1.5);
   font-weight: $close-font-weight;

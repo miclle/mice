@@ -90,15 +90,31 @@ pre.highlight{
   border: 1px solid #DDD;
 }
 
-.icon-example .column {
-  height: 100px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 25px 0;
-  text-align: center;
-  color: #333;
-  cursor: pointer;
+.icon-example{
+  a{
+    display: block;
+    padding: 25px 0;
+    height: 105px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #999;
+    .icon{ color: #333; }
+  }
+
+  a:hover{
+    background: #009FDA;
+    color: #FFF;
+    .text.muted{ color: #FFF; }
+    .icon {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  }
 
   .icon{
     display: block;
@@ -110,18 +126,6 @@ pre.highlight{
     //     -ms-transition: all 0.2s ease-out;
     //         transition: all 0.2s ease-out;
     -webkit-backface-visibility: hidden;
-  }
-
-  &:hover{
-    background: #009FDA;
-    color: #FFF;
-    .icon {
-      -webkit-transform: scale(1.5);
-      -moz-transform: scale(1.5);
-      -o-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-      transform: scale(1.5);
-    }
   }
 }
 
