@@ -9651,99 +9651,66 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   })(jQuery);
 
 }).call(this);
-/* ========================================================================
- * Bootstrap: alert.js v3.2.0
- * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
-
-+function ($) {
+(function() {
   'use strict';
+  (function($) {
+    var Alert;
+    Alert = (function() {
+      function Alert(element) {
+        $(element).on('click', '[data-dismiss="alert"]', this.close);
+      }
 
-  // ALERT CLASS DEFINITION
-  // ======================
+      Alert.prototype.close = function(e) {
+        var $parent, $this, removeElement, selector;
+        $this = $(this);
+        selector = $this.attr('data-target');
+        if (!selector) {
+          selector = $this.attr('href');
+          selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '');
+        }
+        $parent = $(selector);
+        if (e) {
+          e.preventDefault();
+        }
+        if (!$parent.length) {
+          $parent = ($this.hasClass('alert') ? $this : $this.parent());
+        }
+        $parent.trigger(e = $.Event('close.alert'));
+        if (e.isDefaultPrevented()) {
+          return;
+        }
+        $parent.removeClass('in');
+        removeElement = function() {
+          return $parent.detach().trigger('closed.alert').remove();
+        };
+        if ($.support.transition && $parent.hasClass('fade')) {
+          return $parent.one('miceTransitionEnd', removeElement).emulateTransitionEnd(150);
+        } else {
+          return removeElement();
+        }
+      };
 
-  var dismiss = '[data-dismiss="alert"]'
-  var Alert   = function (el) {
-    $(el).on('click', dismiss, this.close)
-  }
+      return Alert;
 
-  Alert.VERSION = '3.2.0'
+    })();
+    $.fn.alert = function(option) {
+      return this.each(function() {
+        var $this, data;
+        $this = $(this);
+        data = $this.data('alert');
+        if (!data) {
+          $this.data('alert', (data = new Alert(this)));
+        }
+        if (typeof option === 'string') {
+          return data[option].call($this);
+        }
+      });
+    };
+    $.fn.alert.Constructor = Alert;
+    $(document).on('click.alert.data-api', '[data-dismiss="alert"]', Alert.prototype.close);
+  })(jQuery);
 
-  Alert.prototype.close = function (e) {
-    var $this    = $(this)
-    var selector = $this.attr('data-target')
-
-    if (!selector) {
-      selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
-    }
-
-    var $parent = $(selector)
-
-    if (e) e.preventDefault()
-
-    if (!$parent.length) {
-      $parent = $this.hasClass('alert') ? $this : $this.parent()
-    }
-
-    $parent.trigger(e = $.Event('close.bs.alert'))
-
-    if (e.isDefaultPrevented()) return
-
-    $parent.removeClass('in')
-
-    function removeElement() {
-      // detach from parent, fire event then clean up data
-      $parent.detach().trigger('closed.bs.alert').remove()
-    }
-
-    $.support.transition && $parent.hasClass('fade') ?
-      $parent
-        .one('bsTransitionEnd', removeElement)
-        .emulateTransitionEnd(150) :
-      removeElement()
-  }
-
-
-  // ALERT PLUGIN DEFINITION
-  // =======================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data('bs.alert')
-
-      if (!data) $this.data('bs.alert', (data = new Alert(this)))
-      if (typeof option == 'string') data[option].call($this)
-    })
-  }
-
-  var old = $.fn.alert
-
-  $.fn.alert             = Plugin
-  $.fn.alert.Constructor = Alert
-
-
-  // ALERT NO CONFLICT
-  // =================
-
-  $.fn.alert.noConflict = function () {
-    $.fn.alert = old
-    return this
-  }
-
-
-  // ALERT DATA-API
-  // ==============
-
-  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-
-}(jQuery);
+}).call(this);
 (function() {
   'use strict';
   (function($) {
@@ -10555,6 +10522,187 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   })(jQuery);
 
 }).call(this);
+/*
+ *  jQuery Email Autocomplete - v0.0.2
+ *  A jQuery plugin that suggests and autocompletes the domain in email fields.
+ *
+ *
+ *  Made by Low Yong Zhen <cephyz@gmail.com>
+ *  Under MIT License < http://yzlow.mit-license.org>
+ */
+
+"use strict";
+
+(function ($, window, document, undefined) {
+
+  var pluginName = "emailautocomplete";
+  var defaults = {
+    suggClass: "suggestion",
+    domains: ["yahoo.com" ,"google.com" ,"hotmail.com" ,"gmail.com" ,"me.com" ,"aol.com" ,"mac.com" ,"live.com" ,"comcast.net" ,"googlemail.com" ,"msn.com" ,"hotmail.co.uk" ,"yahoo.co.uk" ,"facebook.com" ,"verizon.net" ,"sbcglobal.net" ,"att.net" ,"gmx.com" ,"mail.com" ,"outlook.com" ,"icloud.com"]
+  };
+
+  function Plugin(elem, options) {
+    this.$field = $(elem);
+    this.options = $.extend(true, {}, defaults, options); //we want deep extend
+    this._defaults = defaults;
+    this._domains = this.options.domains;
+    this.init();
+  }
+
+  Plugin.prototype = {
+    init: function () {
+
+      //shim indexOf
+      if (!Array.prototype.indexOf) {
+        this.doIndexOf();
+      }
+
+      //bind handlers
+      this.$field.on("keyup.eac", $.proxy(this.displaySuggestion, this));
+
+      this.$field.on("blur.eac", $.proxy(this.autocomplete, this));
+
+      //get input padding,border and margin to offset text
+      this.fieldLeftOffset = (this.$field.outerWidth(true) - this.$field.width()) / 2;
+
+      //wrap our field
+      var $wrap = $("<div class='eac-input-wrap' />").css({
+        display: this.$field.css("display"),
+        position: "relative",
+        fontSize: this.$field.css("fontSize")
+      });
+      this.$field.wrap($wrap);
+
+      //create container to test width of current val
+      this.$cval = $("<span class='eac-cval' />").css({
+        visibility: "hidden",
+        position: "absolute",
+        display: "inline-block",
+        fontFamily: this.$field.css("fontFamily"),
+        fontWeight: this.$field.css("fontWeight"),
+        letterSpacing: this.$field.css("letterSpacing")
+      }).insertAfter(this.$field);
+
+      //create the suggestion overlay
+      /* touchstart jquery 1.7+ */
+      var heightPad = (this.$field.outerHeight(true) - this.$field.height()) / 2; //padding+border
+      this.$suggOverlay = $("<span class='"+this.options.suggClass+"' />").css({
+        display: "block",
+        "box-sizing": "content-box", //standardize
+        lineHeight: this.$field.css('lineHeight'),
+        paddingTop: heightPad + "px",
+        paddingBottom: heightPad + "px",
+        fontFamily: this.$field.css("fontFamily"),
+        fontWeight: this.$field.css("fontWeight"),
+        letterSpacing: this.$field.css("letterSpacing"),
+        position: "absolute",
+        top: 0,
+        left: 0
+      }).insertAfter(this.$field).on("mousedown.eac touchstart.eac", $.proxy(this.autocomplete, this));
+
+    },
+
+    suggest: function (str) {
+      var str_arr = str.split("@");
+      if (str_arr.length > 1) {
+        str = str_arr.pop();
+        if (!str.length) {
+          return "";
+        }
+      } else {
+        return "";
+      }
+
+      var match = this._domains.filter(function (domain) {
+        return 0 === domain.indexOf(str);
+      }).shift() || "";
+
+      return match.replace(str, "");
+    },
+
+    autocomplete: function () {
+      if(typeof this.suggestion === "undefined"){
+        return false;
+      }
+      this.$field.val(this.val + this.suggestion);
+      this.$suggOverlay.html("");
+      this.$cval.html("");
+    },
+
+    /**
+     * Displays the suggestion, handler for field keyup event
+     */
+    displaySuggestion: function (e) {
+      this.val = this.$field.val();
+      this.suggestion = this.suggest(this.val);
+
+      if (!this.suggestion.length) {
+        this.$suggOverlay.html("");
+      } else {
+        e.preventDefault();
+      }
+
+      //update with new suggestion
+      this.$suggOverlay.html(this.suggestion);
+      this.$cval.html(this.val);
+
+      //find width of current input val so we can offset the suggestion text
+      var cvalWidth = this.$cval.width();
+
+      if(this.$field.outerWidth() > cvalWidth){
+        //offset our suggestion container
+        this.$suggOverlay.css('left', this.fieldLeftOffset + cvalWidth + "px");
+      }
+    },
+
+    /**
+     * indexof polyfill
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf#Polyfill
+    */
+    doIndexOf: function(){
+
+        Array.prototype.indexOf = function (searchElement, fromIndex) {
+          if ( this === undefined || this === null ) {
+            throw new TypeError( '"this" is null or not defined' );
+          }
+
+          var length = this.length >>> 0; // Hack to convert object.length to a UInt32
+
+          fromIndex = +fromIndex || 0;
+
+          if (Math.abs(fromIndex) === Infinity) {
+            fromIndex = 0;
+          }
+
+          if (fromIndex < 0) {
+            fromIndex += length;
+            if (fromIndex < 0) {
+              fromIndex = 0;
+            }
+          }
+
+          for (;fromIndex < length; fromIndex++) {
+            if (this[fromIndex] === searchElement) {
+              return fromIndex;
+            }
+          }
+
+          return -1;
+        };
+      }
+  };
+
+  $.fn[pluginName] = function (options) {
+    return this.each(function () {
+      if (!$.data(this, "yz_" + pluginName)) {
+        $.data(this, "yz_" + pluginName, new Plugin(this, options));
+      }
+    });
+  };
+
+})(jQuery, window, document);
+
+
 
 
 
@@ -10600,5 +10748,8 @@ $(function(){
     });
   });
 
+
+  // {domains: ["example.com", "gmail.com"] //add your own domains}
+  $("[type=email]").emailautocomplete();
 
 });
