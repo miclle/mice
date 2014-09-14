@@ -33,6 +33,7 @@
     &.active {
       background-color: $background;
           border-color: $border;
+                cursor: not-allowed;
     }
   }
 }
