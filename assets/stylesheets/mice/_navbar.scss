@@ -48,41 +48,14 @@
         text-align: center;
         padding: 0 20px;
         line-height: 45px;
-        -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
-        transition:         padding 0.25s ease, color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
-
-        &:after{
-          display: block;
-          margin: 0 auto;
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -1px;
-          height: 0;
-          width: 100%;
-
-          -webkit-transition: height 0.15s ease;
-          transition:         height 0.15s ease;
-        }
+        -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
+        transition:         padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
 
         &:hover {
           color: #428BCA;
           background: #F5F5F5;
-          &:after{
-            height: 3px;
-            background-color: #428BCA;
-          }
         }
-        &:active{ background: #F0F0F0; }
-      }
-
-      &.active{
-        > a{
-          &:after{
-            height: 3px;
-            background-color: #428BCA;
-          }
-        }
+        &:active{ background: #F0F0F0; outline: none; }
       }
     }
   }
