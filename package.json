@@ -1,0 +1,46 @@
+{
+  "name": "mice",
+  "version": "0.2.14",
+  "description": "Mice is a semantic CSS framework",
+  "type": "module",
+  "style": "dist/mice.css",
+  "sass": "src/styles/mice.scss",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mice",
+    "css",
+    "scss",
+    "framework",
+    "semantic",
+    "frontend",
+    "styles"
+  ],
+  "homepage": "https://github.com/miclle/mice",
+  "author": "Miclle Zheng <miclle.zheng@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miclle/mice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miclle/mice/issues"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0",
+    "vite": "^6.0.3"
+  },
+  "exports": {
+    ".": "./dist/mice.css",
+    "./css": "./dist/mice.css",
+    "./scss": "./src/styles/mice.scss"
+  }
+}

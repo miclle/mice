@@ -1,74 +1,166 @@
 # Mice
 
-Mice is semantic front-end framework.
-
-## Update your browser
-[http://browsehappy.com/](http://browsehappy.com/)
+Mice is a semantic CSS framework.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### npm
 
-```ruby
-gem 'mice'
-```
-or
-
-```ruby
-gem 'mice', :git => 'git@github.com:miclle/mice.git'
+```bash
+npm install mice
 ```
 
-And then execute:
+### yarn
 
-`bundle install`
+```bash
+yarn add mice
+```
 
-Or install it yourself as:
+### pnpm
 
-`$ gem install mice`
+```bash
+pnpm add mice
+```
 
+## Usage
 
-## mice with Rails
-
-### CSS
-
-Import Mice in an SCSS file (for example, `application.css.scss`) to get all of Mice's styles
+### Using compiled CSS
 
 ```css
-@import "mice";
+@import 'mice/css';
 ```
 
-or
+Or link directly in HTML:
 
-```css
-/*
- *= require mice
- */
+```html
+<link rel="stylesheet" href="node_modules/mice/dist/mice.css">
 ```
 
+### Using SCSS
 
-## Documentation
+```scss
+@import 'mice/scss';
+```
 
-Ratchet's documentation is built with [Middleman](http://middlemanapp.com/) and publicly hosted on GitHub Pages at <http://mice.miclle.com/>. The docs may also be run locally.
+You can also import individual components:
 
-### Running documentation locally
+```scss
+// Core
+@import 'mice/scss/mice/variables';
+@import 'mice/scss/mice/mixins';
+@import 'mice/scss/mice/normalize';
+@import 'mice/scss/mice/scaffolding';
+@import 'mice/scss/mice/typography';
 
-1. If necessary, `gem install bundler`.
-2. From the root `/mice` directory, run `bundle install`
-3. Run `middleman server` in the command line.
-3. Open <http://localhost:4567> in your browser, and boom!
+// Components
+@import 'mice/scss/mice/buttons';
+@import 'mice/scss/mice/grid';
+@import 'mice/scss/mice/navbar';
+@import 'mice/scss/mice/forms';
+@import 'mice/scss/mice/tables';
+@import 'mice/scss/mice/modals';
+@import 'mice/scss/mice/alerts';
+@import 'mice/scss/mice/panels';
+@import 'mice/scss/mice/tabs';
+@import 'mice/scss/mice/pagination';
+@import 'mice/scss/mice/tooltips';
+```
 
-Learn more about using Middleman by reading its [documentation](http://middlemanapp.com/basics/getting-started/).
+### With bundlers (Vite, Webpack, etc.)
 
+```javascript
+// Vite
+import 'mice/css'
 
+// Or with SCSS
+@import 'mice/scss'
+```
+
+## Components
+
+### CSS Components
+
+- **Reset** - CSS normalize and reset
+- **Typography** - Headings, paragraphs, lists, code
+- **Grid** - Responsive grid system
+- **Buttons** - Various button styles and sizes
+- **Forms** - Styled form elements
+- **Tables** - Clean table styles
+- **Navbar** - Navigation bar component
+- **Sidebar** - Sidebar component
+- **Modals** - Modal dialog styles
+- **Alerts** - Alert and message styles
+- **Panels** - Panel/card component
+- **Tabs** - Tab navigation
+- **Pagination** - Pagination component
+- **Progress** - Progress bars
+- **Tooltips** - Tooltip styles
+
+## Customization
+
+### SCSS Variables
+
+Override variables before importing:
+
+```scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-base: 16px;
+
+@import 'mice/scss';
+```
+
+### Available Variables
+
+```scss
+// Colors
+$primary-color
+$secondary-color
+$success-color
+$info-color
+$warning-color
+$danger-color
+
+// Typography
+$font-family-base
+$font-size-base
+$line-height-base
+
+// Grid
+$grid-columns
+$grid-gutter-width
+
+// And many more...
+```
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Browser Support
+
+Modern browsers including Chrome, Firefox, Safari, and Edge.
 
 ## Contributing
 
-1. Fork it ( http://github.com/miclle/mice/fork )
+1. Fork it (https://github.com/miclle/mice/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## Copyright and license
+## Copyright and License
 
-Code and documentation copyright 2014 Miclle. Code released under the MIT license. Docs released under Creative Commons.
+Code and documentation copyright 2014-2025 Miclle. Code released under the [MIT license](LICENSE).
