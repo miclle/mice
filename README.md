@@ -76,13 +76,17 @@ import 'mice/css'
 @import 'mice/scss'
 ```
 
+## Documentation
+
+Visit [https://miclle.github.io/mice/](https://miclle.github.io/mice/) for the full documentation with live examples.
+
 ## Components
 
 ### CSS Components
 
 - **Reset** - CSS normalize and reset
 - **Typography** - Headings, paragraphs, lists, code
-- **Grid** - Responsive grid system
+- **Grid** - Responsive grid system (2-12 columns)
 - **Buttons** - Various button styles and sizes
 - **Forms** - Styled form elements
 - **Tables** - Clean table styles
@@ -95,6 +99,12 @@ import 'mice/css'
 - **Pagination** - Pagination component
 - **Progress** - Progress bars
 - **Tooltips** - Tooltip styles
+- **Labels** - Label badges
+- **Breadcrumbs** - Breadcrumb navigation
+- **Lists** - Styled lists
+- **Callouts** - Callout boxes
+- **Timeline** - Timeline component
+- **Media** - Media object
 
 ## Customization
 
@@ -139,15 +149,46 @@ $grid-gutter-width
 # Install dependencies
 npm install
 
-# Start dev server
+# Start dev server (serves docs directory)
 npm run dev
 
 # Build for production
 npm run build
 
+# Build and sync to docs directory
+npm run build:sync
+
+# Sync built CSS to docs (without rebuilding)
+npm run sync
+
 # Preview production build
 npm run preview
 ```
+
+### Development Workflow
+
+When working on the CSS framework:
+
+1. Modify SCSS files in `src/styles/`
+2. Run `npm run build:sync` to build and sync changes to docs
+3. View changes at `http://localhost:5173`
+
+## Class Naming Reference
+
+Mice uses semantic class naming:
+
+| Component | Class Name |
+|-----------|------------|
+| Buttons | `.button`, `.button primary`, `.button large` |
+| Grid | `.grid`, `.grid two/three/four`, `.column` |
+| Forms | `.field`, `form.inline` |
+| Tables | `table.striped`, `table.bordered` |
+| Panels | `.panel`, `.panel .body`, `.panel .heading` |
+| Alerts | `.alert`, `.alert success` |
+| Progress | `.progress`, `.progress .bar` |
+| Tabs | `.tabs` |
+| Navbar | `.navbar`, `.navbar .menu` |
+| Labels | `.label`, `.label primary` |
 
 ## Browser Support
 

@@ -7,11 +7,14 @@
   "sass": "src/styles/mice.scss",
   "files": [
     "dist",
-    "src"
+    "src",
+    "docs"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:sync": "npm run build && node scripts/sync-docs.js",
+    "sync": "node scripts/sync-docs.js",
     "preview": "vite preview",
     "prepublishOnly": "npm run build"
   },
