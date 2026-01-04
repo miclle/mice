@@ -78,7 +78,9 @@ import 'mice/css'
 
 ## Documentation
 
-Visit [https://miclle.github.io/mice/](https://miclle.github.io/mice/) for the full documentation with live examples.
+- 📚 **Full Documentation**: [http://mice.miclle.com/](http://mice.miclle.com/) (Live examples and API reference)
+- 🏠 **GitHub Pages**: [https://miclle.github.io/mice/](https://miclle.github.io/mice/) (Build artifacts)
+- 📖 **Source Code**: [src/styles/mice/](src/styles/mice/) (SCSS source files)
 
 ## Components
 
