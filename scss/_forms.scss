@@ -1,6 +1,12 @@
 // Forms
 // --------------------------------------------------
 
+@use "sass:color";
+@use "sass:math";
+@use "sass:list";
+
+
+
 // $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
 
 // Input variants
@@ -10,13 +16,13 @@
     background-color: #FFF;
         border-color: $border-color;
 
-  &:hover{ border-color: darken($border-color, 20%); }
+  &:hover{ border-color: color.adjust($border-color, $lightness: -20%); }
 
   &:focus,
   &:active,
   &.active{
-    border-color: darken($border-color, 20%);
-    box-shadow: 0 0 0 1px darken($border-color, 15%), inset 0 1px #F5F5F5;
+    border-color: color.adjust($border-color, $lightness: -20%);
+    box-shadow: 0 0 0 1px color.adjust($border-color, $lightness: -15%), inset 0 1px #F5F5F5;
   }
 
   &.disabled,
@@ -28,6 +34,7 @@
       border-color: $border-color-default;
       cursor: not-allowed;
       background-color: #eee;
+
       @include opacity(.55);
     }
   }
@@ -39,7 +46,7 @@
   color: $border-color;
 
   input.text,
-  input[type=text], input[type=password], input[type=email], input[type=number],
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"],
   textarea,
   select{
     @include input-variant($border-color);
@@ -68,7 +75,7 @@ fieldset {
 
   &[disabled]{
     input.text,
-    input[type=text], input[type=password], input[type=email], input[type=number],
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
     textarea,
     select,
     button{
@@ -79,6 +86,7 @@ fieldset {
         cursor: not-allowed;
         background-color: #eee;
         border-width: 1px;
+
         @include opacity(1);
       }
     }
@@ -86,7 +94,7 @@ fieldset {
 }
 
 input.text,
-input[type=text], input[type=password], input[type=email], input[type=number],
+input[type="text"], input[type="password"], input[type="email"], input[type="number"],
 textarea,
 select{
   display:          inline-block;
@@ -94,21 +102,19 @@ select{
   margin-bottom:    0;
   font-weight:      $button-font-weight;
   text-align:       left;
-
   border:           1px solid #CCC;
   white-space:      nowrap;
   outline:          none;
-
   position: relative;
   box-shadow: inset 0 1px #F5F5F5;
   background-color: transparent;
-
   transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
 
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none;
+
     @include opacity(.65);
     @include user-select(none);
   }
@@ -136,7 +142,7 @@ label{
 // -------------------------
 
 input.text,
-input[type=text], input[type=password], input[type=email], input[type=number],
+input[type="text"], input[type="password"], input[type="email"], input[type="number"],
 textarea{
             @include input-variant($border-color-default);
   &.primary{@include input-variant($border-color-primary);}
@@ -152,7 +158,7 @@ textarea{
 // Input Sizing
 // -------------------------
 input.text,
-input[type=text], input[type=password], input[type=email], input[type=number],
+input[type="text"], input[type="password"], input[type="email"], input[type="number"],
 textarea{
            @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base);
   &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small);}
@@ -164,7 +170,7 @@ textarea{
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten($text-color, 25%);
+  color: color.adjust($text-color, $lightness: 25%);
 }
 
 
@@ -182,7 +188,7 @@ textarea{
   }
 
   input.text,
-  input[type=text], input[type=password], input[type=email], input[type=number],
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"],
   select,
   textarea{
     width: 100%;
@@ -196,7 +202,7 @@ textarea{
     position: relative;
 
     input.text,
-    input[type=text], input[type=password], input[type=email], input[type=number],
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
     select,
     textarea{
       padding-right: 50px;
@@ -226,7 +232,7 @@ form.inline{
     vertical-align: middle;
 
     input.text,
-    input[type=text], input[type=password], input[type=email], input[type=number],
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
     input[type="email"]{
       width: auto;
     }
@@ -245,7 +251,7 @@ form.inline{
 
 .inline{
   input.text,
-  input[type=text], input[type=password], input[type=email], input[type=number]{
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
     width: auto;
   }
 }
@@ -257,20 +263,22 @@ form.horizontal{
 
   $offsets: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
 
-  @for $i from 1 through length($offsets){
+  @for $i from 1 through list.length($offsets){
     &.offset.#{nth($offsets, $i)}{
       .field{
         position: relative;
         vertical-align: middle;
+
         @include clearfix();
-        padding-left: percentage(1 / 12 * $i);
+
+        padding-left: math.percentage(1 / 12 * $i);
 
         &:not(.checkbox){
           label{
             float: left;
-            width: percentage(1 / 12 * $i);
+            width: math.percentage(1 / 12 * $i);
             height: 34px;
-            margin-left: (0 - percentage(1 / 12 * $i));
+            margin-left: (0 - math.percentage(1 / 12 * $i));
             margin-bottom: 0;
             padding-right: 15px;
             padding-top: 6px;
@@ -307,7 +315,7 @@ form.horizontal{
   table-layout: fixed;
   border-collapse: separate;
 
-  &:before, &:after{ display: none; }
+  &::before, &::after{ display: none; }
 
   .field{
     float: none;
@@ -316,8 +324,9 @@ form.horizontal{
     padding: 0 5px;
     &:first-child{ padding-left: 0; }
     &:last-child{ padding-right: 0; }
+
     input.text,
-    input[type=text], input[type=password], input[type=email], input[type=number],{
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"],{
       width: 100%;
     }
   }
@@ -339,7 +348,6 @@ form.horizontal{
     text-align: center;
     background-color: $input-group-addon-background;
     border: 1px solid $input-group-addon-border-color;
-
     width: 1%;
     white-space: nowrap;
     vertical-align: middle;
@@ -354,6 +362,7 @@ form.horizontal{
   > input{
     display: table-cell !important;
     width: 100%;
+
     &:focus{
       box-shadow: none !important;
     }
@@ -388,6 +397,7 @@ form.horizontal{
     &:first-child {
       border-right: 0;
     }
+
     &:last-child {
       border-left: 0;
     }

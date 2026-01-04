@@ -1,11 +1,10 @@
-//
 // Tooltips
 // --------------------------------------------------
 
 
 // Tooltip variants
 @mixin tooltip-variant($tooltip-color, $tooltip-background, $tooltip-arrow-color) {
-  .inner{
+  .inner {
     color: $tooltip-color;
     background-color: $tooltip-background;
   }
@@ -19,9 +18,11 @@
   &.right .arrow {
     border-right-color: $tooltip-arrow-color;
   }
+
   &.left .arrow {
     border-left-color: $tooltip-arrow-color;
   }
+
   &.bottom .arrow,
   &.bottom-left .arrow,
   &.bottom-right .arrow {
@@ -38,13 +39,32 @@
   visibility: visible;
   font-size: $font-size-small;
   line-height: 1.4;
+
   @include opacity(0);
 
-  &.in     { @include opacity($tooltip-opacity); }
-  &.top    { margin-top:  -3px; padding: $tooltip-arrow-width 0; }
-  &.right  { margin-left:  3px; padding: 0 $tooltip-arrow-width; }
-  &.bottom { margin-top:   3px; padding: $tooltip-arrow-width 0; }
-  &.left   { margin-left: -3px; padding: 0 $tooltip-arrow-width; }
+  &.in {
+    @include opacity($tooltip-opacity);
+  }
+
+  &.top {
+    margin-top: -3px;
+    padding: $tooltip-arrow-width 0;
+  }
+
+  &.right {
+    margin-left: 3px;
+    padding: 0 $tooltip-arrow-width;
+  }
+
+  &.bottom {
+    margin-top: 3px;
+    padding: $tooltip-arrow-width 0;
+  }
+
+  &.left {
+    margin-left: -3px;
+    padding: 0 $tooltip-arrow-width;
+  }
 
   // Wrapper for the tooltip content
   .inner {
@@ -72,39 +92,46 @@
     margin-left: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
   }
+
   &.top-left .arrow {
     bottom: 0;
     left: $tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
   }
+
   &.top-right .arrow {
     bottom: 0;
     right: $tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
   }
+
   &.right .arrow {
     top: 50%;
     left: 0;
     margin-top: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
   }
+
   &.left .arrow {
     top: 50%;
     right: 0;
     margin-top: -$tooltip-arrow-width;
     border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
   }
+
   &.bottom .arrow {
     top: 0;
     left: 50%;
     margin-left: -$tooltip-arrow-width;
     border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
   }
+
   &.bottom-left .arrow {
     top: 0;
     left: $tooltip-arrow-width;
     border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
   }
+
   &.bottom-right .arrow {
     top: 0;
     right: $tooltip-arrow-width;
@@ -114,11 +141,28 @@
 
   // Colors
   // Contextual variations
-  &         { @include tooltip-variant($tooltip-color,          $tooltip-background,          $tooltip-arrow-color);         }
-  &.primary { @include tooltip-variant($tooltip-primary-color,  $tooltip-primary-background,  $tooltip-primary-arrow-color); }
-  &.success { @include tooltip-variant($tooltip-success-color,  $tooltip-success-background,  $tooltip-success-arrow-color); }
-  &.info    { @include tooltip-variant($tooltip-info-color,     $tooltip-info-background,     $tooltip-info-arrow-color);    }
-  &.warning { @include tooltip-variant($tooltip-warning-color,  $tooltip-warning-background,  $tooltip-warning-arrow-color); }
-  &.danger  { @include tooltip-variant($tooltip-danger-color,   $tooltip-danger-background,   $tooltip-danger-arrow-color);  }
+  & {
+    @include tooltip-variant($tooltip-color, $tooltip-background, $tooltip-arrow-color);
+  }
+
+  &.primary {
+    @include tooltip-variant($tooltip-primary-color, $tooltip-primary-background, $tooltip-primary-arrow-color);
+  }
+
+  &.success {
+    @include tooltip-variant($tooltip-success-color, $tooltip-success-background, $tooltip-success-arrow-color);
+  }
+
+  &.info {
+    @include tooltip-variant($tooltip-info-color, $tooltip-info-background, $tooltip-info-arrow-color);
+  }
+
+  &.warning {
+    @include tooltip-variant($tooltip-warning-color, $tooltip-warning-background, $tooltip-warning-arrow-color);
+  }
+
+  &.danger {
+    @include tooltip-variant($tooltip-danger-color, $tooltip-danger-background, $tooltip-danger-arrow-color);
+  }
 
 }

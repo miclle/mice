@@ -1,6 +1,10 @@
 // Tables
 // --------------------------------------------------
 
+@use "sass:color";
+
+
+
 table{
   display: table;
   width:  100%;
@@ -16,11 +20,11 @@ table > tbody,
 table > tfoot{
   > tr {
     &.active  > th, th.active , &.active  > td, td.active  { background-color: $table-background-active; }
-    &.primary > th, th.primary, &.primary > td, td.primary { background-color: lighten($brand-primary, 32%); }
-    &.success > th, th.success, &.success > td, td.success { background-color: lighten($brand-success, 32%); }
-    &.info    > th, th.info   , &.info    > td, td.info    { background-color: lighten($brand-info,    32%); }
-    &.warning > th, th.warning, &.warning > td, td.warning { background-color: lighten($brand-warning, 32%); }
-    &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: lighten($brand-danger,  32%); }
+    &.primary > th, th.primary, &.primary > td, td.primary { background-color: color.adjust($brand-primary, $lightness: 32%); }
+    &.success > th, th.success, &.success > td, td.success { background-color: color.adjust($brand-success, $lightness: 32%); }
+    &.info    > th, th.info   , &.info    > td, td.info    { background-color: color.adjust($brand-info,    $lightness: 32%); }
+    &.warning > th, th.warning, &.warning > td, td.warning { background-color: color.adjust($brand-warning, $lightness: 32%); }
+    &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: color.adjust($brand-danger,  $lightness: 32%); }
   }
 }
 
@@ -97,8 +101,7 @@ table{
 // --------------------------------------------------
 .table.responsive{
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow: scroll hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
   border: 1px solid $table-border-color;

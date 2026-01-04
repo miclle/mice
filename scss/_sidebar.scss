@@ -1,4 +1,3 @@
-//
 // Sidebar
 // --------------------------------------------------
 
@@ -12,7 +11,7 @@
       line-height: 30px;
 
       &:hover:not(.heading){
-        background: rgba(0, 64, 84, 0.03);
+        background: rgb(0 64 84 / 3%);
       }
 
       &.heading{
@@ -28,7 +27,7 @@
       }
 
       &.active{
-        background: rgba(0, 64, 84, 0.05);
+        background: rgb(0 64 84 / 5%);
       }
     }
 

@@ -1,7 +1,25 @@
-//
 // Typography
 // --------------------------------------------------
 
+@use "sass:math";
+
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: 14px base font * 85% = about 12px
+small,
+.small  { font-size: 85%; }
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+mark,
+.mark {
+  background-color: $state-warning-background;
+  padding: .2em;
+}
 
 // Headings
 // -------------------------
@@ -10,7 +28,6 @@ h1, h2, h3, h4, h5, h6{
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
   color:       $heading-color;
-
   margin-top: ($line-height-computed / 2);
   margin-bottom: ($line-height-computed / 2);
 
@@ -44,27 +61,11 @@ p { margin: 0 0 ($line-height-computed / 2); }
 
 .lead {
   margin-bottom: $line-height-computed;
-  font-size: floor(($font-size-base * 1.15));
+  font-size: math.floor($font-size-base * 1.15);
   font-weight: 200;
   line-height: 1.4;
 }
 
-
-// Emphasis & misc
-// -------------------------
-
-// Ex: 14px base font * 85% = about 12px
-small,
-.small  { font-size: 85%; }
-
-// Undo browser default styling
-cite    { font-style: normal; }
-
-mark,
-.mark {
-  background-color: $state-warning-background;
-  padding: .2em;
-}
 
 // Alignment
 .left    { text-align: left; }
@@ -75,6 +76,7 @@ mark,
 
 // Contextual colors
 .text.muted { color: $text-muted; }
+
 @include text-emphasis-variant('.text.primary', $state-primary-text);
 @include text-emphasis-variant('.text.success', $state-success-text);
 @include text-emphasis-variant('.text.info',    $state-info-text);
@@ -83,6 +85,7 @@ mark,
 
 // Contextual backgrounds
 .bg-primary { color: #fff; }
+
 @include background-variant('.bg-primary', $state-primary-background);
 @include background-variant('.bg-success', $state-success-background);
 @include background-variant('.bg-info',    $state-info-background);

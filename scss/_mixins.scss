@@ -1,5 +1,9 @@
+// Mixins
+// --------------------------------------------------
+
+@use "sass:color";
+
 // Clearfix
-//
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
 //    contenteditable attribute is included anywhere else in the document.
@@ -7,24 +11,22 @@
 //    that are clearfixed.
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
-//
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: " "; // 1
     display: table; // 2
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
 }
 
 
@@ -32,10 +34,7 @@
 // For selecting text on the page
 
 @mixin user-select($select) {
-  -webkit-user-select: $select;
-     -moz-user-select: $select;
-      -ms-user-select: $select; // IE10+
-          user-select: $select;
+  user-select: $select;
 }
 
 
@@ -45,6 +44,7 @@
   opacity: $opacity;
   // IE8 filter
   $opacity-ie: ($opacity * 100);
+
   filter: #{alpha(opacity=$opacity-ie)};
 }
 
@@ -52,15 +52,12 @@
 // Drop shadows
 
 @mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
-          box-shadow: $shadow;
+  box-shadow: $shadow; // iOS <4.3 & Android <4.1
 }
 
 
 // Gradients
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
-  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
 
@@ -68,69 +65,52 @@
 // Transforms
 // --------------------------------------------------
 @mixin transform($transform...) {
-  -webkit-transform: $transform;
-      -ms-transform: $transform;
-          transform: $transform;
+  transform: $transform;
 }
 
 
 // Transitions
 // --------------------------------------------------
 @mixin transition($transition...) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-          transition: $transition;
+  transition: $transition;
 }
+
 @mixin transition-property($property...) {
-  -webkit-transition-property: $property;
-     -moz-transition-property: $property;
-          transition-property: $property;
+  transition-property: $property;
 }
+
 @mixin transition-duration($duration...) {
-  -webkit-transition-duration: $duration;
-     -moz-transition-duration: $duration;
-          transition-duration: $duration;
+  transition-duration: $duration;
 }
+
 @mixin transition-timing-function($function...) {
-  -webkit-transition-timing-function: $function;
-     -moz-transition-timing-function: $function;
-          transition-timing-function: $function;
+  transition-timing-function: $function;
 }
 
 @mixin transition-transform($transition...) {
-  -webkit-transition: -webkit-transform $transition;
-     -moz-transition: -moz-transform $transition;
-       -o-transition: -o-transform $transition;
-          transition: transform $transition;
+  transition: transform $transition;
 }
 
 @mixin translate($x, $y) {
-  -webkit-transform: translate($x, $y);
-      -ms-transform: translate($x, $y); // IE9 only
-       -o-transform: translate($x, $y);
-          transform: translate($x, $y);
+  transform: translate($x, $y);
 }
+
 @mixin translate3d($x, $y, $z) {
-  -webkit-transform: translate3d($x, $y, $z);
-          transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
 }
 
 // Animations
 // --------------------------------------------------
 @mixin animation-name($name) {
-  -webkit-animation-name: $name;
-     -moz-animation-name: $name;
-          animation-name: $name;
+  animation-name: $name;
 }
+
 @mixin animation-duration($duration) {
-  -webkit-animation-duration: $duration;
-     -moz-animation-duration: $duration;
-          animation-duration: $duration;
+  animation-duration: $duration;
 }
+
 @mixin animation-direction($direction) {
-  -webkit-animation-direction: $direction;
-     -moz-animation-direction: $direction;
-          animation-direction: $direction;
+  animation-direction: $direction;
 }
 
 
@@ -141,11 +121,14 @@
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
     background-position: $offset 100%;
 
-  } @else if $type == double {
+  }
+
+ @else if $type == double {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>"),
                       url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
     background-position: $offset 100%, $offset 0;
   }
+
   background-repeat: no-repeat;
 }
 
@@ -158,7 +141,7 @@
     color: $color;
   }
   a#{$parent}:hover {
-    color: darken($color, 10%);
+    color: color.adjust($color, $lightness: -10%);
   }
 }
 
@@ -171,6 +154,6 @@
     background-color: $color;
   }
   a#{$parent}:hover {
-    background-color: darken($color, 10%);
+    background-color: color.adjust($color, $lightness: -10%);
   }
 }

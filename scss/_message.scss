@@ -1,6 +1,9 @@
-//
 // Message
 // --------------------------------------------------
+
+@use "sass:color";
+
+
 
 
 // Mixin
@@ -10,7 +13,7 @@
   color: $text-color;
 
   a {
-    color: darken($text-color, 10%);
+    color: color.adjust($text-color, $lightness: -10%);
   }
 }
 
@@ -20,20 +23,14 @@
 .message {
   display: none;
   width: 100%;
-  padding: 10px 20px;
   padding: $message-padding;
-
   line-height: 1.8;
   font-size: 16px;
-  background: #FFF;
-  background: rgba(255,255,255,0.9);
-
+  background: rgb(255 255 255 / 90%);
   color: #666;
   text-align: center;
-
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -44,15 +41,21 @@
     bottom: auto;
   }
 
-  &.bottom{
+  &.bottom {
     top: auto;
     bottom: 0;
   }
 
-  h4{ margin: 0; color: inherit; }
-  a { font-weight: $message-link-font-weight; }
+  h4 {
+    margin: 0;
+    color: inherit;
+  }
 
-  .close{
+  a {
+    font-weight: $message-link-font-weight;
+  }
+
+  .close {
     display: inline;
     float: right;
     cursor: pointer;
@@ -61,7 +64,7 @@
     right: 10px;
     opacity: 0.6;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
@@ -70,9 +73,20 @@
 
 // Alternate styles
 // Generate contextual modifier classes for colorizing the message.
-.message{
-  &.success {@include message-variant($message-success-background, $message-success-border, $message-success-text); }
-  &.info    {@include message-variant($message-info-background,    $message-info-border,    $message-info-text);    }
-  &.warning {@include message-variant($message-warning-background, $message-warning-border, $message-warning-text); }
-  &.danger  {@include message-variant($message-danger-background,  $message-danger-border,  $message-danger-text);  }
+.message {
+  &.success {
+    @include message-variant($message-success-background, $message-success-border, $message-success-text);
+  }
+
+  &.info {
+    @include message-variant($message-info-background, $message-info-border, $message-info-text);
+  }
+
+  &.warning {
+    @include message-variant($message-warning-background, $message-warning-border, $message-warning-text);
+  }
+
+  &.danger {
+    @include message-variant($message-danger-background, $message-danger-border, $message-danger-text);
+  }
 }

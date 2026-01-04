@@ -1,4 +1,3 @@
-//
 // Carousel
 // --------------------------------------------------
 
@@ -15,12 +14,14 @@
     > .item {
       display: none;
       position: relative;
+
       @include transition(.6s ease-in-out left);
 
       // Account for jankitude on images
       > img,
       > a > img {
         @include img-responsive();
+
         line-height: 1;
         margin: 0 auto;
       }
@@ -46,9 +47,11 @@
     > .next {
       left: 100%;
     }
+
     > .prev {
       left: -100%;
     }
+
     > .next.left,
     > .prev.right {
       left: 0;
@@ -57,6 +60,7 @@
     > .active.left {
       left: -100%;
     }
+
     > .active.right {
       left: 100%;
     }
@@ -72,7 +76,9 @@
     left: 0;
     bottom: 0;
     width: $carousel-control-width;
+
     @include opacity($carousel-control-opacity);
+
     font-size: $carousel-control-font-size;
     color: $carousel-control-color;
     text-align: center;
@@ -84,6 +90,7 @@
     &.left {
       // @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
     }
+
     &.right {
       left: auto;
       right: 0;
@@ -96,6 +103,7 @@
       outline: 0;
       color: $carousel-control-color;
       text-decoration: none;
+
       @include opacity(.9);
     }
 
@@ -109,16 +117,19 @@
       z-index: 5;
       display: inline-block;
     }
+
     .icon-prev,
     .chevron-left {
       left: 50%;
       margin-left: -10px;
     }
+
     .icon-next,
     .chevron-right {
       right: 50%;
       margin-right: -10px;
     }
+
     .icon-prev,
     .icon-next {
       width:  20px;
@@ -129,19 +140,19 @@
 
 
     .icon-prev {
-      &:before {
+      &::before {
         content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
       }
     }
+
     .icon-next {
-      &:before {
+      &::before {
         content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
       }
     }
   }
 
   // Optional indicator pips
-  //
   // Add an unordered list with the following class and add a list item for each
   // slide your carousel holds.
 
@@ -167,16 +178,14 @@
       cursor: pointer;
 
       // IE8-9 hack for event handling
-      //
       // Internet Explorer 8-9 does not support clicks on elements without a set
       // `background-color`. We cannot use `filter` since that's not viewed as a
       // background color by the browser. Thus, a hack is needed.
-      //
       // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
-      // set alpha transparency for the best results possible.
-      background-color: #000 \9; // IE8
-      background-color: rgba(0,0,0,0); // IE9
+      // set alpha transparency for the best results possible. // IE8
+      background-color: rgb(0 0 0 / 0%); // IE9
     }
+
     .active {
       margin: 0;
       width:  12px;
@@ -199,6 +208,7 @@
     color: $carousel-caption-color;
     text-align: center;
     text-shadow: $carousel-text-shadow;
+
     & .btn {
       text-shadow: none; // No shadow for button elements in carousel-caption
     }
@@ -208,7 +218,6 @@
 
 // Scale up controls for tablets and up
 @media screen and (min-width: $screen-sm-min) {
-
   .carousel{
     // Scale up the controls a smidge
     .control {
@@ -221,10 +230,12 @@
         margin-top: -15px;
         font-size: 30px;
       }
+
       .chevron-left,
       .icon-prev {
         margin-left: -15px;
       }
+
       .chevron-right,
       .icon-next {
         margin-right: -15px;
@@ -272,10 +283,13 @@
   }
 
   .control i.icon{ margin: 0;}
+
   .control.disable {
     cursor: not-allowed;
-    /*cursor: no-drop;*/
+
+    /* cursor: no-drop; */
   }
+
   .overview {
     padding: 0;
     margin: 0;
@@ -293,14 +307,13 @@
         border-color: #666;
         z-index: 99;
       }
+
       & img{
         opacity: 0.7;
-        -webkit-transition: all 0.15s ease-out;
-        -webkit-transition-delay: 0s;
-        -moz-transition: all 0.15s ease-out 0s;
-        -o-transition: all 0.15s ease-out 0s;
-        transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out;
+        transition-delay: 0s;
       }
+
       &.active img,
       & img:hover{
         opacity: 1;

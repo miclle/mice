@@ -1,35 +1,36 @@
-//
 // Navbar
 // --------------------------------------------------
 
-.navbar{
+.navbar {
   min-height: 45px;
   line-height: 45px;
   background: #FFF;
   border-color: #E8E8E8;
   border-style: solid;
-  border-width: 0;
   border-width: 0 0 1px;
 
   &.top,
-  &.bottom{
+  &.bottom {
     position: fixed;
     left: 0;
     right: 0;
     z-index: $zindex-navbar-fixed;
   }
-  &.top{
+
+  &.top {
     top: 0;
     border-width: 0 0 1px;
   }
-  &.bottom{
+
+  &.bottom {
     bottom: 0;
     border-width: 1px 0 0;
   }
 
-  .logo{
+  .logo {
     float: left;
-    .brand{
+
+    .brand {
       display: block;
       line-height: 45px;
       padding: 0 20px;
@@ -39,30 +40,33 @@
     }
   }
 
-  .menu{
+  .menu {
     float: left;
 
-    > li{
+    >li {
       float: left;
 
-      > a{
+      >a {
         text-align: center;
         padding: 0 20px;
         line-height: 45px;
         font-weight: 500;
-        -webkit-transition: padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
-        transition:         padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
+        transition: padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
 
         &:hover {
           color: #428BCA;
           background: #F5F5F5;
         }
-        &:active{ background: #F0F0F0; outline: none; }
+
+        &:active {
+          background: #F0F0F0;
+          outline: none;
+        }
       }
     }
   }
 
-  form{
+  form {
     float: left;
     padding-top: 5px;
   }

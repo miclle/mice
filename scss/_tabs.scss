@@ -1,4 +1,3 @@
-//
 // Tabs
 // --------------------------------------------------
 
@@ -6,6 +5,7 @@
   list-style: none;
   border-bottom: 1px solid $tabs-border-color;
   padding: 0;
+
   @include clearfix();
 
   > li {
@@ -18,7 +18,6 @@
       position: relative;
       display: block;
       padding: 10px 15px;
-
       margin-right: 2px;
       line-height: $line-height-base;
       border: 1px solid transparent;
@@ -53,6 +52,7 @@
       display: table-cell;
       width: 1%;
       float: none;
+
       > a {
         text-align: center;
         margin-right: 0;

@@ -1,4 +1,3 @@
-//
 // Utility classes
 // --------------------------------------------------
 
@@ -26,18 +25,23 @@
 .hide {
   display: none !important;
 }
+
 .show {
   display: block !important;
 }
+
 .invisible {
   visibility: hidden;
 }
+
 .hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
-.text-hide {}
+.text-hide {
+  // TODO: Implement text-hide
+}
 
 
 // For Affix plugin

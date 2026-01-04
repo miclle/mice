@@ -1,4 +1,3 @@
-//
 // Modals
 // --------------------------------------------------
 
@@ -12,8 +11,7 @@
   overflow: hidden;
 
   .modal {
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
   }
 }
 
@@ -23,10 +21,7 @@
   display: none;
   overflow: hidden;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
   outline: 0;
@@ -43,10 +38,7 @@
 // Modal background
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: $zindex-modal-background;
   background-color: $modal-backdrop-background;
 
@@ -69,11 +61,12 @@
   // Actual modal
   .content {
     position: relative;
-    background-color: $modal-content-background;
-    border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+    background-color: $modal-content-background; //old browsers fallback (ie8 etc)
     border: 1px solid $modal-content-border-color;
     border-radius: $border-radius;
+
     @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+
     background-clip: padding-box;
     // Remove focus outline from opened modal
     outline: 0;
@@ -108,6 +101,7 @@
     padding: $modal-inner-padding;
     text-align: right; // right align buttons
     border-top: 1px solid $modal-footer-border-color;
+
     @include clearfix(); // clear it in case folks use .pull-* classes on buttons
 
     // Properly space out buttons
@@ -146,6 +140,7 @@
       width: $modal-medium;
       margin: 30px auto;
     }
+
     .content {
       @include box-shadow(0 5px 15px rgba(0,0,0,.5));
     }

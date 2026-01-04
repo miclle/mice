@@ -1,8 +1,11 @@
 // Button
 // --------------------------------------------------
 
+@use "sass:color";
+
+
+
 // Button variants
-//
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
@@ -14,15 +17,15 @@
   &:hover,
   &:focus{
                color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 10%);
+    background-color: color.adjust($background, $lightness: -10%);
+        border-color: color.adjust($border, $lightness: -10%);
   }
 
   &:active,
   &.active{
                color: $color;
-    background-color: darken($background, 15%);
-        border-color: darken($border, 15%);
+    background-color: color.adjust($background, $lightness: -15%);
+        border-color: color.adjust($border, $lightness: -15%);
   }
 
   &.disabled,
@@ -40,7 +43,6 @@
 
 
 // Form control sizing
-//
 // Relative text size, padding, and border-radii changes for form controls. For
 // horizontal sizing, wrap controls in the predefined grid classes. `<select>`
 // element gets special love because it's special, and that's a fact!
@@ -81,14 +83,17 @@
   border-top-right-radius: $radius;
    border-top-left-radius: $radius;
 }
+
 @mixin border-right-radius($radius) {
   border-bottom-right-radius: $radius;
      border-top-right-radius: $radius;
 }
+
 @mixin border-bottom-radius($radius) {
   border-bottom-right-radius: $radius;
    border-bottom-left-radius: $radius;
 }
+
 @mixin border-left-radius($radius) {
   border-bottom-left-radius: $radius;
      border-top-left-radius: $radius;
@@ -108,16 +113,13 @@ button,
   text-align:       center;
   vertical-align:   middle;
   cursor:           pointer;
-
   background-image: none;
   border:           1px solid transparent;
   white-space:      nowrap;
   outline:          none;
-
   position:         relative;
 
-  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
-
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, 5%));
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius);
   @include user-select(none);
 
@@ -137,6 +139,7 @@ button,
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
+
     @include opacity(.5);
   }
 
@@ -180,6 +183,7 @@ button,
 
 .buttons{
   @include clearfix();
+
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -199,11 +203,12 @@ button,
     &:last-child{
       &:not(:first-child) {
         margin-left: -1px;
+
         @include border-left-radius(0);
       }
     }
 
-    &:not(:first-child):not(:last-child) {
+    &:not(:first-child, :last-child) {
       margin-left: -1px;
       border-radius: 0;
     }
@@ -219,6 +224,7 @@ button,
 // ------------------------
 .buttons.vertical{
   @include clearfix();
+
   display: inline-block;
 
   input[type="button"],
@@ -241,13 +247,14 @@ button,
       &:not(:first-child) {
         @include border-top-radius(0);
         @include border-bottom-radius($border-radius);
-        @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
+        @include box-shadow(0 -1px 0 rgba(0, 0, 0, 15%) inset);
+
         margin-left: 0;
         margin-top: -1px;
       }
     }
 
-    &:not(:first-child):not(:last-child) {
+    &:not(:first-child, :last-child) {
       margin-left: 0;
       margin-top: -1px;
     }
@@ -264,7 +271,7 @@ button,
   border-collapse: separate;
   position: relative;
 
-  &:before, &:after{ display: none; }
+  &::before, &::after{ display: none; }
 
   > .buttons,
   .button{
@@ -277,7 +284,8 @@ button,
   .button:first-child{
     &:not(:last-child) {
       border-right-width: 0;
-      &:after{
+
+      &::after{
         display: block;
         content: ' ';
         position: absolute;
@@ -286,19 +294,21 @@ button,
         width: 1px;
         height: 100%;
         z-index: 1;
-        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgb(0 0 0 / 15%);
       }
+
       &:hover{
         border-right-width: 1px;
-        &:after{ display: none;}
+        &::after{ display: none;}
       }
     }
   }
 
-  .button:not(:first-child):not(:last-child) {
+  .button:not(:first-child, :last-child) {
     border-left-width: 0;
     border-right-width: 0;
-    &:after{
+
+    &::after{
       display: block;
       content: ' ';
       position: absolute;
@@ -307,18 +317,20 @@ button,
       width: 1px;
       height: 100%;
       z-index: 1;
-      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      border-right: 1px solid rgb(0 0 0 / 15%);
     }
+
     &:hover{
       border-left-width: 1px;
       border-right-width: 1px;
-      &:after{ display: none;}
+      &::after{ display: none;}
     }
   }
 
   .button:last-child{
     &:not(:first-child) {
       border-left-width: 0;
+
       &:hover{
         border-left-width: 1px;
       }
@@ -341,9 +353,10 @@ button,
       input[type="submit"],
       button{
         @include border-right-radius(0);
+
         border-left-width: 1px;
 
-        &:after{
+        &::after{
           display: block;
           content: ' ';
           position: absolute;
@@ -352,25 +365,25 @@ button,
           width: 1px;
           height: 100%;
           z-index: 1;
-          border-right: 1px solid rgba(0, 0, 0, 0.15);
+          border-right: 1px solid rgb(0 0 0 / 15%);
         }
 
         &:hover{
           border-right-width: 1px;
-          &:after{ display: none;}
+          &::after{ display: none;}
         }
 
       }
     }
 
-    &:not(:first-child):not(:last-child){
+    &:not(:first-child, :last-child){
       > input[type="button"],
       > input[type="submit"],
       > button{
         @include border-left-radius(0);
         @include border-right-radius(0);
 
-        &:after{
+        &::after{
           display: block;
           content: ' ';
           position: absolute;
@@ -379,13 +392,13 @@ button,
           width: 1px;
           height: 100%;
           z-index: 1;
-          border-right: 1px solid rgba(0, 0, 0, 0.15);
+          border-right: 1px solid rgb(0 0 0 / 15%);
         }
 
         &:hover{
           border-left-width: 1px;
           border-right-width: 1px;
-          &:after{ display: none;}
+          &::after{ display: none;}
         }
 
       }
@@ -396,6 +409,7 @@ button,
       input[type="submit"],
       button{
         @include border-left-radius(0);
+
         border-right-width: 1px;
 
         &:hover{

@@ -1,6 +1,9 @@
-//
 // Alerts
 // --------------------------------------------------
+
+@use "sass:color";
+
+
 
 // Mixin
 @mixin alert-variant($background, $border, $text-color) {
@@ -8,8 +11,13 @@
   border-color: $border;
   color: $text-color;
 
-  hr { border-top-color: darken($border, 5%); }
-  a { color: darken($text-color, 10%); }
+  hr {
+    border-top-color: color.adjust($border, $lightness: -5%);
+  }
+
+  a {
+    color: color.adjust($text-color, $lightness: -10%);
+  }
 }
 
 
@@ -28,43 +36,51 @@
     // Specified for the h4 to prevent conflicts of changing $headings-color
     color: inherit;
   }
+
   // Provide class for links that match alerts
-  a{
+  a {
     font-weight: $alert-link-font-weight;
   }
 
   // Improve alignment and spacing of inner content
-  > p,
-  > ul {
+  >p,
+  >ul {
     margin-bottom: 0;
   }
-  > p + p {
+
+  >p+p {
     margin-top: 5px;
   }
-}
 
-// Dismissible alerts
-//
-// Expand the right padding and account for the close button's positioning.
-.alert.dismissible {
-  padding-right: ($alert-padding + 20);
+  // Dismissible alerts
+  // Expand the right padding and account for the close button's positioning.
+  &.dismissible {
+    padding-right: ($alert-padding + 20);
 
-  // Adjust close link position
-  .close {
-    position: relative;
-    top: -2px;
-    right: -21px;
-    color: inherit;
+    // Adjust close link position
+    .close {
+      position: relative;
+      top: -2px;
+      right: -21px;
+      color: inherit;
+    }
   }
-}
 
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
+  // Alternate styles
+  // Generate contextual modifier classes for colorizing the alert.
+  &.success {
+    @include alert-variant($alert-success-background, $alert-success-border, $alert-success-text);
+  }
 
-.alert{
-  &.success {@include alert-variant($alert-success-background, $alert-success-border, $alert-success-text); }
-  &.info    {@include alert-variant($alert-info-background,    $alert-info-border,    $alert-info-text);    }
-  &.warning {@include alert-variant($alert-warning-background, $alert-warning-border, $alert-warning-text); }
-  &.danger  {@include alert-variant($alert-danger-background,  $alert-danger-border,  $alert-danger-text);  }
+  &.info {
+    @include alert-variant($alert-info-background, $alert-info-border, $alert-info-text);
+  }
+
+  &.warning {
+    @include alert-variant($alert-warning-background, $alert-warning-border, $alert-warning-text);
+  }
+
+  &.danger {
+    @include alert-variant($alert-danger-background, $alert-danger-border, $alert-danger-text);
+  }
 }

@@ -1,4 +1,3 @@
-//
 // Breadcrumbs
 // --------------------------------------------------
 
@@ -10,17 +9,17 @@
   background-color: $breadcrumb-background;
   border-radius: $border-radius;
 
-  > li {
+  >li {
     display: inline-block;
 
-    + li:before {
+    +li::before {
       content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
       color: $breadcrumb-color;
     }
   }
 
-  > .active {
+  >.active {
     color: $breadcrumb-active-color;
   }
 }

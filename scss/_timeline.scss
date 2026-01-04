@@ -1,4 +1,3 @@
-//
 // Timeline
 // --------------------------------------------------
 
@@ -27,7 +26,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
 
-    &:before{
+    &::before{
       height: $border;
       left: 0;
       z-index: 10;
@@ -61,7 +60,7 @@
   margin-top: 20px;
   margin-bottom: 10px;
 
-  &:before{
+  &::before{
     display: block;
     content: '';
     width: 100%;
@@ -80,7 +79,7 @@
     text-align: justify;
     line-height: 0;
 
-    &:after{
+    &::after{
       display: inline-block;
       content: '';
       height: 0;
@@ -100,8 +99,7 @@
       overflow: hidden;
       background-color: #FFF;
       box-shadow: 0 0 0 2px $timeline-background-default inset;
-      -webkit-transition: all 0.25s ease;
-              transition: all 0.25s ease;
+      transition: all 0.25s ease;
 
       &:hover {
         box-shadow: 0 0 0 30px $timeline-background-default inset;
@@ -133,8 +131,7 @@
         top: 0;
         text-decoration: none;
         color: #333;
-        -webkit-transition: all 0.25s ease;
-                transition: all 0.25s ease;
+        transition: all 0.25s ease;
       }
     }
   }

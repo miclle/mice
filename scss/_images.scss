@@ -1,15 +1,11 @@
-//
 // Images
 // --------------------------------------------------
-
 
 // Image Mixins
 // - Responsive image
 // - Retina image
 
-
 // Responsive image
-//
 // Keep images from scaling beyond the width of their parents.
 @mixin img-responsive($display: block) {
   display: $display;
@@ -17,28 +13,6 @@
   max-width: 100%; // Part 1: Set a maximum relative to the parent
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
-
-
-// Retina image
-//
-// Short retina mixin for setting background-image and -size. Note that the
-// spelling of `min--moz-device-pixel-ratio` is intentional.
-@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
-  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-1x}"), "#{$file-1x}"));
-
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-2x}"), "#{$file-2x}"));
-    background-size: $width-1x $height-1x;
-  }
-}
-
-
 
 img {
   vertical-align: middle;
@@ -50,13 +24,13 @@ img {
 
   &.rounded   { border-radius: $border-radius-large; }
   &.circle    { border-radius: 50%; }
+
   &.thumbnail {
     padding: 4px;
-    line-height: 1.42857143;
+    line-height: 1.4286;
     background-color: #FFF;
     border: 1px solid #DDD;
     border-radius: $border-radius;
-    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     display: inline-block;
     max-width: 100%;
@@ -65,6 +39,7 @@ img {
 
   &.disabled{
     cursor: default;
+
     @include opacity(.3);
   }
 
@@ -73,7 +48,6 @@ img {
     width: 100%;
   }
 }
-
 
 // Inspired by the original by http://www.hongkiat.com/blog/css3-image-captions/
 .thumbnail {
@@ -85,10 +59,6 @@ img {
 
   img {
     position: relative;
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
   }
 
@@ -96,19 +66,12 @@ img {
     width: 100%;
     overflow: hidden;
     padding: 5px;
-
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(0 0 0 / 80%);
     color: #fff;
-
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 100;
-
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
   }
 
@@ -117,11 +80,9 @@ img {
     bottom: -30px;
     text-align: center;
   }
+
   &.simple:hover .caption {
     opacity: 1;
-    -moz-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
 
@@ -130,14 +91,13 @@ img {
     top: -100%;
     overflow: hidden;
   }
+
   &.full:hover .caption {
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
 
   &.fade{ opacity: 1; }
+
   &.fade .caption{
     opacity: 0;
     top: 0;
@@ -150,50 +110,36 @@ img {
     left: 100%;
     bottom: 0;
   }
+
   &.slide:hover img {
-    -moz-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 1;
   }
+
   &.slide:hover .caption {
-    background-color: rgba(0,0,0,1) !important;
-    -moz-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+    background-color: rgb(0 0 0 / 100%) !important;
     transform: translateX(-100%);
     opacity: 1;
   }
 
   &.rotate img{
-    -webkit-transform-origin: center bottom;
-    -ms-transform-origin: center bottom;
     transform-origin: center bottom;
     opacity: 1;
   }
+
   &.rotate:hover img{
-    -webkit-transform: rotate3d(0, 0, 1, -180deg);
-    -webkit-transform: rotate3d(0, 0, 1, -180deg);
-    -ms-transform: rotate3d(0, 0, 1, -180deg);
     transform: rotate3d(0, 0, 1, -180deg);
   }
+
   &.rotate .caption {
     top: 0;
     height: 100%;
-    background-color: rgba(0,0,0,1) !important;
-
-    -webkit-transform-origin: center bottom;
-    -ms-transform-origin: center bottom;
+    background-color: rgb(0 0 0 / 100%) !important;
     transform-origin: center bottom;
-
-    -webkit-transform: rotate3d(0, 0, 1, 180deg);
-    -ms-transform: rotate3d(0, 0, 1, 180deg);
     transform: rotate3d(0, 0, 1, 180deg);
   }
+
   &.rotate:hover .caption {
-    -webkit-transform: none;
-    -ms-transform: none;
     transform: none;
   }
 
@@ -206,42 +152,27 @@ img {
     h3, p {
       position: relative;
       left: -100%;
-      -webkit-transition: all 300ms ease-out;
-      -moz-transition: all 300ms ease-out;
-      -o-transition: all 300ms ease-out;
-      -ms-transition: all 300ms ease-out;
       transition: all 300ms ease-out;
     }
 
     h3 {
-      -webkit-transition-delay: 300ms;
-      -moz-transition-delay: 300ms;
-      -o-transition-delay: 300ms;
-      -ms-transition-delay: 300ms;
       transition-delay: 300ms;
     }
 
     p {
-      -webkit-transition-delay: 500ms;
-      -moz-transition-delay: 500ms;
-      -o-transition-delay: 500ms;
-      -ms-transition-delay: 500ms;
       transition-delay: 500ms;
     }
   }
+
   &.scale:hover{
     img {
-      -moz-transform: scale(1.4);
-      -o-transform: scale(1.4);
-      -webkit-transform: scale(1.4);
       transform: scale(1.4);
     }
+
     .caption {
       opacity: 1;
+
       h3, p {
-        -moz-transform: translateX(100%);
-        -o-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
         transform: translateX(100%);
       }
     }
