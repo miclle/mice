@@ -1,0 +1,16 @@
+{
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "color-hex-length": "short",
+    "color-named": "never",
+    "property-no-vendor-prefix": null,
+    "value-keyword-case": "lower",
+    "function-no-unknown": null,
+    "property-no-unknown": null,
+    "at-rule-no-unknown": null
+  },
+  "ignoreFiles": [
+    "dist/**/*",
+    "site/**/*"
+  ]
+}

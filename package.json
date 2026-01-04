@@ -16,7 +16,10 @@
     "build:sync": "npm run build && node scripts/sync-docs.js",
     "sync": "node scripts/sync-docs.js",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "lint": "npm run lint:scss",
+    "lint:scss": "stylelint \"scss/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"scss/**/*.scss\" --fix"
   },
   "keywords": [
     "mice",
@@ -38,7 +41,13 @@
     "url": "https://github.com/miclle/mice/issues"
   },
   "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
     "sass": "^1.83.0",
+    "stylelint": "^16.13.1",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-style-guide": "^0.0.3",
     "vite": "^6.0.3"
   },
   "exports": {
