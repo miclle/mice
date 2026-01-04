@@ -46,24 +46,24 @@ You can also import individual components:
 
 ```scss
 // Core
-@import 'mice/scss/mice/variables';
-@import 'mice/scss/mice/mixins';
-@import 'mice/scss/mice/normalize';
-@import 'mice/scss/mice/scaffolding';
-@import 'mice/scss/mice/typography';
+@import 'mice/scss/variables';
+@import 'mice/scss/mixins';
+@import 'mice/scss/normalize';
+@import 'mice/scss/scaffolding';
+@import 'mice/scss/typography';
 
 // Components
-@import 'mice/scss/mice/buttons';
-@import 'mice/scss/mice/grid';
-@import 'mice/scss/mice/navbar';
-@import 'mice/scss/mice/forms';
-@import 'mice/scss/mice/tables';
-@import 'mice/scss/mice/modals';
-@import 'mice/scss/mice/alerts';
-@import 'mice/scss/mice/panels';
-@import 'mice/scss/mice/tabs';
-@import 'mice/scss/mice/pagination';
-@import 'mice/scss/mice/tooltips';
+@import 'mice/scss/buttons';
+@import 'mice/scss/grid';
+@import 'mice/scss/navbar';
+@import 'mice/scss/forms';
+@import 'mice/scss/tables';
+@import 'mice/scss/modals';
+@import 'mice/scss/alerts';
+@import 'mice/scss/panels';
+@import 'mice/scss/tabs';
+@import 'mice/scss/pagination';
+@import 'mice/scss/tooltips';
 ```
 
 ### With bundlers (Vite, Webpack, etc.)
@@ -80,7 +80,7 @@ import 'mice/css'
 
 - 📚 **Full Documentation**: [http://mice.miclle.com/](http://mice.miclle.com/) (Live examples and API reference)
 - 🏠 **GitHub Pages**: [https://miclle.github.io/mice/](https://miclle.github.io/mice/) (Build artifacts)
-- 📖 **Source Code**: [src/styles/mice/](src/styles/mice/) (SCSS source files)
+- 📖 **Source Code**: [scss/](scss/) (SCSS source files)
 
 ## Components
 
@@ -171,8 +171,8 @@ npm run preview
 
 When working on the CSS framework:
 
-1. Modify SCSS files in `src/styles/`
-2. Run `npm run build:sync` to build and sync changes to docs
+1. Modify SCSS files in `scss/`
+2. Run `npm run build:sync` to build and sync changes to site
 3. View changes at `http://localhost:5173`
 
 ## Class Naming Reference

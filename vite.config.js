@@ -9,7 +9,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 export default defineConfig(({ command }) => ({
   // Use docs directory for dev server only
   ...(command === 'serve' ? {
-    root: 'docs',
+    root: 'site',
     server: {
       port: 5173,
       open: true
@@ -21,7 +21,7 @@ export default defineConfig(({ command }) => ({
     outDir: 'dist',
     emptyOutDir: true,
     lib: {
-      entry: resolve(__dirname, 'src/styles/mice.scss'),
+      entry: resolve(__dirname, 'scss/mice.scss'),
       name: 'Mice',
       fileName: 'mice',
       formats: ['es']

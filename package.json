@@ -4,11 +4,11 @@
   "description": "Mice is a semantic CSS framework",
   "type": "module",
   "style": "dist/mice.css",
-  "sass": "src/styles/mice.scss",
+  "sass": "scss/mice.scss",
   "files": [
     "dist",
-    "src",
-    "docs"
+    "scss",
+    "site"
   ],
   "scripts": {
     "dev": "vite",
@@ -44,6 +44,6 @@
   "exports": {
     ".": "./dist/mice.css",
     "./css": "./dist/mice.css",
-    "./scss": "./src/styles/mice.scss"
+    "./scss": "./scss/mice.scss"
   }
 }
