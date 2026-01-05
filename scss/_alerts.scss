@@ -8,11 +8,11 @@
   color: $text-color;
 
   hr {
-    border-top-color: darken($border, 5%);
+    border-top-color: color.adjust($border, $lightness: -5%);
   }
 
   a {
-    color: darken($text-color, 10%);
+    color: color.adjust($text-color, $lightness: -10%);
   }
 }
 

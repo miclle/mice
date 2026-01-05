@@ -25,31 +25,31 @@ table > tfoot {
     th.primary,
     &.primary > td,
     td.primary {
-      background-color: lighten($brand-primary, 32%);
+      background-color: color.adjust($brand-primary, $lightness: 32%);
     }
     &.success > th,
     th.success,
     &.success > td,
     td.success {
-      background-color: lighten($brand-success, 32%);
+      background-color: color.adjust($brand-success, $lightness: 32%);
     }
     &.info > th,
     th.info,
     &.info > td,
     td.info {
-      background-color: lighten($brand-info, 32%);
+      background-color: color.adjust($brand-info, $lightness: 32%);
     }
     &.warning > th,
     th.warning,
     &.warning > td,
     td.warning {
-      background-color: lighten($brand-warning, 32%);
+      background-color: color.adjust($brand-warning, $lightness: 32%);
     }
     &.danger > th,
     th.danger,
     &.danger > td,
     td.danger {
-      background-color: lighten($brand-danger, 32%);
+      background-color: color.adjust($brand-danger, $lightness: 32%);
     }
   }
 }

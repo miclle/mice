@@ -13,15 +13,15 @@
   &:hover,
   &:focus {
     color: $color;
-    background-color: darken($background, 10%);
-    border-color: darken($border, 10%);
+    background-color: color.adjust($background, $lightness: -10%);
+    border-color: color.adjust($border, $lightness: -10%);
   }
 
   &:active,
   &.active {
     color: $color;
-    background-color: darken($background, 15%);
-    border-color: darken($border, 15%);
+    background-color: color.adjust($background, $lightness: -15%);
+    border-color: color.adjust($border, $lightness: -15%);
   }
 
   &.disabled,

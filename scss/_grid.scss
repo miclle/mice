@@ -51,20 +51,20 @@
 
 @mixin column-child($columns) {
   > .column {
-    width: percentage(1 / $columns);
+    width: math.percentage(1 / $columns);
   }
 }
 
 @mixin column-self($columns, $value) {
   &.column {
-    width: percentage(1 / $columns * $value);
+    width: math.percentage(1 / $columns * $value);
   }
 }
 
 $columns:
   'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve';
 
-@for $i from 1 through length($columns) {
+@for $i from 1 through list.length($columns) {
   .grid.#{nth($columns, $i)} {
     @include column-child($i + 1);
 
@@ -80,7 +80,7 @@ $columns:
 
 // Go full width at less than 480px
 @media only screen and (width <= 480px) {
-  @for $i from 1 through length($columns) {
+  @for $i from 1 through list.length($columns) {
     .grid.#{nth($columns, $i)} {
       @include column-child(1);
 

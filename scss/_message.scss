@@ -8,7 +8,7 @@
   color: $text-color;
 
   a {
-    color: darken($text-color, 10%);
+    color: color.adjust($text-color, $lightness: -10%);
   }
 }
 

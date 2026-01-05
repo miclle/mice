@@ -7,7 +7,7 @@
   &[href] {
     &:hover,
     &:focus {
-      background-color: darken($color, 10%);
+      background-color: color.adjust($color, $lightness: -10%);
     }
   }
 }
@@ -79,7 +79,7 @@ a.label {
 
 // $colors: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow;
 
-// @for $i from 1 through length($colors) {
+// @for $i from 1 through list.length($colors) {
 //   .label.#{nth($colors, $i)}{
 //     @include label-variant(#{nth($colors, $i)});
 //   }

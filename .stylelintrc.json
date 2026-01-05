@@ -6,6 +6,7 @@
     "import-notation": null,
     "rule-empty-line-before": null,
     "no-duplicate-selectors": null,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "at-rule-empty-line-before": null
   }
 }

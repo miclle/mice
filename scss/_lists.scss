@@ -18,7 +18,7 @@
     &:hover,
     &:focus {
       color: $color;
-      background-color: darken($background, 5%);
+      background-color: color.adjust($background, $lightness: -5%);
     }
     &.active,
     &.active:hover,
@@ -79,12 +79,12 @@ ol.grid {
 $columns:
   'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve';
 
-@for $i from 1 through length($columns) {
+@for $i from 1 through list.length($columns) {
   ul.grid,
   ol.grid {
     &.#{nth($columns, $i)} {
       > li {
-        width: percentage(1 / ($i + 1));
+        width: math.percentage(1 / ($i + 1));
       }
     }
   }
