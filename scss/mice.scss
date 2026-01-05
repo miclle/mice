@@ -1,46 +1,46 @@
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 // CSS Custom Properties
-@import "root";
+@import 'root';
 
 // Reset and dependencies
-@import "normalize";
+@import 'normalize';
 
 // Base CSS
-@import "scaffolding";
-@import "typography";
-@import "code";
-@import "grid";
-@import "callouts";
-@import "buttons";
-@import "images";
+@import 'scaffolding';
+@import 'typography';
+@import 'code';
+@import 'grid';
+@import 'callouts';
+@import 'buttons';
+@import 'images';
 
 // Components
-@import "component-animations";
-@import "menu";
-@import "tabs";
-@import "navbar";
-@import "sidebar";
-@import "lists";
-@import "tables";
-@import "breadcrumbs";
-@import "pagination";
-@import "panels";
-@import "media";
-@import "labels";
-@import "timeline";
-@import "progress";
-@import "alerts";
-@import "close";
-@import "modals";
-@import "message";
-@import "tooltips";
-@import "slider";
+@import 'component-animations';
+@import 'menu';
+@import 'tabs';
+@import 'navbar';
+@import 'sidebar';
+@import 'lists';
+@import 'tables';
+@import 'breadcrumbs';
+@import 'pagination';
+@import 'panels';
+@import 'media';
+@import 'labels';
+@import 'timeline';
+@import 'progress';
+@import 'alerts';
+@import 'close';
+@import 'modals';
+@import 'message';
+@import 'tooltips';
+@import 'slider';
 
 // Form
-@import "forms";
+@import 'forms';
 
 // Utility classes
-@import "utilities";
+@import 'utilities';

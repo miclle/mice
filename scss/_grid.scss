@@ -1,11 +1,6 @@
 // Grid system
 // --------------------------------------------------
 
-@use "sass:math";
-@use "sass:list";
-
-
-
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -29,13 +24,12 @@
 //  GRID COLUMN SETUP
 // -------------------------
 
-.grid{
+.grid {
   @include clearfix();
-
   > .column {
     display: block;
     min-height: 1px;
-    float:   left;
+    float: left;
     padding-left: 5px;
     padding-right: 5px;
 
@@ -43,11 +37,11 @@
       margin-left: 0;
     }
 
-    &.righted{
+    &.righted {
       float: right;
     }
 
-    &.centered{
+    &.centered {
       float: none;
       margin-left: auto;
       margin-right: auto;
@@ -55,29 +49,28 @@
   }
 }
 
-
 @mixin column-child($columns) {
   > .column {
-    width: math.percentage(1 / $columns);
+    width: percentage(1 / $columns);
   }
 }
 
 @mixin column-self($columns, $value) {
   &.column {
-    width: math.percentage(1 / $columns * $value);
+    width: percentage(1 / $columns * $value);
   }
 }
 
+$columns:
+  'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve';
 
-$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
-
-@for $i from 1 through list.length($columns) {
+@for $i from 1 through length($columns) {
   .grid.#{nth($columns, $i)} {
     @include column-child($i + 1);
 
     @if $i - 1 > 0 {
       @for $j from 1 through $i - 1 {
-        > .#{nth($columns, $j)}{
+        > .#{nth($columns, $j)} {
           @include column-self($i + 1, $j + 1);
         }
       }
@@ -85,20 +78,17 @@ $columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
   }
 }
 
-
 // Go full width at less than 480px
 @media only screen and (width <= 480px) {
-  @for $i from 1 through list.length($columns) {
+  @for $i from 1 through length($columns) {
     .grid.#{nth($columns, $i)} {
       @include column-child(1);
 
       @for $j from 1 through $i {
-        > .#{nth($columns, $j)}{
+        > .#{nth($columns, $j)} {
           @include column-self($i + 1, $i + 1);
         }
       }
     }
   }
 }
-
-

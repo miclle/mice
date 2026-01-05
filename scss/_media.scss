@@ -2,16 +2,15 @@
 // Source: http://stubbornella.org/content/?p=497
 // --------------------------------------------------
 
-
 // Common styles
 // -------------------------
-.media{
+.media {
   margin-top: 15px;
   list-style: none;
 
   @include clearfix();
 
-  &:first-child{
+  &:first-child {
     margin-top: 0;
   }
 
@@ -36,10 +35,10 @@
     margin: 0 0 5px;
   }
 
-  &.invert{
+  &.invert {
     text-align: right;
 
-    > .cover{
+    > .cover {
       float: right;
       margin-left: 10px;
       margin-right: 0;
@@ -47,17 +46,19 @@
   }
 }
 
-.media.card{
-  > .cover{ float: none;}
+.media.card {
+  > .cover {
+    float: none;
+  }
 }
 
-.mediae{
+.mediae {
   padding-left: 0;
   list-style: none;
 }
 
-.mediae.grid{
-  .media.card{
+.mediae.grid {
+  .media.card {
     margin-top: 0;
   }
 }

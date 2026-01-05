@@ -1,11 +1,6 @@
 // Message
 // --------------------------------------------------
 
-@use "sass:color";
-
-
-
-
 // Mixin
 @mixin message-variant($background, $border, $text-color) {
   background-color: $background;
@@ -13,19 +8,20 @@
   color: $text-color;
 
   a {
-    color: color-mix(in srgb, $text-color 90%, #000);
+    color: darken($text-color, 10%);
   }
 }
-
 
 // Base styles
 // -------------------------
 .message {
   display: none;
   width: 100%;
+  padding: 10px 20px;
   padding: $message-padding;
   line-height: 1.8;
   font-size: 16px;
+  background: #fff;
   background: rgb(255 255 255 / 90%);
   color: #666;
   text-align: center;
@@ -50,7 +46,6 @@
     margin: 0;
     color: inherit;
   }
-
   a {
     font-weight: $message-link-font-weight;
   }
@@ -70,23 +65,31 @@
   }
 }
 
-
 // Alternate styles
 // Generate contextual modifier classes for colorizing the message.
 .message {
   &.success {
-    @include message-variant($message-success-background, $message-success-border, $message-success-text);
+    @include message-variant(
+      $message-success-background,
+      $message-success-border,
+      $message-success-text
+    );
   }
-
   &.info {
     @include message-variant($message-info-background, $message-info-border, $message-info-text);
   }
-
   &.warning {
-    @include message-variant($message-warning-background, $message-warning-border, $message-warning-text);
+    @include message-variant(
+      $message-warning-background,
+      $message-warning-border,
+      $message-warning-text
+    );
   }
-
   &.danger {
-    @include message-variant($message-danger-background, $message-danger-border, $message-danger-text);
+    @include message-variant(
+      $message-danger-background,
+      $message-danger-border,
+      $message-danger-text
+    );
   }
 }

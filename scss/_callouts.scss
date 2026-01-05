@@ -1,10 +1,6 @@
 // Blockquote & Callout
 // --------------------------------------------------
 
-@use "sass:color";
-
-
-
 blockquote,
 .callout {
   padding: ($line-height-computed / 2) $line-height-computed;
@@ -43,7 +39,6 @@ blockquote,
 // Opposite alignment
 blockquote,
 .callout {
-
   &.reverse,
   &.righted {
     padding-right: 15px;
@@ -74,7 +69,7 @@ blockquote::before,
 .callout::before,
 blockquote::after,
 .callout::after {
-  content: "";
+  content: '';
 }
 
 blockquote,
@@ -82,7 +77,7 @@ blockquote,
   &.primary {
     border-color: $border-color-primary;
     background-color: $state-primary-background;
-    color: #FFF;
+    color: #fff;
   }
 
   &.success {
@@ -123,7 +118,6 @@ blockquote,
   }
 
   &.success {
-
     h1,
     h2,
     h3,
@@ -135,7 +129,6 @@ blockquote,
   }
 
   &.info {
-
     h1,
     h2,
     h3,
@@ -147,7 +140,6 @@ blockquote,
   }
 
   &.warning {
-
     h1,
     h2,
     h3,
@@ -159,7 +151,6 @@ blockquote,
   }
 
   &.danger {
-
     h1,
     h2,
     h3,

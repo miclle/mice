@@ -1,28 +1,26 @@
 // Forms
 // --------------------------------------------------
 
-@use "sass:color";
-@use "sass:math";
-@use "sass:list";
-
-
-
 // $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
 
 // Input variants
 // -------------------------
 @mixin input-variant($border-color) {
-               color: $gray;
-    background-color: #FFF;
-        border-color: $border-color;
+  color: $gray;
+  background-color: #fff;
+  border-color: $border-color;
 
-  &:hover{ border-color: color-mix(in srgb, $border-color 80%, #000); }
+  &:hover {
+    border-color: darken($border-color, 20%);
+  }
 
   &:focus,
   &:active,
-  &.active{
-    border-color: color-mix(in srgb, $border-color 80%, #000);
-    box-shadow: 0 0 0 1px color-mix(in srgb, $border-color 85%, #000), inset 0 1px #F5F5F5;
+  &.active {
+    border-color: darken($border-color, 20%);
+    box-shadow:
+      0 0 0 1px darken($border-color, 15%),
+      inset 0 1px #f5f5f5;
   }
 
   &.disabled,
@@ -35,24 +33,26 @@
       cursor: not-allowed;
       background-color: #eee;
 
-      @include opacity(.55);
+      @include opacity(0.55);
     }
   }
 }
 
 // Field variants
 // -------------------------
-@mixin field-variant($border-color){
+@mixin field-variant($border-color) {
   color: $border-color;
 
   input.text,
-  input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='number'],
   textarea,
-  select{
+  select {
     @include input-variant($border-color);
   }
 }
-
 
 // Input sizing
 // -------------------------
@@ -63,7 +63,6 @@
   line-height: $line-height;
 }
 
-
 // Base styles
 // -------------------------
 
@@ -73,12 +72,15 @@ fieldset {
   border: 0;
   min-width: 0;
 
-  &[disabled]{
+  &[disabled] {
     input.text,
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='number'],
     textarea,
     select,
-    button{
+    button {
       &,
       &:hover,
       &:active,
@@ -94,33 +96,38 @@ fieldset {
 }
 
 input.text,
-input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
 textarea,
-select{
-  display:          inline-block;
+select {
+  display: inline-block;
   height: 34px;
-  margin-bottom:    0;
-  font-weight:      $button-font-weight;
-  text-align:       left;
-  border:           1px solid #CCC;
-  white-space:      nowrap;
-  outline:          none;
+  margin-bottom: 0;
+  font-weight: $button-font-weight;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  outline: none;
   position: relative;
-  box-shadow: inset 0 1px #F5F5F5;
+  box-shadow: inset 0 1px #f5f5f5;
   background-color: transparent;
-  transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
+  transition:
+    border-color ease-in-out 0.1s,
+    box-shadow ease-in-out 0.1s;
 
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none;
 
-    @include opacity(.65);
+    @include opacity(0.65);
     @include user-select(none);
   }
 }
 
-textarea{
+textarea {
   display: block;
   line-height: 20px;
   min-height: 120px;
@@ -128,87 +135,144 @@ textarea{
   white-space: normal;
   resize: vertical;
   color: #555;
-  background-color: #FFF;
+  background-color: #fff;
   background-image: none;
 }
 
-label{
+label {
   display: inline-block;
   margin-bottom: 2px;
 }
-
 
 // Input Styles
 // -------------------------
 
 input.text,
-input[type="text"], input[type="password"], input[type="email"], input[type="number"],
-textarea{
-            @include input-variant($border-color-default);
-  &.primary{@include input-variant($border-color-primary);}
-  &.success{@include input-variant($border-color-success);}
-  &.info   {@include input-variant($border-color-info   );}
-  &.warning{@include input-variant($border-color-warning);}
-  &.danger {@include input-variant($border-color-danger );}
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+textarea {
+  @include input-variant($border-color-default);
 
-  &.fluid{ width: 100%; }
+  &.primary {
+    @include input-variant($border-color-primary);
+  }
+
+  &.success {
+    @include input-variant($border-color-success);
+  }
+
+  &.info {
+    @include input-variant($border-color-info);
+  }
+
+  &.warning {
+    @include input-variant($border-color-warning);
+  }
+
+  &.danger {
+    @include input-variant($border-color-danger);
+  }
+
+  &.fluid {
+    width: 100%;
+  }
 }
-
 
 // Input Sizing
 // -------------------------
 input.text,
-input[type="text"], input[type="password"], input[type="email"], input[type="number"],
-textarea{
-           @include input-size($input-height-default, $input-padding-default-vertical, $input-padding-default-horizontal, $font-size-base,  $line-height-base);
-  &.small {@include input-size($input-height-small,   $input-padding-small-vertical,   $input-padding-small-horizontal,   $font-size-small, $line-height-small);}
-  &.large {@include input-size($input-height-large,   $input-padding-large-vertical,   $input-padding-large-horizontal,   $font-size-large, $line-height-large);}
-}
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+textarea {
+  @include input-size(
+    $input-height-default,
+    $input-padding-default-vertical,
+    $input-padding-default-horizontal,
+    $font-size-base,
+    $line-height-base
+  );
 
+  &.small {
+    @include input-size(
+      $input-height-small,
+      $input-padding-small-vertical,
+      $input-padding-small-horizontal,
+      $font-size-small,
+      $line-height-small
+    );
+  }
+
+  &.large {
+    @include input-size(
+      $input-height-large,
+      $input-padding-large-vertical,
+      $input-padding-large-horizontal,
+      $font-size-large,
+      $line-height-large
+    );
+  }
+}
 
 .hint {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: color-mix(in srgb, $text-color 125%, #fff);
+  color: lighten($text-color, 25%);
 }
 
-
-.field{
+.field {
   margin-bottom: 15px;
 
-  label{
+  label {
     display: inline-block;
   }
 
-  &:not(.checkbox){
-    label{
+  &:not(.checkbox) {
+    label {
       font-weight: 700;
     }
   }
 
   input.text,
-  input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='number'],
   select,
-  textarea{
+  textarea {
     width: 100%;
   }
 
-  &.success {@include field-variant($border-color-success);}
-  &.warning {@include field-variant($border-color-warning);}
-  &.error   {@include field-variant($border-color-danger );}
+  &.success {
+    @include field-variant($border-color-success);
+  }
 
-  &.feedback{
+  &.warning {
+    @include field-variant($border-color-warning);
+  }
+
+  &.error {
+    @include field-variant($border-color-danger);
+  }
+
+  &.feedback {
     position: relative;
 
     input.text,
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='number'],
     select,
-    textarea{
+    textarea {
       padding-right: 50px;
     }
 
-    .icon{
+    .icon {
       width: 34px;
       height: 34px;
       line-height: 34px;
@@ -216,69 +280,74 @@ textarea{
       position: absolute;
       right: 0;
       top: 22px;
-      z-index: 1
+      z-index: 1;
     }
   }
 }
 
-
 // Inline form
 // -------------------------
 .navbar form,
-form.inline{
-  .field{
+form.inline {
+  .field {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
 
     input.text,
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"],
-    input[type="email"]{
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='number'],
+    input[type='email'] {
       width: auto;
     }
   }
 
-  &.unlabel{
-    .field:not(.checkbox){
-      label{ display: none;}
+  &.unlabel {
+    .field:not(.checkbox) {
+      label {
+        display: none;
+      }
     }
   }
 
-  > button{
+  > button {
     margin-top: -3px;
   }
 }
 
-.inline{
+.inline {
   input.text,
-  input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='number'] {
     width: auto;
   }
 }
 
-
 // Horizontal Form
 // -------------------------
-form.horizontal{
+form.horizontal {
+  $offsets: 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven';
 
-  $offsets: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven";
-
-  @for $i from 1 through list.length($offsets){
-    &.offset.#{nth($offsets, $i)}{
-      .field{
+  @for $i from 1 through length($offsets) {
+    &.offset.#{nth($offsets, $i)} {
+      .field {
         position: relative;
         vertical-align: middle;
 
         @include clearfix();
 
-        padding-left: math.percentage(1 / 12 * $i);
+        padding-left: percentage(1 / 12 * $i);
 
-        &:not(.checkbox){
-          label{
+        &:not(.checkbox) {
+          label {
             float: left;
-            width: math.percentage(1 / 12 * $i);
+            width: percentage(1 / 12 * $i);
             height: 34px;
-            margin-left: (0 - math.percentage(1 / 12 * $i));
+            margin-left: (0 - percentage(1 / 12 * $i));
             margin-bottom: 0;
             padding-right: 15px;
             padding-top: 6px;
@@ -286,59 +355,68 @@ form.horizontal{
           }
         }
 
-        .static{
+        .static {
           padding-top: 6px;
           margin-bottom: 0;
         }
-
       }
     }
   }
-
 }
-
 
 // With optional icons
 // -------------------------
 form.inline,
-form.horizontal{
-.field.feedback{
-    .icon{ top: 0 }
+form.horizontal {
+  .field.feedback {
+    .icon {
+      top: 0;
+    }
   }
 }
 
-
 // Input justified
-.justified{
+.justified {
   display: table;
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
 
-  &::before, &::after{ display: none; }
+  &::before,
+  &::after {
+    display: none;
+  }
 
-  .field{
+  .field {
     float: none;
     display: table-cell;
     width: 1%;
     padding: 0 5px;
-    &:first-child{ padding-left: 0; }
-    &:last-child{ padding-right: 0; }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
 
     input.text,
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='number'] {
       width: 100%;
     }
   }
 }
 
-
-.inputs{
+.inputs {
   position: relative; // For dropdowns
   display: table;
   border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
 
-  .addon{
+  .addon {
     display: table-cell;
     padding: $padding-base-vertical $padding-base-horizontal;
     font-size: $font-size-base;
@@ -353,47 +431,50 @@ form.horizontal{
     vertical-align: middle;
 
     // Nuke default margins from checkboxes and radios to vertically center within.
-    input[type="radio"],
-    input[type="checkbox"] {
+    input[type='radio'],
+    input[type='checkbox'] {
       margin-top: 0;
     }
   }
 
-  > input{
+  > input {
     display: table-cell !important;
     width: 100%;
 
-    &:focus{
+    &:focus {
       box-shadow: none !important;
     }
   }
 
-  > .buttons{
+  > .buttons {
     display: table-cell;
     width: 1%;
     white-space: nowrap;
     vertical-align: middle; // Match the inputs
 
-    &:first-child{
+    &:first-child {
       button:first-child,
-      .button:first-child{
+      .button:first-child {
         border-right: 0;
       }
     }
 
-    &:last-child{
+    &:last-child {
       button:first-child,
-      .button:first-child{
+      .button:first-child {
         border-left: 0;
       }
     }
 
-    button, .button{
+    button,
+    .button {
       box-shadow: none;
     }
   }
 
-  > input, .addon, .buttons{
+  > input,
+  .addon,
+  .buttons {
     &:first-child {
       border-right: 0;
     }
@@ -403,5 +484,3 @@ form.horizontal{
     }
   }
 }
-
-

@@ -1,8 +1,3 @@
-// Mixins
-// --------------------------------------------------
-
-@use "sass:color";
-
 // Clearfix
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
@@ -15,10 +10,9 @@
 @mixin clearfix() {
   &::before,
   &::after {
-    content: " "; // 1
+    content: ' '; // 1
     display: table; // 2
   }
-
   &::after {
     clear: both;
   }
@@ -29,14 +23,13 @@
   box-sizing: $boxmodel;
 }
 
-
 // User select
 // For selecting text on the page
 
 @mixin user-select($select) {
+  // IE10+
   user-select: $select;
 }
-
 
 // Opacity
 
@@ -48,26 +41,32 @@
   filter: #{alpha(opacity=$opacity-ie)};
 }
 
-
 // Drop shadows
 
 @mixin box-shadow($shadow...) {
-  box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  // iOS <4.3 & Android <4.1
+  box-shadow: $shadow;
 }
-
 
 // Gradients
-@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
-  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+@mixin gradient-striped($color: rgba(255, 255, 255, 0.15), $angle: 45deg) {
+  background-image: linear-gradient(
+    $angle,
+    $color 25%,
+    transparent 25%,
+    transparent 50%,
+    $color 50%,
+    $color 75%,
+    transparent 75%,
+    transparent
+  );
 }
-
 
 // Transforms
 // --------------------------------------------------
 @mixin transform($transform...) {
   transform: $transform;
 }
-
 
 // Transitions
 // --------------------------------------------------
@@ -88,10 +87,14 @@
 }
 
 @mixin transition-transform($transition...) {
+  transition: -webkit-transform $transition;
+  transition: -moz-transform $transition;
+  transition: -o-transform $transition;
   transition: transform $transition;
 }
 
 @mixin translate($x, $y) {
+  // IE9 only
   transform: translate($x, $y);
 }
 
@@ -113,25 +116,25 @@
   animation-direction: $direction;
 }
 
-
 // Misc
 // --------------------------------------------------
 @mixin hairline($type, $color, $offset) {
   @if $type == single {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
     background-position: $offset 100%;
-
   }
 
  @else if $type == double {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>"),
-                      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
-    background-position: $offset 100%, $offset 0;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>"),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
+    background-position:
+      $offset 100%,
+      $offset 0;
   }
 
   background-repeat: no-repeat;
 }
-
 
 // Typography
 // --------------------------------------------------
@@ -141,10 +144,9 @@
     color: $color;
   }
   a#{$parent}:hover {
-    color: var(--link-hover-color);
+    color: darken($color, 10%);
   }
 }
-
 
 // Contextual backgrounds
 // --------------------------------------------------
@@ -154,6 +156,6 @@
     background-color: $color;
   }
   a#{$parent}:hover {
-    background-color: color-mix(in srgb, $color 90%, #fff);
+    background-color: darken($color, 10%);
   }
 }

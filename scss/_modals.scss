@@ -15,7 +15,6 @@
   }
 }
 
-
 // Container that the modal scrolls within
 .modal {
   display: none;
@@ -31,8 +30,9 @@
     @include translate3d(0, -25%, 0);
     @include transition-transform(0.3s ease-out);
   }
-  &.in .dialog { @include translate3d(0, 0, 0); }
-
+  &.in .dialog {
+    @include translate3d(0, 0, 0);
+  }
 }
 
 // Modal background
@@ -45,10 +45,11 @@
   // Fade for backdrop
   &.fade {
     @include opacity(0);
-    &.in   { @include opacity($modal-backdrop-opacity); }
+    &.in {
+      @include opacity($modal-backdrop-opacity);
+    }
   }
 }
-
 
 .modal {
   // Shell div to position the modal with bottom padding
@@ -61,11 +62,12 @@
   // Actual modal
   .content {
     position: relative;
-    background-color: $modal-content-background; //old browsers fallback (ie8 etc)
+    background-color: $modal-content-background;
+    border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
     border: 1px solid $modal-content-border-color;
     border-radius: $border-radius;
 
-    @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+    @include box-shadow(0 3px 9px rgba(0, 0, 0, 0.5));
 
     background-clip: padding-box;
     // Remove focus outline from opened modal
@@ -80,10 +82,17 @@
     min-height: ($modal-title-padding + $modal-title-line-height);
 
     // Close icon
-    .close { margin-top: -2px; }
+    .close {
+      margin-top: -2px;
+    }
 
     // Title text within header
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
       line-height: $modal-title-line-height;
     }
@@ -118,9 +127,7 @@
       margin-left: 0;
     }
   }
-
 }
-
 
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
@@ -131,25 +138,27 @@
   overflow: scroll;
 }
 
-
 // Scale up the modal
 @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
-  .modal{
+  .modal {
     .dialog {
       width: $modal-medium;
       margin: 30px auto;
     }
-
     .content {
-      @include box-shadow(0 5px 15px rgba(0,0,0,.5));
+      @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
     }
   }
 
   // Modal sizes
-  .modal .small { width: $modal-small; }
+  .modal .small {
+    width: $modal-small;
+  }
 }
 
 @media (min-width: $screen-md-min) {
-  .modal .large { width: $modal-large; }
+  .modal .large {
+    width: $modal-large;
+  }
 }

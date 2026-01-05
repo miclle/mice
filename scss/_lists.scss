@@ -1,12 +1,6 @@
 // Lists
 // --------------------------------------------------
 
-@use "sass:color";
-@use "sass:math";
-@use "sass:list";
-
-
-
 // List group variants
 @mixin list-group-item-variant($state, $background, $color) {
   > li.#{$state},
@@ -17,14 +11,15 @@
   }
 
   > a.#{$state} {
-    .heading { color: inherit; }
+    .heading {
+      color: inherit;
+    }
 
     &:hover,
     &:focus {
       color: $color;
-      background-color: color-mix(in srgb, $background 95%, #000);
+      background-color: darken($background, 5%);
     }
-
     &.active,
     &.active:hover,
     &.active:focus {
@@ -35,13 +30,11 @@
   }
 }
 
-
 // Unordered and Ordered lists
 ul,
 ol {
   margin-top: 0;
   margin-bottom: ($line-height-computed / 2);
-
   ul,
   ol {
     margin-bottom: 0;
@@ -66,8 +59,8 @@ ul.inline {
     padding-right: 5px;
   }
 
-  &.justified{
-    > li{
+  &.justified {
+    > li {
       float: none;
       display: table-cell;
       width: 1%;
@@ -76,35 +69,46 @@ ul.inline {
 }
 
 // Grids
-ul.grid, ol.grid{
-  > li{ float: left;}
-}
-
-$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
-
-@for $i from 1 through list.length($columns) {
-  ul.grid, ol.grid{
-    &.#{nth($columns, $i)} {
-      > li { width: math.percentage(1 / ($i + 1)) }
-    }
+ul.grid,
+ol.grid {
+  > li {
+    float: left;
   }
 }
 
+$columns:
+  'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve';
+
+@for $i from 1 through length($columns) {
+  ul.grid,
+  ol.grid {
+    &.#{nth($columns, $i)} {
+      > li {
+        width: percentage(1 / ($i + 1));
+      }
+    }
+  }
+}
 
 // Description Lists
 dl {
   margin-top: 0;
   margin-bottom: $line-height-computed;
-
   dt,
-  dd { line-height: $line-height-base; }
-  dt { font-weight: bold; }
-  dd { margin-left: 0; }
+  dd {
+    line-height: $line-height-base;
+  }
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin-left: 0;
+  }
 }
 
 // Horizontal description lists
 dl.horizontal {
-  dt{
+  dt {
     float: left;
     width: 160px;
     clear: left;
@@ -113,7 +117,6 @@ dl.horizontal {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
   dd {
     @include clearfix();
 
@@ -121,13 +124,15 @@ dl.horizontal {
   }
 }
 
-
 // List groups
 // --------------------------------------------------
 
 // Base class
 // Easily usable on <ul>, <ol>, <div> or <section>.
-ul, ol, div, section{
+ul,
+ol,
+div,
+section {
   &.group {
     margin-bottom: 20px;
     padding-left: 0;
@@ -145,9 +150,13 @@ ul, ol, div, section{
 
       @include clearfix();
 
-      &:last-child  { margin-bottom: 0; }
+      &:last-child {
+        margin-bottom: 0;
+      }
 
-      > .label { float: right;}
+      > .label {
+        float: right;
+      }
     }
 
     > a {
@@ -171,8 +180,12 @@ ul, ol, div, section{
         background-color: $list-group-disabled-background;
         color: $list-group-disabled-color;
 
-        .heading { color: inherit; }
-        .text { color: $list-group-disabled-text-color; }
+        .heading {
+          color: inherit;
+        }
+        .text {
+          color: $list-group-disabled-text-color;
+        }
       }
 
       // Active class on item itself, not parent
@@ -184,11 +197,14 @@ ul, ol, div, section{
         background-color: $list-group-active-background;
         border-color: $list-group-active-border;
 
-        .heading { color: inherit; }
-        .text { color: $list-group-active-text-color; }
+        .heading {
+          color: inherit;
+        }
+        .text {
+          color: $list-group-active-text-color;
+        }
       }
     }
-
 
     // Contextual variants
     // Add modifier classes to change text and background color on individual items.
@@ -198,17 +214,14 @@ ul, ol, div, section{
     @include list-group-item-variant(warning, $state-warning-background, $state-warning-text);
     @include list-group-item-variant(danger, $state-danger-background, $state-danger-text);
 
-
     // Custom content options
     .heading {
       margin-top: 0;
       margin-bottom: 5px;
     }
-
     .text {
       margin-bottom: 0;
       line-height: 1.3;
     }
-
   }
 }

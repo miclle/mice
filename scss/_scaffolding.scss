@@ -11,7 +11,6 @@
   @include box-sizing(border-box);
 }
 
-
 // Body reset
 // -------------------------
 html {
@@ -20,19 +19,19 @@ html {
 }
 
 body {
-  font-family:      $font-family-base;
-  font-size:        $font-size-base;
-  line-height:      $line-height-base;
-  color:            $text-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
   background-color: $background-color;
   -webkit-font-smoothing: antialiased;
 }
 
-header{
+header {
   min-height: 45px;
 }
 
-footer{
+footer {
   margin-top: 50px;
 }
 
@@ -42,11 +41,10 @@ input,
 button,
 select,
 textarea {
-  font-family:  inherit;
-  font-size:    inherit;
-  line-height:  inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
-
 
 // Links
 // -------------------------
@@ -54,7 +52,6 @@ textarea {
 a {
   color: $link-color;
   text-decoration: none;
-  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -66,7 +63,6 @@ a {
     // @include tab-focus();
   }
 }
-
 
 .shake {
   transform-origin: center center 0 50%;
@@ -83,10 +79,18 @@ a {
 hr {
   margin: 20px 0;
   border: 0;
-  border-top: 1px solid #EEE;
+  border-top: 1px solid #eee;
   box-sizing: content-box;
 
-  &.dotted{ border-top: 1px dotted #EEE;}
-  &.dashed{ border-top: 1px dashed #EEE;}
-  &.double{ border-top: 1px double #EEE;}
+  &.dotted {
+    border-top: 1px dotted #eee;
+  }
+
+  &.dashed {
+    border-top: 1px dashed #eee;
+  }
+
+  &.double {
+    border-top: 1px double #eee;
+  }
 }

@@ -8,38 +8,46 @@
 
 // Bar animations
 @keyframes progress-bar-stripes {
-  to  { background-position: 32px 0; }
-  from{ background-position: 0 0; }
+  to {
+    background-position: 32px 0;
+  }
+  from {
+    background-position: 0 0;
+  }
 }
 
 @keyframes progress-bar-stripes {
-  to  { background-position: 32px 0; }
-  from{ background-position: 0 0; }
+  to {
+    background-position: 32px 0;
+  }
+  from {
+    background-position: 0 0;
+  }
 }
 
 // Progress outer container
 .progress {
-  overflow:         hidden;
-  height:           $progress-height;
-  margin-bottom:    $progress-height;
+  overflow: hidden;
+  height: $progress-height;
+  margin-bottom: $progress-height;
   background-color: $progress-background;
-  border-radius:    $border-radius;
+  border-radius: $border-radius;
 
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.1));
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.1));
 
   // Bar of progress
   .bar {
-    float:            left;
-    width:            0%;
-    height:           100%;
-    font-size:        $font-size-small;
-    line-height:      $progress-height;
-    color:            $progress-bar-color;
-    text-align:       center;
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: $font-size-small;
+    line-height: $progress-height;
+    color: $progress-bar-color;
+    text-align: center;
     background-color: $progress-bar-background;
 
-    @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
-    @include transition(width .6s ease);
+    @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, 0.15));
+    @include transition(width 0.6s ease);
   }
 }
 
@@ -58,9 +66,17 @@
 }
 
 // Variations
-.progress .bar{
-  &.success { @include progress-bar-variant($progress-bar-success-background);}
-  &.info    { @include progress-bar-variant($progress-bar-info-background);   }
-  &.warning { @include progress-bar-variant($progress-bar-warning-background);}
-  &.danger  { @include progress-bar-variant($progress-bar-danger-background); }
+.progress .bar {
+  &.success {
+    @include progress-bar-variant($progress-bar-success-background);
+  }
+  &.info {
+    @include progress-bar-variant($progress-bar-info-background);
+  }
+  &.warning {
+    @include progress-bar-variant($progress-bar-warning-background);
+  }
+  &.danger {
+    @include progress-bar-variant($progress-bar-danger-background);
+  }
 }

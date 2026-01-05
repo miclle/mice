@@ -1,22 +1,24 @@
 // Menu
 // --------------------------------------------------
 
-.menu{
+.menu {
   list-style: none;
-  margin:     0;
-  padding:    0;
-  position:   relative;
+  margin: 0;
+  padding: 0;
+  position: relative;
 
-  &.righted{
+  &.righted {
     float: right;
   }
 
-  .menu{ display: none; }
+  .menu {
+    display: none;
+  }
 
-  > li{
+  > li {
     position: relative;
 
-    > a{
+    > a {
       display: block;
       padding: 0 15px;
       text-decoration: none;
@@ -24,17 +26,16 @@
       position: relative;
     }
 
-    &.active{
-      a{
-        color: #428BCA;
-        background: #F5F5F5;
+    &.active {
+      a {
+        color: #428bca;
+        background: #f5f5f5;
 
-        &::after{
+        &::after {
           height: 3px;
-          background-color: #428BCA;
+          background-color: #428bca;
         }
       }
     }
   }
-
 }

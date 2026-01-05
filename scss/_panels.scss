@@ -1,11 +1,6 @@
 // Panels
 // --------------------------------------------------
 
-@use "sass:math";
-
-
-
-
 // Panels
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
   border-color: $border;
@@ -15,14 +10,12 @@
     background-color: $heading-bg-color;
     border-color: $heading-border;
   }
-
   & > .footer {
     + .collapse > .body {
       border-bottom-color: $border;
     }
   }
 }
-
 
 // Base class
 .panel {
@@ -31,15 +24,14 @@
   border: 1px solid transparent;
   border-radius: $panel-border-radius;
 
-  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
 
   // Panel contents
   > .body {
     padding: $panel-body-padding;
 
     @include clearfix();
-
-    *:last-child{
+    *:last-child {
       margin-bottom: 0;
     }
   }
@@ -50,10 +42,15 @@
     border-bottom: 1px solid transparent;
 
     // Within heading, strip any `h*` tag of its default margins for spacing.
-    h1,h2,h3,h4,h5,h6{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
       padding: 0;
-      font-size: math.ceil($font-size-base * 1.125);
+      font-size: ceil(($font-size-base * 1.125));
       color: inherit;
       border-bottom: none;
 
@@ -70,7 +67,6 @@
     border-top: 1px solid $panel-inner-border;
   }
 }
-
 
 // List groups in panels
 // By default, space out list group content from panel headings to account for
@@ -107,7 +103,7 @@
 }
 
 // Collapse space between when there's no additional content.
-.panel{
+.panel {
   .heading + .list-group {
     > li:first-child,
     > a:first-child,
@@ -116,7 +112,6 @@
     }
   }
 }
-
 
 // Tables in panels
 // Place a non-bordered `table` within a panel (not within a `.panel-body`) and
@@ -137,7 +132,6 @@
         th:first-child {
           border-top-left-radius: ($panel-border-radius - 1);
         }
-
         td:last-child,
         th:last-child {
           border-top-right-radius: ($panel-border-radius - 1);
@@ -155,7 +149,6 @@
         th:first-child {
           border-bottom-left-radius: ($panel-border-radius - 1);
         }
-
         td:last-child,
         th:last-child {
           border-bottom-right-radius: ($panel-border-radius - 1);
@@ -163,21 +156,17 @@
       }
     }
   }
-
   > .body + table,
   > .body + table.responsive {
     border-top: 1px solid $table-border-color;
   }
-
   > table > tbody:first-child > tr:first-child th,
   > table > tbody:first-child > tr:first-child td {
     border-top: 0;
   }
-
   > table-bordered,
   > table.responsive > table-bordered {
     border: 0;
-
     > thead,
     > tbody,
     > tfoot {
@@ -186,14 +175,12 @@
         > td:first-child {
           border-left: 0;
         }
-
         > th:last-child,
         > td:last-child {
           border-right: 0;
         }
       }
     }
-
     > thead,
     > tbody {
       > tr:first-child {
@@ -203,7 +190,6 @@
         }
       }
     }
-
     > tbody,
     > tfoot {
       > tr:last-child {
@@ -214,35 +200,58 @@
       }
     }
   }
-
   > table.responsive {
     border: 0;
     margin-bottom: 0;
   }
 }
 
-
 // Contextual variations
 .panel {
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+  @include panel-variant(
+    $panel-default-border,
+    $panel-default-text,
+    $panel-default-heading-bg,
+    $panel-default-border
+  );
 }
-
 .panel.primary {
-  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+  @include panel-variant(
+    $panel-primary-border,
+    $panel-primary-text,
+    $panel-primary-heading-bg,
+    $panel-primary-border
+  );
 }
-
 .panel.success {
-  @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+  @include panel-variant(
+    $panel-success-border,
+    $panel-success-text,
+    $panel-success-heading-bg,
+    $panel-success-border
+  );
 }
-
 .panel.info {
-  @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+  @include panel-variant(
+    $panel-info-border,
+    $panel-info-text,
+    $panel-info-heading-bg,
+    $panel-info-border
+  );
 }
-
 .panel.warning {
-  @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+  @include panel-variant(
+    $panel-warning-border,
+    $panel-warning-text,
+    $panel-warning-heading-bg,
+    $panel-warning-border
+  );
 }
-
 .panel.danger {
-  @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+  @include panel-variant(
+    $panel-danger-border,
+    $panel-danger-text,
+    $panel-danger-heading-bg,
+    $panel-danger-border
+  );
 }

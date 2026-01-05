@@ -1,7 +1,6 @@
 // Close icons
 // --------------------------------------------------
 
-
 .close:not(.icon) {
   float: right;
   font-size: ($font-size-base * 1.5);
@@ -10,7 +9,7 @@
   color: $close-color;
   text-shadow: $close-text-shadow;
 
-  @include opacity(.2);
+  @include opacity(0.2);
 
   &:hover,
   &:focus {
@@ -18,7 +17,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    @include opacity(.5);
+    @include opacity(0.5);
   }
 
   // [converter] extracted button& to button.close

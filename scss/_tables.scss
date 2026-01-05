@@ -1,13 +1,10 @@
 // Tables
 // --------------------------------------------------
 
-
-
-
-table{
+table {
   display: table;
-  width:  100%;
-  max-width:  100%;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 15px;
   border-collapse: collapse;
   border-spacing: 0;
@@ -16,22 +13,53 @@ table{
 
 table > thead,
 table > tbody,
-table > tfoot{
+table > tfoot {
   > tr {
-    &.active  > th, th.active , &.active  > td, td.active  { background-color: $table-background-active; }
-    &.primary > th, th.primary, &.primary > td, td.primary { background-color: var(--table-row-primary-background); }
-    &.success > th, th.success, &.success > td, td.success { background-color: var(--table-row-success-background); }
-    &.info    > th, th.info   , &.info    > td, td.info    { background-color: var(--table-row-info-background); }
-    &.warning > th, th.warning, &.warning > td, td.warning { background-color: var(--table-row-warning-background); }
-    &.danger  > th, th.danger , &.danger  > td, td.danger  { background-color: var(--table-row-danger-background); }
+    &.active > th,
+    th.active,
+    &.active > td,
+    td.active {
+      background-color: $table-background-active;
+    }
+    &.primary > th,
+    th.primary,
+    &.primary > td,
+    td.primary {
+      background-color: lighten($brand-primary, 32%);
+    }
+    &.success > th,
+    th.success,
+    &.success > td,
+    td.success {
+      background-color: lighten($brand-success, 32%);
+    }
+    &.info > th,
+    th.info,
+    &.info > td,
+    td.info {
+      background-color: lighten($brand-info, 32%);
+    }
+    &.warning > th,
+    th.warning,
+    &.warning > td,
+    td.warning {
+      background-color: lighten($brand-warning, 32%);
+    }
+    &.danger > th,
+    th.danger,
+    &.danger > td,
+    td.danger {
+      background-color: lighten($brand-danger, 32%);
+    }
   }
 }
 
 table > thead,
 table > tbody,
-table > tfoot{
-  > tr{
-    > th, > td{
+table > tfoot {
+  > tr {
+    > th,
+    > td {
       border-collapse: collapse;
       padding: $table-cell-padding;
       border: none;
@@ -44,21 +72,21 @@ table > thead > tr > td,
 table > thead > tr > th,
 table > tbody > tr > th,
 table > tfoot > tr > td,
-table > tfoot > tr > th{
+table > tfoot > tr > th {
   font-weight: bold;
-  text-align: left
+  text-align: left;
 }
 
-table{
-
+table {
   // Condensed table
   // -------------------------
-  &.condensed{
+  &.condensed {
     > thead,
     > tbody,
-    > tfoot{
-      > tr{
-        > th, > td{
+    > tfoot {
+      > tr {
+        > th,
+        > td {
           padding: $table-condensed-cell-padding;
         }
       }
@@ -68,9 +96,13 @@ table{
   // Bordered
   // -------------------------
   &.bordered {
-    &, > thead, > tbody, > tfoot {
-      tr{
-        > th, > td{
+    &,
+    > thead,
+    > tbody,
+    > tfoot {
+      tr {
+        > th,
+        > td {
           border: 1px solid $table-border-color;
         }
       }
@@ -80,7 +112,8 @@ table{
   // Striped
   // -------------------------
   &.striped > tbody > tr:nth-child(odd) {
-    > th, > td {
+    > th,
+    > td {
       background-color: $table-background-accent;
     }
   }
@@ -88,42 +121,50 @@ table{
   // Hover
   // -------------------------
   &.hover > tbody > tr:hover {
-    > th, > td {
+    > th,
+    > td {
       background-color: $table-background-hover;
     }
   }
-
 }
-
 
 // Responsive Table
 // --------------------------------------------------
-.table.responsive{
+.table.responsive {
   width: 100%;
   overflow: scroll hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
   border: 1px solid $table-border-color;
 
-  > table{
+  > table {
     margin-bottom: 0;
 
-    &.bordered{
+    &.bordered {
       border: none;
 
       > thead,
       > tbody,
       > tfoot {
         > tr {
-          > th:first-child, > td:first-child { border-left:  0; }
-          > th:last-child,  > td:last-child  { border-right: 0; }
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
         }
       }
 
       > thead,
       > tbody {
         > tr:first-child {
-          > th, > td { border-top: 0; }
+          > th,
+          > td {
+            border-top: 0;
+          }
         }
       }
     }
@@ -132,15 +173,20 @@ table{
     > tbody,
     > tfoot {
       > tr {
-        > th, > td { white-space: nowrap; }
+        > th,
+        > td {
+          white-space: nowrap;
+        }
       }
     }
 
     > *:last-child {
       > tr:last-child {
-        > th, > td{ border-bottom: none; }
+        > th,
+        > td {
+          border-bottom: none;
+        }
       }
     }
-
   }
 }

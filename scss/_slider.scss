@@ -1,7 +1,6 @@
 // Carousel
 // --------------------------------------------------
 
-
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
@@ -15,7 +14,7 @@
       display: none;
       position: relative;
 
-      @include transition(.6s ease-in-out left);
+      @include transition(0.6s ease-in-out left);
 
       // Account for jankitude on images
       > img,
@@ -47,11 +46,9 @@
     > .next {
       left: 100%;
     }
-
     > .prev {
       left: -100%;
     }
-
     > .next.left,
     > .prev.right {
       left: 0;
@@ -60,11 +57,9 @@
     > .active.left {
       left: -100%;
     }
-
     > .active.right {
       left: 100%;
     }
-
   }
 
   // Left/right controls for nav
@@ -90,7 +85,6 @@
     &.left {
       // @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
     }
-
     &.right {
       left: auto;
       right: 0;
@@ -104,7 +98,7 @@
       color: $carousel-control-color;
       text-decoration: none;
 
-      @include opacity(.9);
+      @include opacity(0.9);
     }
 
     // Toggles
@@ -117,37 +111,32 @@
       z-index: 5;
       display: inline-block;
     }
-
     .icon-prev,
     .chevron-left {
       left: 50%;
       margin-left: -10px;
     }
-
     .icon-next,
     .chevron-right {
       right: 50%;
       margin-right: -10px;
     }
-
     .icon-prev,
     .icon-next {
-      width:  20px;
+      width: 20px;
       height: 20px;
       margin-top: -10px;
       font-family: serif;
     }
 
-
     .icon-prev {
       &::before {
-        content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+        content: '\2039'; // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
       }
     }
-
     .icon-next {
       &::before {
-        content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+        content: '\203a'; // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
       }
     }
   }
@@ -169,26 +158,17 @@
 
     li {
       display: inline-block;
-      width:  10px;
+      width: 10px;
       height: 10px;
       margin: 1px;
       text-indent: -999px;
       border: 1px solid $carousel-indicator-border-color;
       border-radius: 10px;
       cursor: pointer;
-
-      // IE8-9 hack for event handling
-      // Internet Explorer 8-9 does not support clicks on elements without a set
-      // `background-color`. We cannot use `filter` since that's not viewed as a
-      // background color by the browser. Thus, a hack is needed.
-      // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
-      // set alpha transparency for the best results possible. // IE8
-      background-color: rgb(0 0 0 / 0%); // IE9
     }
-
     .active {
       margin: 0;
-      width:  12px;
+      width: 12px;
       height: 12px;
       background-color: $carousel-indicator-active-background;
     }
@@ -208,17 +188,15 @@
     color: $carousel-caption-color;
     text-align: center;
     text-shadow: $carousel-text-shadow;
-
     & .btn {
       text-shadow: none; // No shadow for button elements in carousel-caption
     }
   }
 }
 
-
 // Scale up controls for tablets and up
 @media screen and (min-width: $screen-sm-min) {
-  .carousel{
+  .carousel {
     // Scale up the controls a smidge
     .control {
       .chevron-left,
@@ -230,12 +208,10 @@
         margin-top: -15px;
         font-size: 30px;
       }
-
       .chevron-left,
       .icon-prev {
         margin-left: -15px;
       }
-
       .chevron-right,
       .icon-next {
         margin-right: -15px;
@@ -256,9 +232,8 @@
   }
 }
 
-
-.thumb-carousel{
-  overflow:hidden;
+.thumb-carousel {
+  overflow: hidden;
   position: relative;
 
   .viewport {
@@ -270,7 +245,7 @@
 
   .control {
     display: block;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     text-decoration: none;
     position: absolute;
@@ -278,18 +253,22 @@
     margin-top: -5px;
     z-index: 99;
 
-    &.left { left: 0; }
-    &.right { right: 0; }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
   }
 
-  .control i.icon{ margin: 0;}
-
+  .control i.icon {
+    margin: 0;
+  }
   .control.disable {
     cursor: not-allowed;
 
     /* cursor: no-drop; */
   }
-
   .overview {
     padding: 0;
     margin: 0;
@@ -298,27 +277,23 @@
     top: 0;
     z-index: 9;
 
-    li{
+    li {
       float: left;
       padding: 1px;
-      border: 1px solid #FFF;
+      border: 1px solid #fff;
 
-      &.active{
+      &.active {
         border-color: #666;
         z-index: 99;
       }
-
-      & img{
+      & img {
         opacity: 0.7;
-        transition: all 0.15s ease-out;
-        transition-delay: 0s;
+        transition: all 0.15s ease-out 0s;
       }
-
       &.active img,
-      & img:hover{
+      & img:hover {
         opacity: 1;
       }
     }
   }
-
 }

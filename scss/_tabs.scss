@@ -1,7 +1,7 @@
 // Tabs
 // --------------------------------------------------
 
-.tabs{
+.tabs {
   list-style: none;
   border-bottom: 1px solid $tabs-border-color;
   padding: 0;
@@ -26,7 +26,7 @@
 
       &:hover {
         border-color: $tabs-link-hover-border-color $tabs-link-hover-border-color $tabs-border-color;
-        background-color:  $tabs-link-hover-background-color;
+        background-color: $tabs-link-hover-background-color;
       }
     }
 
@@ -44,7 +44,7 @@
     }
   }
 
-  &.justified{
+  &.justified {
     width: 100%;
     border-bottom: 0;
 
@@ -52,7 +52,6 @@
       display: table-cell;
       width: 1%;
       float: none;
-
       > a {
         text-align: center;
         margin-right: 0;

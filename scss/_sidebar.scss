@@ -1,36 +1,36 @@
 // Sidebar
 // --------------------------------------------------
 
-.sidebar{
-  background-color: #FAFAFA;
+.sidebar {
+  background-color: #fafafa;
 
-  .menu{
+  .menu {
     padding: 15px 0;
 
-    > li{
+    > li {
       line-height: 30px;
 
-      &:hover:not(.heading){
+      &:hover:not(.heading) {
         background: rgb(0 64 84 / 3%);
       }
 
-      &.heading{
+      &.heading {
         text-transform: uppercase;
         padding-top: 30px;
-        border-bottom: 1px solid #CCC;
+        border-bottom: 1px solid #ccc;
 
-        a{ color: #333; }
+        a {
+          color: #333;
+        }
       }
 
-      &.heading:first-of-type{
+      &.heading:first-of-type {
         padding-top: 0;
       }
 
-      &.active{
+      &.active {
         background: rgb(0 64 84 / 5%);
       }
     }
-
   }
-
 }

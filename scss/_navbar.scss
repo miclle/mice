@@ -3,10 +3,10 @@
 
 .navbar {
   min-height: 45px;
-  line-height: 45px;
-  background: #FFF;
-  border-color: #E8E8E8;
+  background: #fff;
+  border-color: #e8e8e8;
   border-style: solid;
+  border-width: 0;
   border-width: 0 0 1px;
 
   &.top,
@@ -16,12 +16,10 @@
     right: 0;
     z-index: $zindex-navbar-fixed;
   }
-
   &.top {
     top: 0;
     border-width: 0 0 1px;
   }
-
   &.bottom {
     bottom: 0;
     border-width: 1px 0 0;
@@ -29,7 +27,6 @@
 
   .logo {
     float: left;
-
     .brand {
       display: block;
       line-height: 45px;
@@ -43,24 +40,50 @@
   .menu {
     float: left;
 
-    >li {
+    > li {
       float: left;
 
-      >a {
+      > a {
         text-align: center;
         padding: 0 20px;
         line-height: 45px;
-        font-weight: 500;
-        transition: padding 0.25s ease, color 0.25s ease, background-color 0.15s ease, box-shadow 0.25s ease;
+        transition:
+          padding 0.25s ease,
+          color 0.25s ease,
+          background-color 0.25s ease,
+          box-shadow 0.25s ease;
 
-        &:hover {
-          color: #428BCA;
-          background: #F5F5F5;
+        &::after {
+          display: block;
+          margin: 0 auto;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          height: 0;
+          width: 100%;
+          transition: height 0.15s ease;
         }
 
+        &:hover {
+          color: #428bca;
+          background: #f5f5f5;
+          &::after {
+            height: 3px;
+            background-color: #428bca;
+          }
+        }
         &:active {
-          background: #F0F0F0;
-          outline: none;
+          background: #f0f0f0;
+        }
+      }
+
+      &.active {
+        > a {
+          &::after {
+            height: 3px;
+            background-color: #428bca;
+          }
         }
       }
     }
@@ -70,5 +93,4 @@
     float: left;
     padding-top: 5px;
   }
-
 }

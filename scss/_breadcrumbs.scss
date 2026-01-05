@@ -1,7 +1,6 @@
 // Breadcrumbs
 // --------------------------------------------------
 
-
 .breadcrumb {
   padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
   margin-bottom: $line-height-computed;
@@ -9,17 +8,17 @@
   background-color: $breadcrumb-background;
   border-radius: $border-radius;
 
-  >li {
+  > li {
     display: inline-block;
 
-    +li::before {
-      content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+    + li::before {
+      content: '#{$breadcrumb-separator}\00a0'; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
       color: $breadcrumb-color;
     }
   }
 
-  >.active {
+  > .active {
     color: $breadcrumb-active-color;
   }
 }

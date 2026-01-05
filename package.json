@@ -19,7 +19,9 @@
     "prepublishOnly": "npm run build",
     "lint": "npm run lint:scss",
     "lint:scss": "stylelint \"scss/**/*.scss\"",
-    "lint:scss:fix": "stylelint \"scss/**/*.scss\" --fix"
+    "lint:scss:fix": "stylelint \"scss/**/*.scss\" --fix",
+    "format": "prettier --write \"**/*.{css,scss,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{css,scss,js,json,md}\""
   },
   "keywords": [
     "mice",
@@ -43,6 +45,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
     "sass": "^1.97.1",
     "stylelint": "^16.26.1",
     "stylelint-config-recommended-scss": "^14.1.0",

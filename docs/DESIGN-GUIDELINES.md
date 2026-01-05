@@ -14,7 +14,8 @@ table {
   border-collapse: collapse;
 }
 
-ul, ol {
+ul,
+ol {
   margin-bottom: $line-height-computed / 2;
   list-style-position: outside;
 }
@@ -23,7 +24,12 @@ li {
   margin-bottom: 5px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   color: $heading-color;
@@ -45,11 +51,21 @@ img {
 
 ```scss
 // 避免将 HTML 标签封装在 class 中
-.table { /* 应该直接使用 table */ }
-.list-item { /* 应该直接使用 li */ }
-.heading { /* 应该直接使用 h1-h6 */ }
-.code { /* 应该直接使用 code */ }
-.image { /* 应该直接使用 img */ }
+.table {
+  /* 应该直接使用 table */
+}
+.list-item {
+  /* 应该直接使用 li */
+}
+.heading {
+  /* 应该直接使用 h1-h6 */
+}
+.code {
+  /* 应该直接使用 code */
+}
+.image {
+  /* 应该直接使用 img */
+}
 ```
 
 ## 具体规范细则 (Specific Rules)
@@ -73,9 +89,15 @@ li {
 }
 
 // ❌ 错误
-.un-list { /* 错误，应该使用 ul */ }
-.or-list { /* 错误，应该使用 ol */ }
-.list-item { /* 错误，应该使用 li */ }
+.un-list {
+  /* 错误，应该使用 ul */
+}
+.or-list {
+  /* 错误，应该使用 ol */
+}
+.list-item {
+  /* 错误，应该使用 li */
+}
 ```
 
 ### 2. 表格元素 (Table Elements)
@@ -105,11 +127,21 @@ td {
 }
 
 // ❌ 错误
-.table { /* 错误，应该使用 table */ }
-.table-head { /* 错误，应该使用 thead */ }
-.table-body { /* 错误，应该使用 tbody */ }
-.table-row { /* 错误，应该使用 tr */ }
-.table-cell { /* 错误，应该使用 th/td */ }
+.table {
+  /* 错误，应该使用 table */
+}
+.table-head {
+  /* 错误，应该使用 thead */
+}
+.table-body {
+  /* 错误，应该使用 tbody */
+}
+.table-row {
+  /* 错误，应该使用 tr */
+}
+.table-cell {
+  /* 错误，应该使用 th/td */
+}
 ```
 
 ### 3. 表单元素 (Form Elements)
@@ -122,9 +154,9 @@ fieldset {
   margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -146,10 +178,18 @@ label {
 }
 
 // ❌ 错误
-.fieldset { /* 错误，应该使用 fieldset */ }
-.text-input { /* 错误，应该使用 input */ }
-.text-area { /* 错误，应该使用 textarea */ }
-.select-input { /* 错误，应该使用 select */ }
+.fieldset {
+  /* 错误，应该使用 fieldset */
+}
+.text-input {
+  /* 错误，应该使用 input */
+}
+.text-area {
+  /* 错误，应该使用 textarea */
+}
+.select-input {
+  /* 错误，应该使用 select */
+}
 ```
 
 ### 4. 语义化文本元素 (Semantic Text Elements)
@@ -189,12 +229,24 @@ pre {
 }
 
 // ❌ 错误
-.blockquote { /* 错误，应该使用 blockquote */ }
-.abbr { /* 错误，应该使用 abbr[title] */ }
-.address { /* 错误，应该使用 address */ }
-.code { /* 错误，应该使用 code */ }
-.kbd { /* 错误，应该使用 kbd */ }
-.pre { /* 错误，应该使用 pre */ }
+.blockquote {
+  /* 错误，应该使用 blockquote */
+}
+.abbr {
+  /* 错误，应该使用 abbr[title] */
+}
+.address {
+  /* 错误，应该使用 address */
+}
+.code {
+  /* 错误，应该使用 code */
+}
+.kbd {
+  /* 错误，应该使用 kbd */
+}
+.pre {
+  /* 错误，应该使用 pre */
+}
 ```
 
 ### 5. 媒体元素 (Media Elements)
@@ -214,26 +266,35 @@ video {
 }
 
 // ❌ 错误
-.image { /* 错误，应该使用 img */ }
-.audio { /* 错误，应该使用 audio */ }
-.video { /* 错误，应该使用 video */ }
+.image {
+  /* 错误，应该使用 img */
+}
+.audio {
+  /* 错误，应该使用 audio */
+}
+.video {
+  /* 错误，应该使用 video */
+}
 ```
 
 ## 为什么这样做？ (Why This Approach?)
 
 ### 1. 语义化优势 (Semantic Benefits)
+
 - HTML 标签本身具有明确的语义含义
 - 减少 HTML 层级的复杂度
 - 保持 HTML 结构简洁清晰
 - 提升可访问性 (Accessibility)
 
 ### 2. 维护性优势 (Maintenance Benefits)
+
 - 样式与 HTML 结构直接对应
 - 减少类名的管理成本
 - 避免类名冲突
 - 更容易理解和使用
 
 ### 3. 性能优势 (Performance Benefits)
+
 - 减少 CSS 文件大小
 - 降低选择器匹配复杂度
 - 提升 CSS 渲染性能
@@ -251,7 +312,7 @@ $code-background-color: #f4f4f4;
 
 // ❌ 错误
 $table-bg: #fff; // 应该使用完整的语义名称
-$h-font: Arial;   // 应该使用完整的语义名称
+$h-font: Arial; // 应该使用完整的语义名称
 $code-bg: #f4f4f4; // 应该使用完整的语义名称
 ```
 
@@ -273,6 +334,7 @@ button,
 ```
 
 **为什么需要这样做？**
+
 - `a` 标签的默认语义是链接（可跳转）
 - 添加 `.button` class 改变了其视觉呈现，使其看起来像按钮
 - 但语义上仍然是链接（可访问性、SEO 仍然保持链接特性）
@@ -280,6 +342,7 @@ button,
 ### 2. 其他允许使用 class 的情况
 
 #### 2.1 需要重置默认样式时
+
 ```scss
 // 重置表格默认样式
 .reset-table {
@@ -289,6 +352,7 @@ button,
 ```
 
 #### 2.2 需要特殊变体样式时
+
 ```scss
 // 表格的特殊样式变体 - 直接在 table 标签上使用变体
 table.striped {
@@ -316,16 +380,27 @@ table.hoverable {
 ```
 
 #### 2.3 需要工具类时
+
 ```scss
 // 布局工具类
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
 
-.float-left { float: left; }
-.float-right { float: right; }
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
 .clearfix::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -337,28 +412,45 @@ table.hoverable {
 
 ```scss
 // ✅ 正确
-.block__element {}
-.block--modifier {}
+.block__element {
+}
+.block--modifier {
+}
 
 // 例如
-.card {}
-.card__header {}
-.card__body {}
-.card--primary {}
-.card--secondary {}
+.card {
+}
+.card__header {
+}
+.card__body {
+}
+.card--primary {
+}
+.card--secondary {
+}
 ```
 
 ### 4. 不推荐的做法（避免）
 
 ```scss
 // ❌ 错误：不改变语义，只是包装标签
-.table { /* 应该直接使用 table */ }
-.list-item { /* 应该直接使用 li */ }
-.heading { /* 应该直接使用 h1-h6 */ }
+.table {
+  /* 应该直接使用 table */
+}
+.list-item {
+  /* 应该直接使用 li */
+}
+.heading {
+  /* 应该直接使用 h1-h6 */
+}
 
 // ❌ 错误：重复定义标签样式
-div.box { /* 应该直接使用 .box 或者考虑使用语义标签 */ }
-span.text { /* 应该直接使用 .text 或者考虑使用 p 标签 */ }
+div.box {
+  /* 应该直接使用 .box 或者考虑使用语义标签 */
+}
+span.text {
+  /* 应该直接使用 .text 或者考虑使用 p 标签 */
+}
 ```
 
 ## 核心原则总结 (Core Principle Summary)

@@ -1,12 +1,13 @@
 // Utility classes
 // --------------------------------------------------
 
-
 // Floats
 // -------------------------
 
 // Floated
-.clearfix { @include clearfix(); }
+.clearfix {
+  @include clearfix();
+}
 
 .centered {
   display: block;
@@ -15,9 +16,12 @@
   margin-right: auto;
 }
 
-.lefted  { float: left !important; }
-.righted { float: right !important; }
-
+.lefted {
+  float: left !important;
+}
+.righted {
+  float: right !important;
+}
 
 // Toggling content
 // -------------------------
@@ -25,15 +29,12 @@
 .hide {
   display: none !important;
 }
-
 .show {
   display: block !important;
 }
-
 .invisible {
   visibility: hidden;
 }
-
 .hidden {
   display: none !important;
   visibility: hidden !important;
@@ -43,7 +44,6 @@
   // TODO: Implement text-hide
 }
 
-
 // For Affix plugin
 // -------------------------
 
@@ -51,7 +51,6 @@
   position: fixed;
 }
 
-
-.suggestion{
+.suggestion {
   color: #ccc;
 }

@@ -33,7 +33,7 @@ pnpm add mice
 Or link directly in HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/mice/dist/mice.css">
+<link rel="stylesheet" href="node_modules/mice/dist/mice.css" />
 ```
 
 ### Using SCSS
@@ -179,18 +179,18 @@ When working on the CSS framework:
 
 Mice uses semantic class naming:
 
-| Component | Class Name |
-|-----------|------------|
-| Buttons | `.button`, `.button primary`, `.button large` |
-| Grid | `.grid`, `.grid two/three/four`, `.column` |
-| Forms | `.field`, `form.inline` |
-| Tables | `table.striped`, `table.bordered` |
-| Panels | `.panel`, `.panel .body`, `.panel .heading` |
-| Alerts | `.alert`, `.alert success` |
-| Progress | `.progress`, `.progress .bar` |
-| Tabs | `.tabs` |
-| Navbar | `.navbar`, `.navbar .menu` |
-| Labels | `.label`, `.label primary` |
+| Component | Class Name                                    |
+| --------- | --------------------------------------------- |
+| Buttons   | `.button`, `.button primary`, `.button large` |
+| Grid      | `.grid`, `.grid two/three/four`, `.column`    |
+| Forms     | `.field`, `form.inline`                       |
+| Tables    | `table.striped`, `table.bordered`             |
+| Panels    | `.panel`, `.panel .body`, `.panel .heading`   |
+| Alerts    | `.alert`, `.alert success`                    |
+| Progress  | `.progress`, `.progress .bar`                 |
+| Tabs      | `.tabs`                                       |
+| Navbar    | `.navbar`, `.navbar .menu`                    |
+| Labels    | `.label`, `.label primary`                    |
 
 ## Browser Support
 

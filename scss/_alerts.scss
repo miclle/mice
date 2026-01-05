@@ -1,10 +1,6 @@
 // Alerts
 // --------------------------------------------------
 
-@use "sass:color";
-
-
-
 // Mixin
 @mixin alert-variant($background, $border, $text-color) {
   background-color: $background;
@@ -12,14 +8,13 @@
   color: $text-color;
 
   hr {
-    border-top-color: color-mix(in srgb, $border 95%, #000);
+    border-top-color: darken($border, 5%);
   }
 
   a {
-    color: color-mix(in srgb, $text-color 90%, #000);
+    color: darken($text-color, 10%);
   }
 }
-
 
 // Base styles
 // -------------------------
@@ -43,31 +38,34 @@
   }
 
   // Improve alignment and spacing of inner content
-  >p,
-  >ul {
+  > p,
+  > ul {
     margin-bottom: 0;
   }
 
-  >p+p {
+  > p + p {
     margin-top: 5px;
   }
+}
 
-  // Dismissible alerts
-  // Expand the right padding and account for the close button's positioning.
-  &.dismissible {
-    padding-right: ($alert-padding + 20);
+// Dismissible alerts
+// Expand the right padding and account for the close button's positioning.
+.alert.dismissible {
+  padding-right: ($alert-padding + 20);
 
-    // Adjust close link position
-    .close {
-      position: relative;
-      top: -2px;
-      right: -21px;
-      color: inherit;
-    }
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
   }
+}
 
-  // Alternate styles
-  // Generate contextual modifier classes for colorizing the alert.
+// Alternate styles
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert {
   &.success {
     @include alert-variant($alert-success-background, $alert-success-border, $alert-success-text);
   }
