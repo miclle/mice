@@ -1,0 +1,288 @@
+// CSS Custom Properties for theme customization
+// These variables can be overridden in the :root element
+
+:root {
+  // Colors
+  --gray-darker: #111;
+  --gray-dark: #333;
+  --gray: #666;
+  --gray-light: #999;
+  --gray-lighter: #eee;
+  --brand-primary: #0085f0;
+  --brand-success: #81C735;
+  --brand-info: #5bc0de;
+  --brand-warning: #f0ad4e;
+  --brand-danger: #ff3a3c;
+  --background-color: #fff;
+  --text-color: #333;
+  --link-color: #0085f0;
+
+  // Radius
+  --border-radius: 2px;
+  --border-radius-small: 2px;
+  --border-radius-large: 4px;
+
+  // Typography
+  --font-family-sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
+  --font-family-serif: georgia, "Times New Roman", times, serif;
+  --font-family-monospace: menlo, monaco, consolas, "Courier New", monospace;
+  --font-family-base: var(--font-family-sans-serif);
+
+  --font-size-base: 14px;
+  --font-size-large: 18px;
+  --font-size-small: 12px;
+  --font-size-mini: 12px;
+  --font-size-h1: 36px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 18px;
+  --font-size-h5: 14px;
+  --font-size-h6: 12px;
+  --line-height-base: 1.4286;
+  --line-height-small: 1.33;
+  --line-height-mini: 1.2;
+  --line-height-large: 1.5;
+  --line-height-computed: 20px;
+
+  // Headings
+  --heading-font-family: var(--font-family-base);
+  --heading-font-weight: bold;
+  --heading-line-height: 1.1;
+  --heading-color: inherit;
+
+  // Type
+  --blockquote-font-size: 18px;
+  --callout-font-size: var(--font-size-base);
+
+  // Spacing
+  --padding-base-vertical: 6px;
+  --padding-base-horizontal: 12px;
+  --padding-small-vertical: 5px;
+  --padding-small-horizontal: 10px;
+  --padding-large-vertical: 8px;
+  --padding-large-horizontal: 15px;
+  --padding-mini-vertical: 2px;
+  --padding-mini-horizontal: 6px;
+
+  // Component Colors
+  --component-active-color: #fff;
+  --component-active-bg: #0085f0;
+  --caret-width-base: 4px;
+  --caret-width-large: 5px;
+
+  // Code styling
+  --code-color: #c7254e;
+  --code-background: #f9f2f4;
+  --kbd-color: #fff;
+  --kbd-background: #333;
+  --pre-background: #f5f5f5;
+  --pre-border-color: #ccc;
+
+  // Default button colors
+  --button-default-color: #666;
+  --button-default-background: #FFF;
+  --button-default-border: #D9D9D9;
+
+
+
+  // Input
+  --input-height-default: 26px;
+  --input-height-small: 26px;
+  --input-height-large: 30px;
+  --input-padding-default-vertical: 6px;
+  --input-padding-default-horizontal: 6px;
+  --input-padding-small-vertical: 5px;
+  --input-padding-small-horizontal: 5px;
+  --input-padding-large-vertical: 8px;
+  --input-padding-large-horizontal: 8px;
+  --input-group-addon-background: #eee;
+  --input-group-addon-border-color: #CCC;
+
+  // Table
+  --table-cell-padding: 8px;
+  --table-condensed-cell-padding: 5px;
+  --table-background: transparent;
+  --table-background-accent: #f9f9f9;
+  --table-background-hover: #f5f5f5;
+  --table-background-active: #f5f5f5;
+  --table-border-color: #ddd;
+
+  // Panel
+  --panel-bg: #fff;
+  --panel-body-padding: 15px;
+  --panel-heading-padding: 10px 15px;
+  --panel-footer-padding: 10px 15px;
+  --panel-border-radius: 2px;
+  --panel-inner-border: #ddd;
+  --panel-footer-bg: #f5f5f5;
+  --panel-default-text: #333;
+  --panel-default-border: #ddd;
+  --panel-default-heading-bg: #f5f5f5;
+  --panel-primary-text: #fff;
+  --panel-primary-border: #0085f0;
+  --panel-primary-heading-bg: #0085f0;
+  --panel-success-text: #3c763d;
+  --panel-success-border: #d6e9c6;
+  --panel-success-heading-bg: #dff0d8;
+  --panel-info-text: #31708f;
+  --panel-info-border: #bce8f1;
+  --panel-info-heading-bg: #d9edf7;
+  --panel-warning-text: #8a6d3b;
+  --panel-warning-border: #faebcc;
+  --panel-warning-heading-bg: #fcf8e3;
+  --panel-danger-text: #a94442;
+  --panel-danger-border: #ebccd1;
+  --panel-danger-heading-bg: #f2dede;
+
+  // Progress
+  --progress-height: 16px;
+  --progress-background: #f5f5f5;
+  --progress-bar-color: #fff;
+  --progress-bar-background: #0085f0;
+  --progress-bar-success-background: #81C735;
+  --progress-bar-warning-background: #f0ad4e;
+  --progress-bar-danger-background: #ff3a3c;
+  --progress-bar-info-background: #5bc0de;
+
+  // Breadcrumb
+  --breadcrumb-background: #f5f5f5;
+  --breadcrumb-color: #ccc;
+
+  // Labels
+  --label-background-default: #999;
+  --label-color: #fff;
+  --label-link-hover-color: #fff;
+
+  // Pre-calculated color variants for CSS-based interactions
+  // Button hover states (+5% brightness)
+  --button-primary-hover-background: #1a95f4;
+  --button-success-hover-background: #8ec93d;
+  --button-info-hover-background: #63c2e5;
+  --button-warning-hover-background: #f1b053;
+  --button-danger-hover-background: #ff4b4d;
+
+  // Button active states (-5% brightness)
+  --button-primary-active-background: #0076e6;
+  --button-success-active-background: #76af2a;
+  --button-info-active-background: #4fb3d9;
+  --button-warning-active-background: #ee9a32;
+  --button-danger-active-background: #ff1c1e;
+
+  // Button border colors (hover)
+  --button-primary-hover-border: #0067dc;
+  --button-success-hover-border: #6fb029;
+  --button-info-hover-border: #46b8da;
+  --button-warning-hover-border: #eea236;
+  --button-danger-hover-border: #ff2628;
+
+  // Button border colors (active)
+  --button-primary-active-border: #0055b3;
+  --button-success-active-border: #5d911f;
+  --button-info-active-border: #3697c2;
+  --button-warning-active-border: #dd8f2d;
+  --button-danger-active-border: #f00;
+
+  // Table row variants (+32% lightness)
+  --table-row-primary-background: #b3d9f7;
+  --table-row-success-background: #d4e9c5;
+  --table-row-info-background: #b3e5f2;
+  --table-row-warning-background: #f5e9d1;
+  --table-row-danger-background: #f9c8c9;
+
+  // State border variants (pre-calculated color.adjust)
+  --state-primary-border: #0067dc;
+  --state-success-border: #c9e2b3;
+  --state-info-border: #a6e1ec;
+  --state-warning-border: #f7e1a5;
+  --state-danger-border: #ebccd1;
+
+  // Button border variants (-5% lightness)
+  --button-primary-border: #0067dc;
+  --button-success-border: #6fb029;
+  --button-info-border: #46b8da;
+  --button-warning-border: #eea236;
+  --button-danger-border: #ff2628;
+
+  // Pagination hover color (-15% lightness)
+  --pagination-hover-color: #0076e6;
+
+  // List group text color (+40% lightness)
+  --list-group-active-text-color: #d9f2ff;
+
+  // Link hover color (-15% lightness)
+  --link-hover-color: #0076e6;
+
+  // List group
+  --list-group-background: #fff;
+  --list-group-border-color: #ddd;
+  --list-group-hover-background: #f5f5f5;
+  --list-group-disabled-color: #999;
+  --list-group-disabled-background: #eee;
+  --list-group-link-color: #555;
+
+  // Message component
+  --message-success-background: #dff0d8;
+  --message-success-text: #3c763d;
+  --message-success-border: #d6e9c6;
+  --message-info-background: #d9edf7;
+  --message-info-text: #31708f;
+  --message-info-border: #bce8f1;
+  --message-warning-background: #fcf8e3;
+  --message-warning-text: #8a6d3b;
+  --message-warning-border: #faebcc;
+  --message-danger-background: #f2dede;
+  --message-danger-text: #a94442;
+  --message-danger-border: #ebccd1;
+
+  // Modal
+  --modal-inner-padding: 15px;
+  --modal-title-padding: 15px;
+  --modal-title-line-height: 1.4286;
+  --modal-content-background: #fff;
+  --modal-content-border-color: rgb(0 0 0 / 20%);
+  --modal-content-fallback-border-color: #999;
+  --modal-backdrop-background: #000;
+  --modal-backdrop-opacity: .5;
+  --modal-header-border-color: #e5e5e5;
+  --modal-footer-border-color: #e5e5e5;
+  --modal-large: 900px;
+  --modal-medium: 600px;
+  --modal-small: 300px;
+
+  // Alert
+  --alert-padding: 15px;
+  --alert-border-radius: 2px;
+  --alert-link-font-weight: bold;
+
+  // Close
+  --close-font-weight: bold;
+  --close-color: #000;
+  --close-text-shadow: 0 1px 0 #fff;
+
+  // Tooltip
+  --tooltip-max-width: 200px;
+  --tooltip-color: #fff;
+  --tooltip-background: #000;
+  --tooltip-opacity: .9;
+  --tooltip-arrow-width: 5px;
+  --tooltip-arrow-color: #000;
+  --tooltip-primary-color: #fff;
+  --tooltip-primary-background: #0085f0;
+  --tooltip-primary-arrow-color: #0085f0;
+  --tooltip-success-color: #fff;
+  --tooltip-success-background: #81C735;
+  --tooltip-success-arrow-color: #81C735;
+  --tooltip-info-color: #fff;
+  --tooltip-info-background: #5bc0de;
+  --tooltip-info-arrow-color: #5bc0de;
+  --tooltip-warning-color: #fff;
+  --tooltip-warning-background: #f0ad4e;
+  --tooltip-warning-arrow-color: #f0ad4e;
+  --tooltip-danger-color: #fff;
+  --tooltip-danger-background: #ff3a3c;
+  --tooltip-danger-arrow-color: #ff3a3c;
+
+  // Message
+  --message-padding: 10px 20px;
+  --message-link-font-weight: bold;
+}

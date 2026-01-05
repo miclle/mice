@@ -16,13 +16,13 @@
     background-color: #FFF;
         border-color: $border-color;
 
-  &:hover{ border-color: color.adjust($border-color, $lightness: -20%); }
+  &:hover{ border-color: color-mix(in srgb, $border-color 80%, #000000); }
 
   &:focus,
   &:active,
   &.active{
-    border-color: color.adjust($border-color, $lightness: -20%);
-    box-shadow: 0 0 0 1px color.adjust($border-color, $lightness: -15%), inset 0 1px #F5F5F5;
+    border-color: color-mix(in srgb, $border-color 80%, #000000);
+    box-shadow: 0 0 0 1px color-mix(in srgb, $border-color 85%, #000000), inset 0 1px #F5F5F5;
   }
 
   &.disabled,
@@ -170,7 +170,7 @@ textarea{
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: color.adjust($text-color, $lightness: 25%);
+  color: color-mix(in srgb, $text-color 125%, #ffffff);
 }
 
 
@@ -326,7 +326,7 @@ form.horizontal{
     &:last-child{ padding-right: 0; }
 
     input.text,
-    input[type="text"], input[type="password"], input[type="email"], input[type="number"],{
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
       width: 100%;
     }
   }

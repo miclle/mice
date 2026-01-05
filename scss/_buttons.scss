@@ -1,7 +1,6 @@
 // Button
 // --------------------------------------------------
 
-@use "sass:color";
 
 
 
@@ -17,15 +16,15 @@
   &:hover,
   &:focus{
                color: $color;
-    background-color: color.adjust($background, $lightness: -10%);
-        border-color: color.adjust($border, $lightness: -10%);
+    background-color: var(--button-hover-background, $background);
+        border-color: var(--button-hover-border, $border);
   }
 
   &:active,
   &.active{
                color: $color;
-    background-color: color.adjust($background, $lightness: -15%);
-        border-color: color.adjust($border, $lightness: -15%);
+    background-color: var(--button-active-background, $background);
+        border-color: var(--button-active-border, $border);
   }
 
   &.disabled,
@@ -419,4 +418,71 @@ button,
     }
   }
 
+}
+
+// Button hover and active states using CSS custom properties
+input[type="button"],
+input[type="submit"],
+button,
+.button {
+
+  &.primary:hover,
+  &.primary:focus {
+    background-color: var(--button-primary-hover-background);
+    border-color: var(--button-primary-hover-border);
+  }
+
+  &.primary:active,
+  &.primary.active {
+    background-color: var(--button-primary-active-background);
+    border-color: var(--button-primary-active-border);
+  }
+
+  &.success:hover,
+  &.success:focus {
+    background-color: var(--button-success-hover-background);
+    border-color: var(--button-success-hover-border);
+  }
+
+  &.success:active,
+  &.success.active {
+    background-color: var(--button-success-active-background);
+    border-color: var(--button-success-active-border);
+  }
+
+  &.info:hover,
+  &.info:focus {
+    background-color: var(--button-info-hover-background);
+    border-color: var(--button-info-hover-border);
+  }
+
+  &.info:active,
+  &.info.active {
+    background-color: var(--button-info-active-background);
+    border-color: var(--button-info-active-border);
+  }
+
+  &.warning:hover,
+  &.warning:focus {
+    background-color: var(--button-warning-hover-background);
+    border-color: var(--button-warning-hover-border);
+  }
+
+  &.warning:active,
+  &.warning.active {
+    background-color: var(--button-warning-active-background);
+    border-color: var(--button-warning-active-border);
+  }
+
+  &.danger:hover,
+  &.danger:focus {
+    background-color: var(--button-danger-hover-background);
+    border-color: var(--button-danger-hover-border);
+  }
+
+  &.danger:active,
+  &.danger.active {
+    background-color: var(--button-danger-active-background);
+    border-color: var(--button-danger-active-border);
+  }
 }

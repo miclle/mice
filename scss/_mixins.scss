@@ -141,7 +141,7 @@
     color: $color;
   }
   a#{$parent}:hover {
-    color: color.adjust($color, $lightness: -10%);
+    color: var(--link-hover-color);
   }
 }
 
@@ -154,6 +154,6 @@
     background-color: $color;
   }
   a#{$parent}:hover {
-    background-color: color.adjust($color, $lightness: -10%);
+    background-color: color-mix(in srgb, $color 90%, #ffffff);
   }
 }

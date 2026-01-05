@@ -22,7 +22,7 @@
     &:hover,
     &:focus {
       color: $color;
-      background-color: color.adjust($background, $lightness: -5%);
+      background-color: color-mix(in srgb, $background 95%, #000000);
     }
 
     &.active,
