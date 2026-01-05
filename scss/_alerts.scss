@@ -12,11 +12,11 @@
   color: $text-color;
 
   hr {
-    border-top-color: color-mix(in srgb, $border 95%, #000000);
+    border-top-color: color-mix(in srgb, $border 95%, #000);
   }
 
   a {
-    color: color-mix(in srgb, $text-color 90%, #000000);
+    color: color-mix(in srgb, $text-color 90%, #000);
   }
 }
 

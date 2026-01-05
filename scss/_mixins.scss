@@ -154,6 +154,6 @@
     background-color: $color;
   }
   a#{$parent}:hover {
-    background-color: color-mix(in srgb, $color 90%, #ffffff);
+    background-color: color-mix(in srgb, $color 90%, #fff);
   }
 }

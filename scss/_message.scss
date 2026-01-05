@@ -13,7 +13,7 @@
   color: $text-color;
 
   a {
-    color: color-mix(in srgb, $text-color 90%, #000000);
+    color: color-mix(in srgb, $text-color 90%, #000);
   }
 }
 
