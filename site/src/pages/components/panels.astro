@@ -1,0 +1,242 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Panels" bodyClass="components components_panels" activeSection="components" currentPage="/components/panels">
+<h1 class="title">Panels</h1>
+
+      <h2>Basic example</h2>
+      <section class="example">
+        <div class="panel">
+          <div class="body">
+            Basic panel example
+          </div>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+    Basic panel example
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Panel with heading</h2>
+      <section class="example">
+        <div class="panel">
+          <div class="heading">Panel heading without title</div>
+          <div class="body">Panel content</div>
+        </div>
+
+        <div class="panel">
+          <div class="heading">
+            <h3>Panel title</h3>
+          </div>
+          <div class="body">Panel content</div>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Panel content<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Panel content<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Panel with footer</h2>
+      <section class="example">
+        <div class="panel">
+          <div class="body">Panel content</div>
+          <div class="footer">Panel footer</div>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Panel content<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>Panel footer<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Contextual alternatives</h2>
+      <section class="example">
+        <div class="panel primary">
+          <div class="heading">
+            <h3>Panel title</h3>
+          </div>
+          <div class="body">Panel content</div>
+        </div>
+        <div class="panel success">
+          <div class="heading">Panel title</div>
+          <div class="body">Panel content</div>
+        </div>
+        <div class="panel info">
+          <div class="heading">Panel title</div>
+          <div class="body">Panel content</div>
+        </div>
+        <div class="panel warning">
+          <div class="heading">Panel title</div>
+          <div class="body">Panel content</div>
+        </div>
+        <div class="panel danger">
+          <div class="heading">Panel title</div>
+          <div class="body">Panel content</div>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>With tables</h2>
+      <section class="example">
+        <div class="panel">
+          <!-- Default panel contents -->
+          <div class="heading">Panel heading</div>
+          <div class="body">
+            <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </div>
+
+          <!-- Table -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Default panel contents --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Table --&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+      <p>If there is no panel body, the component moves from panel header to table without interruption.</p>
+      <section class="example">
+        <div class="panel">
+          <!-- Default panel contents -->
+          <div class="heading">Panel heading</div>
+
+          <!-- Table -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Default panel contents --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Table --&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>With list groups</h2>
+      <section class="example">
+        <div class="panel">
+          <!-- Default panel contents -->
+          <div class="heading">Panel heading</div>
+          <div class="body">
+            <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </div>
+
+          <!-- List group -->
+          <ul class="group">
+            <li>Cras justo odio</li>
+            <li>Dapibus ac facilisis in</li>
+            <li>Morbi leo risus</li>
+            <li>Porta ac consectetur ac</li>
+            <li>Vestibulum at eros</li>
+          </ul>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Default panel contents --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- List group --&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</Layout>

@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Mobile" bodyClass="mobile mobile_index" showSidebar={false}>
+  <div class="container">
+    <div class="grid twelve">
+      <div class="column seven doc">
+        <h2 id="basic-template">Basic template</h2>
+        <p>Use this basic template to get your app started.</p>
+        <pre><code class="highlight html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Your app title.&lt;/title&gt;
+    &lt;meta http-equiv=Content-Type content="text/html;charset=utf-8" /&gt;
+    &lt;meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" /&gt;
+
+    &lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+    &lt;meta name="apple-mobile-web-app-status-bar-style" content="white" /&gt;
+
+    &lt;link href="mice-mobile.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <article class="component active">
+          <h2 id="tab-bar">Tab bar</h2>
+          <p>Use Ratchicons in the <code>nav.tab</code> to represent different sections of your app.</p>
+          <pre><code class="highlight html">  &lt;nav class="tab"&gt;
+    &lt;a class="active" href="#"&gt;
+      &lt;i class="icon home"&gt;&lt;/i&gt;
+      &lt;span class="label"&gt;Home&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon user"&gt;&lt;/i&gt;
+      &lt;span class="label"&gt;Profile&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon star"&gt;&lt;/i&gt;
+      &lt;span class="label"&gt;Favorites&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon search"&gt;&lt;/i&gt;
+      &lt;span class="label"&gt;Search&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon gear"&gt;&lt;/i&gt;
+      &lt;span class="label"&gt;Settings&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/nav&gt;</code></pre>
+        </article>
+
+        <article class="component">
+          <h3 id="tab-bar-only-label">Tab bar (labels only)</h3>
+          <p>If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.</p>
+          <pre><code class="highlight html">  &lt;nav class="tab"&gt;
+    &lt;a class="active" href="#"&gt;Label&lt;/a&gt;
+    &lt;a href="#"&gt;Label&lt;/a&gt;
+    &lt;a href="#"&gt;Label&lt;/a&gt;
+    &lt;a href="#"&gt;Label&lt;/a&gt;
+  &lt;/nav&gt;</code></pre>
+        </article>
+
+        <article class="component">
+          <h2 id="typography">Typography</h2>
+          <p>Use headings and paragraphs to title and describe sections of your app. Apply or wrap elements with <code>.content</code> to give the content space around the screen.</p>
+          <pre><code class="highlight html">&lt;div class="content"&gt;
+  &lt;h1&gt;h1. Heading&lt;/h1&gt;
+  &lt;h2&gt;h2. Heading&lt;/h2&gt;
+  &lt;h3&gt;h3. Heading&lt;/h3&gt;
+  &lt;h4&gt;h4. Heading&lt;/h4&gt;
+  &lt;h5&gt;h5. Heading&lt;/h5&gt;
+  &lt;h6&gt;h6. Heading&lt;/h6&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </article>
+
+        <article class="component">
+          <h2 id="list">List(Table view)</h2>
+          <pre><code class="highlight html">&lt;ul class="group"&gt;
+  &lt;li&gt;Cras justo odio&lt;/li&gt;
+  &lt;li&gt;Dapibus ac facilisis in&lt;/li&gt;
+  &lt;li class="disabled"&gt;Morbi leo risus&lt;/li&gt;
+  &lt;li&gt;Porta ac consectetur ac&lt;/li&gt;
+  &lt;li&gt;Vestibulum at eros&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="content"&gt;
+  &lt;div class="group"&gt;
+    &lt;a href="#" class="active"&gt;Cras justo odio&lt;/a&gt;
+    &lt;a href="#"&gt;Dapibus ac faciasis in&lt;/a&gt;
+    &lt;a href="#" class="disabled"&gt;Morbi leo risus&lt;/a&gt;
+    &lt;a href="#"&gt;Porta ac consectetur ac&lt;/a&gt;
+    &lt;a href="#"&gt;Vestibulum at eros&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </article>
+
+        <article class="component">
+          <h2 id="media">Media</h2>
+          <pre><code class="highlight html">&lt;section class="group"&gt;
+  &lt;a class="media"&gt;
+    &lt;img class="cover" src="http://placehold.it/42x42"&gt;
+    &lt;div class="desc"&gt;
+      Item 1
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+  &lt;a class="media"&gt;
+    &lt;img class="cover" src="http://placehold.it/42x42"&gt;
+    &lt;div class="desc"&gt;
+      Item 1
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+  &lt;a class="media"&gt;
+    &lt;img class="cover" src="http://placehold.it/42x42"&gt;
+    &lt;div class="desc"&gt;
+      Item 1
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/section&gt;</code></pre>
+        </article>
+      </div>
+
+      <div class="column five">
+        <div class="device">
+          <iframe id="window" src="/mobile/device.html"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

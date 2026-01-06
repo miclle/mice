@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const scssCode = `@mixin column-child($columns) {
+  > .column {
+    width: percentage(1 / $columns);
+  }
+}
+
+@mixin column-self($columns, $value) {
+  &.column {
+    width: percentage(1 / $columns * $value);
+  }
+}
+
+$columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
+
+@for $i from 1 through length($columns) {
+  .grid.#{nth($columns, $i)} {
+    @include column-child($i + 1);
+    @for $j from 1 through $i - 1 {
+      > .#{nth($columns, $j)}{
+        @include column-self($i + 1, $j + 1);
+      }
+    }
+  }
+}`;
+---
+
+<Layout title="Code" bodyClass="elements elements_code" activeSection="elements" currentPage="/elements/code">
+  <h1 class="title">Code</h1>
+
+  <h2>Inline</h2>
+  <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+  <section class="example">
+    For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+  </section>
+  <pre><code class="highlight html">For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.</code></pre>
+
+  <h2>User input</h2>
+  <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+  <section class="example">
+    To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+  </section>
+  <pre><code class="highlight html">To switch directories, type &lt;kbd&gt;cd&lt;/kbd&gt; followed by the name of the directory.</code></pre>
+
+  <h2 id="code-block">Basic block</h2>
+  <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+  <section class="example">
+    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+  </section>
+  <pre><code class="highlight html">&lt;pre&gt;&amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;&lt;/pre&gt;</code></pre>
+
+  <h3>Scrollable</h3>
+  <p>You may optionally add the <code>.scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+  <section class="example">
+    <pre class="scrollable" set:html={scssCode.replace(/>/g, '&gt;')}></pre>
+  </section>
+  <pre><code class="highlight html">&lt;pre class="scrollable"&gt;
+  ...
+&lt;/pre&gt;</code></pre>
+</Layout>

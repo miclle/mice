@@ -4,11 +4,13 @@ node_modules/
 # Build output
 dist/
 /build
+site/static/
 
 # Ignore cache
 /.sass-cache
 /.cache
 .cache
+.astro/
 
 # Editor directories and files
 .vscode/*

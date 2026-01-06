@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Callouts" bodyClass="components components_callouts" activeSection="components" currentPage="/components/callouts">
+<h1 class="title">Callouts</h1>
+
+      <h2>Default</h2>
+      <section class="example">
+        <div class="callout">
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Styles</h2>
+      <section class="example">
+        <div class="callout ">
+          <h3></h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+        <div class="callout primary">
+          <h3>primary</h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+        <div class="callout success">
+          <h3>success</h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+        <div class="callout info">
+          <h3>info</h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+        <div class="callout warning">
+          <h3>warning</h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+        <div class="callout danger">
+          <h3>danger</h3>
+          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout "</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout primary"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout success"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout info"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout warning"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout danger"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+      <h2>Callouts options</h2>
+      <p>Style and content changes for simple variations on a standard <code>&lt;callout&gt;</code>.</p>
+      <h4>Naming a source</h4>
+      <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+      <section class="example">
+        <div class="callout">
+          <h4>Header text</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4&gt;</span>Header text<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+      <h4>Alternate displays</h4>
+      <p>Add <code>.reverse</code> for a callout with right-aligned content.</p>
+      <section class="example">
+        <div class="callout reverse">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout reverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</Layout>

@@ -1,0 +1,190 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Timeline" bodyClass="components components_timeline" activeSection="components" currentPage="/components/timeline">
+<h1 class="title">Timeline</h1>
+
+      <h2>Default</h2>
+      <section class="example">
+        <div class="timeline">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2014<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Colors</h2>
+      <p>Add <code>.primary</code>, <code>.success</code>, <code>.info</code>, <code>.warning</code>, <code>.danger</code> classes</p>
+      <section class="example">
+        <div class="timeline primary">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+        <div class="timeline success">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+        <div class="timeline info">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+        <div class="timeline warning">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+        <div class="timeline danger">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline primary"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline success"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline info"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline warning"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline danger"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Has link</h2>
+      <section class="example">
+        <div class="timeline">
+          <ul>
+            <li><a href="#2008" class="title">2008</a></li>
+            <li><a href="#2009" class="title">2009</a></li>
+            <li><a href="#2010" class="title">2010</a></li>
+            <li><a href="#2011" class="title">2011</a></li>
+            <li><a href="#2012" class="title">2012</a></li>
+            <li><a href="#2013" class="title">2013</a></li>
+            <li class="active"><a href="#2014" class="title">2014</a></li>
+          </ul>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2008"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2009"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2010"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2011"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2012"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2013"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#2014"</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>2014<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+      <h2>Sizing</h2>
+      <section class="example">
+        <div class="timeline small">
+          <ul>
+            <li><span class="title">1</span></li>
+            <li><span class="title">2</span></li>
+            <li><span class="title">3</span></li>
+            <li><span class="title">4</span></li>
+            <li><span class="title">5</span></li>
+            <li><span class="title">6</span></li>
+            <li class="active"><span class="title">7</span></li>
+            <li><span class="title">8</span></li>
+          </ul>
+        </div>
+
+        <div class="timeline">
+          <ul>
+            <li><span class="title">2008</span></li>
+            <li><span class="title">2009</span></li>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+
+        <div class="timeline large">
+          <ul>
+            <li><span class="title">2010</span></li>
+            <li><span class="title">2011</span></li>
+            <li><span class="title">2012</span></li>
+            <li><span class="title">2013</span></li>
+            <li class="active"><span class="title">2014</span></li>
+          </ul>
+        </div>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline small"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline large"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</Layout>

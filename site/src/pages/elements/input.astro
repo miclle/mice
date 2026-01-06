@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Input" bodyClass="elements elements_input" activeSection="elements" currentPage="/elements/input">
+  <h1 class="title">Input</h1>
+
+  <h2>Base</h2>
+  <section class="example">
+    <p><input type="text" placeholder="input here..." /></p>
+    <p><textarea cols="100" rows="5" placeholder="input here..."></textarea></p>
+  </section>
+  <pre><code class="highlight html">&lt;input type="text" placeholder="input here..." /&gt;
+&lt;textarea cols="120" rows="5" placeholder="input here..."&gt;&lt;/textarea&gt;</code></pre>
+
+  <h2>Fluid</h2>
+  <section class="example">
+    <p><input type="text" class="fluid" placeholder="input here..." /></p>
+    <p><textarea cols="120" rows="5" class="fluid" placeholder="input here..."></textarea></p>
+  </section>
+  <pre><code class="highlight html">&lt;input type="text" class="fluid" placeholder="input here..." /&gt;
+&lt;textarea cols="120" rows="5" class="fluid" placeholder="input here..."&gt;&lt;/textarea&gt;</code></pre>
+
+  <h2>Disabled state</h2>
+  <section class="example">
+    <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid" /></p>
+    <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid primary" /></p>
+  </section>
+  <pre><code class="highlight html">&lt;input type="text" placeholder="Disabled input here..." disabled="disabled" /&gt;
+&lt;input type="text" placeholder="Disabled input here..." disabled="disabled" class="primary" /&gt;</code></pre>
+
+  <h2>Sizing</h2>
+  <section class="example">
+    <p><input type="text" class="small" placeholder=".small input" /></p>
+    <p><input type="text" placeholder="default input" /></p>
+    <p><input type="text" class="large" placeholder=".large input" /></p>
+  </section>
+  <pre><code class="highlight html">&lt;input type="text" class="small" placeholder=".small input" /&gt;
+&lt;input type="text" placeholder="default input" /&gt;
+&lt;input type="text" class="large" placeholder=".large input" /&gt;</code></pre>
+
+  <h2>Color</h2>
+  <section class="example">
+    <p><input type="text" class="fluid primary" placeholder=".primary" /></p>
+    <p><input type="text" class="fluid success" placeholder=".success" /></p>
+    <p><input type="text" class="fluid info" placeholder=".info" /></p>
+    <p><input type="text" class="fluid warning" placeholder=".warning" /></p>
+    <p><input type="text" class="fluid danger" placeholder=".danger" /></p>
+    <p><textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"></textarea></p>
+  </section>
+  <pre><code class="highlight html">&lt;input type="text" class="fluid primary" placeholder=".primary" /&gt;
+&lt;input type="text" class="fluid success" placeholder=".success" /&gt;
+&lt;input type="text" class="fluid info" placeholder=".info" /&gt;
+&lt;input type="text" class="fluid warning" placeholder=".warning" /&gt;
+&lt;input type="text" class="fluid danger" placeholder=".danger" /&gt;
+&lt;textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"&gt;&lt;/textarea&gt;</code></pre>
+
+  <h2>Input groups</h2>
+  <section class="example">
+    <div class="inputs">
+      <span class="addon">@</span>
+      <input type="text" placeholder="Username" />
+    </div>
+    <br />
+    <div class="inputs">
+      <input type="text" />
+      <span class="addon">.00</span>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="inputs"&gt;
+  &lt;span class="addon"&gt;@&lt;/span&gt;
+  &lt;input type="text" /&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Checkboxes and radio addons</h3>
+  <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
+  <section class="example">
+    <div class="grid two">
+      <div class="column">
+        <div class="inputs">
+          <span class="addon">
+            <input type="checkbox" />
+          </span>
+          <input type="text" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="inputs">
+          <span class="addon">
+            <input type="radio" />
+          </span>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="grid two"&gt;
+  &lt;div class="column"&gt;
+    &lt;div class="inputs"&gt;
+      &lt;span class="addon"&gt;
+        &lt;input type="checkbox"&gt;
+      &lt;/span&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;div class="inputs"&gt;
+      &lt;span class="addon"&gt;
+        &lt;input type="radio"&gt;
+      &lt;/span&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>Button addons</h3>
+  <section class="example">
+    <div class="grid two">
+      <div class="column">
+        <div class="inputs">
+          <span class="buttons">
+            <button class="button" type="button">Go!</button>
+          </span>
+          <input type="text" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="inputs">
+          <input type="text" />
+          <span class="buttons">
+            <button class="button" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="grid two"&gt;
+  &lt;div class="column"&gt;
+    &lt;div class="inputs"&gt;
+      &lt;span class="buttons"&gt;
+        &lt;button class="button" type="button"&gt;Go!&lt;/button&gt;
+      &lt;/span&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    &lt;div class="inputs"&gt;
+      &lt;input type="text"&gt;
+      &lt;span class="buttons"&gt;
+        &lt;button class="button" type="button"&gt;Go!&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h2>Email autocomplete</h2>
+  <section class="example">
+    <p><input type="email" placeholder="Enter email..." /></p>
+  </section>
+</Layout>

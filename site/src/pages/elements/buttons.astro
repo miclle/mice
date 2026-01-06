@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Buttons" bodyClass="elements elements_buttons" activeSection="elements" currentPage="/elements/buttons">
+  <h1 class="title">Button</h1>
+
+  <h2>Basic buttons</h2>
+  <section class="example">
+    <p>
+      <button>default</button>
+      <button class="primary">primary</button>
+      <a href="#" class="button success">success</a>
+      <a href="#" class="button info">info</a>
+      <input class="warning" type="button" value="warning" />
+      <input class="danger" type="submit" value="danger" />
+    </p>
+  </section>
+  <pre><code class="highlight html">&lt;button&gt;default&lt;/button&gt;
+&lt;button class="primary"&gt;primary&lt;/button&gt;
+&lt;a href="#" class="button"&gt;default&lt;/a&gt;
+&lt;input class="warning" type="button" value="warning" /&gt;
+&lt;input class="danger" type="submit" value="danger" /&gt;</code></pre>
+
+  <h2>Disabled button</h2>
+  <section class="example">
+    <button disabled="disabled">default</button>
+    <button disabled="disabled" class="primary">primary</button>
+    <a href="#" class="button disabled success">success</a>
+    <a href="#" class="button disabled info">info</a>
+    <input disabled="disabled" class="warning" type="button" value="warning" />
+    <input disabled="disabled" class="danger" type="submit" value="danger" />
+  </section>
+  <pre><code class="highlight html">&lt;button disabled="disabled"&gt;default&lt;/button&gt;
+&lt;a href="#" class="button disabled"&gt;default&lt;/a&gt;
+&lt;input disabled="disabled" class="warning" type="button" value="warning" /&gt;
+&lt;input disabled="disabled" class="danger" type="submit" value="danger" /&gt;</code></pre>
+
+  <h2>Group buttons</h2>
+  <section class="example">
+    <div class="buttons">
+      <button>Left</button>
+      <button>Middle</button>
+      <button>Right</button>
+    </div>
+    <div class="buttons">
+      <a href="#" class="button primary">Left</a>
+      <a href="#" class="button primary">Middle</a>
+      <a href="#" class="button primary">Right</a>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="buttons"&gt;
+  &lt;button&gt;Left&lt;/button&gt;
+  &lt;button&gt;Middle&lt;/button&gt;
+  &lt;button&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <h2>Vertically buttons</h2>
+  <section class="example">
+    <div class="buttons vertical">
+      <button>Top</button>
+      <button>Middle</button>
+      <button>Bottom</button>
+    </div>
+    <div class="buttons vertical">
+      <a href="#" class="button primary">Top</a>
+      <a href="#" class="button primary">Middle</a>
+      <a href="#" class="button primary">Bottom</a>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="buttons vertical"&gt;
+  &lt;button&gt;Left&lt;/button&gt;
+  &lt;button&gt;Middle&lt;/button&gt;
+  &lt;button&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+  <h2>Sizing</h2>
+  <section class="example">
+    <p>
+      <button class="mini">Mini button</button>
+      <a href="#" class="button primary mini">Mini button</a>
+    </p>
+    <p>
+      <button class="small">Small button</button>
+      <a href="#" class="button primary small">Small button</a>
+    </p>
+    <p>
+      <button>Default button</button>
+      <a href="#" class="button primary">Default button</a>
+    </p>
+    <p>
+      <button class="large">Large button</button>
+      <a href="#" class="button primary large">Large button</a>
+    </p>
+  </section>
+  <pre><code class="highlight html">&lt;button class="mini"&gt;Mini button&lt;/button&gt;
+&lt;a href="#" class="button primary mini"&gt;Mini button&lt;/a&gt;</code></pre>
+
+  <h2>Block</h2>
+  <section class="example">
+    <p>
+      <button class="block large">Block level button</button>
+    </p>
+    <p>
+      <a href="#" class="button primary block large">Block level button</a>
+    </p>
+  </section>
+  <pre><code class="highlight html">&lt;button class="block large"&gt;Block level button&lt;/button&gt;
+&lt;a href="#" class="button primary block large"&gt;Block level button&lt;/a&gt;</code></pre>
+
+  <h2>Justified</h2>
+  <section class="example">
+    <div class="buttons justified">
+      <a href="#" class="button">Left</a>
+      <a href="#" class="button">Middle</a>
+      <a href="#" class="button">Right</a>
+    </div>
+    <br />
+    <div class="buttons justified">
+      <a href="#" class="button primary">Left</a>
+      <a href="#" class="button primary">Middle</a>
+      <a href="#" class="button primary">Right</a>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="buttons justified"&gt;
+  &lt;a href="#" class="button"&gt;Left&lt;/a&gt;
+  &lt;a href="#" class="button"&gt;Middle&lt;/a&gt;
+  &lt;a href="#" class="button"&gt;Right&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+  <h3>With &lt;button&gt; elements</h3>
+  <section>
+    <div class="buttons justified">
+      <div class="buttons">
+        <button>Left</button>
+      </div>
+      <div class="buttons">
+        <button>Middle</button>
+      </div>
+      <div class="buttons">
+        <button>Right</button>
+      </div>
+    </div>
+    <br />
+    <div class="buttons justified">
+      <div class="buttons">
+        <button class="primary">Left</button>
+      </div>
+      <div class="buttons">
+        <button class="primary">Middle</button>
+      </div>
+      <div class="buttons">
+        <button class="primary">Right</button>
+      </div>
+    </div>
+  </section>
+  <pre><code class="highlight html">&lt;div class="buttons justified"&gt;
+  &lt;div class="buttons"&gt;
+    &lt;button&gt;Left&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="buttons"&gt;
+    &lt;button&gt;Middle&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="buttons"&gt;
+    &lt;button&gt;Right&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+  <h2>Checkbox & Radio in button</h2>
+  <section class="example">
+    <label class="button">
+      <input type="checkbox" name="" value="" /> Checkbox in button
+    </label>
+    <label class="button">
+      <input type="radio" name="" value="" /> Radio in button
+    </label>
+  </section>
+  <pre><code class="highlight html">&lt;label class="button"&gt;
+  &lt;input type="checkbox" name="" value=""&gt; Checkbox in button
+&lt;/label&gt;
+&lt;label class="button"&gt;
+  &lt;input type="radio" name="" value=""&gt; Radio in button
+&lt;/label&gt;</code></pre>
+</Layout>

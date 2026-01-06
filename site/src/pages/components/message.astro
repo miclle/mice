@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const jsCode1 = `<span class="c1">// show message</span>
+<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s1">'This is message!'</span><span class="p">);</span>
+
+<span class="c1">// hide automaticlly after 2000 milliseconds</span>
+<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s1">'This is message!'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+
+<span class="c1">// hide message</span>
+<span class="nx">Message</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+
+<span class="c1">// show at bottom</span>
+<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'message body show at bottom'</span><span class="p">,</span>
+  <span class="c1">// the placement can be \`top\` or \`bottom\`, by default is \`top\`</span>
+  <span class="na">placement</span><span class="p">:</span> <span class="s1">'bottom'</span>
+<span class="p">});</span>
+
+<span class="c1">// show with status</span>
+<span class="c1">// add class \`danger\` to the container</span>
+<span class="c1">// there're 5 status: [default], success, info, warning, danger</span>
+<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'message body show with danger status'</span><span class="p">,</span>
+  <span class="c1">// the placement can be \`top\` or \`bottom\`, by default is \`top\`</span>
+  <span class="na">status</span><span class="p">:</span> <span class="s1">'danger'</span>
+<span class="p">});</span>`;
+
+const jsCode2 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>`;
+
+const jsCode3 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>`;
+
+const jsCode4 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>`;
+
+const jsCode5 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>`;
+
+const tableCode = `<span class="nx">message</span><span class="p">:</span> <span class="s1">'text/thml'</span><span class="p">,</span> <span class="nx">placement</span><span class="p">:</span> <span class="s1">'bottom'</span><span class="p">,</span> <span class="nx">status</span><span class="p">:</span> <span class="s1">'danger'</span>`;
+---
+
+<Layout title="Message" bodyClass="components components_message" activeSection="components" currentPage="/components/message">
+<h1 class="title">Message</h1>
+
+  <h2>Elegant way to display tips/message</h2>
+  <div class="message success" data-ride="message" data-duration="2000">
+    <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
+    <span class="close">&times;</span>
+  </div>
+
+  <div class="message bottom warning" data-ride="message">
+    <div class="inner">hello, im a message.</div>
+    <span class="close">&times;</span>
+  </div>
+
+<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"message success"</span> <span class="na">data-ride=</span><span class="s">"message"</span> <span class="na">data-duration=</span><span class="s">"2000"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>hello, im a message <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>link here<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"message bottom warning"</span> <span class="na">data-ride=</span><span class="s">"message"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>hello, im a message.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+
+  <h2>API</h2>
+  <p>Message plugin already export to window object.</p>
+  <section class="example">
+    <p>Click these buttons run the javascript code.</p>
+    <button class="info" id="message-show">show</button>
+    <button class="info" id="message-auto-hide">show &amp; hide automaticlly</button>
+    <button class="info" id="message-hide">hide</button>
+
+    <button class="info" id="message-at-bottom">show at bottom</button>
+
+    <button class="info" id="message-with-status">show with status</button>
+  </section>
+<pre><code class="highlight javascript" set:html={jsCode1}></code></pre>
+
+
+  <h2>Options</h2>
+  <table class="bordered striped">
+    <thead>
+     <tr>
+       <th style="width: 100px;">Name</th>
+       <th style="width: 100px;">Type</th>
+       <th style="width: 50px;">Default</th>
+       <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+       <td>template</td>
+       <td>string</td>
+       <td><code>'&lt;div class="message"&gt;&lt;div class="inner"&gt;&lt;/div&gt;&lt;span class="close"&gt;&times;'&lt;/span&gt;&lt;/div&gt;'</code></td>
+       <td>
+        Base HTML to use when creating the message.
+        The message's content will be injected into the <code>.inner</code>.
+        <code>.close</code> will become the message's close. The outermost wrapper element should have the <code>.message</code> class.
+       </td>
+     </tr>
+     <tr>
+       <td>message</td>
+       <td>string|object</td>
+       <td>null</td>
+       <td>
+        'message content text/html' <br />
+        <code><span set:html={tableCode}></span></code>
+       </td>
+     </tr>
+     <tr>
+       <td>placement</td>
+       <td>string</td>
+       <td>top</td>
+       <td>The placement can be `top` or `bottom`, by default is `top`</td>
+     </tr>
+     <tr>
+       <td>status</td>
+       <td>string</td>
+       <td>''</td>
+       <td>
+        Show with status, add class `[default]| success| info| warning| danger` to the container.
+       </td>
+     </tr>
+     <tr>
+       <td>duration</td>
+       <td>number</td>
+       <td>null</td>
+       <td>Message hide automaticlly after a number</td>
+     </tr>
+    </tbody>
+  </table>
+
+
+  <h2>Methods</h2>
+  <h4>$().message(options)</h4>
+  <p>Attaches a message handler to an element collection.</p>
+
+  <h4>.message('show')</h4>
+  <p>Show the message.</p>
+  <pre><code class="highlight javascript" set:html={jsCode2}></code></pre>
+
+
+  <h4>.message('hide')</h4>
+  <p>Hide the message.</p>
+  <pre><code class="highlight javascript" set:html={jsCode3}></code></pre>
+
+
+  <h4>.message('toggle')</h4>
+  <p>Toggles the message.</p>
+  <pre><code class="highlight javascript" set:html={jsCode4}></code></pre>
+
+
+  <h4>.message('destroy')</h4>
+  <p>Hide and destroys the message.</p>
+  <pre><code class="highlight javascript" set:html={jsCode5}></code></pre>
+</Layout>

@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Elements" bodyClass="elements elements_index" activeSection="elements" currentPage="/elements">
+  <div class="grid two">
+    <div class="column">
+      <section>
+        <a href="/elements/buttons">
+          <h2 class="title">Button</h2>
+        </a>
+        <p>
+          <button class="primary">primary</button>
+          <button class="success">success</button>
+          <button class="info">info</button>
+          <button class="warning">warning</button>
+          <button class="danger">danger</button>
+        </p>
+        <div class="buttons">
+          <button>Left</button>
+          <button>Middle</button>
+          <button>Right</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>

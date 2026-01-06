@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Navbar" bodyClass="components components_navbar" activeSection="components" currentPage="/components/navbar">
+<h1 class="title">Navbar</h1>
+
+      <h2>Default navbar</h2>
+      <section class="example">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/" class="brand">Mice</a>
+          </div>
+
+          <ul class="menu">
+            <li class="active"><a href="/elements">Elements</a></li>
+            <li><a href="/components/grid.html">Grid</a></li>
+          </ul>
+
+          <form>
+            <input type="text" placeholder="Search">
+            <button type="submit">Submit</button>
+          </form>
+
+          <ul class="menu righted">
+            <li><a href="https://github.com/miclle/mice"> Github</a></li>
+          </ul>
+        </nav>
+      </section>
+<pre><code class="highlight html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"brand"</span><span class="nt">&gt;</span>Mice<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/elements"</span><span class="nt">&gt;</span>Elements<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/components/grid.html"</span><span class="nt">&gt;</span>Grid<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"menu righted"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/miclle/mice"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon github"</span><span class="nt">&gt;&lt;/i&gt;</span> Github<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+
+
+      <h2>Fixed to top</h2>
+      <p>Add <code>.top</code> and include a <code>.container</code> to center and pad navbar content.</p>
+<pre><code class="highlight html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar top"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+
+
+      <h2>Fixed to bottom</h2>
+      <p>Add <code>.bottom</code> and include a <code>.container</code> to center and pad navbar content.</p>
+<pre><code class="highlight html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar bottom"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+</Layout>

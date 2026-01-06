@@ -1,0 +1,46 @@
+---
+interface Props {
+  activeSection?: 'elements' | 'grids' | 'components';
+}
+
+const { activeSection } = Astro.props;
+---
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <a href="/" class="brand">Mice</a>
+    </div>
+
+    <ul class="menu">
+      <li class={activeSection === 'elements' ? 'active' : ''}>
+        <a href="/elements">Elements</a>
+      </li>
+
+      <li class="dropdown">
+        <a href="/grids">Grid</a>
+        <ul class="menu">
+          <li><a href="/grids#two-columns">Two columns</a></li>
+          <li><a href="/grids#three-columns">Three columns</a></li>
+          <li><a href="/grids#four-columns">Four columns</a></li>
+          <li><a href="/grids#five-columns">Five columns</a></li>
+          <li><a href="/grids#six-columns">Six columns</a></li>
+          <li><a href="/grids#seven-columns">Seven columns</a></li>
+          <li><a href="/grids#eight-columns">Eight columns</a></li>
+          <li><a href="/grids#nine-columns">Nine columns</a></li>
+          <li><a href="/grids#ten-columns">Ten columns</a></li>
+          <li><a href="/grids#eleven-columns">Eleven columns</a></li>
+          <li><a href="/grids#twelve-columns">Twelve columns</a></li>
+        </ul>
+      </li>
+
+      <li class={activeSection === 'components' ? 'active' : ''}>
+        <a href="/components">Components</a>
+      </li>
+    </ul>
+
+    <ul class="menu righted">
+      <li><a href="https://github.com/miclle/mice">Github</a></li>
+    </ul>
+  </div>
+</nav>
