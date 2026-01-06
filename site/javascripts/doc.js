@@ -11245,9 +11245,6 @@
   };
 })(jQuery, window, document);
 
-// ZeroClipboard
-// ZeroClipboard.config( { moviePath: '/images/ZeroClipboard.swf' } );
-
 $(function () {
   $('body').on('click', '#message-show', function () {
     Message.show('This is message!');
