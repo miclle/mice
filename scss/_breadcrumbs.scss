@@ -1,6 +1,14 @@
 // Breadcrumbs
 // --------------------------------------------------
 
+// Breadcrumb component variables
+.breadcrumb {
+  --breadcrumb-padding-vertical: 8px;
+  --breadcrumb-padding-horizontal: 15px;
+  --breadcrumb-active-color: #999;
+  --breadcrumb-separator: '/';
+}
+
 .breadcrumb {
   padding: var(--breadcrumb-padding-vertical) var(--breadcrumb-padding-horizontal);
   margin-bottom: var(--line-height-computed);

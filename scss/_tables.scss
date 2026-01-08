@@ -3,6 +3,17 @@
 
 @use 'sass:color';
 
+// Table component variables
+table {
+  --table-cell-padding: 8px;
+  --table-condensed-cell-padding: 5px;
+  --table-background: transparent;
+  --table-background-accent: #f9f9f9;
+  --table-background-hover: #f5f5f5;
+  --table-background-active: #f5f5f5;
+  --table-border-color: #ddd;
+}
+
 table {
   display: table;
   width: 100%;

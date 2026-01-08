@@ -3,6 +3,35 @@
 
 @use 'mixins' as *;
 
+// Panel component variables
+.panel {
+  --panel-bg: #fff;
+  --panel-body-padding: 15px;
+  --panel-heading-padding: 10px 15px;
+  --panel-footer-padding: 10px 15px;
+  --panel-border-radius: 2px;
+  --panel-inner-border: #ddd;
+  --panel-footer-bg: #f5f5f5;
+  --panel-default-text: #333;
+  --panel-default-border: #ddd;
+  --panel-default-heading-bg: #f5f5f5;
+  --panel-primary-text: #fff;
+  --panel-primary-border: #0085f0;
+  --panel-primary-heading-bg: #0085f0;
+  --panel-success-text: #3c763d;
+  --panel-success-border: #d6e9c6;
+  --panel-success-heading-bg: #dff0d8;
+  --panel-info-text: #31708f;
+  --panel-info-border: #bce8f1;
+  --panel-info-heading-bg: #d9edf7;
+  --panel-warning-text: #8a6d3b;
+  --panel-warning-border: #faebcc;
+  --panel-warning-heading-bg: #fcf8e3;
+  --panel-danger-text: #a94442;
+  --panel-danger-border: #ebccd1;
+  --panel-danger-heading-bg: #f2dede;
+}
+
 // Panels
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
   border-color: $border;

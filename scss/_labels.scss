@@ -5,6 +5,24 @@
 @use 'sass:string';
 @use 'mixins' as *;
 
+// Label component variables
+.label {
+  --label-background-default: #999;
+  --label-background-primary: #0085f0;
+  --label-background-success: #81c735;
+  --label-background-info: #5bc0de;
+  --label-background-warning: #f0ad4e;
+  --label-background-danger: #ff3a3c;
+  --label-color: #fff;
+  --label-link-hover-color: #fff;
+  --label-background-default-hover: #8a8a8a;
+  --label-background-primary-hover: #0077d9;
+  --label-background-success-hover: #73b32f;
+  --label-background-info-hover: #50adc8;
+  --label-background-warning-hover: #d39b46;
+  --label-background-danger-hover: #e13436;
+}
+
 @mixin label-variant($color, $hover: null) {
   $use-css-vars: string.index($color, 'var(') != null;
 

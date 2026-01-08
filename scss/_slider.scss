@@ -4,6 +4,18 @@
 @use 'mixins' as *;
 @use 'images' as *;
 
+// Carousel component variables
+.carousel {
+  --carousel-text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  --carousel-control-color: #fff;
+  --carousel-control-width: 15%;
+  --carousel-control-opacity: 0.5;
+  --carousel-control-font-size: 20px;
+  --carousel-indicator-active-background: #fff;
+  --carousel-indicator-border-color: #fff;
+  --carousel-caption-color: #fff;
+}
+
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;

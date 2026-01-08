@@ -3,6 +3,23 @@
 
 @use 'mixins' as *;
 
+// Modal component variables
+.modal {
+  --modal-inner-padding: 15px;
+  --modal-title-padding: 15px;
+  --modal-title-line-height: 1.4286;
+  --modal-content-background: #fff;
+  --modal-content-border-color: rgb(0 0 0 / 20%);
+  --modal-content-fallback-border-color: #999;
+  --modal-backdrop-background: #000;
+  --modal-backdrop-opacity: 0.5;
+  --modal-header-border-color: #e5e5e5;
+  --modal-footer-border-color: #e5e5e5;
+  --modal-large: 900px;
+  --modal-medium: 600px;
+  --modal-small: 300px;
+}
+
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .dialog    - positioning shell for the actual modal

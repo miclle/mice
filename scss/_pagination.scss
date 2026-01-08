@@ -3,6 +3,32 @@
 
 @use 'mixins' as *;
 
+// Pagination component variables
+.pagination {
+  --pagination-color: #0085f0;
+  --pagination-background: #fff;
+  --pagination-border: #ddd;
+  --pagination-hover-color: #0076e6;
+  --pagination-hover-background: #eee;
+  --pagination-hover-border: #ddd;
+  --pagination-active-color: #fff;
+  --pagination-active-background: #0085f0;
+  --pagination-active-border: #0085f0;
+  --pagination-disabled-color: #999;
+  --pagination-disabled-background: #fff;
+  --pagination-disabled-border: #ddd;
+}
+
+.pager {
+  --pager-background: #fff;
+  --pager-border: #ddd;
+  --pager-border-radius: 15px;
+  --pager-hover-background: #eee;
+  --pager-active-background: #0085f0;
+  --pager-active-color: #fff;
+  --pager-disabled-color: #999;
+}
+
 // mixin
 @mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
   > li {

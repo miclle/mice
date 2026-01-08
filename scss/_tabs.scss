@@ -3,6 +3,18 @@
 
 @use 'mixins' as *;
 
+// Tabs component variables
+.tabs {
+  --tabs-border-color: #ddd;
+  --tabs-link-hover-border-color: #eee;
+  --tabs-link-hover-background-color: #eee;
+  --tabs-active-link-hover-background: #fff;
+  --tabs-active-link-hover-color: #666;
+  --tabs-active-link-hover-border-color: #ddd;
+  --tabs-justified-link-border-color: #ddd;
+  --tabs-justified-active-link-border-color: #fff;
+}
+
 .tabs {
   list-style: none;
   border-bottom: 1px solid var(--tabs-border-color);

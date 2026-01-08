@@ -3,6 +3,26 @@
 
 @use 'mixins' as *;
 
+// Timeline component variables
+.timeline {
+  --timeline-color-default: #333;
+  --timeline-background-default: #999;
+  --timeline-background-primary: #0085f0;
+  --timeline-background-success: #81c735;
+  --timeline-background-info: #5bc0de;
+  --timeline-background-warning: #f0ad4e;
+  --timeline-background-danger: #ff3a3c;
+  --timeline-small-size: 30px;
+  --timeline-small-font-size: 12px;
+  --timeline-small-border: 1px;
+  --timeline-default-size: 60px;
+  --timeline-default-font-size: 14px;
+  --timeline-default-border: 2px;
+  --timeline-large-size: 120px;
+  --timeline-large-font-size: 24px;
+  --timeline-large-border: 4px;
+}
+
 @mixin timeline-variant($parent, $color-var) {
   .timeline#{$parent} {
     > ul,

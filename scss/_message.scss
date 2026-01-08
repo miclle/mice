@@ -4,6 +4,24 @@
 @use 'sass:color';
 @use 'mixins' as *;
 
+// Message component variables
+.message {
+  --message-padding: 10px 20px;
+  --message-link-font-weight: bold;
+  --message-success-background: #dff0d8;
+  --message-success-text: #3c763d;
+  --message-success-border: #d6e9c6;
+  --message-info-background: #d9edf7;
+  --message-info-text: #31708f;
+  --message-info-border: #bce8f1;
+  --message-warning-background: #fcf8e3;
+  --message-warning-text: #8a6d3b;
+  --message-warning-border: #faebcc;
+  --message-danger-background: #f2dede;
+  --message-danger-text: #a94442;
+  --message-danger-border: #ebccd1;
+}
+
 // Mixin
 @mixin message-variant($background, $border, $text-color) {
   background-color: $background;

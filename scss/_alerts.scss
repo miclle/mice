@@ -1,6 +1,25 @@
 // Alerts
 // --------------------------------------------------
 
+// Alert component variables
+.alert {
+  --alert-padding: 15px;
+  --alert-border-radius: 2px;
+  --alert-link-font-weight: bold;
+  --alert-success-background: #dff0d8;
+  --alert-success-text: #3c763d;
+  --alert-success-border: #d6e9c6;
+  --alert-info-background: #d9edf7;
+  --alert-info-text: #31708f;
+  --alert-info-border: #bce8f1;
+  --alert-warning-background: #fcf8e3;
+  --alert-warning-text: #8a6d3b;
+  --alert-warning-border: #faebcc;
+  --alert-danger-background: #f2dede;
+  --alert-danger-text: #a94442;
+  --alert-danger-border: #ebccd1;
+}
+
 // Base styles
 // -------------------------
 

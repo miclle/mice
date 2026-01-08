@@ -3,6 +3,31 @@
 
 @use 'mixins' as *;
 
+// Tooltip component variables
+.tooltip {
+  --tooltip-max-width: 200px;
+  --tooltip-color: #fff;
+  --tooltip-background: #000;
+  --tooltip-opacity: 0.9;
+  --tooltip-arrow-width: 5px;
+  --tooltip-arrow-color: #000;
+  --tooltip-primary-color: #fff;
+  --tooltip-primary-background: #0085f0;
+  --tooltip-primary-arrow-color: #0085f0;
+  --tooltip-success-color: #fff;
+  --tooltip-success-background: #81c735;
+  --tooltip-success-arrow-color: #81c735;
+  --tooltip-info-color: #fff;
+  --tooltip-info-background: #5bc0de;
+  --tooltip-info-arrow-color: #5bc0de;
+  --tooltip-warning-color: #fff;
+  --tooltip-warning-background: #f0ad4e;
+  --tooltip-warning-arrow-color: #f0ad4e;
+  --tooltip-danger-color: #fff;
+  --tooltip-danger-background: #ff3a3c;
+  --tooltip-danger-arrow-color: #ff3a3c;
+}
+
 // Tooltip variants
 @mixin tooltip-variant($tooltip-color, $tooltip-background, $tooltip-arrow-color) {
   .inner {
