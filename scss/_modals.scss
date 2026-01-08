@@ -47,9 +47,9 @@
 
   // Fade for backdrop
   &.fade {
-    @include opacity(0);
+    opacity: 0;
     &.in {
-      @include opacity($modal-backdrop-opacity);
+      opacity: $modal-backdrop-opacity;
     }
   }
 }

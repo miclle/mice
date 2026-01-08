@@ -39,10 +39,10 @@
   font-size: $font-size-small;
   line-height: 1.4;
 
-  @include opacity(0);
+  opacity: 0;
 
   &.in {
-    @include opacity($tooltip-opacity);
+    opacity: $tooltip-opacity;
   }
   &.top {
     margin-top: -3px;

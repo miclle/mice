@@ -156,7 +156,7 @@ button,
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
 
-    @include opacity(0.5);
+    opacity: 0.5;
   }
 
   @include button-variant(

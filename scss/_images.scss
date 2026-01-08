@@ -48,7 +48,7 @@ img {
   &.disabled {
     cursor: default;
 
-    @include opacity(0.3);
+    opacity: 0.3;
   }
 
   &.fluid {

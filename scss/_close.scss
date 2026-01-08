@@ -12,7 +12,7 @@
   color: $close-color;
   text-shadow: $close-text-shadow;
 
-  @include opacity(0.2);
+  opacity: 0.2;
 
   &:hover,
   &:focus {
@@ -20,7 +20,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    @include opacity(0.5);
+    opacity: 0.5;
   }
 
   // [converter] extracted button& to button.close
