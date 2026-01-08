@@ -1,10 +1,8 @@
 @charset "UTF-8";
 :root {
-  --gray-darker: #111;
   --gray-dark: #333;
   --gray: #666;
   --gray-light: #999;
-  --gray-lighter: #eee;
   --brand-primary: #0085f0;
   --brand-success: #81c735;
   --brand-info: #5bc0de;
@@ -35,13 +33,11 @@
   --border-radius-small: 2px;
   --border-radius-large: 4px;
   --font-family-sans-serif: 'Helvetica Neue', helvetica, arial, sans-serif;
-  --font-family-serif: georgia, 'Times New Roman', times, serif;
   --font-family-monospace: menlo, monaco, consolas, 'Courier New', monospace;
   --font-family-base: var(--font-family-sans-serif);
   --font-size-base: 14px;
   --font-size-large: 18px;
   --font-size-small: 12px;
-  --font-size-mini: 12px;
   --font-size-h1: 36px;
   --font-size-h2: 32px;
   --font-size-h3: 24px;
@@ -49,14 +45,10 @@
   --font-size-h5: 14px;
   --font-size-h6: 12px;
   --line-height-base: 1.4286;
-  --line-height-small: 1.33;
-  --line-height-mini: 1.2;
-  --line-height-large: 1.5;
   --line-height-computed: 20px;
   --heading-font-family: var(--font-family-base);
   --heading-font-weight: 500;
   --heading-line-height: 1.1;
-  --heading-color: inherit;
   --blockquote-font-size: 18px;
   --callout-font-size: var(--font-size-base);
   --padding-base-vertical: 6px;
@@ -69,8 +61,6 @@
   --padding-mini-horizontal: 6px;
   --component-active-color: #fff;
   --component-active-bg: #0085f0;
-  --caret-width-base: 4px;
-  --caret-width-large: 5px;
   --code-color: #c7254e;
   --code-background: #f9f2f4;
   --kbd-color: #fff;
@@ -89,11 +79,6 @@
   --input-padding-large-horizontal: 8px;
   --input-group-addon-background: #eee;
   --input-group-addon-border-color: #ccc;
-  --table-row-primary-background: #b3d9f7;
-  --table-row-success-background: #d4e9c5;
-  --table-row-info-background: #b3e5f2;
-  --table-row-warning-background: #f5e9d1;
-  --table-row-danger-background: #f9c8c9;
   --state-primary-text: #0085f0;
   --state-primary-background: #0085f0;
   --state-success-text: #3c763d;
@@ -122,9 +107,6 @@
   --screen-sm-min: 768px;
   --screen-md-min: 992px;
   --screen-lg-min: 1200px;
-  --screen-xs-max: 767px;
-  --screen-sm-max: 991px;
-  --screen-md-max: 1199px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -435,11 +417,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-
-.well {
-  --well-background: #f5f5f5;
-  --well-border: #e0e0e0;
 }
 
 * {
