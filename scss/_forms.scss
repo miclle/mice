@@ -5,7 +5,6 @@
 @use 'sass:list';
 @use 'sass:string';
 @use 'sass:color';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
@@ -15,7 +14,7 @@
 @mixin input-variant($border-color, $border-hover: null, $border-focus: null) {
   $use-css-vars: string.index($border-color, 'var(') != null;
 
-  color: $gray;
+  color: var(--gray);
   background-color: #fff;
   border-color: $border-color;
 
@@ -23,7 +22,7 @@
     @if $use-css-vars and $border-hover {
       border-color: $border-hover;
     } @else if not $use-css-vars {
-      border-color: color.adjust($border-color, $lightness: -20%);
+      filter: brightness(0.95);
     }
   }
 
@@ -33,7 +32,7 @@
     @if $use-css-vars and $border-hover {
       border-color: $border-hover;
     } @else if not $use-css-vars {
-      border-color: color.adjust($border-color, $lightness: -20%);
+      filter: brightness(0.9);
     }
 
     @if $use-css-vars and $border-focus {
@@ -51,7 +50,7 @@
     &:hover,
     &:active,
     &.active {
-      border-color: var(--border-color-default, $border-color-default);
+      border-color: var(--border-color-default);
       cursor: not-allowed;
       background-color: #eee;
       opacity: 0.55;
@@ -123,9 +122,8 @@ input[type='number'],
 textarea,
 select {
   display: inline-block;
-  height: 34px;
   margin-bottom: 0;
-  font-weight: $button-font-weight;
+  font-weight: normal;
   text-align: left;
   border: 1px solid #ccc;
   white-space: nowrap;
@@ -230,32 +228,33 @@ input[type='text'],
 input[type='password'],
 input[type='email'],
 input[type='number'],
-textarea {
+textarea,
+select {
   @include input-size(
-    $input-height-default,
-    $input-padding-default-vertical,
-    $input-padding-default-horizontal,
-    $font-size-base,
-    $line-height-base
+    var(--input-height-default),
+    var(--input-padding-default-vertical),
+    var(--input-padding-default-horizontal),
+    var(--font-size-base),
+    var(--line-height-base)
   );
 
   &.small {
     @include input-size(
-      $input-height-small,
-      $input-padding-small-vertical,
-      $input-padding-small-horizontal,
-      $font-size-small,
-      $line-height-small
+      var(--input-height-small),
+      var(--input-padding-small-vertical),
+      var(--input-padding-small-horizontal),
+      var(--font-size-small),
+      var(--line-height-small)
     );
   }
 
   &.large {
     @include input-size(
-      $input-height-large,
-      $input-padding-large-vertical,
-      $input-padding-large-horizontal,
-      $font-size-large,
-      $line-height-large
+      var(--input-height-large),
+      var(--input-padding-large-vertical),
+      var(--input-padding-large-horizontal),
+      var(--font-size-large),
+      var(--line-height-large)
     );
   }
 }
@@ -264,7 +263,7 @@ textarea {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: color.adjust($text-color, $lightness: 25%);
+  color: #9e9e9e; // Pre-calculated: text-color lightened 25%
 }
 
 .field {
@@ -395,14 +394,14 @@ form.horizontal {
 
         @include clearfix();
 
-        padding-left: math.div(100%, 12) * $i;
+        padding-left: calc(100% / 12 * $i);
 
         &:not(.checkbox) {
           label {
             float: left;
-            width: math.div(100%, 12) * $i;
+            width: calc(100% / 12 * $i);
             height: 34px;
-            margin-left: 0 - (math.div(100%, 12) * $i);
+            margin-left: calc(-100% / 12 * $i);
             margin-bottom: 0;
             padding-right: 15px;
             padding-top: 6px;
@@ -473,14 +472,14 @@ form.horizontal {
 
   .addon {
     display: table-cell;
-    padding: $padding-base-vertical $padding-base-horizontal;
-    font-size: $font-size-base;
+    padding: var(--padding-base-vertical) var(--padding-base-horizontal);
+    font-size: var(--font-size-base);
     font-weight: normal;
     line-height: 1;
     // color: $input-color;
     text-align: center;
-    background-color: $input-group-addon-background;
-    border: 1px solid $input-group-addon-border-color;
+    background-color: var(--input-group-addon-background);
+    border: 1px solid var(--input-group-addon-border-color);
     width: 1%;
     white-space: nowrap;
     vertical-align: middle;

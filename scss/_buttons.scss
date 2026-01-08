@@ -2,30 +2,47 @@
 // --------------------------------------------------
 
 @use 'sass:color';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // Button variants
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($color, $background, $border) {
+@mixin button-variant($color, $background, $border, $hover-bg: null, $active-bg: null, $hover-border: null, $active-border: null) {
   color: $color;
   background-color: $background;
   border-color: $border;
 
   &:hover,
   &:focus {
-    color: $color;
-    background-color: color.adjust($background, $lightness: -10%);
-    border-color: color.adjust($border, $lightness: -10%);
+    @if $hover-bg {
+      color: $color;
+      background-color: $hover-bg;
+      @if $hover-border {
+        border-color: $hover-border;
+      } @else {
+        border-color: $hover-bg;
+      }
+    } @else {
+      color: $color;
+      // Fallback for buttons without pre-calculated hover states
+      filter: brightness(0.9);
+    }
   }
 
   &:active,
   &.active {
-    color: $color;
-    background-color: color.adjust($background, $lightness: -15%);
-    border-color: color.adjust($border, $lightness: -15%);
+    @if $active-bg {
+      color: $color;
+      background-color: $active-bg;
+      @if $active-border {
+        border-color: $active-border;
+      } @else {
+        border-color: $active-bg;
+      }
+    } @else {
+      filter: brightness(0.85);
+    }
   }
 
   &.disabled,
@@ -36,6 +53,7 @@
     &.active {
       background-color: $background;
       border-color: $border;
+      filter: none;
     }
   }
 }
@@ -119,7 +137,7 @@ button,
 .button {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: $button-font-weight;
+  font-weight: normal;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -130,18 +148,18 @@ button,
   position: relative;
   box-shadow: 0 1px 0 rgb(0 0 0 / 5%);
   @include button-size(
-    $padding-base-vertical,
-    $padding-base-horizontal,
-    $font-size-base,
-    $line-height-base,
-    $border-radius
+    var(--padding-base-vertical),
+    var(--padding-base-horizontal),
+    var(--font-size-base),
+    var(--line-height-base),
+    var(--border-radius)
   );
 
   user-select: none;
 
   &:hover,
   &:focus {
-    color: $button-default-color;
+    color: var(--button-default-color);
     text-decoration: none;
     // @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.1));
   }
@@ -159,41 +177,69 @@ button,
   }
 
   @include button-variant(
-    $button-default-color,
-    $button-default-background,
-    $button-default-border
+    var(--button-default-color),
+    var(--button-default-background),
+    var(--button-default-border)
   );
 
   &.primary {
     @include button-variant(
-      $button-primary-color,
-      $button-primary-background,
-      $button-primary-border
+      var(--button-primary-color),
+      var(--button-primary-background),
+      var(--button-primary-border),
+      var(--button-primary-hover-background),
+      var(--button-primary-active-background),
+      var(--button-primary-hover-border),
+      var(--button-primary-active-border)
     );
   }
 
   &.success {
     @include button-variant(
-      $button-success-color,
-      $button-success-background,
-      $button-success-border
+      var(--button-success-color),
+      var(--button-success-background),
+      var(--button-success-border),
+      var(--button-success-hover-background),
+      var(--button-success-active-background),
+      var(--button-success-hover-border),
+      var(--button-success-active-border)
     );
   }
 
   &.info {
-    @include button-variant($button-info-color, $button-info-background, $button-info-border);
+    @include button-variant(
+      var(--button-info-color),
+      var(--button-info-background),
+      var(--button-info-border),
+      var(--button-info-hover-background),
+      var(--button-info-active-background),
+      var(--button-info-hover-border),
+      var(--button-info-active-border)
+    );
   }
 
   &.warning {
     @include button-variant(
-      $button-warning-color,
-      $button-warning-background,
-      $button-warning-border
+      var(--button-warning-color),
+      var(--button-warning-background),
+      var(--button-warning-border),
+      var(--button-warning-hover-background),
+      var(--button-warning-active-background),
+      var(--button-warning-hover-border),
+      var(--button-warning-active-border)
     );
   }
 
   &.danger {
-    @include button-variant($button-danger-color, $button-danger-background, $button-danger-border);
+    @include button-variant(
+      var(--button-danger-color),
+      var(--button-danger-background),
+      var(--button-danger-border),
+      var(--button-danger-hover-background),
+      var(--button-danger-active-background),
+      var(--button-danger-hover-border),
+      var(--button-danger-active-border)
+    );
   }
 }
 
@@ -205,31 +251,31 @@ button,
 .button {
   &.mini {
     @include button-size(
-      $padding-mini-vertical,
-      $padding-mini-horizontal,
-      $font-size-mini,
-      $line-height-mini,
-      $border-radius
+      var(--padding-mini-vertical),
+      var(--padding-mini-horizontal),
+      var(--font-size-mini),
+      var(--line-height-mini),
+      var(--border-radius)
     );
   }
 
   &.small {
     @include button-size(
-      $padding-small-vertical,
-      $padding-small-horizontal,
-      $font-size-small,
-      $line-height-small,
-      $border-radius
+      var(--padding-small-vertical),
+      var(--padding-small-horizontal),
+      var(--font-size-small),
+      var(--line-height-small),
+      var(--border-radius)
     );
   }
 
   &.large {
     @include button-size(
-      $padding-large-vertical,
-      $padding-large-horizontal,
-      $font-size-large,
-      $line-height-large,
-      $border-radius
+      var(--padding-large-vertical),
+      var(--padding-large-horizontal),
+      var(--font-size-large),
+      var(--line-height-large),
+      var(--border-radius)
     );
   }
 }
@@ -306,7 +352,7 @@ button,
 
     &:first-child {
       &:not(:last-child) {
-        @include border-top-radius($border-radius);
+        @include border-top-radius(var(--border-radius));
         @include border-bottom-radius(0);
       }
     }
@@ -314,7 +360,7 @@ button,
     &:last-child {
       &:not(:first-child) {
         @include border-top-radius(0);
-        @include border-bottom-radius($border-radius);
+        @include border-bottom-radius(var(--border-radius));
 
         box-shadow: 0 -1px 0 rgb(0 0 0 / 15%) inset;
         margin-left: 0;

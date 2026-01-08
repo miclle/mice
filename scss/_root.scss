@@ -69,7 +69,7 @@
 
   // Headings
   --heading-font-family: var(--font-family-base);
-  --heading-font-weight: bold;
+  --heading-font-weight: 500;
   --heading-line-height: 1.1;
   --heading-color: inherit;
 
@@ -100,6 +100,7 @@
   --kbd-background: #333;
   --pre-background: #f5f5f5;
   --pre-border-color: #ccc;
+  --pre-scrollable-max-height: 340px;
 
   // Default button colors
   --button-default-color: #666;
@@ -107,9 +108,9 @@
   --button-default-border: #d9d9d9;
 
   // Input
-  --input-height-default: 26px;
-  --input-height-small: 26px;
-  --input-height-large: 30px;
+  --input-height-default: 34px;
+  --input-height-small: 27px;
+  --input-height-large: 45px;
   --input-padding-default-vertical: 6px;
   --input-padding-default-horizontal: 6px;
   --input-padding-small-vertical: 5px;
@@ -188,6 +189,18 @@
   --label-background-danger-hover: #e13436;
 
   // Pre-calculated color variants for CSS-based interactions
+  // Button base colors
+  --button-primary-color: #fff;
+  --button-primary-background: #0085f0;
+  --button-success-color: #fff;
+  --button-success-background: #81c735;
+  --button-info-color: #fff;
+  --button-info-background: #5bc0de;
+  --button-warning-color: #fff;
+  --button-warning-background: #f0ad4e;
+  --button-danger-color: #fff;
+  --button-danger-background: #ff3a3c;
+
   // Button hover states (+5% brightness)
   --button-primary-hover-background: #1a95f4;
   --button-success-hover-background: #8ec93d;
@@ -266,6 +279,7 @@
   // Pager
   --pager-background: #fff;
   --pager-border: #ddd;
+  --pager-border-radius: 15px;
   --pager-hover-background: #eee;
   --pager-active-background: #0085f0;
   --pager-active-color: #fff;

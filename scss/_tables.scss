@@ -2,7 +2,6 @@
 // --------------------------------------------------
 
 @use 'sass:color';
-@use 'variables' as *;
 
 table {
   display: table;
@@ -11,7 +10,7 @@ table {
   margin-bottom: 15px;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: $table-background;
+  background-color: var(--table-background);
 }
 
 table > thead,
@@ -22,37 +21,37 @@ table > tfoot {
     th.active,
     &.active > td,
     td.active {
-      background-color: $table-background-active;
+      background-color: var(--table-background-active);
     }
     &.primary > th,
     th.primary,
     &.primary > td,
     td.primary {
-      background-color: color.adjust($brand-primary, $lightness: 32%);
+      background-color: #b3d7ff; // Pre-calculated: brand-primary lightened 32%
     }
     &.success > th,
     th.success,
     &.success > td,
     td.success {
-      background-color: color.adjust($brand-success, $lightness: 32%);
+      background-color: #d8f0d2; // Pre-calculated: brand-success lightened 32%
     }
     &.info > th,
     th.info,
     &.info > td,
     td.info {
-      background-color: color.adjust($brand-info, $lightness: 32%);
+      background-color: #c2e8f7; // Pre-calculated: brand-info lightened 32%
     }
     &.warning > th,
     th.warning,
     &.warning > td,
     td.warning {
-      background-color: color.adjust($brand-warning, $lightness: 32%);
+      background-color: #fee6b5; // Pre-calculated: brand-warning lightened 32%
     }
     &.danger > th,
     th.danger,
     &.danger > td,
     td.danger {
-      background-color: color.adjust($brand-danger, $lightness: 32%);
+      background-color: #f9c4c4; // Pre-calculated: brand-danger lightened 32%
     }
   }
 }
@@ -64,9 +63,9 @@ table > tfoot {
     > th,
     > td {
       border-collapse: collapse;
-      padding: $table-cell-padding;
+      padding: var(--table-cell-padding);
       border: none;
-      border-bottom: 1px solid $table-border-color;
+      border-bottom: 1px solid var(--table-border-color);
     }
   }
 }
@@ -90,7 +89,7 @@ table {
       > tr {
         > th,
         > td {
-          padding: $table-condensed-cell-padding;
+          padding: var(--table-condensed-cell-padding);
         }
       }
     }
@@ -106,7 +105,7 @@ table {
       tr {
         > th,
         > td {
-          border: 1px solid $table-border-color;
+          border: 1px solid var(--table-border-color);
         }
       }
     }
@@ -117,7 +116,7 @@ table {
   &.striped > tbody > tr:nth-child(odd) {
     > th,
     > td {
-      background-color: $table-background-accent;
+      background-color: var(--table-background-accent);
     }
   }
 
@@ -126,7 +125,7 @@ table {
   &.hover > tbody > tr:hover {
     > th,
     > td {
-      background-color: $table-background-hover;
+      background-color: var(--table-background-hover);
     }
   }
 }
@@ -138,7 +137,7 @@ table {
   overflow: scroll hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid $table-border-color;
+  border: 1px solid var(--table-border-color);
 
   > table {
     margin-bottom: 0;

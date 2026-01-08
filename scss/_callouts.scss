@@ -2,14 +2,13 @@
 // --------------------------------------------------
 
 @use 'sass:math';
-@use 'variables' as *;
 
 blockquote,
 .callout {
-  padding: math.div($line-height-computed, 2) $line-height-computed;
-  margin: 0 0 $line-height-computed;
-  font-size: $blockquote-font-size;
-  border-left: 5px solid $blockquote-border-color;
+  padding: calc(var(--line-height-computed) / 2) var(--line-height-computed);
+  margin: 0 0 var(--line-height-computed);
+  font-size: var(--blockquote-font-size);
+  border-left: 5px solid var(--gray-lighter);
 
   p,
   ul,
@@ -24,8 +23,8 @@ blockquote,
   .small {
     display: block;
     font-size: 80%; // back to default font-size
-    line-height: $line-height-base;
-    color: $blockquote-small-color;
+    line-height: var(--line-height-base);
+    color: var(--gray-light);
 
     &::before {
       content: '\2014 \00A0';
@@ -46,7 +45,7 @@ blockquote,
   &.righted {
     padding-right: 15px;
     padding-left: 0;
-    border-right: 5px solid $blockquote-border-color;
+    border-right: 5px solid var(--gray-lighter);
     border-left: 0;
     text-align: right;
 
@@ -78,36 +77,36 @@ blockquote::after,
 blockquote,
 .callout {
   &.primary {
-    border-color: $border-color-primary;
-    background-color: $state-primary-background;
+    border-color: var(--border-color-primary);
+    background-color: var(--state-primary-background);
     color: #fff;
   }
 
   &.success {
-    border-color: $border-color-success;
-    background-color: $state-success-background;
+    border-color: var(--border-color-success);
+    background-color: var(--state-success-background);
   }
 
   &.info {
-    border-color: $border-color-info;
-    background-color: $state-info-background;
+    border-color: var(--border-color-info);
+    background-color: var(--state-info-background);
   }
 
   &.warning {
-    border-color: $border-color-warning;
-    background-color: $state-warning-background;
+    border-color: var(--border-color-warning);
+    background-color: var(--state-warning-background);
   }
 
   &.danger {
-    border-color: $border-color-danger;
-    background-color: $state-danger-background;
+    border-color: var(--border-color-danger);
+    background-color: var(--state-danger-background);
   }
 }
 
 .callout {
   border-width: 3px;
-  padding: math.div($line-height-computed, 2) math.div($line-height-computed, 2);
-  font-size: $callout-font-size;
+  padding: calc(var(--line-height-computed) / 2);
+  font-size: var(--callout-font-size);
 
   h1,
   h2,
@@ -127,7 +126,7 @@ blockquote,
     h4,
     h5,
     h6 {
-      color: $border-color-success;
+      color: var(--border-color-success);
     }
   }
 
@@ -138,7 +137,7 @@ blockquote,
     h4,
     h5,
     h6 {
-      color: $border-color-info;
+      color: var(--border-color-info);
     }
   }
 
@@ -149,7 +148,7 @@ blockquote,
     h4,
     h5,
     h6 {
-      color: $border-color-warning;
+      color: var(--border-color-warning);
     }
   }
 
@@ -160,7 +159,7 @@ blockquote,
     h4,
     h5,
     h6 {
-      color: $border-color-danger;
+      color: var(--border-color-danger);
     }
   }
 }

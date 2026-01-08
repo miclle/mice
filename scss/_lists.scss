@@ -4,7 +4,6 @@
 @use 'sass:math';
 @use 'sass:list';
 @use 'sass:color';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // List group variants
@@ -24,7 +23,8 @@
     &:hover,
     &:focus {
       color: $color;
-      background-color: color.adjust($background, $lightness: -5%);
+      // Using CSS filter for hover darkening effect
+      filter: brightness(0.95);
     }
     &.active,
     &.active:hover,
@@ -32,6 +32,7 @@
       color: #fff;
       background-color: $color;
       border-color: $color;
+      filter: none;
     }
   }
 }
@@ -40,7 +41,7 @@
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: math.div($line-height-computed, 2);
+  margin-bottom: calc(var(--line-height-computed) / 2);
   ul,
   ol {
     margin-bottom: 0;
@@ -90,7 +91,7 @@ $columns:
   ol.grid {
     &.#{list.nth($columns, $i)} {
       > li {
-        width: math.div(100%, ($i + 1));
+        width: calc(100% / ($i + 1));
       }
     }
   }
@@ -99,10 +100,10 @@ $columns:
 // Description Lists
 dl {
   margin-top: 0;
-  margin-bottom: $line-height-computed;
+  margin-bottom: var(--line-height-computed);
   dt,
   dd {
-    line-height: $line-height-base;
+    line-height: var(--line-height-base);
   }
   dt {
     font-weight: bold;
@@ -215,10 +216,10 @@ section {
     // Contextual variants
     // Add modifier classes to change text and background color on individual items.
     // Organizationally, this must come after the `:hover` states.
-    @include list-group-item-variant(success, $state-success-background, $state-success-text);
-    @include list-group-item-variant(info, $state-info-background, $state-info-text);
-    @include list-group-item-variant(warning, $state-warning-background, $state-warning-text);
-    @include list-group-item-variant(danger, $state-danger-background, $state-danger-text);
+    @include list-group-item-variant(success, var(--state-success-background), var(--state-success-text));
+    @include list-group-item-variant(info, var(--state-info-background), var(--state-info-text));
+    @include list-group-item-variant(warning, var(--state-warning-background), var(--state-warning-text));
+    @include list-group-item-variant(danger, var(--state-danger-background), var(--state-danger-text));
 
     // Custom content options
     .heading {

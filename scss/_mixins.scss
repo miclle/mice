@@ -8,7 +8,9 @@
 //    `:before` to contain the top-margins of child elements.
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
+@use 'sass:string';
 @use 'sass:color';
+
 @mixin clearfix() {
   &::before,
   &::after {
@@ -24,11 +26,17 @@
 // --------------------------------------------------
 // [converter] $parent hack
 @mixin text-emphasis-variant($parent, $color) {
+  $use-css-vars: string.index($color, 'var(') != null;
+
   #{$parent} {
     color: $color;
   }
   a#{$parent}:hover {
-    color: color.adjust($color, $lightness: -10%);
+    @if $use-css-vars {
+      filter: brightness(0.9);
+    } @else {
+      color: color.adjust($color, $lightness: -10%);
+    }
   }
 }
 
@@ -36,10 +44,16 @@
 // --------------------------------------------------
 // [converter] $parent hack
 @mixin background-variant($parent, $color) {
+  $use-css-vars: string.index($color, 'var(') != null;
+
   #{$parent} {
     background-color: $color;
   }
   a#{$parent}:hover {
-    background-color: color.adjust($color, $lightness: -10%);
+    @if $use-css-vars {
+      filter: brightness(0.9);
+    } @else {
+      background-color: color.adjust($color, $lightness: -10%);
+    }
   }
 }

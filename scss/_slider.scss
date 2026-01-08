@@ -1,7 +1,6 @@
 // Carousel
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 @use 'images' as *;
 
@@ -195,7 +194,7 @@
 }
 
 // Scale up controls for tablets and up
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: var(--screen-sm-min)) {
   .carousel {
     // Scale up the controls a smidge
     .control {

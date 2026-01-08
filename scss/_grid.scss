@@ -3,7 +3,6 @@
 
 @use 'sass:math';
 @use 'sass:list';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 .container {
@@ -56,13 +55,13 @@
 
 @mixin column-child($columns) {
   > .column {
-    width: math.div(100%, $columns);
+    width: calc(100% / $columns);
   }
 }
 
 @mixin column-self($columns, $value) {
   &.column {
-    width: math.div(100%, $columns) * $value;
+    width: calc((100% / $columns) * $value);
   }
 }
 

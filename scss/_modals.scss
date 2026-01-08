@@ -1,7 +1,6 @@
 // Modals
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // .modal-open      - body class for killing the scroll
@@ -43,13 +42,13 @@
   position: fixed;
   inset: 0;
   z-index: var(--zindex-modal-background);
-  background-color: $modal-backdrop-background;
+  background-color: var(--modal-backdrop-background);
 
   // Fade for backdrop
   &.fade {
     opacity: 0;
     &.in {
-      opacity: $modal-backdrop-opacity;
+      opacity: var(--modal-backdrop-opacity);
     }
   }
 }
@@ -60,15 +59,15 @@
     position: relative;
     width: auto;
     margin: 10px;
+    margin: 30px auto;
   }
 
   // Actual modal
   .content {
     position: relative;
-    background-color: $modal-content-background;
-    border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-    border: 1px solid $modal-content-border-color;
-    border-radius: $border-radius;
+    background-color: var(--modal-content-background); //old browsers fallback (ie8 etc)
+    border: 1px solid var(--modal-content-border-color);
+    border-radius: var(--border-radius);
     box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
     background-clip: padding-box;
     // Remove focus outline from opened modal
@@ -78,9 +77,9 @@
   // Modal header
   // Top section of the modal w/ title and dismiss
   .header {
-    padding: $modal-title-padding;
-    border-bottom: 1px solid $modal-header-border-color;
-    min-height: ($modal-title-padding + $modal-title-line-height);
+    padding: var(--modal-title-padding);
+    border-bottom: 1px solid var(--modal-header-border-color);
+    min-height: calc(var(--modal-title-padding) + var(--modal-title-line-height));
 
     // Close icon
     .close {
@@ -95,7 +94,7 @@
     h5,
     h6 {
       margin: 0;
-      line-height: $modal-title-line-height;
+      line-height: var(--modal-title-line-height);
     }
   }
 
@@ -103,14 +102,14 @@
   // Where all modal content resides (sibling of .header and .footer)
   .body {
     position: relative;
-    padding: $modal-inner-padding;
+    padding: var(--modal-inner-padding);
   }
 
   // Footer (for actions)
   .footer {
-    padding: $modal-inner-padding;
+    padding: var(--modal-inner-padding);
     text-align: right; // right align buttons
-    border-top: 1px solid $modal-footer-border-color;
+    border-top: 1px solid var(--modal-footer-border-color);
 
     @include clearfix(); // clear it in case folks use .pull-* classes on buttons
 
@@ -140,26 +139,17 @@
 }
 
 // Scale up the modal
-@media (min-width: $screen-sm-min) {
-  // Automatically set modal's width for larger viewports
-  .modal {
-    .dialog {
-      width: $modal-medium;
-      margin: 30px auto;
-    }
-    .content {
-      box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
-    }
-  }
-
-  // Modal sizes
-  .modal .small {
-    width: $modal-small;
-  }
+// Base modal size (medium)
+.modal .dialog {
+  width: var(--modal-medium);
 }
 
-@media (min-width: $screen-md-min) {
-  .modal .large {
-    width: $modal-large;
-  }
+// Small modal
+.modal .small {
+  width: var(--modal-small);
+}
+
+// Large modal
+.modal .large {
+  width: var(--modal-large);
 }

@@ -1,21 +1,20 @@
 // Close icons
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 
 .close:not(.icon) {
   float: right;
-  font-size: ($font-size-base * 1.5);
-  font-weight: $close-font-weight;
+  font-size: calc(var(--font-size-base) * 1.5);
+  font-weight: var(--close-font-weight);
   line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
+  color: var(--close-color);
+  text-shadow: var(--close-text-shadow);
   opacity: 0.2;
 
   &:hover,
   &:focus {
-    color: $close-color;
+    color: var(--close-color);
     text-decoration: none;
     cursor: pointer;
     opacity: 0.5;

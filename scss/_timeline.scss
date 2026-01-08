@@ -1,57 +1,56 @@
 // Timeline
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 
-@mixin timeline-variant($parent, $color) {
+@mixin timeline-variant($parent, $color-var) {
   .timeline#{$parent} {
     > ul,
     > ol {
       > li {
-        box-shadow: 0 0 0 2px var($color) inset;
+        box-shadow: 0 0 0 2px var(#{$color-var}) inset;
 
         &:hover {
-          box-shadow: 0 0 0 30px var($color) inset;
+          box-shadow: 0 0 0 30px var(#{$color-var}) inset;
         }
 
         &.active {
-          background-color: var($color);
+          background-color: var(#{$color-var});
         }
       }
     }
   }
 }
 
-@mixin timeline-size($parent, $size, $font-size, $border) {
+@mixin timeline-size($parent, $size-var, $font-size-var, $border-var) {
   .timeline#{$parent} {
     position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
 
     &::before {
-      height: var($border);
+      height: var(#{$border-var});
       left: 0;
       z-index: 10;
-      top: var($size) / 2;
+      top: calc(var(#{$size-var}) / 2);
     }
 
     > ul,
     > ol {
       > li {
         z-index: 11;
-        height: var($size);
-        width: var($size);
+        height: var(#{$size-var});
+        width: var(#{$size-var});
         border-radius: 50%;
-        box-shadow: 0 0 0 var($border) var(--timeline-background-default) inset;
+        box-shadow: 0 0 0 var(#{$border-var}) var(--timeline-background-default) inset;
 
         &:hover {
-          box-shadow: 0 0 0 var($size) / 2 var(--timeline-background-default) inset;
+          box-shadow: 0 0 0 calc(var(#{$size-var}) / 2) var(--timeline-background-default) inset;
         }
 
         > .title {
-          line-height: var($size);
-          font-size: var($font-size);
+          line-height: var(#{$size-var});
+          font-size: var(#{$font-size-var});
         }
       }
     }
@@ -142,7 +141,6 @@
 }
 
 // Colors
-
 @include timeline-variant('.primary', --timeline-background-primary);
 @include timeline-variant('.success', --timeline-background-success);
 @include timeline-variant('.info', --timeline-background-info);

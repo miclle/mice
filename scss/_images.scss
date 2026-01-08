@@ -1,7 +1,6 @@
 // Images
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // Image Mixins
@@ -26,7 +25,7 @@ img {
   }
 
   &.rounded {
-    border-radius: $border-radius-large;
+    border-radius: var(--border-radius-large);
   }
 
   &.circle {
@@ -38,7 +37,7 @@ img {
     line-height: 1.4286;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     transition: all 0.2s ease-in-out;
     display: inline-block;
     max-width: 100%;

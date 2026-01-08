@@ -3,7 +3,6 @@
 
 @use 'sass:color';
 @use 'sass:string';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 @mixin label-variant($color, $hover: null) {
@@ -29,11 +28,11 @@
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: $label-color;
+  color: var(--label-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
 
   // [converter] extracted a& to a.label
 
@@ -102,7 +101,7 @@ a.label {
   &.large {
     padding: 0.4em 0.8em 0.5em;
     font-size: 120%;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
   }
 }
 

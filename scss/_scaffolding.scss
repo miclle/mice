@@ -1,7 +1,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // Reset the box-sizing
@@ -22,11 +21,11 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: $background-color;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -53,12 +52,12 @@ textarea {
 // -------------------------
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $link-hover-color;
+    color: var(--link-hover-color);
     text-decoration: underline;
   }
 

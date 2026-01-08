@@ -2,7 +2,6 @@
 // --------------------------------------------------
 
 @use 'sass:color';
-@use 'variables' as *;
 @use 'mixins' as *;
 
 // Mixin
@@ -12,7 +11,11 @@
   color: $text-color;
 
   a {
-    color: color.adjust($text-color, $lightness: -10%);
+    // Using CSS filter for hover darkening effect instead of color.adjust()
+    &:hover,
+    &:focus {
+      filter: brightness(0.9);
+    }
   }
 }
 
@@ -22,7 +25,7 @@
   display: none;
   width: 100%;
   padding: 10px 20px;
-  padding: $message-padding;
+  padding: var(--message-padding);
   line-height: 1.8;
   font-size: 16px;
   background: #fff;
@@ -51,7 +54,7 @@
     color: inherit;
   }
   a {
-    font-weight: $message-link-font-weight;
+    font-weight: var(--message-link-font-weight);
   }
 
   .close {
@@ -74,26 +77,30 @@
 .message {
   &.success {
     @include message-variant(
-      $message-success-background,
-      $message-success-border,
-      $message-success-text
+      var(--message-success-background),
+      var(--message-success-border),
+      var(--message-success-text)
     );
   }
   &.info {
-    @include message-variant($message-info-background, $message-info-border, $message-info-text);
+    @include message-variant(
+      var(--message-info-background),
+      var(--message-info-border),
+      var(--message-info-text)
+    );
   }
   &.warning {
     @include message-variant(
-      $message-warning-background,
-      $message-warning-border,
-      $message-warning-text
+      var(--message-warning-background),
+      var(--message-warning-border),
+      var(--message-warning-text)
     );
   }
   &.danger {
     @include message-variant(
-      $message-danger-background,
-      $message-danger-border,
-      $message-danger-text
+      var(--message-danger-background),
+      var(--message-danger-border),
+      var(--message-danger-text)
     );
   }
 }
