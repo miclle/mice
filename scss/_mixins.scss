@@ -20,26 +20,6 @@
   }
 }
 
-// Box sizing
-@mixin box-sizing($boxmodel) {
-  box-sizing: $boxmodel;
-}
-
-// User select
-// For selecting text on the page
-
-@mixin user-select($select) {
-  // IE10+
-  user-select: $select;
-}
-
-// Drop shadows
-
-@mixin box-shadow($shadow...) {
-  // iOS <4.3 & Android <4.1
-  box-shadow: $shadow;
-}
-
 // Gradients
 @mixin gradient-striped($color: rgba(255, 255, 255, 0.15), $angle: 45deg) {
   background-image: linear-gradient(
@@ -54,58 +34,12 @@
   );
 }
 
-// Transforms
-// --------------------------------------------------
-@mixin transform($transform...) {
-  transform: $transform;
-}
-
 // Transitions
 // --------------------------------------------------
-@mixin transition($transition...) {
-  transition: $transition;
-}
 
-@mixin transition-property($property...) {
-  transition-property: $property;
-}
-
-@mixin transition-duration($duration...) {
-  transition-duration: $duration;
-}
-
-@mixin transition-timing-function($function...) {
-  transition-timing-function: $function;
-}
-
+// Transition for transform property only
 @mixin transition-transform($transition...) {
-  transition: -webkit-transform $transition;
-  transition: -moz-transform $transition;
-  transition: -o-transform $transition;
   transition: transform $transition;
-}
-
-@mixin translate($x, $y) {
-  // IE9 only
-  transform: translate($x, $y);
-}
-
-@mixin translate3d($x, $y, $z) {
-  transform: translate3d($x, $y, $z);
-}
-
-// Animations
-// --------------------------------------------------
-@mixin animation-name($name) {
-  animation-name: $name;
-}
-
-@mixin animation-duration($duration) {
-  animation-duration: $duration;
-}
-
-@mixin animation-direction($direction) {
-  animation-direction: $direction;
 }
 
 // Misc

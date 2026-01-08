@@ -54,7 +54,6 @@
       border-color: var(--border-color-default, $border-color-default);
       cursor: not-allowed;
       background-color: #eee;
-
       opacity: 0.55;
     }
   }
@@ -110,7 +109,6 @@ fieldset {
         cursor: not-allowed;
         background-color: #eee;
         border-width: 1px;
-
         opacity: 1;
       }
     }
@@ -143,9 +141,8 @@ select {
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none;
-
     opacity: 0.65;
-    @include user-select(none);
+    user-select: none;
   }
 }
 

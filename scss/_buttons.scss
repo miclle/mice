@@ -128,8 +128,7 @@ button,
   white-space: nowrap;
   outline: none;
   position: relative;
-
-  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
+  box-shadow: 0 1px 0 rgb(0 0 0 / 5%);
   @include button-size(
     $padding-base-vertical,
     $padding-base-horizontal,
@@ -137,7 +136,8 @@ button,
     $line-height-base,
     $border-radius
   );
-  @include user-select(none);
+
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -155,7 +155,6 @@ button,
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-
     opacity: 0.5;
   }
 
@@ -316,8 +315,8 @@ button,
       &:not(:first-child) {
         @include border-top-radius(0);
         @include border-bottom-radius($border-radius);
-        @include box-shadow(0 -1px 0 rgba(0, 0, 0, 0.15) inset);
 
+        box-shadow: 0 -1px 0 rgb(0 0 0 / 15%) inset;
         margin-left: 0;
         margin-top: -1px;
       }

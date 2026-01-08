@@ -11,7 +11,6 @@
   line-height: 1;
   color: $close-color;
   text-shadow: $close-text-shadow;
-
   opacity: 0.2;
 
   &:hover,
@@ -19,7 +18,6 @@
     color: $close-color;
     text-decoration: none;
     cursor: pointer;
-
     opacity: 0.5;
   }
 
