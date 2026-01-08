@@ -1,6 +1,9 @@
 // Progress bars
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Mixin
 @mixin progress-bar-variant($color) {
   background-color: $color;

@@ -1,6 +1,10 @@
 // Message
 // --------------------------------------------------
 
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Mixin
 @mixin message-variant($background, $border, $text-color) {
   background-color: $background;
@@ -30,7 +34,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $zindex-message;
+  z-index: var(--zindex-message);
 
   &.top {
     top: 0;

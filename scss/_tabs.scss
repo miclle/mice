@@ -1,9 +1,11 @@
 // Tabs
 // --------------------------------------------------
 
+@use 'mixins' as *;
+
 .tabs {
   list-style: none;
-  border-bottom: 1px solid $tabs-border-color;
+  border-bottom: 1px solid var(--tabs-border-color);
   padding: 0;
 
   @include clearfix();
@@ -19,14 +21,15 @@
       display: block;
       padding: 10px 15px;
       margin-right: 2px;
-      line-height: $line-height-base;
+      line-height: var(--line-height-base);
       border: 1px solid transparent;
-      border-radius: $border-radius $border-radius 0 0;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
       text-decoration: none;
 
       &:hover {
-        border-color: $tabs-link-hover-border-color $tabs-link-hover-border-color $tabs-border-color;
-        background-color: $tabs-link-hover-background-color;
+        border-color: var(--tabs-link-hover-border-color) var(--tabs-link-hover-border-color)
+          var(--tabs-border-color);
+        background-color: var(--tabs-link-hover-background-color);
       }
     }
 
@@ -35,9 +38,9 @@
       &,
       &:hover,
       &:focus {
-        color: $tabs-active-link-hover-color;
-        background-color: $tabs-active-link-hover-background;
-        border: 1px solid $tabs-active-link-hover-border-color;
+        color: var(--tabs-active-link-hover-color);
+        background-color: var(--tabs-active-link-hover-background);
+        border: 1px solid var(--tabs-active-link-hover-border-color);
         border-bottom-color: transparent;
         cursor: default;
       }
@@ -55,15 +58,15 @@
       > a {
         text-align: center;
         margin-right: 0;
-        border-bottom: 1px solid $tabs-justified-link-border-color;
-        border-radius: $border-radius $border-radius 0 0;
+        border-bottom: 1px solid var(--tabs-justified-link-border-color);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
       }
     }
 
     > .active > a,
     > .active > a:hover,
     > .active > a:focus {
-      border-bottom-color: $tabs-justified-active-link-border-color;
+      border-bottom-color: var(--tabs-justified-active-link-border-color);
     }
   }
 }

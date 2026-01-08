@@ -14,7 +14,7 @@
     position: fixed;
     left: 0;
     right: 0;
-    z-index: $zindex-navbar-fixed;
+    z-index: var(--zindex-navbar-fixed);
   }
   &.top {
     top: 0;

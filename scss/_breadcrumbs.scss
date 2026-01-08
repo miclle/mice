@@ -2,23 +2,23 @@
 // --------------------------------------------------
 
 .breadcrumb {
-  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
-  margin-bottom: $line-height-computed;
+  padding: var(--breadcrumb-padding-vertical) var(--breadcrumb-padding-horizontal);
+  margin-bottom: var(--line-height-computed);
   list-style: none;
-  background-color: $breadcrumb-background;
-  border-radius: $border-radius;
+  background-color: var(--breadcrumb-background);
+  border-radius: var(--border-radius);
 
   > li {
     display: inline-block;
 
     + li::before {
-      content: '#{$breadcrumb-separator}\00a0'; // Unicode space added since inline-block means non-collapsing white-space
+      content: var(--breadcrumb-separator) '\00a0'; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
-      color: $breadcrumb-color;
+      color: var(--breadcrumb-color);
     }
   }
 
   > .active {
-    color: $breadcrumb-active-color;
+    color: var(--breadcrumb-active-color);
   }
 }

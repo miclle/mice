@@ -1,6 +1,9 @@
 // Modals
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .dialog    - positioning shell for the actual modal
@@ -21,7 +24,7 @@
   overflow: hidden;
   position: fixed;
   inset: 0;
-  z-index: $zindex-modal;
+  z-index: var(--zindex-modal);
   -webkit-overflow-scrolling: touch;
   outline: 0;
 
@@ -39,7 +42,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: $zindex-modal-background;
+  z-index: var(--zindex-modal-background);
   background-color: $modal-backdrop-background;
 
   // Fade for backdrop

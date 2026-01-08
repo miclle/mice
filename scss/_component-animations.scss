@@ -1,6 +1,8 @@
 // Component animations
 // --------------------------------------------------
 
+@use 'mixins' as *;
+
 .fade {
   opacity: 0;
 

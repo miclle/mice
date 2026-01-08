@@ -1,29 +1,14 @@
 // Alerts
 // --------------------------------------------------
 
-// Mixin
-@mixin alert-variant($background, $border, $text-color) {
-  background-color: $background;
-  border-color: $border;
-  color: $text-color;
-
-  hr {
-    border-top-color: color.adjust($border, $lightness: -5%);
-  }
-
-  a {
-    color: color.adjust($text-color, $lightness: -10%);
-  }
-}
-
 // Base styles
 // -------------------------
 
 .alert {
-  padding: $alert-padding;
-  margin-bottom: $line-height-computed;
+  padding: var(--alert-padding);
+  margin-bottom: var(--line-height-computed);
   border: 1px solid transparent;
-  border-radius: $alert-border-radius;
+  border-radius: var(--alert-border-radius);
 
   // Headings for larger alerts
   h4 {
@@ -34,7 +19,7 @@
 
   // Provide class for links that match alerts
   a {
-    font-weight: $alert-link-font-weight;
+    font-weight: var(--alert-link-font-weight);
   }
 
   // Improve alignment and spacing of inner content
@@ -46,12 +31,15 @@
   > p + p {
     margin-top: 5px;
   }
+
+  // Note: hr and link colors removed as they conflict with color: inherit
+  // Use specific color variants (success, info, warning, danger) for colored alerts
 }
 
 // Dismissible alerts
 // Expand the right padding and account for the close button's positioning.
 .alert.dismissible {
-  padding-right: ($alert-padding + 20);
+  padding-right: calc(var(--alert-padding) + 20px);
 
   // Adjust close link position
   .close {
@@ -67,18 +55,26 @@
 
 .alert {
   &.success {
-    @include alert-variant($alert-success-background, $alert-success-border, $alert-success-text);
+    background-color: var(--alert-success-background);
+    border-color: var(--alert-success-border);
+    color: var(--alert-success-text);
   }
 
   &.info {
-    @include alert-variant($alert-info-background, $alert-info-border, $alert-info-text);
+    background-color: var(--alert-info-background);
+    border-color: var(--alert-info-border);
+    color: var(--alert-info-text);
   }
 
   &.warning {
-    @include alert-variant($alert-warning-background, $alert-warning-border, $alert-warning-text);
+    background-color: var(--alert-warning-background);
+    border-color: var(--alert-warning-border);
+    color: var(--alert-warning-text);
   }
 
   &.danger {
-    @include alert-variant($alert-danger-background, $alert-danger-border, $alert-danger-text);
+    background-color: var(--alert-danger-background);
+    border-color: var(--alert-danger-border);
+    color: var(--alert-danger-text);
   }
 }

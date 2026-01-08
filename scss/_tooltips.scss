@@ -1,6 +1,9 @@
 // Tooltips
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Tooltip variants
 @mixin tooltip-variant($tooltip-color, $tooltip-background, $tooltip-arrow-color) {
   .inner {
@@ -30,7 +33,7 @@
 // Base class
 .tooltip {
   position: absolute;
-  z-index: $zindex-tooltip;
+  z-index: var(--zindex-tooltip);
   display: block;
   visibility: visible;
   font-size: $font-size-small;

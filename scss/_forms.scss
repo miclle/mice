@@ -1,26 +1,48 @@
 // Forms
 // --------------------------------------------------
 
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:string';
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
 
 // Input variants
 // -------------------------
-@mixin input-variant($border-color) {
+@mixin input-variant($border-color, $border-hover: null, $border-focus: null) {
+  $use-css-vars: string.index($border-color, 'var(') != null;
+
   color: $gray;
   background-color: #fff;
   border-color: $border-color;
 
   &:hover {
-    border-color: color.adjust($border-color, $lightness: -20%);
+    @if $use-css-vars and $border-hover {
+      border-color: $border-hover;
+    } @else if not $use-css-vars {
+      border-color: color.adjust($border-color, $lightness: -20%);
+    }
   }
 
   &:focus,
   &:active,
   &.active {
-    border-color: color.adjust($border-color, $lightness: -20%);
-    box-shadow:
-      0 0 0 1px color.adjust($border-color, $lightness: -15%),
-      inset 0 1px #f5f5f5;
+    @if $use-css-vars and $border-hover {
+      border-color: $border-hover;
+    } @else if not $use-css-vars {
+      border-color: color.adjust($border-color, $lightness: -20%);
+    }
+
+    @if $use-css-vars and $border-focus {
+      box-shadow: 0 0 0 1px $border-focus, inset 0 1px #f5f5f5;
+    } @else if not $use-css-vars {
+      box-shadow:
+        0 0 0 1px color.adjust($border-color, $lightness: -15%),
+        inset 0 1px #f5f5f5;
+    }
   }
 
   &.disabled,
@@ -29,7 +51,7 @@
     &:hover,
     &:active,
     &.active {
-      border-color: $border-color-default;
+      border-color: var(--border-color-default, $border-color-default);
       cursor: not-allowed;
       background-color: #eee;
 
@@ -40,7 +62,7 @@
 
 // Field variants
 // -------------------------
-@mixin field-variant($border-color) {
+@mixin field-variant($border-color, $border-hover: null, $border-focus: null) {
   color: $border-color;
 
   input.text,
@@ -50,7 +72,7 @@
   input[type='number'],
   textarea,
   select {
-    @include input-variant($border-color);
+    @include input-variant($border-color, $border-hover, $border-focus);
   }
 }
 
@@ -153,26 +175,50 @@ input[type='password'],
 input[type='email'],
 input[type='number'],
 textarea {
-  @include input-variant($border-color-default);
+  @include input-variant(
+    var(--border-color-default),
+    var(--border-color-default-hover),
+    var(--border-color-default-focus)
+  );
 
   &.primary {
-    @include input-variant($border-color-primary);
+    @include input-variant(
+      var(--border-color-primary),
+      var(--border-color-primary-hover),
+      var(--border-color-primary-focus)
+    );
   }
 
   &.success {
-    @include input-variant($border-color-success);
+    @include input-variant(
+      var(--border-color-success),
+      var(--border-color-success-hover),
+      var(--border-color-success-focus)
+    );
   }
 
   &.info {
-    @include input-variant($border-color-info);
+    @include input-variant(
+      var(--border-color-info),
+      var(--border-color-info-hover),
+      var(--border-color-info-focus)
+    );
   }
 
   &.warning {
-    @include input-variant($border-color-warning);
+    @include input-variant(
+      var(--border-color-warning),
+      var(--border-color-warning-hover),
+      var(--border-color-warning-focus)
+    );
   }
 
   &.danger {
-    @include input-variant($border-color-danger);
+    @include input-variant(
+      var(--border-color-danger),
+      var(--border-color-danger-hover),
+      var(--border-color-danger-focus)
+    );
   }
 
   &.fluid {
@@ -248,15 +294,27 @@ textarea {
   }
 
   &.success {
-    @include field-variant($border-color-success);
+    @include field-variant(
+      var(--border-color-success),
+      var(--border-color-success-hover),
+      var(--border-color-success-focus)
+    );
   }
 
   &.warning {
-    @include field-variant($border-color-warning);
+    @include field-variant(
+      var(--border-color-warning),
+      var(--border-color-warning-hover),
+      var(--border-color-warning-focus)
+    );
   }
 
   &.error {
-    @include field-variant($border-color-danger);
+    @include field-variant(
+      var(--border-color-danger),
+      var(--border-color-danger-hover),
+      var(--border-color-danger-focus)
+    );
   }
 
   &.feedback {
@@ -333,21 +391,21 @@ form.horizontal {
   $offsets: 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven';
 
   @for $i from 1 through list.length($offsets) {
-    &.offset.#{nth($offsets, $i)} {
+    &.offset.#{list.nth($offsets, $i)} {
       .field {
         position: relative;
         vertical-align: middle;
 
         @include clearfix();
 
-        padding-left: (100% / 12 * $i);
+        padding-left: math.div(100%, 12) * $i;
 
         &:not(.checkbox) {
           label {
             float: left;
-            width: (100% / 12 * $i);
+            width: math.div(100%, 12) * $i;
             height: 34px;
-            margin-left: (0 - (100% / 12 * $i));
+            margin-left: 0 - (math.div(100%, 12) * $i);
             margin-bottom: 0;
             padding-right: 15px;
             padding-top: 6px;

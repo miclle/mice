@@ -1,6 +1,10 @@
 // Typography
 // --------------------------------------------------
 
+@use 'sass:math';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Headings
 // -------------------------
 h1,
@@ -13,8 +17,8 @@ h6 {
   font-weight: $heading-font-weight;
   line-height: $heading-line-height;
   color: $heading-color;
-  margin-top: ($line-height-computed / 2);
-  margin-bottom: ($line-height-computed / 2);
+  margin-top: math.div($line-height-computed, 2);
+  margin-bottom: math.div($line-height-computed, 2);
 
   small {
     font-weight: normal;
@@ -23,7 +27,7 @@ h6 {
   }
 
   &.title {
-    padding-bottom: $line-height-computed / 2;
+    padding-bottom: math.div($line-height-computed, 2);
     border-bottom: 1px solid $page-header-border-color;
     margin: ($line-height-computed * 2) 0 $line-height-computed;
   }
@@ -67,7 +71,7 @@ h6 {
 // -------------------------
 
 p {
-  margin: 0 0 ($line-height-computed / 2);
+  margin: 0 0 math.div($line-height-computed, 2);
 }
 
 .lead {

@@ -1,13 +1,24 @@
 // Lables
 // --------------------------------------------------
 
-@mixin label-variant($color) {
+@use 'sass:color';
+@use 'sass:string';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@mixin label-variant($color, $hover: null) {
+  $use-css-vars: string.index($color, 'var(') != null;
+
   background-color: $color;
 
   &[href] {
     &:hover,
     &:focus {
-      background-color: color.adjust($color, $lightness: -10%);
+      @if $use-css-vars and $hover {
+        background-color: $hover;
+      } @else if not $use-css-vars {
+        background-color: color.adjust($color, $lightness: -10%);
+      }
     }
   }
 }
@@ -42,7 +53,7 @@
 a.label {
   &:hover,
   &:focus {
-    color: $label-link-hover-color;
+    color: var(--label-link-hover-color);
     text-decoration: none;
     cursor: pointer;
   }
@@ -51,22 +62,40 @@ a.label {
 // Colors
 // Contextual variations (linked labels get darker on :hover)
 .label {
-  @include label-variant($label-background-default);
+  @include label-variant(
+    var(--label-background-default),
+    var(--label-background-default-hover)
+  );
 }
 .label.primary {
-  @include label-variant($label-background-primary);
+  @include label-variant(
+    var(--label-background-primary),
+    var(--label-background-primary-hover)
+  );
 }
 .label.success {
-  @include label-variant($label-background-success);
+  @include label-variant(
+    var(--label-background-success),
+    var(--label-background-success-hover)
+  );
 }
 .label.info {
-  @include label-variant($label-background-info);
+  @include label-variant(
+    var(--label-background-info),
+    var(--label-background-info-hover)
+  );
 }
 .label.warning {
-  @include label-variant($label-background-warning);
+  @include label-variant(
+    var(--label-background-warning),
+    var(--label-background-warning-hover)
+  );
 }
 .label.danger {
-  @include label-variant($label-background-danger);
+  @include label-variant(
+    var(--label-background-danger),
+    var(--label-background-danger-hover)
+  );
 }
 
 .label {

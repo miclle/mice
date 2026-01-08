@@ -1,6 +1,12 @@
 // Lists
 // --------------------------------------------------
 
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // List group variants
 @mixin list-group-item-variant($state, $background, $color) {
   > li.#{$state},
@@ -34,7 +40,7 @@
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: math.div($line-height-computed, 2);
   ul,
   ol {
     margin-bottom: 0;
@@ -82,9 +88,9 @@ $columns:
 @for $i from 1 through list.length($columns) {
   ul.grid,
   ol.grid {
-    &.#{nth($columns, $i)} {
+    &.#{list.nth($columns, $i)} {
       > li {
-        width: (100% / ($i + 1));
+        width: math.div(100%, ($i + 1));
       }
     }
   }
@@ -145,8 +151,8 @@ section {
       padding: 10px 15px;
       margin-bottom: -1px;
       margin-top: 0;
-      background-color: $list-group-background;
-      border: 1px solid $list-group-border-color;
+      background-color: var(--list-group-background);
+      border: 1px solid var(--list-group-border-color);
 
       @include clearfix();
 
@@ -160,13 +166,13 @@ section {
     }
 
     > a {
-      color: $list-group-link-color;
+      color: var(--list-group-link-color);
       // Hover state
       &:hover,
       &:focus {
         text-decoration: none;
-        color: $list-group-link-hover-color;
-        background-color: $list-group-hover-background;
+        color: var(--list-group-link-hover-color);
+        background-color: var(--list-group-hover-background);
       }
     }
 
@@ -177,14 +183,14 @@ section {
       &.disabled,
       &.disabled:hover,
       &.disabled:focus {
-        background-color: $list-group-disabled-background;
-        color: $list-group-disabled-color;
+        background-color: var(--list-group-disabled-background);
+        color: var(--list-group-disabled-color);
 
         .heading {
           color: inherit;
         }
         .text {
-          color: $list-group-disabled-text-color;
+          color: var(--list-group-disabled-text-color);
         }
       }
 
@@ -193,15 +199,15 @@ section {
       &.active:hover,
       &.active:focus {
         z-index: 2;
-        color: $list-group-active-color;
-        background-color: $list-group-active-background;
-        border-color: $list-group-active-border;
+        color: var(--list-group-active-color);
+        background-color: var(--list-group-active-background);
+        border-color: var(--list-group-active-border);
 
         .heading {
           color: inherit;
         }
         .text {
-          color: $list-group-active-text-color;
+          color: var(--list-group-active-text-color);
         }
       }
     }

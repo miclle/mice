@@ -1,6 +1,9 @@
 // Tables
 // --------------------------------------------------
 
+@use 'sass:color';
+@use 'variables' as *;
+
 table {
   display: table;
   width: 100%;

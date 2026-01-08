@@ -17,6 +17,30 @@
   --text-color: #333;
   --link-color: #0085f0;
 
+  // Border colors
+  --border-color-default: #ccc;
+  --border-color-primary: #0085f0;
+  --border-color-success: #81c735;
+  --border-color-info: #5bc0de;
+  --border-color-warning: #f0ad4e;
+  --border-color-danger: #ff3a3c;
+
+  // Border hover colors (-20% lightness)
+  --border-color-default-hover: #b3b3b3;
+  --border-color-primary-hover: #0069c0;
+  --border-color-success-hover: #6aa82b;
+  --border-color-info-hover: #499ab2;
+  --border-color-warning-hover: #c38a3e;
+  --border-color-danger-hover: #cc2e2f;
+
+  // Border focus colors (-15% lightness for shadow)
+  --border-color-default-focus: #c4c4c4;
+  --border-color-primary-focus: #0072cc;
+  --border-color-success-focus: #71b730;
+  --border-color-info-focus: #4dadbd;
+  --border-color-warning-focus: #cb9d42;
+  --border-color-danger-focus: #d93132;
+
   // Radius
   --border-radius: 2px;
   --border-radius-small: 2px;
@@ -147,8 +171,21 @@
 
   // Labels
   --label-background-default: #999;
+  --label-background-primary: #0085f0;
+  --label-background-success: #81c735;
+  --label-background-info: #5bc0de;
+  --label-background-warning: #f0ad4e;
+  --label-background-danger: #ff3a3c;
   --label-color: #fff;
   --label-link-hover-color: #fff;
+
+  // Label hover colors (-10% lightness)
+  --label-background-default-hover: #8a8a8a;
+  --label-background-primary-hover: #0077d9;
+  --label-background-success-hover: #73b32f;
+  --label-background-info-hover: #50adc8;
+  --label-background-warning-hover: #d39b46;
+  --label-background-danger-hover: #e13436;
 
   // Pre-calculated color variants for CSS-based interactions
   // Button hover states (+5% brightness)
@@ -186,6 +223,18 @@
   --table-row-warning-background: #f5e9d1;
   --table-row-danger-background: #f9c8c9;
 
+  // State text and background colors
+  --state-primary-text: #0085f0;
+  --state-primary-background: #0085f0;
+  --state-success-text: #3c763d;
+  --state-success-background: #dff0d8;
+  --state-info-text: #31708f;
+  --state-info-background: #d9edf7;
+  --state-warning-text: #8a6d3b;
+  --state-warning-background: #fcf8e3;
+  --state-danger-text: #a94442;
+  --state-danger-background: #f2dede;
+
   // State border variants (pre-calculated color.adjust)
   --state-primary-border: #0067dc;
   --state-success-border: #c9e2b3;
@@ -200,11 +249,42 @@
   --button-warning-border: #eea236;
   --button-danger-border: #ff2628;
 
-  // Pagination hover color (-15% lightness)
+  // Pagination
+  --pagination-color: #0085f0;
+  --pagination-background: #fff;
+  --pagination-border: #ddd;
   --pagination-hover-color: #0076e6;
+  --pagination-hover-background: #eee;
+  --pagination-hover-border: #ddd;
+  --pagination-active-color: #fff;
+  --pagination-active-background: #0085f0;
+  --pagination-active-border: #0085f0;
+  --pagination-disabled-color: #999;
+  --pagination-disabled-background: #fff;
+  --pagination-disabled-border: #ddd;
 
-  // List group text color (+40% lightness)
+  // Pager
+  --pager-background: #fff;
+  --pager-border: #ddd;
+  --pager-hover-background: #eee;
+  --pager-active-background: #0085f0;
+  --pager-active-color: #fff;
+  --pager-disabled-color: #999;
+
+  // List group
+  --list-group-background: #fff;
+  --list-group-border-color: #ddd;
+  --list-group-border-radius: 2px;
+  --list-group-hover-background: #f5f5f5;
+  --list-group-active-color: #fff;
+  --list-group-active-background: #0085f0;
+  --list-group-active-border: #0085f0;
   --list-group-active-text-color: #d9f2ff;
+  --list-group-disabled-color: #999;
+  --list-group-disabled-background: #eee;
+  --list-group-disabled-text-color: #999;
+  --list-group-link-color: #555;
+  --list-group-link-hover-color: #555;
 
   // Link hover color (-15% lightness)
   --link-hover-color: #0076e6;
@@ -250,6 +330,18 @@
   --alert-padding: 15px;
   --alert-border-radius: 2px;
   --alert-link-font-weight: bold;
+  --alert-success-background: #dff0d8;
+  --alert-success-text: #3c763d;
+  --alert-success-border: #d6e9c6;
+  --alert-info-background: #d9edf7;
+  --alert-info-text: #31708f;
+  --alert-info-border: #bce8f1;
+  --alert-warning-background: #fcf8e3;
+  --alert-warning-text: #8a6d3b;
+  --alert-warning-border: #faebcc;
+  --alert-danger-background: #f2dede;
+  --alert-danger-text: #a94442;
+  --alert-danger-border: #ebccd1;
 
   // Close
   --close-font-weight: bold;
@@ -282,4 +374,70 @@
   // Message
   --message-padding: 10px 20px;
   --message-link-font-weight: bold;
+
+  // Timeline
+  --timeline-color-default: #333;
+  --timeline-background-default: #999;
+  --timeline-background-primary: #0085f0;
+  --timeline-background-success: #81c735;
+  --timeline-background-info: #5bc0de;
+  --timeline-background-warning: #f0ad4e;
+  --timeline-background-danger: #ff3a3c;
+  --timeline-small-size: 30px;
+  --timeline-small-font-size: 12px;
+  --timeline-small-border: 1px;
+  --timeline-default-size: 60px;
+  --timeline-default-font-size: 14px;
+  --timeline-default-border: 2px;
+  --timeline-large-size: 120px;
+  --timeline-large-font-size: 24px;
+  --timeline-large-border: 4px;
+
+  // Tabs
+  --tabs-border-color: #ddd;
+  --tabs-link-hover-border-color: #eee;
+  --tabs-link-hover-background-color: #eee;
+  --tabs-active-link-hover-background: #fff;
+  --tabs-active-link-hover-color: #666;
+  --tabs-active-link-hover-border-color: #ddd;
+  --tabs-justified-link-border-color: #ddd;
+  --tabs-justified-active-link-border-color: #fff;
+
+  // Breadcrumbs
+  --breadcrumb-padding-vertical: 8px;
+  --breadcrumb-padding-horizontal: 15px;
+  --breadcrumb-background: #f5f5f5;
+  --breadcrumb-color: #ccc;
+  --breadcrumb-active-color: #999;
+  --breadcrumb-separator: '/';
+
+  // Wells
+  --well-background: #f5f5f5;
+  --well-border: #e0e0e0;
+
+  // Carousel
+  --carousel-text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  --carousel-control-color: #fff;
+  --carousel-control-width: 15%;
+  --carousel-control-opacity: 0.5;
+  --carousel-control-font-size: 20px;
+  --carousel-indicator-active-background: #fff;
+  --carousel-indicator-border-color: #fff;
+  --carousel-caption-color: #fff;
+
+  // Z-index
+  --zindex-navbar-fixed: 1030;
+  --zindex-modal-background: 1040;
+  --zindex-modal: 1050;
+  --zindex-tooltip: 1070;
+  --zindex-message: 1090;
+
+  // Responsive breakpoints
+  --screen-xs-min: 480px;
+  --screen-sm-min: 768px;
+  --screen-md-min: 992px;
+  --screen-lg-min: 1200px;
+  --screen-xs-max: 767px;
+  --screen-sm-max: 991px;
+  --screen-md-max: 1199px;
 }

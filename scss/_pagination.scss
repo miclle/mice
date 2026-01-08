@@ -1,6 +1,9 @@
 // Pagination (multiple pages)
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // mixin
 @mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
   > li {
@@ -27,9 +30,9 @@
       padding: $padding-base-vertical $padding-base-horizontal;
       line-height: $line-height-base;
       text-decoration: none;
-      color: $pagination-color;
-      background-color: $pagination-background;
-      border: 1px solid $pagination-border;
+      color: var(--pagination-color);
+      background-color: var(--pagination-background);
+      border: 1px solid var(--pagination-border);
       margin-left: -1px;
     }
     &:first-child {
@@ -44,9 +47,9 @@
   > li > span {
     &:hover,
     &:focus {
-      color: $pagination-hover-color;
-      background-color: $pagination-hover-background;
-      border-color: $pagination-hover-border;
+      color: var(--pagination-hover-color);
+      background-color: var(--pagination-hover-background);
+      border-color: var(--pagination-hover-border);
     }
   }
 
@@ -56,9 +59,9 @@
     &:hover,
     &:focus {
       z-index: 2;
-      color: $pagination-active-color;
-      background-color: $pagination-active-background;
-      border-color: $pagination-active-border;
+      color: var(--pagination-active-color);
+      background-color: var(--pagination-active-background);
+      border-color: var(--pagination-active-border);
       cursor: default;
     }
   }
@@ -70,9 +73,9 @@
     > a,
     > a:hover,
     > a:focus {
-      color: $pagination-disabled-color;
-      background-color: $pagination-disabled-background;
-      border-color: $pagination-disabled-border;
+      color: var(--pagination-disabled-color);
+      background-color: var(--pagination-disabled-background);
+      border-color: var(--pagination-disabled-border);
       cursor: not-allowed;
     }
   }
@@ -117,15 +120,15 @@
     > span {
       display: inline-block;
       padding: 5px 14px;
-      background-color: $pager-background;
-      border: 1px solid $pager-border;
+      background-color: var(--pager-background);
+      border: 1px solid var(--pager-border);
       border-radius: $pager-border-radius;
     }
 
     > a:hover,
     > a:focus {
       text-decoration: none;
-      background-color: $pager-hover-background;
+      background-color: var(--pager-hover-background);
     }
   }
 
@@ -148,8 +151,8 @@
     > a:hover,
     > a:focus,
     > span {
-      color: $pager-disabled-color;
-      background-color: $pager-background;
+      color: var(--pager-disabled-color);
+      background-color: var(--pager-background);
       cursor: not-allowed;
     }
   }

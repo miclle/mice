@@ -1,6 +1,10 @@
 // Carousel
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'images' as *;
+
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
@@ -70,14 +74,14 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: $carousel-control-width;
+    width: var(--carousel-control-width);
 
-    @include opacity($carousel-control-opacity);
+    opacity: var(--carousel-control-opacity);
 
-    font-size: $carousel-control-font-size;
-    color: $carousel-control-color;
+    font-size: var(--carousel-control-font-size);
+    color: var(--carousel-control-color);
     text-align: center;
-    text-shadow: $carousel-text-shadow;
+    text-shadow: var(--carousel-text-shadow);
     // We can't have this transition here because WebKit cancels the carousel
     // animation if you trip this while in the middle of another animation.
 
@@ -95,10 +99,10 @@
     &:hover,
     &:focus {
       outline: 0;
-      color: $carousel-control-color;
+      color: var(--carousel-control-color);
       text-decoration: none;
 
-      @include opacity(0.9);
+      opacity: 0.9;
     }
 
     // Toggles
@@ -162,7 +166,7 @@
       height: 10px;
       margin: 1px;
       text-indent: -999px;
-      border: 1px solid $carousel-indicator-border-color;
+      border: 1px solid var(--carousel-indicator-border-color);
       border-radius: 10px;
       cursor: pointer;
     }
@@ -170,7 +174,7 @@
       margin: 0;
       width: 12px;
       height: 12px;
-      background-color: $carousel-indicator-active-background;
+      background-color: var(--carousel-indicator-active-background);
     }
   }
 
@@ -185,9 +189,9 @@
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: $carousel-caption-color;
+    color: var(--carousel-caption-color);
     text-align: center;
-    text-shadow: $carousel-text-shadow;
+    text-shadow: var(--carousel-text-shadow);
     & .btn {
       text-shadow: none; // No shadow for button elements in carousel-caption
     }

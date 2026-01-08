@@ -1,19 +1,22 @@
 // Timeline
 // --------------------------------------------------
 
+@use 'variables' as *;
+@use 'mixins' as *;
+
 @mixin timeline-variant($parent, $color) {
   .timeline#{$parent} {
     > ul,
     > ol {
       > li {
-        box-shadow: 0 0 0 2px $color inset;
+        box-shadow: 0 0 0 2px var($color) inset;
 
         &:hover {
-          box-shadow: 0 0 0 30px $color inset;
+          box-shadow: 0 0 0 30px var($color) inset;
         }
 
         &.active {
-          background-color: $color;
+          background-color: var($color);
         }
       }
     }
@@ -27,28 +30,28 @@
     margin-bottom: 10px;
 
     &::before {
-      height: $border;
+      height: var($border);
       left: 0;
       z-index: 10;
-      top: $size / 2;
+      top: var($size) / 2;
     }
 
     > ul,
     > ol {
       > li {
         z-index: 11;
-        height: $size;
-        width: $size;
+        height: var($size);
+        width: var($size);
         border-radius: 50%;
-        box-shadow: 0 0 0 $border $timeline-background-default inset;
+        box-shadow: 0 0 0 var($border) var(--timeline-background-default) inset;
 
         &:hover {
-          box-shadow: 0 0 0 $size / 2 $timeline-background-default inset;
+          box-shadow: 0 0 0 var($size) / 2 var(--timeline-background-default) inset;
         }
 
         > .title {
-          line-height: $size;
-          font-size: $font-size;
+          line-height: var($size);
+          font-size: var($font-size);
         }
       }
     }
@@ -99,17 +102,17 @@
       border-radius: 50%;
       overflow: hidden;
       background-color: #fff;
-      box-shadow: 0 0 0 2px $timeline-background-default inset;
+      box-shadow: 0 0 0 2px var(--timeline-background-default) inset;
       transition: all 0.25s ease;
 
       &:hover {
-        box-shadow: 0 0 0 30px $timeline-background-default inset;
+        box-shadow: 0 0 0 30px var(--timeline-background-default) inset;
         color: #fff;
       }
 
       &.active {
         box-shadow: none;
-        background-color: $timeline-background-default;
+        background-color: var(--timeline-background-default);
         color: #fff;
       }
 
@@ -140,23 +143,13 @@
 
 // Colors
 
-@include timeline-variant('.primary', $timeline-background-primary);
-@include timeline-variant('.success', $timeline-background-success);
-@include timeline-variant('.info', $timeline-background-info);
-@include timeline-variant('.warning', $timeline-background-warning);
-@include timeline-variant('.danger', $timeline-background-danger);
+@include timeline-variant('.primary', --timeline-background-primary);
+@include timeline-variant('.success', --timeline-background-success);
+@include timeline-variant('.info', --timeline-background-info);
+@include timeline-variant('.warning', --timeline-background-warning);
+@include timeline-variant('.danger', --timeline-background-danger);
 
 // Sizing
-@include timeline-size(
-  '.small',
-  $timeline-small-size,
-  $timeline-small-font-size,
-  $timeline-small-border
-);
-// @include timeline-size(".default", $timeline-default-size, $timeline-default-font-size, $timeline-default-border);
-@include timeline-size(
-  '.large',
-  $timeline-large-size,
-  $timeline-large-font-size,
-  $timeline-large-border
-);
+@include timeline-size('.small', --timeline-small-size, --timeline-small-font-size, --timeline-small-border);
+// @include timeline-size(".default", --timeline-default-size, --timeline-default-font-size, --timeline-default-border);
+@include timeline-size('.large', --timeline-large-size, --timeline-large-font-size, --timeline-large-border);

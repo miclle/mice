@@ -3,48 +3,48 @@
 @use 'sass:list';
 
 // Core variables and mixins
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 // CSS Custom Properties
-@import 'root';
+@use 'root' as *;
 
 // Reset and dependencies
-@import 'normalize';
+@use 'normalize';
 
 // Base CSS
-@import 'scaffolding';
-@import 'typography';
-@import 'code';
-@import 'grid';
-@import 'callouts';
-@import 'buttons';
-@import 'images';
+@use 'scaffolding';
+@use 'typography';
+@use 'code';
+@use 'grid';
+@use 'callouts';
+@use 'buttons';
+@use 'images';
 
 // Components
-@import 'component-animations';
-@import 'menu';
-@import 'tabs';
-@import 'navbar';
-@import 'sidebar';
-@import 'lists';
-@import 'tables';
-@import 'breadcrumbs';
-@import 'pagination';
-@import 'panels';
-@import 'media';
-@import 'labels';
-@import 'timeline';
-@import 'progress';
-@import 'alerts';
-@import 'close';
-@import 'modals';
-@import 'message';
-@import 'tooltips';
-@import 'slider';
+@use 'component-animations';
+@use 'menu';
+@use 'tabs';
+@use 'navbar';
+@use 'sidebar';
+@use 'lists';
+@use 'tables';
+@use 'breadcrumbs';
+@use 'pagination';
+@use 'panels';
+@use 'media';
+@use 'labels';
+@use 'timeline';
+@use 'progress';
+@use 'alerts';
+@use 'close';
+@use 'modals';
+@use 'message';
+@use 'tooltips';
+@use 'slider';
 
 // Form
-@import 'forms';
+@use 'forms';
 
 // Utility classes
-@import 'utilities';
+@use 'utilities';

@@ -1,6 +1,11 @@
 // Grid system
 // --------------------------------------------------
 
+@use 'sass:math';
+@use 'sass:list';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -51,13 +56,13 @@
 
 @mixin column-child($columns) {
   > .column {
-    width: (100% / $columns);
+    width: math.div(100%, $columns);
   }
 }
 
 @mixin column-self($columns, $value) {
   &.column {
-    width: (100% / $columns * $value);
+    width: math.div(100%, $columns) * $value;
   }
 }
 
@@ -65,12 +70,12 @@ $columns:
   'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve';
 
 @for $i from 1 through list.length($columns) {
-  .grid.#{nth($columns, $i)} {
+  .grid.#{list.nth($columns, $i)} {
     @include column-child($i + 1);
 
     @if $i - 1 > 0 {
       @for $j from 1 through $i - 1 {
-        > .#{nth($columns, $j)} {
+        > .#{list.nth($columns, $j)} {
           @include column-self($i + 1, $j + 1);
         }
       }
@@ -81,11 +86,11 @@ $columns:
 // Go full width at less than 480px
 @media only screen and (width <= 480px) {
   @for $i from 1 through list.length($columns) {
-    .grid.#{nth($columns, $i)} {
+    .grid.#{list.nth($columns, $i)} {
       @include column-child(1);
 
       @for $j from 1 through $i {
-        > .#{nth($columns, $j)} {
+        > .#{list.nth($columns, $j)} {
           @include column-self($i + 1, $i + 1);
         }
       }
