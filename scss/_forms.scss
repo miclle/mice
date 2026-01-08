@@ -340,14 +340,14 @@ form.horizontal {
 
         @include clearfix();
 
-        padding-left: math.percentage(1 / 12 * $i);
+        padding-left: (100% / 12 * $i);
 
         &:not(.checkbox) {
           label {
             float: left;
-            width: math.percentage(1 / 12 * $i);
+            width: (100% / 12 * $i);
             height: 34px;
-            margin-left: (0 - math.percentage(1 / 12 * $i));
+            margin-left: (0 - (100% / 12 * $i));
             margin-bottom: 0;
             padding-right: 15px;
             padding-top: 6px;

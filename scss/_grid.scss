@@ -51,13 +51,13 @@
 
 @mixin column-child($columns) {
   > .column {
-    width: math.percentage(1 / $columns);
+    width: (100% / $columns);
   }
 }
 
 @mixin column-self($columns, $value) {
   &.column {
-    width: math.percentage(1 / $columns * $value);
+    width: (100% / $columns * $value);
   }
 }
 
