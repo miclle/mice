@@ -80,39 +80,6 @@ input[type='submit'] {
   }
 }
 
-// Form control sizing
-// Relative text size, padding, and border-radii changes for form controls. For
-// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
-// element gets special love because it's special, and that's a fact!
-// [converter] $parent hack
-@mixin input-size(
-  $parent,
-  $input-height,
-  $padding-vertical,
-  $padding-horizontal,
-  $font-size,
-  $line-height,
-  $border-radius
-) {
-  // #{$parent} {
-  //   height: $input-height;
-  //   padding: $padding-vertical $padding-horizontal;
-  //   font-size: $font-size;
-  //   line-height: $line-height;
-  //   border-radius: $border-radius;
-  // }
-
-  // select#{$parent} {
-  //   height: $input-height;
-  //   line-height: $input-height;
-  // }
-
-  // textarea#{$parent},
-  // select[multiple]#{$parent} {
-  //   height: auto;
-  // }
-}
-
 // Button sizes
 // -------------------------
 @mixin button-size(
@@ -198,50 +165,24 @@ button,
     opacity: 0.5;
   }
 
+  // Default variant
   @include button-variant(
     var(--button-default-color),
     var(--button-default-background),
     var(--button-default-border)
   );
 
-  &.primary {
-    @include button-variant(
-      var(--button-primary-color),
-      var(--button-primary-background),
-      var(--button-primary-background)
-    );
-  }
+  // Button variants
+  $variants: 'primary', 'success', 'info', 'warning', 'danger';
 
-  &.success {
-    @include button-variant(
-      var(--button-success-color),
-      var(--button-success-background),
-      var(--button-success-background)
-    );
-  }
-
-  &.info {
-    @include button-variant(
-      var(--button-info-color),
-      var(--button-info-background),
-      var(--button-info-background)
-    );
-  }
-
-  &.warning {
-    @include button-variant(
-      var(--button-warning-color),
-      var(--button-warning-background),
-      var(--button-warning-background)
-    );
-  }
-
-  &.danger {
-    @include button-variant(
-      var(--button-danger-color),
-      var(--button-danger-background),
-      var(--button-danger-background)
-    );
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include button-variant(
+        var(--button-#{$variant}-color),
+        var(--button-#{$variant}-background),
+        var(--button-#{$variant}-background)
+      );
+    }
   }
 }
 
