@@ -2,26 +2,37 @@
 // These variables can be overridden in the :root element
 
 :root {
-  // Colors
+  // Grayscale colors
   --gray-dark: #333;
-  --gray: #666;
-  --gray-light: #999;
-  --brand-primary: #0085f0;
-  --brand-success: #81c735;
-  --brand-info: #5bc0de;
-  --brand-warning: #f0ad4e;
-  --brand-danger: #ff3a3c;
+  --gray: #999;
+  --gray-light: #ccc;
+  --gray-lighter: #eee;
+
+  // Semantic colors
+  --primary: #0085f0;
+  --secondary: #666;
+  --success: #81c735;
+  --info: #5bc0de;
+  --warning: #f0ad4e;
+  --danger: #ff3a3c;
+
+  // Legacy brand colors (deprecated, use --primary, --success, etc.)
+  --brand-primary: var(--primary);
+  --brand-success: var(--success);
+  --brand-info: var(--info);
+  --brand-warning: var(--warning);
+  --brand-danger: var(--danger);
   --background-color: #fff;
   --text-color: #333;
-  --link-color: #0085f0;
+  --link-color: var(--primary);
 
   // Border colors
   --border-color-default: #ccc;
-  --border-color-primary: #0085f0;
-  --border-color-success: #81c735;
-  --border-color-info: #5bc0de;
-  --border-color-warning: #f0ad4e;
-  --border-color-danger: #ff3a3c;
+  --border-color-primary: var(--primary);
+  --border-color-success: var(--success);
+  --border-color-info: var(--info);
+  --border-color-warning: var(--warning);
+  --border-color-danger: var(--danger);
 
   // Border hover colors (-20% lightness)
   --border-color-default-hover: #b3b3b3;
@@ -81,7 +92,7 @@
 
   // Component Colors
   --component-active-color: #fff;
-  --component-active-bg: #0085f0;
+  --component-active-bg: var(--primary);
 
   // Code styling
   --code-color: #c7254e;
@@ -106,8 +117,8 @@
   --input-group-addon-border-color: #ccc;
 
   // State text and background colors
-  --state-primary-text: #0085f0;
-  --state-primary-background: #0085f0;
+  --state-primary-text: var(--primary);
+  --state-primary-background: var(--primary);
   --state-success-text: #3c763d;
   --state-success-background: #dff0d8;
   --state-info-text: #31708f;

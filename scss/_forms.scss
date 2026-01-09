@@ -13,7 +13,7 @@
 @mixin input-variant($border-color, $border-hover: null, $border-focus: null) {
   $use-css-vars: string.index($border-color, 'var(') != null;
 
-  color: var(--gray);
+  color: var(--secondary);
   background-color: #fff;
   border-color: $border-color;
 

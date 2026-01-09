@@ -9,21 +9,21 @@ button,
 input[type='button'],
 input[type='submit'] {
   // Default button colors
-  --button-default-color: #666;
+  --button-default-color: var(--secondary);
   --button-default-background: #fff;
   --button-default-border: #d9d9d9;
 
   // Button base colors
   --button-primary-color: #fff;
-  --button-primary-background: #0085f0;
+  --button-primary-background: var(--primary);
   --button-success-color: #fff;
-  --button-success-background: #81c735;
+  --button-success-background: var(--success);
   --button-info-color: #fff;
-  --button-info-background: #5bc0de;
+  --button-info-background: var(--info);
   --button-warning-color: #fff;
-  --button-warning-background: #f0ad4e;
+  --button-warning-background: var(--warning);
   --button-danger-color: #fff;
-  --button-danger-background: #ff3a3c;
+  --button-danger-background: var(--danger);
 
   // Button hover states (+5% brightness)
   --button-primary-hover-background: #1a95f4;

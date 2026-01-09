@@ -10,20 +10,20 @@
   --tooltip-arrow-width: 5px;
   --tooltip-arrow-color: #000;
   --tooltip-primary-color: #fff;
-  --tooltip-primary-background: #0085f0;
-  --tooltip-primary-arrow-color: #0085f0;
+  --tooltip-primary-background: var(--primary);
+  --tooltip-primary-arrow-color: var(--primary);
   --tooltip-success-color: #fff;
-  --tooltip-success-background: #81c735;
-  --tooltip-success-arrow-color: #81c735;
+  --tooltip-success-background: var(--success);
+  --tooltip-success-arrow-color: var(--success);
   --tooltip-info-color: #fff;
-  --tooltip-info-background: #5bc0de;
-  --tooltip-info-arrow-color: #5bc0de;
+  --tooltip-info-background: var(--info);
+  --tooltip-info-arrow-color: var(--info);
   --tooltip-warning-color: #fff;
-  --tooltip-warning-background: #f0ad4e;
-  --tooltip-warning-arrow-color: #f0ad4e;
+  --tooltip-warning-background: var(--warning);
+  --tooltip-warning-arrow-color: var(--warning);
   --tooltip-danger-color: #fff;
-  --tooltip-danger-background: #ff3a3c;
-  --tooltip-danger-arrow-color: #ff3a3c;
+  --tooltip-danger-background: var(--danger);
+  --tooltip-danger-arrow-color: var(--danger);
 }
 
 // Tooltip variants

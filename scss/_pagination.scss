@@ -3,15 +3,15 @@
 
 // Pagination component variables
 .pagination {
-  --pagination-color: #0085f0;
+  --pagination-color: var(--primary);
   --pagination-background: #fff;
   --pagination-border: #ddd;
   --pagination-hover-color: #0076e6;
   --pagination-hover-background: #eee;
   --pagination-hover-border: #ddd;
   --pagination-active-color: #fff;
-  --pagination-active-background: #0085f0;
-  --pagination-active-border: #0085f0;
+  --pagination-active-background: var(--primary);
+  --pagination-active-border: var(--primary);
   --pagination-disabled-color: #999;
   --pagination-disabled-background: #fff;
   --pagination-disabled-border: #ddd;
@@ -22,7 +22,7 @@
   --pager-border: #ddd;
   --pager-border-radius: 15px;
   --pager-hover-background: #eee;
-  --pager-active-background: #0085f0;
+  --pager-active-background: var(--primary);
   --pager-active-color: #fff;
   --pager-disabled-color: #999;
 }

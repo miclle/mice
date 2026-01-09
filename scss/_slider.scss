@@ -293,7 +293,7 @@
       border: 1px solid #fff;
 
       &.active {
-        border-color: #666;
+        border-color: var(--secondary);
         z-index: 99;
       }
       & img {
