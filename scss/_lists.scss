@@ -1,9 +1,7 @@
 // Lists
 // --------------------------------------------------
 
-@use 'sass:math';
 @use 'sass:list';
-@use 'sass:color';
 
 // List group variants
 @mixin list-group-item-variant($state, $background, $color) {
