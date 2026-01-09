@@ -8,7 +8,7 @@
 
 // Floated
 .clearfix {
-  @include clearfix();
+  display: flow-root;
 }
 
 .centered {

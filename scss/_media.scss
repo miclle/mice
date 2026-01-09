@@ -9,8 +9,7 @@
 .media {
   margin-top: 15px;
   list-style: none;
-
-  @include clearfix();
+  display: flow-root;
 
   &:first-child {
     margin-top: 0;

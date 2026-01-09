@@ -391,9 +391,7 @@ form.horizontal {
       .field {
         position: relative;
         vertical-align: middle;
-
-        @include clearfix();
-
+        display: flow-root;
         padding-left: calc(100% / 12 * $i);
 
         &:not(.checkbox) {

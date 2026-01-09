@@ -125,8 +125,7 @@ dl.horizontal {
     white-space: nowrap;
   }
   dd {
-    @include clearfix();
-
+    display: flow-root;
     margin-left: 180px;
   }
 }
@@ -165,14 +164,12 @@ section {
     > a,
     .item {
       position: relative;
-      display: block;
+      display: flow-root;
       padding: 10px 15px;
       margin-bottom: -1px;
       margin-top: 0;
       background-color: var(--list-group-background);
       border: 1px solid var(--list-group-border-color);
-
-      @include clearfix();
 
       &:last-child {
         margin-bottom: 0;

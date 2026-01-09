@@ -10,7 +10,7 @@
   margin-left: auto;
   // padding-left:  ($grid-gutter-width / 2);
   // padding-right: ($grid-gutter-width / 2);
-  @include clearfix();
+  display: flow-root;
 
   @media (width >= 768px) {
     width: 750px;
@@ -29,7 +29,7 @@
 // -------------------------
 
 .grid {
-  @include clearfix();
+  display: flow-root;
   > .column {
     display: block;
     min-height: 1px;

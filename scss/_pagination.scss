@@ -137,8 +137,8 @@
   margin: var(--line-height-computed) 0;
   list-style: none;
   text-align: center;
+  display: flow-root;
 
-  @include clearfix();
   li {
     display: inline;
     > a,

@@ -19,8 +19,7 @@
   list-style: none;
   border-bottom: 1px solid var(--tabs-border-color);
   padding: 0;
-
-  @include clearfix();
+  display: flow-root;
 
   > li {
     display: block;

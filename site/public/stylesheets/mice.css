@@ -764,13 +764,7 @@ pre.scrollable {
 .container {
   margin-right: auto;
   margin-left: auto;
-}
-.container::before, .container::after {
-  content: " ";
-  display: table;
-}
-.container::after {
-  clear: both;
+  display: flow-root;
 }
 @media (width >= 768px) {
   .container {
@@ -788,12 +782,8 @@ pre.scrollable {
   }
 }
 
-.grid::before, .grid::after {
-  content: " ";
-  display: table;
-}
-.grid::after {
-  clear: both;
+.grid {
+  display: flow-root;
 }
 .grid > .column {
   display: block;
@@ -1888,14 +1878,8 @@ button.block,
   padding-right: 0;
 }
 
-.buttons::before, .buttons::after {
-  content: " ";
-  display: table;
-}
-.buttons::after {
-  clear: both;
-}
 .buttons {
+  display: flow-root;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -1935,14 +1919,8 @@ button.block,
   z-index: 2;
 }
 
-.buttons.vertical::before, .buttons.vertical::after {
-  content: " ";
-  display: table;
-}
-.buttons.vertical::after {
-  clear: both;
-}
 .buttons.vertical {
+  display: flow-root;
   display: inline-block;
 }
 .buttons.vertical input[type=button],
@@ -2327,13 +2305,7 @@ img.fluid {
   list-style: none;
   border-bottom: 1px solid var(--tabs-border-color);
   padding: 0;
-}
-.tabs::before, .tabs::after {
-  content: " ";
-  display: table;
-}
-.tabs::after {
-  clear: both;
+  display: flow-root;
 }
 .tabs > li {
   display: block;
@@ -2601,14 +2573,8 @@ dl.horizontal dt {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-dl.horizontal dd::before, dl.horizontal dd::after {
-  content: " ";
-  display: table;
-}
-dl.horizontal dd::after {
-  clear: both;
-}
 dl.horizontal dd {
+  display: flow-root;
   margin-left: 180px;
 }
 
@@ -2648,52 +2614,12 @@ section.group > li,
 section.group > a,
 section.group .item {
   position: relative;
-  display: block;
+  display: flow-root;
   padding: 10px 15px;
   margin-bottom: -1px;
   margin-top: 0;
   background-color: var(--list-group-background);
   border: 1px solid var(--list-group-border-color);
-}
-ul.group > li::before, ul.group > li::after,
-ul.group > a::before,
-ul.group > a::after,
-ul.group .item::before,
-ul.group .item::after,
-ol.group > li::before,
-ol.group > li::after,
-ol.group > a::before,
-ol.group > a::after,
-ol.group .item::before,
-ol.group .item::after,
-div.group > li::before,
-div.group > li::after,
-div.group > a::before,
-div.group > a::after,
-div.group .item::before,
-div.group .item::after,
-section.group > li::before,
-section.group > li::after,
-section.group > a::before,
-section.group > a::after,
-section.group .item::before,
-section.group .item::after {
-  content: " ";
-  display: table;
-}
-ul.group > li::after,
-ul.group > a::after,
-ul.group .item::after,
-ol.group > li::after,
-ol.group > a::after,
-ol.group .item::after,
-div.group > li::after,
-div.group > a::after,
-div.group .item::after,
-section.group > li::after,
-section.group > a::after,
-section.group .item::after {
-  clear: both;
 }
 ul.group > li:last-child,
 ul.group > a:last-child,
@@ -3476,13 +3402,7 @@ table.hover > tbody > tr:hover > td {
   margin: var(--line-height-computed) 0;
   list-style: none;
   text-align: center;
-}
-.pager::before, .pager::after {
-  content: " ";
-  display: table;
-}
-.pager::after {
-  clear: both;
+  display: flow-root;
 }
 .pager li {
   display: inline;
@@ -3554,13 +3474,7 @@ table.hover > tbody > tr:hover > td {
 }
 .panel > .body {
   padding: var(--panel-body-padding);
-}
-.panel > .body::before, .panel > .body::after {
-  content: " ";
-  display: table;
-}
-.panel > .body::after {
-  clear: both;
+  display: flow-root;
 }
 .panel > .body *:last-child {
   margin-bottom: 0;
@@ -3805,13 +3719,7 @@ table.hover > tbody > tr:hover > td {
 .media {
   margin-top: 15px;
   list-style: none;
-}
-.media::before, .media::after {
-  content: " ";
-  display: table;
-}
-.media::after {
-  clear: both;
+  display: flow-root;
 }
 .media:first-child {
   margin-top: 0;
@@ -4426,13 +4334,7 @@ button.close {
   padding: var(--modal-inner-padding);
   text-align: right;
   border-top: 1px solid var(--modal-footer-border-color);
-}
-.modal .footer::before, .modal .footer::after {
-  content: " ";
-  display: table;
-}
-.modal .footer::after {
-  clear: both;
+  display: flow-root;
 }
 .modal .footer .button + .button {
   margin-left: 5px;
@@ -6040,15 +5942,7 @@ form.inline > button {
 form.horizontal.offset.one .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.one .field::before, form.horizontal.offset.one .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.one .field::after {
-  clear: both;
-}
-form.horizontal.offset.one .field {
+  display: flow-root;
   padding-left: 8.3333333333%;
 }
 form.horizontal.offset.one .field:not(.checkbox) label {
@@ -6068,15 +5962,7 @@ form.horizontal.offset.one .field .static {
 form.horizontal.offset.two .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.two .field::before, form.horizontal.offset.two .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.two .field::after {
-  clear: both;
-}
-form.horizontal.offset.two .field {
+  display: flow-root;
   padding-left: 16.6666666667%;
 }
 form.horizontal.offset.two .field:not(.checkbox) label {
@@ -6096,15 +5982,7 @@ form.horizontal.offset.two .field .static {
 form.horizontal.offset.three .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.three .field::before, form.horizontal.offset.three .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.three .field::after {
-  clear: both;
-}
-form.horizontal.offset.three .field {
+  display: flow-root;
   padding-left: 25%;
 }
 form.horizontal.offset.three .field:not(.checkbox) label {
@@ -6124,15 +6002,7 @@ form.horizontal.offset.three .field .static {
 form.horizontal.offset.four .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.four .field::before, form.horizontal.offset.four .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.four .field::after {
-  clear: both;
-}
-form.horizontal.offset.four .field {
+  display: flow-root;
   padding-left: 33.3333333333%;
 }
 form.horizontal.offset.four .field:not(.checkbox) label {
@@ -6152,15 +6022,7 @@ form.horizontal.offset.four .field .static {
 form.horizontal.offset.five .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.five .field::before, form.horizontal.offset.five .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.five .field::after {
-  clear: both;
-}
-form.horizontal.offset.five .field {
+  display: flow-root;
   padding-left: 41.6666666667%;
 }
 form.horizontal.offset.five .field:not(.checkbox) label {
@@ -6180,15 +6042,7 @@ form.horizontal.offset.five .field .static {
 form.horizontal.offset.six .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.six .field::before, form.horizontal.offset.six .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.six .field::after {
-  clear: both;
-}
-form.horizontal.offset.six .field {
+  display: flow-root;
   padding-left: 50%;
 }
 form.horizontal.offset.six .field:not(.checkbox) label {
@@ -6208,15 +6062,7 @@ form.horizontal.offset.six .field .static {
 form.horizontal.offset.seven .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.seven .field::before, form.horizontal.offset.seven .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.seven .field::after {
-  clear: both;
-}
-form.horizontal.offset.seven .field {
+  display: flow-root;
   padding-left: 58.3333333333%;
 }
 form.horizontal.offset.seven .field:not(.checkbox) label {
@@ -6236,15 +6082,7 @@ form.horizontal.offset.seven .field .static {
 form.horizontal.offset.eight .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.eight .field::before, form.horizontal.offset.eight .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.eight .field::after {
-  clear: both;
-}
-form.horizontal.offset.eight .field {
+  display: flow-root;
   padding-left: 66.6666666667%;
 }
 form.horizontal.offset.eight .field:not(.checkbox) label {
@@ -6264,15 +6102,7 @@ form.horizontal.offset.eight .field .static {
 form.horizontal.offset.nine .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.nine .field::before, form.horizontal.offset.nine .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.nine .field::after {
-  clear: both;
-}
-form.horizontal.offset.nine .field {
+  display: flow-root;
   padding-left: 75%;
 }
 form.horizontal.offset.nine .field:not(.checkbox) label {
@@ -6292,15 +6122,7 @@ form.horizontal.offset.nine .field .static {
 form.horizontal.offset.ten .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.ten .field::before, form.horizontal.offset.ten .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.ten .field::after {
-  clear: both;
-}
-form.horizontal.offset.ten .field {
+  display: flow-root;
   padding-left: 83.3333333333%;
 }
 form.horizontal.offset.ten .field:not(.checkbox) label {
@@ -6320,15 +6142,7 @@ form.horizontal.offset.ten .field .static {
 form.horizontal.offset.eleven .field {
   position: relative;
   vertical-align: middle;
-}
-form.horizontal.offset.eleven .field::before, form.horizontal.offset.eleven .field::after {
-  content: " ";
-  display: table;
-}
-form.horizontal.offset.eleven .field::after {
-  clear: both;
-}
-form.horizontal.offset.eleven .field {
+  display: flow-root;
   padding-left: 91.6666666667%;
 }
 form.horizontal.offset.eleven .field:not(.checkbox) label {
@@ -6438,12 +6252,8 @@ form.horizontal .field.feedback .icon {
   border-left: 0;
 }
 
-.clearfix::before, .clearfix::after {
-  content: " ";
-  display: table;
-}
-.clearfix::after {
-  clear: both;
+.clearfix {
+  display: flow-root;
 }
 
 .centered {

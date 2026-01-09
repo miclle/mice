@@ -127,8 +127,7 @@
     padding: var(--modal-inner-padding);
     text-align: right; // right align buttons
     border-top: 1px solid var(--modal-footer-border-color);
-
-    @include clearfix(); // clear it in case folks use .pull-* classes on buttons
+    display: flow-root; // clear it in case folks use .pull-* classes on buttons
 
     // Properly space out buttons
     .button + .button {

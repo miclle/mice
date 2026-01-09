@@ -356,8 +356,7 @@ button,
 // --------------------------------------------------
 
 .buttons {
-  @include clearfix();
-
+  display: flow-root;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -396,8 +395,7 @@ button,
 // Vertical Group Buttons
 // ------------------------
 .buttons.vertical {
-  @include clearfix();
-
+  display: flow-root;
   display: inline-block;
 
   input[type='button'],

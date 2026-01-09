@@ -59,8 +59,8 @@
   // Panel contents
   > .body {
     padding: var(--panel-body-padding);
+    display: flow-root;
 
-    @include clearfix();
     *:last-child {
       margin-bottom: 0;
     }
