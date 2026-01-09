@@ -1,6 +1,8 @@
 // Button
 // --------------------------------------------------
 
+@use 'sass:list';
+
 // Button component variables
 button,
 .button,
@@ -245,38 +247,23 @@ button,
 
 // Button Sizing
 // -------------------------
+
+$sizes: 'mini', 'small', 'large';
+
 input[type='button'],
 input[type='submit'],
 button,
 .button {
-  &.mini {
-    @include button-size(
-      var(--padding-mini-vertical),
-      var(--padding-mini-horizontal),
-      var(--font-size-mini),
-      var(--line-height-mini),
-      var(--border-radius)
-    );
-  }
-
-  &.small {
-    @include button-size(
-      var(--padding-small-vertical),
-      var(--padding-small-horizontal),
-      var(--font-size-small),
-      var(--line-height-small),
-      var(--border-radius)
-    );
-  }
-
-  &.large {
-    @include button-size(
-      var(--padding-large-vertical),
-      var(--padding-large-horizontal),
-      var(--font-size-large),
-      var(--line-height-large),
-      var(--border-radius)
-    );
+  @each $size in $sizes {
+    &.#{$size} {
+      @include button-size(
+        var(--padding-#{$size}-vertical),
+        var(--padding-#{$size}-horizontal),
+        var(--font-size-#{$size}),
+        var(--line-height-#{$size}),
+        var(--border-radius)
+      );
+    }
   }
 }
 
