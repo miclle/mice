@@ -22,41 +22,6 @@ input[type='submit'] {
   --button-warning-background: var(--warning);
   --button-danger-color: #fff;
   --button-danger-background: var(--danger);
-
-  // Button hover states (+5% brightness)
-  --button-primary-hover-background: #1a95f4;
-  --button-success-hover-background: #8ec93d;
-  --button-info-hover-background: #63c2e5;
-  --button-warning-hover-background: #f1b053;
-  --button-danger-hover-background: #ff4b4d;
-
-  // Button active states (-5% brightness)
-  --button-primary-active-background: #0076e6;
-  --button-success-active-background: #76af2a;
-  --button-info-active-background: #4fb3d9;
-  --button-warning-active-background: #ee9a32;
-  --button-danger-active-background: #ff1c1e;
-
-  // Button border colors (hover)
-  --button-primary-hover-border: #0067dc;
-  --button-success-hover-border: #6fb029;
-  --button-info-hover-border: #46b8da;
-  --button-warning-hover-border: #eea236;
-  --button-danger-hover-border: #ff2628;
-
-  // Button border colors (active)
-  --button-primary-active-border: #0055b3;
-  --button-success-active-border: #5d911f;
-  --button-info-active-border: #3697c2;
-  --button-warning-active-border: #dd8f2d;
-  --button-danger-active-border: #f00;
-
-  // Button border variants (-5% lightness)
-  --button-primary-border: #0067dc;
-  --button-success-border: #6fb029;
-  --button-info-border: #46b8da;
-  --button-warning-border: #eea236;
-  --button-danger-border: #ff2628;
 }
 
 // Button variants
@@ -241,11 +206,7 @@ button,
     @include button-variant(
       var(--button-primary-color),
       var(--button-primary-background),
-      var(--button-primary-border),
-      var(--button-primary-hover-background),
-      var(--button-primary-active-background),
-      var(--button-primary-hover-border),
-      var(--button-primary-active-border)
+      var(--button-primary-background)
     );
   }
 
@@ -253,11 +214,7 @@ button,
     @include button-variant(
       var(--button-success-color),
       var(--button-success-background),
-      var(--button-success-border),
-      var(--button-success-hover-background),
-      var(--button-success-active-background),
-      var(--button-success-hover-border),
-      var(--button-success-active-border)
+      var(--button-success-background)
     );
   }
 
@@ -265,11 +222,7 @@ button,
     @include button-variant(
       var(--button-info-color),
       var(--button-info-background),
-      var(--button-info-border),
-      var(--button-info-hover-background),
-      var(--button-info-active-background),
-      var(--button-info-hover-border),
-      var(--button-info-active-border)
+      var(--button-info-background)
     );
   }
 
@@ -277,11 +230,7 @@ button,
     @include button-variant(
       var(--button-warning-color),
       var(--button-warning-background),
-      var(--button-warning-border),
-      var(--button-warning-hover-background),
-      var(--button-warning-active-background),
-      var(--button-warning-hover-border),
-      var(--button-warning-active-border)
+      var(--button-warning-background)
     );
   }
 
@@ -289,11 +238,7 @@ button,
     @include button-variant(
       var(--button-danger-color),
       var(--button-danger-background),
-      var(--button-danger-border),
-      var(--button-danger-hover-background),
-      var(--button-danger-active-background),
-      var(--button-danger-hover-border),
-      var(--button-danger-active-border)
+      var(--button-danger-background)
     );
   }
 }

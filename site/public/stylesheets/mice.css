@@ -1426,31 +1426,6 @@ input[type=submit] {
   --button-warning-background: var(--warning);
   --button-danger-color: #fff;
   --button-danger-background: var(--danger);
-  --button-primary-hover-background: #1a95f4;
-  --button-success-hover-background: #8ec93d;
-  --button-info-hover-background: #63c2e5;
-  --button-warning-hover-background: #f1b053;
-  --button-danger-hover-background: #ff4b4d;
-  --button-primary-active-background: #0076e6;
-  --button-success-active-background: #76af2a;
-  --button-info-active-background: #4fb3d9;
-  --button-warning-active-background: #ee9a32;
-  --button-danger-active-background: #ff1c1e;
-  --button-primary-hover-border: #0067dc;
-  --button-success-hover-border: #6fb029;
-  --button-info-hover-border: #46b8da;
-  --button-warning-hover-border: #eea236;
-  --button-danger-hover-border: #ff2628;
-  --button-primary-active-border: #0055b3;
-  --button-success-active-border: #5d911f;
-  --button-info-active-border: #3697c2;
-  --button-warning-active-border: #dd8f2d;
-  --button-danger-active-border: #f00;
-  --button-primary-border: #0067dc;
-  --button-success-border: #6fb029;
-  --button-info-border: #46b8da;
-  --button-warning-border: #eea236;
-  --button-danger-border: #ff2628;
 }
 
 input[type=button],
@@ -1558,7 +1533,7 @@ button.primary,
 .button.primary {
   color: var(--button-primary-color);
   background-color: var(--button-primary-background);
-  border-color: var(--button-primary-border);
+  border-color: var(--button-primary-background);
 }
 input[type=button].primary:hover, input[type=button].primary:focus,
 input[type=submit].primary:hover,
@@ -1568,8 +1543,7 @@ button.primary:focus,
 .button.primary:hover,
 .button.primary:focus {
   color: var(--button-primary-color);
-  background-color: var(--button-primary-hover-background);
-  border-color: var(--button-primary-hover-border);
+  filter: brightness(0.9);
 }
 input[type=button].primary:active, input[type=button].primary.active,
 input[type=submit].primary:active,
@@ -1578,9 +1552,7 @@ button.primary:active,
 button.primary.active,
 .button.primary:active,
 .button.primary.active {
-  color: var(--button-primary-color);
-  background-color: var(--button-primary-active-background);
-  border-color: var(--button-primary-active-border);
+  filter: brightness(0.85);
 }
 input[type=button].primary.disabled, input[type=button].primary.disabled:hover, input[type=button].primary.disabled:active, input[type=button].primary.disabled.active, input[type=button].primary[disabled], input[type=button].primary[disabled]:hover, input[type=button].primary[disabled]:active, input[type=button].primary[disabled].active,
 input[type=submit].primary.disabled,
@@ -1608,7 +1580,7 @@ button.primary[disabled].active,
 .button.primary[disabled]:active,
 .button.primary[disabled].active {
   background-color: var(--button-primary-background);
-  border-color: var(--button-primary-border);
+  border-color: var(--button-primary-background);
   filter: none;
 }
 input[type=button].success,
@@ -1617,7 +1589,7 @@ button.success,
 .button.success {
   color: var(--button-success-color);
   background-color: var(--button-success-background);
-  border-color: var(--button-success-border);
+  border-color: var(--button-success-background);
 }
 input[type=button].success:hover, input[type=button].success:focus,
 input[type=submit].success:hover,
@@ -1627,8 +1599,7 @@ button.success:focus,
 .button.success:hover,
 .button.success:focus {
   color: var(--button-success-color);
-  background-color: var(--button-success-hover-background);
-  border-color: var(--button-success-hover-border);
+  filter: brightness(0.9);
 }
 input[type=button].success:active, input[type=button].success.active,
 input[type=submit].success:active,
@@ -1637,9 +1608,7 @@ button.success:active,
 button.success.active,
 .button.success:active,
 .button.success.active {
-  color: var(--button-success-color);
-  background-color: var(--button-success-active-background);
-  border-color: var(--button-success-active-border);
+  filter: brightness(0.85);
 }
 input[type=button].success.disabled, input[type=button].success.disabled:hover, input[type=button].success.disabled:active, input[type=button].success.disabled.active, input[type=button].success[disabled], input[type=button].success[disabled]:hover, input[type=button].success[disabled]:active, input[type=button].success[disabled].active,
 input[type=submit].success.disabled,
@@ -1667,7 +1636,7 @@ button.success[disabled].active,
 .button.success[disabled]:active,
 .button.success[disabled].active {
   background-color: var(--button-success-background);
-  border-color: var(--button-success-border);
+  border-color: var(--button-success-background);
   filter: none;
 }
 input[type=button].info,
@@ -1676,7 +1645,7 @@ button.info,
 .button.info {
   color: var(--button-info-color);
   background-color: var(--button-info-background);
-  border-color: var(--button-info-border);
+  border-color: var(--button-info-background);
 }
 input[type=button].info:hover, input[type=button].info:focus,
 input[type=submit].info:hover,
@@ -1686,8 +1655,7 @@ button.info:focus,
 .button.info:hover,
 .button.info:focus {
   color: var(--button-info-color);
-  background-color: var(--button-info-hover-background);
-  border-color: var(--button-info-hover-border);
+  filter: brightness(0.9);
 }
 input[type=button].info:active, input[type=button].info.active,
 input[type=submit].info:active,
@@ -1696,9 +1664,7 @@ button.info:active,
 button.info.active,
 .button.info:active,
 .button.info.active {
-  color: var(--button-info-color);
-  background-color: var(--button-info-active-background);
-  border-color: var(--button-info-active-border);
+  filter: brightness(0.85);
 }
 input[type=button].info.disabled, input[type=button].info.disabled:hover, input[type=button].info.disabled:active, input[type=button].info.disabled.active, input[type=button].info[disabled], input[type=button].info[disabled]:hover, input[type=button].info[disabled]:active, input[type=button].info[disabled].active,
 input[type=submit].info.disabled,
@@ -1726,7 +1692,7 @@ button.info[disabled].active,
 .button.info[disabled]:active,
 .button.info[disabled].active {
   background-color: var(--button-info-background);
-  border-color: var(--button-info-border);
+  border-color: var(--button-info-background);
   filter: none;
 }
 input[type=button].warning,
@@ -1735,7 +1701,7 @@ button.warning,
 .button.warning {
   color: var(--button-warning-color);
   background-color: var(--button-warning-background);
-  border-color: var(--button-warning-border);
+  border-color: var(--button-warning-background);
 }
 input[type=button].warning:hover, input[type=button].warning:focus,
 input[type=submit].warning:hover,
@@ -1745,8 +1711,7 @@ button.warning:focus,
 .button.warning:hover,
 .button.warning:focus {
   color: var(--button-warning-color);
-  background-color: var(--button-warning-hover-background);
-  border-color: var(--button-warning-hover-border);
+  filter: brightness(0.9);
 }
 input[type=button].warning:active, input[type=button].warning.active,
 input[type=submit].warning:active,
@@ -1755,9 +1720,7 @@ button.warning:active,
 button.warning.active,
 .button.warning:active,
 .button.warning.active {
-  color: var(--button-warning-color);
-  background-color: var(--button-warning-active-background);
-  border-color: var(--button-warning-active-border);
+  filter: brightness(0.85);
 }
 input[type=button].warning.disabled, input[type=button].warning.disabled:hover, input[type=button].warning.disabled:active, input[type=button].warning.disabled.active, input[type=button].warning[disabled], input[type=button].warning[disabled]:hover, input[type=button].warning[disabled]:active, input[type=button].warning[disabled].active,
 input[type=submit].warning.disabled,
@@ -1785,7 +1748,7 @@ button.warning[disabled].active,
 .button.warning[disabled]:active,
 .button.warning[disabled].active {
   background-color: var(--button-warning-background);
-  border-color: var(--button-warning-border);
+  border-color: var(--button-warning-background);
   filter: none;
 }
 input[type=button].danger,
@@ -1794,7 +1757,7 @@ button.danger,
 .button.danger {
   color: var(--button-danger-color);
   background-color: var(--button-danger-background);
-  border-color: var(--button-danger-border);
+  border-color: var(--button-danger-background);
 }
 input[type=button].danger:hover, input[type=button].danger:focus,
 input[type=submit].danger:hover,
@@ -1804,8 +1767,7 @@ button.danger:focus,
 .button.danger:hover,
 .button.danger:focus {
   color: var(--button-danger-color);
-  background-color: var(--button-danger-hover-background);
-  border-color: var(--button-danger-hover-border);
+  filter: brightness(0.9);
 }
 input[type=button].danger:active, input[type=button].danger.active,
 input[type=submit].danger:active,
@@ -1814,9 +1776,7 @@ button.danger:active,
 button.danger.active,
 .button.danger:active,
 .button.danger.active {
-  color: var(--button-danger-color);
-  background-color: var(--button-danger-active-background);
-  border-color: var(--button-danger-active-border);
+  filter: brightness(0.85);
 }
 input[type=button].danger.disabled, input[type=button].danger.disabled:hover, input[type=button].danger.disabled:active, input[type=button].danger.disabled.active, input[type=button].danger[disabled], input[type=button].danger[disabled]:hover, input[type=button].danger[disabled]:active, input[type=button].danger[disabled].active,
 input[type=submit].danger.disabled,
@@ -1844,7 +1804,7 @@ button.danger[disabled].active,
 .button.danger[disabled]:active,
 .button.danger[disabled].active {
   background-color: var(--button-danger-background);
-  border-color: var(--button-danger-border);
+  border-color: var(--button-danger-background);
   filter: none;
 }
 
