@@ -16,55 +16,39 @@ input[type='submit'] {
   // Button base colors
   --button-primary-color: #fff;
   --button-primary-background: var(--primary);
+  --button-primary-border: color-mix(in srgb, var(--primary) 85%, black);
   --button-success-color: #fff;
   --button-success-background: var(--success);
+  --button-success-border: color-mix(in srgb, var(--success) 85%, black);
   --button-info-color: #fff;
   --button-info-background: var(--info);
+  --button-info-border: color-mix(in srgb, var(--info) 85%, black);
   --button-warning-color: #fff;
   --button-warning-background: var(--warning);
+  --button-warning-border: color-mix(in srgb, var(--warning) 85%, black);
   --button-danger-color: #fff;
   --button-danger-background: var(--danger);
+  --button-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 // Button variants
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($color, $background, $border, $hover-bg: null, $active-bg: null, $hover-border: null, $active-border: null) {
+@mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
   border-color: $border;
 
   &:hover,
   &:focus {
-    @if $hover-bg {
-      color: $color;
-      background-color: $hover-bg;
-      @if $hover-border {
-        border-color: $hover-border;
-      } @else {
-        border-color: $hover-bg;
-      }
-    } @else {
-      color: $color;
-      // Fallback for buttons without pre-calculated hover states
-      filter: brightness(0.9);
-    }
+    color: $color;
+    filter: brightness(0.9);
   }
 
   &:active,
   &.active {
-    @if $active-bg {
-      color: $color;
-      background-color: $active-bg;
-      @if $active-border {
-        border-color: $active-border;
-      } @else {
-        border-color: $active-bg;
-      }
-    } @else {
-      filter: brightness(0.85);
-    }
+    filter: brightness(0.85);
   }
 
   &.disabled,
@@ -180,7 +164,7 @@ button,
       @include button-variant(
         var(--button-#{$variant}-color),
         var(--button-#{$variant}-background),
-        var(--button-#{$variant}-background)
+        var(--button-#{$variant}-border)
       );
     }
   }
