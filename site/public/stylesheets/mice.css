@@ -1418,14 +1418,19 @@ input[type=submit] {
   --button-default-border: #d9d9d9;
   --button-primary-color: #fff;
   --button-primary-background: var(--primary);
+  --button-primary-border: color-mix(in srgb, var(--primary) 85%, black);
   --button-success-color: #fff;
   --button-success-background: var(--success);
+  --button-success-border: color-mix(in srgb, var(--success) 85%, black);
   --button-info-color: #fff;
   --button-info-background: var(--info);
+  --button-info-border: color-mix(in srgb, var(--info) 85%, black);
   --button-warning-color: #fff;
   --button-warning-background: var(--warning);
+  --button-warning-border: color-mix(in srgb, var(--warning) 85%, black);
   --button-danger-color: #fff;
   --button-danger-background: var(--danger);
+  --button-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 input[type=button],
@@ -1533,7 +1538,7 @@ button.primary,
 .button.primary {
   color: var(--button-primary-color);
   background-color: var(--button-primary-background);
-  border-color: var(--button-primary-background);
+  border-color: var(--button-primary-border);
 }
 input[type=button].primary:hover, input[type=button].primary:focus,
 input[type=submit].primary:hover,
@@ -1580,7 +1585,7 @@ button.primary[disabled].active,
 .button.primary[disabled]:active,
 .button.primary[disabled].active {
   background-color: var(--button-primary-background);
-  border-color: var(--button-primary-background);
+  border-color: var(--button-primary-border);
   filter: none;
 }
 input[type=button].success,
@@ -1589,7 +1594,7 @@ button.success,
 .button.success {
   color: var(--button-success-color);
   background-color: var(--button-success-background);
-  border-color: var(--button-success-background);
+  border-color: var(--button-success-border);
 }
 input[type=button].success:hover, input[type=button].success:focus,
 input[type=submit].success:hover,
@@ -1636,7 +1641,7 @@ button.success[disabled].active,
 .button.success[disabled]:active,
 .button.success[disabled].active {
   background-color: var(--button-success-background);
-  border-color: var(--button-success-background);
+  border-color: var(--button-success-border);
   filter: none;
 }
 input[type=button].info,
@@ -1645,7 +1650,7 @@ button.info,
 .button.info {
   color: var(--button-info-color);
   background-color: var(--button-info-background);
-  border-color: var(--button-info-background);
+  border-color: var(--button-info-border);
 }
 input[type=button].info:hover, input[type=button].info:focus,
 input[type=submit].info:hover,
@@ -1692,7 +1697,7 @@ button.info[disabled].active,
 .button.info[disabled]:active,
 .button.info[disabled].active {
   background-color: var(--button-info-background);
-  border-color: var(--button-info-background);
+  border-color: var(--button-info-border);
   filter: none;
 }
 input[type=button].warning,
@@ -1701,7 +1706,7 @@ button.warning,
 .button.warning {
   color: var(--button-warning-color);
   background-color: var(--button-warning-background);
-  border-color: var(--button-warning-background);
+  border-color: var(--button-warning-border);
 }
 input[type=button].warning:hover, input[type=button].warning:focus,
 input[type=submit].warning:hover,
@@ -1748,7 +1753,7 @@ button.warning[disabled].active,
 .button.warning[disabled]:active,
 .button.warning[disabled].active {
   background-color: var(--button-warning-background);
-  border-color: var(--button-warning-background);
+  border-color: var(--button-warning-border);
   filter: none;
 }
 input[type=button].danger,
@@ -1757,7 +1762,7 @@ button.danger,
 .button.danger {
   color: var(--button-danger-color);
   background-color: var(--button-danger-background);
-  border-color: var(--button-danger-background);
+  border-color: var(--button-danger-border);
 }
 input[type=button].danger:hover, input[type=button].danger:focus,
 input[type=submit].danger:hover,
@@ -1804,7 +1809,7 @@ button.danger[disabled].active,
 .button.danger[disabled]:active,
 .button.danger[disabled].active {
   background-color: var(--button-danger-background);
-  border-color: var(--button-danger-background);
+  border-color: var(--button-danger-border);
   filter: none;
 }
 
