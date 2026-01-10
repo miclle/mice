@@ -1,22 +1,29 @@
 // Message
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 // Message component variables
 .message {
   --message-padding: 10px 20px;
   --message-link-font-weight: bold;
-  --message-success-background: #dff0d8;
-  --message-success-text: #3c763d;
-  --message-success-border: #d6e9c6;
-  --message-info-background: #d9edf7;
-  --message-info-text: #31708f;
-  --message-info-border: #bce8f1;
-  --message-warning-background: #fcf8e3;
+
+  // Message variant colors (lighter for larger background areas)
+  --message-primary-background: color-mix(in srgb, var(--primary) 20%, white);
+  --message-primary-text: var(--primary);
+  --message-primary-border: color-mix(in srgb, var(--primary) 30%, white);
+  --message-success-background: color-mix(in srgb, var(--success) 20%, white);
+  --message-success-text: var(--success);
+  --message-success-border: color-mix(in srgb, var(--success) 30%, white);
+  --message-info-background: color-mix(in srgb, var(--info) 20%, white);
+  --message-info-text: var(--info);
+  --message-info-border: color-mix(in srgb, var(--info) 30%, white);
+  --message-warning-background: color-mix(in srgb, var(--warning) 20%, white);
   --message-warning-text: #8a6d3b;
-  --message-warning-border: #faebcc;
-  --message-danger-background: #f2dede;
-  --message-danger-text: #a94442;
-  --message-danger-border: #ebccd1;
+  --message-warning-border: color-mix(in srgb, var(--warning) 30%, white);
+  --message-danger-background: color-mix(in srgb, var(--danger) 20%, white);
+  --message-danger-text: var(--danger);
+  --message-danger-border: color-mix(in srgb, var(--danger) 30%, white);
 }
 
 // Mixin
@@ -26,7 +33,6 @@
   color: $text-color;
 
   a {
-    // Using CSS filter for hover darkening effect instead of color.adjust()
     &:hover,
     &:focus {
       filter: brightness(0.9);
@@ -35,15 +41,12 @@
 }
 
 // Base styles
-// -------------------------
 .message {
   display: none;
   width: 100%;
-  padding: 10px 20px;
   padding: var(--message-padding);
   line-height: 1.8;
   font-size: 16px;
-  background: #fff;
   background: rgb(255 255 255 / 90%);
   color: var(--secondary);
   text-align: center;
@@ -68,6 +71,7 @@
     margin: 0;
     color: inherit;
   }
+
   a {
     font-weight: var(--message-link-font-weight);
   }
@@ -85,37 +89,15 @@
       opacity: 1;
     }
   }
-}
 
-// Alternate styles
-// Generate contextual modifier classes for colorizing the message.
-.message {
-  &.success {
-    @include message-variant(
-      var(--message-success-background),
-      var(--message-success-border),
-      var(--message-success-text)
-    );
-  }
-  &.info {
-    @include message-variant(
-      var(--message-info-background),
-      var(--message-info-border),
-      var(--message-info-text)
-    );
-  }
-  &.warning {
-    @include message-variant(
-      var(--message-warning-background),
-      var(--message-warning-border),
-      var(--message-warning-text)
-    );
-  }
-  &.danger {
-    @include message-variant(
-      var(--message-danger-background),
-      var(--message-danger-border),
-      var(--message-danger-text)
-    );
+  // Message variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include message-variant(
+        var(--message-#{$variant}-background),
+        var(--message-#{$variant}-border),
+        var(--message-#{$variant}-text)
+      );
+    }
   }
 }

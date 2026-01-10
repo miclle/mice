@@ -9,6 +9,18 @@
   --label-default-background-hover: #8a8a8a;
   --label-color: #fff;
   --label-link-hover-color: #fff;
+
+  // Label variant colors
+  --label-primary-background: var(--primary);
+  --label-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --label-success-background: var(--success);
+  --label-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --label-info-background: var(--info);
+  --label-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --label-warning-background: var(--warning);
+  --label-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --label-danger-background: var(--danger);
+  --label-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 // Base styles
@@ -50,9 +62,14 @@
   // Label variants
   @each $variant in $variants {
     &.#{$variant} {
-      --label-background-variant: var(--#{$variant});
+      background-color: var(--label-#{$variant}-background);
 
-      background-color: var(--label-background-variant);
+      &[href] {
+        &:hover,
+        &:focus {
+          background-color: var(--label-#{$variant}-border);
+        }
+      }
     }
   }
 

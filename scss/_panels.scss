@@ -1,44 +1,51 @@
 // Panels
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 // Panel component variables
 .panel {
-  --panel-bg: #fff;
+  --panel-background: #fff;
   --panel-body-padding: 15px;
   --panel-heading-padding: 10px 15px;
   --panel-footer-padding: 10px 15px;
   --panel-border-radius: 2px;
   --panel-inner-border: #ddd;
-  --panel-footer-bg: #f5f5f5;
-  --panel-default-text: #333;
+  --panel-footer-background: #f5f5f5;
+
+  // Default panel
   --panel-default-border: #ddd;
-  --panel-default-heading-bg: #f5f5f5;
+  --panel-default-text: #333;
+  --panel-default-background: #fff;
+
+  // Panel variant colors
+  --panel-primary-background: var(--primary);
   --panel-primary-text: #fff;
-  --panel-primary-border: #0085f0;
-  --panel-primary-heading-bg: #0085f0;
-  --panel-success-text: #3c763d;
-  --panel-success-border: #d6e9c6;
-  --panel-success-heading-bg: #dff0d8;
-  --panel-info-text: #31708f;
-  --panel-info-border: #bce8f1;
-  --panel-info-heading-bg: #d9edf7;
-  --panel-warning-text: #8a6d3b;
-  --panel-warning-border: #faebcc;
-  --panel-warning-heading-bg: #fcf8e3;
-  --panel-danger-text: #a94442;
-  --panel-danger-border: #ebccd1;
-  --panel-danger-heading-bg: #f2dede;
+  --panel-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --panel-success-background: var(--success);
+  --panel-success-text: #fff;
+  --panel-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --panel-info-background: var(--info);
+  --panel-info-text: #fff;
+  --panel-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --panel-warning-background: var(--warning);
+  --panel-warning-text: var(--gray-dark);
+  --panel-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --panel-danger-background: var(--danger);
+  --panel-danger-text: #fff;
+  --panel-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
-// Panels
-@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+// Mixin
+@mixin panel-variant($border, $text-color, $bg-color) {
   border-color: $border;
+  background-color: $bg-color;
+  color: $text-color;
 
   & > .heading {
-    color: $heading-text-color;
-    background-color: $heading-bg-color;
-    border-color: $heading-border;
+    border-color: $border;
   }
+
   & > .footer {
     + .collapse > .body {
       border-bottom-color: $border;
@@ -49,7 +56,7 @@
 // Base class
 .panel {
   margin-bottom: var(--line-height-computed);
-  background-color: var(--panel-bg);
+  background-color: var(--panel-background);
   border: 1px solid transparent;
   border-radius: var(--panel-border-radius);
   box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
@@ -69,7 +76,6 @@
     padding: var(--panel-heading-padding);
     border-bottom: 1px solid transparent;
 
-    // Within heading, strip any `h*` tag of its default margins for spacing.
     h1,
     h2,
     h3,
@@ -91,15 +97,30 @@
   // Optional footer (stays gray in every modifier class)
   > .footer {
     padding: var(--panel-footer-padding);
-    background-color: var(--panel-footer-bg);
+    background-color: var(--panel-footer-background);
     border-top: 1px solid var(--panel-inner-border);
+  }
+
+  // Default variant
+  @include panel-variant(
+    var(--panel-default-border),
+    var(--panel-default-text),
+    var(--panel-default-background)
+  );
+
+  // Contextual variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include panel-variant(
+        var(--panel-#{$variant}-border),
+        var(--panel-#{$variant}-text),
+        var(--panel-#{$variant}-background)
+      );
+    }
   }
 }
 
 // List groups in panels
-// By default, space out list group content from panel headings to account for
-// any kind of custom content between the two.
-
 .panel {
   > .group {
     margin-bottom: 0;
@@ -111,7 +132,6 @@
       border-radius: 0;
     }
 
-    // Add border top radius for first one
     &:first-child {
       > li:first-child,
       > a:first-child,
@@ -119,7 +139,7 @@
         border-top: 0;
       }
     }
-    // Add border bottom radius for last one
+
     &:last-child {
       > li:last-child,
       > a:last-child,
@@ -128,10 +148,7 @@
       }
     }
   }
-}
 
-// Collapse space between when there's no additional content.
-.panel {
   .heading + .list-group {
     > li:first-child,
     > a:first-child,
@@ -142,15 +159,12 @@
 }
 
 // Tables in panels
-// Place a non-bordered `table` within a panel (not within a `.panel-body`) and
-// watch it go full width.
-
 .panel {
   > table,
   > table.responsive > table {
     margin-bottom: 0;
   }
-  // Add border top radius for first one
+
   > table:first-child,
   > table.responsive:first-child > table:first-child {
     > thead:first-child,
@@ -167,7 +181,7 @@
       }
     }
   }
-  // Add border bottom radius for last one
+
   > table:last-child,
   > table.responsive:last-child > table:last-child {
     > tbody:last-child,
@@ -184,17 +198,21 @@
       }
     }
   }
+
   > .body + table,
   > .body + table.responsive {
     border-top: 1px solid var(--table-border-color);
   }
+
   > table > tbody:first-child > tr:first-child th,
   > table > tbody:first-child > tr:first-child td {
     border-top: 0;
   }
+
   > table-bordered,
   > table.responsive > table-bordered {
     border: 0;
+
     > thead,
     > tbody,
     > tfoot {
@@ -209,6 +227,7 @@
         }
       }
     }
+
     > thead,
     > tbody {
       > tr:first-child {
@@ -218,6 +237,7 @@
         }
       }
     }
+
     > tbody,
     > tfoot {
       > tr:last-child {
@@ -228,58 +248,9 @@
       }
     }
   }
+
   > table.responsive {
     border: 0;
     margin-bottom: 0;
   }
-}
-
-// Contextual variations
-.panel {
-  @include panel-variant(
-    var(--panel-default-border),
-    var(--panel-default-text),
-    var(--panel-default-heading-bg),
-    var(--panel-default-border)
-  );
-}
-.panel.primary {
-  @include panel-variant(
-    var(--panel-primary-border),
-    var(--panel-primary-text),
-    var(--panel-primary-heading-bg),
-    var(--panel-primary-border)
-  );
-}
-.panel.success {
-  @include panel-variant(
-    var(--panel-success-border),
-    var(--panel-success-text),
-    var(--panel-success-heading-bg),
-    var(--panel-success-border)
-  );
-}
-.panel.info {
-  @include panel-variant(
-    var(--panel-info-border),
-    var(--panel-info-text),
-    var(--panel-info-heading-bg),
-    var(--panel-info-border)
-  );
-}
-.panel.warning {
-  @include panel-variant(
-    var(--panel-warning-border),
-    var(--panel-warning-text),
-    var(--panel-warning-heading-bg),
-    var(--panel-warning-border)
-  );
-}
-.panel.danger {
-  @include panel-variant(
-    var(--panel-danger-border),
-    var(--panel-danger-text),
-    var(--panel-danger-heading-bg),
-    var(--panel-danger-border)
-  );
 }

@@ -3411,36 +3411,36 @@ table.hover > tbody > tr:hover > td {
 }
 
 .panel {
-  --panel-bg: #fff;
+  --panel-background: #fff;
   --panel-body-padding: 15px;
   --panel-heading-padding: 10px 15px;
   --panel-footer-padding: 10px 15px;
   --panel-border-radius: 2px;
   --panel-inner-border: #ddd;
-  --panel-footer-bg: #f5f5f5;
-  --panel-default-text: #333;
+  --panel-footer-background: #f5f5f5;
   --panel-default-border: #ddd;
-  --panel-default-heading-bg: #f5f5f5;
+  --panel-default-text: #333;
+  --panel-default-background: #fff;
+  --panel-primary-background: var(--primary);
   --panel-primary-text: #fff;
-  --panel-primary-border: #0085f0;
-  --panel-primary-heading-bg: #0085f0;
-  --panel-success-text: #3c763d;
-  --panel-success-border: #d6e9c6;
-  --panel-success-heading-bg: #dff0d8;
-  --panel-info-text: #31708f;
-  --panel-info-border: #bce8f1;
-  --panel-info-heading-bg: #d9edf7;
-  --panel-warning-text: #8a6d3b;
-  --panel-warning-border: #faebcc;
-  --panel-warning-heading-bg: #fcf8e3;
-  --panel-danger-text: #a94442;
-  --panel-danger-border: #ebccd1;
-  --panel-danger-heading-bg: #f2dede;
+  --panel-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --panel-success-background: var(--success);
+  --panel-success-text: #fff;
+  --panel-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --panel-info-background: var(--info);
+  --panel-info-text: #fff;
+  --panel-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --panel-warning-background: var(--warning);
+  --panel-warning-text: var(--gray-dark);
+  --panel-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --panel-danger-background: var(--danger);
+  --panel-danger-text: #fff;
+  --panel-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 .panel {
   margin-bottom: var(--line-height-computed);
-  background-color: var(--panel-bg);
+  background-color: var(--panel-background);
   border: 1px solid transparent;
   border-radius: var(--panel-border-radius);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -3478,8 +3478,74 @@ table.hover > tbody > tr:hover > td {
 }
 .panel > .footer {
   padding: var(--panel-footer-padding);
-  background-color: var(--panel-footer-bg);
+  background-color: var(--panel-footer-background);
   border-top: 1px solid var(--panel-inner-border);
+}
+.panel {
+  border-color: var(--panel-default-border);
+  background-color: var(--panel-default-background);
+  color: var(--panel-default-text);
+}
+.panel > .heading {
+  border-color: var(--panel-default-border);
+}
+.panel > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-default-border);
+}
+.panel.primary {
+  border-color: var(--panel-primary-border);
+  background-color: var(--panel-primary-background);
+  color: var(--panel-primary-text);
+}
+.panel.primary > .heading {
+  border-color: var(--panel-primary-border);
+}
+.panel.primary > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-primary-border);
+}
+.panel.success {
+  border-color: var(--panel-success-border);
+  background-color: var(--panel-success-background);
+  color: var(--panel-success-text);
+}
+.panel.success > .heading {
+  border-color: var(--panel-success-border);
+}
+.panel.success > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-success-border);
+}
+.panel.info {
+  border-color: var(--panel-info-border);
+  background-color: var(--panel-info-background);
+  color: var(--panel-info-text);
+}
+.panel.info > .heading {
+  border-color: var(--panel-info-border);
+}
+.panel.info > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-info-border);
+}
+.panel.warning {
+  border-color: var(--panel-warning-border);
+  background-color: var(--panel-warning-background);
+  color: var(--panel-warning-text);
+}
+.panel.warning > .heading {
+  border-color: var(--panel-warning-border);
+}
+.panel.warning > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-warning-border);
+}
+.panel.danger {
+  border-color: var(--panel-danger-border);
+  background-color: var(--panel-danger-background);
+  color: var(--panel-danger-text);
+}
+.panel.danger > .heading {
+  border-color: var(--panel-danger-border);
+}
+.panel.danger > .footer + .collapse > .body {
+  border-bottom-color: var(--panel-danger-border);
 }
 
 .panel > .group {
@@ -3501,7 +3567,6 @@ table.hover > tbody > tr:hover > td {
 .panel > .group:last-child .item:last-child {
   border-bottom: 0;
 }
-
 .panel .heading + .list-group > li:first-child,
 .panel .heading + .list-group > a:first-child,
 .panel .heading + .list-group .item:first-child {
@@ -3617,78 +3682,6 @@ table.hover > tbody > tr:hover > td {
   margin-bottom: 0;
 }
 
-.panel {
-  border-color: var(--panel-default-border);
-}
-.panel > .heading {
-  color: var(--panel-default-text);
-  background-color: var(--panel-default-heading-bg);
-  border-color: var(--panel-default-border);
-}
-.panel > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-default-border);
-}
-
-.panel.primary {
-  border-color: var(--panel-primary-border);
-}
-.panel.primary > .heading {
-  color: var(--panel-primary-text);
-  background-color: var(--panel-primary-heading-bg);
-  border-color: var(--panel-primary-border);
-}
-.panel.primary > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-primary-border);
-}
-
-.panel.success {
-  border-color: var(--panel-success-border);
-}
-.panel.success > .heading {
-  color: var(--panel-success-text);
-  background-color: var(--panel-success-heading-bg);
-  border-color: var(--panel-success-border);
-}
-.panel.success > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-success-border);
-}
-
-.panel.info {
-  border-color: var(--panel-info-border);
-}
-.panel.info > .heading {
-  color: var(--panel-info-text);
-  background-color: var(--panel-info-heading-bg);
-  border-color: var(--panel-info-border);
-}
-.panel.info > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-info-border);
-}
-
-.panel.warning {
-  border-color: var(--panel-warning-border);
-}
-.panel.warning > .heading {
-  color: var(--panel-warning-text);
-  background-color: var(--panel-warning-heading-bg);
-  border-color: var(--panel-warning-border);
-}
-.panel.warning > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-warning-border);
-}
-
-.panel.danger {
-  border-color: var(--panel-danger-border);
-}
-.panel.danger > .heading {
-  color: var(--panel-danger-text);
-  background-color: var(--panel-danger-heading-bg);
-  border-color: var(--panel-danger-border);
-}
-.panel.danger > .footer + .collapse > .body {
-  border-bottom-color: var(--panel-danger-border);
-}
-
 .media {
   margin-top: 15px;
   list-style: none;
@@ -3741,6 +3734,16 @@ table.hover > tbody > tr:hover > td {
   --label-default-background-hover: #8a8a8a;
   --label-color: #fff;
   --label-link-hover-color: #fff;
+  --label-primary-background: var(--primary);
+  --label-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --label-success-background: var(--success);
+  --label-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --label-info-background: var(--info);
+  --label-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --label-warning-background: var(--warning);
+  --label-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --label-danger-background: var(--danger);
+  --label-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 .label {
@@ -3770,24 +3773,34 @@ table.hover > tbody > tr:hover > td {
   filter: brightness(0.9);
 }
 .label.primary {
-  --label-background-variant: var(--primary);
-  background-color: var(--label-background-variant);
+  background-color: var(--label-primary-background);
+}
+.label.primary[href]:hover, .label.primary[href]:focus {
+  background-color: var(--label-primary-border);
 }
 .label.success {
-  --label-background-variant: var(--success);
-  background-color: var(--label-background-variant);
+  background-color: var(--label-success-background);
+}
+.label.success[href]:hover, .label.success[href]:focus {
+  background-color: var(--label-success-border);
 }
 .label.info {
-  --label-background-variant: var(--info);
-  background-color: var(--label-background-variant);
+  background-color: var(--label-info-background);
+}
+.label.info[href]:hover, .label.info[href]:focus {
+  background-color: var(--label-info-border);
 }
 .label.warning {
-  --label-background-variant: var(--warning);
-  background-color: var(--label-background-variant);
+  background-color: var(--label-warning-background);
+}
+.label.warning[href]:hover, .label.warning[href]:focus {
+  background-color: var(--label-warning-border);
 }
 .label.danger {
-  --label-background-variant: var(--danger);
-  background-color: var(--label-background-variant);
+  background-color: var(--label-danger-background);
+}
+.label.danger[href]:hover, .label.danger[href]:focus {
+  background-color: var(--label-danger-border);
 }
 .label.large {
   padding: 0.4em 0.8em 0.5em;
@@ -4310,28 +4323,29 @@ button.close {
 .message {
   --message-padding: 10px 20px;
   --message-link-font-weight: bold;
-  --message-success-background: #dff0d8;
-  --message-success-text: #3c763d;
-  --message-success-border: #d6e9c6;
-  --message-info-background: #d9edf7;
-  --message-info-text: #31708f;
-  --message-info-border: #bce8f1;
-  --message-warning-background: #fcf8e3;
+  --message-primary-background: color-mix(in srgb, var(--primary) 20%, white);
+  --message-primary-text: var(--primary);
+  --message-primary-border: color-mix(in srgb, var(--primary) 30%, white);
+  --message-success-background: color-mix(in srgb, var(--success) 20%, white);
+  --message-success-text: var(--success);
+  --message-success-border: color-mix(in srgb, var(--success) 30%, white);
+  --message-info-background: color-mix(in srgb, var(--info) 20%, white);
+  --message-info-text: var(--info);
+  --message-info-border: color-mix(in srgb, var(--info) 30%, white);
+  --message-warning-background: color-mix(in srgb, var(--warning) 20%, white);
   --message-warning-text: #8a6d3b;
-  --message-warning-border: #faebcc;
-  --message-danger-background: #f2dede;
-  --message-danger-text: #a94442;
-  --message-danger-border: #ebccd1;
+  --message-warning-border: color-mix(in srgb, var(--warning) 30%, white);
+  --message-danger-background: color-mix(in srgb, var(--danger) 20%, white);
+  --message-danger-text: var(--danger);
+  --message-danger-border: color-mix(in srgb, var(--danger) 30%, white);
 }
 
 .message {
   display: none;
   width: 100%;
-  padding: 10px 20px;
   padding: var(--message-padding);
   line-height: 1.8;
   font-size: 16px;
-  background: #fff;
   background: rgba(255, 255, 255, 0.9);
   color: var(--secondary);
   text-align: center;
@@ -4369,7 +4383,14 @@ button.close {
 .message .close:hover {
   opacity: 1;
 }
-
+.message.primary {
+  background-color: var(--message-primary-background);
+  border-color: var(--message-primary-border);
+  color: var(--message-primary-text);
+}
+.message.primary a:hover, .message.primary a:focus {
+  filter: brightness(0.9);
+}
 .message.success {
   background-color: var(--message-success-background);
   border-color: var(--message-success-border);
