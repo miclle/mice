@@ -2,24 +2,18 @@
 // --------------------------------------------------
 
 @use 'sass:list';
-@use 'sass:string';
-@use 'sass:color';
-
-// $input-types: "text", "password", "datetime", "datetime-local", "date", "month", "time", "week", "number", "email", "url", "search", "tel", "color";
+@use 'variables' as *;
 
 // Input variants
-// -------------------------
 @mixin input-variant($border-color, $border-hover: null, $border-focus: null) {
-  $use-css-vars: string.index($border-color, 'var(') != null;
-
   color: var(--secondary);
   background-color: #fff;
   border-color: $border-color;
 
   &:hover {
-    @if $use-css-vars and $border-hover {
+    @if $border-hover {
       border-color: $border-hover;
-    } @else if not $use-css-vars {
+    } @else {
       filter: brightness(0.95);
     }
   }
@@ -27,18 +21,16 @@
   &:focus,
   &:active,
   &.active {
-    @if $use-css-vars and $border-hover {
+    @if $border-hover {
       border-color: $border-hover;
-    } @else if not $use-css-vars {
+    } @else {
       filter: brightness(0.9);
     }
 
-    @if $use-css-vars and $border-focus {
+    @if $border-focus {
       box-shadow: 0 0 0 1px $border-focus, inset 0 1px #f5f5f5;
-    } @else if not $use-css-vars {
-      box-shadow:
-        0 0 0 1px color.adjust($border-color, $lightness: -15%),
-        inset 0 1px #f5f5f5;
+    } @else {
+      box-shadow: 0 0 0 1px $border-color, inset 0 1px #f5f5f5;
     }
   }
 
@@ -57,7 +49,6 @@
 }
 
 // Field variants
-// -------------------------
 @mixin field-variant($border-color, $border-hover: null, $border-focus: null) {
   color: $border-color;
 
@@ -73,7 +64,6 @@
 }
 
 // Input sizing
-// -------------------------
 @mixin input-size($input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height) {
   height: $input-height;
   padding: $padding-vertical $padding-horizontal;
@@ -82,8 +72,6 @@
 }
 
 // Base styles
-// -------------------------
-
 fieldset {
   padding: 0;
   margin: 0;
@@ -159,9 +147,7 @@ label {
   margin-bottom: 2px;
 }
 
-// Input Styles
-// -------------------------
-
+// Input Styles with variants
 input.text,
 input[type='text'],
 input[type='password'],
@@ -174,44 +160,15 @@ textarea {
     var(--border-color-default-focus)
   );
 
-  &.primary {
-    @include input-variant(
-      var(--border-color-primary),
-      var(--border-color-primary-hover),
-      var(--border-color-primary-focus)
-    );
-  }
-
-  &.success {
-    @include input-variant(
-      var(--border-color-success),
-      var(--border-color-success-hover),
-      var(--border-color-success-focus)
-    );
-  }
-
-  &.info {
-    @include input-variant(
-      var(--border-color-info),
-      var(--border-color-info-hover),
-      var(--border-color-info-focus)
-    );
-  }
-
-  &.warning {
-    @include input-variant(
-      var(--border-color-warning),
-      var(--border-color-warning-hover),
-      var(--border-color-warning-focus)
-    );
-  }
-
-  &.danger {
-    @include input-variant(
-      var(--border-color-danger),
-      var(--border-color-danger-hover),
-      var(--border-color-danger-focus)
-    );
+  // Input variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include input-variant(
+        var(--border-color-#{$variant}),
+        var(--border-color-#{$variant}-hover),
+        var(--border-color-#{$variant}-focus)
+      );
+    }
   }
 
   &.fluid {
@@ -220,7 +177,6 @@ textarea {
 }
 
 // Input Sizing
-// -------------------------
 input.text,
 input[type='text'],
 input[type='password'],
@@ -261,7 +217,7 @@ select {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #9e9e9e; // Pre-calculated: text-color lightened 25%
+  color: #9e9e9e;
 }
 
 .field {
@@ -287,6 +243,7 @@ select {
     width: 100%;
   }
 
+  // Field variants (using different names: success, warning, error)
   &.success {
     @include field-variant(
       var(--border-color-success),
@@ -338,7 +295,6 @@ select {
 }
 
 // Inline form
-// -------------------------
 .navbar form,
 form.inline {
   .field {
@@ -380,7 +336,6 @@ form.inline {
 }
 
 // Horizontal Form
-// -------------------------
 form.horizontal {
   $offsets: 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven';
 
@@ -415,7 +370,6 @@ form.horizontal {
 }
 
 // With optional icons
-// -------------------------
 form.inline,
 form.horizontal {
   .field.feedback {
@@ -462,9 +416,9 @@ form.horizontal {
 }
 
 .inputs {
-  position: relative; // For dropdowns
+  position: relative;
   display: table;
-  border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+  border-collapse: separate;
 
   .addon {
     display: table-cell;
@@ -472,7 +426,6 @@ form.horizontal {
     font-size: var(--font-size-base);
     font-weight: normal;
     line-height: 1;
-    // color: $input-color;
     text-align: center;
     background-color: var(--input-group-addon-background);
     border: 1px solid var(--input-group-addon-border-color);
@@ -480,7 +433,6 @@ form.horizontal {
     white-space: nowrap;
     vertical-align: middle;
 
-    // Nuke default margins from checkboxes and radios to vertically center within.
     input[type='radio'],
     input[type='checkbox'] {
       margin-top: 0;
@@ -500,7 +452,7 @@ form.horizontal {
     display: table-cell;
     width: 1%;
     white-space: nowrap;
-    vertical-align: middle; // Match the inputs
+    vertical-align: middle;
 
     &:first-child {
       button:first-child,

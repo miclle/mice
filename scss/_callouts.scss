@@ -1,6 +1,8 @@
 // Blockquote & Callout
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 blockquote,
 .callout {
   padding: calc(var(--line-height-computed) / 2) var(--line-height-computed);
@@ -20,15 +22,13 @@ blockquote,
   small,
   .small {
     display: block;
-    font-size: 80%; // back to default font-size
+    font-size: 80%;
     line-height: var(--line-height-base);
     color: var(--gray-light);
 
     &::before {
       content: '\2014 \00A0';
     }
-
-    // em dash, nbsp
   }
 
   footer {
@@ -47,7 +47,6 @@ blockquote,
     border-left: 0;
     text-align: right;
 
-    // Account for citation
     footer,
     small,
     .small {
@@ -58,8 +57,6 @@ blockquote,
       &::after {
         content: '\00A0 \2014';
       }
-
-      // nbsp, em dash
     }
   }
 }
@@ -72,32 +69,29 @@ blockquote::after,
   content: '';
 }
 
+// Callout component variables
+.callout {
+  --callout-primary-background: var(--primary);
+  --callout-primary-text: #fff;
+  --callout-success-background: var(--state-success-background);
+  --callout-success-text: var(--state-success-text);
+  --callout-info-background: var(--state-info-background);
+  --callout-info-text: var(--state-info-text);
+  --callout-warning-background: var(--state-warning-background);
+  --callout-warning-text: var(--state-warning-text);
+  --callout-danger-background: var(--state-danger-background);
+  --callout-danger-text: var(--state-danger-text);
+}
+
+// Contextual variants
 blockquote,
 .callout {
-  &.primary {
-    border-color: var(--border-color-primary);
-    background-color: var(--state-primary-background);
-    color: #fff;
-  }
-
-  &.success {
-    border-color: var(--border-color-success);
-    background-color: var(--state-success-background);
-  }
-
-  &.info {
-    border-color: var(--border-color-info);
-    background-color: var(--state-info-background);
-  }
-
-  &.warning {
-    border-color: var(--border-color-warning);
-    background-color: var(--state-warning-background);
-  }
-
-  &.danger {
-    border-color: var(--border-color-danger);
-    background-color: var(--state-danger-background);
+  @each $variant in $variants {
+    &.#{$variant} {
+      border-color: var(--border-color-#{$variant});
+      background-color: var(--state-#{$variant}-background);
+      color: #fff;
+    }
   }
 }
 
@@ -117,47 +111,16 @@ blockquote,
     }
   }
 
-  &.success {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--border-color-success);
-    }
-  }
-
-  &.info {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--border-color-info);
-    }
-  }
-
-  &.warning {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--border-color-warning);
-    }
-  }
-
-  &.danger {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: var(--border-color-danger);
+  @each $variant in $variants {
+    &.#{$variant} {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--border-color-#{$variant});
+      }
     }
   }
 }

@@ -1,15 +1,12 @@
 // Timeline
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 // Timeline component variables
 .timeline {
   --timeline-color-default: #333;
   --timeline-background-default: #999;
-  --timeline-background-primary: #0085f0;
-  --timeline-background-success: #81c735;
-  --timeline-background-info: #5bc0de;
-  --timeline-background-warning: #f0ad4e;
-  --timeline-background-danger: #ff3a3c;
   --timeline-small-size: 30px;
   --timeline-small-font-size: 12px;
   --timeline-small-border: 1px;
@@ -19,6 +16,13 @@
   --timeline-large-size: 120px;
   --timeline-large-font-size: 24px;
   --timeline-large-border: 4px;
+
+  // Timeline variant colors
+  --timeline-background-primary: var(--primary);
+  --timeline-background-success: var(--success);
+  --timeline-background-info: var(--info);
+  --timeline-background-warning: var(--warning);
+  --timeline-background-danger: var(--danger);
 }
 
 @mixin timeline-variant($parent, $color-var) {
@@ -167,5 +171,4 @@
 
 // Sizing
 @include timeline-size('.small', --timeline-small-size, --timeline-small-font-size, --timeline-small-border);
-// @include timeline-size(".default", --timeline-default-size, --timeline-default-font-size, --timeline-default-border);
 @include timeline-size('.large', --timeline-large-size, --timeline-large-font-size, --timeline-large-border);

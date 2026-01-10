@@ -1336,6 +1336,19 @@ blockquote::after,
   content: "";
 }
 
+.callout {
+  --callout-primary-background: var(--primary);
+  --callout-primary-text: #fff;
+  --callout-success-background: var(--state-success-background);
+  --callout-success-text: var(--state-success-text);
+  --callout-info-background: var(--state-info-background);
+  --callout-info-text: var(--state-info-text);
+  --callout-warning-background: var(--state-warning-background);
+  --callout-warning-text: var(--state-warning-text);
+  --callout-danger-background: var(--state-danger-background);
+  --callout-danger-text: var(--state-danger-text);
+}
+
 blockquote.primary,
 .callout.primary {
   border-color: var(--border-color-primary);
@@ -1346,21 +1359,25 @@ blockquote.success,
 .callout.success {
   border-color: var(--border-color-success);
   background-color: var(--state-success-background);
+  color: #fff;
 }
 blockquote.info,
 .callout.info {
   border-color: var(--border-color-info);
   background-color: var(--state-info-background);
+  color: #fff;
 }
 blockquote.warning,
 .callout.warning {
   border-color: var(--border-color-warning);
   background-color: var(--state-warning-background);
+  color: #fff;
 }
 blockquote.danger,
 .callout.danger {
   border-color: var(--border-color-danger);
   background-color: var(--state-danger-background);
+  color: #fff;
 }
 
 .callout {
@@ -1375,6 +1392,14 @@ blockquote.danger,
 .callout h5:first-child,
 .callout h6:first-child {
   margin-top: 0;
+}
+.callout.primary h1,
+.callout.primary h2,
+.callout.primary h3,
+.callout.primary h4,
+.callout.primary h5,
+.callout.primary h6 {
+  color: var(--border-color-primary);
 }
 .callout.success h1,
 .callout.success h2,
@@ -3810,11 +3835,6 @@ table.hover > tbody > tr:hover > td {
 .timeline {
   --timeline-color-default: #333;
   --timeline-background-default: #999;
-  --timeline-background-primary: #0085f0;
-  --timeline-background-success: #81c735;
-  --timeline-background-info: #5bc0de;
-  --timeline-background-warning: #f0ad4e;
-  --timeline-background-danger: #ff3a3c;
   --timeline-small-size: 30px;
   --timeline-small-font-size: 12px;
   --timeline-small-border: 1px;
@@ -3824,6 +3844,11 @@ table.hover > tbody > tr:hover > td {
   --timeline-large-size: 120px;
   --timeline-large-font-size: 24px;
   --timeline-large-border: 4px;
+  --timeline-background-primary: var(--primary);
+  --timeline-background-success: var(--success);
+  --timeline-background-info: var(--info);
+  --timeline-background-warning: var(--warning);
+  --timeline-background-danger: var(--danger);
 }
 
 .timeline {
@@ -4040,19 +4065,11 @@ table.hover > tbody > tr:hover > td {
 }
 
 @keyframes progress-bar-stripes {
-  to {
-    background-position: 32px 0;
-  }
   from {
     background-position: 0 0;
   }
-}
-@keyframes progress-bar-stripes {
   to {
     background-position: 32px 0;
-  }
-  from {
-    background-position: 0 0;
   }
 }
 .progress {
@@ -4075,18 +4092,6 @@ table.hover > tbody > tr:hover > td {
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   transition: width 0.6s ease;
 }
-
-.progress .bar.striped,
-.progress.striped .bar {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 32px 32px;
-}
-
-.progress.active .bar,
-.progress .bar.active {
-  animation: progress-bar-stripes 1.5s linear infinite;
-}
-
 .progress .bar.success {
   background-color: var(--progress-bar-success-background);
 }
@@ -4100,22 +4105,33 @@ table.hover > tbody > tr:hover > td {
   background-color: var(--progress-bar-danger-background);
 }
 
+.progress .bar.striped,
+.progress.striped .bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 32px 32px;
+}
+
+.progress.active .bar,
+.progress .bar.active {
+  animation: progress-bar-stripes 1.5s linear infinite;
+}
+
 .alert {
   --alert-padding: 15px;
   --alert-border-radius: 2px;
   --alert-link-font-weight: bold;
-  --alert-success-background: #dff0d8;
-  --alert-success-text: #3c763d;
-  --alert-success-border: #d6e9c6;
-  --alert-info-background: #d9edf7;
-  --alert-info-text: #31708f;
-  --alert-info-border: #bce8f1;
-  --alert-warning-background: #fcf8e3;
+  --alert-success-background: color-mix(in srgb, var(--success) 15%, white);
+  --alert-success-text: var(--success);
+  --alert-success-border: color-mix(in srgb, var(--success) 30%, white);
+  --alert-info-background: color-mix(in srgb, var(--info) 15%, white);
+  --alert-info-text: var(--info);
+  --alert-info-border: color-mix(in srgb, var(--info) 30%, white);
+  --alert-warning-background: color-mix(in srgb, var(--warning) 15%, white);
   --alert-warning-text: #8a6d3b;
-  --alert-warning-border: #faebcc;
-  --alert-danger-background: #f2dede;
-  --alert-danger-text: #a94442;
-  --alert-danger-border: #ebccd1;
+  --alert-warning-border: color-mix(in srgb, var(--warning) 30%, white);
+  --alert-danger-background: color-mix(in srgb, var(--danger) 15%, white);
+  --alert-danger-text: var(--danger);
+  --alert-danger-border: color-mix(in srgb, var(--danger) 30%, white);
 }
 
 .alert {
@@ -4149,25 +4165,45 @@ table.hover > tbody > tr:hover > td {
   color: inherit;
 }
 
+.alert.primary {
+  background-color: var(--alert-primary-background);
+  border-color: var(--alert-primary-border);
+  color: var(--alert-primary-text);
+}
+.alert.primary a {
+  font-weight: var(--alert-link-font-weight);
+}
 .alert.success {
   background-color: var(--alert-success-background);
   border-color: var(--alert-success-border);
   color: var(--alert-success-text);
+}
+.alert.success a {
+  font-weight: var(--alert-link-font-weight);
 }
 .alert.info {
   background-color: var(--alert-info-background);
   border-color: var(--alert-info-border);
   color: var(--alert-info-text);
 }
+.alert.info a {
+  font-weight: var(--alert-link-font-weight);
+}
 .alert.warning {
   background-color: var(--alert-warning-background);
   border-color: var(--alert-warning-border);
   color: var(--alert-warning-text);
 }
+.alert.warning a {
+  font-weight: var(--alert-link-font-weight);
+}
 .alert.danger {
   background-color: var(--alert-danger-background);
   border-color: var(--alert-danger-border);
   color: var(--alert-danger-text);
+}
+.alert.danger a {
+  font-weight: var(--alert-link-font-weight);
 }
 
 .close:not(.icon) {

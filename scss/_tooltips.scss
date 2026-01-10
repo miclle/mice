@@ -1,6 +1,8 @@
 // Tooltips
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 // Tooltip component variables
 .tooltip {
   --tooltip-max-width: 200px;
@@ -9,6 +11,8 @@
   --tooltip-opacity: 0.9;
   --tooltip-arrow-width: 5px;
   --tooltip-arrow-color: #000;
+
+  // Tooltip variant colors
   --tooltip-primary-color: #fff;
   --tooltip-primary-background: var(--primary);
   --tooltip-primary-arrow-color: var(--primary);
@@ -42,9 +46,11 @@
   &.right .arrow {
     border-right-color: $tooltip-arrow-color;
   }
+
   &.left .arrow {
     border-left-color: $tooltip-arrow-color;
   }
+
   &.bottom .arrow,
   &.bottom-left .arrow,
   &.bottom-right .arrow {
@@ -65,18 +71,22 @@
   &.in {
     opacity: var(--tooltip-opacity);
   }
+
   &.top {
     margin-top: -3px;
     padding: var(--tooltip-arrow-width) 0;
   }
+
   &.right {
     margin-left: 3px;
     padding: 0 var(--tooltip-arrow-width);
   }
+
   &.bottom {
     margin-top: 3px;
     padding: var(--tooltip-arrow-width) 0;
   }
+
   &.left {
     margin-left: -3px;
     padding: 0 var(--tooltip-arrow-width);
@@ -108,83 +118,63 @@
     margin-left: calc(var(--tooltip-arrow-width) * -1);
     border-width: var(--tooltip-arrow-width) var(--tooltip-arrow-width) 0;
   }
+
   &.top-left .arrow {
     bottom: 0;
     left: var(--tooltip-arrow-width);
     border-width: var(--tooltip-arrow-width) var(--tooltip-arrow-width) 0;
   }
+
   &.top-right .arrow {
     bottom: 0;
     right: var(--tooltip-arrow-width);
     border-width: var(--tooltip-arrow-width) var(--tooltip-arrow-width) 0;
   }
+
   &.right .arrow {
     top: 50%;
     left: 0;
     margin-top: calc(var(--tooltip-arrow-width) * -1);
     border-width: var(--tooltip-arrow-width) var(--tooltip-arrow-width) var(--tooltip-arrow-width) 0;
   }
+
   &.left .arrow {
     top: 50%;
     right: 0;
     margin-top: calc(var(--tooltip-arrow-width) * -1);
     border-width: var(--tooltip-arrow-width) 0 var(--tooltip-arrow-width) var(--tooltip-arrow-width);
   }
+
   &.bottom .arrow {
     top: 0;
     left: 50%;
     margin-left: calc(var(--tooltip-arrow-width) * -1);
     border-width: 0 var(--tooltip-arrow-width) var(--tooltip-arrow-width);
   }
+
   &.bottom-left .arrow {
     top: 0;
     left: var(--tooltip-arrow-width);
     border-width: 0 var(--tooltip-arrow-width) var(--tooltip-arrow-width);
   }
+
   &.bottom-right .arrow {
     top: 0;
     right: var(--tooltip-arrow-width);
     border-width: 0 var(--tooltip-arrow-width) var(--tooltip-arrow-width);
   }
 
-  // Colors
-  // Contextual variations
-  & {
-    @include tooltip-variant(var(--tooltip-color), var(--tooltip-background), var(--tooltip-arrow-color));
-  }
-  &.primary {
-    @include tooltip-variant(
-      var(--tooltip-primary-color),
-      var(--tooltip-primary-background),
-      var(--tooltip-primary-arrow-color)
-    );
-  }
-  &.success {
-    @include tooltip-variant(
-      var(--tooltip-success-color),
-      var(--tooltip-success-background),
-      var(--tooltip-success-arrow-color)
-    );
-  }
-  &.info {
-    @include tooltip-variant(
-      var(--tooltip-info-color),
-      var(--tooltip-info-background),
-      var(--tooltip-info-arrow-color)
-    );
-  }
-  &.warning {
-    @include tooltip-variant(
-      var(--tooltip-warning-color),
-      var(--tooltip-warning-background),
-      var(--tooltip-warning-arrow-color)
-    );
-  }
-  &.danger {
-    @include tooltip-variant(
-      var(--tooltip-danger-color),
-      var(--tooltip-danger-background),
-      var(--tooltip-danger-arrow-color)
-    );
+  // Default variant
+  @include tooltip-variant(var(--tooltip-color), var(--tooltip-background), var(--tooltip-arrow-color));
+
+  // Contextual variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include tooltip-variant(
+        var(--tooltip-#{$variant}-color),
+        var(--tooltip-#{$variant}-background),
+        var(--tooltip-#{$variant}-arrow-color)
+      );
+    }
   }
 }

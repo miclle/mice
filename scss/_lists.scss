@@ -2,6 +2,7 @@
 // --------------------------------------------------
 
 @use 'sass:list';
+@use 'variables' as *;
 
 // List group variants
 @mixin list-group-item-variant($state, $background, $color) {
@@ -20,9 +21,9 @@
     &:hover,
     &:focus {
       color: $color;
-      // Using CSS filter for hover darkening effect
       filter: brightness(0.95);
     }
+
     &.active,
     &.active:hover,
     &.active:focus {
@@ -39,6 +40,7 @@ ul,
 ol {
   margin-top: 0;
   margin-bottom: calc(var(--line-height-computed) / 2);
+
   ul,
   ol {
     margin-bottom: 0;
@@ -98,13 +100,16 @@ $columns:
 dl {
   margin-top: 0;
   margin-bottom: var(--line-height-computed);
+
   dt,
   dd {
     line-height: var(--line-height-base);
   }
+
   dt {
     font-weight: bold;
   }
+
   dd {
     margin-left: 0;
   }
@@ -121,6 +126,7 @@ dl.horizontal {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   dd {
     display: flow-root;
     margin-left: 180px;
@@ -148,7 +154,6 @@ dl.horizontal {
 }
 
 // Base class
-// Easily usable on <ul>, <ol>, <div> or <section>.
 ul,
 ol,
 div,
@@ -179,7 +184,7 @@ section {
 
     > a {
       color: var(--list-group-link-color);
-      // Hover state
+
       &:hover,
       &:focus {
         text-decoration: none;
@@ -191,7 +196,6 @@ section {
     > li,
     > a,
     .item {
-      // Disabled state
       &.disabled,
       &.disabled:hover,
       &.disabled:focus {
@@ -201,12 +205,12 @@ section {
         .heading {
           color: inherit;
         }
+
         .text {
           color: var(--list-group-disabled-text-color);
         }
       }
 
-      // Active class on item itself, not parent
       &.active,
       &.active:hover,
       &.active:focus {
@@ -218,6 +222,7 @@ section {
         .heading {
           color: inherit;
         }
+
         .text {
           color: var(--list-group-active-text-color);
         }
@@ -225,8 +230,6 @@ section {
     }
 
     // Contextual variants
-    // Add modifier classes to change text and background color on individual items.
-    // Organizationally, this must come after the `:hover` states.
     @include list-group-item-variant(success, var(--state-success-background), var(--state-success-text));
     @include list-group-item-variant(info, var(--state-info-background), var(--state-info-text));
     @include list-group-item-variant(warning, var(--state-warning-background), var(--state-warning-text));
@@ -237,6 +240,7 @@ section {
       margin-top: 0;
       margin-bottom: 5px;
     }
+
     .text {
       margin-bottom: 0;
       line-height: 1.3;

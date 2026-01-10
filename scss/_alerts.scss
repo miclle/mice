@@ -1,28 +1,41 @@
 // Alerts
 // --------------------------------------------------
 
+@use 'variables' as *;
+
 // Alert component variables
 .alert {
   --alert-padding: 15px;
   --alert-border-radius: 2px;
   --alert-link-font-weight: bold;
-  --alert-success-background: #dff0d8;
-  --alert-success-text: #3c763d;
-  --alert-success-border: #d6e9c6;
-  --alert-info-background: #d9edf7;
-  --alert-info-text: #31708f;
-  --alert-info-border: #bce8f1;
-  --alert-warning-background: #fcf8e3;
+
+  // Alert variant colors (lighter for larger background areas)
+  --alert-success-background: color-mix(in srgb, var(--success) 15%, white);
+  --alert-success-text: var(--success);
+  --alert-success-border: color-mix(in srgb, var(--success) 30%, white);
+  --alert-info-background: color-mix(in srgb, var(--info) 15%, white);
+  --alert-info-text: var(--info);
+  --alert-info-border: color-mix(in srgb, var(--info) 30%, white);
+  --alert-warning-background: color-mix(in srgb, var(--warning) 15%, white);
   --alert-warning-text: #8a6d3b;
-  --alert-warning-border: #faebcc;
-  --alert-danger-background: #f2dede;
-  --alert-danger-text: #a94442;
-  --alert-danger-border: #ebccd1;
+  --alert-warning-border: color-mix(in srgb, var(--warning) 30%, white);
+  --alert-danger-background: color-mix(in srgb, var(--danger) 15%, white);
+  --alert-danger-text: var(--danger);
+  --alert-danger-border: color-mix(in srgb, var(--danger) 30%, white);
+}
+
+// Mixin
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  a {
+    font-weight: var(--alert-link-font-weight);
+  }
 }
 
 // Base styles
-// -------------------------
-
 .alert {
   padding: var(--alert-padding);
   margin-bottom: var(--line-height-computed);
@@ -32,7 +45,6 @@
   // Headings for larger alerts
   h4 {
     margin-top: 0;
-    // Specified for the h4 to prevent conflicts of changing $headings-color
     color: inherit;
   }
 
@@ -50,13 +62,9 @@
   > p + p {
     margin-top: 5px;
   }
-
-  // Note: hr and link colors removed as they conflict with color: inherit
-  // Use specific color variants (success, info, warning, danger) for colored alerts
 }
 
 // Dismissible alerts
-// Expand the right padding and account for the close button's positioning.
 .alert.dismissible {
   padding-right: calc(var(--alert-padding) + 20px);
 
@@ -69,31 +77,15 @@
   }
 }
 
-// Alternate styles
-// Generate contextual modifier classes for colorizing the alert.
-
+// Contextual variants
 .alert {
-  &.success {
-    background-color: var(--alert-success-background);
-    border-color: var(--alert-success-border);
-    color: var(--alert-success-text);
-  }
-
-  &.info {
-    background-color: var(--alert-info-background);
-    border-color: var(--alert-info-border);
-    color: var(--alert-info-text);
-  }
-
-  &.warning {
-    background-color: var(--alert-warning-background);
-    border-color: var(--alert-warning-border);
-    color: var(--alert-warning-text);
-  }
-
-  &.danger {
-    background-color: var(--alert-danger-background);
-    border-color: var(--alert-danger-border);
-    color: var(--alert-danger-text);
+  @each $variant in $variants {
+    &.#{$variant} {
+      @include alert-variant(
+        var(--alert-#{$variant}-background),
+        var(--alert-#{$variant}-border),
+        var(--alert-#{$variant}-text)
+      );
+    }
   }
 }
