@@ -2,6 +2,7 @@
 // --------------------------------------------------
 
 @use 'sass:list';
+@use 'variables' as *;
 
 // Button component variables
 button,
@@ -157,8 +158,6 @@ button,
   );
 
   // Button variants
-  $variants: 'primary', 'success', 'info', 'warning', 'danger';
-
   @each $variant in $variants {
     &.#{$variant} {
       @include button-variant(

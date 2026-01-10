@@ -3737,20 +3737,10 @@ table.hover > tbody > tr:hover > td {
 }
 
 .label {
-  --label-background-default: #999;
-  --label-background-primary: #0085f0;
-  --label-background-success: #81c735;
-  --label-background-info: #5bc0de;
-  --label-background-warning: #f0ad4e;
-  --label-background-danger: #ff3a3c;
+  --label-default-background: #999;
+  --label-default-background-hover: #8a8a8a;
   --label-color: #fff;
   --label-link-hover-color: #fff;
-  --label-background-default-hover: #8a8a8a;
-  --label-background-primary-hover: #0077d9;
-  --label-background-success-hover: #73b32f;
-  --label-background-info-hover: #50adc8;
-  --label-background-warning-hover: #d39b46;
-  --label-background-danger-hover: #e13436;
 }
 
 .label {
@@ -3764,6 +3754,7 @@ table.hover > tbody > tr:hover > td {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--border-radius);
+  background-color: var(--label-default-background);
 }
 .label:empty {
   display: none;
@@ -3772,59 +3763,35 @@ table.hover > tbody > tr:hover > td {
   position: relative;
   top: -1px;
 }
-
-a.label:hover, a.label:focus {
+.label[href]:hover, .label[href]:focus {
   color: var(--label-link-hover-color);
   text-decoration: none;
   cursor: pointer;
+  filter: brightness(0.9);
 }
-
-.label {
-  background-color: var(--label-background-default);
-}
-.label[href]:hover, .label[href]:focus {
-  background-color: var(--label-background-default-hover);
-}
-
 .label.primary {
-  background-color: var(--label-background-primary);
+  --label-background-variant: var(--primary);
+  background-color: var(--label-background-variant);
 }
-.label.primary[href]:hover, .label.primary[href]:focus {
-  background-color: var(--label-background-primary-hover);
-}
-
 .label.success {
-  background-color: var(--label-background-success);
+  --label-background-variant: var(--success);
+  background-color: var(--label-background-variant);
 }
-.label.success[href]:hover, .label.success[href]:focus {
-  background-color: var(--label-background-success-hover);
-}
-
 .label.info {
-  background-color: var(--label-background-info);
+  --label-background-variant: var(--info);
+  background-color: var(--label-background-variant);
 }
-.label.info[href]:hover, .label.info[href]:focus {
-  background-color: var(--label-background-info-hover);
-}
-
 .label.warning {
-  background-color: var(--label-background-warning);
+  --label-background-variant: var(--warning);
+  background-color: var(--label-background-variant);
 }
-.label.warning[href]:hover, .label.warning[href]:focus {
-  background-color: var(--label-background-warning-hover);
-}
-
 .label.danger {
-  background-color: var(--label-background-danger);
+  --label-background-variant: var(--danger);
+  background-color: var(--label-background-variant);
 }
-.label.danger[href]:hover, .label.danger[href]:focus {
-  background-color: var(--label-background-danger-hover);
-}
-
 .label.large {
   padding: 0.4em 0.8em 0.5em;
   font-size: 120%;
-  border-radius: var(--border-radius);
 }
 
 .timeline {

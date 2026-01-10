@@ -1,44 +1,17 @@
-// Lables
+// Labels
 // --------------------------------------------------
 
-@use 'sass:color';
-@use 'sass:string';
+@use 'variables' as *;
 
 // Label component variables
 .label {
-  --label-background-default: #999;
-  --label-background-primary: #0085f0;
-  --label-background-success: #81c735;
-  --label-background-info: #5bc0de;
-  --label-background-warning: #f0ad4e;
-  --label-background-danger: #ff3a3c;
+  --label-default-background: #999;
+  --label-default-background-hover: #8a8a8a;
   --label-color: #fff;
   --label-link-hover-color: #fff;
-  --label-background-default-hover: #8a8a8a;
-  --label-background-primary-hover: #0077d9;
-  --label-background-success-hover: #73b32f;
-  --label-background-info-hover: #50adc8;
-  --label-background-warning-hover: #d39b46;
-  --label-background-danger-hover: #e13436;
 }
 
-@mixin label-variant($color, $hover: null) {
-  $use-css-vars: string.index($color, 'var(') != null;
-
-  background-color: $color;
-
-  &[href] {
-    &:hover,
-    &:focus {
-      @if $use-css-vars and $hover {
-        background-color: $hover;
-      } @else if not $use-css-vars {
-        background-color: color.adjust($color, $lightness: -10%);
-      }
-    }
-  }
-}
-
+// Base styles
 .label {
   display: inline;
   padding: 0.25em 0.6em 0.28em;
@@ -50,8 +23,7 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--border-radius);
-
-  // [converter] extracted a& to a.label
+  background-color: var(--label-default-background);
 
   // Empty labels collapse automatically (not available in IE8)
   &:empty {
@@ -63,69 +35,30 @@
     position: relative;
     top: -1px;
   }
-}
 
-// Add hover effects, but only for links
-a.label {
-  &:hover,
-  &:focus {
-    color: var(--label-link-hover-color);
-    text-decoration: none;
-    cursor: pointer;
+  // Hover effect for linked labels
+  &[href] {
+    &:hover,
+    &:focus {
+      color: var(--label-link-hover-color);
+      text-decoration: none;
+      cursor: pointer;
+      filter: brightness(0.9);
+    }
   }
-}
 
-// Colors
-// Contextual variations (linked labels get darker on :hover)
-.label {
-  @include label-variant(
-    var(--label-background-default),
-    var(--label-background-default-hover)
-  );
-}
-.label.primary {
-  @include label-variant(
-    var(--label-background-primary),
-    var(--label-background-primary-hover)
-  );
-}
-.label.success {
-  @include label-variant(
-    var(--label-background-success),
-    var(--label-background-success-hover)
-  );
-}
-.label.info {
-  @include label-variant(
-    var(--label-background-info),
-    var(--label-background-info-hover)
-  );
-}
-.label.warning {
-  @include label-variant(
-    var(--label-background-warning),
-    var(--label-background-warning-hover)
-  );
-}
-.label.danger {
-  @include label-variant(
-    var(--label-background-danger),
-    var(--label-background-danger-hover)
-  );
-}
+  // Label variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      --label-background-variant: var(--#{$variant});
 
-.label {
+      background-color: var(--label-background-variant);
+    }
+  }
+
+  // Size variant
   &.large {
     padding: 0.4em 0.8em 0.5em;
     font-size: 120%;
-    border-radius: var(--border-radius);
   }
 }
-
-// $colors: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow;
-
-// @for $i from 1 through list.length($colors) {
-//   .label.#{nth($colors, $i)}{
-//     @include label-variant(#{nth($colors, $i)});
-//   }
-// }
