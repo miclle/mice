@@ -10,11 +10,6 @@
   --info: #5bc0de;
   --warning: #f0ad4e;
   --danger: #ff3a3c;
-  --brand-primary: var(--primary);
-  --brand-success: var(--success);
-  --brand-info: var(--info);
-  --brand-warning: var(--warning);
-  --brand-danger: var(--danger);
   --background-color: #fff;
   --text-color: #333;
   --link-color: var(--primary);
@@ -66,8 +61,6 @@
   --padding-large-horizontal: 15px;
   --padding-mini-vertical: 2px;
   --padding-mini-horizontal: 6px;
-  --component-active-color: #fff;
-  --component-active-bg: var(--primary);
   --code-color: #c7254e;
   --code-background: #f9f2f4;
   --kbd-color: #fff;
@@ -96,11 +89,6 @@
   --state-warning-background: #fcf8e3;
   --state-danger-text: #a94442;
   --state-danger-background: #f2dede;
-  --state-primary-border: #0067dc;
-  --state-success-border: #c9e2b3;
-  --state-info-border: #a6e1ec;
-  --state-warning-border: #f7e1a5;
-  --state-danger-border: #ebccd1;
   --link-hover-color: #0076e6;
   --close-font-weight: bold;
   --close-color: #000;
@@ -110,10 +98,7 @@
   --zindex-modal: 1050;
   --zindex-tooltip: 1070;
   --zindex-message: 1090;
-  --screen-xs-min: 480px;
   --screen-sm-min: 768px;
-  --screen-md-min: 992px;
-  --screen-lg-min: 1200px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
