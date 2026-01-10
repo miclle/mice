@@ -1,43 +1,43 @@
-// Panels
+// Cards
 // --------------------------------------------------
 
 @use 'variables' as *;
 
-// Panel component variables
-.panel {
-  --panel-background: #fff;
-  --panel-body-padding: 15px;
-  --panel-heading-padding: 10px 15px;
-  --panel-footer-padding: 10px 15px;
-  --panel-border-radius: 2px;
-  --panel-inner-border: #ddd;
-  --panel-footer-background: #f5f5f5;
+// Card component variables
+.card {
+  --card-background: #fff;
+  --card-body-padding: 15px;
+  --card-heading-padding: 10px 15px;
+  --card-footer-padding: 10px 15px;
+  --card-border-radius: 2px;
+  --card-inner-border: #ddd;
+  --card-footer-background: #f5f5f5;
 
-  // Default panel
-  --panel-default-border: #ddd;
-  --panel-default-text: #333;
-  --panel-default-background: #fff;
+  // Default card
+  --card-default-border: #ddd;
+  --card-default-text: #333;
+  --card-default-background: #fff;
 
-  // Panel variant colors
-  --panel-primary-background: var(--primary);
-  --panel-primary-text: #fff;
-  --panel-primary-border: color-mix(in srgb, var(--primary) 85%, black);
-  --panel-success-background: var(--success);
-  --panel-success-text: #fff;
-  --panel-success-border: color-mix(in srgb, var(--success) 85%, black);
-  --panel-info-background: var(--info);
-  --panel-info-text: #fff;
-  --panel-info-border: color-mix(in srgb, var(--info) 85%, black);
-  --panel-warning-background: var(--warning);
-  --panel-warning-text: var(--gray-dark);
-  --panel-warning-border: color-mix(in srgb, var(--warning) 85%, black);
-  --panel-danger-background: var(--danger);
-  --panel-danger-text: #fff;
-  --panel-danger-border: color-mix(in srgb, var(--danger) 85%, black);
+  // Card variant colors
+  --card-primary-background: var(--primary);
+  --card-primary-text: #fff;
+  --card-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --card-success-background: var(--success);
+  --card-success-text: #fff;
+  --card-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --card-info-background: var(--info);
+  --card-info-text: #fff;
+  --card-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --card-warning-background: var(--warning);
+  --card-warning-text: var(--gray-dark);
+  --card-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --card-danger-background: var(--danger);
+  --card-danger-text: #fff;
+  --card-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
 // Mixin
-@mixin panel-variant($border, $text-color, $bg-color) {
+@mixin card-variant($border, $text-color, $bg-color) {
   border-color: $border;
   background-color: $bg-color;
   color: $text-color;
@@ -54,16 +54,16 @@
 }
 
 // Base class
-.panel {
+.card {
   margin-bottom: var(--line-height-computed);
-  background-color: var(--panel-background);
+  background-color: var(--card-background);
   border: 1px solid transparent;
-  border-radius: var(--panel-border-radius);
+  border-radius: var(--card-border-radius);
   box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
 
-  // Panel contents
+  // Card contents
   > .body {
-    padding: var(--panel-body-padding);
+    padding: var(--card-body-padding);
     display: flow-root;
 
     *:last-child {
@@ -73,7 +73,7 @@
 
   // Optional heading
   > .heading {
-    padding: var(--panel-heading-padding);
+    padding: var(--card-heading-padding);
     border-bottom: 1px solid transparent;
 
     h1,
@@ -96,32 +96,32 @@
 
   // Optional footer (stays gray in every modifier class)
   > .footer {
-    padding: var(--panel-footer-padding);
-    background-color: var(--panel-footer-background);
-    border-top: 1px solid var(--panel-inner-border);
+    padding: var(--card-footer-padding);
+    background-color: var(--card-footer-background);
+    border-top: 1px solid var(--card-inner-border);
   }
 
   // Default variant
-  @include panel-variant(
-    var(--panel-default-border),
-    var(--panel-default-text),
-    var(--panel-default-background)
+  @include card-variant(
+    var(--card-default-border),
+    var(--card-default-text),
+    var(--card-default-background)
   );
 
   // Contextual variants
   @each $variant in $variants {
     &.#{$variant} {
-      @include panel-variant(
-        var(--panel-#{$variant}-border),
-        var(--panel-#{$variant}-text),
-        var(--panel-#{$variant}-background)
+      @include card-variant(
+        var(--card-#{$variant}-border),
+        var(--card-#{$variant}-text),
+        var(--card-#{$variant}-background)
       );
     }
   }
 }
 
-// List groups in panels
-.panel {
+// List groups in cards
+.card {
   > .group {
     margin-bottom: 0;
 
@@ -158,8 +158,8 @@
   }
 }
 
-// Tables in panels
-.panel {
+// Tables in cards
+.card {
   > table,
   > table.responsive > table {
     margin-bottom: 0;
@@ -172,11 +172,11 @@
       > tr:first-child {
         td:first-child,
         th:first-child {
-          border-top-left-radius: calc(var(--panel-border-radius) - 1);
+          border-top-left-radius: calc(var(--card-border-radius) - 1);
         }
         td:last-child,
         th:last-child {
-          border-top-right-radius: calc(var(--panel-border-radius) - 1);
+          border-top-right-radius: calc(var(--card-border-radius) - 1);
         }
       }
     }
@@ -189,11 +189,11 @@
       > tr:last-child {
         td:first-child,
         th:first-child {
-          border-bottom-left-radius: calc(var(--panel-border-radius) - 1);
+          border-bottom-left-radius: calc(var(--card-border-radius) - 1);
         }
         td:last-child,
         th:last-child {
-          border-bottom-right-radius: calc(var(--panel-border-radius) - 1);
+          border-bottom-right-radius: calc(var(--card-border-radius) - 1);
         }
       }
     }
