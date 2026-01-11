@@ -1,0 +1,81 @@
+// Tags
+// --------------------------------------------------
+
+@use 'variables' as *;
+
+// Tag component variables
+.tag {
+  --tag-default-background: #999;
+  --tag-default-background-hover: #8a8a8a;
+  --tag-color: #fff;
+  --tag-link-hover-color: #fff;
+
+  // Tag variant colors
+  --tag-primary-background: var(--primary);
+  --tag-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --tag-success-background: var(--success);
+  --tag-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --tag-info-background: var(--info);
+  --tag-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --tag-warning-background: var(--warning);
+  --tag-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --tag-danger-background: var(--danger);
+  --tag-danger-border: color-mix(in srgb, var(--danger) 85%, black);
+}
+
+// Base styles
+.tag {
+  display: inline;
+  padding: 0.25em 0.6em 0.28em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--tag-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--border-radius);
+  background-color: var(--tag-default-background);
+
+  // Empty tags collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for tags in buttons
+  .button & {
+    position: relative;
+    top: -1px;
+  }
+
+  // Hover effect for linked tags
+  &[href] {
+    &:hover,
+    &:focus {
+      color: var(--tag-link-hover-color);
+      text-decoration: none;
+      cursor: pointer;
+      filter: brightness(0.9);
+    }
+  }
+
+  // Tag variants
+  @each $variant in $variants {
+    &.#{$variant} {
+      background-color: var(--tag-#{$variant}-background);
+
+      &[href] {
+        &:hover,
+        &:focus {
+          background-color: var(--tag-#{$variant}-border);
+        }
+      }
+    }
+  }
+
+  // Size variant
+  &.large {
+    padding: 0.4em 0.8em 0.5em;
+    font-size: 120%;
+  }
+}

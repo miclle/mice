@@ -2618,18 +2618,18 @@ section.group > a:last-child,
 section.group .item:last-child {
   margin-bottom: 0;
 }
-ul.group > li > .label,
-ul.group > a > .label,
-ul.group .item > .label,
-ol.group > li > .label,
-ol.group > a > .label,
-ol.group .item > .label,
-div.group > li > .label,
-div.group > a > .label,
-div.group .item > .label,
-section.group > li > .label,
-section.group > a > .label,
-section.group .item > .label {
+ul.group > li > .tag,
+ul.group > a > .tag,
+ul.group .item > .tag,
+ol.group > li > .tag,
+ol.group > a > .tag,
+ol.group .item > .tag,
+div.group > li > .tag,
+div.group > a > .tag,
+div.group .item > .tag,
+section.group > li > .tag,
+section.group > a > .tag,
+section.group .item > .tag {
   float: right;
 }
 ul.group > a,
@@ -3739,80 +3739,80 @@ table.hover > tbody > tr:hover > td {
   margin-top: 0;
 }
 
-.label {
-  --label-default-background: #999;
-  --label-default-background-hover: #8a8a8a;
-  --label-color: #fff;
-  --label-link-hover-color: #fff;
-  --label-primary-background: var(--primary);
-  --label-primary-border: color-mix(in srgb, var(--primary) 85%, black);
-  --label-success-background: var(--success);
-  --label-success-border: color-mix(in srgb, var(--success) 85%, black);
-  --label-info-background: var(--info);
-  --label-info-border: color-mix(in srgb, var(--info) 85%, black);
-  --label-warning-background: var(--warning);
-  --label-warning-border: color-mix(in srgb, var(--warning) 85%, black);
-  --label-danger-background: var(--danger);
-  --label-danger-border: color-mix(in srgb, var(--danger) 85%, black);
+.tag {
+  --tag-default-background: #999;
+  --tag-default-background-hover: #8a8a8a;
+  --tag-color: #fff;
+  --tag-link-hover-color: #fff;
+  --tag-primary-background: var(--primary);
+  --tag-primary-border: color-mix(in srgb, var(--primary) 85%, black);
+  --tag-success-background: var(--success);
+  --tag-success-border: color-mix(in srgb, var(--success) 85%, black);
+  --tag-info-background: var(--info);
+  --tag-info-border: color-mix(in srgb, var(--info) 85%, black);
+  --tag-warning-background: var(--warning);
+  --tag-warning-border: color-mix(in srgb, var(--warning) 85%, black);
+  --tag-danger-background: var(--danger);
+  --tag-danger-border: color-mix(in srgb, var(--danger) 85%, black);
 }
 
-.label {
+.tag {
   display: inline;
   padding: 0.25em 0.6em 0.28em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: var(--label-color);
+  color: var(--tag-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--border-radius);
-  background-color: var(--label-default-background);
+  background-color: var(--tag-default-background);
 }
-.label:empty {
+.tag:empty {
   display: none;
 }
-.button .label {
+.button .tag {
   position: relative;
   top: -1px;
 }
-.label[href]:hover, .label[href]:focus {
-  color: var(--label-link-hover-color);
+.tag[href]:hover, .tag[href]:focus {
+  color: var(--tag-link-hover-color);
   text-decoration: none;
   cursor: pointer;
   filter: brightness(0.9);
 }
-.label.primary {
-  background-color: var(--label-primary-background);
+.tag.primary {
+  background-color: var(--tag-primary-background);
 }
-.label.primary[href]:hover, .label.primary[href]:focus {
-  background-color: var(--label-primary-border);
+.tag.primary[href]:hover, .tag.primary[href]:focus {
+  background-color: var(--tag-primary-border);
 }
-.label.success {
-  background-color: var(--label-success-background);
+.tag.success {
+  background-color: var(--tag-success-background);
 }
-.label.success[href]:hover, .label.success[href]:focus {
-  background-color: var(--label-success-border);
+.tag.success[href]:hover, .tag.success[href]:focus {
+  background-color: var(--tag-success-border);
 }
-.label.info {
-  background-color: var(--label-info-background);
+.tag.info {
+  background-color: var(--tag-info-background);
 }
-.label.info[href]:hover, .label.info[href]:focus {
-  background-color: var(--label-info-border);
+.tag.info[href]:hover, .tag.info[href]:focus {
+  background-color: var(--tag-info-border);
 }
-.label.warning {
-  background-color: var(--label-warning-background);
+.tag.warning {
+  background-color: var(--tag-warning-background);
 }
-.label.warning[href]:hover, .label.warning[href]:focus {
-  background-color: var(--label-warning-border);
+.tag.warning[href]:hover, .tag.warning[href]:focus {
+  background-color: var(--tag-warning-border);
 }
-.label.danger {
-  background-color: var(--label-danger-background);
+.tag.danger {
+  background-color: var(--tag-danger-background);
 }
-.label.danger[href]:hover, .label.danger[href]:focus {
-  background-color: var(--label-danger-border);
+.tag.danger[href]:hover, .tag.danger[href]:focus {
+  background-color: var(--tag-danger-border);
 }
-.label.large {
+.tag.large {
   padding: 0.4em 0.8em 0.5em;
   font-size: 120%;
 }
