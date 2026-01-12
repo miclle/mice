@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Tables" bodyClass="docs_components components_tables" activeSection="docs" currentPage="/docs/components/tables">
@@ -8,15 +9,17 @@ import Layout from '../../../layouts/Layout.astro';
         If the default "foundation" import was commented out, then make sure you import this file:
       </p>
       <h3>SCSS</h3>
-<pre><code class="highlight sass"><span class="k">@import</span> <span class="s">"mice/tables";</span>
-</code></pre>
+<Code language="scss" code={`
+@import "mice/tables";
+`} />
 
       <section>
         <h2>Base</h2>
-<pre><code class="highlight html"><span class="nt">&lt;table&gt;</span>
+<Code language="html" code={`
+<table>
   ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
+</table>
+`} />
         <table>
           <thead>
             <tr>
@@ -59,10 +62,11 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Condensed table</h2>
-<pre><code class="highlight html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"condensed"</span><span class="nt">&gt;</span>
+<Code language="html" code={`
+<table class="condensed">
   ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
+</table>
+`} />
         <table class="condensed">
           <thead>
             <tr>
@@ -105,10 +109,11 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Bordered table</h2>
-<pre><code class="highlight html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"bordered"</span><span class="nt">&gt;</span>
+<Code language="html" code={`
+<table class="bordered">
   ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
+</table>
+`} />
         <table class="bordered">
           <thead>
             <tr>
@@ -151,10 +156,11 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Striped rows</h2>
-<pre><code class="highlight html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"striped"</span><span class="nt">&gt;</span>
+<Code language="html" code={`
+<table class="striped">
   ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
+</table>
+`} />
         <table class="striped">
           <thead>
             <tr>
@@ -197,10 +203,11 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Hover rows</h2>
-<pre><code class="highlight html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"hover"</span><span class="nt">&gt;</span>
+<Code language="html" code={`
+<table class="hover">
   ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
+</table>
+`} />
         <table class="hover">
           <thead>
             <tr>
@@ -243,12 +250,13 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Responsive tables</h2>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table responsive"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;table&gt;</span>
+<Code language="html" code={`
+<div class="table responsive">
+  <table>
     ...
-  <span class="nt">&lt;/table&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+  </table>
+</div>
+`} />
         <div class="table responsive">
           <table>
             <thead>
@@ -351,24 +359,25 @@ import Layout from '../../../layouts/Layout.astro';
 
       <section>
         <h2>Contextual classes</h2>
-<pre><code class="highlight html"><span class="c">&lt;!-- On rows --&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<Code language="html" code={`
+<!-- On rows -->
+<tr class="active">...</tr>
+<tr class="primary">...</tr>
+<tr class="success">...</tr>
+<tr class="warning">...</tr>
+<tr class="danger">...</tr>
+<tr class="info">...</tr>
 
-<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
-<span class="nt">&lt;tr&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
-<span class="nt">&lt;/tr&gt;</span>
-</code></pre>
+<!-- On cells (\`td\` or \`th\`) -->
+<tr>
+  <td class="active">...</td>
+  <td class="primary">...</td>
+  <td class="success">...</td>
+  <td class="warning">...</td>
+  <td class="danger">...</td>
+  <td class="info">...</td>
+</tr>
+`} />
         <table>
           <thead>
             <tr>

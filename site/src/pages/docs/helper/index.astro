@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 
 const scssCode1 = `//Classes
 .lefted   { float: left !important; }
@@ -53,12 +54,14 @@ const scssCode4 = `.hide {
     <p class="text warning">Etiam porta sem malesuada magna mollis euismod.</p>
     <p class="text danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
   </section>
-  <pre><code class="highlight html">&lt;p class="text muted"&gt;...&lt;/p&gt;
-&lt;p class="text primary"&gt;...&lt;/p&gt;
-&lt;p class="text success"&gt;...&lt;/p&gt;
-&lt;p class="text info"&gt;...&lt;/p&gt;
-&lt;p class="text warning"&gt;...&lt;/p&gt;
-&lt;p class="text danger"&gt;...&lt;/p&gt;</code></pre>
+  <Code language="html" code={`
+<p class="text muted">...</p>
+<p class="text primary">...</p>
+<p class="text success">...</p>
+<p class="text info">...</p>
+<p class="text warning">...</p>
+<p class="text danger">...</p>
+`} />
 
   <h2 id="helper-classes-backgrounds">Contextual backgrounds</h2>
   <section class="example">
@@ -68,11 +71,13 @@ const scssCode4 = `.hide {
     <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
     <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
   </section>
-  <pre><code class="highlight html">&lt;p class="bg-primary"&gt;...&lt;/p&gt;
-&lt;p class="bg-success"&gt;...&lt;/p&gt;
-&lt;p class="bg-info"&gt;...&lt;/p&gt;
-&lt;p class="bg-warning"&gt;...&lt;/p&gt;
-&lt;p class="bg-danger"&gt;...&lt;/p&gt;</code></pre>
+  <Code language="html" code={`
+<p class="bg-primary">...</p>
+<p class="bg-success">...</p>
+<p class="bg-info">...</p>
+<p class="bg-warning">...</p>
+<p class="bg-danger">...</p>
+`} />
 
   <h2 id="helper-classes-floats">Quick floats</h2>
   <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
@@ -81,23 +86,31 @@ const scssCode4 = `.hide {
     <div class="righted">The righted text</div>
     <div class="clearfix"></div>
   </section>
-  <pre><code class="highlight html">&lt;div class="lefted"&gt;The lefted text&lt;/div&gt;
-&lt;div class="righted"&gt;The righted text&lt;/div&gt;</code></pre>
-  <pre><code class="highlight scss" set:html={scssCode1}></code></pre>
+  <Code language="html" code={`
+<div class="lefted">The lefted text</div>
+<div class="righted">The righted text</div>
+`} />
+  <Code language="scss" code={scssCode1} />
 
   <h2 id="helper-classes-center">Center content blocks</h2>
   <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
-  <pre><code class="highlight html">&lt;div class="center-block"&gt;...&lt;/div&gt;</code></pre>
-  <pre><code class="highlight scss" set:html={scssCode2}></code></pre>
+  <Code language="html" code={`
+<div class="center-block">...</div>
+`} />
+  <Code language="scss" code={scssCode2} />
 
   <h2 id="helper-classes-clearfix">Clearfix</h2>
   <p>Clear the <code>float</code> on any element with the <code>.clearfix</code> class. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
-  <pre><code class="highlight html">&lt;!-- Usage as a class --&gt;
-&lt;div class="clearfix"&gt;...&lt;/div&gt;</code></pre>
-  <pre><code class="highlight scss" set:html={scssCode3}></code></pre>
+  <Code language="html" code={`
+<!-- Usage as a class -->
+<div class="clearfix">...</div>
+`} />
+  <Code language="scss" code={scssCode3} />
 
   <h2 id="helper-classes-show-hide">Showing and hiding content</h2>
-  <pre><code class="highlight html">&lt;div class="show"&gt;...&lt;/div&gt;
-&lt;div class="hidden"&gt;...&lt;/div&gt;</code></pre>
-  <pre><code class="highlight scss" set:html={scssCode4}></code></pre>
+  <Code language="html" code={`
+<div class="show">...</div>
+<div class="hidden">...</div>
+`} />
+  <Code language="scss" code={scssCode4} />
 </Layout>

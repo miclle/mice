@@ -1,0 +1,65 @@
+---
+/**
+ * Code component for displaying syntax-highlighted code examples
+ *
+ * @param {string} code - The raw code content (no need to escape HTML)
+ * @param {string} language - Programming language for syntax highlighting (e.g., 'html', 'css', 'javascript')
+ * @param {boolean} [showLineNumbers=false] - Whether to show line numbers
+ */
+interface Props {
+  code: string;
+  language: string;
+  showLineNumbers?: boolean;
+}
+
+const { code, language, showLineNumbers = false } = Astro.props;
+
+// Escape HTML special characters
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Trim leading empty lines and common indentation
+function normalizeCode(text: string): string {
+  const lines = text.split('\n');
+
+  // Remove leading empty lines
+  let startIndex = 0;
+  while (startIndex < lines.length && lines[startIndex].trim() === '') {
+    startIndex++;
+  }
+
+  // Remove trailing empty lines
+  let endIndex = lines.length - 1;
+  while (endIndex >= startIndex && lines[endIndex].trim() === '') {
+    endIndex--;
+  }
+
+  const trimmedLines = lines.slice(startIndex, endIndex + 1);
+
+  // Find common indentation (minimum non-zero indentation)
+  const indentPattern = /^\s*/;
+  const commonIndent = trimmedLines
+    .filter(line => line.trim() !== '')
+    .map(line => line.match(indentPattern)?.[0]?.length || 0)
+    .reduce((min, indent) => Math.min(min, indent), Infinity);
+
+  // Remove common indentation
+  const dedentedLines = trimmedLines.map(line =>
+    line.slice(commonIndent)
+  );
+
+  return dedentedLines.join('\n');
+}
+
+const normalizedCode = normalizeCode(code);
+const escapedCode = escapeHtml(normalizedCode);
+const classes = showLineNumbers ? `language-${language} line-numbers` : `language-${language}`;
+---
+
+<pre><code class={classes} set:html={escapedCode}></code></pre>

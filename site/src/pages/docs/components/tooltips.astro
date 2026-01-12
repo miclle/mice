@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 
 const delayCode = `delay: { show: 500, hide: 100 }`;
 
@@ -26,11 +27,12 @@ const viewportDefaultCode = `{ selector: 'body', padding: 0 }`;
         <button type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
         <button type="button" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>Tooltip on left<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>Tooltip on top<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom"</span><span class="nt">&gt;</span>Tooltip on bottom<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>Tooltip on right<span class="nt">&lt;/button&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<button type="button" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+`} />
 
 
       <h2>Contextual alternatives</h2>
@@ -42,19 +44,21 @@ const viewportDefaultCode = `{ selector: 'body', padding: 0 }`;
         <button type="button" class="warning" data-toggle="tooltip" data-contextual="warning" title="Tooltip with warning">Tooltip with warning</button>
         <button type="button" class="danger" data-toggle="tooltip" data-contextual="danger"  title="Tooltip with danger">Tooltip with danger</button>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"primary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-contextual=</span><span class="s">"primary"</span> <span class="na">title=</span><span class="s">"Tooltip with primary"</span><span class="nt">&gt;</span>Tooltip with primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"success"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-contextual=</span><span class="s">"success"</span> <span class="na">title=</span><span class="s">"Tooltip with success"</span><span class="nt">&gt;</span>Tooltip with success<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"info"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-contextual=</span><span class="s">"info"</span> <span class="na">title=</span><span class="s">"Tooltip with info"</span><span class="nt">&gt;</span>Tooltip with info<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"warning"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-contextual=</span><span class="s">"warning"</span> <span class="na">title=</span><span class="s">"Tooltip with warning"</span><span class="nt">&gt;</span>Tooltip with warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"danger"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-contextual=</span><span class="s">"danger"</span>  <span class="na">title=</span><span class="s">"Tooltip with danger"</span><span class="nt">&gt;</span>Tooltip with danger<span class="nt">&lt;/button&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<button type="button" class="primary" data-toggle="tooltip" data-contextual="primary" title="Tooltip with primary">Tooltip with primary</button>
+<button type="button" class="success" data-toggle="tooltip" data-contextual="success" title="Tooltip with success">Tooltip with success</button>
+<button type="button" class="info" data-toggle="tooltip" data-contextual="info" title="Tooltip with info">Tooltip with info</button>
+<button type="button" class="warning" data-toggle="tooltip" data-contextual="warning" title="Tooltip with warning">Tooltip with warning</button>
+<button type="button" class="danger" data-toggle="tooltip" data-contextual="danger"  title="Tooltip with danger">Tooltip with danger</button>
+`} />
 
 
       <h2>Usage</h2>
       <p>The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.</p>
       <p>Trigger the tooltip via JavaScript:</p>
-<pre><code class="highlight javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
-</code></pre>
+<Code language="javascript" code={`
+$('#example').tooltip(options)
+`} />
 
 
       <h2>Options</h2>
@@ -184,8 +188,9 @@ const viewportDefaultCode = `{ selector: 'body', padding: 0 }`;
           </tbody>
         </table>
       </div>
-<pre><code class="highlight javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTooltip'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.mice.tooltip'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something…</span>
-<span class="p">})</span>
-</code></pre>
+<Code language="javascript" code={`
+$('#myTooltip').on('hidden.mice.tooltip', function () {
+  // do something…
+})
+`} />
 </Layout>

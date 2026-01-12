@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Form" bodyClass="docs_components components_forms" activeSection="docs" currentPage="/docs/components/forms">
@@ -61,59 +62,59 @@ import Layout from '../../../layouts/Layout.astro';
 </form>
       </section>
 
-<pre><code class="highlight html">
-<span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name-basic"</span><span class="nt">&gt;</span>Your name *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"name-basic"</span> <span class="na">placeholder=</span><span class="s">"Name"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form>
+  <div class="field">
+    <label for="name-basic">Your name *</label>
+    <input type="text" name="name" id="name-basic" placeholder="Name" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email-basic"</span><span class="nt">&gt;</span>Your email *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email-basic"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="email-basic">Your email *</label>
+    <input type="email" name="email" id="email-basic" placeholder="Email" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"phone-basic"</span><span class="nt">&gt;</span>Your phone *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="na">id=</span><span class="s">"phone-basic"</span> <span class="na">placeholder=</span><span class="s">"Phone"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="phone-basic">Your phone *</label>
+    <input type="text" name="phone" id="phone-basic" placeholder="Phone" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password-basic"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password-basic"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="password-basic">Password</label>
+    <input type="password" id="password-basic" placeholder="Password">
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"gender-basic"</span><span class="nt">&gt;</span>Gender<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"gender-basic"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Select gender<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Male<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Female<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="gender-basic">Gender</label>
+    <select id="gender-basic">
+      <option>Select gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file-basic"</span><span class="nt">&gt;</span>File input<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"file-basic"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hint"</span><span class="nt">&gt;</span>This is hint text here.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="file-basic">File input</label>
+    <input type="file" id="file-basic">
+    <p class="hint">This is hint text here.</p>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Check me out
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message-basic"</span><span class="nt">&gt;</span>Message *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">id=</span><span class="s">"message-basic"</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">placeholder=</span><span class="s">"Message..."</span> <span class="nt">/&gt;&lt;/textarea&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="message-basic">Message *</label>
+    <textarea name="message" id="message-basic" cols="30" rows="5" placeholder="Message..." /></textarea>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+`} />
 
       <h2>Inline form</h2>
       <section class="example">
@@ -140,29 +141,29 @@ import Layout from '../../../layouts/Layout.astro';
   </div>
 </form>
       </section>
-<pre><code class="highlight html">
-<span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email-inline "</span><span class="nt">&gt;</span>Your email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email-inline "</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="inline">
+  <div class="field">
+    <label for="email-inline ">Your email</label>
+    <input type="email" name="email" id="email-inline " placeholder="Email" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password-inline "</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password-inline "</span> <span class="na">placeholder=</span><span class="s">"Password"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="password-inline ">Password</label>
+    <input type="password" id="password-inline " placeholder="Password" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Remember me
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+`} />
 
       <section class="example">
         
@@ -188,29 +189,29 @@ import Layout from '../../../layouts/Layout.astro';
   </div>
 </form>
       </section>
-<pre><code class="highlight html">
-<span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"inline unlabel"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email-inline unlabel"</span><span class="nt">&gt;</span>Your email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email-inline unlabel"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="inline unlabel">
+  <div class="field">
+    <label for="email-inline unlabel">Your email</label>
+    <input type="email" name="email" id="email-inline unlabel" placeholder="Email" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password-inline unlabel"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password-inline unlabel"</span> <span class="na">placeholder=</span><span class="s">"Password"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="password-inline unlabel">Password</label>
+    <input type="password" id="password-inline unlabel" placeholder="Password" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Remember me
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+`} />
 
       <section class="example">
         <form class="inline">
@@ -222,15 +223,16 @@ import Layout from '../../../layouts/Layout.astro';
   <button type="submit">Send Message</button>
 </form>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Password"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Remember me
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<form class="inline">
+  <input type="email" name="email" placeholder="Email" />
+  <input type="password" placeholder="Password" />
+  <label>
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit">Send Message</button>
+</form>
+`} />
 
 
       <h3>Justified inline</h3>
@@ -241,18 +243,19 @@ import Layout from '../../../layouts/Layout.astro';
           <div class="field"><input type="text"></div>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"justified"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<div class="justified">
+  <div class="field">
+    <input type="text">
+  </div>
+  <div class="field">
+    <input type="text">
+  </div>
+  <div class="field">
+    <input type="text">
+  </div>
+</div>
+`} />
 
 
       <h2>Horizontal form</h2>
@@ -310,59 +313,59 @@ import Layout from '../../../layouts/Layout.astro';
   </div>
 </form>
       </section>
-<pre><code class="highlight html">
-<span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"horizontal offset two"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name-horizontal-offset-two"</span><span class="nt">&gt;</span>Your name *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"name-horizontal-offset-two"</span> <span class="na">placeholder=</span><span class="s">"Name"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="horizontal offset two">
+  <div class="field">
+    <label for="name-horizontal-offset-two">Your name *</label>
+    <input type="text" name="name" id="name-horizontal-offset-two" placeholder="Name" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email-horizontal-offset-two"</span><span class="nt">&gt;</span>Your email *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email-horizontal-offset-two"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="email-horizontal-offset-two">Your email *</label>
+    <input type="email" name="email" id="email-horizontal-offset-two" placeholder="Email" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"phone-horizontal-offset-two"</span><span class="nt">&gt;</span>Your phone *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="na">id=</span><span class="s">"phone-horizontal-offset-two"</span> <span class="na">placeholder=</span><span class="s">"Phone"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="phone-horizontal-offset-two">Your phone *</label>
+    <input type="text" name="phone" id="phone-horizontal-offset-two" placeholder="Phone" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password-horizontal-offset-two"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password-horizontal-offset-two"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="password-horizontal-offset-two">Password</label>
+    <input type="password" id="password-horizontal-offset-two" placeholder="Password">
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"gender-horizontal-offset-two"</span><span class="nt">&gt;</span>Gender<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"gender-horizontal-offset-two"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Select gender<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Male<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option&gt;</span>Female<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="gender-horizontal-offset-two">Gender</label>
+    <select id="gender-horizontal-offset-two">
+      <option>Select gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file-horizontal-offset-two"</span><span class="nt">&gt;</span>File input<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"file-horizontal-offset-two"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"hint"</span><span class="nt">&gt;</span>This is hint text here.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="file-horizontal-offset-two">File input</label>
+    <input type="file" id="file-horizontal-offset-two">
+    <p class="hint">This is hint text here.</p>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Check me out
-    <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message-horizontal-offset-two"</span><span class="nt">&gt;</span>Message *<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">id=</span><span class="s">"message-horizontal-offset-two"</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">placeholder=</span><span class="s">"Message..."</span> <span class="nt">/&gt;&lt;/textarea&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field">
+    <label for="message-horizontal-offset-two">Message *</label>
+    <textarea name="message" id="message-horizontal-offset-two" cols="30" rows="5" placeholder="Message..." /></textarea>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field">
+    <button type="submit">Send Message</button>
+  </div>
+</form>
+`} />
 
       <h2>Static text</h2>
       <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.static</code> class on a <code>&lt;p&gt;</code>.</p>
@@ -379,18 +382,19 @@ import Layout from '../../../layouts/Layout.astro';
           </div>
         </form>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"horizontal offset two"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"static"</span><span class="nt">&gt;</span>email@example.com<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="horizontal offset two">
+  <div class="field">
+    <label for="email">Email</label>
+    <p class="static">email@example.com</p>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password">
+  </div>
+</form>
+`} />
 
       <h2>Disabled fieldsets</h2>
       <section class="example">
@@ -421,33 +425,34 @@ import Layout from '../../../layouts/Layout.astro';
           </fieldset>
         </form>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"horizontal offset two"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;fieldset</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email-disabled-fieldsets"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"email-disabled-fieldsets"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="horizontal offset two">
+  <fieldset disabled>
+    <div class="field">
+      <label for="email-disabled-fieldsets">Email</label>
+      <input type="email" name="email" id="email-disabled-fieldsets" placeholder="Email" />
+    </div>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password">
+    </div>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"gender-disabled-fieldsets"</span><span class="nt">&gt;</span>Gender<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"gender-disabled-fieldsets"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Select gender<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Male<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>Female<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <div class="field">
+      <label for="gender-disabled-fieldsets">Gender</label>
+      <select id="gender-disabled-fieldsets">
+        <option>Select gender</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/fieldset&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+    <div class="field">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </fieldset>
+</form>
+`} />
 
       <h2>Validation states</h2>
       <section class="example">
@@ -468,23 +473,24 @@ import Layout from '../../../layouts/Layout.astro';
           </div>
         </form>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field success"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>Input with success<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"success"</span> <span class="na">id=</span><span class="s">"text-success"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form>
+  <div class="field success">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field warning"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-warning"</span><span class="nt">&gt;</span>Input with warning<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"warning"</span> <span class="na">id=</span><span class="s">"text-warning"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field warning">
+    <label for="text-warning">Input with warning</label>
+    <input type="text" name="warning" id="text-warning" />
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field error"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-error"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"error"</span> <span class="na">id=</span><span class="s">"text-error"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field error">
+    <label for="text-error">Input with error</label>
+    <input type="text" name="error" id="text-error" />
+  </div>
+</form>
+`} />
 
       <h2>With optional icons</h2>
       <section class="example">
@@ -508,26 +514,27 @@ import Layout from '../../../layouts/Layout.astro';
           </div>
         </form>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field success feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>Input with success<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"success"</span> <span class="na">id=</span><span class="s">"text-success"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon lightbulb-o"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form>
+  <div class="field success feedback">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+    <i class="icon lightbulb-o"></i>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field warning feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-warning"</span><span class="nt">&gt;</span>Input with warning<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"warning"</span> <span class="na">id=</span><span class="s">"text-warning"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon warning"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field warning feedback">
+    <label for="text-warning">Input with warning</label>
+    <input type="text" name="warning" id="text-warning" />
+    <i class="icon warning"></i>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field error feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-error"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"error"</span> <span class="na">id=</span><span class="s">"text-error"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon times"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field error feedback">
+    <label for="text-error">Input with error</label>
+    <input type="text" name="error" id="text-error" />
+    <i class="icon times"></i>
+  </div>
+</form>
+`} />
 
     <section class="example">
       <form class="horizontal offset three">
@@ -550,26 +557,27 @@ import Layout from '../../../layouts/Layout.astro';
         </div>
       </form>
     </section>
-<pre><code class="highlight html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"horizontal offset three"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field success feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>Input with success<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"success"</span> <span class="na">id=</span><span class="s">"text-success"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon lightbulb-o"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<form class="horizontal offset three">
+  <div class="field success feedback">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+    <i class="icon lightbulb-o"></i>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field warning feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-warning"</span><span class="nt">&gt;</span>Input with warning<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"warning"</span> <span class="na">id=</span><span class="s">"text-warning"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon warning"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+  <div class="field warning feedback">
+    <label for="text-warning">Input with warning</label>
+    <input type="text" name="warning" id="text-warning" />
+    <i class="icon warning"></i>
+  </div>
 
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field error feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-error"</span><span class="nt">&gt;</span>Input with error<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"error"</span> <span class="na">id=</span><span class="s">"text-error"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon times"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+  <div class="field error feedback">
+    <label for="text-error">Input with error</label>
+    <input type="text" name="error" id="text-error" />
+    <i class="icon times"></i>
+  </div>
+</form>
+`} />
 
     <section class="example">
       <form class="inline">
@@ -580,12 +588,13 @@ import Layout from '../../../layouts/Layout.astro';
         </div>
       </form>
     </section>
-<pre><code class="highlight html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field success feedback"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>Input with success<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"success"</span> <span class="na">id=</span><span class="s">"text-success"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon lightbulb-o"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<form class="inline">
+  <div class="field success feedback">
+    <label for="text-success">Input with success</label>
+    <input type="text" name="success" id="text-success" />
+    <i class="icon lightbulb-o"></i>
+  </div>
+</form>
+`} />
 </Layout>

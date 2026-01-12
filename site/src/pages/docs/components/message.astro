@@ -1,40 +1,41 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 
-const jsCode1 = `<span class="c1">// show message</span>
-<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s1">'This is message!'</span><span class="p">);</span>
+const jsCode1 = `// show message
+Message.show('This is message!');
 
-<span class="c1">// hide automaticlly after 2000 milliseconds</span>
-<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s1">'This is message!'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+// hide automaticlly after 2000 milliseconds
+Message.show('This is message!', 2000);
 
-<span class="c1">// hide message</span>
-<span class="nx">Message</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+// hide message
+Message.hide();
 
-<span class="c1">// show at bottom</span>
-<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'message body show at bottom'</span><span class="p">,</span>
-  <span class="c1">// the placement can be \`top\` or \`bottom\`, by default is \`top\`</span>
-  <span class="na">placement</span><span class="p">:</span> <span class="s1">'bottom'</span>
-<span class="p">});</span>
+// show at bottom
+Message.show({
+  message: 'message body show at bottom',
+  // the placement can be \`top\` or \`bottom\`, by default is \`top\`
+  placement: 'bottom'
+});
 
-<span class="c1">// show with status</span>
-<span class="c1">// add class \`danger\` to the container</span>
-<span class="c1">// there're 5 status: [default], success, info, warning, danger</span>
-<span class="nx">Message</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
-  <span class="na">message</span><span class="p">:</span> <span class="s1">'message body show with danger status'</span><span class="p">,</span>
-  <span class="c1">// the placement can be \`top\` or \`bottom\`, by default is \`top\`</span>
-  <span class="na">status</span><span class="p">:</span> <span class="s1">'danger'</span>
-<span class="p">});</span>`;
+// show with status
+// add class \`danger\` to the container
+// there're 5 status: [default], success, info, warning, danger
+Message.show({
+  message: 'message body show with danger status',
+  // the placement can be \`top\` or \`bottom\`, by default is \`top\`
+  status: 'danger'
+});`;
 
-const jsCode2 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>`;
+const jsCode2 = `$('#element').message('show')`;
 
-const jsCode3 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>`;
+const jsCode3 = `$('#element').message('hide')`;
 
-const jsCode4 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span>`;
+const jsCode4 = `$('#element').message('toggle')`;
 
-const jsCode5 = `<span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">message</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">)</span>`;
+const jsCode5 = `$('#element').message('destroy')`;
 
-const tableCode = `<span class="nx">message</span><span class="p">:</span> <span class="s1">'text/thml'</span><span class="p">,</span> <span class="nx">placement</span><span class="p">:</span> <span class="s1">'bottom'</span><span class="p">,</span> <span class="nx">status</span><span class="p">:</span> <span class="s1">'danger'</span>`;
+const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
 ---
 
 <Layout title="Message" bodyClass="docs_components components_message" activeSection="docs" currentPage="/docs/components/message">
@@ -43,24 +44,25 @@ const tableCode = `<span class="nx">message</span><span class="p">:</span> <span
   <h2>Elegant way to display tips/message</h2>
   <div class="message success" data-ride="message" data-duration="2000">
     <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
-    <span class="close">&times;</span>
+    &times;
   </div>
 
   <div class="message bottom warning" data-ride="message">
     <div class="inner">hello, im a message.</div>
-    <span class="close">&times;</span>
+    &times;
   </div>
 
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"message success"</span> <span class="na">data-ride=</span><span class="s">"message"</span> <span class="na">data-duration=</span><span class="s">"2000"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>hello, im a message <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;</span>link here<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<div class="message success" data-ride="message" data-duration="2000">
+  <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
+  <span class="close">&times;</span>
+</div>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"message bottom warning"</span> <span class="na">data-ride=</span><span class="s">"message"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"inner"</span><span class="nt">&gt;</span>hello, im a message.<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+<div class="message bottom warning" data-ride="message">
+  <div class="inner">hello, im a message.</div>
+  <span class="close">&times;</span>
+</div>
+`} />
 
 
   <h2>API</h2>
@@ -75,7 +77,7 @@ const tableCode = `<span class="nx">message</span><span class="p">:</span> <span
 
     <button class="info" id="message-with-status">show with status</button>
   </section>
-<pre><code class="highlight javascript" set:html={jsCode1}></code></pre>
+<Code language="javascript" code={jsCode1} />
 
 
   <h2>Options</h2>
@@ -138,20 +140,20 @@ const tableCode = `<span class="nx">message</span><span class="p">:</span> <span
 
   <h4>.message('show')</h4>
   <p>Show the message.</p>
-  <pre><code class="highlight javascript" set:html={jsCode2}></code></pre>
+  <Code language="javascript" code={jsCode2} />
 
 
   <h4>.message('hide')</h4>
   <p>Hide the message.</p>
-  <pre><code class="highlight javascript" set:html={jsCode3}></code></pre>
+  <Code language="javascript" code={jsCode3} />
 
 
   <h4>.message('toggle')</h4>
   <p>Toggles the message.</p>
-  <pre><code class="highlight javascript" set:html={jsCode4}></code></pre>
+  <Code language="javascript" code={jsCode4} />
 
 
   <h4>.message('destroy')</h4>
   <p>Hide and destroys the message.</p>
-  <pre><code class="highlight javascript" set:html={jsCode5}></code></pre>
+  <Code language="javascript" code={jsCode5} />
 </Layout>

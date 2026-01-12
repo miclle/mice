@@ -1,5 +1,3 @@
-@import 'syntax';
-
 h2 {
   margin-top: 20px;
 }
@@ -70,6 +68,10 @@ section.example {
       margin-left: auto;
     }
   }
+}
+
+.hljs {
+  background: transparent !important;
 }
 
 pre.highlight {

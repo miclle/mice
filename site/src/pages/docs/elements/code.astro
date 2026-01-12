@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 
 const scssCode = `@mixin column-child($columns) {
   > .column {
@@ -35,28 +36,36 @@ $columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
   <section class="example">
     For example, <code>&lt;section&gt;</code> should be wrapped as inline.
   </section>
-  <pre><code class="highlight html">For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.</code></pre>
+  <Code language="html" code={`
+For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+`} />
 
   <h2>User input</h2>
   <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
   <section class="example">
     To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
   </section>
-  <pre><code class="highlight html">To switch directories, type &lt;kbd&gt;cd&lt;/kbd&gt; followed by the name of the directory.</code></pre>
+  <Code language="html" code={`
+To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+`} />
 
   <h2 id="code-block">Basic block</h2>
   <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
   <section class="example">
     <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
   </section>
-  <pre><code class="highlight html">&lt;pre&gt;&amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;&lt;/pre&gt;</code></pre>
+  <Code language="html" code={`
+<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+`} />
 
   <h3>Scrollable</h3>
   <p>You may optionally add the <code>.scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
   <section class="example">
     <pre class="scrollable" set:html={scssCode.replace(/>/g, '&gt;')}></pre>
   </section>
-  <pre><code class="highlight html">&lt;pre class="scrollable"&gt;
+  <Code language="html" code={`
+<pre class="scrollable">
   ...
-&lt;/pre&gt;</code></pre>
+</pre>
+`} />
 </Layout>

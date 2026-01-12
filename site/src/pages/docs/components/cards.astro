@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Cards" bodyClass="docs_components components_cards" activeSection="docs" currentPage="/docs/components/cards">
@@ -13,12 +14,13 @@ import Layout from '../../../layouts/Layout.astro';
           </div>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
+<Code language="html" code={`
+<div class="card">
+  <div class="body">
     Basic card example
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+  </div>
+</div>
+`} />
 
 
       <h2>Card with heading</h2>
@@ -35,18 +37,19 @@ import Layout from '../../../layouts/Layout.astro';
           <div class="body">Card content</div>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Card heading without title<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Card content<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<div class="card">
+  <div class="heading">Card heading without title</div>
+  <div class="body">Card content</div>
+</div>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>Card title<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Card content<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+<div class="card">
+  <div class="heading">
+    <h3>Card title</h3>
+  </div>
+  <div class="body">Card content</div>
+</div>
+`} />
 
 
       <h2>Card with footer</h2>
@@ -56,11 +59,12 @@ import Layout from '../../../layouts/Layout.astro';
           <div class="footer">Card footer</div>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>Card content<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>Card footer<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<div class="card">
+  <div class="body">Card content</div>
+  <div class="footer">Card footer</div>
+</div>
+`} />
 
 
       <h2>Contextual alternatives</h2>
@@ -88,12 +92,13 @@ import Layout from '../../../layouts/Layout.astro';
           <div class="body">Card content</div>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+<Code language="html" code={`
+<div class="card primary">...</div>
+<div class="card success">...</div>
+<div class="card info">...</div>
+<div class="card warning">...</div>
+<div class="card danger">...</div>
+`} />
 
 
       <h2>With tables</h2>
@@ -138,19 +143,20 @@ import Layout from '../../../layouts/Layout.astro';
           </table>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- Default card contents --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Card heading<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<div class="card">
+  <!-- Default card contents -->
+  <div class="heading">Card heading</div>
+  <div class="body">
+    <p>...</p>
+  </div>
 
-  <span class="c">&lt;!-- Table --&gt;</span>
-  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <!-- Table -->
+  <table class="table">
     ...
-  <span class="nt">&lt;/table&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+  </table>
+</div>
+`} />
 
       <p>If there is no card body, the component moves from card header to table without interruption.</p>
       <section class="example">
@@ -191,16 +197,17 @@ import Layout from '../../../layouts/Layout.astro';
           </table>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- Default card contents --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Card heading<span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<div class="card">
+  <!-- Default card contents -->
+  <div class="heading">Card heading</div>
 
-  <span class="c">&lt;!-- Table --&gt;</span>
-  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <!-- Table -->
+  <table class="table">
     ...
-  <span class="nt">&lt;/table&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+  </table>
+</div>
+`} />
 
 
       <h2>With list groups</h2>
@@ -222,21 +229,22 @@ import Layout from '../../../layouts/Layout.astro';
           </ul>
         </div>
       </section>
-<pre><code class="highlight html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- Default card contents --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading"</span><span class="nt">&gt;</span>Card heading<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
+<Code language="html" code={`
+<div class="card">
+  <!-- Default card contents -->
+  <div class="heading">Card heading</div>
+  <div class="body">
+    <p>Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+  </div>
 
-  <span class="c">&lt;!-- List group --&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre>
+  <!-- List group -->
+  <ul class="group">
+    <li>Cras justo odio</li>
+    <li>Dapibus ac facilisis in</li>
+    <li>Morbi leo risus</li>
+    <li>Porta ac consectetur ac</li>
+    <li>Vestibulum at eros</li>
+  </ul>
+</div>
+`} />
 </Layout>

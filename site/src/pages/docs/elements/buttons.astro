@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Buttons" bodyClass="docs_elements elements_buttons" activeSection="docs" currentPage="/docs/elements/buttons">
@@ -16,11 +17,13 @@ import Layout from '../../../layouts/Layout.astro';
       <input class="danger" type="submit" value="danger" />
     </p>
   </section>
-  <pre><code class="highlight html">&lt;button&gt;default&lt;/button&gt;
-&lt;button class="primary"&gt;primary&lt;/button&gt;
-&lt;a href="#" class="button"&gt;default&lt;/a&gt;
-&lt;input class="warning" type="button" value="warning" /&gt;
-&lt;input class="danger" type="submit" value="danger" /&gt;</code></pre>
+  <Code language="html" code={`
+<button>default</button>
+<button class="primary">primary</button>
+<a href="#" class="button">default</a>
+<input class="warning" type="button" value="warning" />
+<input class="danger" type="submit" value="danger" />
+`} />
 
   <h2>Disabled button</h2>
   <section class="example">
@@ -31,10 +34,12 @@ import Layout from '../../../layouts/Layout.astro';
     <input disabled="disabled" class="warning" type="button" value="warning" />
     <input disabled="disabled" class="danger" type="submit" value="danger" />
   </section>
-  <pre><code class="highlight html">&lt;button disabled="disabled"&gt;default&lt;/button&gt;
-&lt;a href="#" class="button disabled"&gt;default&lt;/a&gt;
-&lt;input disabled="disabled" class="warning" type="button" value="warning" /&gt;
-&lt;input disabled="disabled" class="danger" type="submit" value="danger" /&gt;</code></pre>
+  <Code language="html" code={`
+<button disabled="disabled">default</button>
+<a href="#" class="button disabled">default</a>
+<input disabled="disabled" class="warning" type="button" value="warning" />
+<input disabled="disabled" class="danger" type="submit" value="danger" />
+`} />
 
   <h2>Group buttons</h2>
   <section class="example">
@@ -49,11 +54,13 @@ import Layout from '../../../layouts/Layout.astro';
       <a href="#" class="button primary">Right</a>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="buttons"&gt;
-  &lt;button&gt;Left&lt;/button&gt;
-  &lt;button&gt;Middle&lt;/button&gt;
-  &lt;button&gt;Right&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="buttons">
+  <button>Left</button>
+  <button>Middle</button>
+  <button>Right</button>
+</div>
+`} />
 
   <h2>Vertically buttons</h2>
   <section class="example">
@@ -68,11 +75,13 @@ import Layout from '../../../layouts/Layout.astro';
       <a href="#" class="button primary">Bottom</a>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="buttons vertical"&gt;
-  &lt;button&gt;Left&lt;/button&gt;
-  &lt;button&gt;Middle&lt;/button&gt;
-  &lt;button&gt;Right&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="buttons vertical">
+  <button>Left</button>
+  <button>Middle</button>
+  <button>Right</button>
+</div>
+`} />
 
   <h2>Sizing</h2>
   <section class="example">
@@ -93,8 +102,10 @@ import Layout from '../../../layouts/Layout.astro';
       <a href="#" class="button primary large">Large button</a>
     </p>
   </section>
-  <pre><code class="highlight html">&lt;button class="mini"&gt;Mini button&lt;/button&gt;
-&lt;a href="#" class="button primary mini"&gt;Mini button&lt;/a&gt;</code></pre>
+  <Code language="html" code={`
+<button class="mini">Mini button</button>
+<a href="#" class="button primary mini">Mini button</a>
+`} />
 
   <h2>Block</h2>
   <section class="example">
@@ -105,8 +116,10 @@ import Layout from '../../../layouts/Layout.astro';
       <a href="#" class="button primary block large">Block level button</a>
     </p>
   </section>
-  <pre><code class="highlight html">&lt;button class="block large"&gt;Block level button&lt;/button&gt;
-&lt;a href="#" class="button primary block large"&gt;Block level button&lt;/a&gt;</code></pre>
+  <Code language="html" code={`
+<button class="block large">Block level button</button>
+<a href="#" class="button primary block large">Block level button</a>
+`} />
 
   <h2>Justified</h2>
   <section class="example">
@@ -122,11 +135,13 @@ import Layout from '../../../layouts/Layout.astro';
       <a href="#" class="button primary">Right</a>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="buttons justified"&gt;
-  &lt;a href="#" class="button"&gt;Left&lt;/a&gt;
-  &lt;a href="#" class="button"&gt;Middle&lt;/a&gt;
-  &lt;a href="#" class="button"&gt;Right&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="buttons justified">
+  <a href="#" class="button">Left</a>
+  <a href="#" class="button">Middle</a>
+  <a href="#" class="button">Right</a>
+</div>
+`} />
 
   <h3>With &lt;button&gt; elements</h3>
   <section>
@@ -154,17 +169,19 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="buttons justified"&gt;
-  &lt;div class="buttons"&gt;
-    &lt;button&gt;Left&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="buttons"&gt;
-    &lt;button&gt;Middle&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="buttons"&gt;
-    &lt;button&gt;Right&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="buttons justified">
+  <div class="buttons">
+    <button>Left</button>
+  </div>
+  <div class="buttons">
+    <button>Middle</button>
+  </div>
+  <div class="buttons">
+    <button>Right</button>
+  </div>
+</div>
+`} />
 
   <h2>Checkbox & Radio in button</h2>
   <section class="example">
@@ -175,10 +192,12 @@ import Layout from '../../../layouts/Layout.astro';
       <input type="radio" name="" value="" /> Radio in button
     </label>
   </section>
-  <pre><code class="highlight html">&lt;label class="button"&gt;
-  &lt;input type="checkbox" name="" value=""&gt; Checkbox in button
-&lt;/label&gt;
-&lt;label class="button"&gt;
-  &lt;input type="radio" name="" value=""&gt; Radio in button
-&lt;/label&gt;</code></pre>
+  <Code language="html" code={`
+<label class="button">
+  <input type="checkbox" name="" value=""> Checkbox in button
+</label>
+<label class="button">
+  <input type="radio" name="" value=""> Radio in button
+</label>
+`} />
 </Layout>

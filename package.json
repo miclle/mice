@@ -45,6 +45,7 @@
     "@eslint/js": "^9.39.2",
     "astro": "^5.16.6",
     "eslint": "^9.39.2",
+    "highlight.js": "^11.11.1",
     "prettier": "^3.7.4",
     "sass": "^1.97.1",
     "stylelint": "^16.26.1",

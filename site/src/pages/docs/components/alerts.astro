@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Alerts" bodyClass="docs_components components_alerts" activeSection="docs" currentPage="/docs/components/alerts">
@@ -22,10 +23,12 @@ import Layout from '../../../layouts/Layout.astro';
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="alert success"&gt;...&lt;/div&gt;
-&lt;div class="alert info"&gt;...&lt;/div&gt;
-&lt;div class="alert warning"&gt;...&lt;/div&gt;
-&lt;div class="alert danger"&gt;...&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="alert success">...</div>
+<div class="alert info">...</div>
+<div class="alert warning">...</div>
+<div class="alert danger">...</div>
+`} />
 
   <h2>Dismissible alerts</h2>
   <p>Build on any alert by adding an optional <code>.dismissible</code> and close button.</p>
@@ -35,10 +38,12 @@ import Layout from '../../../layouts/Layout.astro';
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="alert warning dismissible"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
-  &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="alert warning dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+`} />
 
   <h2>Links in alerts</h2>
   <p>The <code>&lt;a&gt;</code> tag default matching colored links within any alert.</p>
@@ -56,16 +61,18 @@ import Layout from '../../../layouts/Layout.astro';
       <strong>Oh snap!</strong> <a href="#">Change a few things up</a> and try submitting again.
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="alert success"&gt;
-  &lt;a href="#"&gt;...&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="alert info"&gt;
-  &lt;a href="#"&gt;...&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="alert warning"&gt;
-  &lt;a href="#"&gt;...&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="alert danger"&gt;
-  &lt;a href="#"&gt;...&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="alert success">
+  <a href="#">...</a>
+</div>
+<div class="alert info">
+  <a href="#">...</a>
+</div>
+<div class="alert warning">
+  <a href="#">...</a>
+</div>
+<div class="alert danger">
+  <a href="#">...</a>
+</div>
+`} />
 </Layout>

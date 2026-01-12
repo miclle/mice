@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Code from '../../../components/Code.astro';
 ---
 
 <Layout title="Input" bodyClass="docs_elements elements_input" activeSection="docs" currentPage="/docs/elements/input">
@@ -10,24 +11,30 @@ import Layout from '../../../layouts/Layout.astro';
     <p><input type="text" placeholder="input here..." /></p>
     <p><textarea cols="100" rows="5" placeholder="input here..."></textarea></p>
   </section>
-  <pre><code class="highlight html">&lt;input type="text" placeholder="input here..." /&gt;
-&lt;textarea cols="120" rows="5" placeholder="input here..."&gt;&lt;/textarea&gt;</code></pre>
+  <Code language="html" code={`
+<input type="text" placeholder="input here..." />
+<textarea cols="120" rows="5" placeholder="input here..."></textarea>
+`} />
 
   <h2>Fluid</h2>
   <section class="example">
     <p><input type="text" class="fluid" placeholder="input here..." /></p>
     <p><textarea cols="120" rows="5" class="fluid" placeholder="input here..."></textarea></p>
   </section>
-  <pre><code class="highlight html">&lt;input type="text" class="fluid" placeholder="input here..." /&gt;
-&lt;textarea cols="120" rows="5" class="fluid" placeholder="input here..."&gt;&lt;/textarea&gt;</code></pre>
+  <Code language="html" code={`
+<input type="text" class="fluid" placeholder="input here..." />
+<textarea cols="120" rows="5" class="fluid" placeholder="input here..."></textarea>
+`} />
 
   <h2>Disabled state</h2>
   <section class="example">
     <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid" /></p>
     <p><input type="text" placeholder="Disabled input here..." disabled="disabled" class="fluid primary" /></p>
   </section>
-  <pre><code class="highlight html">&lt;input type="text" placeholder="Disabled input here..." disabled="disabled" /&gt;
-&lt;input type="text" placeholder="Disabled input here..." disabled="disabled" class="primary" /&gt;</code></pre>
+  <Code language="html" code={`
+<input type="text" placeholder="Disabled input here..." disabled="disabled" />
+<input type="text" placeholder="Disabled input here..." disabled="disabled" class="primary" />
+`} />
 
   <h2>Sizing</h2>
   <section class="example">
@@ -35,9 +42,11 @@ import Layout from '../../../layouts/Layout.astro';
     <p><input type="text" placeholder="default input" /></p>
     <p><input type="text" class="large" placeholder=".large input" /></p>
   </section>
-  <pre><code class="highlight html">&lt;input type="text" class="small" placeholder=".small input" /&gt;
-&lt;input type="text" placeholder="default input" /&gt;
-&lt;input type="text" class="large" placeholder=".large input" /&gt;</code></pre>
+  <Code language="html" code={`
+<input type="text" class="small" placeholder=".small input" />
+<input type="text" placeholder="default input" />
+<input type="text" class="large" placeholder=".large input" />
+`} />
 
   <h2>Color</h2>
   <section class="example">
@@ -48,12 +57,14 @@ import Layout from '../../../layouts/Layout.astro';
     <p><input type="text" class="fluid danger" placeholder=".danger" /></p>
     <p><textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"></textarea></p>
   </section>
-  <pre><code class="highlight html">&lt;input type="text" class="fluid primary" placeholder=".primary" /&gt;
-&lt;input type="text" class="fluid success" placeholder=".success" /&gt;
-&lt;input type="text" class="fluid info" placeholder=".info" /&gt;
-&lt;input type="text" class="fluid warning" placeholder=".warning" /&gt;
-&lt;input type="text" class="fluid danger" placeholder=".danger" /&gt;
-&lt;textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"&gt;&lt;/textarea&gt;</code></pre>
+  <Code language="html" code={`
+<input type="text" class="fluid primary" placeholder=".primary" />
+<input type="text" class="fluid success" placeholder=".success" />
+<input type="text" class="fluid info" placeholder=".info" />
+<input type="text" class="fluid warning" placeholder=".warning" />
+<input type="text" class="fluid danger" placeholder=".danger" />
+<textarea cols="120" rows="5" class="fluid primary" placeholder=".primary"></textarea>
+`} />
 
   <h2>Input groups</h2>
   <section class="example">
@@ -67,10 +78,12 @@ import Layout from '../../../layouts/Layout.astro';
       <span class="addon">.00</span>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="inputs"&gt;
-  &lt;span class="addon"&gt;@&lt;/span&gt;
-  &lt;input type="text" /&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="inputs">
+  <span class="addon">@</span>
+  <input type="text" />
+</div>
+`} />
 
   <h3>Checkboxes and radio addons</h3>
   <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
@@ -94,24 +107,26 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="grid two"&gt;
-  &lt;div class="column"&gt;
-    &lt;div class="inputs"&gt;
-      &lt;span class="addon"&gt;
-        &lt;input type="checkbox"&gt;
-      &lt;/span&gt;
-      &lt;input type="text"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="column"&gt;
-    &lt;div class="inputs"&gt;
-      &lt;span class="addon"&gt;
-        &lt;input type="radio"&gt;
-      &lt;/span&gt;
-      &lt;input type="text"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="grid two">
+  <div class="column">
+    <div class="inputs">
+      <span class="addon">
+        <input type="checkbox">
+      </span>
+      <input type="text">
+    </div>
+  </div>
+  <div class="column">
+    <div class="inputs">
+      <span class="addon">
+        <input type="radio">
+      </span>
+      <input type="text">
+    </div>
+  </div>
+</div>
+`} />
 
   <h3>Button addons</h3>
   <section class="example">
@@ -134,24 +149,26 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
     </div>
   </section>
-  <pre><code class="highlight html">&lt;div class="grid two"&gt;
-  &lt;div class="column"&gt;
-    &lt;div class="inputs"&gt;
-      &lt;span class="buttons"&gt;
-        &lt;button class="button" type="button"&gt;Go!&lt;/button&gt;
-      &lt;/span&gt;
-      &lt;input type="text"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="column"&gt;
-    &lt;div class="inputs"&gt;
-      &lt;input type="text"&gt;
-      &lt;span class="buttons"&gt;
-        &lt;button class="button" type="button"&gt;Go!&lt;/button&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <Code language="html" code={`
+<div class="grid two">
+  <div class="column">
+    <div class="inputs">
+      <span class="buttons">
+        <button class="button" type="button">Go!</button>
+      </span>
+      <input type="text">
+    </div>
+  </div>
+  <div class="column">
+    <div class="inputs">
+      <input type="text">
+      <span class="buttons">
+        <button class="button" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+</div>
+`} />
 
   <h2>Email autocomplete</h2>
   <section class="example">
