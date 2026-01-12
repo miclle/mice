@@ -3,172 +3,180 @@ import Layout from '../../../layouts/Layout.astro';
 import Example from '../../../components/Example.astro';
 ---
 
-<Layout title="Cards" bodyClass="docs_components components_cards" activeSection="docs" currentPage="/docs/components/cards">
-<h1 class="title">Cards</h1>
+<Layout
+  title="Cards"
+  bodyClass="docs_components components_cards"
+  activeSection="docs"
+  currentPage="/docs/components/cards"
+>
+  <h1 class="title">Cards</h1>
 
-      <h2>Basic example</h2>
-      <Example>
-        <div class="card">
-          <div class="body">
-            Basic card example
-          </div>
-        </div>
-      </Example>
+  <h2>Basic example</h2>
+  <Example>
+    <div class="card">
+      <div class="body">Basic card example</div>
+    </div>
+  </Example>
 
+  <h2>Card with heading</h2>
+  <Example>
+    <div class="card">
+      <div class="heading">Card heading without title</div>
+      <div class="body">Card content</div>
+    </div>
 
-      <h2>Card with heading</h2>
-      <Example>
-        <div class="card">
-          <div class="heading">Card heading without title</div>
-          <div class="body">Card content</div>
-        </div>
+    <div class="card">
+      <div class="heading">
+        <h3>Card title</h3>
+      </div>
+      <div class="body">Card content</div>
+    </div>
+  </Example>
 
-        <div class="card">
-          <div class="heading">
-            <h3>Card title</h3>
-          </div>
-          <div class="body">Card content</div>
-        </div>
-      </Example>
+  <h2>Card with footer</h2>
+  <Example>
+    <div class="card">
+      <div class="body">Card content</div>
+      <div class="footer">Card footer</div>
+    </div>
+  </Example>
 
+  <h2>Contextual alternatives</h2>
+  <Example>
+    <div class="card primary">
+      <div class="heading">
+        <h3>Card title</h3>
+      </div>
+      <div class="body">Card content</div>
+    </div>
+    <div class="card success">
+      <div class="heading">Card title</div>
+      <div class="body">Card content</div>
+    </div>
+    <div class="card info">
+      <div class="heading">Card title</div>
+      <div class="body">Card content</div>
+    </div>
+    <div class="card warning">
+      <div class="heading">Card title</div>
+      <div class="body">Card content</div>
+    </div>
+    <div class="card danger">
+      <div class="heading">Card title</div>
+      <div class="body">Card content</div>
+    </div>
+  </Example>
 
-      <h2>Card with footer</h2>
-      <Example>
-        <div class="card">
-          <div class="body">Card content</div>
-          <div class="footer">Card footer</div>
-        </div>
-      </Example>
+  <h2>With tables</h2>
+  <Example>
+    <div class="card">
+      <!-- Default card contents -->
+      <div class="heading">Card heading</div>
+      <div class="body">
+        <p>
+          Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia
+          bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+          venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </p>
+      </div>
 
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Example>
 
-      <h2>Contextual alternatives</h2>
-      <Example>
-        <div class="card primary">
-          <div class="heading">
-            <h3>Card title</h3>
-          </div>
-          <div class="body">Card content</div>
-        </div>
-        <div class="card success">
-          <div class="heading">Card title</div>
-          <div class="body">Card content</div>
-        </div>
-        <div class="card info">
-          <div class="heading">Card title</div>
-          <div class="body">Card content</div>
-        </div>
-        <div class="card warning">
-          <div class="heading">Card title</div>
-          <div class="body">Card content</div>
-        </div>
-        <div class="card danger">
-          <div class="heading">Card title</div>
-          <div class="body">Card content</div>
-        </div>
-      </Example>
+  <p>
+    If there is no card body, the component moves from card header to table without interruption.
+  </p>
+  <Example>
+    <div class="card">
+      <!-- Default card contents -->
+      <div class="heading">Card heading</div>
 
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Example>
 
-      <h2>With tables</h2>
-      <Example>
-        <div class="card">
-          <!-- Default card contents -->
-          <div class="heading">Card heading</div>
-          <div class="body">
-            <p>Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          </div>
+  <h2>With list groups</h2>
+  <Example>
+    <div class="card">
+      <!-- Default card contents -->
+      <div class="heading">Card heading</div>
+      <div class="body">
+        <p>
+          Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia
+          bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+          venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </p>
+      </div>
 
-          <!-- Table -->
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </Example>
-
-      <p>If there is no card body, the component moves from card header to table without interruption.</p>
-      <Example>
-        <div class="card">
-          <!-- Default card contents -->
-          <div class="heading">Card heading</div>
-
-          <!-- Table -->
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </Example>
-
-
-      <h2>With list groups</h2>
-      <Example>
-        <div class="card">
-          <!-- Default card contents -->
-          <div class="heading">Card heading</div>
-          <div class="body">
-            <p>Some default card content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          </div>
-
-          <!-- List group -->
-          <ul class="group">
-            <li>Cras justo odio</li>
-            <li>Dapibus ac facilisis in</li>
-            <li>Morbi leo risus</li>
-            <li>Porta ac consectetur ac</li>
-            <li>Vestibulum at eros</li>
-          </ul>
-        </div>
-      </Example>
+      <!-- List group -->
+      <ul class="group">
+        <li>Cras justo odio</li>
+        <li>Dapibus ac facilisis in</li>
+        <li>Morbi leo risus</li>
+        <li>Porta ac consectetur ac</li>
+        <li>Vestibulum at eros</li>
+      </ul>
+    </div>
+  </Example>
 </Layout>

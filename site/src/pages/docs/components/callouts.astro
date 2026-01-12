@@ -4,101 +4,105 @@ import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
-<Layout title="Callouts" bodyClass="docs_components components_callouts" activeSection="docs" currentPage="/docs/components/callouts">
-<h1 class="title">Callouts</h1>
+<Layout
+  title="Callouts"
+  bodyClass="docs_components components_callouts"
+  activeSection="docs"
+  currentPage="/docs/components/callouts"
+>
+  <h1 class="title">Callouts</h1>
 
-      <h2>Default</h2>
-      <Example>
-        <div class="callout">
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-      </Example>
-<Code language="html" code={`
-<div class="callout">
-  ...
-</div>
-`} />
+  <h2>Default</h2>
+  <Example>
+    <div class="callout">
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+  </Example>
 
+  <h2>Styles</h2>
+  <Example>
+    <div class="callout">
+      <h3></h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+    <div class="callout primary">
+      <h3>primary</h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+    <div class="callout success">
+      <h3>success</h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+    <div class="callout info">
+      <h3>info</h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+    <div class="callout warning">
+      <h3>warning</h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+    <div class="callout danger">
+      <h3>danger</h3>
+      <p>
+        The first night, then, I went to sleep on the sand, a thousand miles from any human
+        habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the
+        ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little
+        voice. It said:
+      </p>
+    </div>
+  </Example>
 
-      <h2>Styles</h2>
-      <Example>
-        <div class="callout ">
-          <h3></h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-        <div class="callout primary">
-          <h3>primary</h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-        <div class="callout success">
-          <h3>success</h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-        <div class="callout info">
-          <h3>info</h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-        <div class="callout warning">
-          <h3>warning</h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-        <div class="callout danger">
-          <h3>danger</h3>
-          <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
-        </div>
-      </Example>
-<Code language="html" code={`
-<div class="callout ">
-  ...
-</div>
-<div class="callout primary">
-  ...
-</div>
-<div class="callout success">
-  ...
-</div>
-<div class="callout info">
-  ...
-</div>
-<div class="callout warning">
-  ...
-</div>
-<div class="callout danger">
-  ...
-</div>
-`} />
+  <h2>Callouts options</h2>
+  <p>Style and content changes for simple variations on a standard <code>&lt;callout&gt;</code>.</p>
+  <h4>Naming a source</h4>
+  <p>
+    Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in
+    <code>&lt;cite&gt;</code>.
+  </p>
+  <Example>
+    <div class="callout">
+      <h4>Header text</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </div>
+  </Example>
 
-      <h2>Callouts options</h2>
-      <p>Style and content changes for simple variations on a standard <code>&lt;callout&gt;</code>.</p>
-      <h4>Naming a source</h4>
-      <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-      <Example>
-        <div class="callout">
-          <h4>Header text</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </div>
-      </Example>
-<Code language="html" code={`
-<div class="callout">
-  <h4>Header text</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</div>
-`} />
-
-      <h4>Alternate displays</h4>
-      <p>Add <code>.reverse</code> for a callout with right-aligned content.</p>
-      <Example>
-        <div class="callout reverse">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        </div>
-      </Example>
-<Code language="html" code={`
-<div class="callout reverse">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</div>
-`} />
+  <h4>Alternate displays</h4>
+  <p>Add <code>.reverse</code> for a callout with right-aligned content.</p>
+  <Example>
+    <div class="callout reverse">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </div>
+  </Example>
 </Layout>

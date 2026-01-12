@@ -28,9 +28,13 @@
     }
 
     @if $border-focus {
-      box-shadow: 0 0 0 1px $border-focus, inset 0 1px #f5f5f5;
+      box-shadow:
+        0 0 0 1px $border-focus,
+        inset 0 1px #f5f5f5;
     } @else {
-      box-shadow: 0 0 0 1px $border-color, inset 0 1px #f5f5f5;
+      box-shadow:
+        0 0 0 1px $border-color,
+        inset 0 1px #f5f5f5;
     }
   }
 

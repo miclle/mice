@@ -11,13 +11,7 @@ interface Props {
   showSidebar?: boolean;
 }
 
-const {
-  title,
-  bodyClass = '',
-  activeSection,
-  currentPage = '',
-  showSidebar = true,
-} = Astro.props;
+const { title, bodyClass = '', activeSection, currentPage = '', showSidebar = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,10 +26,15 @@ const {
     <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" />
 
     <!-- highlight.js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+    />
 
     <script src="/javascripts/doc.js" type="text/javascript"></script>
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="/javascripts/highlight.js" type="text/javascript"></script>
   </head>
 
@@ -44,21 +43,23 @@ const {
 
     <Navbar activeSection={activeSection} />
 
-    {showSidebar ? (
-      <div class="container">
-        <div class="grid twelve">
-          <div class="column three">
-            <Sidebar currentPage={currentPage} />
-          </div>
+    {
+      showSidebar ? (
+        <div class="container">
+          <div class="grid twelve">
+            <div class="column three">
+              <Sidebar currentPage={currentPage} />
+            </div>
 
-          <div class="column nine doc">
-            <slot />
+            <div class="column nine doc">
+              <slot />
+            </div>
           </div>
         </div>
-      </div>
-    ) : (
-      <slot />
-    )}
+      ) : (
+        <slot />
+      )
+    }
 
     <Footer />
   </body>

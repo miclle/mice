@@ -45,14 +45,12 @@ function normalizeCode(text: string): string {
   // Find common indentation (minimum non-zero indentation)
   const indentPattern = /^\s*/;
   const commonIndent = trimmedLines
-    .filter(line => line.trim() !== '')
-    .map(line => line.match(indentPattern)?.[0]?.length || 0)
+    .filter((line) => line.trim() !== '')
+    .map((line) => line.match(indentPattern)?.[0]?.length || 0)
     .reduce((min, indent) => Math.min(min, indent), Infinity);
 
   // Remove common indentation
-  const dedentedLines = trimmedLines.map(line =>
-    line.slice(commonIndent)
-  );
+  const dedentedLines = trimmedLines.map((line) => line.slice(commonIndent));
 
   return dedentedLines.join('\n');
 }
@@ -62,4 +60,4 @@ const escapedCode = escapeHtml(normalizedCode);
 const classes = showLineNumbers ? `language-${language} line-numbers` : `language-${language}`;
 ---
 
-<pre><code class={classes} set:html={escapedCode}></code></pre>
+<pre><code class={classes} set:html={escapedCode} /></pre>

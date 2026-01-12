@@ -165,7 +165,11 @@
   }
 
   // Default variant
-  @include tooltip-variant(var(--tooltip-color), var(--tooltip-background), var(--tooltip-arrow-color));
+  @include tooltip-variant(
+    var(--tooltip-color),
+    var(--tooltip-background),
+    var(--tooltip-arrow-color)
+  );
 
   // Contextual variants
   @each $variant in $variants {

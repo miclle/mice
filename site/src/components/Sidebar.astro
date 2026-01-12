@@ -59,18 +59,20 @@ const isActive = (href: string) => {
 
 <nav class="sidebar">
   <ul class="menu">
-    {navItems.map((section) => (
-      <>
-        <li class="heading">
-          <a href={section.href}>{section.heading}</a>
-        </li>
-
-        {section.items.map((item) => (
-          <li class={isActive(item.href)}>
-            <a href={item.href}>{item.name}</a>
+    {
+      navItems.map((section) => (
+        <>
+          <li class="heading">
+            <a href={section.href}>{section.heading}</a>
           </li>
-        ))}
-      </>
-    ))}
+
+          {section.items.map((item) => (
+            <li class={isActive(item.href)}>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))}
+        </>
+      ))
+    }
   </ul>
 </nav>

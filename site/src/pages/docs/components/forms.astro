@@ -4,444 +4,166 @@ import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
-<Layout title="Form" bodyClass="docs_components components_forms" activeSection="docs" currentPage="/docs/components/forms">
-<h1 class="title">Form</h1>
+<Layout
+  title="Form"
+  bodyClass="docs_components components_forms"
+  activeSection="docs"
+  currentPage="/docs/components/forms"
+>
+  <h1 class="title">Form</h1>
 
-      <h2>Basic example</h2>
-      <Example>
-        
-<form>
-  <div class="field">
-    <label for="name-basic">Your name *</label>
-    <input type="text" name="name" id="name-basic" placeholder="Name" />
-  </div>
+  <h2>Basic example</h2>
+  <Example>
+    <form>
+      <div class="field">
+        <label for="name-basic">Your name *</label>
+        <input type="text" name="name" id="name-basic" placeholder="Name" />
+      </div>
 
-  <div class="field">
-    <label for="email-basic">Your email *</label>
-    <input type="email" name="email" id="email-basic" placeholder="Email" />
-  </div>
+      <div class="field">
+        <label for="email-basic">Your email *</label>
+        <input type="email" name="email" id="email-basic" placeholder="Email" />
+      </div>
 
-  <div class="field">
-    <label for="phone-basic">Your phone *</label>
-    <input type="text" name="phone" id="phone-basic" placeholder="Phone" />
-  </div>
+      <div class="field">
+        <label for="phone-basic">Your phone *</label>
+        <input type="text" name="phone" id="phone-basic" placeholder="Phone" />
+      </div>
 
-  <div class="field">
-    <label for="password-basic">Password</label>
-    <input type="password" id="password-basic" placeholder="Password">
-  </div>
+      <div class="field">
+        <label for="password-basic">Password</label>
+        <input type="password" id="password-basic" placeholder="Password" />
+      </div>
 
-  <div class="field">
-    <label for="gender-basic">Gender</label>
-    <select id="gender-basic">
-      <option>Select gender</option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-  </div>
+      <div class="field">
+        <label for="gender-basic">Gender</label>
+        <select id="gender-basic">
+          <option>Select gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
 
-  <div class="field">
-    <label for="file-basic">File input</label>
-    <input type="file" id="file-basic">
-    <p class="hint">This is hint text here.</p>
-  </div>
+      <div class="field">
+        <label for="file-basic">File input</label>
+        <input type="file" id="file-basic" />
+        <p class="hint">This is hint text here.</p>
+      </div>
 
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
+      <div class="field checkbox">
+        <label>
+          <input type="checkbox" /> Check me out
+        </label>
+      </div>
 
-  <div class="field">
-    <label for="message-basic">Message *</label>
-    <textarea name="message" id="message-basic" cols="30" rows="5" placeholder="Message..." /></textarea>
-  </div>
+      <div class="field">
+        <label for="message-basic">Message *</label>
+        <textarea name="message" id="message-basic" cols="30" rows="5" placeholder="Message..."
+        ></textarea>
+      </div>
+    </form>
 
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-      </Example>
-
-<Code language="html" code={`
-<form>
-  <div class="field">
-    <label for="name-basic">Your name *</label>
-    <input type="text" name="name" id="name-basic" placeholder="Name" />
-  </div>
-
-  <div class="field">
-    <label for="email-basic">Your email *</label>
-    <input type="email" name="email" id="email-basic" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="phone-basic">Your phone *</label>
-    <input type="text" name="phone" id="phone-basic" placeholder="Phone" />
-  </div>
-
-  <div class="field">
-    <label for="password-basic">Password</label>
-    <input type="password" id="password-basic" placeholder="Password">
-  </div>
-
-  <div class="field">
-    <label for="gender-basic">Gender</label>
-    <select id="gender-basic">
-      <option>Select gender</option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label for="file-basic">File input</label>
-    <input type="file" id="file-basic">
-    <p class="hint">This is hint text here.</p>
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-
-  <div class="field">
-    <label for="message-basic">Message *</label>
-    <textarea name="message" id="message-basic" cols="30" rows="5" placeholder="Message..." /></textarea>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-`} />
-
-      <h2>Inline form</h2>
-      <Example>
-        
-<form class="inline">
-  <div class="field">
-    <label for="email-inline ">Your email</label>
-    <input type="email" name="email" id="email-inline " placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password-inline ">Password</label>
-    <input type="password" id="password-inline " placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-      </Example>
-<Code language="html" code={`
-<form class="inline">
-  <div class="field">
-    <label for="email-inline ">Your email</label>
-    <input type="email" name="email" id="email-inline " placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password-inline ">Password</label>
-    <input type="password" id="password-inline " placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-`} />
-
-      <Example>
-        
-<form class="inline unlabel">
-  <div class="field">
-    <label for="email-inline unlabel">Your email</label>
-    <input type="email" name="email" id="email-inline unlabel" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password-inline unlabel">Password</label>
-    <input type="password" id="password-inline unlabel" placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-      </Example>
-<Code language="html" code={`
-<form class="inline unlabel">
-  <div class="field">
-    <label for="email-inline unlabel">Your email</label>
-    <input type="email" name="email" id="email-inline unlabel" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="password-inline unlabel">Password</label>
-    <input type="password" id="password-inline unlabel" placeholder="Password" />
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Remember me
-    </label>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-`} />
-
-      <Example>
-        <form class="inline">
-  <input type="email" name="email" placeholder="Email" />
-  <input type="password" placeholder="Password" />
-  <label>
-    <input type="checkbox"> Remember me
-  </label>
-  <button type="submit">Send Message</button>
-</form>
-      </Example>
-<Code language="html" code={`
-<form class="inline">
-  <input type="email" name="email" placeholder="Email" />
-  <input type="password" placeholder="Password" />
-  <label>
-    <input type="checkbox"> Remember me
-  </label>
-  <button type="submit">Send Message</button>
-</form>
-`} />
-
-
-      <h3>Justified inline</h3>
-      <Example>
-        <div class="justified">
-          <div class="field"><input type="text"></div>
-          <div class="field"><input type="text"></div>
-          <div class="field"><input type="text"></div>
-        </div>
-      </Example>
-<Code language="html" code={`
-<div class="justified">
-  <div class="field">
-    <input type="text">
-  </div>
-  <div class="field">
-    <input type="text">
-  </div>
-  <div class="field">
-    <input type="text">
-  </div>
-</div>
-`} />
-
-
-      <h2>Horizontal form</h2>
-      <Example>
-        
-<form class="horizontal offset two">
-  <div class="field">
-    <label for="name-horizontal-offset-two">Your name *</label>
-    <input type="text" name="name" id="name-horizontal-offset-two" placeholder="Name" />
-  </div>
-
-  <div class="field">
-    <label for="email-horizontal-offset-two">Your email *</label>
-    <input type="email" name="email" id="email-horizontal-offset-two" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="phone-horizontal-offset-two">Your phone *</label>
-    <input type="text" name="phone" id="phone-horizontal-offset-two" placeholder="Phone" />
-  </div>
-
-  <div class="field">
-    <label for="password-horizontal-offset-two">Password</label>
-    <input type="password" id="password-horizontal-offset-two" placeholder="Password">
-  </div>
-
-  <div class="field">
-    <label for="gender-horizontal-offset-two">Gender</label>
-    <select id="gender-horizontal-offset-two">
-      <option>Select gender</option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label for="file-horizontal-offset-two">File input</label>
-    <input type="file" id="file-horizontal-offset-two">
-    <p class="hint">This is hint text here.</p>
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-
-  <div class="field">
-    <label for="message-horizontal-offset-two">Message *</label>
-    <textarea name="message" id="message-horizontal-offset-two" cols="30" rows="5" placeholder="Message..." /></textarea>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-      </Example>
-<Code language="html" code={`
-<form class="horizontal offset two">
-  <div class="field">
-    <label for="name-horizontal-offset-two">Your name *</label>
-    <input type="text" name="name" id="name-horizontal-offset-two" placeholder="Name" />
-  </div>
-
-  <div class="field">
-    <label for="email-horizontal-offset-two">Your email *</label>
-    <input type="email" name="email" id="email-horizontal-offset-two" placeholder="Email" />
-  </div>
-
-  <div class="field">
-    <label for="phone-horizontal-offset-two">Your phone *</label>
-    <input type="text" name="phone" id="phone-horizontal-offset-two" placeholder="Phone" />
-  </div>
-
-  <div class="field">
-    <label for="password-horizontal-offset-two">Password</label>
-    <input type="password" id="password-horizontal-offset-two" placeholder="Password">
-  </div>
-
-  <div class="field">
-    <label for="gender-horizontal-offset-two">Gender</label>
-    <select id="gender-horizontal-offset-two">
-      <option>Select gender</option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label for="file-horizontal-offset-two">File input</label>
-    <input type="file" id="file-horizontal-offset-two">
-    <p class="hint">This is hint text here.</p>
-  </div>
-
-  <div class="field checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-
-  <div class="field">
-    <label for="message-horizontal-offset-two">Message *</label>
-    <textarea name="message" id="message-horizontal-offset-two" cols="30" rows="5" placeholder="Message..." /></textarea>
-  </div>
-
-  <div class="field">
-    <button type="submit">Send Message</button>
-  </div>
-</form>
-`} />
-
-      <h2>Static text</h2>
-      <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.static</code> class on a <code>&lt;p&gt;</code>.</p>
-      <Example>
-        <form class="horizontal offset two">
-          <div class="field">
-            <label for="email">Email</label>
-            <p class="static">email@example.com</p>
-          </div>
-
-          <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password">
-          </div>
-        </form>
-      </Example>
-<Code language="html" code={`
-<form class="horizontal offset two">
-  <div class="field">
-    <label for="email">Email</label>
-    <p class="static">email@example.com</p>
-  </div>
-
-  <div class="field">
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Password">
-  </div>
-</form>
-`} />
-
-      <h2>Disabled fieldsets</h2>
-      <Example>
-        <form class="horizontal offset two">
-          <fieldset disabled>
-            <div class="field">
-              <label for="email-disabled-fieldsets">Email</label>
-              <input type="email" name="email" id="email-disabled-fieldsets" placeholder="Email" />
-            </div>
-
-            <div class="field">
-              <label for="password">Password</label>
-              <input type="password" id="password" placeholder="Password">
-            </div>
-
-            <div class="field">
-              <label for="gender-disabled-fieldsets">Gender</label>
-              <select id="gender-disabled-fieldsets">
-                <option>Select gender</option>
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </fieldset>
-        </form>
-      </Example>
-<Code language="html" code={`
-<form class="horizontal offset two">
-  <fieldset disabled>
     <div class="field">
-      <label for="email-disabled-fieldsets">Email</label>
-      <input type="email" name="email" id="email-disabled-fieldsets" placeholder="Email" />
+      <button type="submit">Send Message</button>
+    </div>
+  </Example>
+</Layout>
+
+<h2>Inline form</h2>
+<Example>
+  <form class="inline">
+    <div class="field">
+      <label for="email-inline ">Your email</label>
+      <input type="email" name="email" id="email-inline " placeholder="Email" />
     </div>
 
     <div class="field">
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Password">
+      <label for="password-inline ">Password</label>
+      <input type="password" id="password-inline " placeholder="Password" />
+    </div>
+
+    <div class="field checkbox">
+      <label>
+        <input type="checkbox" /> Remember me
+      </label>
     </div>
 
     <div class="field">
-      <label for="gender-disabled-fieldsets">Gender</label>
-      <select id="gender-disabled-fieldsets">
+      <button type="submit">Send Message</button>
+    </div>
+  </form>
+</Example>
+
+<Example>
+  <form class="inline unlabel">
+    <div class="field">
+      <label for="email-inline unlabel">Your email</label>
+      <input type="email" name="email" id="email-inline unlabel" placeholder="Email" />
+    </div>
+
+    <div class="field">
+      <label for="password-inline unlabel">Password</label>
+      <input type="password" id="password-inline unlabel" placeholder="Password" />
+    </div>
+
+    <div class="field checkbox">
+      <label>
+        <input type="checkbox" /> Remember me
+      </label>
+    </div>
+
+    <div class="field">
+      <button type="submit">Send Message</button>
+    </div>
+  </form>
+</Example>
+
+<Example>
+  <form class="inline">
+    <input type="email" name="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <label>
+      <input type="checkbox" /> Remember me
+    </label>
+    <button type="submit">Send Message</button>
+  </form>
+</Example>
+
+<h3>Justified inline</h3>
+<Example>
+  <div class="justified">
+    <div class="field"><input type="text" /></div>
+    <div class="field"><input type="text" /></div>
+    <div class="field"><input type="text" /></div>
+  </div>
+</Example>
+
+<h2>Horizontal form</h2>
+<Example>
+  <form class="horizontal offset two">
+    <div class="field">
+      <label for="name-horizontal-offset-two">Your name *</label>
+      <input type="text" name="name" id="name-horizontal-offset-two" placeholder="Name" />
+    </div>
+
+    <div class="field">
+      <label for="email-horizontal-offset-two">Your email *</label>
+      <input type="email" name="email" id="email-horizontal-offset-two" placeholder="Email" />
+    </div>
+
+    <div class="field">
+      <label for="phone-horizontal-offset-two">Your phone *</label>
+      <input type="text" name="phone" id="phone-horizontal-offset-two" placeholder="Phone" />
+    </div>
+
+    <div class="field">
+      <label for="password-horizontal-offset-two">Password</label>
+      <input type="password" id="password-horizontal-offset-two" placeholder="Password" />
+    </div>
+
+    <div class="field">
+      <label for="gender-horizontal-offset-two">Gender</label>
+      <select id="gender-horizontal-offset-two">
         <option>Select gender</option>
         <option>Male</option>
         <option>Female</option>
@@ -449,153 +171,147 @@ import Code from '../../../components/Code.astro';
     </div>
 
     <div class="field">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <label for="file-horizontal-offset-two">File input</label>
+      <input type="file" id="file-horizontal-offset-two" />
+      <p class="hint">This is hint text here.</p>
     </div>
-  </fieldset>
-</form>
-`} />
 
-      <h2>Validation states</h2>
-      <Example>
-        <form>
-          <div class="field success">
-            <label for="text-success">Input with success</label>
-            <input type="text" name="success" id="text-success" />
-          </div>
+    <div class="field checkbox">
+      <label>
+        <input type="checkbox" /> Check me out
+      </label>
+    </div>
 
-          <div class="field warning">
-            <label for="text-warning">Input with warning</label>
-            <input type="text" name="warning" id="text-warning" />
-          </div>
+    <div class="field">
+      <label for="message-horizontal-offset-two">Message *</label>
+      <textarea
+        name="message"
+        id="message-horizontal-offset-two"
+        cols="30"
+        rows="5"
+        placeholder="Message..."></textarea>
+    </div>
+  </form>
 
-          <div class="field error">
-            <label for="text-error">Input with error</label>
-            <input type="text" name="error" id="text-error" />
-          </div>
-        </form>
-      </Example>
-<Code language="html" code={`
-<form>
-  <div class="field success">
-    <label for="text-success">Input with success</label>
-    <input type="text" name="success" id="text-success" />
+  <div class="field">
+    <button type="submit">Send Message</button>
   </div>
+</Example>
 
-  <div class="field warning">
-    <label for="text-warning">Input with warning</label>
-    <input type="text" name="warning" id="text-warning" />
-  </div>
+<h2>Static text</h2>
+<p>
+  When you need to place plain text next to a form label within a horizontal form, use the <code
+    >.static</code
+  > class on a <code>&lt;p&gt;</code>.
+</p>
+<Example>
+  <form class="horizontal offset two">
+    <div class="field">
+      <label for="email">Email</label>
+      <p class="static">email@example.com</p>
+    </div>
 
-  <div class="field error">
-    <label for="text-error">Input with error</label>
-    <input type="text" name="error" id="text-error" />
-  </div>
-</form>
-`} />
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" />
+    </div>
+  </form>
+</Example>
 
-      <h2>With optional icons</h2>
-      <Example>
-        <form>
-          <div class="field success feedback">
-            <label for="text-success">Input with success</label>
-            <input type="text" name="success" id="text-success" />
-            
-          </div>
+<h2>Disabled fieldsets</h2>
+<Example>
+  <form class="horizontal offset two">
+    <fieldset disabled>
+      <div class="field">
+        <label for="email-disabled-fieldsets">Email</label>
+        <input type="email" name="email" id="email-disabled-fieldsets" placeholder="Email" />
+      </div>
 
-          <div class="field warning feedback">
-            <label for="text-warning">Input with warning</label>
-            <input type="text" name="warning" id="text-warning" />
-            
-          </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" />
+      </div>
 
-          <div class="field error feedback">
-            <label for="text-error">Input with error</label>
-            <input type="text" name="error" id="text-error" />
-            
-          </div>
-        </form>
-      </Example>
-<Code language="html" code={`
-<form>
-  <div class="field success feedback">
-    <label for="text-success">Input with success</label>
-    <input type="text" name="success" id="text-success" />
-    <i class="icon lightbulb-o"></i>
-  </div>
+      <div class="field">
+        <label for="gender-disabled-fieldsets">Gender</label>
+        <select id="gender-disabled-fieldsets">
+          <option>Select gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
 
-  <div class="field warning feedback">
-    <label for="text-warning">Input with warning</label>
-    <input type="text" name="warning" id="text-warning" />
-    <i class="icon warning"></i>
-  </div>
+      <div class="field">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </fieldset>
+  </form>
+</Example>
 
-  <div class="field error feedback">
-    <label for="text-error">Input with error</label>
-    <input type="text" name="error" id="text-error" />
-    <i class="icon times"></i>
-  </div>
-</form>
-`} />
+<h2>Validation states</h2>
+<Example>
+  <form>
+    <div class="field success">
+      <label for="text-success">Input with success</label>
+      <input type="text" name="success" id="text-success" />
+    </div>
 
-    <Example>
-      <form class="horizontal offset three">
-        <div class="field success feedback">
-          <label for="text-success">Input with success</label>
-          <input type="text" name="success" id="text-success" />
-          
-        </div>
+    <div class="field warning">
+      <label for="text-warning">Input with warning</label>
+      <input type="text" name="warning" id="text-warning" />
+    </div>
 
-        <div class="field warning feedback">
-          <label for="text-warning">Input with warning</label>
-          <input type="text" name="warning" id="text-warning" />
-          
-        </div>
+    <div class="field error">
+      <label for="text-error">Input with error</label>
+      <input type="text" name="error" id="text-error" />
+    </div>
+  </form>
+</Example>
 
-        <div class="field error feedback">
-          <label for="text-error">Input with error</label>
-          <input type="text" name="error" id="text-error" />
-          
-        </div>
-      </form>
-    </Example>
-<Code language="html" code={`
-<form class="horizontal offset three">
-  <div class="field success feedback">
-    <label for="text-success">Input with success</label>
-    <input type="text" name="success" id="text-success" />
-    <i class="icon lightbulb-o"></i>
-  </div>
+<h2>With optional icons</h2>
+<Example>
+  <form>
+    <div class="field success feedback">
+      <label for="text-success">Input with success</label>
+      <input type="text" name="success" id="text-success" />
+    </div>
 
-  <div class="field warning feedback">
-    <label for="text-warning">Input with warning</label>
-    <input type="text" name="warning" id="text-warning" />
-    <i class="icon warning"></i>
-  </div>
+    <div class="field warning feedback">
+      <label for="text-warning">Input with warning</label>
+      <input type="text" name="warning" id="text-warning" />
+    </div>
 
-  <div class="field error feedback">
-    <label for="text-error">Input with error</label>
-    <input type="text" name="error" id="text-error" />
-    <i class="icon times"></i>
-  </div>
-</form>
-`} />
+    <div class="field error feedback">
+      <label for="text-error">Input with error</label>
+      <input type="text" name="error" id="text-error" />
+    </div>
+  </form>
+</Example>
 
-    <Example>
-      <form class="inline">
-        <div class="field success feedback">
-          <label for="text-success">Input with success</label>
-          <input type="text" name="success" id="text-success" />
-          
-        </div>
-      </form>
-    </Example>
-<Code language="html" code={`
-<form class="inline">
-  <div class="field success feedback">
-    <label for="text-success">Input with success</label>
-    <input type="text" name="success" id="text-success" />
-    <i class="icon lightbulb-o"></i>
-  </div>
-</form>
-`} />
-</Layout>
+<Example>
+  <form class="horizontal offset three">
+    <div class="field success feedback">
+      <label for="text-success">Input with success</label>
+      <input type="text" name="success" id="text-success" />
+    </div>
+
+    <div class="field warning feedback">
+      <label for="text-warning">Input with warning</label>
+      <input type="text" name="warning" id="text-warning" />
+    </div>
+
+    <div class="field error feedback">
+      <label for="text-error">Input with error</label>
+      <input type="text" name="error" id="text-error" />
+    </div>
+  </form>
+</Example>
+
+<Example>
+  <form class="inline">
+    <div class="field success feedback">
+      <label for="text-success">Input with success</label>
+      <input type="text" name="success" id="text-success" />
+    </div>
+  </form>
+</Example>

@@ -28,7 +28,12 @@ $columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
 }`;
 ---
 
-<Layout title="Code" bodyClass="docs_elements elements_code" activeSection="docs" currentPage="/docs/elements/code">
+<Layout
+  title="Code"
+  bodyClass="docs_elements elements_code"
+  activeSection="docs"
+  currentPage="/docs/elements/code"
+>
   <h1 class="title">Code</h1>
 
   <h2>Inline</h2>
@@ -44,14 +49,20 @@ $columns: "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
   </Example>
 
   <h2 id="code-block">Basic block</h2>
-  <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+  <p>
+    Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the
+    code for proper rendering.
+  </p>
   <Example>
     <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
   </Example>
 
   <h3>Scrollable</h3>
-  <p>You may optionally add the <code>.scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+  <p>
+    You may optionally add the <code>.scrollable</code> class, which will set a max-height of 350px and
+    provide a y-axis scrollbar.
+  </p>
   <Example>
-    <pre class="scrollable" set:html={scssCode.replace(/>/g, '&gt;')}></pre>
+    <pre class="scrollable" set:html={scssCode.replace(/>/g, '&gt;')} />
   </Example>
 </Layout>

@@ -39,8 +39,13 @@ const jsCode5 = `$('#element').message('destroy')`;
 const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
 ---
 
-<Layout title="Message" bodyClass="docs_components components_message" activeSection="docs" currentPage="/docs/components/message">
-<h1 class="title">Message</h1>
+<Layout
+  title="Message"
+  bodyClass="docs_components components_message"
+  activeSection="docs"
+  currentPage="/docs/components/message"
+>
+  <h1 class="title">Message</h1>
 
   <h2>Elegant way to display tips/message</h2>
   <div class="message success" data-ride="message" data-duration="2000">
@@ -53,7 +58,9 @@ const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
     &times;
   </div>
 
-<Code language="html" code={`
+  <Code
+    language="html"
+    code={`
 <div class="message success" data-ride="message" data-duration="2000">
   <div class="inner">hello, im a message <a href="#" title="">link here</a>.</div>
   <span class="close">&times;</span>
@@ -63,8 +70,8 @@ const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
   <div class="inner">hello, im a message.</div>
   <span class="close">&times;</span>
 </div>
-`} />
-
+`}
+  />
 
   <h2>API</h2>
   <p>Message plugin already export to window object.</p>
@@ -78,62 +85,65 @@ const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
 
     <button class="info" id="message-with-status">show with status</button>
   </Example>
-<Code language="javascript" code={jsCode1} />
-
 
   <h2>Options</h2>
   <table class="bordered striped">
     <thead>
-     <tr>
-       <th style="width: 100px;">Name</th>
-       <th style="width: 100px;">Type</th>
-       <th style="width: 50px;">Default</th>
-       <th>Description</th>
-     </tr>
+      <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 100px;">Type</th>
+        <th style="width: 50px;">Default</th>
+        <th>Description</th>
+      </tr>
     </thead>
     <tbody>
-     <tr>
-       <td>template</td>
-       <td>string</td>
-       <td><code>'&lt;div class="message"&gt;&lt;div class="inner"&gt;&lt;/div&gt;&lt;span class="close"&gt;&times;'&lt;/span&gt;&lt;/div&gt;'</code></td>
-       <td>
-        Base HTML to use when creating the message.
-        The message's content will be injected into the <code>.inner</code>.
-        <code>.close</code> will become the message's close. The outermost wrapper element should have the <code>.message</code> class.
-       </td>
-     </tr>
-     <tr>
-       <td>message</td>
-       <td>string|object</td>
-       <td>null</td>
-       <td>
-        'message content text/html' <br />
-        <code><span set:html={tableCode}></span></code>
-       </td>
-     </tr>
-     <tr>
-       <td>placement</td>
-       <td>string</td>
-       <td>top</td>
-       <td>The placement can be `top` or `bottom`, by default is `top`</td>
-     </tr>
-     <tr>
-       <td>status</td>
-       <td>string</td>
-       <td>''</td>
-       <td>
-        Show with status, add class `[default]| success| info| warning| danger` to the container.
-       </td>
-     </tr>
-     <tr>
-       <td>duration</td>
-       <td>number</td>
-       <td>null</td>
-       <td>Message hide automaticlly after a number</td>
-     </tr>
+      <tr>
+        <td>template</td>
+        <td>string</td>
+        <td
+          ><code
+            >'&lt;div class="message"&gt;&lt;div class="inner"&gt;&lt;/div&gt;&lt;span
+            class="close"&gt;&times;'&lt;/span&gt;&lt;/div&gt;'</code
+          ></td
+        >
+        <td>
+          Base HTML to use when creating the message. The message's content will be injected into
+          the <code>.inner</code>.
+          <code>.close</code> will become the message's close. The outermost wrapper element should have
+          the <code>.message</code> class.
+        </td>
+      </tr>
+      <tr>
+        <td>message</td>
+        <td>string|object</td>
+        <td>null</td>
+        <td>
+          'message content text/html' <br />
+          <code><span set:html={tableCode} /></code>
+        </td>
+      </tr>
+      <tr>
+        <td>placement</td>
+        <td>string</td>
+        <td>top</td>
+        <td>The placement can be `top` or `bottom`, by default is `top`</td>
+      </tr>
+      <tr>
+        <td>status</td>
+        <td>string</td>
+        <td>''</td>
+        <td>
+          Show with status, add class `[default]| success| info| warning| danger` to the container.
+        </td>
+      </tr>
+      <tr>
+        <td>duration</td>
+        <td>number</td>
+        <td>null</td>
+        <td>Message hide automaticlly after a number</td>
+      </tr>
     </tbody>
   </table>
-
 
   <h2>Methods</h2>
   <h4>$().message(options)</h4>
@@ -143,16 +153,13 @@ const tableCode = `message: 'text/thml', placement: 'bottom', status: 'danger'`;
   <p>Show the message.</p>
   <Code language="javascript" code={jsCode2} />
 
-
   <h4>.message('hide')</h4>
   <p>Hide the message.</p>
   <Code language="javascript" code={jsCode3} />
 
-
   <h4>.message('toggle')</h4>
   <p>Toggles the message.</p>
   <Code language="javascript" code={jsCode4} />
-
 
   <h4>.message('destroy')</h4>
   <p>Hide and destroys the message.</p>

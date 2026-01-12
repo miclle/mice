@@ -230,10 +230,22 @@ section {
     }
 
     // Contextual variants
-    @include list-group-item-variant(success, var(--state-success-background), var(--state-success-text));
+    @include list-group-item-variant(
+      success,
+      var(--state-success-background),
+      var(--state-success-text)
+    );
     @include list-group-item-variant(info, var(--state-info-background), var(--state-info-text));
-    @include list-group-item-variant(warning, var(--state-warning-background), var(--state-warning-text));
-    @include list-group-item-variant(danger, var(--state-danger-background), var(--state-danger-text));
+    @include list-group-item-variant(
+      warning,
+      var(--state-warning-background),
+      var(--state-warning-text)
+    );
+    @include list-group-item-variant(
+      danger,
+      var(--state-danger-background),
+      var(--state-danger-text)
+    );
 
     // Custom content options
     .heading {

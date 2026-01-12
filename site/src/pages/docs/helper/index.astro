@@ -42,11 +42,19 @@ const scssCode4 = `.hide {
 }`;
 ---
 
-<Layout title="Helper classes" bodyClass="helper helper_index" activeSection="docs" currentPage="/docs/helper">
+<Layout
+  title="Helper classes"
+  bodyClass="helper helper_index"
+  activeSection="docs"
+  currentPage="/docs/helper"
+>
   <h1 class="title">Helper classes</h1>
 
   <h2>Contextual colors</h2>
-  <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
+  <p>
+    Convey meaning through color with a handful of emphasis utility classes. These may also be
+    applied to links and will darken on hover just like our default link styles.
+  </p>
   <Example>
     <p class="text muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
     <p class="text primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -66,37 +74,60 @@ const scssCode4 = `.hide {
   </Example>
 
   <h2 id="helper-classes-floats">Quick floats</h2>
-  <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
+  <p>
+    Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity
+    issues. Classes can also be used as mixins.
+  </p>
   <Example>
     <div class="lefted">The lefted text</div>
     <div class="righted">The righted text</div>
     <div class="clearfix"></div>
   </Example>
-  <Code language="html" code={`
+  <Code
+    language="html"
+    code={`
 <div class="lefted">The lefted text</div>
 <div class="righted">The righted text</div>
-`} />
+`}
+  />
   <Code language="scss" code={scssCode1} />
 
   <h2 id="helper-classes-center">Center content blocks</h2>
-  <p>Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a mixin and class.</p>
-  <Code language="html" code={`
+  <p>
+    Set an element to <code>display: block</code> and center via <code>margin</code>. Available as a
+    mixin and class.
+  </p>
+  <Code
+    language="html"
+    code={`
 <div class="center-block">...</div>
-`} />
+`}
+  />
   <Code language="scss" code={scssCode2} />
 
   <h2 id="helper-classes-clearfix">Clearfix</h2>
-  <p>Clear the <code>float</code> on any element with the <code>.clearfix</code> class. Utilizes <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">the micro clearfix</a> as popularized by Nicolas Gallagher. Can also be used as a mixin.</p>
-  <Code language="html" code={`
+  <p>
+    Clear the <code>float</code> on any element with the <code>.clearfix</code> class. Utilizes <a
+      href="http://nicolasgallagher.com/micro-clearfix-hack/"
+      target="_blank">the micro clearfix</a
+    > as popularized by Nicolas Gallagher. Can also be used as a mixin.
+  </p>
+  <Code
+    language="html"
+    code={`
 <!-- Usage as a class -->
 <div class="clearfix">...</div>
-`} />
+`}
+  />
   <Code language="scss" code={scssCode3} />
 
   <h2 id="helper-classes-show-hide">Showing and hiding content</h2>
-  <Code language="html" code={`
+  <Code
+    language="html"
+    code={`
 <div class="show">...</div>
 <div class="hidden">...</div>
-`} />
+`}
+  />
   <Code language="scss" code={scssCode4} />
 </Layout>
