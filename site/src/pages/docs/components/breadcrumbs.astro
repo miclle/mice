@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -9,7 +10,7 @@ import Code from '../../../components/Code.astro';
       <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
       <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
 
-      <section class="example">
+      <Example>
         <ol class="breadcrumb">
           <li class="active">Home</li>
         </ol>
@@ -24,7 +25,7 @@ import Code from '../../../components/Code.astro';
           <li><a href="#">Library</a></li>
           <li class="active">Data</li>
         </ol>
-      </section>
+      </Example>
 
 <Code language="html" code={`
 <ol class="breadcrumb">

@@ -1,32 +1,24 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Code from '../../../components/Code.astro';
+import Example from '../../../components/Example.astro';
 ---
 
 <Layout title="Tags" bodyClass="docs_components components_tags" activeSection="docs" currentPage="/docs/components/tags">
   <h1 class="title">Tags</h1>
 
   <h2>Default</h2>
-  <section class="example">
+  <Example>
     <span class="tag">Default</span>
     <span class="tag primary">Primary</span>
     <span class="tag success">Success</span>
     <span class="tag info">Info</span>
     <span class="tag warning">Warning</span>
     <span class="tag danger">Danger</span>
-  </section>
-<Code language="html" code={`
-<span class="tag">Default</span>
-<span class="tag primary">Primary</span>
-<span class="tag success">Success</span>
-<span class="tag info">Info</span>
-<span class="tag warning">Warning</span>
-<span class="tag danger">Danger</span>
-`} />
+  </Example>
 
 
   <h2>Heading tag</h2>
-  <section class="example">
+  <Example>
     <table>
       <tbody>
         <tr>
@@ -61,37 +53,20 @@ import Code from '../../../components/Code.astro';
         </tr>
       </tbody>
     </table>
-  </section>
-<Code language="html" code={`
-<h1>h1. Heading <span class="tag">New</span></h1>
-<h2>h2. Heading <span class="tag">New</span></h2>
-<h3>h3. Heading <span class="tag">New</span></h3>
-<h4>h4. Heading <span class="tag">New</span></h4>
-<h5>h5. Heading <span class="tag">New</span></h5>
-<h6>h6. Heading <span class="tag">New</span></h6>
-`} />
+  </Example>
 
 
   <h2>Sizing</h2>
-  <section class="example">
+  <Example>
     <span class="tag">tag</span>
     <span class="tag large">tag</span>
-  </section>
-<Code language="html" code={`
-<span class="tag">tag</span>
-<span class="tag large">tag</span>
-`} />
+  </Example>
 
 
   <h2>Other</h2>
-  <section class="example">
+  <Example>
     <a href="#" class="tag">tag</a>
     <div class="button"><span class="tag">tag</span></div>
     <button><span class="tag">tag</span></button>
-  </section>
-<Code language="html" code={`
-<a href="#" class="tag">tag</a>
-<div class="button"><span class="tag">tag</span></div>
-<button><span class="tag">tag</span></button>
-`} />
+  </Example>
 </Layout>

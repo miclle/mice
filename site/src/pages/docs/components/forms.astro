@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -7,7 +8,7 @@ import Code from '../../../components/Code.astro';
 <h1 class="title">Form</h1>
 
       <h2>Basic example</h2>
-      <section class="example">
+      <Example>
         
 <form>
   <div class="field">
@@ -60,7 +61,7 @@ import Code from '../../../components/Code.astro';
     <button type="submit">Send Message</button>
   </div>
 </form>
-      </section>
+      </Example>
 
 <Code language="html" code={`
 <form>
@@ -117,7 +118,7 @@ import Code from '../../../components/Code.astro';
 `} />
 
       <h2>Inline form</h2>
-      <section class="example">
+      <Example>
         
 <form class="inline">
   <div class="field">
@@ -140,7 +141,7 @@ import Code from '../../../components/Code.astro';
     <button type="submit">Send Message</button>
   </div>
 </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="inline">
   <div class="field">
@@ -165,7 +166,7 @@ import Code from '../../../components/Code.astro';
 </form>
 `} />
 
-      <section class="example">
+      <Example>
         
 <form class="inline unlabel">
   <div class="field">
@@ -188,7 +189,7 @@ import Code from '../../../components/Code.astro';
     <button type="submit">Send Message</button>
   </div>
 </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="inline unlabel">
   <div class="field">
@@ -213,7 +214,7 @@ import Code from '../../../components/Code.astro';
 </form>
 `} />
 
-      <section class="example">
+      <Example>
         <form class="inline">
   <input type="email" name="email" placeholder="Email" />
   <input type="password" placeholder="Password" />
@@ -222,7 +223,7 @@ import Code from '../../../components/Code.astro';
   </label>
   <button type="submit">Send Message</button>
 </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="inline">
   <input type="email" name="email" placeholder="Email" />
@@ -236,13 +237,13 @@ import Code from '../../../components/Code.astro';
 
 
       <h3>Justified inline</h3>
-      <section class="example">
+      <Example>
         <div class="justified">
           <div class="field"><input type="text"></div>
           <div class="field"><input type="text"></div>
           <div class="field"><input type="text"></div>
         </div>
-      </section>
+      </Example>
 <Code language="html" code={`
 <div class="justified">
   <div class="field">
@@ -259,7 +260,7 @@ import Code from '../../../components/Code.astro';
 
 
       <h2>Horizontal form</h2>
-      <section class="example">
+      <Example>
         
 <form class="horizontal offset two">
   <div class="field">
@@ -312,7 +313,7 @@ import Code from '../../../components/Code.astro';
     <button type="submit">Send Message</button>
   </div>
 </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="horizontal offset two">
   <div class="field">
@@ -369,7 +370,7 @@ import Code from '../../../components/Code.astro';
 
       <h2>Static text</h2>
       <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.static</code> class on a <code>&lt;p&gt;</code>.</p>
-      <section class="example">
+      <Example>
         <form class="horizontal offset two">
           <div class="field">
             <label for="email">Email</label>
@@ -381,7 +382,7 @@ import Code from '../../../components/Code.astro';
             <input type="password" id="password" placeholder="Password">
           </div>
         </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="horizontal offset two">
   <div class="field">
@@ -397,7 +398,7 @@ import Code from '../../../components/Code.astro';
 `} />
 
       <h2>Disabled fieldsets</h2>
-      <section class="example">
+      <Example>
         <form class="horizontal offset two">
           <fieldset disabled>
             <div class="field">
@@ -424,7 +425,7 @@ import Code from '../../../components/Code.astro';
             </div>
           </fieldset>
         </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form class="horizontal offset two">
   <fieldset disabled>
@@ -455,7 +456,7 @@ import Code from '../../../components/Code.astro';
 `} />
 
       <h2>Validation states</h2>
-      <section class="example">
+      <Example>
         <form>
           <div class="field success">
             <label for="text-success">Input with success</label>
@@ -472,7 +473,7 @@ import Code from '../../../components/Code.astro';
             <input type="text" name="error" id="text-error" />
           </div>
         </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form>
   <div class="field success">
@@ -493,7 +494,7 @@ import Code from '../../../components/Code.astro';
 `} />
 
       <h2>With optional icons</h2>
-      <section class="example">
+      <Example>
         <form>
           <div class="field success feedback">
             <label for="text-success">Input with success</label>
@@ -513,7 +514,7 @@ import Code from '../../../components/Code.astro';
             
           </div>
         </form>
-      </section>
+      </Example>
 <Code language="html" code={`
 <form>
   <div class="field success feedback">
@@ -536,7 +537,7 @@ import Code from '../../../components/Code.astro';
 </form>
 `} />
 
-    <section class="example">
+    <Example>
       <form class="horizontal offset three">
         <div class="field success feedback">
           <label for="text-success">Input with success</label>
@@ -556,7 +557,7 @@ import Code from '../../../components/Code.astro';
           
         </div>
       </form>
-    </section>
+    </Example>
 <Code language="html" code={`
 <form class="horizontal offset three">
   <div class="field success feedback">
@@ -579,7 +580,7 @@ import Code from '../../../components/Code.astro';
 </form>
 `} />
 
-    <section class="example">
+    <Example>
       <form class="inline">
         <div class="field success feedback">
           <label for="text-success">Input with success</label>
@@ -587,7 +588,7 @@ import Code from '../../../components/Code.astro';
           
         </div>
       </form>
-    </section>
+    </Example>
 <Code language="html" code={`
 <form class="inline">
   <div class="field success feedback">

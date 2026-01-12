@@ -1,24 +1,21 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Code from '../../../components/Code.astro';
+import Example from '../../../components/Example.astro';
 ---
 
 <Layout title="Images" bodyClass="docs_elements elements_images" activeSection="docs" currentPage="/docs/elements/images">
   <h1 class="title">Images</h1>
 
   <h2>Responsive images</h2>
-  <section class="example">
+  <Example>
     <img class="responsive" src="/images/defoliation.jpeg" alt="Defoliation" />
     <div>
       Photographer: <a target="_blank" href="http://miclle.com/photo/41"><small>@chummy</small></a>
     </div>
-  </section>
-  <Code language="html" code={`
-<img class="responsive" alt="Defoliation" src="/images/defoliation.jpeg" />
-`} />
+  </Example>
 
   <h2>Image shapes</h2>
-  <section class="example">
+  <Example>
     <img class="rounded" alt="Rounded" src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" />
     <img class="circle" alt="Circle" src="/images/f78d490e23e56501adda00c7876037aef422.jpeg" />
     <img class="thumbnail" alt="Thumbnail" src="/images/3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" />
@@ -28,52 +25,35 @@ import Code from '../../../components/Code.astro';
       <a target="_blank" href="http://miclle.com/photo/28"><small>@kaka</small></a>
       <a target="_blank" href="http://miclle.com/photo/1"><small>@miclle</small></a>
     </div>
-  </section>
-  <Code language="html" code={`
-<img class="rounded" alt="Rounded" src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" />
-<img class="circle" alt="Circle" src="/images/f78d490e23e56501adda00c7876037aef422.jpeg" />
-<img class="thumbnail" alt="Thumbnail" src="/images/3a4b2132cdefc03527223d707a6a5ce6bffc.jpeg" />
-`} />
+  </Example>
 
   <h2>Fluid images</h2>
-  <section class="example">
+  <Example>
     <img class="fluid" src="/images/b62a0a54fbed94d91e3d66328b783a811b47.jpeg" alt="Defoliation" />
     <div>
       Photographer: <a target="_blank" href="http://miclle.com/photo/41"><small>@chummy</small></a>
     </div>
-  </section>
-  <Code language="html" code={`
-<img class="fluid" alt="Defoliation" src="/images/b62a0a54fbed94d91e3d66328b783a811b47.jpeg" />
-`} />
+  </Example>
 
   <h2>Disabled images</h2>
-  <section class="example">
+  <Example>
     <img class="disabled responsive" src="/images/b62a0a54fbed94d91e3d66328b783a811b47.jpeg" alt="Defoliation" />
     <div>
       Photographer: <a target="_blank" href="http://miclle.com/photo/41"><small>@chummy</small></a>
     </div>
-  </section>
-  <Code language="html" code={`
-<img class="disabled responsive" alt="Defoliation" src="/images/b62a0a54fbed94d91e3d66328b783a811b47.jpeg" />
-`} />
+  </Example>
 
   <h2>Thumbnail Captions</h2>
-  <section class="example">
+  <Example>
     <div class="thumbnail">
       <img src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" alt="" />
       <div class="caption">Simple Caption</div>
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="thumbnail">
-  <img src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" />
-  <div class="caption">Simple Caption</div>
-</div>
-`} />
+  </Example>
 
   <h3>Animation effect</h3>
   <p>Say good bye to jQuery plugins. Today, we can create similar image caption effect only with CSS3. This demo shows how this effects runs.</p>
-  <section class="example">
+  <Example>
     <div class="thumbnail simple">
       <img src="/images/b2df5944204470358e5e8ea086a16a2b8e1c.jpeg" alt="" />
       <div class="caption">Simple Caption</div>
@@ -118,36 +98,5 @@ import Code from '../../../components/Code.astro';
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
       </div>
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="thumbnail simple">
-  <img src="xxx.jpg" />
-  <div class="caption">Simple Caption</div>
-</div>
-
-<div class="thumbnail full">
-  <img src="xxx.jpg" />
-  <div class="caption">...</div>
-</div>
-
-<div class="thumbnail fade">
-  <img src="xxx.jpg" />
-  <div class="caption">...</div>
-</div>
-
-<div class="thumbnail slide">
-  <img src="xxx.jpg" />
-  <div class="caption">...</div>
-</div>
-
-<div class="thumbnail rotate">
-  <img src="xxx.jpg" />
-  <div class="caption">...</div>
-</div>
-
-<div class="thumbnail scale">
-  <img src="xxx.jpg" />
-  <div class="caption">...</div>
-</div>
-`} />
+  </Example>
 </Layout>

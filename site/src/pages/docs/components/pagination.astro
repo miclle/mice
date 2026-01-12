@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -9,7 +10,7 @@ import Code from '../../../components/Code.astro';
 
       <h2>Default pagination</h2>
       <p>Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
-      <section class="example">
+      <Example>
         <ul class="pagination">
           <li><a href="#">&laquo;</a></li>
           <li><a href="#">1</a></li>
@@ -19,22 +20,11 @@ import Code from '../../../components/Code.astro';
           <li><a href="#">5</a></li>
           <li><a href="#">&raquo;</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pagination">
-  <li><a href="#">&laquo;</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
-`} />
+      </Example>
 
       <h2>Disabled and active states</h2>
       <p>Links are customizable for different circumstances. Use <code>.disabled</code> for unclickable links and <code>.active</code> to indicate the current page.</p>
-      <section class="example">
+      <Example>
         <ul class="pagination">
           <li class="disabled"><a href="#">&laquo;</a></li>
           <li class="active"><a href="#">1</a></li>
@@ -44,18 +34,7 @@ import Code from '../../../components/Code.astro';
           <li><a href="#">5</a></li>
           <li><a href="#">&raquo;</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pagination">
-  <li class="disabled"><a href="#">&laquo;</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
-`} />
+      </Example>
 
       <p>You can optionally swap out active or disabled anchors for <code>&lt;span&gt;</code> to remove click functionality while retaining intended styles.</p>
 <Code language="html" code={`
@@ -68,7 +47,7 @@ import Code from '../../../components/Code.astro';
 
       <h2>Sizing</h2>
       <p>Fancy larger or smaller pagination? Add <code>.large</code> or <code>.small</code> for additional sizes.</p>
-      <section class="example">
+      <Example>
         <ul class="pagination large">
           <li><a href="#">&laquo;</a></li>
           <li><a href="#">1</a></li>
@@ -98,12 +77,7 @@ import Code from '../../../components/Code.astro';
           <li><a href="#">5</a></li>
           <li><a href="#">&raquo;</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pagination large">...</ul>
-<ul class="pagination">...</ul>
-<ul class="pagination small">...</ul>
-`} />
+      </Example>
 
 
       <h1 class="title">Pager</h1>
@@ -111,46 +85,28 @@ import Code from '../../../components/Code.astro';
 
       <h2>Default example</h2>
       <p>By default, the pager centers links.</p>
-      <section class="example">
+      <Example>
         <ul class="pager">
           <li><a href="#">Previous</a></li>
           <li><a href="#">Next</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pager">
-  <li><a href="#">Previous</a></li>
-  <li><a href="#">Next</a></li>
-</ul>
-`} />
+      </Example>
 
       <h2>Aligned links</h2>
       <p>Alternatively, you can align each link to the sides:</p>
-      <section class="example">
+      <Example>
         <ul class="pager">
           <li class="previous"><a href="#">&larr; Older</a></li>
           <li class="next"><a href="#">Newer &rarr;</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pager">
-  <li class="previous"><a href="#">&larr; Older</a></li>
-  <li class="next"><a href="#">Newer &rarr;</a></li>
-</ul>
-`} />
+      </Example>
 
       <h2>Optional disabled state</h2>
       <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
-      <section class="example">
+      <Example>
         <ul class="pager">
           <li class="previous disabled"><a href="#">&larr; Older</a></li>
           <li class="next"><a href="#">Newer &rarr;</a></li>
         </ul>
-      </section>
-<Code language="html" code={`
-<ul class="pager">
-  <li class="previous disabled"><a href="#">&larr; Older</a></li>
-  <li class="next"><a href="#">Newer &rarr;</a></li>
-</ul>
-`} />
+      </Example>
 </Layout>

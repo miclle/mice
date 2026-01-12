@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Code from '../../../components/Code.astro';
+import Example from '../../../components/Example.astro';
 ---
 
 <Layout title="Alerts" bodyClass="docs_components components_alerts" activeSection="docs" currentPage="/docs/components/alerts">
@@ -9,7 +9,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Examples</h2>
   <p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.success</code>) for basic alert messages.</p>
-  <section class="example">
+  <Example>
     <div class="alert success">
       <strong>Well done!</strong> You successfully read this important alert message.
     </div>
@@ -22,32 +22,20 @@ import Code from '../../../components/Code.astro';
     <div class="alert danger">
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="alert success">...</div>
-<div class="alert info">...</div>
-<div class="alert warning">...</div>
-<div class="alert danger">...</div>
-`} />
+  </Example>
 
   <h2>Dismissible alerts</h2>
   <p>Build on any alert by adding an optional <code>.dismissible</code> and close button.</p>
-  <section class="example">
+  <Example>
     <div class="alert warning dismissible">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="alert warning dismissible">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-`} />
+  </Example>
 
   <h2>Links in alerts</h2>
   <p>The <code>&lt;a&gt;</code> tag default matching colored links within any alert.</p>
-  <section class="example">
+  <Example>
     <div class="alert success" role="alert">
       <strong>Well done!</strong> You successfully read <a href="#">this important alert message</a>.
     </div>
@@ -60,19 +48,5 @@ import Code from '../../../components/Code.astro';
     <div class="alert danger" role="alert">
       <strong>Oh snap!</strong> <a href="#">Change a few things up</a> and try submitting again.
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="alert success">
-  <a href="#">...</a>
-</div>
-<div class="alert info">
-  <a href="#">...</a>
-</div>
-<div class="alert warning">
-  <a href="#">...</a>
-</div>
-<div class="alert danger">
-  <a href="#">...</a>
-</div>
-`} />
+  </Example>
 </Layout>

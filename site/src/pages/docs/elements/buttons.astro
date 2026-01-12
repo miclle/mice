@@ -1,13 +1,13 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Code from '../../../components/Code.astro';
+import Example from '../../../components/Example.astro';
 ---
 
 <Layout title="Buttons" bodyClass="docs_elements elements_buttons" activeSection="docs" currentPage="/docs/elements/buttons">
   <h1 class="title">Button</h1>
 
   <h2>Basic buttons</h2>
-  <section class="example">
+  <Example>
     <p>
       <button>default</button>
       <button class="primary">primary</button>
@@ -16,33 +16,20 @@ import Code from '../../../components/Code.astro';
       <input class="warning" type="button" value="warning" />
       <input class="danger" type="submit" value="danger" />
     </p>
-  </section>
-  <Code language="html" code={`
-<button>default</button>
-<button class="primary">primary</button>
-<a href="#" class="button">default</a>
-<input class="warning" type="button" value="warning" />
-<input class="danger" type="submit" value="danger" />
-`} />
+  </Example>
 
   <h2>Disabled button</h2>
-  <section class="example">
+  <Example>
     <button disabled="disabled">default</button>
     <button disabled="disabled" class="primary">primary</button>
     <a href="#" class="button disabled success">success</a>
     <a href="#" class="button disabled info">info</a>
     <input disabled="disabled" class="warning" type="button" value="warning" />
     <input disabled="disabled" class="danger" type="submit" value="danger" />
-  </section>
-  <Code language="html" code={`
-<button disabled="disabled">default</button>
-<a href="#" class="button disabled">default</a>
-<input disabled="disabled" class="warning" type="button" value="warning" />
-<input disabled="disabled" class="danger" type="submit" value="danger" />
-`} />
+  </Example>
 
   <h2>Group buttons</h2>
-  <section class="example">
+  <Example>
     <div class="buttons">
       <button>Left</button>
       <button>Middle</button>
@@ -53,17 +40,10 @@ import Code from '../../../components/Code.astro';
       <a href="#" class="button primary">Middle</a>
       <a href="#" class="button primary">Right</a>
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="buttons">
-  <button>Left</button>
-  <button>Middle</button>
-  <button>Right</button>
-</div>
-`} />
+  </Example>
 
   <h2>Vertically buttons</h2>
-  <section class="example">
+  <Example>
     <div class="buttons vertical">
       <button>Top</button>
       <button>Middle</button>
@@ -74,17 +54,10 @@ import Code from '../../../components/Code.astro';
       <a href="#" class="button primary">Middle</a>
       <a href="#" class="button primary">Bottom</a>
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="buttons vertical">
-  <button>Left</button>
-  <button>Middle</button>
-  <button>Right</button>
-</div>
-`} />
+  </Example>
 
   <h2>Sizing</h2>
-  <section class="example">
+  <Example>
     <p>
       <button class="mini">Mini button</button>
       <a href="#" class="button primary mini">Mini button</a>
@@ -101,28 +74,20 @@ import Code from '../../../components/Code.astro';
       <button class="large">Large button</button>
       <a href="#" class="button primary large">Large button</a>
     </p>
-  </section>
-  <Code language="html" code={`
-<button class="mini">Mini button</button>
-<a href="#" class="button primary mini">Mini button</a>
-`} />
+  </Example>
 
   <h2>Block</h2>
-  <section class="example">
+  <Example>
     <p>
       <button class="block large">Block level button</button>
     </p>
     <p>
       <a href="#" class="button primary block large">Block level button</a>
     </p>
-  </section>
-  <Code language="html" code={`
-<button class="block large">Block level button</button>
-<a href="#" class="button primary block large">Block level button</a>
-`} />
+  </Example>
 
   <h2>Justified</h2>
-  <section class="example">
+  <Example>
     <div class="buttons justified">
       <a href="#" class="button">Left</a>
       <a href="#" class="button">Middle</a>
@@ -134,14 +99,7 @@ import Code from '../../../components/Code.astro';
       <a href="#" class="button primary">Middle</a>
       <a href="#" class="button primary">Right</a>
     </div>
-  </section>
-  <Code language="html" code={`
-<div class="buttons justified">
-  <a href="#" class="button">Left</a>
-  <a href="#" class="button">Middle</a>
-  <a href="#" class="button">Right</a>
-</div>
-`} />
+  </Example>
 
   <h3>With &lt;button&gt; elements</h3>
   <section>
@@ -169,35 +127,14 @@ import Code from '../../../components/Code.astro';
       </div>
     </div>
   </section>
-  <Code language="html" code={`
-<div class="buttons justified">
-  <div class="buttons">
-    <button>Left</button>
-  </div>
-  <div class="buttons">
-    <button>Middle</button>
-  </div>
-  <div class="buttons">
-    <button>Right</button>
-  </div>
-</div>
-`} />
 
   <h2>Checkbox & Radio in button</h2>
-  <section class="example">
+  <Example>
     <label class="button">
       <input type="checkbox" name="" value="" /> Checkbox in button
     </label>
     <label class="button">
       <input type="radio" name="" value="" /> Radio in button
     </label>
-  </section>
-  <Code language="html" code={`
-<label class="button">
-  <input type="checkbox" name="" value=""> Checkbox in button
-</label>
-<label class="button">
-  <input type="radio" name="" value=""> Radio in button
-</label>
-`} />
+  </Example>
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -8,7 +9,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Unordered</h2>
   <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
-  <section class="example">
+  <Example>
     <ul>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
@@ -26,7 +27,7 @@ import Code from '../../../components/Code.astro';
       <li>Aenean sit amet erat nunc</li>
       <li>Eget porttitor lorem</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul>
   <li>...</li>
@@ -36,7 +37,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Ordered</h2>
   <p>A list of items in which the order <em>does</em> explicitly matter.</p>
-  <section class="example">
+  <Example>
     <ol>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
@@ -47,7 +48,7 @@ import Code from '../../../components/Code.astro';
       <li>Aenean sit amet erat nunc</li>
       <li>Eget porttitor lorem</li>
     </ol>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ol>
   <li>...</li>
@@ -56,7 +57,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Unstyled</h2>
   <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
-  <section class="example">
+  <Example>
     <ul class="unstyled">
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipiscing elit</li>
@@ -74,7 +75,7 @@ import Code from '../../../components/Code.astro';
       <li>Aenean sit amet erat nunc</li>
       <li>Eget porttitor lorem</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="unstyled">
   <li>...</li>
@@ -84,13 +85,13 @@ import Code from '../../../components/Code.astro';
 
   <h2>Inline</h2>
   <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
-  <section class="example">
+  <Example>
     <ul class="inline">
       <li>Lorem ipsum</li>
       <li>Phasellus iaculis</li>
       <li>Nulla volutpat</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="inline">
   <li>...</li>
@@ -99,13 +100,13 @@ import Code from '../../../components/Code.astro';
 
 
   <h2>Grid</h2>
-  <section class="example">
+  <Example>
     <ul class="grid two">
       <li>Lorem ipsum</li>
       <li>Phasellus iaculis</li>
       <li>Nulla volutpat</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="grid two">
   <li>Lorem ipsum</li>
@@ -117,7 +118,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Description</h2>
   <p>A list of terms with their associated descriptions.</p>
-  <section class="example">
+  <Example>
     <dl>
       <dt>Description lists</dt>
       <dd>A description list is perfect for defining terms.</dd>
@@ -127,7 +128,7 @@ import Code from '../../../components/Code.astro';
       <dt>Malesuada porta</dt>
       <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
     </dl>
-  </section>
+  </Example>
 <Code language="html" code={`
 <dl>
   <dt>...</dt>
@@ -138,7 +139,7 @@ import Code from '../../../components/Code.astro';
 
   <h3>Horizontal description</h3>
   <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
-  <section class="example">
+  <Example>
     <dl class="horizontal">
       <dt>Description lists</dt>
       <dd>A description list is perfect for defining terms.</dd>
@@ -150,7 +151,7 @@ import Code from '../../../components/Code.astro';
       <dt>Felis euismod semper eget lacinia</dt>
       <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
     </dl>
-  </section>
+  </Example>
 <Code language="html" code={`
 <dl class="horizontal">
   <dt>...</dt>
@@ -161,7 +162,7 @@ import Code from '../../../components/Code.astro';
 
   <h2>Group</h2>
   <h3>Basic example</h3>
-  <section class="example">
+  <Example>
     <ul class="group">
       <li>Cras justo odio</li>
       <li>Dapibus ac facilisis in</li>
@@ -169,7 +170,7 @@ import Code from '../../../components/Code.astro';
       <li>Porta ac consectetur ac</li>
       <li>Vestibulum at eros</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="group">
   <li>Cras justo odio</li>
@@ -181,7 +182,7 @@ import Code from '../../../components/Code.astro';
 `} />
 
   <h3>Linked items</h3>
-  <section class="example">
+  <Example>
     <div class="group">
       <a href="#" class="active">Cras justo odio</a>
       <a href="#">Dapibus ac faciasis in</a>
@@ -189,7 +190,7 @@ import Code from '../../../components/Code.astro';
       <a href="#">Porta ac consectetur ac</a>
       <a href="#">Vestibulum at eros</a>
     </div>
-  </section>
+  </Example>
 <Code language="html" code={`
 <div class="group">
   <a href="#" class="active">Cras justo odio</a>
@@ -201,13 +202,13 @@ import Code from '../../../components/Code.astro';
 `} />
 
   <h3>Labels</h3>
-  <section class="example">
+  <Example>
     <ul class="group">
       <li>14 Cras justo odio</li>
       <li>2 Dapibus ac facilisis in</li>
       <li>1 Morbi leo risus</li>
     </ul>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="group">
   <li><span class="label">14</span> Cras justo odio</li>
@@ -218,7 +219,7 @@ import Code from '../../../components/Code.astro';
 
   <h3>Contextual classes</h3>
   <p>Use contextual classes to style list items, default or linked. Also includes <code>.active</code> state.</p>
-  <section class="example">
+  <Example>
     <div class="grid two">
       <div class="column">
         <ul class="group">
@@ -237,7 +238,7 @@ import Code from '../../../components/Code.astro';
         </div>
       </div>
     </div>
-  </section>
+  </Example>
 <Code language="html" code={`
 <ul class="group">
   <li class="success">Dapibus ac facilisis in</li>
@@ -255,7 +256,7 @@ import Code from '../../../components/Code.astro';
 
   <h3>Custom content</h3>
   <p>Add nearly any HTML within, even for linked list groups like the one below.</p>
-  <section class="example">
+  <Example>
     <div class="group">
       <a href="#" class="active">
         <h4 class="heading">List group item heading</h4>
@@ -270,7 +271,7 @@ import Code from '../../../components/Code.astro';
         <p class="text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
       </a>
     </div>
-  </section>
+  </Example>
 <Code language="html" code={`
 <div class="group">
   <a href="#" class="active">

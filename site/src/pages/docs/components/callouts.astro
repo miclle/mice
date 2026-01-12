@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -7,11 +8,11 @@ import Code from '../../../components/Code.astro';
 <h1 class="title">Callouts</h1>
 
       <h2>Default</h2>
-      <section class="example">
+      <Example>
         <div class="callout">
           <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
         </div>
-      </section>
+      </Example>
 <Code language="html" code={`
 <div class="callout">
   ...
@@ -20,7 +21,7 @@ import Code from '../../../components/Code.astro';
 
 
       <h2>Styles</h2>
-      <section class="example">
+      <Example>
         <div class="callout ">
           <h3></h3>
           <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
@@ -45,7 +46,7 @@ import Code from '../../../components/Code.astro';
           <h3>danger</h3>
           <p>The first night, then, I went to sleep on the sand, a thousand miles from any human habitation. I was more isolated than a shipwrecked sailor on a raft in the middle of the ocean. Thus you can imagine my amazement, at sunrise, when I was awakened by an odd little voice. It said:</p>
         </div>
-      </section>
+      </Example>
 <Code language="html" code={`
 <div class="callout ">
   ...
@@ -71,13 +72,13 @@ import Code from '../../../components/Code.astro';
       <p>Style and content changes for simple variations on a standard <code>&lt;callout&gt;</code>.</p>
       <h4>Naming a source</h4>
       <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-      <section class="example">
+      <Example>
         <div class="callout">
           <h4>Header text</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </div>
-      </section>
+      </Example>
 <Code language="html" code={`
 <div class="callout">
   <h4>Header text</h4>
@@ -88,12 +89,12 @@ import Code from '../../../components/Code.astro';
 
       <h4>Alternate displays</h4>
       <p>Add <code>.reverse</code> for a callout with right-aligned content.</p>
-      <section class="example">
+      <Example>
         <div class="callout reverse">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </div>
-      </section>
+      </Example>
 <Code language="html" code={`
 <div class="callout reverse">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>

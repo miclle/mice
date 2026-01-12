@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 
 const scssCode1 = `//Classes
@@ -46,46 +47,31 @@ const scssCode4 = `.hide {
 
   <h2>Contextual colors</h2>
   <p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p>
-  <section class="example">
+  <Example>
     <p class="text muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
     <p class="text primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
     <p class="text success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
     <p class="text info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     <p class="text warning">Etiam porta sem malesuada magna mollis euismod.</p>
     <p class="text danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-  </section>
-  <Code language="html" code={`
-<p class="text muted">...</p>
-<p class="text primary">...</p>
-<p class="text success">...</p>
-<p class="text info">...</p>
-<p class="text warning">...</p>
-<p class="text danger">...</p>
-`} />
+  </Example>
 
   <h2 id="helper-classes-backgrounds">Contextual backgrounds</h2>
-  <section class="example">
+  <Example>
     <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
     <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
     <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
     <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-  </section>
-  <Code language="html" code={`
-<p class="bg-primary">...</p>
-<p class="bg-success">...</p>
-<p class="bg-info">...</p>
-<p class="bg-warning">...</p>
-<p class="bg-danger">...</p>
-`} />
+  </Example>
 
   <h2 id="helper-classes-floats">Quick floats</h2>
   <p>Float an element to the left or right with a class. <code>!important</code> is included to avoid specificity issues. Classes can also be used as mixins.</p>
-  <section class="example clearfix">
+  <Example>
     <div class="lefted">The lefted text</div>
     <div class="righted">The righted text</div>
     <div class="clearfix"></div>
-  </section>
+  </Example>
   <Code language="html" code={`
 <div class="lefted">The lefted text</div>
 <div class="righted">The righted text</div>

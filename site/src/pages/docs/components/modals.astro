@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -8,7 +9,7 @@ import Code from '../../../components/Code.astro';
 
       <h2>Static example</h2>
       <p>A rendered modal with header, body, and set of actions in the footer.</p>
-      <section class="example has-modal">
+      <Example>
         <div class="modal">
           <div class="dialog">
             <div class="content">
@@ -26,56 +27,14 @@ import Code from '../../../components/Code.astro';
             </div><!-- /.content -->
           </div><!-- /.dialog -->
         </div><!-- /.modal -->
-      </section>
-<Code language="html" code={`
-<div class="modal">
-  <div class="dialog">
-    <div class="content">
-      <div class="header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-        <h4>Modal title</h4>
-      </div>
-      <div class="body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="footer">
-        <button type="button" data-dismiss="modal">Close</button>
-        <button type="button" class="primary">Save changes</button>
-      </div>
-    </div><!-- /.content -->
-  </div><!-- /.dialog -->
-</div><!-- /.modal -->
-`} />
+      </Example>
 
 
       <h2>Live demo</h2>
       <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
-      <section class="example">
+      <Example>
         <button class="btn primary" data-toggle="modal" data-target="#live-modal">Launch demo modal</button>
-      </section>
-<Code language="html" code={`
-<!-- Button trigger modal -->
-<button class="btn primary large" data-toggle="modal" data-target="#live-modal">Launch demo modal</button>
-
-<!-- Modal -->
-<div class="modal fade" id="live-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="dialog">
-    <div class="content">
-      <div class="header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-        <h4 id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="body">
-        ...
-      </div>
-      <div class="footer">
-        <button type="button" data-dismiss="modal">Close</button>
-        <button type="button" class="primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-`} />
+      </Example>
 
       <div class="modal fade" id="live-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="dialog">
@@ -107,31 +66,10 @@ import Code from '../../../components/Code.astro';
 
       <h2>Optional sizes</h2>
       <p>Modals have two optional sizes, available via modifier classes to be placed on a <code>.dialog</code>.</p>
-      <section class="example">
+      <Example>
         <button class="btn primary" data-toggle="modal" data-target="#small-live-modal">Small modal</button>
         <button class="btn primary" data-toggle="modal" data-target="#large-live-modal">Large modal</button>
-      </section>
-<Code language="html" code={`
-<button class="btn primary" data-toggle="modal" data-target="#small-live-modal">Small modal</button>
-
-<div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="dialog small">
-    <div class="content">
-      ...
-    </div>
-  </div>
-</div>
-
-<button class="btn primary" data-toggle="modal" data-target="#large-live-modal">Large modal</button>
-
-<div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="dialog larger">
-    <div class="content">
-      ...
-    </div>
-  </div>
-</div>
-`} />
+      </Example>
       <div id="small-live-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="dialog small">
           <div class="content">

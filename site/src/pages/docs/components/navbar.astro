@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
 import Code from '../../../components/Code.astro';
 ---
 
@@ -7,7 +8,7 @@ import Code from '../../../components/Code.astro';
 <h1 class="title">Navbar</h1>
 
       <h2>Default navbar</h2>
-      <section class="example">
+      <Example>
         <nav class="navbar">
           <div class="logo">
             <a href="/" class="brand">Mice</a>
@@ -27,28 +28,7 @@ import Code from '../../../components/Code.astro';
             <li><a href="https://github.com/miclle/mice"> Github</a></li>
           </ul>
         </nav>
-      </section>
-<Code language="html" code={`
-<nav class="navbar">
-  <div class="logo">
-    <a href="/" class="brand">Mice</a>
-  </div>
-
-  <ul class="menu">
-    <li class="active"><a href="/elements">Elements</a></li>
-    <li><a href="/components/grid.html">Grid</a></li>
-  </ul>
-
-  <form>
-    <input type="text" placeholder="Search">
-    <button type="submit">Submit</button>
-  </form>
-
-  <ul class="menu righted">
-    <li><a href="https://github.com/miclle/mice"><i class="icon github"></i> Github</a></li>
-  </ul>
-</nav>
-`} />
+      </Example>
 
 
       <h2>Fixed to top</h2>
