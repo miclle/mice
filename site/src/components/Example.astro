@@ -1,5 +1,6 @@
 ---
 import Code from './Code.astro';
+import prettier from 'prettier';
 
 /**
  * Example component that displays a preview and auto-extracts the code
@@ -15,59 +16,38 @@ const { language = 'html' } = Astro.props;
 // Get the raw HTML from the slot
 const slotHtml = await Astro.slots.render('default');
 
-// Extract the inner content (remove outer wrapper indentation)
-function extractCode(html: string): string {
+// Extract and format code using prettier
+async function extractCode(html: string): Promise<string> {
   if (!html || typeof html !== 'string') return '';
 
   // Remove Astro dev tool attributes
   let cleaned = html.replace(/\s+data-astro-source-file="[^"]*"/g, '');
   cleaned = cleaned.replace(/\s+data-astro-source-loc="[^"]*"/g, '');
 
-  // Split by tags and process
-  const tokens = cleaned.split(/(<[^>]+>)/g);
-  const result: string[] = [];
-  let indent = 0;
+  // Format with prettier
+  try {
+    const result = await prettier.format(cleaned, {
+      parser: 'html',
+      htmlWhitespaceSensitivity: 'ignore',
+      printWidth: 80,
+      tabWidth: 2,
+    });
 
-  for (const token of tokens) {
-    if (!token) continue;
-
-    const trimmed = token.trim();
-
-    // Skip empty tokens
-    if (!trimmed) continue;
-
-    // It's a tag
-    if (trimmed.startsWith('<')) {
-      // Closing tag - decrease indent first
-      if (trimmed.startsWith('</')) {
-        indent = Math.max(0, indent - 2);
-      }
-
-      result.push(' '.repeat(indent) + trimmed);
-
-      // Opening tag - increase indent after (except self-closing)
-      if (!trimmed.startsWith('</') && !trimmed.endsWith('/>')) {
-        const tagName = trimmed.match(/<([a-z0-9]+)/i)?.[1];
-        if (tagName && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          // Check if this tag has content (not immediately followed by closing tag or another opening)
-          indent += 2;
-        }
-      }
+    // Ensure we return a string
+    if (typeof result === 'string') {
+      return result;
     }
-    // It's text content
-    else {
-      const text = trimmed.replace(/\s+/g, ' ');
-      if (text) {
-        result.push(' '.repeat(indent) + text);
-      }
-    }
+
+    return String(result);
+  } catch (error) {
+    console.error('Prettier formatting error:', error);
+    // Fallback to original if formatting fails
+    return cleaned;
   }
-
-  return result.join('\n');
 }
 
 // Extract code from slot
-const code = extractCode(slotHtml || '');
+const code = await extractCode(slotHtml || '');
 ---
 
 <section class="example">
