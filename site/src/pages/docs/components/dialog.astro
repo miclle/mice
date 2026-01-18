@@ -1,0 +1,231 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Example from '../../../components/Example.astro';
+import Code from '../../../components/Code.astro';
+---
+
+<Layout
+  title="Dialog"
+  bodyClass="docs_components components_dialog"
+  activeSection="docs"
+  currentPage="/docs/components/dialog"
+>
+  <h1 class="title">Dialog</h1>
+
+  <p>
+    Dialog component is built using the native HTML <code>&lt;dialog&gt;</code> element, providing better
+    accessibility, keyboard navigation, and browser support out of the box.
+  </p>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Uses the native <code>&lt;dialog&gt;</code> element for better semantics and accessibility</li>
+    <li>Automatically manages focus and keyboard interactions (ESC to close)</li>
+    <li>Native backdrop support with <code>::backdrop</code> pseudo-element</li>
+    <li>Simple JavaScript API for opening and closing dialogs</li>
+  </ul>
+
+  <h2>Static example</h2>
+
+  <h3>Without backdrop</h3>
+  <p>A basic dialog without backdrop overlay.</p>
+  <Example>
+    <dialog style="position: relative; display: block; margin: 0 auto;">
+      <div class="header">
+        <button type="button" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4>Dialog title</h4>
+      </div>
+      <div class="body">
+        <p>This is a dialog without backdrop overlay.</p>
+      </div>
+      <div class="footer">
+        <button type="button">Close</button>
+        <button type="button" class="primary">Save changes</button>
+      </div>
+    </dialog>
+  </Example>
+
+  <h3>With backdrop</h3>
+  <p>A dialog with backdrop overlay (using <code>class="backdrop"</code>).</p>
+  <Example>
+    <div class="dialog-static-wrapper">
+      <dialog>
+        <div class="header">
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4>Dialog with backdrop</h4>
+        </div>
+        <div class="body">
+          <p>This dialog is displayed with a backdrop overlay behind it.</p>
+        </div>
+        <div class="footer">
+          <button type="button">Close</button>
+          <button type="button" class="primary">Save changes</button>
+        </div>
+      </dialog>
+    </div>
+  </Example>
+
+  <h2>Live demo</h2>
+  <p>
+    Toggle a dialog via JavaScript by clicking the button below. Add <code>class="backdrop"</code> to show backdrop overlay.
+  </p>
+  <Example>
+    <button class="btn primary" onclick="document.getElementById('live-dialog-backdrop').showModal()">
+      With backdrop
+    </button>
+    <button class="btn" onclick="document.getElementById('live-dialog-no-backdrop').showModal()">
+      Without backdrop
+    </button>
+  </Example>
+
+  <dialog id="live-dialog-backdrop" class="backdrop">
+    <div class="header">
+      <button type="button" class="close" onclick="this.closest('dialog').close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4>Dialog with backdrop</h4>
+    </div>
+    <div class="body">
+      <p>
+        This dialog has <code>class="backdrop"</code>, so it opens with a backdrop overlay.
+        Press ESC or click outside to close.
+      </p>
+    </div>
+    <div class="footer">
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+      <button type="button" class="primary">Save changes</button>
+    </div>
+  </dialog>
+
+  <dialog id="live-dialog-no-backdrop">
+    <div class="header">
+      <button type="button" class="close" onclick="this.closest('dialog').close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4>Dialog without backdrop</h4>
+    </div>
+    <div class="body">
+      <p>
+        This dialog does not have the <code>backdrop</code> class, so it opens without a backdrop overlay.
+        You can still interact with the page behind it.
+      </p>
+    </div>
+    <div class="footer">
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </div>
+  </dialog>
+
+  <h2>Optional sizes</h2>
+  <p>Dialogs have two optional sizes, available via modifier classes on the dialog element.</p>
+  <Example>
+    <button class="btn primary" onclick="document.getElementById('small-live-dialog').showModal()">
+      Small dialog
+    </button>
+    <button class="btn primary" onclick="document.getElementById('large-live-dialog').showModal()">
+      Large dialog
+    </button>
+  </Example>
+
+  <dialog id="small-live-dialog" class="small">
+    <div class="header">
+      <button type="button" class="close" onclick="this.closest('dialog').close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4>Small Dialog</h4>
+    </div>
+    <div class="body">
+      <p>This is a small dialog with limited width.</p>
+    </div>
+    <div class="footer">
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="large-live-dialog" class="large">
+    <div class="header">
+      <button type="button" class="close" onclick="this.closest('dialog').close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4>Large Dialog</h4>
+    </div>
+    <div class="body">
+      <p>This is a large dialog with expanded width for more content.</p>
+    </div>
+    <div class="footer">
+      <button type="button" onclick="this.closest('dialog').close()">Close</button>
+    </div>
+  </dialog>
+
+  <h2>Usage</h2>
+  <h3>Via data attributes</h3>
+  <p>Activate a dialog without writing JavaScript. Set <code>data-toggle="dialog"</code> on a button, along with a <code>data-target="#foo"</code> to target a specific dialog to toggle.</p>
+  <Code
+    language="html"
+    code={`<!-- Dialog with backdrop -->
+<button data-toggle="dialog" data-target="#myDialog">Launch dialog</button>
+
+<dialog id="myDialog" class="backdrop">
+  <div class="header">
+    <button type="button" class="close" data-dismiss="dialog">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4>Dialog title</h4>
+  </div>
+  <div class="body">
+    <p>Dialog content goes here...</p>
+  </div>
+  <div class="footer">
+    <button type="button" data-dismiss="dialog">Close</button>
+    <button type="button" class="primary">Save changes</button>
+  </div>
+</dialog>
+
+<!-- Dialog without backdrop -->
+<dialog id="myDialog2">
+  <!-- No backdrop class, opens without overlay -->
+</dialog>`}
+  />
+
+  <h3>Via JavaScript</h3>
+  <p>Use the global <code>Dialog</code> API to control dialogs programmatically:</p>
+  <Code
+    language="javascript"
+    code={`// Open a dialog
+const dialog = document.querySelector('#myDialog');
+Dialog.open(dialog);
+
+// Close a dialog
+Dialog.close(dialog);
+
+// Listen to dialog events
+dialog.addEventListener('dialog:opened', (e) => {
+  console.log('Dialog opened', e.detail.dialog);
+});
+
+dialog.addEventListener('dialog:closed', (e) => {
+  console.log('Dialog closed', e.detail.dialog);
+});`}
+  />
+
+  <h2>Keyboard interaction</h2>
+  <p>The native <code>&lt;dialog&gt;</code> element provides built-in keyboard support:</p>
+  <ul>
+    <li><kbd>ESC</kbd> - Close the dialog</li>
+    <li><kbd>Tab</kbd> - Navigate between focusable elements within the dialog (focus is trapped)</li>
+  </ul>
+
+  <h2>Accessibility</h2>
+  <p>Using the native <code>&lt;dialog&gt;</code> element provides several accessibility benefits:</p>
+  <ul>
+    <li>Proper semantic markup with native dialog behavior</li>
+    <li>Automatic focus management and focus trapping</li>
+    <li>Built-in keyboard navigation (ESC to close)</li>
+    <li>Native backdrop that blocks interaction with background content</li>
+  </ul>
+
+  <script is:inline src="/javascripts/dialog.js"></script>
+</Layout>

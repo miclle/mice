@@ -1,0 +1,187 @@
+// Dialog
+// --------------------------------------------------
+
+// Dialog component variables
+dialog {
+  --dialog-inner-padding: 15px;
+  --dialog-title-padding: 15px;
+  --dialog-title-line-height: 1.4286;
+  --dialog-content-background: #fff;
+  --dialog-content-border-color: rgb(0 0 0 / 20%);
+  --dialog-backdrop-background: #000;
+  --dialog-backdrop-opacity: 0.5;
+  --dialog-header-border-color: #e5e5e5;
+  --dialog-footer-border-color: #e5e5e5;
+  --dialog-large: 900px;
+  --dialog-medium: 600px;
+  --dialog-small: 300px;
+}
+
+// Native dialog element
+dialog {
+  position: fixed;
+  inset: 0;
+  width: var(--dialog-medium);
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--dialog-content-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--dialog-content-background);
+  box-shadow: 0 3px 9px rgb(0 0 0 / 50%);
+  overflow: auto;
+  color: inherit;
+
+  // Remove default browser styles
+  &:focus {
+    outline: 0;
+  }
+
+  // Backdrop styling using native ::backdrop pseudo-element
+  // Default: transparent backdrop (appears as no backdrop)
+  &::backdrop {
+    background: transparent;
+  }
+
+  // Show semi-transparent backdrop when .backdrop class is present
+  &.backdrop::backdrop {
+    background: rgb(0 0 0 / 50%);
+  }
+
+  // Animation for opening dialog
+  &:not([open]) {
+    display: none;
+  }
+
+  &[open] {
+    animation: dialog-fade-in 0.3s ease-out;
+  }
+
+  &[open].fade-out {
+    animation: dialog-fade-out 0.3s ease-out forwards;
+  }
+
+  // Dialog header
+  // Top section of the dialog w/ title and dismiss
+  .header {
+    padding: var(--dialog-title-padding);
+    border-bottom: 1px solid var(--dialog-header-border-color);
+    min-height: calc(var(--dialog-title-padding) + var(--dialog-title-line-height));
+
+    // Close icon
+    .close {
+      margin-top: -2px;
+    }
+
+    // Title text within header
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      line-height: var(--dialog-title-line-height);
+    }
+  }
+
+  // Dialog body
+  // Where all dialog content resides (sibling of .header and .footer)
+  .body {
+    position: relative;
+    padding: var(--dialog-inner-padding);
+  }
+
+  // Footer (for actions)
+  .footer {
+    padding: var(--dialog-inner-padding);
+    text-align: right;
+    border-top: 1px solid var(--dialog-footer-border-color);
+    display: flow-root;
+
+    // Properly space out buttons
+    .button + .button,
+    button + button {
+      margin-left: 5px;
+      margin-bottom: 0;
+    }
+    // but override that for button groups
+    .buttons .button + .button,
+    .buttons button + button {
+      margin-left: -1px;
+    }
+    // and override it for block buttons as well
+    .button.block + .button.block,
+    button.block + button.block {
+      margin-left: 0;
+    }
+  }
+}
+
+// Dialog size variations
+dialog.small {
+  width: var(--dialog-small);
+}
+
+dialog.large {
+  width: var(--dialog-large);
+}
+
+// Static example wrapper (for documentation)
+.dialog-static-wrapper {
+  position: relative;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  background-image:
+    linear-gradient(45deg, #fff 25%, transparent 25%),
+    linear-gradient(-45deg, #fff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #fff 75%),
+    linear-gradient(-45deg, transparent 75%, #fff 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+  // Backdrop overlay
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 40%);
+    z-index: 0;
+  }
+
+  // Static dialog display
+  dialog {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    inset: auto;
+    z-index: 1;
+  }
+}
+
+// Animations
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialog-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

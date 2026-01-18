@@ -48,26 +48,6 @@ section.example {
   .well:last-child {
     margin-bottom: 10px;
   }
-
-  &.has-modal {
-    background-color: #f5f5f5;
-  }
-
-  .modal {
-    display: block;
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-
-    .dialog {
-      left: auto;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
 }
 
 .hljs {

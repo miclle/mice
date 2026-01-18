@@ -58,7 +58,7 @@ You can also import individual components:
 @import 'mice/scss/navbar';
 @import 'mice/scss/forms';
 @import 'mice/scss/tables';
-@import 'mice/scss/modals';
+@import 'mice/scss/dialog';
 @import 'mice/scss/alerts';
 @import 'mice/scss/panels';
 @import 'mice/scss/tabs';
@@ -94,7 +94,7 @@ import 'mice/css'
 - **Tables** - Clean table styles
 - **Navbar** - Navigation bar component
 - **Sidebar** - Sidebar component
-- **Modals** - Modal dialog styles
+- **Dialog** - Dialog component using native HTML dialog element
 - **Alerts** - Alert and message styles
 - **Panels** - Panel/card component
 - **Tabs** - Tab navigation

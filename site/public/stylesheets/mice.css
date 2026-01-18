@@ -94,8 +94,8 @@
   --close-color: #000;
   --close-text-shadow: 0 1px 0 #fff;
   --zindex-navbar-fixed: 1030;
-  --zindex-modal-background: 1040;
-  --zindex-modal: 1050;
+  --zindex-dialog-background: 1040;
+  --zindex-dialog: 1050;
   --zindex-tooltip: 1070;
   --zindex-message: 1090;
   --screen-sm-min: 768px;
@@ -3994,132 +3994,149 @@ button.close {
   appearance: none;
 }
 
-.modal {
-  --modal-inner-padding: 15px;
-  --modal-title-padding: 15px;
-  --modal-title-line-height: 1.4286;
-  --modal-content-background: #fff;
-  --modal-content-border-color: rgb(0 0 0 / 20%);
-  --modal-content-fallback-border-color: #999;
-  --modal-backdrop-background: #000;
-  --modal-backdrop-opacity: 0.5;
-  --modal-header-border-color: #e5e5e5;
-  --modal-footer-border-color: #e5e5e5;
-  --modal-large: 900px;
-  --modal-medium: 600px;
-  --modal-small: 300px;
+dialog {
+  --dialog-inner-padding: 15px;
+  --dialog-title-padding: 15px;
+  --dialog-title-line-height: 1.4286;
+  --dialog-content-background: #fff;
+  --dialog-content-border-color: rgb(0 0 0 / 20%);
+  --dialog-backdrop-background: #000;
+  --dialog-backdrop-opacity: 0.5;
+  --dialog-header-border-color: #e5e5e5;
+  --dialog-footer-border-color: #e5e5e5;
+  --dialog-large: 900px;
+  --dialog-medium: 600px;
+  --dialog-small: 300px;
 }
 
-.modal-open {
-  overflow: hidden;
-}
-.modal-open .modal {
-  overflow: hidden auto;
-}
-
-.modal {
-  display: none;
-  overflow: hidden;
+dialog {
   position: fixed;
   inset: 0;
-  z-index: var(--zindex-modal);
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-}
-.modal.fade .dialog {
-  transform: translate3d(0, -25%, 0);
-  transition: transform 0.3s ease-out;
-}
-.modal.in .dialog {
-  transform: translate3d(0, 0, 0);
-}
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: var(--zindex-modal-background);
-  background-color: var(--modal-backdrop-background);
-}
-.modal-backdrop.fade {
-  opacity: 0;
-}
-.modal-backdrop.fade.in {
-  opacity: var(--modal-backdrop-opacity);
-}
-
-.modal .dialog {
-  position: relative;
-  width: auto;
-  margin: 10px;
-  margin: 30px auto;
-}
-.modal .content {
-  position: relative;
-  background-color: var(--modal-content-background);
-  border: 1px solid var(--modal-content-border-color);
+  width: var(--dialog-medium);
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--dialog-content-border-color);
   border-radius: var(--border-radius);
+  background-color: var(--dialog-content-background);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
+  overflow: auto;
+  color: inherit;
+}
+dialog:focus {
   outline: 0;
 }
-.modal .header {
-  padding: var(--modal-title-padding);
-  border-bottom: 1px solid var(--modal-header-border-color);
-  min-height: calc(var(--modal-title-padding) + var(--modal-title-line-height));
+dialog::backdrop {
+  background: transparent;
 }
-.modal .header .close {
+dialog.backdrop::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+dialog:not([open]) {
+  display: none;
+}
+dialog[open] {
+  animation: dialog-fade-in 0.3s ease-out;
+}
+dialog[open].fade-out {
+  animation: dialog-fade-out 0.3s ease-out forwards;
+}
+dialog .header {
+  padding: var(--dialog-title-padding);
+  border-bottom: 1px solid var(--dialog-header-border-color);
+  min-height: calc(var(--dialog-title-padding) + var(--dialog-title-line-height));
+}
+dialog .header .close {
   margin-top: -2px;
 }
-.modal .header h1,
-.modal .header h2,
-.modal .header h3,
-.modal .header h4,
-.modal .header h5,
-.modal .header h6 {
+dialog .header h1,
+dialog .header h2,
+dialog .header h3,
+dialog .header h4,
+dialog .header h5,
+dialog .header h6 {
   margin: 0;
-  line-height: var(--modal-title-line-height);
+  line-height: var(--dialog-title-line-height);
 }
-.modal .body {
+dialog .body {
   position: relative;
-  padding: var(--modal-inner-padding);
+  padding: var(--dialog-inner-padding);
 }
-.modal .footer {
-  padding: var(--modal-inner-padding);
+dialog .footer {
+  padding: var(--dialog-inner-padding);
   text-align: right;
-  border-top: 1px solid var(--modal-footer-border-color);
+  border-top: 1px solid var(--dialog-footer-border-color);
   display: flow-root;
 }
-.modal .footer .button + .button {
+dialog .footer .button + .button,
+dialog .footer button + button {
   margin-left: 5px;
   margin-bottom: 0;
 }
-.modal .footer .buttons .button + .button {
+dialog .footer .buttons .button + .button,
+dialog .footer .buttons button + button {
   margin-left: -1px;
 }
-.modal .footer .button.block + .button.block {
+dialog .footer .button.block + .button.block,
+dialog .footer button.block + button.block {
   margin-left: 0;
 }
 
-.modal-scrollbar-measure {
+dialog.small {
+  width: var(--dialog-small);
+}
+
+dialog.large {
+  width: var(--dialog-large);
+}
+
+.dialog-static-wrapper {
+  position: relative;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(45deg, #fff 25%, transparent 25%), linear-gradient(-45deg, #fff 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #fff 75%), linear-gradient(-45deg, transparent 75%, #fff 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.dialog-static-wrapper::before {
+  content: "";
   position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.dialog-static-wrapper dialog {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  inset: auto;
+  z-index: 1;
 }
 
-.modal .dialog {
-  width: var(--modal-medium);
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.modal .small {
-  width: var(--modal-small);
+@keyframes dialog-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 }
-
-.modal .large {
-  width: var(--modal-large);
-}
-
 .message {
   --message-padding: 10px 20px;
   --message-link-font-weight: bold;
