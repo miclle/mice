@@ -78,7 +78,7 @@ import 'semantic-element/css'
 
 ## Documentation
 
-- 📚 **Full Documentation**: [https://miclle.github.io/semantic-element/](https://miclle.github.io/semantic-element/) (Live examples and API reference)
+- 📚 **Full Documentation**: [https://semantic-element.com](https://semantic-element.com) (Live examples and API reference)
 - 📖 **Source Code**: [scss/](scss/) (SCSS source files)
 - 🐛 **Issues**: [https://github.com/miclle/semantic-element/issues](https://github.com/miclle/semantic-element/issues)
 
