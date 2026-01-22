@@ -60,26 +60,33 @@ const navItems = [
 ];
 
 const isActive = (href: string) => {
-  return currentPage === href ? 'active' : '';
+  return currentPage === href;
 };
 ---
 
-<nav class="sidebar">
-  <ul class="menu">
-    {
-      navItems.map((section) => (
-        <>
-          <li class="heading">
-            <a href={section.href}>{section.heading}</a>
-          </li>
-
-          {section.items.map((item) => (
-            <li class={isActive(item.href)}>
-              <a href={item.href}>{item.name}</a>
+<nav class="bd-links-nav">
+  {
+    navItems.map((section) => (
+      <>
+        <strong>{section.heading}</strong>
+        <ul>
+          {section.items.length > 0 ? (
+            section.items.map((item) => (
+              <li>
+                <a href={item.href} class={isActive(item.href) ? 'active' : ''}>
+                  {item.name}
+                </a>
+              </li>
+            ))
+          ) : (
+            <li>
+              <a href={section.href} class={isActive(section.href) ? 'active' : ''}>
+                Overview
+              </a>
             </li>
-          ))}
-        </>
-      ))
-    }
-  </ul>
+          )}
+        </ul>
+      </>
+    ))
+  }
 </nav>

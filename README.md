@@ -1,25 +1,25 @@
-# Mice
+# Semantic Element
 
-Mice is a semantic CSS framework.
+Semantic Element is a semantic CSS framework that styles native HTML elements.
 
 ## Installation
 
 ### npm
 
 ```bash
-npm install mice
+npm install semantic-element
 ```
 
 ### yarn
 
 ```bash
-yarn add mice
+yarn add semantic-element
 ```
 
 ### pnpm
 
 ```bash
-pnpm add mice
+pnpm add semantic-element
 ```
 
 ## Usage
@@ -27,60 +27,60 @@ pnpm add mice
 ### Using compiled CSS
 
 ```css
-@import 'mice/css';
+@import 'semantic-element/css';
 ```
 
 Or link directly in HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/mice/dist/mice.css" />
+<link rel="stylesheet" href="node_modules/semantic-element/dist/semantic-element.css" />
 ```
 
 ### Using SCSS
 
 ```scss
-@import 'mice/scss';
+@import 'semantic-element/scss';
 ```
 
 You can also import individual components:
 
 ```scss
 // Core
-@import 'mice/scss/variables';
-@import 'mice/scss/mixins';
-@import 'mice/scss/normalize';
-@import 'mice/scss/scaffolding';
-@import 'mice/scss/typography';
+@import 'semantic-element/scss/variables';
+@import 'semantic-element/scss/mixins';
+@import 'semantic-element/scss/normalize';
+@import 'semantic-element/scss/scaffolding';
+@import 'semantic-element/scss/typography';
 
 // Components
-@import 'mice/scss/buttons';
-@import 'mice/scss/grid';
-@import 'mice/scss/navbar';
-@import 'mice/scss/forms';
-@import 'mice/scss/tables';
-@import 'mice/scss/dialog';
-@import 'mice/scss/alerts';
-@import 'mice/scss/panels';
-@import 'mice/scss/tabs';
-@import 'mice/scss/pagination';
-@import 'mice/scss/tooltips';
+@import 'semantic-element/scss/buttons';
+@import 'semantic-element/scss/grid';
+@import 'semantic-element/scss/navbar';
+@import 'semantic-element/scss/forms';
+@import 'semantic-element/scss/tables';
+@import 'semantic-element/scss/dialog';
+@import 'semantic-element/scss/alerts';
+@import 'semantic-element/scss/panels';
+@import 'semantic-element/scss/tabs';
+@import 'semantic-element/scss/pagination';
+@import 'semantic-element/scss/tooltips';
 ```
 
 ### With bundlers (Vite, Webpack, etc.)
 
 ```javascript
 // Vite
-import 'mice/css'
+import 'semantic-element/css'
 
 // Or with SCSS
-@import 'mice/scss'
+@import 'semantic-element/scss'
 ```
 
 ## Documentation
 
-- 📚 **Full Documentation**: [http://mice.miclle.com/](http://mice.miclle.com/) (Live examples and API reference)
-- 🏠 **GitHub Pages**: [https://miclle.github.io/mice/](https://miclle.github.io/mice/) (Build artifacts)
+- 📚 **Full Documentation**: [https://miclle.github.io/semantic-element/](https://miclle.github.io/semantic-element/) (Live examples and API reference)
 - 📖 **Source Code**: [scss/](scss/) (SCSS source files)
+- 🐛 **Issues**: [https://github.com/miclle/semantic-element/issues](https://github.com/miclle/semantic-element/issues)
 
 ## Components
 
@@ -119,7 +119,7 @@ $primary-color: #3498db;
 $secondary-color: #2ecc71;
 $font-size-base: 16px;
 
-@import 'mice/scss';
+@import 'semantic-element/scss';
 ```
 
 ### Available Variables
@@ -151,20 +151,17 @@ $grid-gutter-width
 # Install dependencies
 npm install
 
-# Start dev server (serves docs directory)
+# Start dev server
 npm run dev
 
 # Build for production
 npm run build
 
-# Build and sync to docs directory
-npm run build:sync
-
-# Sync built CSS to docs (without rebuilding)
-npm run sync
+# Build documentation site
+npm run build:site
 
 # Preview production build
-npm run preview
+npm run preview:site
 ```
 
 ### Development Workflow
@@ -172,12 +169,12 @@ npm run preview
 When working on the CSS framework:
 
 1. Modify SCSS files in `scss/`
-2. Run `npm run build:sync` to build and sync changes to site
-3. View changes at `http://localhost:5173`
+2. Run `npm run build` to build changes
+3. View changes at `http://localhost:4321`
 
 ## Class Naming Reference
 
-Mice uses semantic class naming:
+Semantic Element uses semantic class naming:
 
 | Component | Class Name                                    |
 | --------- | --------------------------------------------- |
@@ -198,7 +195,7 @@ Modern browsers including Chrome, Firefox, Safari, and Edge.
 
 ## Contributing
 
-1. Fork it (https://github.com/miclle/mice/fork)
+1. Fork it (https://github.com/miclle/semantic-element/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

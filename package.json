@@ -1,10 +1,10 @@
 {
-  "name": "mice",
+  "name": "semantic-element",
   "version": "0.2.14",
-  "description": "Mice is a semantic CSS framework",
+  "description": "A semantic CSS framework that styles native HTML elements",
   "type": "module",
-  "style": "dist/mice.css",
-  "sass": "scss/mice.scss",
+  "style": "dist/semantic-element.css",
+  "sass": "scss/semantic-element.scss",
   "files": [
     "dist",
     "scss",
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "astro dev",
-    "build": "sass scss/mice.scss dist/mice.css --style=compressed --source-map",
+    "build": "sass scss/semantic-element.scss dist/semantic-element.css --style=compressed --source-map",
     "build:site": "astro build",
     "preview:site": "astro preview",
     "prepublishOnly": "npm run build",
@@ -23,23 +23,26 @@
     "format:check": "prettier --check \"**/*.{css,scss,js,json,md,astro}\""
   },
   "keywords": [
-    "mice",
+    "semantic",
+    "semantic-html",
+    "semantic-element",
     "css",
     "scss",
     "framework",
-    "semantic",
     "frontend",
-    "styles"
+    "ui",
+    "styles",
+    "native-html"
   ],
-  "homepage": "https://github.com/miclle/mice",
+  "homepage": "https://github.com/miclle/semantic-element",
   "author": "Miclle Zheng <miclle.zheng@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:miclle/mice.git"
+    "url": "git@github.com:miclle/semantic-element.git"
   },
   "bugs": {
-    "url": "https://github.com/miclle/mice/issues"
+    "url": "https://github.com/miclle/semantic-element/issues"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
@@ -54,8 +57,8 @@
     "stylelint-config-standard": "^36.0.1"
   },
   "exports": {
-    ".": "./dist/mice.css",
-    "./css": "./dist/mice.css",
-    "./scss": "./scss/mice.scss"
+    ".": "./dist/semantic-element.css",
+    "./css": "./dist/semantic-element.css",
+    "./scss": "./scss/semantic-element.scss"
   }
 }

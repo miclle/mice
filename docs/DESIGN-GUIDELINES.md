@@ -1,8 +1,8 @@
-# Mice Framework - 语义化 HTML 设计规范 (Semantic HTML Design Principles)
+# Semantic Element Framework - 语义化 HTML 设计规范 (Semantic HTML Design Principles)
 
 ## 核心设计原则 (Core Design Principle)
 
-Mice 框架的设计初衷是充分利用 HTML 标签自身的语义性，避免过度使用 class 选择器。我们主张直接使用 HTML 标签来定义样式，而不是通过 `.class` 的方式。
+Semantic Element 框架的设计初衷是充分利用 HTML 标签自身的语义性，避免过度使用 class 选择器。我们主张直接使用 HTML 标签来定义样式，而不是通过 `.class` 的方式。
 
 ### ✅ 推荐做法 (Recommended)
 
@@ -462,6 +462,6 @@ span.text {
 
 ## 总结 (Summary)
 
-Mice 框架坚持使用 HTML 标签自身的语义性，通过直接对 HTML 标签应用样式来实现简洁、高效的 CSS 架构。这不仅符合 HTML 的设计初衷，也提升了代码的可维护性和性能。
+Semantic Element 框架坚持使用 HTML 标签自身的语义性，通过直接对 HTML 标签应用样式来实现简洁、高效的 CSS 架构。这不仅符合 HTML 的设计初衷，也提升了代码的可维护性和性能。
 
 记住：**让 HTML 做它应该做的事，让 CSS 做它应该做的事，各司其职，清晰明了。**

@@ -1,9 +1,212 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const htmlCode = `<!-- Just use semantic HTML -->
+<button>Primary Button</button>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+</table>`;
+
+const scssCode1 = `// Import Semantic Element's source SCSS
+@import "semantic-element/scss/semantic-element";
+
+// Customize variables
+$primary-color: #0d6efd;
+$border-radius: 0.5rem;
+
+// Add your own styles
+.custom-component {
+  color: $primary-color;
+}`;
+
+const cssCode = `:root {
+  --primary-color: #0d6efd;
+  --success-color: #198754;
+  --spacing-unit: 1rem;
+}
+
+/* Use them anywhere */
+.custom {
+  color: var(--primary-color);
+  padding: var(--spacing-unit);
+}`;
+
+const scssCode2 = `// Import only what you need
+@import "semantic-element/scss/variables";
+@import "semantic-element/scss/mixins";
+@import "semantic-element/scss/grid";
+@import "semantic-element/scss/buttons";
+@import "semantic-element/scss/forms";`;
 ---
 
-<Layout title="Welcome to Mice" bodyClass="index" showSidebar={false}>
-  <div class="text center">
-    <h1>Mice is semantic front-end framework.</h1>
-  </div>
+<Layout title="Semantic Element - Semantic CSS Framework" bodyClass="index" showSidebar={false}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Build semantic, accessible sites with Semantic Element</h1>
+      <p class="hero-description">
+        Powerful, extensible, and feature-packed semantic CSS framework. Build and customize with
+        SCSS, utilize prebuilt grid system and components, and bring projects to life with optional
+        JavaScript plugins.
+      </p>
+      <div class="hero-actions">
+        <div class="install-command">
+          <code id="install-cmd">npm install semantic-element</code>
+          <button class="btn-copy" onclick="copyInstallCommand()" title="Copy to clipboard">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+              ></path>
+              <path
+                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="buttons">
+          <a href="/docs/" class="button primary large">Get started</a>
+          <a href="https://github.com/miclle/semantic-element" class="button large">Download</a>
+        </div>
+      </div>
+      <div class="version-info">Currently <strong>v0.2.14</strong></div>
+    </div>
+  </section>
+
+  <!-- Get Started Section -->
+  <section class="get-started">
+    <div class="container">
+      <h2 class="section-title">Get started any way you want</h2>
+      <div class="grid three">
+        <div class="column">
+          <div class="card">
+            <h3>Install via package manager</h3>
+            <p>Install Semantic Element's source SCSS and JavaScript files via npm, Yarn, or pnpm.</p>
+            <pre><code>npm install semantic-element</code></pre>
+            <a href="/docs/">Read installation docs</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Include via CDN</h3>
+            <p>When you only need to include Semantic Element's compiled CSS, you can use jsDelivr or unpkg.</p>
+            <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/semantic-element/dist/semantic-element.css"&gt;</code></pre>
+            <a href="/docs/">Explore the docs</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Read the docs</h3>
+            <p>
+              Get familiar with Semantic Element's semantic approach, grid system, components, and customization
+              options.
+            </p>
+            <div class="doc-links">
+              <a href="/docs/elements/typography">Elements</a>
+              <a href="/docs/grid/">Grid System</a>
+              <a href="/docs/components/alerts">Components</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="grid two">
+        <div class="column">
+          <h2>Semantic HTML First</h2>
+          <p>
+            Semantic Element takes a unique approach by styling semantic HTML elements directly. Use native
+            <code>&lt;button&gt;</code>, <code>&lt;table&gt;</code>, and <code>&lt;form&gt;</code>
+            elements without wrapper classes. Write cleaner, more accessible HTML.
+          </p>
+          <pre><code class="language-html" set:html={htmlCode} /></pre>
+        </div>
+        <div class="column">
+          <h2>Customize with SCSS</h2>
+          <p>
+            Utilize our source SCSS files to take advantage of variables, mixins, and functions to
+            build faster and customize your project.
+          </p>
+          <pre><code class="language-scss" set:html={scssCode1} /></pre>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="column">
+          <h2>CSS Custom Properties</h2>
+          <p>
+            Semantic Element uses CSS custom properties (variables) for real-time customization. Change colors,
+            spacing, and more without recompiling.
+          </p>
+          <pre><code class="language-css" set:html={cssCode} /></pre>
+        </div>
+        <div class="column">
+          <h2>Modular Components</h2>
+          <p>
+            Import only what you need. Semantic Element's modular architecture lets you include specific
+            components and reduce your CSS footprint.
+          </p>
+          <pre><code class="language-scss" set:html={scssCode2} /></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components Showcase -->
+  <section class="components-showcase">
+    <div class="container">
+      <h2 class="section-title">Built with semantic components</h2>
+      <p class="section-description">
+        Explore our extensive collection of semantic components. From buttons to complex forms,
+        everything is built with accessibility and simplicity in mind.
+      </p>
+      <div class="grid three">
+        <div class="column">
+          <div class="showcase-item">
+            <h3>Elements</h3>
+            <p>Typography, buttons, forms, code, images, and more basic HTML elements.</p>
+            <a href="/docs/elements/typography">View elements →</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="showcase-item">
+            <h3>Grid System</h3>
+            <p>Powerful mobile-first flexbox grid to build layouts of all shapes and sizes.</p>
+            <a href="/docs/grid/">View grid system →</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="showcase-item">
+            <h3>Components</h3>
+            <p>Cards, alerts, navigation, modals, and 15+ prebuilt semantic components.</p>
+            <a href="/docs/components/alerts">View components →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function copyInstallCommand() {
+      const cmd = document.getElementById('install-cmd').textContent;
+      navigator.clipboard.writeText(cmd).then(() => {
+        const btn = event.currentTarget;
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+        </svg>`;
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+        }, 2000);
+      });
+    }
+  </script>
 </Layout>
