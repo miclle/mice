@@ -9,13 +9,13 @@ const { currentPage = '' } = Astro.props;
 const navItems = [
   {
     heading: 'Elements',
-    href: '/docs/elements/typography',
+    href: '/docs/elements/buttons',
     items: [
-      { name: 'Typography', href: '/docs/elements/typography' },
-      { name: 'Code', href: '/docs/elements/code' },
       { name: 'Buttons', href: '/docs/elements/buttons' },
-      { name: 'Input', href: '/docs/elements/input' },
+      { name: 'Code', href: '/docs/elements/code' },
       { name: 'Images', href: '/docs/elements/images' },
+      { name: 'Input', href: '/docs/elements/input' },
+      { name: 'Typography', href: '/docs/elements/typography' },
     ],
   },
   {
@@ -27,29 +27,22 @@ const navItems = [
     heading: 'Components',
     href: '/docs/components/alerts',
     items: [
-      // Feedback & Notifications
       { name: 'Alerts', href: '/docs/components/alerts' },
-      { name: 'Message', href: '/docs/components/message' },
-      { name: 'Tooltips', href: '/docs/components/tooltips' },
-      { name: 'Progress', href: '/docs/components/progress' },
-
-      // Navigation
-      { name: 'Navbar', href: '/docs/components/navbar' },
       { name: 'Breadcrumbs', href: '/docs/components/breadcrumbs' },
-      { name: 'Pagination', href: '/docs/components/pagination' },
-      { name: 'Tabs', href: '/docs/components/tabs' },
-
-      // Content Display
-      { name: 'Cards', href: '/docs/components/cards' },
-      { name: 'Lists', href: '/docs/components/lists' },
-      { name: 'Tables', href: '/docs/components/tables' },
-      { name: 'Media', href: '/docs/components/media' },
-      { name: 'Tags', href: '/docs/components/tags' },
       { name: 'Callouts', href: '/docs/components/callouts' },
-
-      // Interactive
+      { name: 'Cards', href: '/docs/components/cards' },
       { name: 'Dialog', href: '/docs/components/dialog' },
       { name: 'Forms', href: '/docs/components/forms' },
+      { name: 'Lists', href: '/docs/components/lists' },
+      { name: 'Media', href: '/docs/components/media' },
+      { name: 'Message', href: '/docs/components/message' },
+      { name: 'Navbar', href: '/docs/components/navbar' },
+      { name: 'Pagination', href: '/docs/components/pagination' },
+      { name: 'Progress', href: '/docs/components/progress' },
+      { name: 'Tables', href: '/docs/components/tables' },
+      { name: 'Tabs', href: '/docs/components/tabs' },
+      { name: 'Tags', href: '/docs/components/tags' },
+      { name: 'Tooltips', href: '/docs/components/tooltips' },
     ],
   },
   {
