@@ -515,7 +515,6 @@ body:not(.index) .bd-toc nav ul li ul a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0.75rem 1rem;
 }
 .navbar .container {
   display: flex;
